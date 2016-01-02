@@ -3,9 +3,64 @@
 \usepackage{amsmath,array,enumerate}
 \usepackage{amssymb}
 
-
-
 \usepackage[papersize={140mm,215mm},textwidth=105mm,
 textheight=175mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
 leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
 
+\def\goodbreak{\par\penalty-300 }
+\pretolerance=9000
+
+\usepackage{fancyhdr}
+
+\makeatletter
+
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{2em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss {\fontfamily{txr}\fontsize{8}{11}\selectfont #2}}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+        \@mkboth{%
+           \contentsname}{\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }  
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+\def\bookname{gaNita veYvidhayx}
+
+\pagestyle{fancy}
+\renewcommand\chaptermark[1]{\markboth{}{#1}}
+
+\renewcommand{\footrulewidth}{0pt}
+\chead[]{}
+\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\bfseries\rightmark} 
+\rhead[{\footnotesize\bfseries\bookname}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\cfoot[]{}
+\rfoot[]{}
+
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+}
