@@ -1,12 +1,13 @@
 \usepackage{nudi}
 \usepackage{amsmath,amssymb,gensymb,enumerate,bm,longtable}
 \usepackage{array}
-\usepackage{tikz}
+\usepackage{tikz,tkz-euclide}
+\usetikzlibrary{calc}
 \usepackage{multicol}
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{cancel}
-
+\usetkzobj{all}
 \usepackage[papersize={140mm,215mm},textwidth=105mm,
 textheight=175mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
 leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
@@ -17,6 +18,9 @@ leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
 \usepackage{fancyhdr}
 
 \makeatletter
+
+\newcommand{\ap}{\ensuremath{\swarrow\,\searrow}}
+
 
 \renewcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
