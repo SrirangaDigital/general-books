@@ -3,7 +3,7 @@
 \usepackage{array}
 \usepackage{tikz,tkz-euclide}
 \usetikzlibrary{calc}
-\usepackage{multicol}
+\usepackage{multicol}\columnseprule 0.4pt\raggedcolumns
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{cancel}
@@ -11,6 +11,8 @@
 \usepackage[papersize={140mm,215mm},textwidth=105mm,
 textheight=175mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
 leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
+
+%\usepackage{multicol}
 
 \def\goodbreak{\par\penalty-300 }
 \pretolerance=9000
@@ -72,3 +74,5 @@ leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
 \cfoot[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
 \renewcommand{\headrulewidth}{0pt}
 }
+
+\allowdisplaybreaks
