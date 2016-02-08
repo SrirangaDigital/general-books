@@ -5,7 +5,7 @@
 
 \usepackage[papersize={140mm,215mm},textwidth=105mm,
 textheight=175mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
-leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
+leftmargin=17.5mm,rightmargin=17.5mm]{zwpagelayout}
 
 \def\goodbreak{\par\penalty-300 }
 \pretolerance=9000
@@ -48,6 +48,7 @@ leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
 \def\bookname{gaNita veYvidhayx}
 
 \pagestyle{fancy}
+\renewcommand\sectionmark[1]{}
 \renewcommand\chaptermark[1]{\markboth{}{#1}}
 
 \renewcommand{\footrulewidth}{0pt}
@@ -61,8 +62,9 @@ leftmargin=17.5mm,rightmargin=17.5mm,cropmarks]{zwpagelayout}
 \chead[]{}
 \lhead[]{}
 \rhead[]{}
-\cfoot[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+%~ \cfoot[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\cfoot[]{}
 \renewcommand{\headrulewidth}{0pt}
 }
 
-
+\allowdisplaybreaks
