@@ -1,5 +1,4 @@
 \chapter{aparimeVya saMKeyxgaLu}
-%\vskip -20pt
 
 $ 4,9,16,25\cdots$ muMtAda saMKeyxgaLu pUNaRvagaR saMKeyxgaLu. ivugaLige pUNaR\-vagaR mUlagaLive. Adare $2,3,5,7$ muMtAda saMKeyxgaLige pUNaRvagaRmUlaviruvudilalx ivelAlx ivelAlx apameVriya saMKeyxgaLu. I riVtiya saMKeyxgaLige vagaRmUla\-vanunx kaMDu hiDiyalu sAdhayxvilalx. AdarU sariyAda utatxrakekx samiVpada bele\-yanunx kaMDuhiDiyabahudu.
 
@@ -17,7 +16,15 @@ peYthAgorasana parxmeVya namagelAlx tiLidide.
 laMbakoVna tirxBujadalilx vikaNaRda meVlina vagaRvu uLideraDu bAhugaLa vagaRgaLa motatxkekx sama.
 
 \begin{tabular}[c]{>{$}l<{$}}
-\includegraphics{src/figure/m_049.eps}
+\begin{tikzpicture}[scale=2] %%right angle triangle
+\coordinate [label=left:{$A$}]  (A) at (0,0);
+\coordinate [label=right:{$B$}] (B) at (1.25,0);
+\coordinate [label=above:{$C$}] (C) at (0,1.25);
+\draw (A) -- (B);
+\draw (A) -- (C);
+\draw (A)--(C)-- (B);
+\tkzLabelAngle[scale=0.8,pos = 0.23](C,A,B){$90^\circ$}
+\end{tikzpicture}
 \end{tabular}
 \hspace{0.2cm}
 \begin{tabular}[c]{>{$}l<{$}}
@@ -36,13 +43,34 @@ OB^2 &= 2\\
 \end{align*}
 vikaNaR $OB$ ya udadxvanunx ALedAga $\sqrt{2}$ ra belegotAtxgutatxde.
 
-\begin{tabular}[c]{>{$}l<{$}}
-\includegraphics{src/figure/m_051.eps}
-\end{tabular}
-\begin{tabular}[c]{>{$}l<{$}}
-\text{Iga}\; OBC \;\text{tirxBujadalilx}\;  \widehat{B} = 90^{\circ}\\
-OB=\sqrt{2}, BC = 1 \;\text{seMmiV}
-\end{tabular}
+\begin{center}
+\begin{minipage}[c]{4cm}
+\begin{tikzpicture}[scale=2] %%m_51%%
+\coordinate [label=below:{$O$}] (O) at (0,0);
+\coordinate [label=below:{$A$}] (A) at (1,0);
+\coordinate [label=right:{$B$}] (B) at (1,1);
+\coordinate [label=above:{$C$}] (C) at (0.3,1.4);
+\draw (O) -- (A);
+\draw (O) -- (B);
+\draw (O) -- (C);
+\draw (B) -- (C);
+\draw (A) -- (B);
+%%node decleration  like  ex:1%%%
+\node [label=below:\footnotesize {$1$}] (1) at ($ (O)!.5!(A) $) {};
+\node [label=right:\footnotesize {$1$}] (1) at ($ (A)!.5!(B) $) {};
+\node [label=above:\footnotesize {$1$}] (1) at ($ (C)!.5!(B) $) {};
+\node [label=left:\footnotesize  {$\sqrt{3}$}] (3) at ($ (O)!.5!(C) $) {};
+\node [label=above:\footnotesize {$\sqrt{2}$}] (2) at ($ (O)!.5!(B) $) {};
+%%angle postion declaration%%%%%%
+\tkzLabelAngle[scale=0.8,pos = 0.20](O,A,B){$90^\circ$}
+\tkzLabelAngle[scale=0.8,pos = -0.20](C,B,O){$90^\circ$}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}[c]{5cm}
+$\text{Iga}\; OBC \;\text{tirxBujadalilx}\;  \widehat{B} = 90^{\circ}$\\
+$OB=\sqrt{2}, BC = 1 \;\text{seMmiV}$
+\end{minipage}
+\end{center}
 \begin{align*}
 OC^2 &= OB^2+BC^2\\
 &= (\sqrt{2})^2+(\sqrt{1})^2\\
@@ -50,16 +78,43 @@ OC^2 &= OB^2+BC^2\\
 OC^2&= 3\\
 \therefore OC &= \sqrt{3}
 \end{align*}
+\vskip -5pt
 
 $3$ oMdu aparimeVya saMKeyx adara vagaRmUlavanunx $OC$ yanunx aLeyuva mUlaka tiLiyabahudu.
+\vskip -9pt
 
-\begin{tabular}[l]{>{$}l<{$}}
-\includegraphics{src/figure/m_051a.eps}
-\end{tabular}
-\begin{tabular}[c]{>{$}l<{$}}
-\text{Iga}\;OCB\; \text{tirxBujadalilx}\;\widehat{c} = 90{\circ}\\
-OC=\sqrt{3}, CD = 1 \;\text{seMmiV}
-\end{tabular}
+\begin{minipage}[c]{5cm}
+\begin{tikzpicture}[scale=2.5] %%m_51a%%
+\coordinate [label=below:{$O$}] (O) at (0,0);
+\coordinate [label=below:{$A$}] (A) at (1,0);
+\coordinate [label=right:{$B$}] (B) at (1,1);
+\coordinate [label=above:{$C$}] (C) at (0.2,1.2);
+\coordinate [label=above:{$D$}] (D) at (-.6,1.2);
+\draw (O) -- (A);
+\draw (O) -- (B);
+\draw (O) -- (C);
+\draw (B) -- (C);
+\draw (A) -- (B);
+\draw (O) -- (D)-- (C);
+%%node decleration  like  ex:1%%%
+\node [label=below:\footnotesize $1$] (1) at ($ (O)!.5!(A) $) {};
+\node [label=right:\footnotesize $1$] (1) at ($ (A)!.5!(B) $) {};
+\node [label=above:\footnotesize $1$] (1) at ($ (C)!.5!(B) $) {};
+\node [label=above:\footnotesize $1$] (1) at ($ (D)!.5!(C) $) {};
+\node [label=left:\footnotesize $\sqrt{3}$] (3) at ($ (O)!.6!(C) $) {};
+\node [label=left:\footnotesize $\sqrt{2}$] (2) at ($ (O)!.6!(B) $) {};
+\node [label=left:\footnotesize ${\sqrt{4}}$] (4) at ($ (O)!.6!(D) $) {};
+%%angle postion declaration%%%%%%
+\tkzLabelAngle[scale=0.8,pos = 0.20](O,A,B){$90^\circ$}
+\tkzLabelAngle[scale=0.8,pos = -0.22](C,B,O){$90^\circ$}
+\tkzLabelAngle[scale=0.8,pos = -0.20](D,C,O){$90^\circ$}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}[c]{5cm}
+$\text{Iga}\;OCB\; \text{tirxBujadalilx}\;\widehat{c} = 90^{\circ}$\\
+$OC=\sqrt{3}, CD = 1 \;\text{seMmiV}$
+\end{minipage}
+
 \begin{align*}
 OD^2 &= OC^2+CD^2\\
 &= (\sqrt{3})^2+(\sqrt{1})^2\\
