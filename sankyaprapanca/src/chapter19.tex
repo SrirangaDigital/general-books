@@ -56,14 +56,116 @@ vagaRsaMKeyxgaLanunx karxmavAgi bareyiri.
 
 \noindent hiVge laBayxvAda saMKeyxgaLa vayxtAyxsavanunx bareyutAtx hoVdare konege vayxtAyxsa oMdeV aMkavu barutatxde.
 \begin{figure}[h]
-\includegraphics{src/figure/085a.eps}
+\begin{tikzpicture}[scale=0.9]%%figure-085a
+\begin{scope}
+    \node (AA) at(3,0.5) {\bf{vagaRsaMKeyxgaLu}};
+    \node (A) at (0,0) {\rm 1};
+    \node (B) at (1,0) {\rm 4};
+    \node (C) at (2,0) {\rm 9};
+    \node (D) at (3,0) {\rm 16};
+    \node (E) at (4,0) {\rm 25};
+    \node (F) at (5,0) {\rm 36};
+    \node (FF) at (6,0) {\rm 49};   
+    \node (GG) at (-1.5,-1){\bf{vayxtAyxsa}};%%stage one 
+    \node (G) at (0.5,-1){\rm 3};
+    \node (H) at (1.5,-1){\rm 5};
+    \node (I) at (2.5,-1){\rm 7};
+    \node (J) at (3.5,-1){\rm 9};
+    \node (K) at (4.5,-1){\rm 11};
+    \node (KK) at (5.5,-1){\rm 13};
+    \node (LL) at (-1.5,-2){\bf{vayxtAyxsa}};%%stage 2
+    \node (L) at (1,-2){\rm 2};
+    \node (M) at (2,-2){\rm 2};
+    \node (N) at (3,-2){\rm 2};
+    \node (O) at (4,-2){\rm 2};
+    \node (P) at (5,-2){\rm 2};
+\end{scope}
+
+\begin{scope}
+    \path [-] (A) edge node {} (G);
+    \path [-] (B) edge node {} (G);
+    \path [-] (B) edge node {} (H);
+    \path [-] (C) edge node {} (H);
+    \path [-] (C) edge node {} (I);
+    \path [-] (D) edge node {} (I);
+    \path [-] (D) edge node {} (J);
+    \path [-] (E) edge node {} (J);
+    \path [-] (E) edge node {} (K);
+    \path [-] (F) edge node {} (K);
+    \path [-] (F) edge node {} (KK);
+    \path [-] (FF) edge node {} (KK);%%1ST STAGE
+    \path [-] (G) edge node {} (L);
+    \path [-] (H) edge node {} (L);
+    \path [-] (H) edge node {} (M);
+    \path [-] (I) edge node {} (M);
+    \path [-] (I) edge node {} (N);
+    \path [-] (J) edge node {} (N);
+    \path [-] (J) edge node {} (O);
+    \path [-] (K) edge node {} (O);
+    \path [-] (K) edge node {} (P);
+    \path [-] (KK) edge node {} (P);
+ \end{scope}
+\end{tikzpicture}
 \end{figure}
 
 ideV riVti Gana saMKeyxgaLigU idu anavxyisutatxde.
 
 \vfill\eject
 \begin{figure}[h]
-\includegraphics{src/figure/085b.eps}
+\begin{tikzpicture}[scale=0.9]%%figure-085b
+\begin{scope}
+    \node (AA) at(2.5,0.5) {\bf{GanasaMKeyxgaLu}};
+    \node (A) at (0,0) {\rm 1};
+    \node (B) at (1,0) {\rm 8};
+    \node (C) at (2,0) {\rm 27};
+    \node (D) at (3,0) {\rm 64};
+    \node (E) at (4,0) {\rm 125};
+    \node (F) at (5,0) {\rm 216};      
+    \node (GG) at (-1.5,-1){\bf{vayxtAyxsa}};%%stage one 
+    \node (G) at (0.5,-1){\rm 7};
+    \node (H) at (1.5,-1){\rm 19};
+    \node (I) at (2.5,-1){\rm 37};
+    \node (J) at (3.5,-1){\rm 61};
+    \node (K) at (4.5,-1){\rm 91};    
+    \node (LL) at (-1.5,-2){\bf{vayxtAyxsa}};%%stage 2
+    \node (L) at (1,-2){\rm 12};
+    \node (M) at (2,-2){\rm 18};
+    \node (N) at (3,-2){\rm 24};
+    \node (O) at (4,-2){\rm 30};
+    \node (PP) at (-1.5,-3){\bf{vayxtAyxsa}};
+    \node (P) at (1.5,-3){\rm 6};%%stage 3    
+    \node (Q) at (2.5,-3){\rm 6};
+    \node (R) at (3.5,-3){\rm 6};
+\end{scope}
+
+\begin{scope}
+    \path [-] (A) edge node {} (G);
+    \path [-] (B) edge node {} (G);
+    \path [-] (B) edge node {} (H);
+    \path [-] (C) edge node {} (H);
+    \path [-] (C) edge node {} (I);
+    \path [-] (D) edge node {} (I);
+    \path [-] (D) edge node {} (J);
+    \path [-] (E) edge node {} (J);
+    \path [-] (E) edge node {} (K);
+    \path [-] (F) edge node {} (K);
+    %%1ST STAGE
+    \path [-] (G) edge node {} (L);
+    \path [-] (H) edge node {} (L);
+    \path [-] (H) edge node {} (M);
+    \path [-] (I) edge node {} (M);
+    \path [-] (I) edge node {} (N);
+    \path [-] (J) edge node {} (N);
+    \path [-] (J) edge node {} (O);
+    \path [-] (K) edge node {} (O);
+    \path [-] (L) edge node {} (P);
+    \path [-] (M) edge node {} (P);
+    \path [-] (M) edge node {} (Q);
+    \path [-] (N) edge node {} (Q);
+    \path [-] (N) edge node {} (R);
+    \path [-] (O) edge node {} (R);
+    \end{scope}
+\end{tikzpicture}
 \end{figure}
 
 $41,80$ \;matutx\; $320$\; ralilx yAva eraDU saMKeyxgaLanunx kUDidarU vagaR\-saMKeyxyu barutatxde.
