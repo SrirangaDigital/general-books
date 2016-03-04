@@ -3,6 +3,7 @@
 \usepackage{amsmath,array,enumerate}
 \usepackage{amssymb}
 
+\usepackage{txfonts}
 \usepackage[papersize={140mm,215mm},textwidth=105mm,
 textheight=175mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
 leftmargin=17.5mm,rightmargin=17.5mm]{zwpagelayout}
@@ -43,6 +44,7 @@ leftmargin=17.5mm,rightmargin=17.5mm]{zwpagelayout}
     }  
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
     \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\fontfamily{txr}\fontseries{bx}\fontsize{8}{11}\selectfont\thepage}}}
 \makeatother
 
 \def\bookname{gaNita veYvidhayx}
