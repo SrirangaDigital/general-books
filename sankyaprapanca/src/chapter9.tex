@@ -92,12 +92,15 @@ $3$ oMdu aparimeVya saMKeyx adara vagaRmUlavanunx $OC$ yanunx aLeyuva mUlaka tiL
     \coordinate[label=90:$C$] (C) at (0,4);
     \coordinate[label=90:$D$] (D) at (-3,4);
    %\draw [help lines](-4,0) grid(3,5);
-    \draw (O)--(A)--(B);
-    \draw (O)--(D);
-    \draw (O)--(B);
-    \draw (O)--(D)--(C);
+    \draw (O)--(A)--(B)--(C)--(D)--cycle;
     \draw (O)--(C);
-    \draw (B)--(C);
+    \draw (O)--(B);
+    %~ \draw (O)--(A)--(B);
+    %~ \draw (O)--(D);
+    %~ \draw (O)--(B);
+    %~ \draw (O)--(D)--(C);
+    %~ \draw (O)--(C);
+    %~ \draw[line join=bevel] (B)--(C)--cycle;
     
 %%node decleration  like  ex:1%%%
 \node [scale=0.01,label=below:\footnotesize $1$] (1) at ($ (O)!.5!(A) $) {};
