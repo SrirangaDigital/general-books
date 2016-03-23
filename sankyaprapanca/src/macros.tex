@@ -1,5 +1,10 @@
 \usepackage{nudi}
-\usepackage{amsmath,amssymb,gensymb,enumerate,bm,longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{longtable}
 \usepackage{array}
 \usepackage{tikz,tkz-euclide}
 \usetikzlibrary{calc}
@@ -11,6 +16,8 @@
 \usepackage[nodisplayskipstretch]{setspace}
 \usepackage{txfonts}
 %\usepackage[T1]{fontenc}
+
+
 
 \usepackage[papersize={140mm,215mm},textwidth=105mm,
 textheight=175mm,headheight=6mm,headsep=4mm,topmargin=12mm,botmargin=12mm,
@@ -79,6 +86,23 @@ leftmargin=17.5mm,footskip=0.6cm,rightmargin=17.5mm]{zwpagelayout}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
     \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\fontfamily{txr}\fontseries{bx}\fontsize{8}{11}\selectfont\thepage}}}
+
+%%%code for widehat begins here%%%%%%%%%%%%%%%%%%%%%
+\def\@tempa#1{\@xp\@tempb\meaning#1\@nil#1}
+\def\@tempb#1>#2#3 #4\@nil#5{%
+  \@xp\ifx\csname#3\endcsname\mathaccent
+    \@tempc#4?"7777\@nil#5%
+  \else
+    \PackageWarningNoLine{amsmath}{%
+      Unable to redefine math accent \string#5}%
+  \fi
+}
+\def\@tempc#1"#2#3#4#5#6\@nil#7{%
+  \chardef\@tempd="#3\relax\set@mathaccent\@tempd{#7}{#2}{#4#5}}
+
+
+\@tempa\widehat
+%%%code for widehat ends here%%%%%%%%%%%%%%%%%%%%%
 \makeatother
 
 \def\bookname{saMKAyxparxpaMca}
