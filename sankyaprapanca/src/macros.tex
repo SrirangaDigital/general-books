@@ -46,7 +46,9 @@ leftmargin=17.5mm,footskip=0.6cm,rightmargin=17.5mm]{zwpagelayout}
 \newcommand{\ap}{\ensuremath{\swarrow\,\searrow}}
 
 %~ \renewcommand{\baselinestretch}{1.1} 
-  %~ \linespread{1.1}
+
+\linespread{1.1}
+
 \renewcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
@@ -104,4 +106,9 @@ leftmargin=17.5mm,footskip=0.6cm,rightmargin=17.5mm]{zwpagelayout}
 %~ \setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{0pt}
 %~ \setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{0pt}
 \allowdisplaybreaks
-
+\AtBeginDocument{%
+ \abovedisplayskip=7pt plus 3pt minus 9pt
+ \abovedisplayshortskip=0pt plus 3pt
+ \belowdisplayskip=7pt plus 3pt minus 9pt
+ \belowdisplayshortskip=7pt plus 3pt minus 4pt
+}
