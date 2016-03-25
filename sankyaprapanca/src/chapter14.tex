@@ -14,15 +14,14 @@ oMdariMda AraMBavAguva karxmAgata saMKeyxgaLanunx kUDutAtx hoVdare baruva motatx
 \begin{minipage}[c]{5cm}
 \text{ivugaLelalxvU {\bf tirxBujAkAra} saMKeyxgaLu}
 \end{minipage}
-
 ivugaLanunx $T(n)$ eMba cihenxyiMda sUcisutetxVve.
 
 \begin{minipage}[c]{5cm}
-\begin{align*}
-T(1) &= \frac{1\times 2}{2} =1\\
+\begin{flalign*}
+T(1) &= \frac{1\times 2}{2} =1&\\
 T(2) &= \frac{2\times 3}{2} =3\\
 T(3) &= \frac{3\times 4}{2} =6\\
-\end{align*}
+\end{flalign*}
 \end{minipage}
 \begin{minipage}[c]{5cm}
 $\therefore T(n) = \frac{n(n+1)}{2}$
@@ -44,20 +43,14 @@ T(n-1)+T(n) &= \frac{(n-1)n}{2} +\frac{n(n+1)}{2}\\
 \end{align*}
 
 yAvudAdarU tirxBujAkArada saMKeyxya  $8$ raSaTxkekx $1$ nunx seVrisidare vagaR\-saMKeyxyu pArxpatxvAgutatxde.
-\begin{equation*}
-\begin{aligned}
-8T(1)+1 &=8+1 =9\\
-8T(2)+1 &=24+1 =25\\
-8T(4)+1 &=80+1 =81\\
-\end{aligned}
-\qquad\text{vagaRsaMKeyxgaLu}
-\end{equation*}
-
 \begin{align*}
-8T(n)+1 &= \frac{8\cdot n(n+1)}{2}+1\\
-&= 4n(n+1)+1\\
-&=4n^2+4n+1\\
-&=(2n+1)^2 \qquad \text{vagaR saMKeyx}
+8T(1)+1 &=8+1 =9\\
+8T(2)+1 &=24+1 =25\qquad\text{vagaRsaMKeyxgaLu}\\
+8T(4)+1 &=80+1 =81\\[0.1cm]
+8T(n)+1 &= \frac{8\cdot n(n+1)}{2}+1\\%New equation
+        &= 4n(n+1)+1\\
+        &=4n^2+4n+1\\
+        &=(2n+1)^2 \qquad\quad \text{vagaR saMKeyx}
 \end{align*}
 
 $2\left\{100 T(n)+12\right\}+1$ eMba sUtarxvu vagaRsaMKeyxyanunx niVDutatxde.
@@ -197,11 +190,9 @@ aMdare karxmAgata tirxBujAkAra saMKeyxgaLa vagaRgaLu, karxmAgata Gana saMKeyxgaL
     \node [draw,fill=black!100,circle,scale=0.3](L) at (-1.2,-2.4){a};
     \node [draw,fill=black!100,circle,scale=0.3](M) at (0.2,-2.4){A};
     \node [draw,fill=black!100,circle,scale=0.3](N) at (1.5,-2.4){i};
-    \begin{varwidth}{0.5cm}
     \node [](D) at (-0.75,-3.3){$T(4)$};%equations
     \node [](D) at (-0.75,-4.2){$=1+2+3+4$};
     \node [](D) at (-2,-5.4){$\;\;=10$};
-    \end{varwidth}
     \end{scope}
     \begin{scope}
      \path [line width= 1.5pt] (B) edgenode {} (C);%path stage 1
