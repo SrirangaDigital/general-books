@@ -1,0 +1,52 @@
+\documentclass[11pt,openany]{book}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{xfrac}
+\usepackage{longtable,array,multicol}
+\usepackage{makeidx}
+\usepackage{tfrupee,rotating}
+\usepackage{url}
+\usepackage{txfonts}
+
+\font\kan=lelr7t at 12pt
+
+\usepackage{pbsi}
+\usepackage[T1]{fontenc}
+
+
+
+\def\heading#1{{\noindent\fontsize{12pt}{14pt}\selectfont\bf#1}\relax}
+
+\usepackage{float}
+\floatstyle{plain}
+\floatplacement{Figure}{H}
+
+\usepackage[papersize={140mm,220mm},textwidth=105mm,textheight=170mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=19mm,leftmargin=17.5mm,rightmargin=17.5mm,footskip=6mm,cropmarks]{zwpagelayout}
+
+\makeindex
+\input macros
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+
+\begin{document}
+
+\frontmatter
+
+
+
+\input src/titlepage
+
+\renewcommand{\baselinestretch}{0.95}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+
+\mainmatter
+
+\input src/birdsofmys
+
+
+\end{document}
