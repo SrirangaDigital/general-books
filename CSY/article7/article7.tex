@@ -57,6 +57,7 @@
 
 %\usetheme{Warsaw}
 %\usetheme{Berkeley} %sample 1
+
 \usetheme{Berlin} % sample 2
 %\usetheme{AnnArbor} % sample 3
 
@@ -279,77 +280,247 @@ $$
 \end{frame}
 
 \begin{frame}
-%raghu, page13
+\myheading{The hypergeometric distribution}
+
+\begin{nonumexample}
+
+\centerline{\includegraphics{figure/fig2.eps}}
+
+Consider an urn containing $N$
+
+Chips of which $M$ are red and $L=N-M$ are white. Suppose we remove $n$ chips \underline{without replacement} so $n\leq N$. 
+
+Define a random variable $X$ by $X=\sharp$ of red chips we get.
+\end{nonumexample}
 \end{frame}
 
 \begin{frame}
+Find the probability distribution of $X$.
 
+\begin{nonumproposition}
+\begin{equation*}
+P(X=k)=\dfrac{\binom{M}{k}\binom{L}{n-k}}{\binom{N}{n}}\tag{*}
+\end{equation*}
+if 
+$$
+(b)\quad \underbrace{\max (0,n-L)\leq k\neq \min (n,M)}
+$$
+This means $k\leq$ both $n$ and $M$ and both $0$ and $n-L\leq k$.
+
+These are the possible values of $k$, that is, if $k$ doesn't satisfy (b) then
+$$
+P(X=k)=0.
+$$
+\end{nonumproposition}
+\end{frame}
+
+
+
+\begin{frame}
+\myheading{Proof of the formula (*)}
+
+Suppose we first consider the special case where all the chips are red so
+$$
+P(X=n).
+$$
+This is the same problem as the one of finding all hearts in bridge.
+\begin{center}
+\begin{tabular}{l}
+red chip  $\longleftrightarrow$  heart\\[3pt]
+white chip  $\longleftrightarrow$ non heart
+\end{tabular}
+\end{center}
+So we use the principle of restricted choise
+$$
+P(X=n)=\dfrac{\binom{M}{n}}{\binom{N}{n}}
+$$
+This agrees with (*).
 \end{frame}
 
 \begin{frame}
+But (*) is harder because we have to consider the case where there are $kMn$ red chip. \underline{So we have to choose $n-k$ white chips as well.}
 
+So choose $k$ red chips $-\binom{M}{k}$ ways, then for each such choice, choose $n-k$ white chipts $\binom{L}{n-k}$ ways. 
+
+So
+$$
+\sharp \left\{
+\begin{array}{l}
+\text{choices of \underline{exceptly}}\\
+k \text{~red chips}\\
+\text{in the $n$ chips}
+\end{array}\right\}
+=
+\binom{M}{k}\binom{L}{n-k}
+$$
 \end{frame}
 
 \begin{frame}
+Clearly there are $\binom{N}{n}$ ways of choosing $n$ chips from $N$ chips so (*) follows.
 
+\begin{nonumdefinition}
+If $X$ is a discrete random variable with $pmf$ defined by page 14 then $X$ is said to have \underline{hyper geometric distribution with parameters $n$, $M$, $N$.} In the text the $pmf$ is denoted 
+$$
+h(x;n,M,N).
+$$
+\end{nonumdefinition}
 \end{frame}
 
 \begin{frame}
-
+What about the conditions 
+\begin{equation*}
+\max(0,n-L)\leq k\leq \min (n,M)\tag{b}
+\end{equation*}
+This really means
+\begin{equation*}
+k\leq \text{ both $n$ and $M$}\tag{b$_{1}$}
+\end{equation*}
+and
+\begin{equation*}
+\text{both } 0 \text{ and } n-L\leq k\tag{b$_{2}$}
+\end{equation*}
+(b$_{1}$) says
+\begin{center}
+\begin{tabular}{llp{5cm}}
+$k\leq n$ & $\longleftrightarrow$ & we can't choose more then $n$ red chips because we are only choosing $n$ chips in to to\\
+$k\leq M$ & $\longleftrightarrow$ & because there are only $M$ red chips to choose from
+\end{tabular}
+\end{center}
+(b$_{2}$)
+$$
+k\geq 0\text{~ is obvious.}
+$$
 \end{frame}
 
 \begin{frame}
+So the above three inequalities are necessary. At first glance they look sufficient because if $k$ satisfies the above three inequalities you can certainly go ahead and choose $k$ red chips.
 
+\underline{But what about the white chips?} We aren't tone yet, you have to choose $n-k$ white chips and there are only $L$ white chips available so if $n-k>L$ we are sun $k$.
+
+So we must have
+$$
+n-k\leq L\Leftrightarrow k\geq n-L
+$$
+
+This is the second inequality of (b$_{2}$). If it is satisfied we can go ahead and choose the $n-b$ white chips to the inequalities in (b) are necessary and sufficient. 
 \end{frame}
 
 \begin{frame}
+\begin{nonumproposition}
+Suppose $X$ has hypergeometric distribution with parameters $n$, $M$, $N$. Then
+\begin{itemize}
+\item[(i)] $E(X)=n\dfrac{M}{N}$
 
+\item[(ii)] $V(X)=\left(\dfrac{N-n}{N-1}\right)n\dfrac{M}{N}\left(1-\dfrac{M}{N}\right)$
+\end{itemize}
+If you put
+$$
+P_{1}=\dfrac{M}{N}=
+\begin{tabular}{p{5cm}}
+the probability of getting\\
+a red disk on the first draw
+\end{tabular}
+$$
+then we may rewrite the above formulas as
+\begin{equation*}
+\left.
+\begin{array}{l}
+E(X)=nP\\
+V(X)=\left(\dfrac{N-n}{N-1}\right)npq
+\end{array}
+\right\}
+\begin{tabular}{l}
+\text{reminiscent}\\
+\text{of the}\\
+\text{binomial}\\
+\text{distribution}
+\end{tabular}
+\end{equation*}
+\end{nonumproposition}
 \end{frame}
 
 \begin{frame}
+\myheading{Another way to Derive (*)}
 
+There is another way to derive (*) - the way we derived the binomial distribution. It is way harder.
+
+\begin{nonumexample}
+Take $n=2$
+\begin{align*}
+P(X=0) &= \dfrac{L}{N}\dfrac{L-1}{N+1}\\[3pt]
+P(X=2) &= \dfrac{M}{N}\dfrac{M-1}{N-1}\\[3pt]
+P(X=1) &= P(RW)+P(WR)\\[3pt]
+       &= \dfrac{M}{N}\dfrac{L}{N-1}+\begin{array}{c}\myarrow{~~~~}\\ \dfrac{L}{N}\dfrac{M}{N-1}
+\end{array}\\[3pt]
+       &= 2\dfrac{M}{N}\dfrac{L}{N-1}\\[3pt]
+       &= 2\dfrac{M}{N}\dfrac{L}{N-1}
+\end{align*}
+\end{nonumexample}
 \end{frame}
 
 \begin{frame}
-
+In general, we claim that all the words with $kR$'s and $n-k$ $W$'s have the some probability. Indeed each of these probabilities are fractions with the same denominator 
+$$
+N(N-1)\ldots (N-n-1)
+$$
+and they have the same factors in the numerator scrambled up 
+$$
+M(M-1)(M-L+1)\text{~~ and~~ } L(L-1),\ldots, (L-n-k+i)
+$$
+But the order of the factors doesn't matter so
+\begin{align*}
+P(X=k) &= \binom{n}{k}P(\overbrace{R\ldots R}^{k} W\ldots W)\\
+       &= \binom{n}{k}\dfrac{M(M-1)\ldots (M-k+1)L(L-1)\ldots (L-n-k+1)}{N(N-1)\ldots N(-n+1)}
+\end{align*}
 \end{frame}
 
 \begin{frame}
+Why is (*) equal to this?
 
+\centerline{\includegraphics[scale=1.1]{figure/fig3.eps}}
+
+\begin{align*}
+(*) &= \dfrac{\binom{M}{k}\binom{L}{n-k}}{\binom{N}{n}}\\
+    &= \dfrac{\frac{M(M-1)\ldots (M-k+1)}{k!} \ \frac{L(L-1)\ldots (L-n-k+1)}{(n-k)!}}{\frac{N(N-1)\ldots (N-n+1)}{n!}}
+\end{align*}
+exercise in fractions
+\begin{align*}
+& =\dfrac{n!}{k!(n-k)!}\dfrac{M(M-1)\ldots (M-k+1)L(L-1)\ldots (L-n-k+1)}{N(N-1)\ldots (N-n+1)}\\[3pt]
+&= \binom{n}{k}\dfrac{M(M-1)\ldots (M-k+1)L(L-1)\ldots (L-n-k+1)}{N(N-1)\ldots (N-n+1)}
+\end{align*}
 \end{frame}
 
 \begin{frame}
+Obviously, the first way (*) is easier so if you are doing a reel-world problem and you start getting things that look like (**) step back and see if you can use the first method instead. You will tend to try the second method first. I will test you on this later.
 
+\smallskip
+
+\underline{Prediction} (I was wrong before)
+
+Most of you will use the second (wrong) method.
 \end{frame}
 
 \begin{frame}
+\myheading{An Important General Problem}
 
+Suppose you draw $n$ chips \underline{with replacement} and let $X$ be the number of red chips you get. What distribution does $X$ have?
+
+This explains (a little) the formulas on page 21. Note that if $N$ is far bigger than $n$ then it is almost like drawing with replacement. ``The urn doesn't notice that any chaps have been removed because so few (relatively) have been removed.''
 \end{frame}
 
 \begin{frame}
+In this case
+$$
+\dfrac{N-n}{N-1}=\dfrac{N\left(1-\frac{n}{N}\right)}{N\left(1-\frac{1}{N}\right)}\approx \dfrac{N}{N}=1
+$$
+(because $N$ is huge $\dfrac{1}{N}$ and $\dfrac{n}{N}=0$)
 
+So $V(X)\approx npq$ (see the bottom at pg. 21)
+
+This is what is going on in page 118 of the text.
+
+The number $\dfrac{N-n}{N-1}$ is called the ``finite population correction factor''.
 \end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
 
 \end{document}
 
