@@ -19,7 +19,7 @@
 \addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
     \insertframenumber / \inserttotalframenumber}
 
-\geometry{papersize={15cm,12cm}}
+\geometry{papersize={15cm,13cm}}
 \usepackage{lipsum}
 
 \makeatletter
@@ -78,7 +78,7 @@ You have already seen (I hope) that whenever you have ``variables'' you need to 
 
 The notion of ``change of random variable'' is handle too briefly on page 103 of the text. \underline{This is something I will test you on.}
 
-\begin{example}
+\begin{example}\label{art9-exam1}
 Suppose $X\sim Bm\left(3,\dfrac{1}{2}\right)$.
 
 \underline{line graph}
@@ -192,29 +192,133 @@ So we have the ``same probabilities'' as before namely $\dfrac{1}{8}$, $\dfrac{3
 \end{frame}
 
 \begin{frame}
+\begin{example}[Probabilities can ``coalesce'']
+There is one tricky point. Several different possible valves of $X$ can push-forward to the same values of $Y$. We now give an example.
 
+Suppose $X$ has proof
+
+\medskip
+\centerline{\includegraphics{figure/fig5.eps}}
+\smallskip
+\end{example}
+
+\begin{nonumproblem}[from on old midterm]
+Find a linear change of variable $Y=aX+b$ so that $Y\sim \Bin \left(2,\dfrac{1}{2}\right)$
+\end{nonumproblem}
 \end{frame}
 
 \begin{frame}
+\begin{nonumproblem}[Cont.]
+We will make the change of variable $Y=X^{2}$. So what happens when we push forward the three values $-1$, $0$, $1$ by $h(x)=x^{2}$.
 
+We get only the \underline{two} values $0$ and $1$.
+\begin{center}
+\begin{tabular}{ccc}
+$-1$ & $\xrightarrow{h(x)}$ & $1$\\[3pt]
+$0$ & $\xrightarrow{\quad~~}$ & $0$\\[3pt]
+$1$ & $\xrightarrow{\quad~~}$ & $1$
+\end{tabular}
+\end{center}
+What happens with the corresponding probabilities
+$$
+P(Y=0)=P(X^{2}=0)=P(X=0)=\dfrac{1}{2}
+$$
+But
+\begin{align*}
+P(Y=1) &= P(X^{2}=1)=P(X=1\text{~ or~ } X=-1)\\[3pt]
+       &= P((X=1)\cup (X-1))\\[3pt]
+       &= P(X=1)+P(X=-1)\\[3pt]
+       &= \dfrac{1}{4}+\dfrac{1}{4}=\dfrac{1}{2}
+\end{align*}
+\end{nonumproblem}
 \end{frame}
 
 \begin{frame}
+\begin{nonumproblem}[Cont.]
+So we set
+\begin{center}
+\begin{tabular}{|c|c|c|}
+$g$ & $0$ & $1$\\[2pt]
+\hline
+$P(y=9)$ & $\dfrac{1}{2}$ & $\dfrac{1}{2}$\\
+\hline
+\end{tabular}
+\end{center}
+So,
 
+\medskip
+\centerline{\includegraphics{figure/fig6.eps}}
+\smallskip
+
+Think of two masses (probabilities) of mass $\dfrac{1}{4}$ coalesing into a combined mass of $\dfrac{1}{2}$.
+\end{nonumproblem}
 \end{frame}
 
 \begin{frame}
+\myheading{The Expected Value Formula}
 
+If $h(x)$ in the transformation law $Y=h(X)$ is complicated it can be very hard to explicitly compute the $pmf$ of $Y$ Amazingly we can compute the expected value $E(Y)$ using the old proof $P_{X}^{(x)}$ of $X$ according to \underline{Theorem}
+\begin{align*}
+E(h(X)) &= \sum\limits_{\substack{\text{possible}\\ \text{values of $X$}}} h(x)P_{X}^{(x)}\\[3pt]
+        &= \sum\limits_{\substack{\text{possible values}\\ \text{of $X$}}}h(x)P(X=x)
+\end{align*}
 \end{frame}
 
 \begin{frame}
+We will illustrate this with the $pmf$'s of Example \ref{art9-exam1}.
 
+\smallskip
+
+First we compute $E(Y)$ \underline{using the definition of $E(Y)$}. 
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|}
+Y & -1 & 1 & 3 & 5\\
+\hline
+P(Y=y) & \frac{1}{8} & \frac{3}{8} & \frac{3}{8} & \frac{1}{8}\\
+\hline
+\end{array}\tag{$\sharp$}
+\end{equation*}
+\begin{align*}
+E(Y) &= \sum\limits_{\substack{\text{possible value}\\ \text{of $Y$}}} y \ P(Y=y)\\[3pt]
+     &= (-1)\left(\dfrac{1}{8}\right)+(1)\left(\dfrac{3}{8}\right)+(3)\left(\dfrac{3}{8}\right)+(5)\left(\dfrac{1}{8}\right)\\[3pt]
+     &= \dfrac{-1+3+9+5}{8}\\[3pt]
+     &= \dfrac{16}{8}=2
+\end{align*}
 \end{frame}
 
 \begin{frame}
+Notice to do the previous computations we needed the table $(\sharp)$ which we computed on page 5.
 
+Now we use the \underline{Theorem}.
+
+So now we use that $Y$ is a function of the random variable $X$ and use the proof of $X$ from the table on page 1.
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|}
+x & 0 & 1 & 2 & 3\\
+\hline
+P(X=x) & \frac{1}{8} & \frac{3}{8} & \frac{3}{8} & \frac{1}{8}\\
+\hline
+\end{array}\tag{b}
+\end{equation*}
+\begin{align*}
+E(X) &= \sum\limits_{\substack{\text{possible values}\\ \text{of $X$}}} h(x)P(X=x)\\[3pt]
+     &= \sum\limits_{x=0,1,2,3}(2x-1)P(X=x)\\[3pt]
+     &= (-1)\left(\dfrac{1}{8}\right)+(1)\left(\dfrac{3}{8}\right)+(3)\left(\dfrac{5}{8}\right)+(5)\left(\dfrac{3}{8}\right)=2
+\end{align*}
 \end{frame}
 
+\begin{frame}
+The most common change of variable is linear $Y=X+b$ so we will give formulas to show how expected value and variance behave under such a change.
+
+\begin{nonumtheorem}
+\begin{itemize}
+\item[(i)] $E(aX+b)=aE(X)+b$
+
+\item[(ii)] $V(aX+b)=a^{2}V(X)$
+\end{itemize}
+(so $V(-X)=V(X)$)
+\end{nonumtheorem}
+\end{frame}
 
 \end{document}
 
