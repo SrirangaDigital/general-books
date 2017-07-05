@@ -1,0 +1,193 @@
+\documentclass{beamer}
+
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage{fancybox}
+\usepackage{xfrac}
+\usepackage{cancel}
+
+
+\newcommand{\heart}{\ensuremath\heartsuit}
+
+\usepackage{mathtools,amssymb}
+\newcommand{\myarrow}{\scalebox{2}[2]{$\mathclap{\curvearrowleft}\mkern2.2mu
+                                                 \mathclap{\curvearrowright}$}}
+
+\DeclareMathOperator{\Bin}{\mathrm{Bin}}
+
+\hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+
+\addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
+    \insertframenumber / \inserttotalframenumber}
+
+\geometry{papersize={15cm,13cm}}
+\usepackage{lipsum}
+
+\makeatletter
+\newenvironment<>{contdproof}[1][\proofname]{%
+    \par
+    \def\insertproofname{#1\@addpunct{.}}%
+    \usebeamertemplate{proof begin}#2}
+  {\usebeamertemplate{proof end}}
+\makeatother
+
+
+\setbeamertemplate{theorems}[numbered]
+
+\newtheorem*{nonumdefinition}{Definition}
+\newtheorem*{nonumproblem}{Problem}
+\newtheorem*{nonumtheorem}{Theorem}
+\newtheorem*{nonumproof}{Proof}
+\newtheorem*{nonumremark}{Remark}
+\newtheorem*{answer}{Answer}
+\newtheorem*{nonumremarks}{Remarks}
+\newtheorem*{nonumexamples}{Examples}
+\newtheorem*{nonumsolution}{Solution}
+\newtheorem*{nonumexample}{Example}
+\newtheorem*{nonumproposition}{Proposition}
+\newtheorem{proposition}[theorem]{Proposition}
+
+
+\usepackage{tikz}
+\newcommand*\mycirc[1]{%
+  \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
+}
+
+\newcommand\myheading[1]{%
+  \par\bigskip
+  {\color{blue}{\large #1}}\par\smallskip}
+
+%\usetheme{Warsaw}
+%\usetheme{Berkeley} %sample 1
+
+\usetheme{Berlin} % sample 2
+%\usetheme{AnnArbor} % sample 3
+
+\let\otp\titlepage
+\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
+
+\title{Lecture 29: The confidence interval formulas for the mean in an normal distribution when $\sigma$ is unknown }
+\author{}
+\date{}
+
+\begin{document}
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}
+\myheading{1. Introduction}
+
+In this lecture we will derive the formulas for the symmetric two-sided confidence 
+interval and the lower-tailed confidence intervals for the mean in a normal distribution
+\textit{when the variance $\sigma^2$ is unknown}. At the end of the lecture I assign the problem
+of proving the formula for the upper-tailed confidence interval. We will need the
+following theorem from probability theory. Recall that $\overline{X}$ is the sample mean (the
+point estimator for the populations mean $\mu$) and $S^2$ is the sample variance, the point
+estimator for the unknown population variance $\sigma^2$.
+
+We will need the following theorem from Probability Theory.
+
+\begin{theorem}
+$(\overline{X} − \mu)/\dfrac{S}{\sqrt{n}}$ has $t$-distribution with $n - 1$ degrees of freedom.
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\myheading{2. The two-sided confidence interval formula}
+
+Now we can prove the theorem from statistics giving the required confidence interval
+for $\mu$. Note that it is symmetric around $\overline{X}$. There are also asymmetric two-sided
+confidence intervals. We will discuss them later. This is one of the basic theorems
+that you have to learn how to prove.
+
+\begin{theorem}
+The random interval $T = \left(\overline{X} - t_{\alpha/2, n-1} \dfrac{S}{\sqrt{n}}, \overline{X} + t_{\alpha/2, n-1} \dfrac{S}{\sqrt{n}} \right)$ is a $100(1 - \alpha)\%$-confidence interval for $\mu$.
+\end{theorem}
+
+\begin{nonumproof}
+We are required to prove
+$$
+P \left(\mu \in \left(\overline{X} - t_{\alpha/2, n-1} \frac{S}{\sqrt{n}}, \overline{X} + t_{\alpha/2, n -1} \frac{S}{\sqrt{n}} \right) \right) = 1 - \alpha.
+$$
+We have 
+\end{nonumproof}
+\end{frame}
+
+\begin{frame}
+\begin{proof}[Proof {(Cont.)}]
+\begin{align*}
+\text{LHS } & = P\left(\overline{X} - t_{\alpha/2, n-1} \frac{S}{\sqrt{n}} < \mu, \mu < \overline{X} + t_{\alpha/2, n-1} \frac{S}{\sqrt{n}} \right)\\
+& = P \left(\overline{X} - \mu < t_{\alpha/2, n -1} \frac{S}{\sqrt{n}}, -t_{\alpha/2, n-1} \frac{S}{\sqrt{n}} < \overline{X} - \mu \right)\\
+& = P \left(\overline{X} - \mu < t_{\alpha/2, n -1} \frac{S}{\sqrt{n}}, \overline{X}-\mu > - t_{\alpha/2,n-1} \frac{S}{\sqrt{n}}\right)\\
+& = P \left( (\overline{X} - \mu) / \frac{S}{\sqrt{n}} < t_{\alpha/2, n-1}, (\overline{X} - \mu) / \frac{S}{\sqrt{n}} > - t_{\alpha/2, n-1} \right)\\
+& = P\left(T < t_{\alpha/2, n-1}, T> - t_{\alpha/2 , n-1} \right) = P \left(-t_{\alpha/2, n-1} < T <t_{\alpha/2, n-1} \right) = 1 -\alpha
+\end{align*}
+To prove the last equality draw a picture.
+\end{proof}
+Once we have an actual sample $x_1, x_2, \ldots, x_n$ we obtain the observed value $\overline{x}$ for
+the random variable $\overline{X}$ and the observed value $s$ for the random variable $S$. We
+obtain the observed value (an ordinary interval) $\left( \overline{x} - t_{\alpha/2, n-1} \dfrac{s}{\sqrt{n}} , \overline{x} + t_{\alpha/2, n-1} \dfrac{s}{\sqrt{n}} \right)$ 
+\end{frame}
+
+\begin{frame}
+for the confidence (random) interval $\left(\overline{X} - t_{\alpha/2, n-1} \dfrac{S}{\sqrt{n}}, \overline{X} + t_{\alpha/2, n-1} \dfrac{S}{\sqrt{n}} \right)$ The observed value of the confidence (random) interval is also called the two-sided $100(1 - \alpha)\%$ confidence interval for $\mu$.
+
+\myheading{3. The lower-tailed confidence interval}
+
+In this section we will give the formula for the lower-tailed confidence interval for $\mu$.
+
+\begin{theorem}
+The random interval $\left(-\infty, \overline{X}+ t_{\alpha, n-1} \dfrac{S}{\sqrt{n}} \right)$ is a $100(1-\alpha)\%$-confidence
+interval for $\mu$.
+\end{theorem}
+
+\begin{nonumproof}
+We are required to prove
+$$
+P\left(\mu \in\left(-\infty, \overline{X} + t_{\alpha, n-1} \frac{S}{\sqrt{n}} \right)\right) = 1 -\alpha.
+$$
+\end{nonumproof}
+\end{frame}
+
+\begin{frame}
+\begin{proof}[Proof {(Cont.)}]
+We have
+\begin{align*}
+\text{LHS} & = P\left( \mu < \overline{X} + t_{\alpha, n -1} \frac{S}{\sqrt{n}} \right) = P \left( -t_{\alpha, n-1} \frac{S}{\sqrt{n}} < \overline{X} - \mu \right)\\
+& = P  \left(-t_{\alpha, n-1} < (\overline{X} - \mu) / \frac{S}{\sqrt{n}} \right)\\
+& = P(-t_{\alpha, n -1} <T)\\
+& = 1 - \alpha
+\end{align*}
+To prove the last equality draw a picture - I want \textit{you} to draw the picture on tests
+and the homework.
+\end{proof}
+
+Once we have an actual sample $x_1, x_2, \ldots,x_n$ we obtain the observed value $\overline{x}$ for the
+random variable $\overline{X}$ the observed value $s$ for the random variable $S$ and the observed
+value $\left(-\infty, \overline{x} + t_{\alpha, n-1} \dfrac{s}{\sqrt{n}} \right)$ for the confidence (random) interval $\left(-\infty, \overline{X} + t_{\alpha, n-1} \dfrac{S}{\sqrt{n}} \right)$. The observed value of the confidence (random) interval is also called the lower-tailed $100(1 -\alpha)\%$ confidence interval for $\mu$.
+\end{frame}
+
+\begin{frame}
+The random variable $\overline{X}+ t_{\alpha, n-1} \dfrac{S}{\sqrt{n}}$ or its observed value the number $\overline{x} + t_{\alpha, n-1} \dfrac{s}{\sqrt{n}}$ is often called a confidence \textit{upper bound} for $\mu$ because
+$$
+P\left(\mu < \overline{X} + t_{\alpha, n-1} \dfrac{S}{\sqrt{n}} \right) = 1 - \alpha.
+$$
+
+\myheading{4. The upper-tailed confidence interval for $\mu$}
+
+Problem Prove the following theorem.
+
+\begin{theorem}
+The random interval $\left(\overline{X} - t_{\alpha, n -1} \dfrac{S}{\sqrt{n}}, \infty \right)$, is a $100(1- \alpha)\%$ confidence
+interval for $\mu$.
+\end{theorem}
+
+The random variable $\overline{X} - t_{\alpha, n-1} \dfrac{S}{\sqrt{n}}$ or its observed value the number $\overline{x} - t_{\alpha, n-1} \dfrac{s}{\sqrt{n}}$ is often called a confidence \textit{lower bound} for $\mu$ because
+$$
+P \left(\mu > \overline{X} - t_{\alpha, n-1} \dfrac{S}{\sqrt{n}} \right) =1-\alpha.
+$$
+\end{frame}
+
+\end{document}
+

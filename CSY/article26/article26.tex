@@ -1,0 +1,210 @@
+\documentclass{beamer}
+
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage{fancybox}
+\usepackage{xfrac}
+\usepackage{cancel}
+
+\newcommand{\heart}{\ensuremath\heartsuit}
+
+\usepackage{mathtools,amssymb}
+\newcommand{\myarrow}{\scalebox{2}[2]{$\mathclap{\curvearrowleft}\mkern2.2mu
+                                                 \mathclap{\curvearrowright}$}}
+
+\DeclareMathOperator{\Bin}{\mathrm{Bin}}
+
+\hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+
+\addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
+    \insertframenumber / \inserttotalframenumber}
+
+\geometry{papersize={15cm,12cm}}
+\usepackage{lipsum}
+
+\makeatletter
+\newenvironment<>{contdproof}[1][\proofname]{%
+    \par
+    \def\insertproofname{#1\@addpunct{.}}%
+    \usebeamertemplate{proof begin}#2}
+  {\usebeamertemplate{proof end}}
+\makeatother
+
+
+\setbeamertemplate{theorems}[numbered]
+
+\newtheorem*{nonumdefinition}{Definition}
+\newtheorem*{nonumproblem}{Problem}
+\newtheorem*{nonumtheorem}{Theorem}
+\newtheorem*{nonumremark}{Remark}
+\newtheorem*{answer}{Answer}
+\newtheorem*{nonumremarks}{Remarks}
+\newtheorem*{nonumexamples}{Examples}
+\newtheorem*{nonumsolution}{Solution}
+\newtheorem*{nonumexample}{Example}
+\newtheorem*{nonumproposition}{Proposition}
+\newtheorem{proposition}[theorem]{Proposition}
+
+
+\usepackage{tikz}
+\newcommand*\mycirc[1]{%
+  \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
+}
+
+\newcommand\myheading[1]{%
+  \par\bigskip
+  {\color{blue}{\large #1}}\par\smallskip}
+
+%\usetheme{Warsaw}
+%\usetheme{Berkeley} %sample 1
+
+\usetheme{Berlin} % sample 2
+%\usetheme{AnnArbor} % sample 3
+
+\let\otp\titlepage
+\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
+
+\title{Lecture 26 : Random Intervals and Confidence Intervals}
+\author{}
+\date{}
+
+\begin{document}
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}
+\myheading{1. The definition of a random interval}
+
+Let $X_1$ and $X_2$ be random variables defined on the same sample space $S$ such that
+$X_1(s) < X_2(s)$ for all $s \in  S$. Then $I = (X_1, X_2)$ is called an (open) random interval.
+For each $s \in S$ we obtain an ordinary interval $I(s) = (X_1(s), X_2(s))$. Thus we may
+think of a random interval as an \textit{interval-valued} random variable defined on $S$. The
+point of this lecture is that \textit{confidence intervals are random intervals}.
+
+\begin{nonumexample}
+Suppose $X$ is a random variable defined on $S$ and $a$ is a positive number
+then $I = (X -a,X+a)$ is the random interval with random center $X$ and (deterministic)
+width $2a$. More generally the random interval $I = (X -Y,X + Y)$ has random
+center $X$ and random width $2Y$.
+\end{nonumexample}
+\end{frame}
+
+\begin{frame}
+\myheading{2. Probabilities connected with random intervals}
+
+Now consider a random interval interval $I = (X_1,X_2)$ and a fixed number $a$. We
+want to compute the probability that the random interval $I$ will contain (or cover)
+the fixed number $a$. But this is just the probability that $a$ will be between $X_1$ and
+$X_2$ hence we have
+\begin{equation*}
+P(a \in   (X_1,X_2)) = P(X_1 < a,a < X_2) = P(X_1 < a,X_2 > a). \tag{1}
+\end{equation*}
+The probability on the right is the probability that the random variable $X_1$ will be
+less than the number $a$ and the random variable $X_2$ will be greater than the number
+$a$. This is just a random variable computation of the type we have done many times
+in the course already. Technically we should think of the formula (1) as the \textit{definition}
+of the probability that $a$ will be inside $I$ but this is a technical point - it is the only
+reasonable definition.
+
+\myheading{Warning}
+The probability $P(X_1 < a,X_2 > a)$ in equation (1) is almost never equal
+to the product probability $P(X_1 < a)  \cdot  P(X_2 > a)$ because $X_1$ and $X_2$ are almost
+never independent. For example in the above problem $X_1 = Z -1$ and $X_2 = Z +1$ so
+$X_2 = X_1+2$ so $X_1$ and $X_2$ are perfectly correlated and in particular not independent.
+We will conclude with an example of how to compute such probabilities.
+\end{frame}
+
+\begin{frame}
+\begin{nonumproblem}
+Suppose that $Z$ has standard normal distribution. Compute $P(0 \in (Z -
+1, Z + 1))$.
+\end{nonumproblem}
+
+
+\begin{nonumsolution}
+According to the equation (1) we have
+$$
+P(0 \in  (Z - 1, Z + 1)) = P(Z - 1 < 0, 0 < Z + 1).
+$$
+But
+$$
+P(Z - 1 < 0, 0 < Z + 1) = P(Z < 1,-1 < Z) = P(-1 < Z < 1) = P(-1 \leq  Z  \leq 1).
+$$
+By the ``handy formula'' we have
+$$
+P(-1 \leq Z \leq 1) = 2 \Phi (1) - 1 = 2(.8413) -1 = .6826
+$$
+\end{nonumsolution}
+\end{frame}
+
+\begin{frame}
+\myheading{3. In which we go completely random}
+In the first part of the course we were given a random variable $X$ and we computed
+probabilities like $P(a \leq X \leq b)$. But we have an equality of events
+$$
+(a \leq X \leq  b) = (X \in(a, b))
+$$
+so
+$$
+P(a \leq X  \leq b) = P(X \in (a, b)).
+$$
+In other words we were computing the probability that a \textit{random variable} was in an
+\textit{ordinary interval}. We have just learned how to compute the probability that a fixed
+\textit{real number} is in a \textit{random interval} e.g. $P(0 \in (Z - 1, Z + 1))$. It remains to ``go
+completely random'' and learn how to compute the probability that a \textit{random variable}
+is in a \textit{random interval}. Actually we can already do this. Let's do an example.
+\end{frame}
+
+\begin{frame}
+\begin{nonumproblem}
+Suppose $Z$ has standard normal distribution. Compute $P(2Z \in  (Z -1, Z + 1))$.
+\end{nonumproblem}
+
+\begin{nonumsolution}
+We have
+\begin{align*}
+& P(2Z  \in (Z - 1, Z + 1) = P(Z - 1 \leq 2Z, 2Z \leq Z + 1) = P(-1 q \leq Z, Z  \leq 1)\\
+& = P(-1\leq Z \leq 1) = 2 \Phi (1) - 1 = .6826.
+\end{align*}
+\end{nonumsolution}
+
+\begin{nonumremark}
+In the above we had to do a little manipulation of inequalities, namely
+$Z - 1 \leq 2Z  \Leftrightarrow  -1 \leq Z$ (subtract $Z$ from each side or ``bring the $Z$ from the
+left-hand side to the right-hand side'') and $2Z \leq Z + 1  \Leftrightarrow  Z  \leq 1$ (again subtract
+$Z$ from each side or bring the $Z$ from the right-hand side to the left-hand side'').
+\end{nonumremark}
+\end{frame}
+
+\begin{frame}
+\myheading{4. The definition of a confidence (random) interval}
+
+Suppose now that $X_1,X_2,  \ldots,X_n$ is a random sample from a population whose probability
+mass function (or probability density function) depends on an unknown parameter
+$\theta$.  Let $\alpha$ be a real number between 0 and 1. Then a $100(1 - \alpha) \%$ confidence
+interval for the unknown parameter $\alpha$ is a \textit{random interval} $I = (W_1,W_2)$ where
+$W_1 = h(X_1,X_2, \ldots , X_n)$ and $W_2 = g(X_1,X_2, \ldots ,X_n)$ are \textit{statistics} such that
+\begin{equation*}
+P(\theta \in  (W_1,W_2)) = 1 - \alpha. \tag{2}
+\end{equation*}
+If we hadn't given the definition in Equation (1) we wouldn’t have been able to make
+the correct definition in Equation (2). If we have an actual sample $x_1, x_2,  \ldots ,x_n$
+then we plug $x_1, x_2, \ldots,x_n$ into the functions $h$ and $g$ to get numbers $w_1$ and $w_2$
+and an ordinary interval $(w_1,w_2)$. This ordinary interval is the \textit{observed value} of the
+confidence interval $I = (W_1,W_2)$ on the sample $x_1, x_2,  \ldots,x_n$. This actual interval is
+also called a confidence interval for $\theta$. It is important to keep the difference between
+the confidence random interval and its obseved value on a sample firmly in mind.
+\end{frame}
+
+\begin{frame}
+The rest of the course will be concerned with finding formulas for confidence intervals
+in various situations - e.g. a 90\% confidence interval for the mean in a normal distribution.
+In each case we will verify that the equation (2) is satisfied. It is imperative
+that you all learn how to do these verifications - these will be ``good citizen'' problems.
+\end{frame}
+
+
+\end{document}
+
+
