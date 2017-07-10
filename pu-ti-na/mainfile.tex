@@ -16,14 +16,7 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 
 \usepackage{fancyhdr}
 
-\pagestyle{fancy}
 
-\renewcommand{\footrulewidth}{0pt}
-\chead[]{}
-\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\bfseries\rightmark} 
-\rhead[{\footnotesize\bfseries\rightmark}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
-\cfoot[]{}
-\rfoot[]{}
 
 \def\mdash{\eng{---}}
 
@@ -36,18 +29,32 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 }
 
 
+
+
 %\usepackage[papersize={140mm,215mm},textwidth=100mm,
 %textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
 %leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 
+\pagestyle{fancy}
+
+\renewcommand{\footrulewidth}{0pt}
+\chead[]{}
+\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\bfseries\rightmark} 
+\rhead[{\footnotesize\bfseries\rightmark}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\cfoot[]{}
+\rfoot[]{}
+\renewcommand\chaptermark[1]{\markright{\bfseries\thechapter.~\slshape #1}{}}
+
 \pretolerance=9000
 
 \usepackage{endnotes}% http://ctan.org/pkg/endnotes
-\let\footnote\endnote
+
+\renewcommand{\notesname}{aDiTipapxNigaLu}
+\let\footnote=\endnote
 \def\footnotetext{\endnotetext[\number\numexpr\value{endnote}+1]}
 \let\footnotemark\endnotemark
-\renewcommand{\notesname}{aDiTipapxNigaLu}
+%\renewcommand{\notesname}{aDiTipapxNigaLu}
 
 \begin{document}
 
@@ -68,8 +75,15 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
     \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+
+%\def\enoteheading{\section*{\notesname
+%  \@mkboth{{\notesname}}{{\notesname}}}%
+%  \mbox{}\par\vskip-\baselineskip}
+% \def\@endanenote{\par\vskip-0.2\baselineskip\endgroup}%
 \makeatother
-\makeatother
+
+
 
 \tableofcontents
 
