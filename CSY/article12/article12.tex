@@ -35,6 +35,7 @@
 
 \newtheorem*{nonumdefinition}{Definition}
 \newtheorem*{nonumproblem}{Problem}
+\newtheorem*{nonumproof}{Proof}
 \newtheorem*{nonumtheorem}{Theorem}
 \newtheorem*{nonumremark}{Remark}
 \newtheorem*{answer}{Answer}
@@ -177,67 +178,249 @@ $\lim\limits_{z\to \infty}\Phi(z)=1$
 
 \myheading{Using the tables on page 668-669}
 
-%raghu page 7
+The values of $\Phi(z)$ are tabulated in the front flops of the text or better from the web - see next page.
+
+From the table in the front flop on the web
+
+\begin{nonumproblem}
+\begin{itemize}
+\item[(a)] Compute $P(Z\leq 1.25) (0.8944)$
+
+\item[(b)] Compute $P(Z\leq -1.25)$
+
+\item[(c)] Compute $P(-1.25\leq Z\leq 1.25)$
+\end{itemize}
+The challenge is to use the answer to (a) namely $.8944$ to do (b) and (c). In other words to do all three parts you have to look up \underline{only one value}.
+
+First we show (a) gives (b).
+\end{nonumproblem}
 \end{frame}
 
 \begin{frame}
-
+\centerline{\includegraphics[scale=.9]{figure/fig7.pdf}}
 \end{frame}
 
 \begin{frame}
+\begin{nonumproblem}[Cont.]
+The point is that because $f(z)=\dfrac{1}{2\pi}e^{-\frac{1}{2}z^{2}}$ is even ($f(-z)=f(z)$ because it is a function of $z^{2}$) the function $\Phi(z)$ also has (a more subtle) symmetry namely
+\begin{equation*}
+\Phi(-a)=1-\Phi(a)\tag{*}
+\end{equation*}
+It is easiest to state and prove this in terms of probabilities.
+\end{nonumproblem}
 
+\begin{nonumproposition}
+\begin{equation*}
+P(Z\leq -a)=1-P(Z\leq a)\tag{**}
+\end{equation*}
+(*) and (**) are the same
+\end{nonumproposition}
 \end{frame}
 
 \begin{frame}
+\begin{proof}
+\centerline{\includegraphics{figure/fig8.eps}}
+\smallskip
 
+Because $f(z)$ is symmetric about the $y$ axis $(f(-z)=f(z))$ the two shaded areas have to be the same. Since one is the mirror image of other (where the $y$-axis is the mirror). Hence
+$$
+P(Z\leq -a)=P(Z\geq a)=1-P(Z<a)
+$$
+(because $(Z\geq a)$ and $(Z<a)$ are complements of each other).
+
+But $Z$ is continuous so
+$$
+P(Z<a)=P(Z\leq a)\quad\text{and}\quad P(Z\leq -a)=1-P(Z\leq a)
+$$
+\end{proof}
 \end{frame}
 
 \begin{frame}
-
+Now we can do (b) given the answer to (a)
+\begin{align*}
+P(Z\leq -1.25) &=1-P(Z\leq 1.25)\\
+               &=1-.8944\\
+               &=.1056
+\end{align*}
+Now what about (c). We have 
+$$
+P(-a\leq Z\leq a)=2\Phi(a)=1
+$$
+\begin{proof}
+\centerline{\includegraphics{figure/fig9.eps}}
+\end{proof}
 \end{frame}
 
 \begin{frame}
+So now we can do (c) using (a)
+\begin{align*}
+& P(-1.25\leq Z\leq 1.25)=2\Phi(1.25)-1\\
+&\quad =2(.8944)-1=.7888
+\end{align*}
+So we repeat - \underline{all we needed to do all three parts was the one value}
+$$
+\Phi(1.25)=P(Z\leq 1.25)=.8944
+$$
 
+\myheading{The $\alpha$-th critical value $z_{\alpha}$ of the standard normal}
+
+Let $\alpha$ be a real numbers between $0$ and $1$. We review the definition of the $\alpha$-th critical value $z_{\alpha}$ (we have change $X$ to $Z$) from Lecture 11, pages 5, 6, 7.
 \end{frame}
 
 \begin{frame}
+$z_{\alpha}$ is the number so that the vertical line $z=z_{\alpha}$ cuts off area $\alpha$ to the \underline{right} under the graph of $f(z)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{z^{2}}{2}}$.
 
+\smallskip
+\centerline{\includegraphics{figure/fig9.eps}}
+\smallskip
+
+Equivalently,
+\begin{align*}
+P(Z\geq z_{\alpha}) &= \alpha\\
+\text{or}\quad 1-P(Z\leq z_{\alpha}) &=\alpha\\
+P(Z\leq z_{\alpha}) &= 1-\alpha\\
+\Phi(z_{\alpha}) &=1-\alpha\\
+z_{\alpha} &= \Phi^{-1}(1-\alpha)
+\end{align*}
 \end{frame}
 
 \begin{frame}
+The values of $z_{\alpha}$ may be obtained from page 148 of the text or better, the bark flap of the text, Table A.S.
 
+\smallskip
+\centerline{\includegraphics{figure/fig11.eps}}
+\smallskip
+
+It may not look like it but the bottom now gives the values of $z_{\alpha}$ for 
+$$
+\alpha=.1, \ .05, \ .025, \ .01, \ .005, \ .001, \ .0005
+$$
+This is because
+$$
+\lim\limits_{v\to \infty}t_{\alpha,\nu}=z_{\alpha}
+$$
 \end{frame}
 
 \begin{frame}
+It will be important if you go further in statistics to think of $z_{\alpha}$ as a function of $\alpha$, $z_{\alpha}=f(\alpha)$.
 
+What is the graph of $f$?
+
+Here is the answer
+
+\smallskip
+\centerline{\includegraphics{figure/fig12.eps}}
+\smallskip
+
+\myheading{Hard Problem}
+
+Prove this using operations on graphs and the formula $z_{\alpha}=\Phi^{-1}(1-\alpha)$
+\begin{enumerate}
+\item Start with the graph of $\Phi(z)$
+
+\smallskip
+\centerline{\includegraphics{figure/fig13.eps}}
+\smallskip
+
+\item Draw the graph of $\Phi^{-1}(z)$ then of $\Phi^{-1}(1-z)$ (you do this by ``flopping'' graphs).
+\end{enumerate}
 \end{frame}
 
 \begin{frame}
+\myheading{Standardizing Everybody has to learn how to do this!}
 
+When $X\sim N(\mu,\sigma^{2})$ the probabilities $P(a\leq X\leq b)$ are computed by ``standardizing'' $X$. The procedure is based on
+
+\begin{nonumproposition}
+If $X\sim N(\mu,\sigma^{2})$ then the new random variable $Z=\dfrac{X-\mu}{\sigma}$ satisfies $Z\sim N(0,1)$.
+\end{nonumproposition}
 \end{frame}
 
 \begin{frame}
+\begin{nonumremark}
+{\large\bf Z} This may be too hard.
 
+This is a linear change of continuous random variable. We haven't defined change of continuous random variable but we will say something how.
+\end{nonumremark}
+
+\myheading{Here is the idea}
+
+Write the density of $X$ as 
+$$
+f(x)dx=\dfrac{1}{\sqrt{2\pi \sigma}}e^{-\frac{1}{2}\left(\frac{X-\mu}{\sigma}\right)^{2}}dx
+$$
+\underline{you have to put in the $dx$ here.}
+
+\smallskip
+
+Now substitute $Z=\dfrac{X-\mu}{\sigma}$ on $X=\sigma 2+\mu$ so $dx=\sigma dz$ so when we e-express the right-hand side in terms of $z$ we get
+
+\medskip
+\centerline{\includegraphics{figure/fig14.eps}}
 \end{frame}
 
 \begin{frame}
+In general when you make a change of variance from $X$ to $Y=h(X)$ you take the density $F(x)dx$ of $X$ and re-express everything in terms of $y$ using $X=h^{-1}(y)$ so $dx=d(h^{-1}(g))$. 
 
+This is the idea but need tightening up.
+
+\myheading{Now back to Stat 400 and what you absolutely have to know}
+
+\begin{nonumexample}
+Suppose \ $X\sim N(40,(1.5)^{2})$
+
+Compute \ $P(39\leq X\leq 42)$
+\end{nonumexample}
 \end{frame}
 
 \begin{frame}
+\begin{nonumsolution}
+Be careful : $\sigma^{2}=(1.5)^{2}$ so $\sigma=1.5$, you have to divide by $\sigma=1.5$ below.
 
+The desired probability is $P(39\leq X\leq 42)$
+
+We subtract the mean $\mu=40$ from EVERYTHING and divide EVERYTHING by $\sigma=1.5$. This way we have an equality
+
+\smallskip
+\centerline{\includegraphics{figure/fig15.eps}}
+\smallskip
+
+because we have done the some thing to all terms in the inequalities on the left.
+\end{nonumsolution}
 \end{frame}
 
 \begin{frame}
-
+\begin{nonumsolution}[Cont.]
+We obtain
+\begin{align*}
+& P(39\leq X\leq 42)=P\left(-\dfrac{1}{1.5}\leq Z\leq \dfrac{-2}{1.5}\right)\\
+&\quad =P\left(-\dfrac{2}{3}\leq Z\leq \dfrac{4}{3}\right)\\
+&\quad =P(-.67\leq Z\leq 1.33)\\
+&\quad =\Phi(1.33)-\Phi(-.67)\\
+&\text{from front flop}\\
+&\quad =.9082-.2514\\
+&\quad =.6568
+\end{align*}
+\end{nonumsolution}
+\underline{Make sure you understand this computation completely.}
 \end{frame}
 
 \begin{frame}
+In real-life problems you might not have a table available. Still you can give a good approximation to normal probabilities using the
 
+\myheading{Two-Sided Rule of Thumb, page 151}
+
+
+Let $X\sim N(\mu,\sigma^{2})$. We will give approximations for $X$ to be within 1, 2 and 3 standard deviations of its mean
+
+\myheading{(1) One standard deviation}
+$$
+P(|X-\mu|\leq \sigma)\approx .68 
+$$
 \end{frame}
 
 \begin{frame}
-
+%raghu, page 22
 \end{frame}
 
 \begin{frame}
