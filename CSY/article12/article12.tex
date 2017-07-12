@@ -420,61 +420,202 @@ $$
 \end{frame}
 
 \begin{frame}
-%raghu, page 22
+\smallskip
+\centerline{\includegraphics{figure/fig16.eps}}
+\smallskip
+
+\myheading{(2) Two standard deviations}
+\smallskip
+\centerline{\includegraphics{figure/fig17.eps}}
+$$
+P(|X-\mu|\leq 2\sigma)\approx .95
+$$
+
+\myheading{(3) Three standard deviations}
+
+\smallskip
+\centerline{\includegraphics{figure/fig18.eps}}
+$$
+P(|X-\mu|\leq 3\sigma)\approx .997
+$$
 \end{frame}
 
 \begin{frame}
+Consequence (we will need these)
 
+\myheading{The One-Sided Rule of Thumb One standard deviation}
+$$
+P(X-\mu>\sigma)\approx .16
+$$
+\smallskip
+\centerline{\includegraphics{figure/fig19.eps}}
+
+Why
+
+\smallskip
+\centerline{\includegraphics{figure/fig21.eps}}
 \end{frame}
 
 \begin{frame}
+\myheading{Two standard deviations}
+$$
+P(X-\mu>2\sigma)\approx .025
+$$
+\centerline{\includegraphics{figure/fig20.eps}}
+\smallskip
 
+Left to you.
 \end{frame}
 
 \begin{frame}
+\myheading{The Normal Approximation to the Binomial}
 
+Recall
+\begin{align*}
+X\sim \Bin (n,p)\Rightarrow E(X) &= np\\
+\text{and}\quad V(X) &= npq
+\end{align*}
+
+\begin{nonumtheorem}[Normal approximation to the binomial]
+If $X\sim \Bin (n,p)$ and $n$ is large (relative to $p$ and $q$) specifically $np\geq 10$ and $nq\geq 10$ then $X$ is approximately normal. ?????? if $Y$ is the normal random variable with the same mean and variance as $X$.
+\end{nonumtheorem}
 \end{frame}
 
 \begin{frame}
+so $Y\sim (np, npq)$ then for all $a$, $b$.
+$$
+P(a\leq X\leq b)\approx P(a\leq Y\leq b)
+$$
 
+\begin{nonumproblem}
+Professional mathematicians would not accept this theorem. \underline{There is no estimate on the error of the approximation.}
+
+On the cosmic scale $1\approx 2$ but not in real life so ``approximate'' is too vague. But in fact the above approximation is good to a large number if decimal places and there is a (complicated) estimate for the error.
+\end{nonumproblem}
 \end{frame}
 
 \begin{frame}
+\myheading{Refinement (not that important) ``Correction for Continuity''}
+\begin{equation*}
+P(a\leq X\leq b)\approx P(a\leq Y\leq b)\tag{b}\label{eq-b}
+\end{equation*}
+But $X$ is discrete and $Y$ is continuous so $X$ could assign a non-zero probability to the end $a$ and to the other end $b$ ?????? $X$ \underline{would assign zero probability to each end.}
 
+For example
+
+\smallskip
+\centerline{\includegraphics{figure/fig22.eps}}
 \end{frame}
 
 \begin{frame}
+So the right-hand side is \underline{too small} so we make it bigger by pushing a $\dfrac{1}{2}$ unit to the left and pushing $b$ $\dfrac{1}{2}$ unit to the right. See the text, pg. 153, - have
+$$
+P(\underbrace{10\leq X\leq 10}_{X=10})\approx P(9.5\leq Y\leq 10.5)
+$$
 
+\myheading{Bottom Line}
+\begin{equation*}
+P(a\leq X\leq b)\approx P\left(a-\frac{1}{2}\leq Y\leq b+\frac{1}{2}\right)\tag{bb}
+\end{equation*}
+is better than \eqref{eq-b}.
 \end{frame}
 
 \begin{frame}
+\myheading{The GRE Problem}
 
+(from Tim Darling, foll 1999)
+
+The following problem was on the Graduate Records Exam in mathematics. As you will see it was pretty hard. 
+
+Suppose a fair die is tossed 360 times. The probability a 6 comes up 70 or more times is
+\begin{itemize}
+\item[(A)] $>.5$
+
+\item[(B)] Between $(.16,.5)$
+
+\item[(C)] Between $(.02,.16)$
+
+\item[(D)] Between $(.01,.02)$
+
+\item[(E)] $<.01$
+\end{itemize}
 \end{frame}
 
 \begin{frame}
+\begin{nonumsolution}
+Let $X=\sharp$ of sixes in 360 tosses
 
+\begin{tabbing}
+So success \== 6 appears\\[5pt]
+\phantom{So~~ } failure  \>= non 6 appears
+\end{tabbing}
+
+So
+$$
+X\sim \Bin \left(360,\frac{1}{6}\right)
+$$
+and the exact answer is
+$$
+P(X\geq 70)\text{~ with~ } X\sim \Bin \left(360,\frac{1}{6}\right)
+$$
+But we need to choose between (A), (B), (C), (D) and (E).
+
+So we need a \underline{number} - If you had a laptop when you took the exam you wouldn't need what comes next.
+\end{nonumsolution}
 \end{frame}
 
 \begin{frame}
+\begin{nonumsolution}[Cont.]
+So we use the \underline{normal approximation to $X$}. We have 
+\begin{align*}
+E(X)=np=(360)\left(\dfrac{1}{6}\right) &=60\\
+V(X)=npq=(np)q &= (60)\left(\frac{5}{6}\right)\\
+               &= 50
+\end{align*}
+So let $Y\sim N(60,50)$
 
+\smallskip
+\centerline{\includegraphics{figure/fig23.eps}}
+\smallskip
+
+So
+\begin{equation*}
+P(X\geq 70)\approx P(Y\geq 70)\tag{*}\label{add-eq*}
+\end{equation*}
+(we don't use the correction for continuity)
+
+But we aren't done yet unless you have a table of normal probabilities with you.
+\end{nonumsolution}
 \end{frame}
 
 \begin{frame}
+\begin{nonumsolution}[Cont.]
+So we need the \underline{one-sided rule of thumb.}
 
+We have to compare the right-hand side of \eqref{add-eq*} to 
+\begin{align*}
+& P(Y-\mu\geq \sigma)\approx .16\quad\text{and}\\
+& P(Y-\mu\geq 2\sigma)\approx .025
+\end{align*}
+Now $\mu=60$ so
+$$
+P(Y\geq 70)=P(Y-60\geq 10)
+$$
+So we get lucky, \underline{10 is between $\sigma=7.7$ and $2\sigma=154$}
+
+So
+
+\smallskip
+\centerline{\includegraphics{figure/fig24.eps}}
+\smallskip
+
+So 
+$$
+.16 > P(Y-60>10)>.025
+$$
+\underline{So the answer is (C)}
+\end{nonumsolution}
 \end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
-\begin{frame}
-
-\end{frame}
-
 \end{document}
 
 
