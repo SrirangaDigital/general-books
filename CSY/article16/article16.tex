@@ -93,7 +93,7 @@ Two discrete random variables $X$ and $Y$ defined on the same sample space are s
 \end{frame}
 
 \begin{frame}
-Now \eqref{eq-*} say the \underline{joint} $pmf$ $P_{X,Y}(x,y)$ is determined by the \underline{marginal} $pmf$'s $P_{X}(x)$ and $P_{Y}(y)$ by taking the product.
+Now \eqref{eq-*} say the {\it joint} $pmf$ $P_{X,Y}(x,y)$ is determined by the {\it marginal} $pmf$'s $P_{X}(x)$ and $P_{Y}(y)$ by taking the product.
 
 \begin{nonumproblem}
 In case $X$ and $Y$ are independent how do you recover the matrix (table) representing $P_{X,y}(x,y)$ from its margins?
@@ -173,7 +173,7 @@ So if $X$ and $Y$ wave independent then we would set
 \end{frame}
 
 \begin{frame}
-So as we expected for the basic example \underline{$X$ and $Y$ are not independent.}
+So as we expected for the basic example {\it $X$ and $Y$ are not independent.}
 
 From \eqref{addeq-*} on page 5 we have
 \begin{equation*}
@@ -193,7 +193,7 @@ This is not the same as \eqref{eq-sharp}.
 \begin{frame}
 \myheading{Covariance and Correlation}
 
-In the ``real world'' e.g., the newspaper one often hears (reeds) that two quantities are \underline{correlated}. This word is often taken to be synonymous with \underline{causality}. This is not correct and the difference is extremely important even in reel life. Here are two real word examples of correlations.
+In the ``real world'' e.g., the newspaper one often hears (reeds) that two quantities are {\it correlated}. This word is often taken to be synonymous with {\it causality}. This is not correct and the difference is extremely important even in reel life. Here are two real word examples of correlations.
 \begin{enumerate}
 \item Being rich and driving on expensive car.
 
@@ -221,7 +221,7 @@ Suppose $X$ and $Y$ are discrete and defined on the same sample space. Then the 
 $$
 \Cov (X,X)=E\left((X-\mu_{X})^{2}\right)=V(X)
 $$
-There is a \underline{shortcut formula} for covariance.
+There is a {\it shortcut formula} for covariance.
 \end{nonumremark}
 
 \begin{nonumtheorem}[Shortcut formula]
@@ -356,17 +356,17 @@ $P(Y=y)$ & $\frac{1}{8}$ & $\frac{3}{8}$ & $\frac{3}{8}$ & $\frac{1}{8}$\\
 \end{center}
 So $Y\sim \Bin \left(3,\dfrac{1}{2}\right)$ so $E(Y)=\dfrac{3}{2}$, $V(X)=\dfrac{3}{4}$ so $\sigma_{Y}=\dfrac{\sqrt{3}}{2}$.
 
-\underline{Now we need $E(XY)$} (the hard part)
+{\it Now we need $E(XY)$} (the hard part)
 $$
 E(XY)=\sum\limits_{xy}xy \ P(X=x,Y=y)
 $$
-Trick - We are summing over entries in the matrix times $xy$ so potentially \underline{eight} terms.
+Trick - We are summing over entries in the matrix times $xy$ so potentially {\it eight} terms.
 \end{nonumsolution}
 \end{frame}
 
 \begin{frame}
 \begin{nonumsolution}[Cont.]
-But the four terms from first row don't contribute because $x=0$ so $xy=0$. Also the first term in the second row doesn't  contribute since $y=0$. So there are only \underline{three} terms.
+But the four terms from first row don't contribute because $x=0$ so $xy=0$. Also the first term in the second row doesn't  contribute since $y=0$. So there are only {\it three} terms.
 \begin{align*}
 E(XY) &= (1)(1)\left(\dfrac{1}{8}\right)+(1)(2)\left(\dfrac{2}{8}\right)+(1)(3)\left(\dfrac{1}{8}\right)\\
       &= \frac{1}{8}[1+4+3]=\frac{8}{8}=1
@@ -457,7 +457,7 @@ Now for the covariance.
 
 Here is the really cool thing.
 
-\underline{Every term} in the Formula for $E(XY)$ so $E(XY)$ is the sum of nine zeroes so $E(XY)=0$.
+{\it Every term} in the Formula for $E(XY)$ so $E(XY)$ is the sum of nine zeroes so $E(XY)=0$.
 
 So
 $$

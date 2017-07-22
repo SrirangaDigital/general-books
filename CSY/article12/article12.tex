@@ -81,7 +81,7 @@ We will now study the basic examples
 
 \medskip
 
-\underline{This is the most important lecture in the course.}
+{\it This is the most important lecture in the course.}
 \end{frame}
 
 \begin{frame}
@@ -132,7 +132,7 @@ If $X\sim N(\mu,\sigma^{2})$ then
 $$
 P(a\leq X\leq b)=\int\limits^{b}_{a}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X-\mu}{\sigma})^{2}}dx
 $$
-This integral cannot be computed by calculus methods so it must be computed by numerical analysis methods. However these probabilities can be recovered from the table in the front flip text or from a computer. To do this we need to reduce to the ``standard'' case $\mu=0$, $\sigma=1$ (otherwise we would need infinitely many tables, one for each pair $(\mu,\sigma^{2})$). The reduction to the standard case is called \underline{standardization}.
+This integral cannot be computed by calculus methods so it must be computed by numerical analysis methods. However these probabilities can be recovered from the table in the front flip text or from a computer. To do this we need to reduce to the ``standard'' case $\mu=0$, $\sigma=1$ (otherwise we would need infinitely many tables, one for each pair $(\mu,\sigma^{2})$). The reduction to the standard case is called {\it standardization}.
 \end{nonumremark}
 \end{frame}
 
@@ -140,7 +140,7 @@ This integral cannot be computed by calculus methods so it must be computed by n
 \myheading{The Standard Normal Distribution}
 
 \begin{nonumdefinition}
-A normal distribution with mean $0$ and variance $1$ (so $\mu=0$ and $\sigma^{2}=1$, so $\sigma=1$) is called a \underline{standard normal distribution}.
+A normal distribution with mean $0$ and variance $1$ (so $\mu=0$ and $\sigma^{2}=1$, so $\sigma=1$) is called a {\it standard normal distribution}.
 
 A random variable with standard normal distribution will be denoted $Z$ so $Z\sim N(0,1)$.
 
@@ -190,7 +190,7 @@ From the table in the front flop on the web
 
 \item[(c)] Compute $P(-1.25\leq Z\leq 1.25)$
 \end{itemize}
-The challenge is to use the answer to (a) namely $.8944$ to do (b) and (c). In other words to do all three parts you have to look up \underline{only one value}.
+The challenge is to use the answer to (a) namely $.8944$ to do (b) and (c). In other words to do all three parts you have to look up {\it only one value}.
 
 First we show (a) gives (b).
 \end{nonumproblem}
@@ -257,7 +257,7 @@ So now we can do (c) using (a)
 & P(-1.25\leq Z\leq 1.25)=2\Phi(1.25)-1\\
 &\quad =2(.8944)-1=.7888
 \end{align*}
-So we repeat - \underline{all we needed to do all three parts was the one value}
+So we repeat - {\it all we needed to do all three parts was the one value}
 $$
 \Phi(1.25)=P(Z\leq 1.25)=.8944
 $$
@@ -268,7 +268,7 @@ Let $\alpha$ be a real numbers between $0$ and $1$. We review the definition of 
 \end{frame}
 
 \begin{frame}
-$z_{\alpha}$ is the number so that the vertical line $z=z_{\alpha}$ cuts off area $\alpha$ to the \underline{right} under the graph of $f(z)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{z^{2}}{2}}$.
+$z_{\alpha}$ is the number so that the vertical line $z=z_{\alpha}$ cuts off area $\alpha$ to the {\it right} under the graph of $f(z)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{z^{2}}{2}}$.
 
 \smallskip
 \centerline{\includegraphics{figure/fig9.eps}}
@@ -349,7 +349,7 @@ Write the density of $X$ as
 $$
 f(x)dx=\dfrac{1}{\sqrt{2\pi \sigma}}e^{-\frac{1}{2}\left(\frac{X-\mu}{\sigma}\right)^{2}}dx
 $$
-\underline{you have to put in the $dx$ here.}
+{\it you have to put in the $dx$ here.}
 
 \smallskip
 
@@ -402,7 +402,7 @@ We obtain
 &\quad =.6568
 \end{align*}
 \end{nonumsolution}
-\underline{Make sure you understand this computation completely.}
+{\it Make sure you understand this computation completely.}
 \end{frame}
 
 \begin{frame}
@@ -488,7 +488,7 @@ P(a\leq X\leq b)\approx P(a\leq Y\leq b)
 $$
 
 \begin{nonumproblem}
-Professional mathematicians would not accept this theorem. \underline{There is no estimate on the error of the approximation.}
+Professional mathematicians would not accept this theorem. {\it There is no estimate on the error of the approximation.}
 
 On the cosmic scale $1\approx 2$ but not in real life so ``approximate'' is too vague. But in fact the above approximation is good to a large number if decimal places and there is a (complicated) estimate for the error.
 \end{nonumproblem}
@@ -499,7 +499,7 @@ On the cosmic scale $1\approx 2$ but not in real life so ``approximate'' is too 
 \begin{equation*}
 P(a\leq X\leq b)\approx P(a\leq Y\leq b)\tag{b}\label{eq-b}
 \end{equation*}
-But $X$ is discrete and $Y$ is continuous so $X$ could assign a non-zero probability to the end $a$ and to the other end $b$ ?????? $X$ \underline{would assign zero probability to each end.}
+But $X$ is discrete and $Y$ is continuous so $X$ could assign a non-zero probability to the end $a$ and to the other end $b$ ?????? $X$ {\it would assign zero probability to each end.}
 
 For example
 
@@ -508,7 +508,7 @@ For example
 \end{frame}
 
 \begin{frame}
-So the right-hand side is \underline{too small} so we make it bigger by pushing a $\dfrac{1}{2}$ unit to the left and pushing $b$ $\dfrac{1}{2}$ unit to the right. See the text, pg. 153, - have
+So the right-hand side is {\it too small} so we make it bigger by pushing a $\dfrac{1}{2}$ unit to the left and pushing $b$ $\dfrac{1}{2}$ unit to the right. See the text, pg. 153, - have
 $$
 P(\underbrace{10\leq X\leq 10}_{X=10})\approx P(9.5\leq Y\leq 10.5)
 $$
@@ -560,13 +560,13 @@ P(X\geq 70)\text{~ with~ } X\sim \Bin \left(360,\frac{1}{6}\right)
 $$
 But we need to choose between (A), (B), (C), (D) and (E).
 
-So we need a \underline{number} - If you had a laptop when you took the exam you wouldn't need what comes next.
+So we need a {\it number} - If you had a laptop when you took the exam you wouldn't need what comes next.
 \end{nonumsolution}
 \end{frame}
 
 \begin{frame}
 \begin{nonumsolution}[Cont.]
-So we use the \underline{normal approximation to $X$}. We have 
+So we use the {\it normal approximation to $X$}. We have 
 \begin{align*}
 E(X)=np=(360)\left(\dfrac{1}{6}\right) &=60\\
 V(X)=npq=(np)q &= (60)\left(\frac{5}{6}\right)\\
@@ -590,7 +590,7 @@ But we aren't done yet unless you have a table of normal probabilities with you.
 
 \begin{frame}
 \begin{nonumsolution}[Cont.]
-So we need the \underline{one-sided rule of thumb.}
+So we need the {\it one-sided rule of thumb.}
 
 We have to compare the right-hand side of \eqref{add-eq*} to 
 \begin{align*}
@@ -601,7 +601,7 @@ Now $\mu=60$ so
 $$
 P(Y\geq 70)=P(Y-60\geq 10)
 $$
-So we get lucky, \underline{10 is between $\sigma=7.7$ and $2\sigma=154$}
+So we get lucky, {\it 10 is between $\sigma=7.7$ and $2\sigma=154$}
 
 So
 
@@ -613,7 +613,7 @@ So
 $$
 .16 > P(Y-60>10)>.025
 $$
-\underline{So the answer is (C)}
+{\it So the answer is (C)}
 \end{nonumsolution}
 \end{frame}
 \end{document}

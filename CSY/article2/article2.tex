@@ -24,6 +24,7 @@
 
 \newtheorem*{nonumdefinition}{Definition}
 \newtheorem*{nonumproblem}{Problem}
+\newtheorem*{nonumsolution}{Solution}
 \newtheorem*{nonumremark}{Remark}
 \newtheorem*{nonumexample}{Example}
 \newtheorem*{nonumproposition}{Proposition}
@@ -65,9 +66,9 @@
 
 \myheading{1. The Product Rule for Ordered Pairs and Ordered $k$-tuples}
 
-Our first counting rule applies to any situation in which a set consists of \underline{ordered} pairs of objects $(a,b)$ where a comes from a set $B$.
+Our first counting rule applies to any situation in which a set consists of {\it ordered} pairs of objects $(a,b)$ where a comes from a set $B$.
 
-In terms of pure mathematics the \underline{Cartesian product} $A\times B$ is the set of such pairs
+In terms of pure mathematics the {\it Cartesian product} $A\times B$ is the set of such pairs
 $$
 A\times B=\{(a,b) : a\in A, b\in B\}
 $$ 
@@ -75,7 +76,7 @@ $$
 
 \begin{frame}
 \begin{nonumproposition}[text pg. 60]
-If the first element of the ordered pair can be selected in $n_{1}$ ways and \underline{if for each of these $n_{1}$ ways} the second element can be selected in $n_{2}$ ways then the number of pairs is $n_{1}n_{2}$.
+If the first element of the ordered pair can be selected in $n_{1}$ ways and {\it if for each of these $n_{1}$ ways} the second element can be selected in $n_{2}$ ways then the number of pairs is $n_{1}n_{2}$.
 \end{nonumproposition}
 
 Mathematically - If $\sharp(A)=n_{1}$ and $\sharp(B)=n_{2}$ then $\sharp(A\times B)=n_{1}n_{2}$.
@@ -91,7 +92,7 @@ $$
 How many ``words'' of two letters can we make from the alphabet of five letters $\{a,b,c,d,e\}$.
 \end{nonumexample}
 
-\begin{solution}
+\begin{nonumsolution}
 Note that order counts $ab\neq ba$.
 
 
@@ -103,11 +104,11 @@ We have a choice of 5 ways to fill in the first slot and for each of these we ha
 $$
 \underline{5} \ \underline{5}=25
 $$
-\end{solution}
+\end{nonumsolution}
 \end{frame}
 
 \begin{frame}
-\begin{solution}[Solution (Cont.)]
+\begin{nonumsolution}[Cont.]
 \myheading{2. Draw a tree where each edge is a choice}
 
 \smallskip
@@ -117,7 +118,7 @@ $$
 The number of pairs is the number paths from the root to a ``leaf'' (i.e., a node at the far right).
 
 In this case there are 25 paths.
-\end{solution}
+\end{nonumsolution}
 
 \begin{nonumproblem}
 How many words of length 3?
@@ -130,12 +131,12 @@ How many words of length 3?
 In the previous problem the word $aa$ was allowed. What if we required the letters in the word to be distinct. Then we would get 2-permutations from the 5-element set $\{a,b,c,d\}$ according to the following definition.
 
 \begin{nonumdefinition}
-An \underline{ordered} sequence of $k$ \underline{distinct} objects taken from a set of $n$ elements is called a \underline{$k$-permutation} of the $n$ objects. The number of $k$-permutations of the $n$ objects will be denoted $P_{k,n}$.
+An {\it ordered} sequence of $k$ {\it distinct} objects taken from a set of $n$ elements is called a {\it $k$-permutation} of the $n$ objects. The number of $k$-permutations of the $n$ objects will be denoted $P_{k,n}$.
 \end{nonumdefinition}
 \end{frame}
 
 \begin{frame}
-So \underline{order counts}
+So {\it order counts}
 
 Let us return to our 5 element set $\{a,b,c,d,e\}$ and count the number of 2-permutations. 
 
@@ -252,7 +253,7 @@ $$
 \begin{frame}
 \myheading{Combinations}
 
-There are many counting problems in which one is given a set of $n$ objects and one wants to count the number of \underline{unordered} subsets with $k$ elements.
+There are many counting problems in which one is given a set of $n$ objects and one wants to count the number of {\it unordered} subsets with $k$ elements.
 
 An unordered subset with $k$ elements taken from a set of $n$ elements is called a $k$-combination of that set. The number of $k$-combinations is denoted $C_{k,n}$.
 

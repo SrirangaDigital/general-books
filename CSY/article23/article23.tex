@@ -93,7 +93,7 @@ We have been discussing the problem of estimating on unknown parameter $\theta$ 
 \medskip
 \centerline{\includegraphics{figure/art23(a).eps}}
 
-Use the \underline{sample} mean $\overline{x} = \dfrac{x_1 + \ldots + x_n}{n}$ to estimate \underline{population} mean $\mu$. $\overline{X}$ is an unbiased estimator of $\mu$.
+Use the {\it sample} mean $\overline{x} = \dfrac{x_1 + \ldots + x_n}{n}$ to estimate {\it population} mean $\mu$. $\overline{X}$ is an unbiased estimator of $\mu$.
 \end{frame}
 
 \begin{frame}
@@ -153,7 +153,7 @@ $$
 \end{frame}
 
 \begin{frame}
-\underline{Key Point}
+\myheading{Key Point}
 
 Given
 
@@ -206,9 +206,8 @@ Recall that because the $x$'s are all either 1 or zero $x_1 + \ldots + x_n = \ne
 
 \begin{example}
 The method of moments works well when you here several unknown parameters. Suppose we want to estimate
-\underline{both} the mean $\mu$ and the variance $\sigma^2$ from a normal distribution (or any distribution)
-
-\medskip
+{\it both} the mean $\mu$ and the variance $\sigma^2$ from a normal distribution (or any distribution)
+\begin{center}
 \begin{tabular}{|c|}
 \hline
 \\
@@ -217,6 +216,7 @@ $X \sim N(\mu, \sigma^2)$
 \\
 \hline
 \end{tabular}
+\end{center}
 \end{example}
 \end{frame}
 
@@ -258,7 +258,7 @@ $\widehat{\sigma^2}_{mme}$ is a biased estimator.
 \end{example}
 
 \begin{example}
-\underline{Estimating $B$ in $U(0,B)$}
+{\it Estimating $B$ in $U(0,B)$}
 
 Recall that we come up with the unbiased estimator 
 $$
@@ -309,7 +309,7 @@ We will interpret this to mean ``which one has the smaller variance''?
 \end{frame}
 
 \begin{frame}
-\underline{$V(\hat{B}_1) = V (2 \overline{X})$}
+{\it $V(\hat{B}_1) = V (2 \overline{X})$}
 
 Recall from the Distribution Hard out that $X \sim U(A, B)$
 $$
@@ -321,7 +321,7 @@ $$
 V(X) =\frac{B^2}{12}
 $$
 
-This is the \underline{population} variance. We also know
+This is the {\it population} variance. We also know
 \begin{align*}
 V (\overline{X}) & = \frac{\sigma^2}{n} = \frac{\text{population variance}}{n}\\
 \text{so } \qquad V (\overline{X}) & = \frac{B^2}{12 n}\\
@@ -406,7 +406,7 @@ $P$ is a function of $\theta$, it is called the likelihood function and denoted 
 \end{frame}
 
 \begin{frame}
-Note, $\theta$ is unknown but $x_1, x_2, \ldots, x_n$ are known (given). So what is the nest guess for $\theta$ - the number that maximizes the probability  of getting the sample use actually observed. \underline{This is the value of $\theta$ that is most compatible with the observed data}.
+Note, $\theta$ is unknown but $x_1, x_2, \ldots, x_n$ are known (given). So what is the nest guess for $\theta$ - the number that maximizes the probability  of getting the sample use actually observed. {\it This is the value of $\theta$ that is most compatible with the observed data}.
 
 \medskip
 \myheading{Bottom Line}
@@ -419,7 +419,7 @@ This is the ``method of maximum likelihood''.
 The resulting estimator will be called the maximum likelihood estimator, abbreviated mle and denoted $\hat{\theta}_{\text{mle}}$.
 
 \myheading{Remark (We will be lazy)}
-In doing problems, following the text, we won't really maximize $L(\theta)$ we will just find a critical point of $L(\theta)$ ie. a point where $L'(\theta)$ is zero. Later in your cancer if your have to do this \underline{you should check that the critical point is indeed a maximum}.
+In doing problems, following the text, we won't really maximize $L(\theta)$ we will just find a critical point of $L(\theta)$ ie. a point where $L'(\theta)$ is zero. Later in your cancer if your have to do this {\it you should check that the critical point is indeed a maximum}.
 \end{frame}
 
 \begin{frame}
@@ -465,7 +465,7 @@ Now we want to
 2. Set $L' (\theta) =0$ and solve for \\
 \qquad $\theta$ in terms of $x_1, x_2, \ldots, x_n$
 \end{tabular}
-\right\} \tag{$\ast$}
+\right\} \tag{$\ast$}\label{eq-*}
 \end{equation*}
 We can make things much simpler by using the following trick. Suppose $f(x)$ is a real valued function that only takes positive value.
 
@@ -484,7 +484,7 @@ $$
 Also $h$ takes a maximum value of $x_\ast \Leftrightarrow f$ takes a maximum value at $x_\ast$. This is because $ln$ is an increasing function so it preserves order relations. ($a < b \Leftrightarrow ln \;a < ln \;b$, have we assume $a>0$ and $b>0$)
 
 \underline{Bottom Line}
-Change ($\ast$) to ($\ast\ast$)
+Change \eqref{eq-*} to ($\ast\ast$)
 \end{frame}
 
 \begin{frame}
@@ -548,7 +548,7 @@ f(x, \lambda) =
 \end{cases}
 $$
 
-Now we have a continuous distribution we \underline{define} $L(\theta)$ by
+Now we have a continuous distribution we {\it define} $L(\theta)$ by
 $$
 L(\theta) = f(x_1, \theta) f(x_2, \theta) \ldots f(x_n, \theta)
 $$
@@ -558,10 +558,10 @@ $L(\theta)$ nolonger has a nice interpretation
 \end{frame}
 
 \begin{frame}
-Let's try to guess the answer. We have $E(X) = \mu = \dfrac{1}{\lambda}$ and we know that $\overline{x}$ is the best estimator for $\mu$ so it is reasonable to guess the best estimator for $\lambda =\dfrac{1}{\mu}$ will be $\dfrac{1}{\overline{x}}$. This is for from correct logically but \underline{it helps to know where you are going}.
+Let's try to guess the answer. We have $E(X) = \mu = \dfrac{1}{\lambda}$ and we know that $\overline{x}$ is the best estimator for $\mu$ so it is reasonable to guess the best estimator for $\lambda =\dfrac{1}{\mu}$ will be $\dfrac{1}{\overline{x}}$. This is for from correct logically but {\it it helps to know where you are going}.
 
 \medskip
-\underline{Away we go} -let's not bother changing $\lambda$ to $\theta$.
+{\it Away we go} -let's not bother changing $\lambda$ to $\theta$.
 \begin{align*}
 L(\lambda) & = \lambda e^{-\lambda x_1} \lambda e^{-\lambda x_2} \ldots \lambda e^{-\lambda x_n}\\
 & = \lambda^n e^{-\lambda x_1} e^{-\lambda x_2} e^{-\lambda x_n}\\
@@ -620,7 +620,7 @@ $$
 
 In Example 6.17 of the text if is shown that 
 \begin{align*}
-\widehat{\sigma^2}_{mle} & = \frac{1}{n} \left( \right) = \widehat{\sigma^2}_{mme}\\
+\widehat{\sigma^2}_{mle} & = \frac{1}{n} \left( \sum X^{2}_{i}-\dfrac{(\sum X_{i})^{2}}{n}\right) = \widehat{\sigma^2}_{mme}\\
 \text{Hence } ~~~ \widehat{\sigma}_{mle} & = \sqrt{\frac{1}{n} \sum X^2_i - \frac{(\sum X_i)^2}{n}}\\
 (\text{here } ~~~ h(\theta) & = \sqrt{\theta} \text{~~~ and ~~~} \theta = \sigma^2)
 \end{align*}

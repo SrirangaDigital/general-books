@@ -96,7 +96,7 @@ P(B) &= \dfrac{1}{2}
 Now what about
 $$
 P\left(\begin{array}{c}
-\text{6 appears \underline{given} an even}\\
+\text{6 appears {\it given} an even}\\
 \text{number appears}
 \end{array}\right)
 $$
@@ -105,7 +105,7 @@ $$
 
 (Ignore this remark unless you intend to be a scientist)
 
-At present the above probability does not have a formal mathematical definition but \underline{we can still compute it}. Soon we will give the formal definition and our computation ``will be justified''. This is the mysterious way mathematics works.
+At present the above probability does not have a formal mathematical definition but {\it we can still compute it}. Soon we will give the formal definition and our computation ``will be justified''. This is the mysterious way mathematics works.
 
 Somehow there is a deeper reality underlying the formal theory.
 
@@ -126,7 +126,7 @@ $$
 P(\text{6 given an even number occurred})=\dfrac{1}{3}
 $$
 
-The new sample space is called the \underline{conditional sample space}.
+The new sample space is called the {\it conditional sample space}.
 \end{frame}
 
 
@@ -137,7 +137,7 @@ Suppose you deal two cards (in the usual way without replacement). What is $P(\h
 
 Well, $P$(first heart) $=\dfrac{13}{52}$.
 
-Now \underline{what about the second heart}?
+Now {\it what about the second heart}?
 
 Many of you will come up with $\sfrac{12}{51}$ and
 $$
@@ -146,17 +146,17 @@ $$
 \end{frame}
 
 \begin{frame}
-There are \underline{TWO} theoretical points hidden in the formula.
+There are {\it TWO} theoretical points hidden in the formula.
 
 Let's first look at
 $$
 P(\underbrace{\heart\text{~on~} 2^{\text{nd}}}_{\text{this isn't really correct}})=\sfrac{12}{51}
 $$
-What we really computed was the \underline{conditional probability}
+What we really computed was the {\it conditional probability}
 $$
 P(\heart\text{~ on~ } 2^{\text{nd}} \text{ deal } | \ \heart\text{~on first deal})=\sfrac{12}{51}
 $$
-\underline{Why} Given we got a heart on the first deal the conditional sample space is the ``new deck'' with 51 cards and 12 hearts so we get
+{\it Why} Given we got a heart on the first deal the conditional sample space is the ``new deck'' with 51 cards and 12 hearts so we get
 $$
 P(\heart\text{~ on~ } 2^{\text{nd}} \ | \ \heart\text{~ on~ } 1^{\text{st}})=\sfrac{12}{51}
 $$
@@ -253,7 +253,7 @@ This intuitive formula for the equally likely probability measure leads to the f
 \begin{frame}
 \myheading{Formal Mathematical Definition}
 
-Let $A$ and $B$ be any two events in a sample space $S$ with $P(B)\neq 0$. The conditional probability of $A$ given $B$ is written $P(A|B)$ and is \underline{defined} by
+Let $A$ and $B$ be any two events in a sample space $S$ with $P(B)\neq 0$. The conditional probability of $A$ given $B$ is written $P(A|B)$ and is {\it defined} by
 \begin{equation*}
 P(A|B)=\dfrac{P(A\cap B)}{P(B)}\tag{*}
 \end{equation*}
@@ -293,7 +293,7 @@ It complement the formula
 $$
 P(A\cup B)=P(A)+P(B)-P(A\cap B)
 $$
-\underline{Now we know how $P$ interacts with the basic binary operations $\cup$ and $\cap$.}
+{\it Now we know how $P$ interacts with the basic binary operations $\cup$ and $\cap$.}
 \end{frame}
 
 \begin{frame}
@@ -334,7 +334,7 @@ $$
 \end{frame}
 
 \begin{frame}
-\underline{By Definition}
+\myheading{By Definition}
 $$
 P(A|B)=\dfrac{P(A\cap B)}{P(B)}=\dfrac{P(\heart\heart)}{P\left(\begin{array}{c} \heart \text{~on~} 2^{\text{nd}} \text{~ with the}\\ \text{other information}\end{array}\right)}
 $$
@@ -379,14 +379,14 @@ Then for any event $B$
 P(B) &= P(B|A_{1})P(A_{1})+P(B|A_{2})P(A_{2})\\
      &\quad +\cdots+P(B|A_{k})P(A_{k})\tag{b}
 \end{align*}
-\underline{Special case} $k=2$ so we have $A$ and $A'$
+{\it Special case} $k=2$ so we have $A$ and $A'$
 \begin{equation*}
 P(B)=P(B|A)P(A)+P(B|A')P(A')\tag{bb}
 \end{equation*}
 \end{frame}
 
 \begin{frame}
-Now we can \underline{prove}
+Now we can {\it prove}
 
 $P$($\heart$ on $2^{\text{nd}}$ with no other information) = $\sfrac{13}{52}$
 \begin{align*}
@@ -484,14 +484,14 @@ plugging into $(\sharp)$ we get
 The algebra was hard but the approach was the most natural - a special case of 
 
 \smallskip
-\underline{General Principle}
+{\it General Principle}
 \smallskip
 
 If you know $P(B|A)$ and you want to compute $P(A|B)$ use Bayes' Theorem in the $(\sharp)$ version, pg. 22.
 
 \myheading{Compulsory Reading (for your own heath)}
 
-In case you or someone you love tests positive for a \underline{rare} (this is the point) disease, read Example 2.30, pg. 73. Misleading (and even bad) statistics is rampant in medicine.
+In case you or someone you love tests positive for a {\it rare} (this is the point) disease, read Example 2.30, pg. 73. Misleading (and even bad) statistics is rampant in medicine.
 \end{frame}
 \end{document}
 

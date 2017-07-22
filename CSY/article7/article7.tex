@@ -114,13 +114,13 @@ $$
 
 \myheading{Explanation}
 
-Here we assume the outcomes of each of the repeated experiments are \underline{independent} so
+Here we assume the outcomes of each of the repeated experiments are {\it independent} so
 \begin{align*}
 &P((T\text{~ on~ } 1^{\text{st}})\cap (T\text{~ on~ }2^{\text{nd}})\cap\cdots\cap (T\text{~ on} n\text{-th})\\[3pt]
 &\quad P(T\text{~ on~ } 1^{\text{st}})P(T\text{~ on~ } 2^{\text{rd}})\ldots P(T\text{~ on~ } n\text{-th})\\[3pt]
 &\quad q \ q \ldots q = q^{n}
 \end{align*}
-Note $T$ on $2^{\text{nd}}$ mean) $T$ on $2^{\text{nd}}$ \underline{with no other information} so
+Note $T$ on $2^{\text{nd}}$ mean) $T$ on $2^{\text{nd}}$ {\it with no other information} so
 $$
 P(T\text{~ on~ } 2^{\text{nd}})=q.
 $$
@@ -275,7 +275,7 @@ from table
 $$
 =.996-.648
 $$
-{\bf N.B.} \underline{Understand $(\sharp)$.} This the key using computers and statistical calculators to compute.
+{\bf N.B.} {\it Understand $(\sharp)$.} This the key using computers and statistical calculators to compute.
 \end{answer}
 \end{frame}
 
@@ -288,7 +288,7 @@ $$
 
 Consider an urn containing $N$
 
-Chips of which $M$ are red and $L=N-M$ are white. Suppose we remove $n$ chips \underline{without replacement} so $n\leq N$. 
+Chips of which $M$ are red and $L=N-M$ are white. Suppose we remove $n$ chips {\it without replacement} so $n\leq N$. 
 
 Define a random variable $X$ by $X=\sharp$ of red chips we get.
 \end{nonumexample}
@@ -338,7 +338,7 @@ This agrees with (*).
 \end{frame}
 
 \begin{frame}
-But (*) is harder because we have to consider the case where there are $kMn$ red chip. \underline{So we have to choose $n-k$ white chips as well.}
+But (*) is harder because we have to consider the case where there are $kMn$ red chip. {\it So we have to choose $n-k$ white chips as well.}
 
 So choose $k$ red chips $-\binom{M}{k}$ ways, then for each such choice, choose $n-k$ white chipts $\binom{L}{n-k}$ ways. 
 
@@ -346,7 +346,7 @@ So
 $$
 \sharp \left\{
 \begin{array}{l}
-\text{choices of \underline{exceptly}}\\
+\text{choices of {\it exceptly}}\\
 k \text{~red chips}\\
 \text{in the $n$ chips}
 \end{array}\right\}
@@ -359,7 +359,7 @@ $$
 Clearly there are $\binom{N}{n}$ ways of choosing $n$ chips from $N$ chips so (*) follows.
 
 \begin{nonumdefinition}
-If $X$ is a discrete random variable with $pmf$ defined by page 14 then $X$ is said to have \underline{hyper geometric distribution with parameters $n$, $M$, $N$.} In the text the $pmf$ is denoted 
+If $X$ is a discrete random variable with $pmf$ defined by page 14 then $X$ is said to have {\it hyper geometric distribution with parameters $n$, $M$, $N$.} In the text the $pmf$ is denoted 
 $$
 h(x;n,M,N).
 $$
@@ -395,7 +395,7 @@ $$
 \begin{frame}
 So the above three inequalities are necessary. At first glance they look sufficient because if $k$ satisfies the above three inequalities you can certainly go ahead and choose $k$ red chips.
 
-\underline{But what about the white chips?} We aren't tone yet, you have to choose $n-k$ white chips and there are only $L$ white chips available so if $n-k>L$ we are sun $k$.
+{\it But what about the white chips?} We aren't tone yet, you have to choose $n-k$ white chips and there are only $L$ white chips available so if $n-k>L$ we are sun $k$.
 
 So we must have
 $$
@@ -495,7 +495,7 @@ Obviously, the first way (*) is easier so if you are doing a reel-world problem 
 
 \smallskip
 
-\underline{Prediction} (I was wrong before)
+{\it Prediction} (I was wrong before)
 
 Most of you will use the second (wrong) method.
 \end{frame}
@@ -503,7 +503,7 @@ Most of you will use the second (wrong) method.
 \begin{frame}
 \myheading{An Important General Problem}
 
-Suppose you draw $n$ chips \underline{with replacement} and let $X$ be the number of red chips you get. What distribution does $X$ have?
+Suppose you draw $n$ chips {\it with replacement} and let $X$ be the number of red chips you get. What distribution does $X$ have?
 
 This explains (a little) the formulas on page 21. Note that if $N$ is far bigger than $n$ then it is almost like drawing with replacement. ``The urn doesn't notice that any chaps have been removed because so few (relatively) have been removed.''
 \end{frame}

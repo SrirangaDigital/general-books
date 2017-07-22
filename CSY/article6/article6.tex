@@ -72,21 +72,21 @@
 \end{frame}
 
 \begin{frame}
-Go to ``BACKGROUND COURSE NOTES'' at the end of my web page and download the file \underline{distributions}.
+Go to ``BACKGROUND COURSE NOTES'' at the end of my web page and download the file {\it distributions}.
 
-Today we say goodbye to the elementary theory of probability and start \underline{Chapter 3}. We will open the door to the application of algebra to probability theory by introduction the concept of ``random variable''.
+Today we say goodbye to the elementary theory of probability and start {\it Chapter 3}. We will open the door to the application of algebra to probability theory by introduction the concept of ``random variable''.
 \end{frame}
 
 \begin{frame}
-What you will need to get from it (at a minimum) is the ability to do the following \underline{``Good Citizen Problems}''.
+What you will need to get from it (at a minimum) is the ability to do the following {\it ``Good Citizen Problems}''.
 
 I will give you a {\em probability mass function} $P(X)$. You will be asked to compute 
 \begin{itemize}
-\item[(i)] The \underline{expected value} (or \underline{mean}) $E(X)$.
+\item[(i)] The {\it expected value} (or {\it mean}) $E(X)$.
 
-\item[(ii)] The \underline{variance} $V(X)$.
+\item[(ii)] The {\it variance} $V(X)$.
 
-\item[(iii)] The \underline{cumulative distribution function} $F(x)$.
+\item[(iii)] The {\it cumulative distribution function} $F(x)$.
 \end{itemize}
 You will learn what these words mean shortly.
 \end{frame}
@@ -166,7 +166,7 @@ $P(X=x)$ & $\dfrac{1}{6}$ & $\dfrac{1}{6}$ & $\dfrac{1}{6}$ & $\dfrac{1}{6}$ & $
 \hline
 \end{tabular}
 \end{center}
-This is a special case of the \underline{discrete uniform distribution} where $X$ takes values $1,2,3,\ldots,n$ each with probability $\dfrac{1}{n}$ (so roll a fair die with $n$ faces'').
+This is a special case of the {\it discrete uniform distribution} where $X$ takes values $1,2,3,\ldots,n$ each with probability $\dfrac{1}{n}$ (so roll a fair die with $n$ faces'').
 \end{frame}
 
 \begin{frame}
@@ -189,7 +189,7 @@ Nobody ever mentions this because it is too simple - it is deterministic.
 \end{frame}
 
 \begin{frame}
-The simplest random variable that actually is random takes \underline{TWO} values, let's suppose they are $1$ and $0$ with probabilities $p$ and $q$. Since $X$ has to be either $1$ on $0$ we must have
+The simplest random variable that actually is random takes {\it TWO} values, let's suppose they are $1$ and $0$ with probabilities $p$ and $q$. Since $X$ has to be either $1$ on $0$ we must have
 $$
 p+q=1.
 $$
@@ -202,7 +202,7 @@ $P(X=x)$ & $p$ & $q$\\
 \hline
 \end{tabular}
 \end{center}
-This called the \underline{Bernoulli random variable with parameter $p$}. So a Bernoulli random  variable is a random variable that takes only \underline{two} values $0$ and $1$.
+This called the {\it Bernoulli random variable with parameter $p$}. So a Bernoulli random  variable is a random variable that takes only {\it two} values $0$ and $1$.
 \end{frame}
 
 \begin{frame}
@@ -211,11 +211,13 @@ This called the \underline{Bernoulli random variable with parameter $p$}. So a B
 We go back to elementary probability.
 
 \begin{nonumdefinition}
-A \underline{Bernoulli experiment} is an experiment which has two outcomes which we call (by convention) ``success'' $S$ and failure $F$.
+A {\it Bernoulli experiment} is an experiment which has two outcomes which we call (by convention) ``success'' $S$ and failure $F$.
 \end{nonumdefinition}
 
 \begin{nonumexample}
 Flipping a coin. We will call a head a success and a toil a failure.
+
+\smallskip
 
 {\huge Z} Often we call a ``success'' something that is in fact for from an actual success- e.g., a machine breaking down.
 \end{nonumexample}
@@ -247,7 +249,7 @@ A subset $s$ of the red line $\mathbb{R}$ is said to be discrete if for every wh
 \centerline{\includegraphics{figure/fig1.eps}}
 \smallskip
 
-So a \underline{finite} subset of $\mathbb{R}$ is \underline{discrete} but so is the set f integers $\mathbb{Z}$.
+So a {\it finite} subset of $\mathbb{R}$ is {\it discrete} but so is the set f integers $\mathbb{Z}$.
 \end{nonumdefinition}
 \end{frame}
 
@@ -277,7 +279,7 @@ Note
 
 \item[(ii)] $\sum\limits_{\substack{\text{all possible}\\ X}} P(x)=1$
 
-\item $P(x)=0$ for all $X$ outside a countable set.
+\item[(iii)] $P(x)=0$ for all $X$ outside a countable set.
 \end{itemize}
 \end{nonumdefinition}
 \end{frame}
@@ -473,7 +475,7 @@ Let $X$ be a discrete random variable with set of possible values $D$ and expect
 V(X) &= \sum\limits_{x\in D}(x-\mu)^{2} P(X=x)\\[3pt]
      &= \sum\limits_{x\in D}(x-\mu)^{2}P(x)\tag{*}
 \end{align*}
-The standard deviation $\sigma$ of $X$ is defined to be the \underline{square-root} of the variance
+The standard deviation $\sigma$ of $X$ is defined to be the {\it square-root} of the variance
 $$
 \sigma = \sqrt{V(X)}=\sqrt{\sigma^{2}}
 $$
@@ -491,7 +493,7 @@ $\sigma=1000$ for the \S1000 game.
 
 \myheading{The Shortcut Formula for $V(X)$}
 
-The number of arithmetic operations (subtractions) necessary to compute $\sigma^{2}$ can be \underline{greatly} reduced by using.
+The number of arithmetic operations (subtractions) necessary to compute $\sigma^{2}$ can be {\it greatly} reduced by using.
 
 \begin{nonumproposition}
 \begin{itemize}
@@ -506,7 +508,7 @@ or
 
 \begin{frame}
 \begin{nonumproposition}[Cont.]
-In the formula (*) you need $\sharp(D)$ subtractions (for each $x\in D$ you here to subtract $\mu$ then square ...). For the shortcut formula you need only one. \underline{Always use} the shortcut formula.
+In the formula (*) you need $\sharp(D)$ subtractions (for each $x\in D$ you here to subtract $\mu$ then square ...). For the shortcut formula you need only one. {\it Always use} the shortcut formula.
 \end{nonumproposition}
 
 \begin{nonumremark}
@@ -552,7 +554,7 @@ $$
 $$
 Now plug in $n=6$.
 
-\item[(2)] In the formula for $E(X^{2})$ \underline{don't square} the probabilities
+\item[(2)] In the formula for $E(X^{2})$ {\it don't square} the probabilities
 
 \medskip
 \centerline{\includegraphics{figure/fig11.eps}}

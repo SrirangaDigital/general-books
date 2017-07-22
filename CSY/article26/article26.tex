@@ -98,16 +98,17 @@ want to compute the probability that the random interval $I$ will contain (or co
 the fixed number $a$. But this is just the probability that $a$ will be between $X_1$ and
 $X_2$ hence we have
 \begin{equation*}
-P(a \in   (X_1,X_2)) = P(X_1 < a,a < X_2) = P(X_1 < a,X_2 > a). \tag{1}
+P(a \in   (X_1,X_2)) = P(X_1 < a,a < X_2) = P(X_1 < a,X_2 > a). \tag{1}\label{eq-1}
 \end{equation*}
 The probability on the right is the probability that the random variable $X_1$ will be
 less than the number $a$ and the random variable $X_2$ will be greater than the number
 $a$. This is just a random variable computation of the type we have done many times
-in the course already. Technically we should think of the formula (1) as the \textit{definition}
+in the course already. Technically we should think of the formula \eqref{eq-1} as the \textit{definition}
 of the probability that $a$ will be inside $I$ but this is a technical point - it is the only
 reasonable definition.
 
 \myheading{Warning}
+
 The probability $P(X_1 < a,X_2 > a)$ in equation (1) is almost never equal
 to the product probability $P(X_1 < a)  \cdot  P(X_2 > a)$ because $X_1$ and $X_2$ are almost
 never independent. For example in the above problem $X_1 = Z -1$ and $X_2 = Z +1$ so
@@ -186,10 +187,10 @@ $\theta$.  Let $\alpha$ be a real number between 0 and 1. Then a $100(1 - \alpha
 interval for the unknown parameter $\alpha$ is a \textit{random interval} $I = (W_1,W_2)$ where
 $W_1 = h(X_1,X_2, \ldots , X_n)$ and $W_2 = g(X_1,X_2, \ldots ,X_n)$ are \textit{statistics} such that
 \begin{equation*}
-P(\theta \in  (W_1,W_2)) = 1 - \alpha. \tag{2}
+P(\theta \in  (W_1,W_2)) = 1 - \alpha. \tag{2}\label{eq-2}
 \end{equation*}
-If we hadn't given the definition in Equation (1) we wouldn’t have been able to make
-the correct definition in Equation (2). If we have an actual sample $x_1, x_2,  \ldots ,x_n$
+If we hadn't given the definition in Equation \eqref{eq-1} we wouldn’t have been able to make
+the correct definition in Equation \eqref{eq-2}. If we have an actual sample $x_1, x_2,  \ldots ,x_n$
 then we plug $x_1, x_2, \ldots,x_n$ into the functions $h$ and $g$ to get numbers $w_1$ and $w_2$
 and an ordinary interval $(w_1,w_2)$. This ordinary interval is the \textit{observed value} of the
 confidence interval $I = (W_1,W_2)$ on the sample $x_1, x_2,  \ldots,x_n$. This actual interval is
@@ -200,7 +201,7 @@ the confidence random interval and its obseved value on a sample firmly in mind.
 \begin{frame}
 The rest of the course will be concerned with finding formulas for confidence intervals
 in various situations - e.g. a 90\% confidence interval for the mean in a normal distribution.
-In each case we will verify that the equation (2) is satisfied. It is imperative
+In each case we will verify that the equation \eqref{eq-2} is satisfied. It is imperative
 that you all learn how to do these verifications - these will be ``good citizen'' problems.
 \end{frame}
 

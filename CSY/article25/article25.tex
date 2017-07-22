@@ -83,20 +83,23 @@
 \date{}
 
 \begin{document}
-\begin{frame}
+\begin{frame}[plain]
+\titlepage
+\end{frame}
 
+\begin{frame}
 \medskip
-{\includegraphics{figure/art25(1).eps}}
+\centerline{\includegraphics{figure/art25(1).eps}}
 
 \smallskip
 
-Suppose $X_1, X_2, \ldots, X_n$ is a random sample from a normal population. We have seen that we should use the \underline{sample} mean $\overline{X}$ to estimate the population mean $\mu$ and the \underline{sample} variance $S^2$ to estimate the population variance $\sigma^2$.
+Suppose $X_1, X_2, \ldots, X_n$ is a random sample from a normal population. We have seen that we should use the {\it sample} mean $\overline{X}$ to estimate the population mean $\mu$ and the {\it sample} variance $S^2$ to estimate the population variance $\sigma^2$.
 \end{frame}
 
 \begin{frame}
 $\overline{X}$ and $S^2$ are random variables. 
 
-\underline{$\$$ 64,000 question}
+\myheading{\$64,000 question}
 
 How are $\overline{X}$ and $S^2$ distributed ? The answer is given by the following considerations 
 
@@ -142,7 +145,7 @@ This isn't a proof because we used ``the rule of thumb'' but the result is true
 \end{frame}
 
 \begin{frame}
-\underline{Bottom Line}
+\myheading{Bottom Line}
 
 \begin{nonumtheorem}
 Let $X_1, X_2, \ldots, X_n$ be a random Sample from a normal population with mean $\mu$ and variance $\sigma^2$. Then 
@@ -154,7 +157,7 @@ Let $X_1, X_2, \ldots, X_n$ be a random Sample from a normal population with mea
 \item[(iii)] $\overline{X}$ and $S^2$ are independent.
 \end{itemize}
 
-The above statement is on exact  statement but if we take a large sample $(n>30)$ from \underline{any} population with mean $\mu$ and variance $\sigma^2$ we may assume
+The above statement is on exact  statement but if we take a large sample $(n>30)$ from {\it any} population with mean $\mu$ and variance $\sigma^2$ we may assume
 \end{nonumtheorem}
 \end{frame}
 \begin{frame}
@@ -163,13 +166,13 @@ to a good approximation that the population has $N(\mu, \sigma^2)$ distribution 
 \end{nonumtheorem}
 
 \begin{nonumtheorem}
-If $X_1, X_2, \ldots, X_n$ is a \underline{large} $(n > 30)$ random sample from \underline{any} population with mean $\mu$ and variance $\sigma^2$ then 
+If $X_1, X_2, \ldots, X_n$ is a {\it large} $(n > 30)$ random sample from {\it any} population with mean $\mu$ and variance $\sigma^2$ then 
 \begin{itemize}
 \item[(i)] $\overline{X} \approx N (\mu , \dfrac{\sigma^2}{n})$
 
 \item[(ii)] $S^2 \approx \chi^2 (n-1)$
 
-\item[(iii)] $\overline{X}$ and $S^2$ are \underline{approximately} independent. (then are not independent unless the population is normal.)
+\item[(iii)] $\overline{X}$ and $S^2$ are {\it approximately} independent. (then are not independent unless the population is normal.)
 \end{itemize}
 \end{nonumtheorem}
 \end{frame}

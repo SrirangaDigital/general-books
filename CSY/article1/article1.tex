@@ -8,7 +8,7 @@
 \addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
     \insertframenumber / \inserttotalframenumber }
 
-\geometry{papersize={12.8cm,12cm}}
+\geometry{papersize={12.8cm,14cm}}
 \usepackage{lipsum}
 
 \makeatletter
@@ -72,7 +72,7 @@ What is the probability of tossing two heads in a row with a fair coin?
 \begin{frame}
 \myheading{Method 1}
 
-List \underline{all} possible outcomes 
+List {\it all} possible outcomes 
 $$
 \left\{\mycirc{$HH$}, \ HT, \ TH, \ TT\right\}
 $$
@@ -94,7 +94,7 @@ However it is important to put probability into a formal mathematic framework fo
 \begin{frame}
 \myheading{1. Even ``elementary''}
 
-Problems become too hard unless we can break them down into simpler problems using the rule of \underline{Set Theory}.
+Problems become too hard unless we can break them down into simpler problems using the rule of {\it Set Theory}.
 
 \myheading{Examples}
 
@@ -107,7 +107,7 @@ Let's see how you can deal with these now and later.
 \myheading{Problems}
 
 \begin{enumerate}
-\item What is the probability of getting \underline{one} head in one hundred tosses of a fair coin?
+\item What is the probability of getting {\it one} head in one hundred tosses of a fair coin?
 
 \item What is the probability of getting 27 heads in one hundred tosses of a fair coin?
 \end{enumerate}
@@ -134,7 +134,7 @@ Dealing 13 cards from a 52 card deck - a bridge hand.
 
 \begin{frame}
 \begin{nonumdefinition}
-The set of all possible outcomes of on experiment will be called the \underline{sample space} of that experiment and denote $s$.
+The set of all possible outcomes of on experiment will be called the {\it sample space} of that experiment and denote $s$.
 \end{nonumdefinition}
 
 \myheading{Experiment}
@@ -175,7 +175,7 @@ We will call this ``our favorite sample space'' from now on.
 \begin{frame}
 \myheading{3. The Formal Mathematical Theory}
 
-Let $s$ be a set (the sample space). A \underline{probability measure} $P$ on $s$ is a rule (function) which assigns a real number $P(A)$ to any subset $A$ of $s$ (i.e., to any event) such that the following axioms are satisfied
+Let $s$ be a set (the sample space). A {\it probability measure} $P$ on $s$ is a rule (function) which assigns a real number $P(A)$ to any subset $A$ of $s$ (i.e., to any event) such that the following axioms are satisfied
 \begin{enumerate}
 \item For any event $A\subset s$ we have $P(A)\geq 0$
 
@@ -289,9 +289,9 @@ Let $s$ be a set and $A$ and $B$ be subsets. Then we have $A\cup B$ (union), $A\
 
 \medskip
 
-$A\cup B$ = ``everything in $s$ that is in either $A$ \underline{or} $B$''
+$A\cup B$ = ``everything in $s$ that is in either $A$ {\it or} $B$''
 
-$A\cap B$ = ``everything in $s$ that is in $A$ \underline{and} $B$''
+$A\cap B$ = ``everything in $s$ that is in $A$ {\it and} $B$''
 \end{frame}
 
 \begin{frame}
@@ -489,7 +489,7 @@ It depends on the following Venn diagram.
 \centerline{\includegraphics{figure/fig10.eps}}
 \smallskip
 
-We see that $A\cup B$ is the union of three \underline{mutually exclusive} sets.
+We see that $A\cup B$ is the union of three {\it mutually exclusive} sets.
 $$
 A\cup B=(A\cap B')\cup (A\cap B)\cup (B\cap A')
 $$
@@ -538,11 +538,11 @@ P(A\cup B\cup C)=P(A)+P(B)+P(C)\\
 \end{gather*}
 This is (more or less) ``the principle of exclusion and inclusion''
 \begin{enumerate}
-\item \underline{include} the singletons $A$, $B$, $C$
+\item {\it include} the singletons $A$, $B$, $C$
 
-\item \underline{exclude} the pairs $A\cap B$, $A\cap C$, $B\cap C$
+\item {\it exclude} the pairs $A\cap B$, $A\cap C$, $B\cap C$
 
-\item \underline{include} the triple $A\cap B\cap C$
+\item {\it include} the triple $A\cap B\cap C$
 \end{enumerate}
 \end{proposition}
 \end{frame}

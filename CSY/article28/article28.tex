@@ -82,10 +82,10 @@
 \end{frame}
 
 \begin{frame}
-The following distribution \underline{and its importance} was discovered by William Gosset who published under the pseudonym ``Student''. 
+The following distribution {\it and its importance} was discovered by William Gosset who published under the pseudonym ``Student''. 
 
 \begin{nonumdefinition}
-A continuous random variable $T_\nu$ is sad to have $t$-\underline{distribution with $\nu$ degrees of freedom} abbreviated $T_\nu \sim t_\nu$ if its pdf $f_{T_\nu}$ is given by 
+A continuous random variable $T_\nu$ is sad to have $t$-{\it distribution with $\nu$ degrees of freedom} abbreviated $T_\nu \sim t_\nu$ if its pdf $f_{T_\nu}$ is given by 
 $$
 f_{T_\nu} (t) = \frac{\Gamma \left( \frac{\nu+1}{2}\right)}{\sqrt{\nu \Pi} \Gamma (\nu/2)} \frac{1}{\left(1+ \frac{t^2}{\nu}\right)^{\frac{\nu+1}{2}, -\infty < t < \infty}}
 $$
@@ -94,14 +94,14 @@ $$
 
 \begin{frame}
 \begin{nonumdefinition}[Cont.]
-\centerline{\includegraphics{art28-1(a).eps}}
+\centerline{\includegraphics{figure/art28-1(a).eps}}
 
 The graph of $f_{T_\nu} (t)$ is like the graph of the standard normal density 
 $f_{Z} (z) = \dfrac{1}{\sqrt{2\pi}} e^{-t^{2}/2}$ except it doesn't go to zero as fast of $\infty$ and $-\infty$.
 
 In fact
 \begin{equation*}
-\lim\limits_{\nu \to \infty} f_{T_\nu} (t) = \frac{1}{\sqrt{2\pi}} e^{- t^2/2} \tag{$\ast$}
+\lim\limits_{\nu \to \infty} f_{T_\nu} (t) = \frac{1}{\sqrt{2\pi}} e^{- t^2/2} \tag{$\ast$}\label{eq-*}
 \end{equation*}
 This is why you can get $z_{\alpha}$ from the last line $(\nu = \infty)$ on the back flop of the text.
 
@@ -132,7 +132,7 @@ holds just as for the standard normal distribution $Z$.
 \begin{frame}
 \myheading{Comparison between the different $t$-curves and the $Z$-curve}
 
-\centerline{\includegraphics{art28-2(a).eps}}
+\centerline{\includegraphics{figure/art28-2(a).eps}}
 
 \begin{align*}
 f_{T_1} (0) & = \frac{\Gamma (1)}{\sqrt{\pi} \Gamma (\frac{1}{2})} = \frac{1}{\sqrt{\pi} \sqrt{\pi}} = \frac{1}{\pi}\\
@@ -150,7 +150,7 @@ $$
 P(T_\nu \geq t_{\alpha, \nu})  = \alpha
 $$
 Geometrically we have
-\centerline{\includegraphics{art28-3(a).eps}}
+\centerline{\includegraphics{figure/art28-3(a).eps}}
 
 So the area under the graph of $f_{T_\nu}$ to the right of the vertical line $t = t_{\alpha, \nu}$ is $\alpha$.
 \end{definition}
@@ -219,7 +219,7 @@ Well, in the formula for the $Z$-confidence interval we were led to
 $$
 Z = \frac{\overline{X} - \mu }{\sigma/ \sqrt{n}}
 $$
-But what if \underline{we don't know $\sigma$. Idea}
+But what if {\it we don't know $\sigma$. Idea}
 
 Replace $\sigma$ by its point estimator $S$ so we replace
 $$
@@ -234,7 +234,7 @@ From Theorem $FG$ (which is moderately hard to prove) it is on exercise in fract
 \begin{alphtheorem}
 Suppose $X_1, X_2, \ldots, X_n$ is a random sample from a normal population with mean $\mu$ and variance  $\sigma^2$. Then
 \begin{equation*}
-T = \frac{\overline{X} - \mu}{S/\sqrt{n}} \sim t_{n-1} \tag{$\ast\ast$}
+T = \frac{\overline{X} - \mu}{S/\sqrt{n}} \sim t_{n-1} \tag{$\ast\ast$}\label{eq-**}
 \end{equation*}
 We will need the results from $page$ 5 of Lecture 25
 \begin{itemize}
@@ -248,7 +248,7 @@ We will need the results from $page$ 5 of Lecture 25
 \begin{frame}
 \setcounter{alphtheorem}{0}
 \begin{alphtheorem}[Cont.]
-Now we will prove ($\ast\ast$).
+Now we will prove \eqref{eq-**}.
 
 The idea is we want to change $\overline{X}-\mu$ into $Z$ so we have to divide the numerator by $\sigma/\sqrt{n}-$ so we also have to divide the denominator by $\dfrac{\sigma}{\sqrt{n}}$ so that the fraction has the same value
 \begin{align*}
@@ -299,7 +299,7 @@ chemistry and mathematics at New College, Oxford. On graduating in
 \begin{tabular}{|c|}
 \hline
 \textbf{William Sealy Gosset}\\
-\includegraphics{William_Sealy_Gosset4.eps}\\
+\includegraphics{figure/William_Sealy_Gosset4.eps}\\
 {\tiny{\textit{Student} in 1908}}\\
 \begin{tabular}{rl}
 {\tiny\textbf{Born}} & {\tiny June 13, 1876}\\[-0.2cm]
@@ -340,7 +340,7 @@ In 1935, he left Dublin to take up the position of Head Brewer, in charge of the
 \end{frame}
 
 \begin{frame}
-Gosset was a friend of both Pearson and Fisher, an achievement, \underline{for each had a massive ego and a loathing for the other}.$^{[\textit{citation neede I should say so!!}]}$ Gosset was a modest man who cut short an admirer with the comment that ``Fisher would have discovered it all anyway''
+Gosset was a friend of both Pearson and Fisher, an achievement, {\it for each had a massive ego and a loathing for the other}.$^{[\textit{citation neede I should say so!!}]}$ Gosset was a modest man who cut short an admirer with the comment that ``Fisher would have discovered it all anyway''
 \end{frame}
 
 \begin{frame}[allowframebreaks]

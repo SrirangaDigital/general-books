@@ -20,7 +20,7 @@
 \addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
     \insertframenumber / \inserttotalframenumber}
 
-\geometry{papersize={15cm,13cm}}
+\geometry{papersize={15cm,15cm}}
 \usepackage{lipsum}
 
 \makeatletter
@@ -91,15 +91,15 @@ Let $X_1, X_2, \ldots, X_n$ be a random sample from a normal population with mea
 
 \medskip
 
-\qquad \quad\includegraphics{art30-1.eps}
+\qquad \quad\includegraphics{figure/art30-1.eps}
 
 In this lecture we want to construct a $100(1-\alpha)\%$ confidence for $\sigma^2$. We recall that $S^2$ is a point estimator for $\sigma^2$.
 \end{frame}
 
 \begin{frame}
-What is new here is that we are going to note a ``\underline{multiplicative confidence interval}''.
+What is new here is that we are going to note a ``{\it multiplicative confidence interval}''.
 
-Here is the idea. \underline{We want a random interval that has the point estimator $S^2$ in the interior}
+Here is the idea. {\it We want a random interval that has the point estimator $S^2$ in the interior}
 
 Now given a number $x$ there are two ways to make an interval $I(x)$ that has $x$ in its interior.
 
@@ -121,14 +121,14 @@ We will use the second method now. The clue to why we do this is that $S^2 >0$.
 
 First we need to know the probability distribution of the point estimator $S^2$. We have already seen this
 
-\begin{alphtheorem}[pg 278]
+\begin{alphtheorem}[pg 278]\label{thm-A}
 \begin{equation*}
-V = \left(\frac{n-1}{\sigma^2} \right) S^2 \sim \chi^2 (n-1) \tag{$\ast$}
+V = \left(\frac{n-1}{\sigma^2} \right) S^2 \sim \chi^2 (n-1) \tag{$\ast$}\label{eq-*}
 \end{equation*}
 Now we can give the confidence interval.
 \end{alphtheorem}
 
-\begin{alphtheorem}
+\begin{alphtheorem}\label{thm-B}
 The random interval $\left(\dfrac{n-1}{\chi^2_{\alpha/2, n-1}} S^2, \dfrac{n-1}{\chi^{2}_{1-\alpha/2, n-1}}S^2 \right)$ is a $100(1-\alpha)\%$ confidence random interval for the population variance $\sigma^2$ from a normal population.
 \end{alphtheorem}
 \end{frame}
@@ -142,7 +142,7 @@ c_2 & = \frac{n-1}{\chi^2_{1-\alpha/2, n-1}}>1.
 \end{align*}
 I have never checked this.
 
-Now we prove Theorem B. We must prove
+Now we prove Theorem \ref{thm-B}. We must prove
 \begin{align*}
 & P\left( \sigma^2 \in \left(\frac{n-1}{\chi^2_{\alpha/2, n-1}} S^2, \frac{n-1}{\chi^2_{1-\alpha/2, n-1}} S^2\right)\right) =1\\
 & \text{LHS } = P \left(\frac{n-1}{\chi^2_{\alpha/2, n-1}} S^2 < \sigma^2,~~  \sigma^2 < \frac{n-1}{\chi^2_{1-\alpha/2, n-1}}  S^2 \right)
@@ -152,25 +152,25 @@ Now we prove Theorem B. We must prove
 
 \begin{frame}
 \begin{nonumremark}
-Now we manipulate the two resulting inequalities to get $V$ so we can sue ($\ast$)
+Now we manipulate the two resulting inequalities to get $V$ so we can sue \eqref{eq-*}
 
 \medskip
-\centerline{\includegraphics{art30-2.eps}}
+\centerline{\includegraphics{figure/art30-2.eps}}
 
 Swap and make a $V$
 
 \medskip
-\centerline{\includegraphics{art30-3.eps}}
+\centerline{\includegraphics{figure/art30-3.eps}}
 
 MAKE A PICTURE
 
-\qquad \qquad \qquad = the shaded area
+\qquad \qquad \qquad\qquad~= the shaded area
 \end{nonumremark}
 \end{frame}
 
 \begin{frame}
 \begin{nonumremark}[Cont.]
-\centerline{\includegraphics{art30-4.eps}}
+\centerline{\includegraphics{figure/art30-4.eps}}
 
  = $1- (\sfrac{\alpha}{2}+ \sfrac{\alpha}{2}) = 1-\alpha $
 \end{nonumremark}
@@ -179,7 +179,7 @@ MAKE A PICTURE
 \begin{frame}
 \myheading{Question}
 
-Why do we need the strange $\chi^2_{1-\sfrac{\alpha}{2}}, \; n-1$? This is because the $\chi^2$ density curve does not have the symmetry that the $z$-density  and $t$-densities did. In all three coses we need something that cut off $\sfrac{\alpha}{2}$ on the \underline{left} under the density curve so $1-\sfrac{\alpha}{2}$ on the \underline{right}. For the $z$-curve $-z_{\sfrac{\alpha}{2}}$ did the job.
+Why do we need the strange $\chi^2_{1-\sfrac{\alpha}{2}}, \; n-1$? This is because the $\chi^2$ density curve does not have the symmetry that the $z$-density  and $t$-densities did. In all three coses we need something that cut off $\sfrac{\alpha}{2}$ on the {\it left} under the density curve so $1-\sfrac{\alpha}{2}$ on the {\it right}. For the $z$-curve $-z_{\sfrac{\alpha}{2}}$ did the job.
 
 \medskip
 In other words
@@ -193,7 +193,7 @@ $$
 \end{nonumlemma}
 
 \begin{proof}
-\centerline{\includegraphics{art30-5.eps}}
+\centerline{\includegraphics{figure/art30-5.eps}}
 
 so $-z_{\sfrac{\alpha}{2}}$ cots off $1-\sfrac{\alpha}{2}$ to the right to $-z_{\sfrac{\alpha}{2}} = z_{1-\sfrac{\alpha}{2}}$
 \end{proof}
@@ -220,7 +220,7 @@ As used we took the lower limit from the two-sided interval and changed $\sfrac{
 
 Since $S^2$ is always positive $PCS^2 \in \left( -\infty, 01\right)=0$ so the negative axis will not appear. 
 
-\underline{Lower tailed multiplication intervals} go down \underline{to 0 not $-\infty$}. Another (philosophical) way to look at it is.
+{\it Lower tailed multiplication intervals} go down {\it to 0 not $-\infty$}. Another (philosophical) way to look at it is.
 
 %\centerline{\includegraphics{art30-2.eps}}
 

@@ -89,10 +89,10 @@
 \end{frame}
 
 \begin{frame}
-Suppose we have $n$ numbers $x_1, x_2, \ldots, x_n$. Then their \underline{squared variation} $sv =sv (x_1, x_2, \ldots, x_n)$ $sv(x_1, x_2, \ldots, x_n) = \sum\limits^n_{i=1} (x_i - \overline{x})^2$
+Suppose we have $n$ numbers $x_1, x_2, \ldots, x_n$. Then their {\it squared variation} $sv =sv (x_1, x_2, \ldots, x_n)$ $sv(x_1, x_2, \ldots, x_n) = \sum\limits^n_{i=1} (x_i - \overline{x})^2$
 
 
-Their \underline{mean} (average) squared variation msv or $\sigma^2_n$ (denoted $\sigma^2$ and called the ``population variance on page 33 of our text) is given by 
+Their {\it mean} (average) squared variation msv or $\sigma^2_n$ (denoted $\sigma^2$ and called the ``population variance on page 33 of our text) is given by 
 $$
 msv = \sigma^2_n = \frac{1}{n} sv = \frac{1}{n} \sum\limits^n_{i=1} (x_i - \overline{x})^2
 $$
@@ -120,7 +120,7 @@ The Shortcut Formula for the Squared Variation
 
 \begin{nonumtheorem}
 \begin{equation*}
-sv (x_1, x_2, \ldots, x_n) = \sum\limits^n_{i=1} x^2_i - \frac{1}{n} (\sum\limits^n_{i=1} x_i)^2 \tag{$\ast$}
+sv (x_1, x_2, \ldots, x_n) = \sum\limits^n_{i=1} x^2_i - \frac{1}{n} (\sum\limits^n_{i=1} x_i)^2 \tag{$\ast$}\label{eq-*}
 \end{equation*}
 \end{nonumtheorem}
 
@@ -193,7 +193,7 @@ if deg $p=\ell$.
 
 $sv = \sum\limits^n_{i=1} (x_i - \overline{x})^2$ is a symmetric polynomial in $x_1, x_2, \ldots, x_n$ so there exist $a$ and $b$ with 
 \begin{equation*}
-sv (x_1, x_2, \ldots, X_n) = a \sum\limits^n_{i=1} x^2_i + b\left(\sum\limits^n_{i=1} x_i \right)^2 \tag{$\ast\ast$}
+sv (x_1, x_2, \ldots, X_n) = a \sum\limits^n_{i=1} x^2_i + b\left(\sum\limits^n_{i=1} x_i \right)^2 \tag{$\ast\ast$}\label{eq-**}
 \end{equation*}
 
 This is true for all $x_1, \ldots, x_n$ (an ``identify'') so we just choose $x_1, \ldots, x_n$ cleverly to get a and $b$.
@@ -226,7 +226,7 @@ $$
 as before. 
 
 \begin{remark}
-Any symmetric \underline{quadratic} function $q(x_1, x_2, \ldots, x_n)$ is a linear combination of 
+Any symmetric {\it quadratic} function $q(x_1, x_2, \ldots, x_n)$ is a linear combination of 
 $\sum\limits^n_{i=1} x^2_1$ and $(\sum\limits^n_{i=1} x_i)^2$ that is 
 $$
 q (x_1, \ldots, x_n) = a \sum\limits^n_{i=1} x^2_i + b\left(\sum\limits^n_{i=1} x_i \right)^2
@@ -235,7 +235,7 @@ $$
 \end{frame}
 
 \begin{frame}
-\myheading{\underline{In Which We Return to Statistics}}
+\myheading{{\it In Which We Return to Statistics}}
 
 \underline{Estimating the Population Variance}
 We have seen that $\overline{X}$ is a good (the best) estimator of the population mean-$\mu$, in particular it was an unbiased estimator.
@@ -250,7 +250,7 @@ How do we estimate the population variance?
 \medskip
 \centerline{\includegraphics{figure/art24(d).eps}}
 
-Answer - use the \underline{Sample} variance $s^2$ to estimate the \underline{population} variance $\sigma^2$
+Answer - use the {\it Sample} variance $s^2$ to estimate the {\it population} variance $\sigma^2$
 
 The reason is that if we take the associated sample variance random variable
 $$
@@ -272,7 +272,7 @@ Before starting the proof we first note the Corollary 2, page 2 implies
 
 \begin{nonumproposition}[Shortcut formula for the sample variance random variable's]
 \begin{equation*}
-S^2 = \frac{1}{n-1} \sum\limits^n_{i=1} X^2_i - \frac{1}{n(n-1)} \left(\sum\limits^n_{i=1} X_i \right)^2 \tag{b}
+S^2 = \frac{1}{n-1} \sum\limits^n_{i=1} X^2_i - \frac{1}{n(n-1)} \left(\sum\limits^n_{i=1} X_i \right)^2 \tag{b}\label{eq-b}
 \end{equation*}
 Why does this follow from the formula for $s^2$? We will also need the following 
 \end{nonumproposition}
@@ -280,7 +280,7 @@ Why does this follow from the formula for $s^2$? We will also need the following
 \begin{nonumproposition}
 Suppose $Y$ is a random variable then 
 \begin{equation*}
-E (Y^2) = E (Y)^2 + V(Y)\tag{\#}
+E (Y^2) = E (Y)^2 + V(Y)\tag{\#}\label{eq-sharp}
 \end{equation*}
 \end{nonumproposition}
 
@@ -304,19 +304,17 @@ Suppose $X_1, X_2,\ldots, X_n$ is a random sample from a population of mean $\mu
 
 \begin{proof}
 \begin{itemize}
-\item[(i)] $E(X_i) = \mu$ and $V(Y) =\sigma^2$
-
- so plug into (\#)
+\item[(i)] $E(X_i) = \mu$ and $V(Y) =\sigma^2$ so plug into \eqref{eq-sharp}
 
 \item[(ii)] $E(T_0) = n \mu$ and $V(T_0) = n\sigma^2$ 
 
-so plug into (\#)
+so plug into \eqref{eq-sharp}
 \end{itemize}
 \end{proof}
 \end{frame}
 
 \begin{frame}
-We can now prove (b)
+We can now prove \eqref{eq-b}
 $$
 E(S^2) = E \left( \frac{1}{n-1} \sum\limits^n_{i=1} X^2_i - \frac{1}{n (n-1)} (\sum X_i)^2 \right)
 $$

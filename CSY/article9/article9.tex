@@ -74,9 +74,9 @@
 \end{frame}
 
 \begin{frame}
-You have already seen (I hope) that whenever you have ``variables'' you need to consider \underline{change of variables}. Random variables are no different.
+You have already seen (I hope) that whenever you have ``variables'' you need to consider {\it change of variables}. Random variables are no different.
 
-The notion of ``change of random variable'' is handle too briefly on page 103 of the text. \underline{This is something I will test you on.}
+The notion of ``change of random variable'' is handle too briefly on page 103 of the text. {\it This is something I will test you on.}
 
 \begin{example}\label{art9-exam1}
 Suppose $X\sim Bm\left(3,\dfrac{1}{2}\right)$.
@@ -111,7 +111,7 @@ Answer - express $Y$ in terms of $X$ and compute so
 P(Y=k) &= P(2X-1=k)\\[3pt]
        &= P\left(X=\dfrac{k+1}{2}\right)\tag{*}
 \end{align*}
-The right-hand site is the logical \underline{definition} of the left-hand side. 
+The right-hand site is the logical {\it definition} of the left-hand side. 
 
 But as is often the case in probability it is easier to pretend we know what $P(Y=k)$ means already and then the next two steps are a computation.
 \end{frame}
@@ -157,11 +157,10 @@ So the possible values of $Y$ are obtained by applying the function $h(x)=2x-1$ 
 \centerline{\includegraphics{figure/fig3.eps}}
 \medskip
 
-\underline{Just ``push forward'' the values of $X$.}
+{\it Just ``push forward'' the values of $X$.}
 \end{frame}
 
 \begin{frame}
-\begin{nonumexample}[Cont.]
 Now we have computed the possible values of $Y$ we need to compute their probabilities. Just repeat what we did
 \begin{align*}
 P(Y=-1) &= P(2X-1=-1)\\[3pt]
@@ -181,7 +180,6 @@ $P(Y=y)$ & $\dfrac{1}{8}$ & $\dfrac{3}{8}$ & $\dfrac{3}{8}$ & $\dfrac{1}{8}$\\
 \hline
 \end{tabular}
 \end{center}
-\end{nonumexample}
 \end{frame}
 
 \begin{frame}
@@ -211,7 +209,7 @@ Find a linear change of variable $Y=aX+b$ so that $Y\sim \Bin \left(2,\dfrac{1}{
 \begin{nonumproblem}[Cont.]
 We will make the change of variable $Y=X^{2}$. So what happens when we push forward the three values $-1$, $0$, $1$ by $h(x)=x^{2}$.
 
-We get only the \underline{two} values $0$ and $1$.
+We get only the {\it two} values $0$ and $1$.
 \begin{center}
 \begin{tabular}{ccc}
 $-1$ & $\xrightarrow{h(x)}$ & $1$\\[3pt]
@@ -257,7 +255,7 @@ Think of two masses (probabilities) of mass $\dfrac{1}{4}$ coalesing into a comb
 \begin{frame}
 \myheading{The Expected Value Formula}
 
-If $h(x)$ in the transformation law $Y=h(X)$ is complicated it can be very hard to explicitly compute the $pmf$ of $Y$ Amazingly we can compute the expected value $E(Y)$ using the old proof $P_{X}^{(x)}$ of $X$ according to \underline{Theorem}
+If $h(x)$ in the transformation law $Y=h(X)$ is complicated it can be very hard to explicitly compute the $pmf$ of $Y$ Amazingly we can compute the expected value $E(Y)$ using the old proof $P_{X}^{(x)}$ of $X$ according to {\it Theorem}
 \begin{align*}
 E(h(X)) &= \sum\limits_{\substack{\text{possible}\\ \text{values of $X$}}} h(x)P_{X}^{(x)}\\[3pt]
         &= \sum\limits_{\substack{\text{possible values}\\ \text{of $X$}}}h(x)P(X=x)
@@ -269,7 +267,7 @@ We will illustrate this with the $pmf$'s of Example \ref{art9-exam1}.
 
 \smallskip
 
-First we compute $E(Y)$ \underline{using the definition of $E(Y)$}. 
+First we compute $E(Y)$ {\it using the definition of $E(Y)$}. 
 \begin{equation*}
 \begin{array}{|c|c|c|c|c|}
 Y & -1 & 1 & 3 & 5\\
@@ -289,7 +287,7 @@ E(Y) &= \sum\limits_{\substack{\text{possible value}\\ \text{of $Y$}}} y \ P(Y=y
 \begin{frame}
 Notice to do the previous computations we needed the table $(\sharp)$ which we computed on page 5.
 
-Now we use the \underline{Theorem}.
+Now we use the {\it Theorem}.
 
 So now we use that $Y$ is a function of the random variable $X$ and use the proof of $X$ from the table on page 1.
 \begin{equation*}

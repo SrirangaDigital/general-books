@@ -89,7 +89,7 @@ Today we start Chapter 6 and with it the statistics port of the course. We saw i
 
 In fact we had  three examples
 
-\myheading{1. \underline{The Election Example}}
+\myheading{1. {\it The Election Example}}
 \begin{center}
 \begin{tabular}{|c|}
 \hline\\
@@ -101,7 +101,7 @@ Bin (1, ?)\\
 \end{frame}
 
 \begin{frame}
-\myheading{2. \underline{The Computer Failure Time Example}}
+\myheading{2. {\it The Computer Failure Time Example}}
 \begin{center}
 \begin{tabular}{|c|}
 \hline\\
@@ -111,7 +111,7 @@ Exp (?)\\
 \end{tabular}
 \end{center}
 
-\myheading{3. \underline{The Random Number Example}}
+\myheading{3. {\it The Random Number Example}}
 \begin{center}
 \begin{tabular}{|c|}
 \hline\\
@@ -128,7 +128,7 @@ So $\theta = p$ in example 1 and $\theta = \lambda$ in Example 2 and $\theta = B
 \begin{frame}
 If the population $X$ is discrete we will write its proof as $p_X (x,\theta)$ to emphasize that it depends on the unknown parameter $\theta$ and if $X$ is continuous we will write its pdf as $f_X (x, \theta)$ again to emphasize the dependence on $\theta$.
 
-\myheading{\underline{Important Remark}}
+\myheading{{\it Important Remark}}
 $\theta$ is a fixed number, it is just that we don't know it. But we are allowed to make calculations with a number we don't know, that is the point of known and ``the unknown $x$''.
 \end{frame}
 
@@ -136,7 +136,7 @@ $\theta$ is a fixed number, it is just that we don't know it. But we are allowed
 Now suppose we have on actual sample $x_1, x_2, \ldots, x_n$ from a population $X$ whose probability distribution is known except for an unknown parameter $\theta$. For convenience we will assume $X$ is discrete.
 
 \medskip
-\centerline{\includegraphics{art22(1).eps}}
+\centerline{\includegraphics{figure/art22(1).eps}}
 
 The idea of point estimation is to develop a theory of making a guess for $\theta$ (``estimating $\theta$'') in terms of $x_1, x_2, \ldots, x_n$.
 
@@ -159,41 +159,41 @@ find $h$ so that for every sample \\
 $x_1, x_2, \ldots , x_n$ we have  \\
 \qquad $h(x_1, x_2, \ldots, x_n) = \theta$.  
 \end{tabular}
- \right\} \tag{$\ast$}
+ \right\} \tag{$\ast$}\label{eq-*}
 \end{equation*}
 
-This is \underline{hopelessly naive}. Let's try something else
+This is {\it hopelessly naive}. Let's try something else
 \end{nonumdefinition}
 \end{frame}
 
 \begin{frame}
-\myheading{\underline{The Main Problem (some what more precise)}}
+\myheading{{\it The Main Problem (some what more precise)}}
 
 Give quantitative criteria to decide whether one estimator $w = h_1 (x_1, x_2, \ldots, x_n)$ for $\theta$ is better than another estimator $h_2 (x_1, x_2, \ldots, x_n)$.
 
 The above version, though better, is still not useful. 
 
 In order to pose the problem correctly we need to consider random samples from $X$, in ofter words go back before an actual sample is taken or ``go random''.
-
-\medskip
-\centerline{\includegraphics{art22(2).eps}}
 \end{frame}
 
 \begin{frame}
-Now our \underline{function $h$ gives rise to a random variable (statistic)}
+\centerline{\includegraphics{figure/art22(2).eps}}
+\smallskip
+
+Now our {\it function $h$ gives rise to a random variable (statistic)}
 
 $$
 W = h (X_1, X_2, \ldots, X_n)
 $$
-which I will call (for a while) an estimator \underline{statistic}, to distinguish if from the estimator (\underline{number}) $w= h(x_1, x_2, \ldots, x_n)$. Once we have chosen $h$ the corresponding  estimator statistic will ofter be denoted $\hat{\theta}$.
+which I will call (for a while) an estimator {\it statistic}, to distinguish if from the estimator ({\it number}) $w= h(x_1, x_2, \ldots, x_n)$. Once we have chosen $h$ the corresponding  estimator statistic will ofter be denoted $\hat{\theta}$.
 \end{frame}
 
 \begin{frame}
 If we have an actual sample 
 
 \medskip
-\centerline{\includegraphics{art22(1).eps}}
-then the \underline{number} $h(x_1, x_2, \ldots, x_n)$ is called the observed value of the estimator statistic $W = h (X_1, X_2, \ldots, X_n)$ on the sample $x_1, x_2,\ldots, x_n$. Unfortunately if too is after denoted $\hat{\theta}$.
+\centerline{\includegraphics{figure/art22(1).eps}}
+then the {\it number} $h(x_1, x_2, \ldots, x_n)$ is called the observed value of the estimator statistic $W = h (X_1, X_2, \ldots, X_n)$ on the sample $x_1, x_2,\ldots, x_n$. Unfortunately if too is after denoted $\hat{\theta}$.
 
 \begin{nonumremark}
 The estimator statistic should be denoted $\hat{\theta}$ and its observed value $\hat{\theta}$ but mathematical (and statistical) ?????? is for from consistent. 
@@ -205,7 +205,7 @@ The estimator statistic should be denoted $\hat{\theta}$ and its observed value 
 
 Find an estimator $h(x_1, x_n)$ so that
 \begin{equation*}
-P (h (x_1, X_2, \ldots, X_n) = \theta) \tag{$\ast\ast$}
+P (h (x_1, X_2, \ldots, X_n) = \theta) \tag{$\ast\ast$}\label{eq-**}
 \end{equation*}
 is maximized 
 
@@ -216,37 +216,37 @@ We have made a huge gain by ``going random''. The statement ``maximize $P(h(x_1,
 \end{frame}
 
 \begin{frame}
-because \underline{$h(x_1, \ldots  x_n)$ is a number and $\theta$ is a number} so the above statement amounts to the hopelessly naive criterion from page 5
+because {\it $h(x_1, \ldots  x_n)$ is a number and $\theta$ is a number} so the above statement amounts to the hopelessly naive criterion from page 5
 
 -choose $h$ so that $h(x_1, x_2, \ldots , x_n) = \theta$.
 
-Now we weaken ($\ast\ast$) to something that can be achieved, in fact achieved surprising easily.
+Now we weaken \eqref{eq-**} to something that can be achieved, in fact achieved surprising easily.
 \end{frame}
 
 \begin{frame}
-\underline{Unbiased Estimators Mam Problem (fourth version)}
+\myheading{Unbiased Estimators Mam Problem (fourth version)}
 
 Find an estimator $w = h (x_1,\ldots, x_n)$ so that the expected value $E(W)$ of the estimator statistic $W$ satisfies 
 \begin{equation*}
-E(W) = \theta \tag{$\ast\ast \ast$}
+E(W) = \theta \tag{$\ast\ast\ast$}\label{eq-***}
 \end{equation*}
 
-At first glance $(\ast\ast\ast)$ doesn't look much easier to achieve then $(\ast\ast)$ but in fact it is surprising easy to achieve - in fact too easy. There are money $W$ that satisfy $(\ast\ast\ast)$ so we will need further criteria. 
+At first glance \eqref{eq-***} doesn't look much easier to achieve then \eqref{-**} but in fact it is surprising easy to achieve - in fact too easy. There are money $W$ that satisfy \eqref{eq-***} so we will need further criteria. 
 \end{frame}
 
 \begin{frame}
-Let's give estimator statistics that satisfy ($\ast\ast\ast$) a name.
+Let's give estimator statistics that satisfy \eqref{eq-***} a name.
 
 \begin{nonumdefinition}
 An estimator statistic 
 
-$W = h(X_1, X_2, \ldots, X_n)$ is an \underline{unbiased estimator} of the population parameter $\theta$ of 
+$W = h(X_1, X_2, \ldots, X_n)$ is an {\it unbiased estimator} of the population parameter $\theta$ of 
 $$
 E(W) = \theta.
 $$
 \end{nonumdefinition}
 
-Intuitively ($\ast\ast\ast$) is a good idea but we can make this move precise Various theorems in probability e.g Cheston's requetity.
+Intuitively \eqref{eq-***} is a good idea but we can make this move precise Various theorems in probability e.g Cheston's requetity.
 \end{frame}
 
 \begin{frame}
@@ -260,7 +260,7 @@ $$
 
 \begin{frame}
 \medskip
-\centerline{\includegraphics{art22(3).eps}}
+\centerline{\includegraphics{figure/art22(3).eps}}
 
 I have run out of letters. In the above there are four sample of size $n$ and four corresponding estimates $h(w_1, \ldots, w_n)$, $h(x_1, \ldots, x_n)$, $h(y_1, \ldots, y_n)$ and $h(z_1, \ldots, z_n)$.
 
@@ -268,7 +268,7 @@ Imagine that instead of four we have one hundred estimates of size $n$ and one h
 \end{frame}
 
 \begin{frame}
-\underline{Examples of Unbiased Estimators The most important estimation problem}
+{\it Examples of Unbiased Estimators The most important estimation problem}
 
 Let's take another look at Problems 1 and 2 (pages 1 and 2)
 
@@ -280,7 +280,7 @@ Let's take another look at Problems 1 and 2 (pages 1 and 2)
 Facts - & for a Bernoulli random \\
 & variable $X \sim \Bin (1, p)$ \\
 & we have $E(X)=p$\\
-& \underline{and}\\
+& {\it and}\\
 & for an exponential  random \\
 & variable $X \sim \text{ Exp } (\lambda)$
 \end{tabular}
@@ -290,7 +290,7 @@ $$
 \end{frame}
 
 \begin{frame}
-\underline{So in both cases the unknown parameter is the population mean $E(X) = \mu$}
+\myheading{So in both cases the unknown parameter is the population mean $E(X) = \mu$}
 
 We have 
 
@@ -298,13 +298,13 @@ We have
 Find an unbiased estimator for the population mean $\mu$
 
 \medskip
-\centerline{\includegraphics{art22(4).eps}}
+\centerline{\includegraphics{figure/art22(4).eps}}
 
 So we wont $h(x_1, x_2, \ldots, x_n)$ so that
 $$
 E\left( h \left( X_1, X_2, \ldots, X_n\right) \right) = \mu
 $$
-= the \underline{population} mean.
+= the {\it population} mean.
 \end{nonumproblem}
 \end{frame}
 
@@ -354,16 +354,16 @@ Thus $\overline{x}$ is the ``common sense'' estimator, the relative number of ob
 \end{frame}
 
 \begin{frame}
-\underline{An Examples Where the ``Common Sense'' Estimator is Biased}
+\myheading{An Examples Where the ``Common Sense'' Estimator is Biased}
 
-Once we have a \underline{mathematical} criterion for an estimator to be good we will often find to our surprise that ``common sense'' estimators do not meet this criterion. We saw an example of this in the ``Pandemonium jet fighter'' problem 14, on page 242.
+Once we have a {\it mathematical} criterion for an estimator to be good we will often find to our surprise that ``common sense'' estimators do not meet this criterion. We saw an example of this in the ``Pandemonium jet fighter'' problem 14, on page 242.
 
 Another very similar problem occurs in Example 3 - estimator $B$ in choosing a random number from $U (0, B)$.
 \end{frame}
 
 \begin{frame}
 \medskip
-\centerline{\includegraphics{art22(5).eps}}
+\centerline{\includegraphics{figure/art22(5).eps}}
 
 The ``common sense'' estimator for $B$ is $w = \text{ max } (x_1, x_2, \ldots, x_n)$, the biggest number you observe. But it is intuitively clear that this estimate will be too small since it only gives the right object if one of the $x$'s is equal to $B$ and
 \begin{gather*}
@@ -378,7 +378,7 @@ $$
 E \left( \text{Max }\left(X_1, \ldots, X_n\right) \right) \displaystyle{\mathop{<}_{\neq}} B 
 $$
 
-Amazingly, if you do page 252, problem 32 \underline{you will see exactly by how much if undershoots the mark}.
+Amazingly, if you do page 252, problem 32 {\it you will see exactly by how much if undershoots the mark}.
 
 \begin{nonumtheorem}
 $$
@@ -387,11 +387,11 @@ $$
 so $\left(\dfrac{n+1}{n} \right) \text{ Max } (X_1, X_2, \ldots, X_n) $ is unbiased.
 \end{nonumtheorem}
 
-\underline{\underline{Mathematics trumps common sense}}
+{\it Mathematics trumps common sense}
 \end{frame}
 
 \begin{frame}
-\underline{Minimum Variance Unbiased Estimators}
+\myheading{Minimum Variance Unbiased Estimators}
 
 We have seen that $\overline{X}$ and $X_1$ are unbiased estimators of the population mean. Common sense tells us that $\overline{X}$ is 
 better.
@@ -410,7 +410,7 @@ $$
 \begin{frame}
 We will see later why this is good. First we state 
 
-\underline{The Principle of Minimum Variance Unbiased Estimation}
+\myheading{The Principle of Minimum Variance Unbiased Estimation}
 
 Among all estimators of $\theta$ that are unbiased, choose one that has minimum variance.
 
