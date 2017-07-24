@@ -66,7 +66,7 @@ We all have an intuitive notion of probability.
 
 Let's see.
 
-What is the probability of tossing two heads in a row with a fair coin?
+What is the probability $P$ of tossing two heads in a row with a fair coin?
 \end{frame} 
 
 \begin{frame}
@@ -94,7 +94,7 @@ However it is important to put probability into a formal mathematic framework fo
 \begin{frame}
 \myheading{1. Even ``elementary''}
 
-Problems become too hard unless we can break them down into simpler problems using the rule of {\it Set Theory}.
+Problems become too hard unless we can break them down into simpler problems using the rules of {\it Set Theory}.
 
 \myheading{Examples}
 
@@ -121,7 +121,7 @@ In two weeks everybody will.
 
 To make the transition we introduce the word ``experiment'' which will be taken to mean ``any action or process whose outcome is subject to uncertainty'' 
 
-text - pg. 47.
+Devore, Ninth Edition- pg. 53.
 
 \myheading{Examples}
 
@@ -134,7 +134,7 @@ Dealing 13 cards from a 52 card deck - a bridge hand.
 
 \begin{frame}
 \begin{nonumdefinition}
-The set of all possible outcomes of on experiment will be called the {\it sample space} of that experiment and denote $s$.
+The set of all possible outcomes of on experiment will be called the {\it sample space} of that experiment and denoted $S$.
 \end{nonumdefinition}
 
 \myheading{Experiment}
@@ -153,7 +153,7 @@ $$
 
 \begin{frame}
 \begin{nonumdefinition}
-A subset $A$ of $s$ is called an event.
+A subset $A$ of $S$ is called an event.
 \end{nonumdefinition}
 
 
@@ -166,7 +166,7 @@ We are looking for $P(A)$ where $A$ is a subset of the previous $s$.
 
 \begin{frame}
 $$
-s=\left\{HHH, \ HHT, \ HTH, \ HTT, \ THH, \ THT, \ TTH, \ TTT\right\}
+S=\left\{HHH, \ HHT, \ HTH, \ HTT, \ THH, \ THT, \ TTH, \ TTT\right\}
 $$
 
 We will call this ``our favorite sample space'' from now on.
@@ -175,22 +175,22 @@ We will call this ``our favorite sample space'' from now on.
 \begin{frame}
 \myheading{3. The Formal Mathematical Theory}
 
-Let $s$ be a set (the sample space). A {\it probability measure} $P$ on $s$ is a rule (function) which assigns a real number $P(A)$ to any subset $A$ of $s$ (i.e., to any event) such that the following axioms are satisfied
+Let $S$ be a set (the sample space). A {\it probability measure} $P$ on $S$ is a rule (function) which assigns a real number $P(A)$ to any subset $A$ of $S$ (i.e., to any event) such that the following axioms are satisfied
 \begin{enumerate}
-\item For any event $A\subset s$ we have $P(A)\geq 0$
+\item For any event $A\subset S$ we have $P(A)\geq 0$
 
-\item $P(s)=1$
+\item $P(S)=1$
 \end{enumerate}
 \end{frame}
 
 \begin{frame}
 \begin{enumerate}
 \setcounter{enumi}{2}
-\item If $A_{1}$, $A_{z}$,\quad, $A_{n}$,\ldots
+\item If $A_{1}$, $A_{2}$,\quad, $A_{n}$,\ldots
 
 is a possibly infinite collection of pairwise disjoint (mutually exclusive) events then 
 $$
-P\left(A,\cup A_{z}\cup\ldots\cup A_{n}\cup \ldots\right)=\underbrace{\sum\limits^{\infty}_{n=1}P(A_{n})}_{\substack{\text{sum of an infinite series}\\ \text{not just ordinary sum.}}}
+P\left(A,\cup A_{2}\cup\ldots\cup A_{n}\cup \ldots\right)=\underbrace{\sum\limits^{\infty}_{n=1}P(A_{n})}_{\substack{\text{sum of an infinite series}\\ \text{not just ordinary sum.}}}
 $$
 mutually exclusive means $A_{i}\cap A_{j}=\emptyset$ for any pair $i$, $j$ with $i\neq j$.
 \end{enumerate}
@@ -214,9 +214,9 @@ $$
 \begin{frame}
 \myheading{A Class of Examples}
 
-Let $s$ be a set with $n$ elements. Let $A\subset s$ be any subset. Define
+Let $S$ be a set with $n$ elements. Let $A\subset S$ be any subset. Define
 $$
-P(A)=\dfrac{\sharp (A)}{\sharp (s)}=\dfrac{\sharp(A)}{n}
+P(A)=\dfrac{\sharp (A)}{\sharp (S)}=\dfrac{\sharp(A)}{n}
 $$
 Then $P$ satisfies the axioms $1.$, $2.$ and $3$.
 
@@ -240,7 +240,7 @@ Let $A$ be the subset (event) of outcomes with at least one head and one tail.
 
 All the outcomes are equally likely (because the coin is fair) so
 $$
-P(A)=\dfrac{\sharp (A)}{\sharp (s)}=\dfrac{P}{8}
+P(A)=\dfrac{\sharp (A)}{\sharp (s)}=\dfrac{6}{8}
 $$
 \end{frame}
 
@@ -252,7 +252,7 @@ Consider the unit square $s$ in the plane
 \includegraphics[scale=.8]{figure/fig2.eps}
 \end{center}
 
-Let $A\subset s$ be any subset.
+Let $A\subset S$ be any subset.
 
 Define
 $$
