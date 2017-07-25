@@ -1,0 +1,175 @@
+\documentclass{beamer}
+
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage{fancybox}
+\usepackage{xfrac}
+\usepackage{cancel}
+
+
+\newcommand{\heart}{\ensuremath\heartsuit}
+
+\usepackage{mathtools,amssymb}
+\newcommand{\myarrow}{\scalebox{2}[2]{$\mathclap{\curvearrowleft}\mkern2.2mu
+                                                 \mathclap{\curvearrowright}$}}
+
+\DeclareMathOperator{\Bin}{\mathrm{Bin}}
+
+\hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+
+\addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
+    \insertframenumber / \inserttotalframenumber}
+
+\geometry{papersize={15cm,15cm}}
+\usepackage{lipsum}
+
+\makeatletter
+\newenvironment<>{contdproof}[1][\proofname]{%
+    \par
+    \def\insertproofname{#1\@addpunct{.}}%
+    \usebeamertemplate{proof begin}#2}
+  {\usebeamertemplate{proof end}}
+\makeatother
+
+
+\setbeamertemplate{theorems}[numbered]
+
+\newtheorem*{nonumdefinition}{Definition}
+\newtheorem*{nonumproblem}{Problem}
+\newtheorem*{nonumlemma}{Lemma}
+\newtheorem*{nonumtheorem}{Theorem}
+\newtheorem*{nonumproof}{Proof}
+\newtheorem*{nonumremark}{Remark}
+\newtheorem*{answer}{Answer}
+\newtheorem*{nonumremarks}{Remarks}
+\newtheorem*{nonumexamples}{Examples}
+\newtheorem*{nonumsolution}{Solution}
+\newtheorem*{nonumexample}{Example}
+\newtheorem*{nonumproposition}{Proposition}
+\newtheorem{proposition}[theorem]{Proposition}
+
+
+
+\theoremstyle{alphtheorem}
+\newtheorem{alphtheorem}{Theorem}
+\renewcommand{\thealphtheorem}{\Alph{alphtheorem}}
+\renewcommand{\thesection}{\arabic{section}}
+
+
+
+\usepackage{tikz}
+\newcommand*\mycirc[1]{%
+  \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
+}
+
+\newcommand\myheading[1]{%
+  \par\bigskip
+  {\color{blue}{\large #1}}\par\smallskip}
+
+%\usetheme{Warsaw}
+%\usetheme{Berkeley} %sample 1
+
+\usetheme{Berlin} % sample 2
+%\usetheme{AnnArbor} % sample 3
+
+\let\otp\titlepage
+\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
+
+\title{Lecture 31: The prediction interval formulas for the next observation from a normal distribution when $\sigma$ is known}
+\author{}
+\date{}
+
+\begin{document}
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}
+\myheading{1. Introduction}
+
+In this lecture we will derive the formulas for the symmetric two-sided prediction
+interval for the $n + 1-$-st observation and the upper-tailed prediction interval for the
+$n +1$-st observation from a normal distribution \textit{when the variance $\sigma^2$ is known}. We
+will need the following theorem from probability theory that gives the distribution of
+the statistic $\overline{X} - X_{n +1}$.
+
+Suppose that $X_1,X_2, \ldots, X_n,X_{n+1}$ is a random sample from a normal distribution
+with mean $\mu$ and variance $\sigma^2$. We assume $\mu$ is unknown but $\sigma^2$ is known.
+
+\begin{theorem}
+The random variable $\overline{X} - X_{n-1}$ has normal distribution with mean zero
+and variance $\dfrac{n+1}{n} \sigma^2$. Hence we find that the random variable $Z = \left(\overline{X}-X_{n+1} \right)/ \left(
+\sqrt{\dfrac{n+1}{n}} \sigma \right)$ has standard normal distribution.
+\end{theorem}
+
+\myheading{2. The two-sided prediction interval formula}
+
+Now we can prove the theorem from statistics giving the required prediction interval
+for the next observation $x_{n+1}$ in terms of n observations $x_1, x_2, \ldots, x_n$. Note that it
+is symmetric around $\overline{X}$. This is one of the basic theorems that you have to learn how
+to prove. There are also asymmetric two-sided prediction intervals.
+\end{frame}
+
+\begin{frame}
+\begin{theorem}
+The random interval $\left(\overline{X} -z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}} \sigma, \; \overline{X} + z_{\sfrac{\alpha}{2}}  \sqrt{\frac{n+1}{n}} \sigma \right)$ is a $100 (1-\alpha)\%$-prediction interval for $x_{n+1}$.
+\end{theorem}
+
+\begin{proof}
+We are required to prove
+$$
+P\left(X_{n+1} \in \left(\overline{X} - z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}}  \sigma, \; \overline{x} + x_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}} \sigma \right) \right) =1-\alpha.
+$$
+We have
+\begin{align*}
+\text{LHS} & = P\left(\overline{X} - z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}} \sigma < X_{n+1}, X_{n+1} < \overline{X} + z_{\sfrac{\alpha}{2}}\sqrt{n+1}{n} \sigma \right)\\
+& = P \left(\overline{X} - X_{n+1} < z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}} \sigma \right)\\
+& = P \left(\overline{X} - X_{n+1} < z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}} \sigma, \overline{X} - X_{n+1} > -z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}}  \sigma  \right)\\
+%& = P\left( \left( \overline{X} - X_{n+1})/ \sqrt{\frac{n+1}{n}} \sigma < z_{\sfrac{\alpha}{2}}, \left(\overline{X} - X_{n+1} \right) / \sqrt{\frac{n+1}{n}} \sigma > -z_{\sfrac{\alpha}{2}} \right)\\
+& = P\left( Z < z_{\sfrac{\alpha}{2}}, Z > z_{\sfrac{\alpha}{2}}\right) = P\left( -z_{\sfrac{\alpha}{2}} < Z < z_{\sfrac{\alpha}{2}}\right)  = 1-\alpha
+\end{align*}
+To prove the last equality draw a picture.
+\end{proof}
+\end{frame}
+
+\begin{frame}
+Once we have an actual sample $x_1, x_2, \ldots ,x_n$ we obtain the observed value $\left(\overline{x} - z_{\sfrac{\alpha}{2}} \sqrt{\dfrac{n+1}{n}} \sigma, \; \overline{x} - z_{\sfrac{\alpha}{2}}  \sqrt{\dfrac{n+1}{n}} \sigma \right)$ for the prediction (random) interval $\left(\overline{X} - z_{\sfrac{\alpha}{2}} \sqrt{\dfrac{n+1}{n}} \sigma, \overline{X} + z_{\sfrac{\alpha}{2}} \sqrt{\frac{n+1}{n}} \sigma \right)$  The observed value of the prediction (random) interval is also called the two-sided $100(1 -\alpha)\%$ prediction interval for $x_{n+1}$.
+
+\myheading{3. The upper-tailed prediction interval}
+
+In this section we will give the formula for the upper-tailed prediction interval for the
+next observation $x_{n+1}$. 
+
+\begin{theorem}
+The random interval $\left(\overline{X} - z_{\alpha} \sqrt{n+1}{n} \sigma, \infty \right)$ is a $100(1-\alpha)\%$ -prediction
+interval for the next observation $x_{n+1}$.
+\end{theorem}
+
+\begin{nonumproof}
+We are required to prove
+$$
+P(X_{n+1} \in (\overline{X} - z_{\alpha} \sqrt{\frac{n+1}{n}} \sigma, \infty)) = 1 - \alpha.
+$$
+\end{nonumproof}
+\end{frame}
+
+\begin{frame}
+\begin{proof}[Proof (Cont.)]
+We have
+\begin{align*}
+\text{LHS } & = P \left(\overline{X} - z_{\alpha} \sqrt{\frac{n+1}{n}}  \sigma < X_{n+1}\right)
+\end{align*}
+
+To prove the last equality draw a picture - I want you to draw the picture on tests
+and the final.
+\end{proof}
+
+Once we have an actual sample $x_1, x_2, \ldots, x_n$ we obtain the observed value $\left(\overline{x} - z_{\alpha} \sqrt{\dfrac{n+1}{n}} \sigma, \infty \right)$ of the upper-tailed prediction (random) interval $\left(\overline{X} - z_{\alpha} \sqrt{\frac{n+1}{n}} \sigma, \infty \right)$ The observed value of the upper-tailed prediction (random) interval is also called the
+upper-tailed $100(1 - \alpha)\%$ prediction interval for $x_{n+1}$.
+
+The number random variable $\overline{X} -z_{\alpha} \sqrt{\dfrac{n+1}{n}} \sigma$ or its observed value $\overline{x} -z_{\alpha} \sqrt{\dfrac{n+1}{n}} \sigma$ is often called a prediction \textit{lower bound} for $x_{n+1}$ because
+$$
+P \left(\overline{X}- z_{\alpha} \sqrt{\dfrac{n+1}{n}} \sigma < X_{n+1} \right) = 1 - \alpha.
+$$
+\end{frame}
+\end{document}

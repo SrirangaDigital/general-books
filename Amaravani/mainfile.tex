@@ -1,28 +1,29 @@
 \documentclass[11pt]{book}
 
 \usepackage{nudi}
-\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{graphicx,epsfig}
+\usepackage{latexsym, amsfonts, amssymb}
+\usepackage{hyperref}
 
 \def\shloka{\smallskip\bgroup\noindent\raggedright\leftskip=25pt\vbox\bgroup\bfseries\ignorespaces}
 \def\endshloka{\egroup\egroup\par\smallskip}
-
 \begin{document}
 
 \frontmatter
 
-%\input src/preface
-
+\input src/preface
 
 \tableofcontents
 
-%\input src/prakashakaranudi
-%\input src/bhumike
+\input src/prakashakaranudi
 
 
 \mainmatter
 
-
+\input src/chapter1
+\input src/chapter2
+\input src/chapter3
 \input src/chapter4
-
-
+\input src/anubanda
 \end{document}
