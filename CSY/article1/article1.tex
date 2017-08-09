@@ -1,16 +1,18 @@
-\documentclass{beamer}
-
-\usepackage{txfonts}
-\usepackage{hyperref}
-
-\hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
-
-\addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
-    \insertframenumber / \inserttotalframenumber }
-
-\geometry{papersize={12.8cm,14cm}}
-\usepackage{lipsum}
-
+\documentclass[10pt]{beamer}
+\usetheme{Berkeley}
+\usepackage{graphicx}
+\usepackage{booktabs}
+%~ \usepackage{txfonts}
+%~ \usefonttheme{serif}
+\usefonttheme{professionalfonts}
+%~ \hypersetup{colorlinks=false,linkbordercolor=red,linkcolor=green,pdfborderstyle={/S/U/W 1}}
+%~ 
+%~ \addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
+    %~ \insertframenumber / \inserttotalframenumber }
+%~ 
+%~ \geometry{papersize={12.8cm,14cm}}
+%~ \usepackage{lipsum}
+%~ 
 \makeatletter
 \newenvironment<>{contdproof}[1][\proofname]{%
     \par
@@ -40,11 +42,11 @@
 
 %\usetheme{Warsaw}
 %\usetheme{Berkeley} %sample 1
-\usetheme{Berlin} % sample 2
+%~ \usetheme{Berlin} % sample 2
 %\usetheme{AnnArbor} % sample 3
 
-\let\otp\titlepage
-\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
+%~ \let\otp\titlepage
+%~ \renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
 
 
 
@@ -53,12 +55,21 @@
 \date{}
 
 
+
 \begin{document}
-\begin{frame}[plain]
+
+
+\begin{frame}
 \titlepage
 \end{frame}
-\begin{frame}
-\frametitle{1. Introduction}
+
+\begin{frame}{Tableofcontents}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
 
 Today we will do \S2.1 and 2.2. We will skip Chapter 1.
 
@@ -116,8 +127,9 @@ Prediction - nobody will get this one now.
 In two weeks everybody will.
 \end{frame}
 
-\begin{frame}
-\myheading{2. Transition from the naive theory to the formal mathematical theory}
+\section{Transition from the naive theory to the formal mathematical theory}
+
+\begin{frame}{Transition from the naive theory to the formal mathematical theory}
 
 To make the transition we introduce the word ``experiment'' which will be taken to mean ``any action or process whose outcome is subject to uncertainty'' 
 
@@ -172,8 +184,9 @@ $$
 We will call this ``our favorite sample space'' from now on.
 \end{frame}
 
-\begin{frame}
-\myheading{3. The Formal Mathematical Theory}
+\section{The Formal Mathematical Theory}
+
+\begin{frame}{The Formal Mathematical Theory}
 
 Let $S$ be a set (the sample space). A {\it probability measure} $P$ on $S$ is a rule (function) which assigns a real number $P(A)$ to any subset $A$ of $S$ (i.e., to any event) such that the following axioms are satisfied
 \begin{enumerate}
@@ -271,9 +284,9 @@ What is $P(A)$?
 Can you find $A$ so that $P(A)=\dfrac{1}{\pi}$?
 \end{frame}
 
-\begin{frame}
-\myheading{4. A Quick Trip Through Set-Theory (pg. 49-50)}
+\section{A Quick Trip Through Set-Theory (pg. 49-50)}
 
+\begin{frame}{A Quick Trip Through Set-Theory (pg. 49-50)}
 
 Let $s$ be a set and $A$ and $B$ be subsets. Then we have $A\cup B$ (union), $A\cap B$ (intersection) and $A'$ (complement).
 
@@ -286,15 +299,13 @@ Let $s$ be a set and $A$ and $B$ be subsets. Then we have $A\cup B$ (union), $A\
 \centerline{\includegraphics{figure/fig5.eps}}
 
 \centerline{\includegraphics{figure/fig6.eps}}
-
-\medskip
-
-$A\cup B$ = ``everything in $s$ that is in either $A$ {\it or} $B$''
-
-$A\cap B$ = ``everything in $s$ that is in $A$ {\it and} $B$''
 \end{frame}
 
 \begin{frame}
+$A\cup B$ = ``everything in $s$ that is in either $A$ {\it or} $B$''
+
+$A\cap B$ = ``everything in $s$ that is in $A$ {\it and} $B$''
+
 \myheading{The formulas linking $\cup$, $\cap$ and $'$}
 
 To help you remember the formulas that follow use the analogy
@@ -357,29 +368,23 @@ not in $A$ or $B$ = not in $A$ and not in $B$
 \begin{frame}
 
 The best way to see it is by a Venn diagram
-
-\smallskip
+\medskip
 
 \includegraphics{figure/fig7.eps}
-
-\smallskip
+\medskip
 
 \qquad~\includegraphics{figure/fig8.eps}
-
-\smallskip
-
-\qquad~\includegraphics{figure/fig9.eps}
-
-\smallskip
-
-Top square = intersection of bottom two squares
 \end{frame}
 
 \begin{frame}
+\qquad~\includegraphics{figure/fig9.eps}
+
+
+Top square = intersection of bottom two squares
 
 \myheading{Consequences of the axioms of probability theory}
 
-pg. 54-56.
+pg.~54--56.
 
 We will prove two propositions which will be {\em extremely useful} to you.
 
@@ -388,7 +393,9 @@ $$
 P(A')=1-P(A).
 $$
 \end{proposition}
+\end{frame}
 
+\begin{frame}
 \begin{contdproof}
 $A\cup A'=s$ so
 
@@ -396,9 +403,7 @@ $P(A\cup A')=P(s)=1$ (axiom 2) ($\sharp$)
 
 But $A\cap A'=\emptyset$ so by
 \end{contdproof}
-\end{frame}
 
-\begin{frame}
 \begin{proof}[Proof (Cont.)]
 axiom 3, special case 1
 $$
@@ -409,7 +414,9 @@ $$
 1=P(A)+P(A')
 $$
 \end{proof}
+\end{frame}
 
+\begin{frame}
 \setcounter{theorem}{0}
 \begin{corollary}
 $P(\phi)=0$.
@@ -420,9 +427,7 @@ $\phi=s'$
 
 so $P(\phi)=1-P(s)=1-1=0$.
 \end{proof}
-\end{frame}
 
-\begin{frame}
 \begin{nonumremark}
 $\emptyset$ is not the Greek letter phi, it is a Norwegian letter. The symbol was chosen by Andr\'e Weil.
 \end{nonumremark}
@@ -430,7 +435,9 @@ $\emptyset$ is not the Greek letter phi, it is a Norwegian letter. The symbol wa
 \begin{corollary}
 $P(A)\leq 1$.
 \end{corollary}
+\end{frame}
 
+\begin{frame}
 \begin{proof}
 $P(A)=1-P(A')\leq 1$
 
