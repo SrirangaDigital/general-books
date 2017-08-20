@@ -1,10 +1,12 @@
 
 %%importing packages
+\usepackage[utf8]{inputenc}
 \usepackage{fontspec,graphicx,array,tabularx}
 \usepackage{url}
 \usepackage{fancyhdr}
 \usepackage{endnotes}
 \usepackage{setspace}
+\usepackage{imakeidx}
 
 %%page settings for the book
 \usepackage[papersize={140mm,215mm},textwidth=100mm,
@@ -15,7 +17,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Gentium Basic}
 \newfontfamily\AAN[Script=Devanagari,Mapping=velthuis-sanskrit]{AA_NAGARI_SHREE_L3}
-\newfontfamily\AA[Script=Devanagari]{AA_NAGARI_SHREE_L3}
+\newfontfamily\dev[Script=Devanagari]{Sanskrit2003}
 
 
 
@@ -72,6 +74,15 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \vskip 20\p@
   }}
 
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+
 \renewcommand\part{%
   \if@openright
     \cleardoublepage
@@ -100,7 +111,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
      \interlinepenalty \@M
      \normalfont
      \ifnum \c@secnumdepth >-2\relax
-       %\huge\bfseries \partname\nobreakspace\thepart
+       \huge\bfseries \partname\nobreakspace\thepart
        \par
        \vskip 20\p@
      \fi
@@ -172,3 +183,6 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \setcounter{secnumdepth}{4}
 \def\Break{\break }
+%~ \makeindex
+\makeindex[title=Index,program=makeindex,options=-s mystyle.ist,columnseprule=true,columns=2]
+%~ \makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
