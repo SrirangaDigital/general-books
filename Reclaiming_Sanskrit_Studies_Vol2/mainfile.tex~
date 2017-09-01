@@ -1,0 +1,65 @@
+\documentclass[10pt,twoside]{book}
+
+\input src/macros
+
+\begin{document}
+\frontmatter
+
+\lhead[\small\thepage]{}
+\rhead[]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+\input src/titlepage
+\newpage
+
+\input src/copyright
+\newpage
+
+\input src/contents
+\newpage
+
+\input src/about
+\newpage
+
+\input src/editorial
+
+\mainmatter
+
+\lhead[\small\thepage\quad Ashay Naik]{}
+\rhead[]{\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+
+\part{``Link" between Sanskrit and Nazism}
+
+\input src/chapter1
+
+%\input src/chapter2
+
+%\input src/chapter3
+
+%\part{``Death" of Sanskrit}
+
+%\input src/chapter4
+
+%\input src/chapter5
+
+%\input src/chapter6
+
+%\makeatletter
+%\renewcommand\thesubsubsection{\thesubsection.\@arabic\c@subsubsection}
+%\makeatother
+
+%\input src/chapter7
+
+%\input src/chapter8
+
+%\input src/biodata
+
+\printindex
+
+\label{book:end}
+
+\end{document}

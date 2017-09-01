@@ -1,0 +1,4 @@
+(markup-locref :attr "default" :open "{" :close "}")
+
+(markup-locclass-list :open "\kern2pt\hfill ")
+(markup-locref-list :sep ", ")
