@@ -8,6 +8,9 @@
 \def\entry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
 \def\endentry{\egroup\par\medskip}
 
+\def\pentry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
+\def\endpentry{\egroup\par\smallskip}
+
 \def\word#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{13pt}{13pt}\selectfont\bf #1}\thinspace:\markboth{#1}{#1}}\relax
 \def\engword#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{12pt}{12pt}\selectfont\bf \eng{#1}}\thinspace:\markboth{\eng{#1}}{\eng{#1}}}\relax
 \def\gl#1{{\bfseries \eng{(#1)}.}}
@@ -26,8 +29,8 @@
 \lfoot[]{}
 \cfoot[\thepage]{\thepage}
 \rfoot[]{}
-\lhead[\sl{\rightmark}]{\sl{\rightmark}}
-\rhead[\sl{\leftmark}]{\sl{\leftmark}}
+\lhead[\fontsize{10pt}{12pt}\selectfont\sl{\rightmark}]{\fontsize{10pt}{12pt}\selectfont\sl{\rightmark}}
+\rhead[\fontsize{10pt}{12pt}\selectfont\sl{\leftmark}]{\fontsize{10pt}{12pt}\selectfont\sl{\leftmark}}
 \fancypagestyle{plain}{%
 \fancyhf{}
 \cfoot[\thepage]{\thepage}}
