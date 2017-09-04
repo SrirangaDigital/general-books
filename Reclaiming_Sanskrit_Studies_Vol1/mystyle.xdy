@@ -1,4 +1,5 @@
 (markup-index :open  "~n\begin{theindex}~n
+	\label{begin:index}~n
 	\providecommand*\lettergroupDefault[1]{}
 	\providecommand*\lettergroup[1]{%
       \par\textbf{#1}\par
