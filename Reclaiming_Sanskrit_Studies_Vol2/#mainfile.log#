@@ -1,0 +1,3014 @@
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.7.29)  6 SEP 2017 07:58
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**mainfile.tex
+(./mainfile.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./src/macros.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc
+.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2015/03/14 v2.4c Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2015/03/01 v5547 L3 programming layer (loader) 
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2015/03/01 v5547 L3 programming layer (code) 
+L3 Module: l3bootstrap 2015/02/28 v5542 L3 Bootstrap code
+L3 Module: l3names 2015/02/24 v5535 L3 Namespace for primitives
+L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
+L3 Module: l3expan 2014/11/27 v5472 L3 Argument expansion
+L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
+L3 Module: l3str 2015/03/01 v5545 L3 Strings
+L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
+L3 Module: l3int 2015/02/21 v5529 L3 Integers
+\c_max_int=\count88
+\l_tmpa_int=\count89
+\l_tmpb_int=\count90
+\g_tmpa_int=\count91
+\g_tmpb_int=\count92
+L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
+L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
+\g__prg_map_int=\count93
+L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
+L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
+L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
+L3 Module: l3msg 2015/02/26 v5537 L3 Messages
+L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
+\l_iow_line_count_int=\count94
+\l__iow_target_count_int=\count95
+\l__iow_current_line_int=\count96
+\l__iow_current_word_int=\count97
+\l__iow_current_indentation_int=\count98
+L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
+\c_zero_dim=\dimen103
+\c_max_dim=\dimen104
+\l_tmpa_dim=\dimen105
+\l_tmpb_dim=\dimen106
+\g_tmpa_dim=\dimen107
+\g_tmpb_dim=\dimen108
+\c_zero_skip=\skip43
+\c_max_skip=\skip44
+\l_tmpa_skip=\skip45
+\l_tmpb_skip=\skip46
+\g_tmpa_skip=\skip47
+\g_tmpb_skip=\skip48
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
+\g__keyval_level_int=\count99
+\l_keys_choice_int=\count100
+L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
+\c__fp_leading_shift_int=\count101
+\c__fp_middle_shift_int=\count102
+\c__fp_trailing_shift_int=\count103
+\c__fp_big_leading_shift_int=\count104
+\c__fp_big_middle_shift_int=\count105
+\c__fp_big_trailing_shift_int=\count106
+\c__fp_Bigg_leading_shift_int=\count107
+\c__fp_Bigg_middle_shift_int=\count108
+\c__fp_Bigg_trailing_shift_int=\count109
+L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
+\c_empty_box=\box26
+\l_tmpa_box=\box27
+\l_tmpb_box=\box28
+\g_tmpa_box=\box29
+\g_tmpb_box=\box30
+L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
+\l__coffin_internal_box=\box31
+\l__coffin_internal_dim=\dimen109
+\l__coffin_offset_x_dim=\dimen110
+\l__coffin_offset_y_dim=\dimen111
+\l__coffin_x_dim=\dimen112
+\l__coffin_y_dim=\dimen113
+\l__coffin_x_prime_dim=\dimen114
+\l__coffin_y_prime_dim=\dimen115
+\c_empty_coffin=\box32
+\l__coffin_aligned_coffin=\box33
+\l__coffin_aligned_internal_coffin=\box34
+\l_tmpa_coffin=\box35
+\l_tmpb_coffin=\box36
+\l__coffin_display_coffin=\box37
+\l__coffin_display_coord_coffin=\box38
+\l__coffin_display_pole_coffin=\box39
+\l__coffin_display_offset_dim=\dimen116
+\l__coffin_display_x_dim=\dimen117
+\l__coffin_display_y_dim=\dimen118
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen119
+\l__box_bottom_dim=\dimen120
+\l__box_left_dim=\dimen121
+\l__box_right_dim=\dimen122
+\l__box_top_new_dim=\dimen123
+\l__box_bottom_new_dim=\dimen124
+\l__box_left_new_dim=\dimen125
+\l__box_right_new_dim=\dimen126
+\l__box_internal_box=\box40
+\l__coffin_bounding_shift_dim=\dimen127
+\l__coffin_left_corner_dim=\dimen128
+\l__coffin_right_corner_dim=\dimen129
+\l__coffin_bottom_corner_dim=\dimen130
+\l__coffin_top_corner_dim=\dimen131
+\l__coffin_scaled_total_height_dim=\dimen132
+\l__coffin_scaled_width_dim=\dimen133
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
+File: l3unicode-data.def 2015/03/01 v5544 L3 Unicode data
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+File: l3xdvidpfmx.def 2015/03/01 v5544 L3 Experimental driver: xdvipdfmx
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count110
+\l__xparse_m_args_int=\count111
+\l__xparse_mandatory_args_int=\count112
+\l__xparse_processor_int=\count113
+\l__xparse_v_nesting_int=\count114
+)
+\l_fontspec_script_int=\count115
+\l_fontspec_language_int=\count116
+\l_fontspec_strnum_int=\count117
+\l__fontspec_tmpa_dim=\dimen134
+\l__fontspec_tmpb_dim=\dimen135
+\l__fontspec_tmpc_dim=\dimen136
+Variant \tl_gset:cV already defined; not changing it on line 71
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+Package: fontspec-patches 2015/03/14 v2.4c Font selection for XeLaTeX and LuaLa
+TeX
+LaTeX Info: Redefining \em on input line 49.
+LaTeX Info: Redefining \emph on input line 57.
+LaTeX Info: Redefining \- on input line 60.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \oldstylenums with sig. 'm' on line 155.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \liningnums with sig. 'm' on line 159.
+.................................................
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2015/03/14 v2.4c Font selection for XeLaTeX and LuaLaTe
+X
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1enc.def
+File: eu1enc.def 2010/05/27 v0.1h Experimental Unicode font encodings
+)
+LaTeX Font Info:    Try loading font information for EU1+lmr on input line 105.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmr.fd
+File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/local/texlive/2015/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+*** you should *not* be loading the inputenc package
+*** XeTeX expects the source to be in UTF8 encoding
+*** some features of other encodings may conflict, resulting in poor output.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
+.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmss.fd
+File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\tipaTiiicode=\count118
+\tipasavetokens=\toks16
+\tipachecktokens=\toks17
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: xetex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2015/03/25 v4.04 LaTeX color/graphics driver for XeTeX (TeX Liv
+e/RRM/JK)
+))
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \__fontspec_post_arg:w with sig. 'mmO{}' on line 42.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fontspec with sig. 'om' on line 44.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmainfont with sig. 'om' on line 54.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setsansfont with sig. 'om' on line 64.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmonofont with sig. 'om' on line 74.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathrm with sig. 'om' on line 88.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setboldmathrm with sig. 'om' on line 96.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathsf with sig. 'om' on line 104.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathtt with sig. 'om' on line 112.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfamily with sig. 'mom' on line 126.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontface with sig. 'mom' on line 141.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \defaultfontfeatures with sig. 't+om' on line 155.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \addfontfeatures with sig. 'm' on line 210.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfeature with sig. 'mm' on line 221.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newAATfeature with sig. 'mmmm' on line 229.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newopentypefeature with sig. 'mmm' on line 237.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeature with sig. 'mm' on line 261.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 270.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontscript with sig. 'mm' on line 275.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontlanguage with sig. 'mm' on line 301.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 321.
+.................................................
+Variant \prop_gput:cnV already defined; not changing it on line 704
+Variant \prop_gput:cnx already defined; not changing it on line 705
+\l__fontspec_tmp_int=\count119
+LaTeX Info: Redefining \itshape on input line 2232.
+LaTeX Info: Redefining \slshape on input line 2237.
+LaTeX Info: Redefining \scshape on input line 2242.
+LaTeX Info: Redefining \upshape on input line 2247.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen139
+\extrarowheight=\dimen140
+\NC@list=\toks19
+\extratabsurround=\skip49
+\backup@length=\skip50
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+\TX@col@width=\dimen141
+\TX@old@table=\dimen142
+\TX@old@col=\dimen143
+\TX@target=\dimen144
+\TX@delta=\dimen145
+\TX@cols=\count120
+\TX@ftn=\toks20
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip51
+\f@ncyO@elh=\skip52
+\f@ncyO@erh=\skip53
+\f@ncyO@olh=\skip54
+\f@ncyO@orh=\skip55
+\f@ncyO@elf=\skip56
+\f@ncyO@erf=\skip57
+\f@ncyO@olf=\skip58
+\f@ncyO@orf=\skip59
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/endnotes/endnotes.sty
+\c@endnote=\count121
+\endnotesep=\dimen146
+\@enotes=\write3
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2013/07/11 v1.3a Package for typesetting indices in a synchro
+nous mode
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks21
+\XKV@tempa@toks=\toks22
+)
+\XKV@depth=\count122
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count123
+)
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchcmd with sig. '' on line 125.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretocmd with sig. '' on line 126.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptocmd with sig. '' on line 127.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowcmd with sig. '' on line 128.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibmacro with sig. 'm' on line 131.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibmacro with sig. 'm' on line 133.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibmacro with sig. 'm' on line 135.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibmacro with sig. 'm' on line 137.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchfieldformat with sig. 'O{*}m' on line 139.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretofieldformat with sig. 'O{*}m' on line 141.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptofieldformat with sig. 'O{*}m' on line 143.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowfieldformat with sig. 'O{*}m' on line 145.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchnameformat with sig. 'O{*}m' on line 147.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretonameformat with sig. 'O{*}m' on line 149.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptonameformat with sig. 'O{*}m' on line 151.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshownameformat with sig. 'O{*}m' on line 153.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchlistformat with sig. 'O{*}m' on line 155.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretolistformat with sig. 'O{*}m' on line 157.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptolistformat with sig. 'O{*}m' on line 159.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowlistformat with sig. 'O{*}m' on line 161.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexfieldformat with sig. 'O{*}m' on line 163.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexfieldformat with sig. 'O{*}m' on line 165.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexfieldformat with sig. 'O{*}m' on line 167.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexfieldformat with sig. 'O{*}m' on line 169.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexnameformat with sig. 'O{*}m' on line 171.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexnameformat with sig. 'O{*}m' on line 173.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptoindexnameformat with sig. 'O{*}m' on line 175.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexnameformat with sig. 'O{*}m' on line 177.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchindexlistformat with sig. 'O{*}m' on line 179.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretoindexlistformat with sig. 'O{*}m' on line 181.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xappindextolistformat with sig. 'O{*}m' on line 183.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowindexlistformat with sig. 'O{*}m' on line 185.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpatchbibdriver with sig. 'm' on line 187.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xpretobibdriver with sig. 'm' on line 189.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xapptobibdriver with sig. 'm' on line 191.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xshowbibdriver with sig. 'm' on line 193.
+.................................................
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count124
+\mult@box=\box41
+\multicol@leftmargin=\dimen147
+\c@unbalance=\count125
+\c@collectmore=\count126
+\doublecol@number=\count127
+\multicoltolerance=\count128
+\multicolpretolerance=\count129
+\full@width=\dimen148
+\page@free=\dimen149
+\premulticols=\dimen150
+\postmulticols=\dimen151
+\multicolsep=\skip60
+\multicolbaselineskip=\skip61
+\partial@page=\box42
+\last@line=\box43
+\maxbalancingoverflow=\dimen152
+\mult@rightbox=\box44
+\mult@grightbox=\box45
+\mult@gfirstbox=\box46
+\mult@firstbox=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\c@columnbadness=\count130
+\c@finalcolumnbadness=\count131
+\last@try=\dimen153
+\multicolovershoot=\dimen154
+\multicolundershoot=\dimen155
+\mult@nat@firstbox=\box65
+\colbreak@box=\box66
+\mc@col@check@num=\count132
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip62
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen156
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen157
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count133
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count134
+\leftroot@=\count135
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count136
+\DOTSCASE@=\count137
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box67
+\strutbox@=\box68
+\big@size=\dimen158
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count138
+\c@MaxMatrixCols=\count139
+\dotsspace@=\muskip17
+\c@parentequation=\count140
+\dspbrk@lvl=\count141
+\tag@help=\toks24
+\row@=\count142
+\column@=\count143
+\maxfields@=\count144
+\andhelp@=\toks25
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
+\@envbody=\toks26
+\multlinegap=\skip63
+\multlinetaggap=\skip64
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/zwpagelayout/zwpagelayout.sty
+Package: zwpagelayout 2013/01/13 ZW Page Layout
+Package zwpagelayout Info: $Id: zwpagelayout.sty 453 2013-01-13 17:12:17Z zw $.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+\zwpl@Driver=\count145
+Package zwpagelayout Info: Driver mode used: xetex.
+(zwpagelayout)              on input line 223.
+\ZW@baselineskip=\skip65
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: xetex.def on input line 142.
+)
+\zwpl@low=\dimen165
+\zwpl@len=\dimen166
+\zwpl@gap=\dimen167
+\zwpl@plus=\dimen168
+\zwpl@minus=\dimen169
+\zwpl@frame=\dimen170
+\zwpl@vsize=\dimen171
+\zwpl@Hshift=\count146
+\zwpl@Vshift=\count147
+)
+\g__file_internal_ior=\read1
+\g__fontspec_family_GentiumBasic_int=\count148
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'GentiumBasic(0)' created for font 'Gentium Basic' with options
+. [Ligatures=TeX,Ligatures=TeX].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Gentium
+. Basic/OT:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+. 
+. * 'small caps' with NFSS spec.:
+. 
+. and font adjustment code:
+. 
+. 
+. * 'bold' with NFSS spec.:
+. <->"Gentium
+. Basic/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. 
+. and font adjustment code:
+. 
+. 
+. * 'italic' with NFSS spec.:
+. <->"Gentium
+. Basic/I/OT:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+. 
+. * 'small caps' with NFSS spec.:
+. 
+. and font adjustment code:
+. 
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"Gentium
+. Basic/BI/OT:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+. 
+. * 'bold small caps' with NFSS spec.:
+. 
+. and font adjustment code:
+. 
+.................................................
+\g__fontspec_family_AA_NAGARI_SHREE_L3_int=\count149
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font AA_NAGARI_SHREE_L3/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font AA_NAGARI_SHREE_L3/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font AA_NAGARI_SHREE_L3/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'AA_NAGARI_SHREE_L3(0)' created for font 'AA_NAGARI_SHREE_L3'
+. with options [Ligatures=TeX,Script=Devanagari,Mapping=velthuis-sanskrit].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. 
+. <->"AA_NAGARI_SHREE_L3/OT:script=deva;language=DFLT;mapping=tex-text;mapping=
+velthuis-sanskrit;"
+. 
+. * 'small caps' with NFSS spec.:
+. 
+. and font adjustment code:
+. 
+.................................................
+\g__fontspec_family_Sanskrit2003_int=\count150
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Sanskrit2003/BI (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Sanskrit2003/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font Sanskrit2003/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'Sanskrit2003(0)' created for font 'Sanskrit2003' with options
+. [Ligatures=TeX,Script=Devanagari].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"Sanskrit2003/OT:script=deva;language=DFLT;mapping=tex-text;"
+. 
+. * 'small caps' with NFSS spec.:
+. 
+. and font adjustment code:
+. 
+.................................................
+\mainfile@idxfile=\write4
+\openout4 = `mainfile.idx'.
+
+
+Writing index file mainfile.idx
+) (./mainfile.aux)
+\openout1 = `mainfile.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 5.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 5.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 5.
+*** you should *not* be loading the inputenc package
+*** XeTeX expects the source to be in UTF8 encoding
+*** some features of other encodings may conflict, resulting in poor output.
+.................................................
+. fontspec info: "setup-math"
+. 
+. Adjusting the maths setup (use [no-math] to avoid this).
+.................................................
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 5.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 5.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 5.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 5.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 5.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 5.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 5.
+LaTeX Font Info:    Redeclaring math accent \check on input line 5.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 5.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 5.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 5.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 5.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 5.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> EU1/GentiumBasic(0)/m/n on input line 5
+.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 5.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> EU1/GentiumBasic(0)/m/n on input line 
+5.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  EU1/GentiumBasic(0)/m/n --> EU1/GentiumBasic(0)/m/n on 
+input line 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> EU1/GentiumBasic(0)/m/it on input line
+ 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> EU1/GentiumBasic(0)/bx/n on input line
+ 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 5.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  EU1/GentiumBasic(0)/m/n --> EU1/GentiumBasic(0)/bx/n on
+ input line 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> EU1/GentiumBasic(0)/bx/it on input li
+ne 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 5.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 5.
+(./src/chapter9.tex
+Chapter 9.
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/m/sl' in size <14.4> not av
+ailable
+(Font)              Font shape `EU1/GentiumBasic(0)/m/it' tried instead on inpu
+t line 4.
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/bx/sl' in size <14.4> not a
+vailable
+(Font)              Font shape `EU1/GentiumBasic(0)/bx/it' tried instead on inp
+ut line 4.
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/m/sl' in size <10> not avai
+lable
+(Font)              Font shape `EU1/GentiumBasic(0)/m/it' tried instead on inpu
+t line 10.
+[1
+
+
+
+
+]
+Underfull \hbox (badness 1924) in paragraph at lines 25--26
+[]\EU1/GentiumBasic(0)/m/it/10 Śāstra\EU1/GentiumBasic(0)/m/n/10 -s instigate ‘
+authoritarianism’, which further leads to
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 27--28
+[]\EU1/GentiumBasic(0)/m/n/10 The understanding of the relationship between \EU
+1/GentiumBasic(0)/m/it/10 Śāstra \EU1/GentiumBasic(0)/m/n/10 and
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 30--31
+\EU1/GentiumBasic(0)/m/n/10 made by Sheldon Pollock. It tries to throw some lig
+ht on the
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 30--31
+\EU1/GentiumBasic(0)/m/n/10 aspects overlooked by him and a few of his selectiv
+e/misleading
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 36--37
+\EU1/GentiumBasic(0)/m/n/10 Sheldon Pollock, \EU1/GentiumBasic(0)/m/it/10 Shast
+ra, śāstra\EU1/GentiumBasic(0)/m/n/10 , theory, practice, Sanskrit, Vedic,
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 36--37
+\EU1/GentiumBasic(0)/m/n/10 traditional India, regression, West, Western Indolo
+gy, Swadeshi
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 44--45
+[]\EU1/GentiumBasic(0)/m/n/10 Pollock’s main agenda seems to be demeaning, or a
+ltogether
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 44--45
+\EU1/GentiumBasic(0)/m/n/10 dismissing, the transcendental nature of Sanskrit l
+anguage; and
+ []
+
+[2]
+Underfull \hbox (badness 1742) in paragraph at lines 46--47
+\EU1/GentiumBasic(0)/m/n/10 on ‘the relationship between Śāstra and Prayoga’ wh
+ich call for
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 46--47
+\EU1/GentiumBasic(0)/m/n/10 provide insight into the deep-rooted prejudices and
+ chauvinism
+ []
+
+[3]
+Underfull \hbox (badness 5954) in paragraph at lines 56--57
+ \EU1/GentiumBasic(0)/m/n/9 interaction between them. Two important implication
+s of this 
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 61--62
+\EU1/GentiumBasic(0)/m/n/10 authority, ensuring a nearly unchallengeable claim 
+to normative
+ []
+
+[4]
+Underfull \hbox (badness 2150) in paragraph at lines 74--75
+\EU1/GentiumBasic(0)/m/it/10 kāmasūtra \EU1/GentiumBasic(0)/m/n/10 among other 
+\EU1/GentiumBasic(0)/m/it/10 śāstra\EU1/GentiumBasic(0)/m/n/10 -s through his l
+ens, and concludes
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 74--75
+\EU1/GentiumBasic(0)/m/n/10 thing; whereas the regulative \EU1/GentiumBasic(0)/
+m/it/10 śāstra\EU1/GentiumBasic(0)/m/n/10 -s try to acquire a technical
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 81--82
+[]\EU1/GentiumBasic(0)/m/n/10 What he means to say here is that no progress has
+ happened
+ []
+
+[5]
+Underfull \hbox (badness 1019) in paragraph at lines 83--84
+\EU1/GentiumBasic(0)/m/it/10 śāstra\EU1/GentiumBasic(0)/m/n/10 -s are carved ou
+t of the Vedic corpus and share the \EU1/GentiumBasic(0)/m/it/10 Veda\EU1/Genti
+umBasic(0)/m/n/10 ’s
+ []
+
+
+Underfull \hbox (badness 3375) in paragraph at lines 89--91
+[]\EU1/GentiumBasic(0)/m/n/10 However, on the other side, the first major, easi
+ly noticeable,
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 96--97
+[]\EU1/GentiumBasic(0)/m/n/10 My assessment of Pollock writing on this subject 
+is that he is
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 96--97
+\EU1/GentiumBasic(0)/m/n/10 ceaselessly wandering and searching for loopholes i
+n the Indian
+ []
+
+[6]
+Underfull \hbox (badness 1596) in paragraph at lines 102--103
+[]\EU1/GentiumBasic(0)/m/n/10 Thirdly, he calls \EU1/GentiumBasic(0)/m/it/10 dh
+arma \EU1/GentiumBasic(0)/m/n/10 as ‘rule-boundedness’ (Pollock 1985:511)
+ []
+
+
+Underfull \hbox (badness 3000) in paragraph at lines 102--103
+\EU1/GentiumBasic(0)/m/n/10 which means ‘that which holds, supports, sustains, 
+maintains’–
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+Underfull \hbox (badness 1769) in paragraph at lines 106--107
+ []\EU1/GentiumBasic(0)/m/n/9 “The postulate of a single source of both sorts o
+f knowledge was 
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 106--107
+ \EU1/GentiumBasic(0)/m/n/9 Madhusūdhana Sarasvati’s 16th century Prasthānabhed
+a, where the 
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 109--110
+\EU1/GentiumBasic(0)/m/it/10 ‘troddiśyate\EU1/GentiumBasic(0)/m/n/10 ” (ed. Sri
+rangam, 1912) p.1), and does not speak
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 109--110
+\EU1/GentiumBasic(0)/m/n/10 the \EU1/GentiumBasic(0)/m/it/10 apauruṣeyatva \EU1
+/GentiumBasic(0)/m/n/10 of the \EU1/GentiumBasic(0)/m/it/10 Veda\EU1/GentiumBas
+ic(0)/m/n/10 -s. (Says \EU1/GentiumBasic(0)/m/it/10 Prasthāna-bheda \EU1/Gentiu
+mBasic(0)/m/n/10 – “\EU1/GentiumBasic(0)/m/it/10 tatra
+ []
+
+
+Underfull \hbox (badness 4242) in paragraph at lines 111--113
+\EU1/GentiumBasic(0)/m/n/10 Patañjali’s view on acceptable usage outside the fr
+amework of
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 113--114
+ []\EU1/GentiumBasic(0)/m/n/9 “Acceptability and grammaticality exist concurren
+tly as separate 
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 113--114
+ \EU1/GentiumBasic(0)/m/n/9 entities in any speech community (indeed, within ea
+ch individual 
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 113--114
+ \EU1/GentiumBasic(0)/m/n/9 assimilating or annihilating acceptability as a cat
+egory, though the 
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 116--117
+\EU1/GentiumBasic(0)/m/n/10 both acceptability and grammaticality co-exist (whi
+ch he himself
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Underfull \hbox (badness 1052) in paragraph at lines 125--126
+[]\EU1/GentiumBasic(0)/m/n/10 In order to appear balanced, fair and just, Pollo
+ck acknowledges
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \hbox (badness 2689) in paragraph at lines 129--130
+\EU1/GentiumBasic(0)/m/n/10 he criticises \EU1/GentiumBasic(0)/m/it/10 śāstra\E
+U1/GentiumBasic(0)/m/n/10 -s as being dogmatic and oppressive, he also
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 129--130
+\EU1/GentiumBasic(0)/m/n/10 1985:500). Only an in-depth and comprehensive study
+ of this
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 129--130
+\EU1/GentiumBasic(0)/m/n/10 will reveal to us that he is saying, implicitly tho
+ugh, that these
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 131--132
+[]\EU1/GentiumBasic(0)/m/n/10 Another such example is his phrase “exquisite exp
+ression of the
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 131--132
+\EU1/GentiumBasic(0)/m/n/10 centrality of rule-governance in human behavior” wh
+ich he uses
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \hbox (badness 1400) in paragraph at lines 147--148
+\EU1/GentiumBasic(0)/m/n/10 than assimilated by a natural process of cultural o
+smosis.”
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 151--152
+[]\EU1/GentiumBasic(0)/m/n/10 According to him, the \EU1/GentiumBasic(0)/m/it/1
+0 Vedāṅga\EU1/GentiumBasic(0)/m/n/10 -s, primarily, in their very
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 151--152
+\EU1/GentiumBasic(0)/m/n/10 transformed themselves from a descriptive catalogue
+ to a
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 151--152
+\EU1/GentiumBasic(0)/m/n/10 had initially shaped themselves to reality so as to
+ make it
+ []
+
+[11]
+Underfull \hbox (badness 2285) in paragraph at lines 155--156
+\EU1/GentiumBasic(0)/m/n/10 scrutiny. However, he later dismisses all these exa
+mples
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 155--156
+\EU1/GentiumBasic(0)/m/n/10 ascribes clear priority and absolute competence to 
+shastric
+ []
+
+[12]
+Underfull \hbox (badness 1342) in paragraph at lines 163--164
+\EU1/GentiumBasic(0)/m/n/10 the \EU1/GentiumBasic(0)/m/it/10 śāstra\EU1/Gentium
+Basic(0)/m/n/10 -s which they approve or consider as valid. But
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 163--164
+\EU1/GentiumBasic(0)/m/n/10 the very fact that so many scholars or authors have
+ given
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 169--170
+[]\EU1/GentiumBasic(0)/m/n/10 Pollock repeatedly emphasises the top-down nature
+ of the
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 171--172
+\EU1/GentiumBasic(0)/m/n/10 Sanskrit language, and so is the case in any \EU1/G
+entiumBasic(0)/m/it/10 śāstra-prayoga\EU1/GentiumBasic(0)/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 171--172
+\OMS/cmsy/m/n/10 f$\EU1/GentiumBasic(0)/m/n/10 Grammarians rely on practice (\E
+U1/GentiumBasic(0)/m/it/10 Translation mine\EU1/GentiumBasic(0)/m/n/10 )$\OMS/c
+msy/m/n/10 g$\EU1/GentiumBasic(0)/m/n/10 , “\EU1/GentiumBasic(0)/m/it/10 sarve
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 171--172
+\EU1/GentiumBasic(0)/m/it/10 niyamāḥ sāpavādāḥ\EU1/GentiumBasic(0)/m/n/10 ” $\O
+MS/cmsy/m/n/10 f$\EU1/GentiumBasic(0)/m/n/10 All rules have exceptions (\EU1/Ge
+ntiumBasic(0)/m/it/10 Translation
+ []
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 171--172
+\EU1/GentiumBasic(0)/m/n/10 provide sufficient evidence to show that Sanskrit g
+rammar
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 171--172
+\EU1/GentiumBasic(0)/m/n/10 was never rigid, but was always open to be influenc
+ed by
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 171--172
+\EU1/GentiumBasic(0)/m/n/10 the line, there were several other illustrious gram
+marians
+ []
+
+[13]
+Underfull \hbox (badness 4441) in paragraph at lines 173--174
+[]\EU1/GentiumBasic(0)/m/n/10 Pollock says that the texts on metrics were nomol
+ogical
+ []
+
+
+Underfull \hbox (badness 3260) in paragraph at lines 173--174
+\EU1/GentiumBasic(0)/m/n/10 in character, which made the subject to be treated 
+with
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 177--178
+\EU1/GentiumBasic(0)/m/n/10 saying “\EU1/GentiumBasic(0)/m/it/10 prayoga-pradhā
+naṁ hi nāṭyaśāstram\EU1/GentiumBasic(0)/m/n/10 ” (\EU1/GentiumBasic(0)/m/it/10 
+Mālavikāgnimitra
+ []
+
+[14]
+Underfull \hbox (badness 1721) in paragraph at lines 179--180
+\EU1/GentiumBasic(0)/m/n/10 this is evidently well understood, and where conseq
+uently
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 179--180
+\EU1/GentiumBasic(0)/m/n/10 it cannot be claimed that \EU1/GentiumBasic(0)/m/it
+/10 śāstra \EU1/GentiumBasic(0)/m/n/10 has made provision for all
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 179--180
+\EU1/GentiumBasic(0)/m/n/10 than their counterparts in any other society in the
+ world,
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 181--182
+\EU1/GentiumBasic(0)/m/n/10 of traditional categories and concepts when attempt
+ing to
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 181--182
+\EU1/GentiumBasic(0)/m/n/10 understand the cultural achievements of ancient Ind
+ia, he
+ []
+
+[15]
+Underfull \hbox (badness 1024) in paragraph at lines 183--185
+\EU1/GentiumBasic(0)/m/n/10 knowing which everything else becomes known (\EU1/G
+entiumBasic(0)/m/it/10 Translation
+ []
+
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/m/sl' in size <9> not avail
+able
+(Font)              Font shape `EU1/GentiumBasic(0)/m/it' tried instead on inpu
+t line 185.
+
+Underfull \hbox (badness 6608) in paragraph at lines 188--189
+\EU1/GentiumBasic(0)/m/n/10 together with realization (\EU1/GentiumBasic(0)/m/i
+t/10 vijñāna\EU1/GentiumBasic(0)/m/n/10 ), knowing which there
+ []
+
+
+Overfull \hbox (1.93285pt too wide) in paragraph at lines 197--198
+[]\EU1/GentiumBasic(0)/m/n/10 Throughout his paper, Pollock attacks \EU1/Gentiu
+mBasic(0)/m/it/10 śāstra \EU1/GentiumBasic(0)/m/n/10 with words like \EU1/Genti
+umBasic(0)/m/it/10 rigid,
+ []
+
+[16]
+Underfull \hbox (badness 1748) in paragraph at lines 203--204
+[]\EU1/GentiumBasic(0)/m/n/10 Pollock is seen generalising the concept of ‘the 
+West’. It
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 203--204
+\EU1/GentiumBasic(0)/m/n/10 is not clear what he actually means by the West and
+ its
+ []
+
+[17]
+Underfull \hbox (badness 1466) in paragraph at lines 211--212
+\EU1/GentiumBasic(0)/m/n/10 and Yaśodharā’s view that \EU1/GentiumBasic(0)/m/it
+/10 śāstra \EU1/GentiumBasic(0)/m/n/10 makes practice ‘stronger’,
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 211--212
+\EU1/GentiumBasic(0)/m/n/10 reliable, and consistent, unlike uninformed practic
+e, whose
+ []
+
+
+Underfull \hbox (badness 3965) in paragraph at lines 213--214
+\EU1/GentiumBasic(0)/m/n/10 detailed a descriptive grammar may be, it can never
+ be
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 213--214
+\EU1/GentiumBasic(0)/m/n/10 totally exhaustive of linguistic practice. There ar
+e indeed
+ []
+
+
+Overfull \hbox (0.27596pt too wide) in paragraph at lines 219--220
+\EU1/GentiumBasic(0)/m/n/10 ing) the earlier \EU1/GentiumBasic(0)/m/it/10 śāstr
+a\EU1/GentiumBasic(0)/m/n/10 -s on the subject, and observing actual prac-
+ []
+
+[18]
+Underfull \hbox (badness 4001) in paragraph at lines 230--231
+\EU1/GentiumBasic(0)/m/n/10 A thorough and more detailed investigation of Pollo
+ck’s paper
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 236--237
+\EU1/GentiumBasic(0)/m/n/10 paper. Thanks to the one and only, Sri Rajiv Malhot
+ra, whose
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 241--242
+[]\EU1/GentiumBasic(0)/m/n/10 Apte, Vasudeo Govind. (2007) (1933$[]$) \EU1/Gent
+iumBasic(0)/m/it/10 The Concise Sanskrit-English
+ []
+
+[19]
+Underfull \hbox (badness 1400) in paragraph at lines 247--248
+[]\EU1/GentiumBasic(0)/m/n/10 Hanneder, Jurgen (2002) “On the Death of Sanskrit
+”. \EU1/GentiumBasic(0)/m/it/10 Indo-Iranian
+ []
+
+
+Underfull \hbox (badness 4096) in paragraph at lines 259--260
+[]\EU1/GentiumBasic(0)/m/n/10 Malhotra, Rajiv (2013) \EU1/GentiumBasic(0)/m/it/
+10 Being Different\EU1/GentiumBasic(0)/m/n/10 . Paperback edition. Noida:
+ []
+
+
+Underfull \hbox (badness 4940) in paragraph at lines 265--266
+[]\EU1/GentiumBasic(0)/m/n/10 Parab, Kasinath Pandurang (Ed.). (1924) \EU1/Gent
+iumBasic(0)/m/it/10 The Mālavikāgnimitra of
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 277--278
+[]\EU1/GentiumBasic(0)/m/n/10 Ramachandra Rao, S.K. (2006) \EU1/GentiumBasic(0)
+/m/it/10 Puruṣa Sūkta \EU1/GentiumBasic(0)/m/n/10 (Text, Transliteration,
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 280--281
+[]\EU1/GentiumBasic(0)/m/n/10 Singh, Karan (Trans.). (1987) \EU1/GentiumBasic(0
+)/m/it/10 Mundaka Upanishad \EU1/GentiumBasic(0)/m/n/10 – \EU1/GentiumBasic(0)/
+m/it/10 The Bridge to
+ []
+
+[20]) (./src/chapter10.tex [21] [22
+
+]
+Chapter 10.
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/m/sl' in size <17.28> not a
+vailable
+(Font)              Font shape `EU1/GentiumBasic(0)/m/it' tried instead on inpu
+t line 1.
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/bx/sl' in size <17.28> not 
+available
+(Font)              Font shape `EU1/GentiumBasic(0)/bx/it' tried instead on inp
+ut line 1.
+
+Underfull \hbox (badness 3547) in paragraph at lines 19--20
+ []\EU1/GentiumBasic(0)/m/n/9 All Indian learning presents itself largely as co
+mmentary on the 
+ []
+
+[23]
+Underfull \hbox (badness 2875) in paragraph at lines 27--28
+ \EU1/GentiumBasic(0)/m/n/9 the rules governing these practices have percolated
+ down to the 
+ []
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 29--30
+ []\EU1/GentiumBasic(0)/m/n/9 We ourselves do not “create” knowledge, but merel
+y bring it to 
+ []
+
+
+Underfull \hbox (badness 7704) in paragraph at lines 34--35
+\EU1/GentiumBasic(0)/bx/n/10 voluntarily limited their knowledge acquisition to
+ merely
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 38--39
+ []\EU1/GentiumBasic(0)/m/n/9 In traditional India, the causal doctrine associa
+ted especially with 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \hbox (badness 1199) in paragraph at lines 47--48
+[]\EU1/GentiumBasic(0)/m/n/10 Śaṅkara’s Bhāṣya elaborates at length on Satkārya
+vāda theory of
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 49--50
+[]\EU1/GentiumBasic(0)/m/n/10 It is noteworthy that Śaṅkara does not simply inv
+oke \EU1/GentiumBasic(0)/m/it/10 śruti \EU1/GentiumBasic(0)/m/n/10 texts
+ []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 49--50
+\EU1/GentiumBasic(0)/m/n/10 to make the claim. Śaṅkara’s Bhāṣya grounds its rea
+soning on
+ []
+
+[25]
+Underfull \hbox (badness 8075) in paragraph at lines 60--61
+[]\EU1/GentiumBasic(0)/m/n/10 Śaṅkara’s Bhāṣya on 2.1.18 clearly shows adherenc
+e to these
+ []
+
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/bx/sl' in size <10> not ava
+ilable
+(Font)              Font shape `EU1/GentiumBasic(0)/bx/it' tried instead on inp
+ut line 76.
+
+Underfull \hbox (badness 3323) in paragraph at lines 76--77
+[]\EU1/GentiumBasic(0)/bx/n/10 Could the Indian intellectual infer from the \EU
+1/GentiumBasic(0)/bx/it/10 sūtra \EU1/GentiumBasic(0)/bx/n/10 that all
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 78--79
+\EU1/GentiumBasic(0)/m/n/10 Thus, according to Śaṅkara’s Bhāṣya, \EU1/GentiumBa
+sic(0)/m/it/10 sūtra \EU1/GentiumBasic(0)/m/n/10 2.1.18 is saying that
+ []
+
+[26]
+Underfull \hbox (badness 2626) in paragraph at lines 84--85
+[]\EU1/GentiumBasic(0)/m/n/10 But Pollock does not stop there. He says that, in
+ accordance
+ []
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 84--85
+\EU1/GentiumBasic(0)/m/n/10 including that of practice not only pre-exists but 
+pre-exists in
+ []
+
+
+Overfull \hbox (3.43184pt too wide) in paragraph at lines 88--89
+[]\EU1/GentiumBasic(0)/m/n/10 In conformance with his Bhāṣya, Śaṅkara would agr
+ee that \EU1/GentiumBasic(0)/m/it/10 pāramārthika
+ []
+
+[27]
+Underfull \hbox (badness 2913) in paragraph at lines 102--103
+ \EU1/GentiumBasic(0)/m/n/9 begins with a mythological introduction concerning 
+the origin of 
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 111--112
+\EU1/GentiumBasic(0)/m/n/10 With this excerpt, Pollock is persuading the reader
+ that \EU1/GentiumBasic(0)/m/it/10 śāstra\EU1/GentiumBasic(0)/m/n/10 -s
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 111--112
+\EU1/GentiumBasic(0)/m/n/10 of practice claimed divinity to assert their impecc
+able epistemic
+ []
+
+[28]
+Underfull \hbox (badness 1895) in paragraph at lines 119--121
+[]\EU1/GentiumBasic(0)/m/n/10 While Mīmāṃsā philosophers claimed impeccable cre
+dentials for
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 119--121
+\EU1/GentiumBasic(0)/m/n/10 in the epistemic credentials of the speaker as ment
+ioned in the
+ []
+
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/bx/sl' in size <9> not avai
+lable
+(Font)              Font shape `EU1/GentiumBasic(0)/bx/it' tried instead on inp
+ut line 121.
+
+Underfull \hbox (badness 1466) in paragraph at lines 121--122
+ []\EU1/GentiumBasic(0)/bx/it/9 Nyāya Sūtra \EU1/GentiumBasic(0)/bx/n/9 2.1.68 
+\EU1/GentiumBasic(0)/m/n/9 “Just as with the assent-worthiness of medical 
+ []
+
+\openout3 = `mainfile.ent'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \hbox (badness 4378) in paragraph at lines 152--153
+ \EU1/GentiumBasic(0)/m/n/9 to Caraka, Suśruta, and Vāgbhaṭa—are works that at 
+least most 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Underfull \hbox (badness 2582) in paragraph at lines 156--157
+ \EU1/GentiumBasic(0)/m/n/9 centuries produced a rich and important crop of div
+erse medical 
+ []
+
+[31]
+Missing character: There is no ņ in font Gentium Basic Italic/OT:script=latn;la
+nguage=DFLT;mapping=tex-text;mapping=tex-text;!
+
+Underfull \hbox (badness 1014) in paragraph at lines 180--181
+\EU1/GentiumBasic(0)/m/it/10 Pramā \EU1/GentiumBasic(0)/m/n/10 means valid know
+ledge. \EU1/GentiumBasic(0)/m/it/10 Pramāņa \EU1/GentiumBasic(0)/m/n/10 is the 
+means for \EU1/GentiumBasic(0)/m/it/10 pramā\EU1/GentiumBasic(0)/m/n/10 .
+ []
+
+[32] [33]
+Underfull \hbox (badness 2205) in paragraph at lines 209--219
+\EU1/GentiumBasic(0)/m/n/10 based on the nature of knowledge, and the means for
+ arriving
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 209--219
+\EU1/GentiumBasic(0)/m/n/10 at valid knowledge. Pre-modern Indian intellectuals
+ believed in
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 209--219
+\EU1/GentiumBasic(0)/m/n/10 authority and assent-worthiness over reason (even i
+n matters of
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 222--223
+\EU1/GentiumBasic(0)/m/n/10 science and scripture continued unabated. The Churc
+h opposed
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 222--223
+\EU1/GentiumBasic(0)/m/n/10 discoveries of \EU1/GentiumBasic(0)/m/it/10 laukika
+ \EU1/GentiumBasic(0)/m/n/10 knowledge (for example heliocentrism, the
+ []
+
+[34]
+Underfull \hbox (badness 1281) in paragraph at lines 230--242
+\EU1/GentiumBasic(0)/m/n/10 Western civilization had to wait until Enlightenmen
+t to discover
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 230--242
+\EU1/GentiumBasic(0)/m/n/10 make assertions in \EU1/GentiumBasic(0)/m/it/10 lau
+kika \EU1/GentiumBasic(0)/m/n/10 matters with the irreligious scriptures
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 230--242
+\EU1/GentiumBasic(0)/m/n/10 as their \EU1/GentiumBasic(0)/m/it/10 pramāṇa\EU1/G
+entiumBasic(0)/m/n/10 . A prominent example is the argument for
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 243--244
+[]\EU1/GentiumBasic(0)/m/n/10 In contrast, Indian tradition has no issues with 
+new discoveries
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 243--244
+\EU1/GentiumBasic(0)/m/n/10 that Bhāskara, Āryabhaṭa, Varāhamihīra, and others 
+made their
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Overfull \hbox (1.25249pt too wide) in paragraph at lines 249--250
+[]\EU1/GentiumBasic(0)/m/n/10 The medical tradition, which as we saw shares the
+ paradigmatic mythic
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+Underfull \hbox (badness 4341) in paragraph at lines 263--264
+ []\EU1/GentiumBasic(0)/m/n/9 Authoritative instruction (\EU1/GentiumBasic(0)/m
+/it/9 śāstra\EU1/GentiumBasic(0)/m/n/9 ) is the starting point of medical 
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 270--271
+\EU1/GentiumBasic(0)/m/n/10 their own intellectual pursuits to merely examining
+ knowledge
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 270--271
+\EU1/GentiumBasic(0)/m/n/10 concealed in the \EU1/GentiumBasic(0)/m/it/10 śāstr
+a\EU1/GentiumBasic(0)/m/n/10 . This view of Pollock is clear from the
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 270--271
+\EU1/GentiumBasic(0)/m/n/10 is studying the \EU1/GentiumBasic(0)/m/it/10 śāstra
+ \EU1/GentiumBasic(0)/m/n/10 by bringing his powers of perception and
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 272--273
+\EU1/GentiumBasic(0)/m/n/10 itself the status of a \EU1/GentiumBasic(0)/m/it/10
+ pramāṇa\EU1/GentiumBasic(0)/m/n/10 , an authoritative text. However,
+ []
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 272--273
+\EU1/GentiumBasic(0)/m/n/10 authoritative instruction, given its human in origi
+n, has to be
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 272--273
+\EU1/GentiumBasic(0)/m/n/10 ultimately sourced from perception and inference. A
+s \EU1/GentiumBasic(0)/m/it/10 laukika
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 274--275
+\EU1/GentiumBasic(0)/m/n/10 a standing as a \EU1/GentiumBasic(0)/m/it/10 pramāṇ
+a \EU1/GentiumBasic(0)/m/n/10 is if it is posited to be a beginningless
+ []
+
+[37]
+Underfull \hbox (badness 1681) in paragraph at lines 291--292
+[]\EU1/GentiumBasic(0)/m/it/10 Caraka-saṃhitā \EU1/GentiumBasic(0)/m/n/10 holds
+ that full-knowledge for diagnosis cannot be
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 291--292
+\EU1/GentiumBasic(0)/m/n/10 obtained from any one of the three \EU1/GentiumBasi
+c(0)/m/it/10 pramāṇa\EU1/GentiumBasic(0)/m/n/10 -s: authoritative
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 295--296
+ []\EU1/GentiumBasic(0)/m/n/9 Three indeed are the modes of ascertaining the sp
+ecific nature of 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+Underfull \hbox (badness 1762) in paragraph at lines 304--305
+[]\EU1/GentiumBasic(0)/m/n/10 Here, \EU1/GentiumBasic(0)/m/it/10 Caraka-saṃhitā
+ \EU1/GentiumBasic(0)/m/n/10 is explaining that it considers authoritative
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 304--305
+\EU1/GentiumBasic(0)/m/n/10 instruction a \EU1/GentiumBasic(0)/m/it/10 pramāṇa 
+\EU1/GentiumBasic(0)/m/n/10 along with perception and inference. In
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 304--305
+\EU1/GentiumBasic(0)/m/n/10 diagnosis. Pollock leaves out this commentary - whi
+ch appears
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 313--314
+[]\EU1/GentiumBasic(0)/m/n/10 According to the above comment from \EU1/GentiumB
+asic(0)/m/it/10 Caraka-saṃhitā\EU1/GentiumBasic(0)/m/n/10 , only two
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \hbox (badness 2293) in paragraph at lines 341--342
+[]\EU1/GentiumBasic(0)/m/n/10 How can authoritative instruction be a \EU1/Genti
+umBasic(0)/m/it/10 pramāṇa \EU1/GentiumBasic(0)/m/n/10 independent of
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 343--344
+[]\EU1/GentiumBasic(0)/bx/n/10 Authoritative instruction is indeed an independe
+nt \EU1/GentiumBasic(0)/bx/it/10 pramāṇa\EU1/GentiumBasic(0)/bx/n/10 .
+ []
+
+[40]
+Underfull \hbox (badness 4846) in paragraph at lines 353--354
+ \EU1/GentiumBasic(0)/m/n/9 an empirical science. They therefore assume that th
+eir expert 
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 353--354
+ \EU1/GentiumBasic(0)/m/n/9 and reasoning. If this assumption were true, howeve
+r, medicine 
+ []
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 362--363
+\EU1/GentiumBasic(0)/bx/n/10 evidential knowledge. It cannot be subordinated to
+ direct
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Underfull \hbox (badness 2662) in paragraph at lines 379--380
+[]\EU1/GentiumBasic(0)/m/n/10 Sadegh-Zadeh explains that innovation in medical 
+knowledge is
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 379--380
+\EU1/GentiumBasic(0)/m/n/10 essentially a community-based activity that relies 
+on testimonial
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \hbox (badness 5504) in paragraph at lines 390--390
+[]\EU1/GentiumBasic(0)/bx/n/14.4 Summary of Pollock’s Argument and its
+ []
+
+Missing character: There is no ņ in font Gentium Basic Italic/OT:script=latn;la
+nguage=DFLT;mapping=tex-text;mapping=tex-text;!
+
+Underfull \hbox (badness 3872) in paragraph at lines 408--409
+[]\EU1/GentiumBasic(0)/m/it/10 Pramāņa\EU1/GentiumBasic(0)/m/n/10 -s are indepe
+ndent means for valid knowledge. Thus,
+ []
+
+[43]
+Underfull \hbox (badness 1389) in paragraph at lines 414--415
+\EU1/GentiumBasic(0)/m/n/10 of practice. Because of their very nature, and beca
+use of their
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 416--417
+[]\EU1/GentiumBasic(0)/m/n/10 Authoritative testimonies are indispensable to gr
+owth of human
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 416--417
+\EU1/GentiumBasic(0)/m/it/10 saṃhitā \EU1/GentiumBasic(0)/m/n/10 were best-in-c
+lass for many centuries; they were the
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 424--425
+\EU1/GentiumBasic(0)/m/n/10 Pre-modern Indian intellectual believed that \EU1/G
+entiumBasic(0)/m/it/10 śāstra\EU1/GentiumBasic(0)/m/n/10 -s of practice
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 424--425
+\EU1/GentiumBasic(0)/m/n/10 (“texts”) are authorities for testimonial knowledge
+. However,
+ []
+
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 431
+.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmtt.fd
+File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 6792) in paragraph at lines 431--432
+[]\EU1/GentiumBasic(0)/m/n/10 Accademia Gallery in Florence, Italy. \EU1/Gentiu
+mBasic(0)/m/it/10 Michelangelo’s prisoners or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+\EU1/GentiumBasic(0)/m/it/10 slaves\EU1/GentiumBasic(0)/m/n/10 . 1520–1540. $[]
+[][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][][][][] [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+[][][][][][] [] [][][][][][][][] [] [][][][][][][][][][][][][] [][] [][][][][][
+][][][] [][] [][][][][][][]$
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+[]\EU1/GentiumBasic(0)/m/n/10 Barooah, Jahnabi. \EU1/GentiumBasic(0)/m/it/10 46
+% Americans Believe In Creationism Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+\EU1/GentiumBasic(0)/m/it/10 cording To Latest Gallup Poll\EU1/GentiumBasic(0)/
+m/n/10 . 06 05, 2012. $[][][][] [] [] [] [][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+[][][][][][][][][][][][][][] [] [][][] [] [][][][] [] [][] [] [][] [] [][][][][
+][][][][] [][] [][][][][][][] [][]
+ []
+
+
+Underfull \hbox (badness 4886) in paragraph at lines 455--456
+[]\EU1/GentiumBasic(0)/m/n/10 Gopnik, Alison. (2009) “Could David Hume Have Kno
+wn about
+ []
+
+[45]
+Underfull \hbox (badness 1303) in paragraph at lines 476--477
+\EU1/GentiumBasic(0)/m/it/10 Origins\EU1/GentiumBasic(0)/m/n/10 . 06 02, 2014. 
+$[][][][] [] [] [] [][][] [] [][][][][][] [] [][][] [] [][][][] [] [][][][][][]
+ []
+ []
+
+
+Underfull \hbox (badness 6961) in paragraph at lines 485--486
+[]\EU1/GentiumBasic(0)/m/n/10 Sadegh-Zadeh, Kazem. (2015) \EU1/GentiumBasic(0)/
+m/it/10 Handbook of Analytic Philosophy of
+ []
+
+(./mainfile.ent
+Underfull \hbox (badness 1478) in paragraph at lines 92--145
+\EU1/GentiumBasic(0)/m/n/8 which was revised by Caraka, seventeen chapters as w
+ell as the Kalpa- and the
+ []
+
+[46]
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/m/sl' in size <8> not avail
+able
+(Font)              Font shape `EU1/GentiumBasic(0)/m/it' tried instead on inpu
+t line 159.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+Underfull \hbox (badness 2080) in paragraph at lines 946--1088
+\EU1/GentiumBasic(0)/m/n/8 knowledge of the West in celebration of Vivekananda’
+s 150$[]$ birth anniversary.
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 1139--1181
+\EU1/GentiumBasic(0)/m/n/8 designer and how “God’s design is accessible to scie
+ntific inquiry” and that it is
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Underfull \hbox (badness 7379) in paragraph at lines 1368--1427
+[][]\EU1/GentiumBasic(0)/m/n/8 Pollock writes (Pollock 1985:513): “...\EU1/Gent
+iumBasic(0)/m/it/8 Susruta-saṃhitā\EU1/GentiumBasic(0)/m/n/8 , similarly begins
+ with a
+ []
+
+)) (./src/chapter11.tex [49] [50
+
+]
+Chapter 11.
+\openout3 = `mainfile.ent'.
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 10--11
+\EU1/GentiumBasic(0)/m/n/10 appraised in this paper with a firm grounding in th
+e traditional
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 10--11
+\EU1/GentiumBasic(0)/m/n/10 Pollock as theory) as practiced (\EU1/GentiumBasic(
+0)/m/it/10 śāstra\EU1/GentiumBasic(0)/m/n/10 ) by actual practitioners of
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 10--11
+\EU1/GentiumBasic(0)/m/n/10 undilutability, and non-negotiable nature of a sacr
+ed perspective
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 10--11
+\EU1/GentiumBasic(0)/m/n/10 (\EU1/GentiumBasic(0)/m/it/10 saṃskāra\EU1/GentiumB
+asic(0)/m/n/10 ) whilst interpreting Sanskrit texts on Indic knowledge
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 10--11
+\EU1/GentiumBasic(0)/m/n/10 and role of \EU1/GentiumBasic(0)/m/it/10 śāstra \EU
+1/GentiumBasic(0)/m/n/10 is beyond that of Science or Religion (as the
+ []
+
+[51]
+Underfull \hbox (badness 1960) in paragraph at lines 14--15
+\EU1/GentiumBasic(0)/m/n/10 post-Said, i.e. after Said (1979) addressing Wester
+n scholarship
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 14--15
+\EU1/GentiumBasic(0)/m/n/10 of Pollock. S (1985): in the first, comparing the W
+estern and
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 14--15
+\EU1/GentiumBasic(0)/m/n/10 traditional Indian constructs and world-views (epis
+temology), we
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 14--15
+\EU1/GentiumBasic(0)/m/n/10 practice (\EU1/GentiumBasic(0)/m/it/10 prayoga\EU1/
+GentiumBasic(0)/m/n/10 ) are examined with specific focus on Pollock’s
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 14--15
+\EU1/GentiumBasic(0)/m/n/10 highlighting foundational issues in method and appr
+oach. We
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 18--19
+\EU1/GentiumBasic(0)/m/n/10 Western social sciences freely use and refer to the
+ methods and
+ []
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 18--19
+\EU1/GentiumBasic(0)/m/n/10 theories of modern mathematics and science and foll
+ow their
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 18--19
+\EU1/GentiumBasic(0)/m/n/10 evolution in an implicit manner. By themselves, Wes
+tern social
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 18--19
+\EU1/GentiumBasic(0)/m/n/10 sciences, unlike the (Western) natural sciences, do
+ not have any
+ []
+
+[52] [53]
+Underfull \hbox (badness 2744) in paragraph at lines 47--49
+\EU1/GentiumBasic(0)/m/n/10 existence as the \EU1/GentiumBasic(0)/m/it/10 Prakṛ
+ti\EU1/GentiumBasic(0)/m/n/10 . Such an existence of a “supreme” is
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 58--59
+ \EU1/GentiumBasic(0)/m/n/9 from its matrix in the Vedas and other sacred texts
+, or from an 
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 63--65
+[]\EU1/GentiumBasic(0)/m/n/10 From the Stanford Encyclopedia of Philosophy (SEP
+) entry on
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Overfull \hbox (0.86836pt too wide) in paragraph at lines 73--75
+[]\EU1/GentiumBasic(0)/m/n/10 The principal means of \EU1/GentiumBasic(0)/m/it/
+10 pramāṇa\EU1/GentiumBasic(0)/m/n/10 , recognized across most Indian schools
+ []
+
+
+Overfull \hbox (0.86423pt too wide) in paragraph at lines 73--75
+\EU1/GentiumBasic(0)/m/it/10 skāra\EU1/GentiumBasic(0)/m/n/10 . The \EU1/Gentiu
+mBasic(0)/m/it/10 pramāṇa \EU1/GentiumBasic(0)/m/n/10 need to be constrained by
+ the appropriate \EU1/GentiumBasic(0)/m/it/10 saṁskāra\EU1/GentiumBasic(0)/m/n/
+10 . 
+ []
+
+
+Overfull \hbox (1.4463pt too wide) in paragraph at lines 75--76
+ \EU1/GentiumBasic(0)/m/n/9 finds three roots to the earliest concerns with log
+ic in India: \EU1/GentiumBasic(0)/bx/n/9 (1) common- 
+ []
+
+[55]
+Underfull \hbox (badness 1874) in paragraph at lines 84--85
+\EU1/GentiumBasic(0)/m/n/10 It involves a deep understanding of the techniques 
+of grammar
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 86--88
+\EU1/GentiumBasic(0)/m/n/10 this, we note that when it comes to interpretation 
+of Sanskrit
+ []
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 86--88
+\EU1/GentiumBasic(0)/m/n/10 if partially correct), incorrect at best, and at wo
+rst irrelevant.
+ []
+
+
+Overfull \hbox (2.37721pt too wide) in paragraph at lines 88--89
+ \EU1/GentiumBasic(0)/m/n/9 ing level and sentence level is an important contri
+bution of Pūrvamīmāṁ- 
+ []
+
+
+Overfull \hbox (4.56447pt too wide) in paragraph at lines 88--89
+ \EU1/GentiumBasic(0)/m/n/9 sā. The two theories of sentence meaning: Abhihitān
+vayavāda (Kumārila’s 
+ []
+
+[56]
+Underfull \hbox (badness 2435) in paragraph at lines 97--98
+\EU1/GentiumBasic(0)/m/n/10 of Mīmāṁsā and the limited logics of the Western in
+terpretive
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 97--98
+\EU1/GentiumBasic(0)/m/n/10 framework make it difficult to view the repository 
+of Western
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 101--102
+\EU1/GentiumBasic(0)/m/n/10 overall direction of research is guided by American
+ policy needs
+ []
+
+[57]
+Underfull \hbox (badness 1082) in paragraph at lines 107--109
+[]\EU1/GentiumBasic(0)/m/n/10 According to Western self-hagiographic accounts, 
+humanity owes
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 107--109
+\EU1/GentiumBasic(0)/m/n/10 it to the Greeks for the origins of logical methods
+. Aristotle’s
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 107--109
+\EU1/GentiumBasic(0)/m/n/10 axioms) influenced the development of the scientifi
+c method of
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 107--109
+\EU1/GentiumBasic(0)/m/n/10 a historical account of the methods of modern scien
+ce. Most
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 112--113
+\EU1/GentiumBasic(0)/m/n/10 objectivity of science gloss over this. Given the v
+ariance in the
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Underfull \hbox (badness 4621) in paragraph at lines 118--119
+\EU1/GentiumBasic(0)/m/n/10 nature of \EU1/GentiumBasic(0)/m/it/10 śāstra\EU1/G
+entiumBasic(0)/m/n/10 . One must closely observe that there is \EU1/GentiumBasi
+c(0)/bx/n/10 no
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 118--119
+\EU1/GentiumBasic(0)/bx/n/10 dichotomy \EU1/GentiumBasic(0)/m/n/10 of natural-s
+ciences vs social-sciences in the Indian
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 120--121
+\EU1/GentiumBasic(0)/m/n/10 are \EU1/GentiumBasic(0)/bx/n/10 closer \EU1/Gentiu
+mBasic(0)/m/n/10 to “\EU1/GentiumBasic(0)/bx/n/10 science\EU1/GentiumBasic(0)/m
+/n/10 ” in a deeper sense than actual Western
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 122--123
+\EU1/GentiumBasic(0)/m/n/10 and thereby collectively of society) fails as it cr
+itically depends
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 122--123
+\EU1/GentiumBasic(0)/m/n/10 of Indian \EU1/GentiumBasic(0)/m/it/10 śāstra \EU1/
+GentiumBasic(0)/m/n/10 into Western social sciences. The need for an
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Underfull \hbox (badness 1960) in paragraph at lines 128--129
+ \EU1/GentiumBasic(0)/m/it/9 studia humanitatis\EU1/GentiumBasic(0)/m/n/9 , or 
+“study of humanitas” (a classical Latin word 
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 131--133
+\EU1/GentiumBasic(0)/m/n/10 to do with actual realities in terms of practice an
+d experiential
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 138--139
+ []\EU1/GentiumBasic(0)/m/n/9 Any attempt to justify the humanities in terms of
+ outside benefits 
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 138--139
+ \EU1/GentiumBasic(0)/m/n/9 such as social usefulness (say increased productivi
+ty) or in terms 
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 138--139
+ \EU1/GentiumBasic(0)/m/n/9 of ennobling effects on the individual (such as gre
+ater wisdom or 
+ []
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 138--139
+ \EU1/GentiumBasic(0)/m/n/9 diminished prejudice) is ungrounded, and simply pla
+ces impossible 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+[61]
+Underfull \hbox (badness 1038) in paragraph at lines 171--172
+\EU1/GentiumBasic(0)/m/n/10 with a \EU1/GentiumBasic(0)/m/it/10 dhārmic \EU1/Ge
+ntiumBasic(0)/m/n/10 perspective is indeed a valid one, if one were to
+ []
+
+[62]
+Underfull \hbox (badness 1038) in paragraph at lines 186--187
+ []\EU1/GentiumBasic(0)/m/n/9 Marxism is a method of socioeconomic analysis tha
+t analyzes class 
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 186--187
+ \EU1/GentiumBasic(0)/m/n/9 Marxist methodology uses economic and sociopolitica
+l inquiry and 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+Underfull \hbox (badness 1412) in paragraph at lines 238--239
+ \EU1/GentiumBasic(0)/m/n/9 merits the same centrality among the disciplines as
+ philosophy or 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+[65]
+Underfull \hbox (badness 1859) in paragraph at lines 297--298
+\EU1/GentiumBasic(0)/m/n/10 interpretation and conclusion can be created. Based
+ purely on
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 301--302
+[]\EU1/GentiumBasic(0)/m/n/10 At this point, it must be asserted, the logic gov
+erning Pollock’s
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+Underfull \hbox (badness 1424) in paragraph at lines 314--315
+ []\EU1/GentiumBasic(0)/m/n/9 At the same time, and more positively now, philol
+ogy on Plane 1 
+ []
+
+
+Underfull \hbox (badness 8038) in paragraph at lines 321--322
+[]\EU1/GentiumBasic(0)/m/n/10 These methods (diagnostic political philology and
+ prescriptive
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+Underfull \hbox (badness 1043) in paragraph at lines 329--330
+\EU1/GentiumBasic(0)/m/n/10 Pollock begins to frame the argument for \EU1/Genti
+umBasic(0)/m/it/10 śāstra \EU1/GentiumBasic(0)/m/n/10 being theory by
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 329--330
+\EU1/GentiumBasic(0)/m/n/10 referring to bodies of rules and codes in the \EU1/
+GentiumBasic(0)/m/it/10 dharmaśāstra\EU1/GentiumBasic(0)/m/n/10 -s and
+ []
+
+[68]
+Underfull \hbox (badness 1490) in paragraph at lines 352--353
+[]\EU1/GentiumBasic(0)/m/n/10 After this point, inexplicably, Pollock assumes t
+hat \EU1/GentiumBasic(0)/m/it/10 śāstra \EU1/GentiumBasic(0)/m/n/10 means
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 352--353
+\EU1/GentiumBasic(0)/m/n/10 based on actual experience, and are encoded experie
+nces driven
+ []
+
+[69]
+Underfull \hbox (badness 2617) in paragraph at lines 372--374
+\EU1/GentiumBasic(0)/m/n/10 establishing it, Pollock then addresses the relatio
+nship between
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 381--382
+ []\EU1/GentiumBasic(0)/m/n/9 All knowledge derives from \EU1/GentiumBasic(0)/m
+/it/9 śāstra\EU1/GentiumBasic(0)/m/n/9 ; success in astrology or in the 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+Underfull \hbox (badness 1024) in paragraph at lines 386--388
+[]\EU1/GentiumBasic(0)/m/n/10 He then proceeds to cite Rāmānuja from the \EU1/G
+entiumBasic(0)/m/it/10 Śrī Bhāṣya \EU1/GentiumBasic(0)/m/n/10 which is
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 404--405
+ []\EU1/GentiumBasic(0)/m/n/9 The common-sense position has not, however, gone 
+unchallenged. 
+ []
+
+
+Underfull \hbox (badness 3078) in paragraph at lines 404--405
+ \EU1/GentiumBasic(0)/m/n/9 Suggestive is Popper’s epistemological conjecture t
+hat theories or 
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 415--417
+\EU1/GentiumBasic(0)/m/n/10 over multiple generations in dhārmic traditions, en
+coding newer
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 415--417
+\EU1/GentiumBasic(0)/m/n/10 is something that Pollock has unfortunately ignored
+. A similar
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+Underfull \hbox (badness 1824) in paragraph at lines 422--423
+ []\EU1/GentiumBasic(0)/m/n/9 To simplify a complex argument, we may say that \
+EU1/GentiumBasic(0)/m/it/9 dharma \EU1/GentiumBasic(0)/m/n/9 in the 
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 429--430
+ \EU1/GentiumBasic(0)/m/n/9 regulative, (the rules of chess and those of dinner
+ table etiquette 
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 432--433
+\EU1/GentiumBasic(0)/m/n/10 regulative nature, make it possible for human socia
+l and sexual
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 436--437
+[]\EU1/GentiumBasic(0)/m/n/10 Although Pollock has already mentioned that the r
+emaining two
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+[73]
+Overfull \hbox (1.8pt too wide) in paragraph at lines 474--476
+\EU1/GentiumBasic(0)/m/it/10 maśāstra\EU1/GentiumBasic(0)/m/n/10 , the \EU1/Gen
+tiumBasic(0)/m/it/10 Kāvyamīmāṁsā \EU1/GentiumBasic(0)/m/n/10 (poetics), the \E
+U1/GentiumBasic(0)/m/it/10 Kāmasūtra\EU1/GentiumBasic(0)/m/n/10 , the \EU1/Gent
+iumBasic(0)/m/it/10 Matsyapurāṇa\EU1/GentiumBasic(0)/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 476--477
+ \EU1/GentiumBasic(0)/m/n/9 and represent themselves as the outcome of a simila
+r process of 
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 480--481
+ \EU1/GentiumBasic(0)/m/n/9 in the mythic crystallizations of the postulate of 
+shastric priority, 
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 484--485
+ []\EU1/GentiumBasic(0)/m/n/9 There are several \EU1/GentiumBasic(0)/bx/n/9 con
+clusions to be drawn from such mythic 
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 484--485
+ \EU1/GentiumBasic(0)/m/n/9 on the Golden Age.” \EU1/GentiumBasic(0)/bx/n/9 Fir
+st, the “creation” of knowledge is 
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 484--485
+ \EU1/GentiumBasic(0)/bx/n/9 universe as a whole\EU1/GentiumBasic(0)/m/n/9 . Kn
+owledge, moreover–and again, this is 
+ []
+
+
+Underfull \hbox (badness 4543) in paragraph at lines 484--485
+ \EU1/GentiumBasic(0)/m/n/9 are uncognizable” [\EU1/GentiumBasic(0)/m/it/9 adṛṣ
+ṭārtha\EU1/GentiumBasic(0)/m/n/9 -] to that of social relations, music, 
+ []
+
+[74]
+Underfull \hbox (badness 1642) in paragraph at lines 499--500
+[]\EU1/GentiumBasic(0)/m/n/10 Expanding the scope of the \EU1/GentiumBasic(0)/m
+/it/10 pūrva-pakṣa \EU1/GentiumBasic(0)/m/n/10 to address these claims,
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 499--500
+\EU1/GentiumBasic(0)/m/n/10 pointers to alternate viewpoints are presented and 
+the reader is
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 508--510
+ \EU1/GentiumBasic(0)/m/n/9 actual cultural change is thereby at once transmute
+d and denied; 
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 508--510
+ \EU1/GentiumBasic(0)/m/n/9 paradigm. And finally, through such denial of contr
+adiction and 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+Underfull \hbox (badness 1803) in paragraph at lines 514--515
+\EU1/GentiumBasic(0)/m/n/10 Pollock’s denial of Indian cosmological precepts an
+d the lack of
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 520--522
+[]\EU1/GentiumBasic(0)/m/n/10 In terms of \EU1/GentiumBasic(0)/m/it/10 guṇa \EU
+1/GentiumBasic(0)/m/n/10 (behaviors) such societies had to inculcate and
+ []
+
+[76]
+Underfull \hbox (badness 1484) in paragraph at lines 525--526
+\EU1/GentiumBasic(0)/m/n/10 has borne the brunt of the deep Western desire to “
+conquer” -
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 532--534
+ \EU1/GentiumBasic(0)/m/n/9 or could be brought into existence from some other 
+material, e.g., 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Underfull \hbox (badness 3312) in paragraph at lines 536--537
+[]\EU1/GentiumBasic(0)/m/n/10 He uses the Sāṅkhya notion of \EU1/GentiumBasic(0
+)/m/it/10 satkāryavāda \EU1/GentiumBasic(0)/m/n/10 and extends it all
+ []
+
+
+Underfull \hbox (badness 5036) in paragraph at lines 540--541
+ \EU1/GentiumBasic(0)/m/n/9 cited above are marshaled, \EU1/GentiumBasic(0)/bx/
+n/9 Śaṅkara rather clearly makes the 
+ []
+
+[78]
+Underfull \hbox (badness 1502) in paragraph at lines 553--554
+[]\EU1/GentiumBasic(0)/m/n/10 The degrees of freedom in his philological style 
+(the method to
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 555--559
+[]\EU1/GentiumBasic(0)/m/n/10 In summary, this \EU1/GentiumBasic(0)/m/it/10 pūr
+vapakṣa \EU1/GentiumBasic(0)/m/n/10 of ours is a more than superficial
+ []
+
+
+Underfull \hbox (badness 5847) in paragraph at lines 562--563
+[]\EU1/GentiumBasic(0)/m/n/10 The hypotheses and claims he makes are not based 
+on
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 573--574
+\EU1/GentiumBasic(0)/m/n/10 have been presented which could be used as a basis 
+for future
+ []
+
+[79]
+Underfull \hbox (badness 1888) in paragraph at lines 579--580
+[]\EU1/GentiumBasic(0)/bx/n/10 Flawed use of Philology \EU1/GentiumBasic(0)/m/n
+/10 - Similar to the above, scholars
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 579--580
+\EU1/GentiumBasic(0)/m/n/10 can construct arguments on the flawed uses of Philo
+logy,
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 583--584
+\EU1/GentiumBasic(0)/m/n/10 methods - making arguments and criticism “visible” 
+and
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 587--588
+[]\EU1/GentiumBasic(0)/bx/n/10 Epistemological dissonance (\EU1/GentiumBasic(0)
+/bx/it/10 Pramana\EU1/GentiumBasic(0)/bx/n/10 ) \EU1/GentiumBasic(0)/m/n/10 - T
+he sources of
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 589--590
+[]\EU1/GentiumBasic(0)/m/n/10 Testimonial (\EU1/GentiumBasic(0)/m/it/10 Śabda\E
+U1/GentiumBasic(0)/m/n/10 ) dissonance and documented views
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 589--590
+\EU1/GentiumBasic(0)/m/n/10 from centuries of commentaries - Pollock’s claims a
+re
+ []
+
+[80]
+Underfull \hbox (badness 3229) in paragraph at lines 591--592
+[]\EU1/GentiumBasic(0)/m/n/10 Use of Indian theories of error (\EU1/GentiumBasi
+c(0)/m/it/10 khyātivāda\EU1/GentiumBasic(0)/m/n/10 ) must be
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 591--592
+\EU1/GentiumBasic(0)/m/n/10 brought to bear upon the lines of his reasoning and
+
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 598--599
+\EU1/GentiumBasic(0)/m/n/10 dissonances, ontological, epistemological and inter
+pretive -
+ []
+
+
+Underfull \hbox (badness 2735) in paragraph at lines 600--601
+\EU1/GentiumBasic(0)/m/n/10 can be used as basis of argumentation. As suggested
+ in
+ []
+
+[81]
+Underfull \hbox (badness 2435) in paragraph at lines 605--606
+\EU1/GentiumBasic(0)/m/n/10 the individual and collective psyche of the followe
+rs of \EU1/GentiumBasic(0)/m/it/10 dharma
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 605--606
+\EU1/GentiumBasic(0)/m/n/10 but also the domestic discourse in India. It has ha
+d secondary
+ []
+
+
+Underfull \hbox (badness 5711) in paragraph at lines 605--606
+\EU1/GentiumBasic(0)/m/n/10 dialectic tool, a Pollock \EU1/GentiumBasic(0)/bx/n
+/10 Anti-Reader \EU1/GentiumBasic(0)/m/n/10 (diagnostic guidelines) is
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 607--608
+[]\EU1/GentiumBasic(0)/m/n/10 The Indian self-narrative in English, academic so
+cial sciences as
+ []
+
+[82]
+Underfull \hbox (badness 4144) in paragraph at lines 629--630
+[]\EU1/GentiumBasic(0)/m/n/10 Bohman, James (2015) “Critical Theory”. \EU1/Gent
+iumBasic(0)/m/it/10 The Stanford Encyclope-
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 629--630
+\EU1/GentiumBasic(0)/m/it/10 dia of Philosophy \EU1/GentiumBasic(0)/m/n/10 (Win
+ter 2015 Edition); Edward N. Zalta (ed.).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
+\EU1/GentiumBasic(0)/m/n/10 URL = $[][][][][][] [] [] [] [][][][][] [] [][][][]
+[][][][] [] [][][] [] [][][][][][][][] [] [][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 653--654
+[]\EU1/GentiumBasic(0)/m/n/10 Dhundiraja Śastri (Ed.) (1941) \EU1/GentiumBasic
+(0)/m/it/10 Saṃkhyakarikā \EU1/GentiumBasic(0)/m/n/10 with commentary of
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 653--654
+\EU1/GentiumBasic(0)/m/n/10 Gauḍapādācārya (with Notes and Hindi Translation). 
+Benares:
+ []
+
+[83]
+Underfull \hbox (badness 1072) in paragraph at lines 671--672
+[]\EU1/GentiumBasic(0)/m/n/10 Geurts, Bart, Beaver, David I. and Maier, Emar (2
+016) “Discourse
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+\EU1/GentiumBasic(0)/m/n/10 Representation Theory”, \EU1/GentiumBasic(0)/m/it/1
+0 The Stanford Encyclopedia of Phi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+\EU1/GentiumBasic(0)/m/it/10 losophy \EU1/GentiumBasic(0)/m/n/10 (Spring 2016 E
+dition); Edward N. Zalta (ed.). URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+\EU1/GentiumBasic(0)/m/n/10 = $[][][][][][] [] [] [] [][][][][] [] [][][][][][]
+[][] [] [][][] [] [][][][][][][][] [] [][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 6110) in paragraph at lines 674--675
+\EU1/GentiumBasic(0)/m/n/10 Philosophy”. $[][][][] [] [] [] [][][][][] [] [][][
+][][][][][] [] [][][] [] [][][][][][][] [] [][][][][] [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
+[]\EU1/GentiumBasic(0)/m/n/10 “Humanities” $[][][][][] [] [] [] [][] [] [][][][
+][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][]$.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--687
+[]\EU1/GentiumBasic(0)/m/n/10 “Indology” $[][][][][] [] [] [] [][] [] [][][][][
+][][][][] [] [][][] [] [][][][] [] [][][][][][][][]$. Ac-
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 695--696
+\EU1/GentiumBasic(0)/m/n/10 Swami.” $[][][][][] [] [] [] [][][] [] [][][][][][]
+[] [] [][][] [] [][][][][] [] [] [] [][][][][][][][][][][] []
+ []
+
+[84]
+Underfull \hbox (badness 1342) in paragraph at lines 722--723
+[]\EU1/GentiumBasic(0)/m/n/10 Malhotra, R. (2011). \EU1/GentiumBasic(0)/m/it/10
+ Being Different: An Indian Challenge to Western
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 725--726
+[]\EU1/GentiumBasic(0)/m/n/10 Malhotra, R., & Neelakandan, A. (2011). \EU1/Gent
+iumBasic(0)/m/it/10 Breaking India: Western
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
+[][][][][][] [][] [][][] [][] [][][][][][][][] [] [][][] [][] [][][][][][][] []
+[] [][][][][][][] [][] [][] [][] [] [][] [][][][] [][]
+ []
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 737--738
+[]\EU1/GentiumBasic(0)/m/n/10 Matilal, B. K. (1971). \EU1/GentiumBasic(0)/m/it/
+10 Epistemology, Logic, and Grammar in Indian
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--747
+[]\EU1/GentiumBasic(0)/m/n/10 Oetke, C. (1996). “Ancient Indian logic as a theo
+ry of non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--747
+\EU1/GentiumBasic(0)/m/n/10 monotonic reasoning”. \EU1/GentiumBasic(0)/m/it/10 
+Journal of Indian Philosophy\EU1/GentiumBasic(0)/m/n/10 , 24(5).
+ []
+
+[85]
+Underfull \hbox (badness 1845) in paragraph at lines 749--750
+[]\EU1/GentiumBasic(0)/m/n/10 “Outline of Critical Theory” $[][][][][] [] [] []
+ [][] [] [][][][][][][][][] [] [][][] [] [][][][] []
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 758--759
+\EU1/GentiumBasic(0)/m/it/10 Gaṅgeśa’s Tattvacintāmaṇi: Jewel of Reflection
+ on the Truth (About
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--762
+[]\EU1/GentiumBasic(0)/m/n/10 “Philology”. $[][][][][] [] [] [] [][] [] [][][][
+][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][]$.
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 773--774
+\EU1/GentiumBasic(0)/m/n/10 of the Two Mīmāṁsās: Appayya Dīkṣita’s Discourse on
+ the
+ []
+
+
+Underfull \hbox (badness 7649) in paragraph at lines 776--777
+[]\EU1/GentiumBasic(0)/m/n/10 Pollock, S. (1989). “Mīmāṃsā and the Problem of H
+istory in
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 782--783
+\EU1/GentiumBasic(0)/m/n/10 Theory in Indian Intellectual History”. \EU1/Gentiu
+mBasic(0)/m/it/10 Journal of the American
+ []
+
+[86]
+Underfull \hbox (badness 1237) in paragraph at lines 788--789
+[]\EU1/GentiumBasic(0)/m/n/10 Pollock, S. I. (2006). \EU1/GentiumBasic(0)/m/it/
+10 The Language of the Gods in the World of Men:
+ []
+
+
+Underfull \hbox (badness 6445) in paragraph at lines 797--798
+[]\EU1/GentiumBasic(0)/m/n/10 “Pūrvapaksha of Sheldon Pollock: Misappropriating
+ text from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--798
+\EU1/GentiumBasic(0)/m/n/10 VS Naipaul’s article” (Last modified on 07 May, 201
+6).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--798
+[][][][] [] [] [] [][][][][][][][][][][] [][] [][][][][][][] [] [][][][][][][][
+] [] [][] [] [][][][] [] [][] []
+ []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 826--827
+[]\EU1/GentiumBasic(0)/m/n/10 “Sheldon Pollock: Liberation Philology”. $[][][][
+] [] [] [] [][][] [] [][][][] [] [][] []
+ []
+
+[87] (./mainfile.ent
+Underfull \hbox (badness 1077) in paragraph at lines 2--124
+\EU1/GentiumBasic(0)/m/n/8 in his original work; he proposed the emic/etic dich
+otomy in anthropology as a
+ []
+
+[88])) (./src/chapter12.tex [89] [90
+
+]
+Chapter 12.
+[91]
+Underfull \hbox (badness 1365) in paragraph at lines 20--21
+\EU1/GentiumBasic(0)/m/n/10 A critical and honest examination of Pollock’s pape
+r on Śāstra-s
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 20--21
+\EU1/GentiumBasic(0)/m/n/10 many of whom are not sympathetic to the Indic civil
+ization, Sri
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 28--29
+[]\EU1/GentiumBasic(0)/m/n/10 Re-examination of evidence; relating to Sandrokot
+tos and
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 28--29
+\EU1/GentiumBasic(0)/m/n/10 Devānāmpriya Priyadarśī, and Buddhist chronicles su
+ch as
+ []
+
+
+Underfull \hbox (badness 6808) in paragraph at lines 31--32
+[]\EU1/GentiumBasic(0)/m/n/10 Anybody who gets to know about the science & tech
+nology,
+ []
+
+[92]
+
+LaTeX Warning: Reference `art12-sec3' on page 93 undefined on input line 35.
+
+
+LaTeX Warning: Reference `art12-sec4' on page 93 undefined on input line 35.
+
+[93]
+Underfull \hbox (badness 3919) in paragraph at lines 43--44
+\EU1/GentiumBasic(0)/m/it/10 śāstram\EU1/GentiumBasic(0)/m/n/10 ” and “\EU1/Gen
+tiumBasic(0)/m/it/10 śāsanāt śāstram\EU1/GentiumBasic(0)/m/n/10 ”, which indica
+te the \EU1/GentiumBasic(0)/m/it/10 pāramārthika
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 47--48
+[]\EU1/GentiumBasic(0)/m/it/10 yajña \EU1/GentiumBasic(0)/m/n/10 - performance 
+of the sacred rites with a reverential
+ []
+
+[94]
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/m/sl' in size <12> not avai
+lable
+(Font)              Font shape `EU1/GentiumBasic(0)/m/it' tried instead on inpu
+t line 56.
+LaTeX Font Info:    Font shape `EU1/GentiumBasic(0)/bx/sl' in size <12> not ava
+ilable
+(Font)              Font shape `EU1/GentiumBasic(0)/bx/it' tried instead on inp
+ut line 56.
+
+Underfull \hbox (badness 2027) in paragraph at lines 62--63
+[]\EU1/GentiumBasic(0)/bx/it/10 Abādhita \EU1/GentiumBasic(0)/m/n/10 – that one
+ \EU1/GentiumBasic(0)/m/it/10 pramāṇa \EU1/GentiumBasic(0)/m/n/10 can neither v
+erify nor negate the
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 66--67
+[]\EU1/GentiumBasic(0)/m/n/10 The following six \EU1/GentiumBasic(0)/m/it/10 pr
+amāṇa\EU1/GentiumBasic(0)/m/n/10 -s are accepted to varying degrees in
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 74--75
+[]\EU1/GentiumBasic(0)/m/it/10 Arthāpatti \EU1/GentiumBasic(0)/m/n/10 Two step 
+inference (usually of the form ‘unless-
+ []
+
+[95]
+Missing character: There is no ﬀ in font Gentium Basic/OT:script=latn;language=
+DFLT;mapping=tex-text;mapping=tex-text;!
+Missing character: There is no ﬀ in font Gentium Basic/OT:script=latn;language=
+DFLT;mapping=tex-text;mapping=tex-text;!
+
+Underfull \hbox (badness 1888) in paragraph at lines 83--84
+[]\EU1/GentiumBasic(0)/m/n/10 When a person knows a bottle, he also knows that 
+he has the
+ []
+
+
+Underfull \hbox (badness 4291) in paragraph at lines 83--84
+\EU1/GentiumBasic(0)/m/n/10 says this ‘knowledge’ is \EU1/GentiumBasic(0)/m/it/
+10 svataḥ-siddha \EU1/GentiumBasic(0)/m/n/10 (self-existent) and \EU1/GentiumBa
+sic(0)/m/it/10 svataḥ-
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 83--84
+\EU1/GentiumBasic(0)/m/it/10 prakāśa \EU1/GentiumBasic(0)/m/n/10 (self-eﬀulgent
+) which illumines all thoughts and objects
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 87--88
+\EU1/GentiumBasic(0)/m/n/10 – “creation” is for the sake of jīva for the two-fo
+ld purpose of
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 87--88
+\EU1/GentiumBasic(0)/m/n/10 (emancipation). But at the same time, since no sing
+le jīva is
+ []
+
+[96]
+Underfull \hbox (badness 1708) in paragraph at lines 89--90
+\EU1/GentiumBasic(0)/m/n/10 by a potter unless it is potential (unmanifest) in 
+clay; similarly
+ []
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 89--90
+\EU1/GentiumBasic(0)/m/n/10 proceeds according to the inviolable law of \EU1/Ge
+ntiumBasic(0)/m/it/10 karma\EU1/GentiumBasic(0)/m/n/10 . This view,
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 93--94
+\EU1/GentiumBasic(0)/m/n/10 the eternal principles and time-space dependent soc
+ial norms, is
+ []
+
+) [97] [98]
+runsystem(makeindex -s mystyle.ist mainfile.idx)...executed safely (allowed).
+
+ (./mainfile.ind) (./mainfile.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 16229 strings out of 493706
+ 325633 string characters out of 6145769
+ 368190 words of memory out of 5000000
+ 19378 multiletter control sequences out of 15000+600000
+ 6695 words of font info for 65 fonts, out of 8000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 47i,13n,59p,10402b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on mainfile.pdf (98 pages).
