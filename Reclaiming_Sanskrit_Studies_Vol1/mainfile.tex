@@ -58,6 +58,17 @@
 
 \input src/biodata
 
+\input src/ack
+
+\makeatletter
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{15\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{10\p@}}
+\makeatother
+
+\lhead[\small\thepage\quad Western Indology \& Its Quest For Power]{}
+\rhead[]{Index\quad\small\thepage}
+
 \printindex
 
 \end{document}
