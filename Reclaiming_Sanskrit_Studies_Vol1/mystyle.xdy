@@ -7,8 +7,12 @@
   }"
               :close "~n\label{bookend}\end{theindex}~n"
               :tree)
-                
+
+(define-attributes (( "pageff")) )                
 (markup-locref :attr "default" :open "{" :close "}")
 
 (markup-locclass-list :open "\kern2pt\hfill ")
+(markup-crossref-list :class "see" :open " \emph{see} "
+                                     :sep  "; ")
 (markup-locref-list :sep ", ")
+(markup-locref   :attr  "pageff"     :open "\pageff{" :close "}")
