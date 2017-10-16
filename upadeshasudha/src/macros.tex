@@ -1,0 +1,15 @@
+\usepackage{polyglossia}
+\usepackage{fontspec,graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\definecolor{mycolor}{RGB}{158,23,23}
+\usepackage[papersize={136.15mm,216.92mm},textwidth=102mm, textheight=169mm,
+topmargin=25mm,botmargin=22.92mm,
+leftmargin=17.075mm,rightmargin=17.075mm]{zwpagelayout}
+
+\setdefaultlanguage{kannada}
+\setmainfont[Script=Kannada,Ligatures=TeX,AutoFakeBold=3.2,AutoFakeSlant,WordSpace=1.2]{NudiUni01k}
+%~ \XeTeXgenerateactualtext 1
+\newfontfamily\eng{Times New Roman}
+
+\def\big#1{\textcolor{mycolor}{{\huge\bfseries #1}}}
