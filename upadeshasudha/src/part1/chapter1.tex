@@ -1,7 +1,13 @@
-ಶ್ರೀ ಶ್ರೀ ಜಗದ್ಗುರು ಮಹಾಸ್ವಾಮಿಗಳವರ ಉಪದೇಶ
+{\newcommand\toptitle{}
+\makeatletter
+\patchcmd{\@makechapterhead}{\if@mainmatter}{\if@mainmatter\Large\bf\toptitle\vskip 20pt\par}{}{}
+\makeatother
+
+\renewcommand\toptitle{ಶ್ರೀ ಶ್ರೀ ಜಗದ್ಗುರು ಮಹಾಸ್ವಾಮಿಗಳವರ ಉಪದೇಶ}
 
 
-\chapter{ಬಾಳಿನ ದಾರಿ}\label{chap1}
+
+\chapter{ಬಾಳಿನ ದಾರಿ}\label{chap1}}
 
 
 \begin{shloka}
