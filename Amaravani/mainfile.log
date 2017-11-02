@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2015.7.29)  9 AUG 2017 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2015.7.29)  22 AUG 2017 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -156,170 +156,75 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
-
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
-)
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-)
-\@linkdim=\dimen119
-\Hy@linkcounter=\count106
-\Hy@pagecounter=\count107
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
-)
-\Hy@SavedSpaceFactor=\count108
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
-)
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count109
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen120
-\Fld@menulength=\count110
-\Field@Width=\dimen121
-\Fld@charsize=\dimen122
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count111
-\c@Item=\count112
-\c@Hfootnote=\count113
-)
-
-Package hyperref Message: Driver (default): hdvips.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks22
-\pdf@box=\box33
-\pdf@toks=\toks23
-\pdf@defaulttoks=\toks24
-\HyField@AnnotCount=\count114
-\Fld@listcount=\count115
-\c@bookmark@seq@number=\count116
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
-)
-\Hy@SectionHShift=\skip50
-))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box34
-\beforetitleunit=\skip51
-\aftertitleunit=\skip52
-\ttl@plus=\dimen123
-\ttl@minus=\dimen124
-\ttl@toksa=\toks25
-\titlewidth=\dimen125
-\titlewidthlast=\dimen126
-\titlewidthfirst=\dimen127
+\ttl@box=\box33
+\beforetitleunit=\skip50
+\aftertitleunit=\skip51
+\ttl@plus=\dimen119
+\ttl@minus=\dimen120
+\ttl@toksa=\toks22
+\titlewidth=\dimen121
+\titlewidthlast=\dimen122
+\titlewidthfirst=\dimen123
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count117
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/velthuis/devanagari.sty
-Package: devanagari 2009/02/09 v2.15 LaTeX macros for Velthuis Devanagari
-LaTeX Info: Redefining \dn on input line 139.
-\dev@chnum=\count118
-\itdim=\dimen128
-LaTeX Info: Redefining \dn@commands on input line 238.
-\anudep=\dimen129
-\anuwid=\dimen130
+(/usr/local/texlive/2015/texmf-dist/tex/plain/velthuis/dnmacs.tex
+\chnum=\count106
+\itdim=\dimen124
+\dnblskip=\dimen125
+\subdep=\dimen126
+\anudep=\dimen127
+\anuwid=\dimen128
+\nohyphenation=\language80
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count119
-\float@exts=\toks26
-\float@box=\box35
-\@float@everytoks=\toks27
-\@floatcapt=\box36
+\c@float@type=\count107
+\float@exts=\toks23
+\float@box=\box34
+\@float@everytoks=\toks24
+\@floatcapt=\box35
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/zwpagelayout/zwpagelayout.sty
 Package: zwpagelayout 2013/01/13 ZW Page Layout
 Package zwpagelayout Info: $Id: zwpagelayout.sty 453 2013-01-13 17:12:17Z zw $.
 
-\zwpl@Driver=\count120
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+\zwpl@Driver=\count108
 Package zwpagelayout Info: Driver mode used: dvips.
 (zwpagelayout)              on input line 223.
-\ZW@baselineskip=\skip53
+\ZW@baselineskip=\skip52
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
@@ -332,26 +237,26 @@ Package color Info: Driver file: dvips.def on input line 142.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
 ))
-\zwpl@low=\dimen131
-\zwpl@len=\dimen132
-\zwpl@gap=\dimen133
-\zwpl@plus=\dimen134
-\zwpl@minus=\dimen135
-\zwpl@frame=\dimen136
-\zwpl@vsize=\dimen137
-\zwpl@Hshift=\count121
-\zwpl@Vshift=\count122
+\zwpl@low=\dimen129
+\zwpl@len=\dimen130
+\zwpl@gap=\dimen131
+\zwpl@plus=\dimen132
+\zwpl@minus=\dimen133
+\zwpl@frame=\dimen134
+\zwpl@vsize=\dimen135
+\zwpl@Hshift=\count109
+\zwpl@Vshift=\count110
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip54
-\f@ncyO@elh=\skip55
-\f@ncyO@erh=\skip56
-\f@ncyO@olh=\skip57
-\f@ncyO@orh=\skip58
-\f@ncyO@elf=\skip59
-\f@ncyO@erf=\skip60
-\f@ncyO@olf=\skip61
-\f@ncyO@orf=\skip62
+\fancy@headwidth=\skip53
+\f@ncyO@elh=\skip54
+\f@ncyO@erh=\skip55
+\f@ncyO@olh=\skip56
+\f@ncyO@orh=\skip57
+\f@ncyO@elf=\skip58
+\f@ncyO@erf=\skip59
+\f@ncyO@olf=\skip60
+\f@ncyO@orf=\skip61
 )
 (./mainfile.aux
 
@@ -1515,59 +1420,33 @@ LaTeX Warning: Label `page253' multiply defined.
 )
 \openout1 = `mainfile.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/dn/m/n on input line 95.
-LaTeX Font Info:    Try loading font information for U+dn on input line 95.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/velthuis/udn.fd
-File: Udn.fd 2004/08/03 v2.14
-)
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Try loading font information for OT1+ndi on input line 95.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/nudi/ot1ndi.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Try loading font information for OT1+ndi on input line 90.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/nudi/ot1ndi.fd
 File: ot1ndi.fd 
 )
-\AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring OFF on input line 95.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count123
-)
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
-
-(./mainfile.out) (./mainfile.out)
-\@outlinefile=\write3
-\openout3 = `mainfile.out'.
-
- (./src/mainpage.tex
+(./src/mainpage.tex
 File: 0000a.eps Graphic file (type eps)
  <0000a.eps> [1
 
 
 ]
 File: 0000b.eps Graphic file (type eps)
-
-<0000b.eps>
+ <0000b.eps>
 File: om1.eps Graphic file (type eps)
- <om1.eps> [2]) [3] [4] (./src/preface.tex
+ <om1.eps> [2]) [3] [4]
+(./src/preface.tex
 File: om.eps Graphic file (type eps)
  <om.eps>
 File: 0000d.eps Graphic file (type eps)
@@ -1623,16 +1502,8 @@ ada tirxdëhAmayuëtavAda barxhamxmAgaR
  []
 
 [6]) [7] [8] (./mainfile.toc
-Overfull \hbox (18.73537pt too wide) in paragraph at lines 4--4
- [] [] []  
- []
-
-
-Overfull \hbox (99.32071pt too wide) in paragraph at lines 5--5
- [] [] []  
- []
-
 LaTeX Font Info:    Try loading font information for U+lasy on input line 7.
+
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
@@ -1646,23 +1517,18 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.8454pt too wide) detected at line 7
+Overfull \hbox (5.95009pt too wide) detected at line 7
  []\OT1/ndi/m/n/10.95 233
  []
 
 
-Overfull \hbox (53.85837pt too wide) in paragraph at lines 7--7
- [][] [] [][]  
- []
-
-
-Overfull \hbox (2.86563pt too wide) detected at line 8
+Overfull \hbox (5.97032pt too wide) detected at line 8
  []\OT1/ndi/m/n/10.95 292
  []
 
 )
-\tf@toc=\write4
-\openout4 = `mainfile.toc'.
+\tf@toc=\write3
+\openout3 = `mainfile.toc'.
 
  (./src/prakashakaranudi.tex [9
 
@@ -3074,7 +2940,6 @@ Underfull \hbox (badness 5548) in paragraph at lines 536--538
 mukëitxdëhAmaëvaënunx
  []
 
-Missing character: There is no 	 in font ndir7t!
 
 Overfull \hbox (7.20337pt too wide) in paragraph at lines 553--554
 \OT1/ndi/m/n/10.95 dhamaRëjiëjAcënxsA'[] eMdu parxëtiëjecënxëmADi AraMëBisuva a
@@ -4261,8 +4126,8 @@ ga QutasatayxgaLanenxV tegedu
 
 
 Underfull \hbox (badness 2856) in paragraph at lines 663--665
-\OT1/ndi/m/n/10.95 `videyx' yeMdareVnu? enunxva kanesxpaSxnf (\OT1/cmr/m/n/10.9
-5 Conception\OT1/ndi/m/n/10.95 ) niMda AraMBa
+\OT1/ndi/m/n/10.95 `videyx' yeMdareVnu? enunxva kanesxpaSxnf (\halfcr Conceptio
+n\OT1/ndi/m/n/10.95 ) niMda AraMBa
  []
 
 [80]
@@ -5519,8 +5384,8 @@ xSiRgaLa
 
 
 Underfull \hbox (badness 4647) in paragraph at lines 255--257
-\OT1/ndi/m/n/10.95 sapatxSiRgaLiMda sapatxvAgi guNisi baMda \OT1/cmr/m/n/10.95 
-49 \OT1/ndi/m/n/10.95 goVtarx saMKeyxyAgiruvudu.
+\OT1/ndi/m/n/10.95 sapatxSiRgaLiMda sapatxvAgi guNisi baMda \halfcr 49 \OT1/ndi
+/m/n/10.95 goVtarx saMKeyxyAgiruvudu.
  []
 
 
@@ -10446,198 +10311,175 @@ Overfull \hbox (2.87727pt too wide) in alignment at lines 3436--3456
 [310] [311]) (./src/hindi.tex [312]
 File: 0345.eps Graphic file (type eps)
  <0345.eps> [313]
-Underfull \hbox (badness 2197) in paragraph at lines 41--42
-\U/dn/m/n/10.95 s[]-Tgt[] c s[]-k[]tˇ Ef"AEvqyk[] sAM˛Etkm[] aAn[]k[]Sy[]
+Overfull \hbox (32.54428pt too wide) in paragraph at lines 41--42
+\dvng c s[]-[]t Ef"AEvqyk[] sAM˛Etk[] aA[][]Sy[] EvlokEy	yEt\halfcr , \dvng upk
+SpEy	yEt
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 43--44
-\U/dn/m/n/10.95 Evf[]qA, nvFnEf"Aˇ˛ZASyAm[] a^^FtBA[]&ymAnA, upy[]>y[]rn[]\OT1/
-cmr/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 47--48
-[]\U/dn/m/n/10.95 aAΩ[]lBAqyA s[]-k[]tBAqyA vA uÅrAEZ dAt&yAEn .
+Overfull \hbox (12.03688pt too wide) in paragraph at lines 41--42
+\dvng c tA[]-tA[] upAyEvf[]qA[] s[]-[]tA@yyn-y s[]-[]ts[]foDn-y c aEB[]ày[]
  []
 
 [314]
 Underfull \hbox (badness 2237) in paragraph at lines 59--60
-[]\OT1/cmr/m/n/10.95 With a view to eliciting informed public opinion
+[]\halfcr With a view to eliciting informed public opinion
  []
 
 [315]
-Underfull \hbox (badness 2626) in paragraph at lines 80--81
-[]\U/dn/m/n/10.95 mAnEvkF sA[]-k[]EtkF c s[]-k[]t-y anG[]tAm[]
+Underfull \hbox (badness 6792) in paragraph at lines 76--77
+[]\dvng pAWfAlA[]\halfcr , \dvng mhAEvçAly[][]\halfcr , \dvng EvòEvçAly[][] c
  []
 
 
-Overfull \hbox (3.92673pt too wide) in paragraph at lines 82--83
-\U/dn/m/n/10.95 ˛EtEnEDˇ B[]tAnA[] s[]-k[]tg[]^^FTAnAm[] \OT1/cmr/m/n/10.95 (\U
-/dn/m/n/10.95 1\OT1/cmr/m/n/10.95 ) \U/dn/m/n/10.95 aAΩ[]lBAqAyA[]
+Underfull \hbox (badness 1221) in paragraph at lines 76--77
+\dvng ˛vt[]mAnA[] s[]-[]tA @yynA[] &yEtr[]k[]Z\halfcr , \dvng k[], k[],
  []
 
 
-Overfull \hbox (1.01532pt too wide) in paragraph at lines 82--83
-\U/dn/m/n/10.95 m[]SyAEn s[]-krZAEn k[]^^Fd[]AEDfAsn-y rA>yAEDfAsˇ
+Overfull \hbox (3.99455pt too wide) in paragraph at lines 82--83
+[]\dvng kF[]E`B, EvDAEB, \halfcr `\dvng sAEh(y akAd[]mF\halfcr ' (\dvng aEKlBAr
+tFy\halfcr -
  []
 
 
-Overfull \hbox (0.91762pt too wide) in paragraph at lines 82--83
-\U/dn/m/n/10.95 g[]^^FTAnAm[] aAΩ[]lBAqAn[]vAd\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.
-95 shk[]t s[]-krZAnA[] ˛Zˇ
+Overfull \hbox (11.98918pt too wide) in paragraph at lines 82--83
+\dvng sAEh(y pErq[]\halfcr ) \dvng jnAnA[] s[]-[]tvA¡yA@yyn-y ˛rocnAy\halfcr ,
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 82--83
-\U/dn/m/n/10.95 yn[]\OT1/cmr/m/n/10.95 , `\U/dn/m/n/10.95 loeb\OT1/cmr/m/n/10.9
-5 -\U/dn/m/n/10.95  AEskl\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 lAyb[]rF\OT1/cmr/m
-/n/10.95 ' \U/dn/m/n/10.95 s[]-TyA yA
+Overfull \hbox (43.13927pt too wide) in paragraph at lines 82--83
+\dvng sh[]tAEn -vSp[]SyAEn s[]-krZAEn k[]^^F[]AEDfAsn-y rA>yAEDfAs
+ []
+
+
+Overfull \hbox (2.67755pt too wide) in paragraph at lines 82--83
+\dvng nAnA[] c íAr[]Z \halfcr `\dvng sAEh(y\halfcr -\dvng akAd[]mF\halfcr ' \dv
+ng -vy[] ˛kAfy[][] a^^Fy[],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+\dvng  AEskl\halfcr -\dvng lAyb[]rF\halfcr ' \dvng s[]-TyA yA
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 84--85
+[]\dvng EítFy-yA[] pA—vEq[]»A[] yojnAyA[] s[]-[]tEf"AyA,
  []
 
 [316]
 Underfull \hbox (badness 4096) in paragraph at lines 99--100
-\OT1/cmr/m/n/10.95 and Universities, in what other ways are
+\halfcr and Universities, in what other ways are
  []
 
 
 Underfull \hbox (badness 1478) in paragraph at lines 104--105
-\OT1/cmr/m/n/10.95 in cheap editions, of representative Sanskrit
+\halfcr in cheap editions, of representative Sanskrit
+ []
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 113--114
+\dvng Ef"ApFWA[] smAvt[]mAn[]n []vjn[]n s[]-[]ts[]-[]t[],
  []
 
 [317]
-Underfull \hbox (badness 5652) in paragraph at lines 113--114
-[]\U/dn/m/n/10.95 a=y[]tt[] BvtAm[] aEBmt[] yt[] k-mAEŒdEp
+Underfull \hbox (badness 1377) in paragraph at lines 115--116
+\dvng bhv, CA/A\halfcr : \dvng aEDkAErZ,\halfcr , \dvng BArtrAE[]ykAyA[]ly[][]
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 113--114
-\U/dn/m/n/10.95 BArtFyAt[] Ef"ApFWAt[] smAvt[]mAn[]n y[]vjn[]n
+Underfull \hbox (badness 1895) in paragraph at lines 117--118
+[]\dvng a=y[]t[] BvtA[] mt[]\halfcr , \dvng y[] Evd[]f-T[][] BArtFy\halfcr -
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 113--114
-\U/dn/m/n/10.95 s[]-k[]ts[]-k[]t[], bFjB[]t[], aΩ[], av[ym[] aAÅˇ
+Underfull \hbox (badness 2495) in paragraph at lines 120--121
+[]\dvng EnEKlBArtFy[][] k[][]Ec[] aAEDkAErk[][] &yvhAr[][]\halfcr -\dvng sADA
  []
 
 
-Overfull \hbox (0.17403pt too wide) in paragraph at lines 115--116
-[]\U/dn/m/n/10.95 k[] k[] upˇAyA, BvtA[] s[]mtA, y[], aAd[]t[], Evd[]fgAEmn,
+Underfull \hbox (badness 1424) in paragraph at lines 120--121
+\dvng rZEvqyA[] aED []vA[]Z, aA^^FtrrA>yFy, l[]K&yvhAr,\halfcr ,
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 117--118
-\U/dn/m/n/10.95 rAjd[]tAvAs[]q[] s[]-k[]tˇ Evd[]qA[] Eny[]Eƒ, Eáyt[]
+Underfull \hbox (badness 1082) in paragraph at lines 120--121
+\dvng aO(sEvkA, c ˛sΩA, EvòEvçA ly\halfcr -\dvng ‹AtkA[]fAsn[]\halfcr ,
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 122--123
-[]\OT1/cmr/m/n/10.95 `\U/dn/m/n/10.95 Dm[]Ef"Am[]\OT1/cmr/m/n/10.95 ' \U/dn/m/n
-/10.95 aEDk[](y \OT1/cmr/m/n/10.95 `\U/dn/m/n/10.95 EvòEvçAly\OT1/cmr/m/n/10.95
- -\U/dn/m/n/10.95 Ef"Ayog[]Z\OT1/cmr/m/n/10.95 '
+Underfull \hbox (badness 1122) in paragraph at lines 120--121
+\dvng fpTpAWn[] BArtFy\halfcr -\dvng gZt^^F/-y []t[] v[]d[]EfkfAs nAEn
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 122--123
-\OT1/cmr/m/n/10.95 `\U/dn/m/n/10.95 EvòEvçAly\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.9
-5 Ef"Ayog-y ˛v[]dnm[]\OT1/cmr/m/n/10.95 ,' \U/dn/m/n/10.95 ˛Tm, BAg,
+Overfull \hbox (17.09218pt too wide) in paragraph at lines 122--123
+[]\halfcr `\dvng Dm[]Ef"A[]\halfcr ' \dvng aED[](y \halfcr `\dvng EvòEvçAly\hal
+fcr -\dvng Ef"Ayog[]Z\halfcr ' \dvng EvEht[]vA[]ZA[]
  []
 
 
-Overfull \hbox (8.45723pt too wide) in paragraph at lines 126--127
-[]\U/dn/m/n/10.95 aEKl[] BArt[] s[]-k[]toŒArZ-y ek!ptA[] &yv-ˇTApEyt[][]
- []
-
-
-Underfull \hbox (badness 4981) in paragraph at lines 128--129
-\U/dn/m/n/10.95 Elp[], -vFkrZ[] \OT1/cmr/m/n/10.95 (\U/dn/m/n/10.95 yTA\OT1/cmr
-/m/n/10.95 , \U/dn/m/n/10.95 d[]vnAgyA[],\OT1/cmr/m/n/10.95 ) (\U/dn/m/n/10.95 
-1\OT1/cmr/m/n/10.95 )
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 128--129
-\U/dn/m/n/10.95 s[]-k[]tA@yynsm[]ˇ ‡t[], sADk[] BEv	yEt Ekm[]
- []
-
-
-Underfull \hbox (badness 4467) in paragraph at lines 128--129
-\OT1/cmr/m/n/10.95 ? \U/dn/m/n/10.95 tA-tA, ˛Ad[]Ef», El=y, \OT1/cmr/m/n/10.95 
-(\U/dn/m/n/10.95 vΩFyA\OT1/cmr/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 128--129
-\U/dn/m/n/10.95 ˛Ad[]EfkBAqAZA[] s[]-k[]tBAqyA s[]b^^FD[] d[]YEyt[]m[]\OT1/cmr/
-m/n/10.95 ,
+Underfull \hbox (badness 1237) in paragraph at lines 128--129
+\dvng aA^^FD[]FyA\halfcr , \dvng kZA[]VFyA\halfcr , \dvng i(y[]vmAçA,\halfcr ) 
+\dvng t(˛yoEgZFnA[]
  []
 
 [318]
 Underfull \hbox (badness 5091) in paragraph at lines 137--138
-[]\OT1/cmr/m/n/10.95 What steps need to be taken to enable
+[]\halfcr What steps need to be taken to enable
  []
 
 
 Underfull \hbox (badness 1960) in paragraph at lines 137--138
-\OT1/cmr/m/n/10.95 Employes of Indian establishments going to
+\halfcr Employes of Indian establishments going to
  []
 
-[319]
+
 Underfull \hbox (badness 1014) in paragraph at lines 147--148
-[]\OT1/cmr/m/n/10.95 What stepts would you suggest for securing
+[]\halfcr What stepts would you suggest for securing
  []
 
 
 Underfull \hbox (badness 1655) in paragraph at lines 148--149
-\OT1/cmr/m/n/10.95 in strengtherning the close relation between
+\halfcr in strengtherning the close relation between
  []
 
-Missing character: There is no 	 in font ndir7t!
-Missing character: There is no 	 in font ndir7t!
-
-Underfull \hbox (badness 1895) in paragraph at lines 160--161
-[]\U/dn/m/n/10.95 EfqAyA, loks[]vAyAñ "[]/[]\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.9
-5 ˛doEfkBAqAyA,
+[319]
+Underfull \hbox (badness 4981) in paragraph at lines 160--161
+\dvng s[]˛Et s Enb[]^^FD[] uppAçmAn,\halfcr , \dvng s[]-[]tA@yyn[]
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 160--161
-\U/dn/m/n/10.95 upyog, s[]˛Et sˇ Enb[]^^FDm[] uppAçmAn,\OT1/cmr/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 162--163
-[]\U/dn/m/n/10.95 ˛d[]EfkBqAZA[] ˛Ad[]EfksAEh(yAnA[] c aEBv[]à[],
+Overfull \hbox (14.49687pt too wide) in paragraph at lines 162--163
+[]\dvng ˛d[]EfkBqAZA[] ˛Ad[]EfksAEh(yAnA[] c aEB[]à[], s[]-[]tA@yyn[]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 164--165
-[]\U/dn/m/n/10.95 aEKlBrtFyAyA, mAnEvk\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 v[]‚A
-Enk\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 yAE^^F/k\OT1/cmr/m/n/10.95 -
+[]\dvng aEKlBrtFyAyA, mAnEvk\halfcr -\dvng v[]‚AEnk\halfcr -\dvng yAE^^F/k\half
+cr -
+ []
+
+
+Overfull \hbox (8.45877pt too wide) in paragraph at lines 164--165
+\dvng pErBqAyA, ˛ZAyn[]\halfcr , \dvng aEKlBArtopyogAT[] pAWy[]-tkAnA[]
+ []
+
+
+Underfull \hbox (badness 3735) in paragraph at lines 166--167
+[]\dvng idAnFtnFnA[] BrtFyBqAZA[] tŒtrA@yyn-y []t[]
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 177--178
+[]\dvng sA[]DAr^^WyA[] BrtFyAyA[] sAE	[]\halfcr ??\dvng Ef˛ZASyA[] Bv^^Fmt[]n
  []
 
 [320]
-Overfull \hbox (3.19327pt too wide) in paragraph at lines 170--171
-[]\U/dn/m/n/10.95 s[]-k[]t\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 EvòEvçAly\OT1/cmr
-/m/n/10.95 -\U/dn/m/n/10.95 ˛Et§AqApn-y upkSyˇnAyA, Evqy[]
- []
-
-
-Overfull \hbox (1.83351pt too wide) in paragraph at lines 170--171
-\U/dn/m/n/10.95 Ek[] Bv^^Ft, mˇ ^^Fy^^Ft[] \OT1/cmr/m/n/10.95 ? \U/dn/m/n/10.95
- a^^Fy[]qA[] EvòEvçAlyAnA[] kAy[]"[]/At[]
- []
-
-
-Underfull \hbox (badness 3769) in paragraph at lines 181--182
-\U/dn/m/n/10.95 a@yyn[] Ef"A\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 ˛ZASyA, k-yA[]E
-ct[] k"AyAm[]
- []
-
-
-Underfull \hbox (badness 2310) in paragraph at lines 183--184
-\U/dn/m/n/10.95 tt[] pAñAcA(y\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 Ef"Aˇ˛ZAlFgt[]
-n g[]Fk\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 lAtFn\OT1/cmr/m/n/10.95 -
+Overfull \hbox (9.41759pt too wide) in paragraph at lines 183--184
+\dvng pAñAcA(y\halfcr -\dvng Ef"A˛ZAlFgt[]n g[]Fk\halfcr -\dvng lAtFn\halfcr -\
+dvng Bqyo, -TAn[]n
  []
 
 [321]
@@ -10647,420 +10489,422 @@ Underfull \hbox (badness 1019) in paragraph at lines 210--210
 
 
 Underfull \hbox (badness 1675) in paragraph at lines 217--218
-[]\OT1/cmr/m/n/10.95 What special purpose should this study be
+[]\halfcr What special purpose should this study be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+\dvng EvçA\halfcr -\dvng fAlA[] c s[]-[]tA@yynAT[][] yTAv-ykAEn
  []
 
 [322]
-Overfull \hbox (6.33713pt too wide) in paragraph at lines 242--243
-[]\U/dn/m/n/10.95 aEp BvtA[] ˛d[]f[] \OT1/cmr/m/n/10.95 (\U/dn/m/n/10.95 1\OT1/
-cmr/m/n/10.95 ) \U/dn/m/n/10.95 EvòEvçly[]q[] \OT1/cmr/m/n/10.95 (\U/dn/m/n/10.
-95 2\OT1/cmr/m/n/10.95 ) \U/dn/m/n/10.95 mA@yEmkˇ
+Overfull \hbox (11.73962pt too wide) in paragraph at lines 244--245
+[]\dvng fAE-"ym^^FTA@yynAT[] s[]˛Et EvòEvçAly\halfcr -\dvng s[]-[]tpAWnám[]
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 244--245
-\U/dn/m/n/10.95 pAWnám[] yA &yvˇ -TA vt[]t[]\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.9
-5 sA pyA[](ZA
+Underfull \hbox (badness 6332) in paragraph at lines 254--255
+[]\dvng mA(vBAqA\halfcr , \dvng aAi`lBAqA\halfcr , \dvng s[]-[]t[]\halfcr , \dv
+ng Eh^^FdF c
  []
 
 
-Underfull \hbox (badness 2343) in paragraph at lines 244--245
-\U/dn/m/n/10.95 EvòEvçAly[]s[] c IåfA[] J^^FTAnAm[] a@yApn[]
+Underfull \hbox (badness 3815) in paragraph at lines 254--255
+\dvng ˛d[]EfkF BqA\halfcr ), \dvng iEt ct[]ZA[] bAqAZA[] mAqAZA[]
  []
 
 
-Overfull \hbox (0.84123pt too wide) in paragraph at lines 250--251
-\U/dn/m/n/10.95 EvòˇEvçAly[]q[] c EáymAZAyA[]ˇ t-y s[]-k[]tA@yyn-y
+Underfull \hbox (badness 2781) in paragraph at lines 254--255
+\dvng mA@yEmkEvçfAlyA[] a@yyn[] f»[] ˛f-t[] vA\halfcr ,
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 254--255
-[]\U/dn/m/n/10.95 mA(vBAqA\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 aAi`lBAqA\OT1/cm
-r/m/n/10.95 , \U/dn/m/n/10.95 s[]-k[]tm[]\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 E
-h^^FdF c
+Underfull \hbox (badness 1436) in paragraph at lines 256--257
+[]\dvng yAvtA[] a[]fon etAs[] BqAZA[] a@yyn[] m@yEmk
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 256--257
+\dvng sAr[] tAsA[] m@y[] ô[]y-(v[]n ˛[]y-^^Fv[]n c k[] ám,
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 258--259
+[]\dvng etAs[] BfAZA[] a@ypnT[] mAdyEmkEvGfAlAnA[]
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 267--268
+[]\halfcr What should be the various stages in an
  []
 
 [323]
-Underfull \hbox (badness 2980) in paragraph at lines 267--268
-[]\OT1/cmr/m/n/10.95 What should be the various stages in an
- []
-
-
 Underfull \hbox (badness 2865) in paragraph at lines 271--272
-[]\OT1/cmr/m/n/10.95 What steps are necessary to maintain the
+[]\halfcr What steps are necessary to maintain the
  []
 
-[324]
+
 Underfull \hbox (badness 1931) in paragraph at lines 290--291
-[]\OT1/cmr/m/n/10.95 What position, in your opinion, should be
+[]\halfcr What position, in your opinion, should be
  []
 
 
 Underfull \hbox (badness 1803) in paragraph at lines 292--293
-[]\OT1/cmr/m/n/10.95 What is your opinion about the possibility
+[]\halfcr What is your opinion about the possibility
  []
 
-[325]
-Underfull \hbox (badness 6510) in paragraph at lines 311--312
-[]\U/dn/m/n/10.95 EvòEvçAly[]s[] pAWcmAnAnA[] s[]-k[]tAEtErƒAnA[]
- []
-
-
-Underfull \hbox (badness 4279) in paragraph at lines 311--312
-\U/dn/m/n/10.95 Env[]fAnFyA,\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 yTA\OT1/cmr/m/
-n/10.95 ----\U/dn/m/n/10.95 s[]-k[]tkA&ynAVkAl[]kAr\OT1/cmr/m/n/10.95 -
+[324] [325]
+Underfull \hbox (badness 1314) in paragraph at lines 309--310
+[]\dvng kA[] kA[] a<yynfAKA[] s[]-[]tBAqyA yToEct,
  []
 
 
-Underfull \hbox (badness 5077) in paragraph at lines 311--312
-\U/dn/m/n/10.95 fA-/AZAm[] aAi`lsAEh(ypAWnám[] Env[]fnm[]\OT1/cmr/m/n/10.95 ,
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[]\dvng EvòEvçAly[][] pAWcmAnAnA[] s[]-[]tAEtErƒAnA[]
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 311--312
-\U/dn/m/n/10.95 BArtFygEZtAy[]v[][]d[]\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 df[]n
-Dm[]ˇ fA-/AdFnAm[] iEtˇ
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+\dvng yTA\halfcr ----\dvng s[]-[]tkA&ynAVkAl[]kAr\halfcr -
  []
 
 
-Overfull \hbox (2.47594pt too wide) in paragraph at lines 316--317
-[]\U/dn/m/n/10.95 Bd^^Fmtm[] an[]˙[](y\OT1/cmr/m/n/10.95 , (\U/dn/m/n/10.95 1\O
-T1/cmr/m/n/10.95 ) \U/dn/m/n/10.95 pAWˇfAlAs[] s[]-k[]tmhAEvçly[]s[]
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+\dvng fA-/AZA[] aAi`lsAEh(ypAWnám[] Env[]fn[]\halfcr ,
+ []
+
+
+Overfull \hbox (0.89403pt too wide) in paragraph at lines 311--312
+\dvng BArtFygEZtA[]v[][]d[]\halfcr -\dvng df[]nDm[] fA-/AdFnA[] iEthAs-y c
+ []
+
+
+Overfull \hbox (7.9432pt too wide) in paragraph at lines 311--312
+\dvng t[][] t[][] Evqy[][] yTAs[]zy[] Env[]fn[]\halfcr ----\dvng i(T[] k[]cn []
+cyE`t
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 314--315
+[]\dvng pAElBAqAyA, ˛A[]tBAqAZA[] c a@yynA[] s[]-[]tA@yynA[]
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 316--317
+\dvng c\halfcr , (\dvng 2\halfcr ) \dvng m<yAEmkEvçfAlA[]\halfcr , (\dvng 3\hal
+fcr ) \dvng mhAEvçly[][]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 320--321
-\U/dn/m/n/10.95 EvEvDfA-/ZAm[] a@yynAy[]m[] upl<ymAnAEn
+[]\dvng Bv(˛md[]fo s[]-[]tmhAEvçAly[][] pAWfAlA[] c
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 320--321
-\OT1/cmr/m/n/10.95 (\U/dn/m/n/10.95 2\OT1/cmr/m/n/10.95 ) \U/dn/m/n/10.95 fNdˇf
-A-/m[] \OT1/cmr/m/n/10.95 (\U/dn/m/n/10.95 Enzƒ[]n\OT1/cmr/m/n/10.95 , \U/dn/m/
-n/10.95 Ef"yA\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 EvEvD
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+\dvng EvEvDfA-/ZA[] a@yynAy[][] upl<ymAnAEn
  []
 
 
-Overfull \hbox (4.63635pt too wide) in paragraph at lines 320--321
-\U/dn/m/n/10.95 ˇs[]˛dAygt[]n EvEvDAìop[]t[]n @yAkˇsZon c shk[]tm[]\OT1/cmr/m/n
-/10.95 ),
+Overfull \hbox (25.89035pt too wide) in paragraph at lines 320--321
+[]\dvng sADnAEn Ek[]sv!pAEZ EkEm[]y^^FtEn c\halfcr , \dvng Evf[]qt, an^^Ftro/[]
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+\dvng Evqy[][]\halfcr ---(\dvng 1\halfcr ) \dvng v[]dA, \halfcr (\dvng ô[]tsEht
+A,\halfcr ),
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 320--321
+\halfcr (\dvng 2\halfcr ) \dvng fNdfA-/[] \halfcr (\dvng Enzƒ[]n\halfcr , \dvng
+ Ef"yA\halfcr , \dvng EvEvD
+ []
+
+
+Overfull \hbox (0.57214pt too wide) in paragraph at lines 320--321
+\halfcr (\dvng 3\halfcr ) \dvng al[]kAsfA-	cm\halfcr , (\dvng 4\halfcr ) \dvng 
+dfA[]nAEn\halfcr ----\dvng ˛AQy\halfcr -\dvng n&y\halfcr -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+\dvng ^^FyAyo\halfcr , \dvng v[]f[]Eqk[]\halfcr , \dvng sA[](yo[]\halfcr , \dvn
+g mFmA[]sA\halfcr ,
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 320--321
+\dvng v[]dA^^Ft, t^^F/ EZ\halfcr , \dvng aAh[]tsmy, sOgtmt[] c\halfcr ,
+ []
+
+
+Underfull \hbox (badness 5847) in paragraph at lines 320--321
+\halfcr (\dvng 5\halfcr ) \dvng Dm[]fA-/[]\halfcr , []\dvng rAZ[]EthAsO\halfcr 
+, \dvng EfSpfA-/[]\halfcr ,
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 322--323
+[]\dvng fA-/AZA[] a@yApn-y\halfcr , \dvng t[][] c -vt^^F/[]tnJ^^FT
  []
 
 [326]
-Underfull \hbox (badness 1189) in paragraph at lines 324--325
-[]\U/dn/m/n/10.95 fA-/AZAm[] a@yynA@yApnyo, yA prMprAgtA[]
- []
-
-
-Underfull \hbox (badness 3872) in paragraph at lines 324--325
-\U/dn/m/n/10.95 B[]yo_Ep tm[] uGog[] ˛Zv^^Ftr[] vFy[]vÅr[] c
+Underfull \hbox (badness 6204) in paragraph at lines 342--343
+\halfcr and Navya) and Vaisesika, S$[]$mkhya and
  []
 
 [327]
-Underfull \hbox (badness 6204) in paragraph at lines 342--343
-\OT1/cmr/m/n/10.95 and Navya) and Vaisesika, S$[]$mkhya and
- []
-
-Missing character: There is no 	 in font ndir7t!
-Missing character: There is no 	 in font ndir7t!
-
-Underfull \hbox (badness 2269) in paragraph at lines 353--354
-[]\U/dn/m/n/10.95 s[]-k[]tmhAEvçAly[]q[] pAWˇfAlAs[] c vt[]mAnAs[]
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
+[]\dvng s[]-[]tmhAEvçAly[][] pAWfAlA[] c vt[]mAnA[]
  []
 
 
-Overfull \hbox (2.2298pt too wide) in paragraph at lines 353--354
-\U/dn/m/n/10.95 s[]-k[]tA@yApn\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 píEtq[] s[]-k
-[]tpAWnám[] c bhv^^Fmt[]n
+Overfull \hbox (5.5123pt too wide) in paragraph at lines 359--360
+\dvng EvçAvtA[] aAjFEvkAT[] kAEn s[]EctAEn &yvsAyàArAEZ
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 363--364
+[]\dvng BvtA[] ˛d[]f[] EvçmAnAnA[] prMprA[]sAErZ[] sA[]s[]
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 363--364
+\dvng v[]kSy[]\halfcr ? \dvng aE-t c[][]\halfcr , \dvng kFåf[] t[] \halfcr ? \d
+vng aEp
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 363--364
+\dvng s[]Bv[][] et-yA, aAET[]»A, av-TAyA, EvropZA[]\halfcr ,
  []
 
 [328]
-Underfull \hbox (badness 1057) in paragraph at lines 365--366
-\U/dn/m/n/10.95 pErkˇpAWnám, yEd p[]nG[]EVtA, Bv[]y[],\OT1/cmr/m/n/10.95 , \U/d
-n/m/n/10.95 tEh[]
+Overfull \hbox (40.21075pt too wide) in paragraph at lines 365--366
+[]\dvng s[]-[]tmhAEvçAly[][] pAWfAlA[] c ˛cEltA, pArMpErkpAWnám,
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 365--366
-\U/dn/m/n/10.95 sm[]^^FtFZ[]tÅ(s[]-TAprF"A, EvçAET[]n, sm[]E^^FtZ[]\OT1/cmr/m/n
-/10.95 -
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+\dvng yEd []nG[]EVtA, Bv[][],\halfcr , \dvng tEh[]
  []
 
 
-Overfull \hbox (7.79526pt too wide) in paragraph at lines 365--366
-\U/dn/m/n/10.95 EvòEvçAlly\OT1/cmr/m/n/10.95 -\U/dn/m/n/10.95 mA@yEmkEvçAfAlA\O
-T1/cmr/m/n/10.95 -\U/dn/m/n/10.95 prF"[], smAnoˇ
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+\dvng s[]^^FtFZ[]tÅ(s[]-TAprF"A, EvçAET[]n, s[]E^^FtZ[]\halfcr -
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 367--368
-[]\U/dn/m/n/10.95 Bv^^Fmt[]\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 tFZ[]s[]-k[]tpr
-F"A, jnA, sm[]EctA[]
+Overfull \hbox (4.09921pt too wide) in paragraph at lines 365--366
+\dvng EvòEvçAlly\halfcr -\dvng mA@yEmkEvçAfAlA\halfcr -\dvng prF"[], smAnopAED
  []
 
 
-Overfull \hbox (0.79036pt too wide) in paragraph at lines 367--368
-\U/dn/m/n/10.95 EjEvkAm[] upˇlND[][] f«[]y[],\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.
-95 i(y[]tdT[][] k[]^^Fd[]AEDfAsn[]n
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+[]\dvng Bv^^Fmt[]\halfcr , \dvng tFZ[]s[]-[]tprF"A, jnA, s[]EctA[]
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 369--370
-[]\U/dn/m/n/10.95 Eh^^Fd[]nA[] Dm[]dAy-y d[]v-v-y c s[] DArZAy
+Overfull \hbox (45.29057pt too wide) in paragraph at lines 367--368
+\dvng EjEvkA[] uplN[][] f[][],\halfcr , \dvng i(y[]tdT[][] k[]^^F[]AEDfAsn[]n r
+A>yAEDfAn[]ñ
  []
 
 
-Underfull \hbox (badness 7558) in paragraph at lines 369--370
-\U/dn/m/n/10.95 y[] aAEDfAsEnkA, EvBgA, Evç^^Ft[]\OT1/cmr/m/n/10.95 , \U/dn/m/n
-/10.95 t[]q[]
+Overfull \hbox (16.05151pt too wide) in paragraph at lines 369--370
+[]\dvng Eh^^F[]nA[] Dm[]dAy-y d[]v-v-y c s[] DArZAy y[] aAEDfAsEnkA,
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 374--375
-[]\U/dn/m/n/10.95 BvtA[] ˛d[]fo tAs[] tAs[] v[]EdkfAKAs[] v[]dAnA[]
+Overfull \hbox (8.43402pt too wide) in paragraph at lines 369--370
+\dvng EvBgA, Evç^^Ft[]\halfcr , \dvng t[][] tFZ[]s[]-[]tprF"AZA[] EvçAET[]n[] E
+n[]ƒ[],
  []
 
 [329]
 Underfull \hbox (badness 1158) in paragraph at lines 397--398
-\OT1/cmr/m/n/10.95 Government Departments of Hindu Religious
+\halfcr Government Departments of Hindu Religious
  []
 
 [330]
-Missing character: There is no 	 in font ndir7t!
-Missing character: There is no 	 in font ndir7t!
-
-Underfull \hbox (badness 1072) in paragraph at lines 409--410
-[]\U/dn/m/n/10.95 s[]-k[]tBAqAmyAZAm[] iEthAsp[]rAZAnA[] cntATA[]En
+Overfull \hbox (22.35829pt too wide) in paragraph at lines 409--410
+[]\dvng s[]-[]tBAqAmyAZA[] iEthAs[]rAZAnA[] cntATA[]En &yA(yA[]nAEn\halfcr ,
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 409--410
-\U/dn/m/n/10.95 c k[]v[]◊, pEZXtA, yTAv[ykyo>ytA[] dDt[]
+Underfull \hbox (badness 1810) in paragraph at lines 411--412
+[]\dvng s[]-[]tvA^^Vmy[] upv[] y[]mAnA, klAnA[]\halfcr , \dvng EfSpAnA[]\halfcr
+ ,
  []
 
 
-Underfull \hbox (badness 5475) in paragraph at lines 411--412
-\U/dn/m/n/10.95 y^^FV[]Ev_aAnAnA[] c yA, ˛AcFnA, BrtFyA,
+Underfull \hbox (badness 5533) in paragraph at lines 411--412
+\dvng tAsA[] "[]ms[]vD[]nAy BvdEB\halfcr -\dvng ˛yA[]sAr[]ZA kF[]fA,
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 415--416
-[]\U/dn/m/n/10.95 gEZt>yOEtqAdy, s[]-k[]tEvçAfAKA, aAD[]Enkˇ
+Overfull \hbox (35.48747pt too wide) in paragraph at lines 415--416
+[]\dvng gEZt>yOEtqAdy, s[]-[]tEvçAfAKA, aA[]EnkEv‚AnEvçAEnkAy[]
  []
 
 [331]
-Overfull \hbox (0.53918pt too wide) in paragraph at lines 428--429
-[]\U/dn/m/n/10.95 Eky(py[]ÅAm[] ett[] aAv[yk[] yt[] pArMˇpAErkA, nvFˇ
+Overfull \hbox (2.63809pt too wide) in paragraph at lines 430--431
+[]\dvng yA, nvFnA[] pàtF, a[][](y s[]-[]t-y BqA(v[]n e[]EthAEsk[]
  []
 
 
-Underfull \hbox (badness 3108) in paragraph at lines 430--431
-\U/dn/m/n/10.95 EvòEvçAlygtAnA[] pAWfAlAgtAnA[] c sv[][]qA[]
+Overfull \hbox (2.36546pt too wide) in paragraph at lines 430--431
+[]\dvng lnA(mk[] c a@yyn[] Eáyt[]\halfcr , \dvng tAsA[] smAv[]fn[] ˛OYk"A[]
+ []
+
+
+Overfull \hbox (30.97852pt too wide) in paragraph at lines 430--431
+\dvng aDFyAnAnA[] mhAEvçA ly\halfcr -\dvng EvòEvçAlygtAnA[] pAWfAlAgtAnA[]
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 448--449
+\halfcr advantages and drawbacks of the traditional
  []
 
 [332]
-Underfull \hbox (badness 1142) in paragraph at lines 448--449
-\OT1/cmr/m/n/10.95 advantages and drawbacks of the traditional
+Underfull \hbox (badness 2057) in paragraph at lines 450--451
+[]\halfcr How far is it feasible to evolve a pattern
  []
 
 
-Underfull \hbox (badness 2057) in paragraph at lines 450--451
-[]\OT1/cmr/m/n/10.95 How far is it feasible to evolve a pattern
+Underfull \hbox (badness 6110) in paragraph at lines 467--468
+[]\dvng et[] s[]-[]tA@yApn-y ektm[] uå[][y[]\halfcr , \dvng y[]
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 469--470
+[]\dvng a˛gSBvys, []mArA, []mAErkA, c s[]-[]tBAqyA
  []
 
 [333]
-Underfull \hbox (badness 2418) in paragraph at lines 471--472
-[]\U/dn/m/n/10.95 a=y[]tt[] BvtA[] mtm[]\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 yt
-[] avrAs[] k"As[]
+Underfull \hbox (badness 1688) in paragraph at lines 489--490
+[]\dvng s[]-[]t-y []t[] tdA[]q\halfcr ???\dvng kAZA[] EvqyAZA[] c []t[]
  []
 
 
-Overfull \hbox (1.24405pt too wide) in paragraph at lines 485--486
-\OT1/cmr/m/n/10.95 (\U/dn/m/n/10.95 2\OT1/cmr/m/n/10.95 ) \U/dn/m/n/10.95 tAs[]
- tAs[] s[]foDns[]-TAs[]\OT1/cmr/m/n/10.95 , (\U/dn/m/n/10.95 3\OT1/cmr/m/n/10.9
-5 ) \U/dn/m/n/10.95 t^^Ft(-TAnFyˇ
+Underfull \hbox (badness 1502) in paragraph at lines 493--494
+[]\dvng sAmA(y[]n BArt[] d[]f[]\halfcr , \dvng Evf[]q[]Z c BvtA[] ˛d[]f[]\halfc
+r ,
  []
 
 
-Overfull \hbox (1.11777pt too wide) in paragraph at lines 485--486
-\U/dn/m/n/10.95 py[]vE-tTEtm[] a^^Ftr[]Z aE-t EkˇmEp sEvfoq[] BvtA[]
+Underfull \hbox (badness 2564) in paragraph at lines 493--494
+\dvng s[]-[]ts[]foDnAT[] yA[] pàty, a[]Er/y^^Ft[]\halfcr , \dvng tA[]
  []
 
 
-Overfull \hbox (3.14247pt too wide) in paragraph at lines 487--488
-\U/dn/m/n/10.95 tAEn kAEnEct[] s[]foDnpFWEn \OT1/cmr/m/n/10.95 ? \U/dn/m/n/10.9
-5 k[] t[]qAm[] aTA[]j[]noˇ
- []
-
-
-Underfull \hbox (badness 1924) in paragraph at lines 489--490
-\U/dn/m/n/10.95 ett[] BvtA[] gtm[] \OT1/cmr/m/n/10.95 ? \U/dn/m/n/10.95 etAåfA[
-] ˛Ad[]Efk\OT1/cmr/m/n/10.95 -
- []
-
-
-Underfull \hbox (badness 2359) in paragraph at lines 489--490
-\U/dn/m/n/10.95 s[]foDnpFWnA[] EnvA[]h, EkmAôsy, -yAt[] \OT1/cmr/m/n/10.95 ?
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 491--492
-\U/dn/m/n/10.95 sm[]p[]E"tA, sr^^Wy, sEvf[][]q ˛vt[]nAhA[],\OT1/cmr/m/n/10.95 ,
- \U/dn/m/n/10.95 iEt
+Underfull \hbox (badness 2961) in paragraph at lines 495--496
+[]\dvng s[]foDnPl-y uQ[]AyZAT[] kA[] upAyA[] Bv^^Ft,
  []
 
 [334]
 Underfull \hbox (badness 1460) in paragraph at lines 520--521
-[]\OT1/cmr/m/n/10.95 Do your consider the provision avialable at
+[]\halfcr Do your consider the provision avialable at
  []
 
 
 Underfull \hbox (badness 2418) in paragraph at lines 522--523
-[]\OT1/cmr/m/n/10.95 Are there any privately organised Research
+[]\halfcr Are there any privately organised Research
  []
 
 
 Underfull \hbox (badness 2205) in paragraph at lines 524--525
-\OT1/cmr/m/n/10.95 a Research Institute for Sankrit and allied
+\halfcr a Research Institute for Sankrit and allied
  []
 
 
 Underfull \hbox (badness 1360) in paragraph at lines 524--525
-\OT1/cmr/m/n/10.95 regional Research Institutes ? From What
+\halfcr regional Research Institutes ? From What
  []
 
 [335]
-Missing character: There is no 	 in font ndir7t!
-Missing character: There is no 	 in font ndir7t!
-
-Underfull \hbox (badness 5147) in paragraph at lines 537--538
-[]\U/dn/m/n/10.95 s[]-k[]tEvçAEvqy[] y[] EvEvDA, s[]foDnA(mkA,
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 537--538
-\U/dn/m/n/10.95 upámA, ˛v(y[]^^Ft[]\OT1/cmr/m/n/10.95 , \U/dn/m/n/10.95 t[]qA[]
- s[]s[]DAnAy Ek[]Ev D[]
- []
-
-
-Underfull \hbox (badness 3078) in paragraph at lines 539--540
-[]\U/dn/m/n/10.95 Bv(˛d[]f[] s[]-k[]tmhAEvçAly[]s[] pAWfAlAs[] c
+Overfull \hbox (5.11205pt too wide) in paragraph at lines 539--540
+[]\dvng Bv(˛d[]f[] s[]-[]tmhAEvçAly[][] pAWfAlA[] c s[]foDnAT[][]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 548--549
-[]\U/dn/m/n/10.95 k[]n˛kAr[]Z Eky(˛mAZ[] vA k[]^^Fd[]AEDfAsn[]
+[]\dvng k[]n˛kAr[]Z Eky(˛mAZ[] vA k[]^^F[]AEDfAsn[]
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 557--558
+\dvng -vAEmn, sADArZA, c jnA, tAåfh-tElEKtAnA[]
  []
 
 [336]
-Underfull \hbox (badness 8132) in paragraph at lines 552--553
-[]\U/dn/m/n/10.95 aEp sE^^Ft BvtA[] ˛d[]f[] k[]Ect[] mhAhA[],
+Overfull \hbox (4.37837pt too wide) in paragraph at lines 563--564
+[]\dvng aEp c t[][] ht[]ElEKtAly[][] h-tElEKtAnA[] uàArdAn[]\halfcr ,
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 552--553
-\U/dn/m/n/10.95 vA avEt§mAnA[] \OT1/cmr/m/n/10.95 ? \U/dn/m/n/10.95 aEp EvEdtA,
- BvtA[]
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 557--558
-[]\U/dn/m/n/10.95 BvtA[] ˛d[]f[] ˛EtE-vk[]q[] s[]g[]h[]q[] avE-TtAEn
- []
-
-
-Underfull \hbox (badness 1014) in paragraph at lines 557--558
-\U/dn/m/n/10.95 etAåfs[]JhAZA[] -vAEmn, sADArZA, c jnA,
- []
-
-
-Underfull \hbox (badness 1264) in paragraph at lines 559--560
-[]\U/dn/m/n/10.95 sM-k[]th-tElEKtAnA[] s[]cyn[] Bv(˛d[]f[] sMyk[]
- []
-
-
-Overfull \hbox (0.1992pt too wide) in paragraph at lines 561--562
-[]\U/dn/m/n/10.95 Bv(˛d[]f[] EvçmAnAnA[] h-tElEKtAlygtAn[] s[]-k[]tˇ
- []
-
-
-Overfull \hbox (1.02242pt too wide) in paragraph at lines 563--564
-[]\U/dn/m/n/10.95 aEp c t[]q[] ht[]ElEKtAly[]q[] h-tElEKˇtAnAm[] uàArˇ
- []
-
-
-Underfull \hbox (badness 1102) in paragraph at lines 566--567
-\U/dn/m/n/10.95 ElEKtAnA[] c pErfFlnˇ Evqy[] uàArdAnEvqy[] vA
+Overfull \hbox (25.64648pt too wide) in paragraph at lines 563--564
+\dvng a[]l[]Kn[]\halfcr , \dvng CAyAl[]KA,\halfcr , \dvng a[]QCAEykAEn\halfcr ,
+ \dvng a[]QCAEykvAcn[]
  []
 
 [337]
 Underfull \hbox (badness 1082) in paragraph at lines 574--575
-[]\OT1/cmr/m/n/10.95 What machinery would you propose for the
+[]\halfcr What machinery would you propose for the
  []
 
 
 Underfull \hbox (badness 2538) in paragraph at lines 574--575
-\OT1/cmr/m/n/10.95 proper coordination of the various research
+\halfcr proper coordination of the various research
  []
 
 
 Underfull \hbox (badness 1946) in paragraph at lines 576--577
-\OT1/cmr/m/n/10.95 your part of the country ? If it is not
+\halfcr your part of the country ? If it is not
  []
 
 
 Underfull \hbox (badness 3088) in paragraph at lines 592--593
-[]\OT1/cmr/m/n/10.95 Are the Sanskrit manuscripts lying private
+[]\halfcr Are the Sanskrit manuscripts lying private
  []
 
 [338]
 Underfull \hbox (badness 1990) in paragraph at lines 598--599
-\OT1/cmr/m/n/10.95 preparation of photostats and microfilms of
+\halfcr preparation of photostats and microfilms of
  []
 
 
 Underfull \hbox (badness 5064) in paragraph at lines 602--603
-\OT1/cmr/m/n/10.95 in the libraries in your part of the country
+\halfcr in the libraries in your part of the country
  []
 
 
-Overfull \hbox (0.67032pt too wide) in paragraph at lines 609--610
-[]\U/dn/m/n/10.95 Evd[]fAgt[]q[] v-t[]s[]JhaAly[]q[] J^^FyAly[]q[] c \OT1/cmr/m
-/n/10.95 (\U/dn/m/n/10.95 EvfvjnFˇ
+Underfull \hbox (badness 4429) in paragraph at lines 607--608
+[]\dvng BArtFy[], v[]d[]Efk[]ñ aA[]Enk[], EvíE<d, s[]-[]tEvqy[]
  []
 
 
-Overfull \hbox (2.95717pt too wide) in paragraph at lines 618--619
-[]\U/dn/m/n/10.95 a=y[]tt[] Bv^^Fm(yn[]sAr[]Z aAv[ykm[]\OT1/cmr/m/n/10.95 , \U/
-dn/m/n/10.95 yt[] k[]^^Fd[]AEDfAsn[]n
- []
-
-
-Overfull \hbox (3.02023pt too wide) in paragraph at lines 618--619
-\U/dn/m/n/10.95 nAm[] aAd[]EfnFnA[] vA t[]q[] t[]q[] rA>y[]	vEp ˛Et§Apn[] Bv<dc
-,
- []
-
-
-Overfull \hbox (0.70529pt too wide) in paragraph at lines 622--623
-\U/dn/m/n/10.95 kEn§yA mA/yA kA yo`ytA -yAt[]\OT1/cmr/m/n/10.95 ---(\U/dn/m/n/1
-0.95 1\OT1/cmr/m/n/10.95 ) \U/dn/m/n/10.95 mA@yEmkˇ
+Underfull \hbox (badness 1708) in paragraph at lines 622--623
+[]\dvng u^^FtroƒA[] s[]TA[] En[]>ymAnAnA[] s[]-[]tA@yApkAnA[]
  []
 
 [339]
 Underfull \hbox (badness 10000) in paragraph at lines 624--625
-[]\U/dn/m/n/10.95 s[]-k[]tAdyApkAnA[] k[]t[] a@yApnt^^F/A<ysnm[]
+[]\dvng s[]-[]tAdyApkAnA[] []t[] a@yApnt^^F/A<ysn[]
  []
 
 
-Overfull \hbox (6.83884pt too wide) in paragraph at lines 628--629
-[]\U/dn/m/n/10.95 EvEdDvgF[]yAZA[] s[]-k[]tA@yApkAnA[] s[]-k[]tpFW˛DAnAnA[]
+Underfull \hbox (badness 2772) in paragraph at lines 626--627
+[]\dvng yTAv[ykyo`ytA[] dDAnA, t^^FtíEg[]yA, a@yApkA,
  []
 
 
 Underfull \hbox (badness 1817) in paragraph at lines 636--637
-\OT1/cmr/m/n/10.95 Preserved in museums and libraries (public and
+\halfcr Preserved in museums and libraries (public and
  []
 
 
@@ -11070,84 +10914,111 @@ Underfull \hbox (badness 1817) in paragraph at lines 640--640
 
 
 Underfull \hbox (badness 1776) in paragraph at lines 649--650
-\OT1/cmr/m/n/10.95 Colleges, (iii) Universities and (iv) Sanskrit
+\halfcr Colleges, (iii) Universities and (iv) Sanskrit
  []
 
 [340]
-Underfull \hbox (badness 5681) in paragraph at lines 663--664
-[]\U/dn/m/n/10.95 s[]-k[]tA@yynA<y[]dyAy Bv(˛d[]f[] upl<ymAnA,
+Overfull \hbox (27.35663pt too wide) in paragraph at lines 663--664
+[]\dvng s[]-[]tA@yynA<[]dyAy Bv(˛d[]f[] upl<ymAnA, ôàAdAyEnDyA,
  []
 
 
-Overfull \hbox (0.83981pt too wide) in paragraph at lines 665--666
-\U/dn/m/n/10.95 pFW[]<y[C t[]-t[], rAjs[]-TAnAEDp[], B[]-vAEmEBñ ˛Ak[]
+Underfull \hbox (badness 3919) in paragraph at lines 665--666
+[]\dvng ydA aEDfAsn[]n []-vAEmnA[] aEDkArA, aA(m
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 665--666
+\dvng aAyojn[] []t[] Ek[]\halfcr , \dvng y[]n s[]-[]tEvíâc, s[]-[]t
+ []
+
+
+Overfull \hbox (6.50243pt too wide) in paragraph at lines 671--672
+[]\dvng k[]^^F[]AEDfAsn[]n rAjyAEDfAsn[]ñ s[]-[]ts[]foDnmE^^Fdr[]<y,
+ []
+
+
+Overfull \hbox (58.86786pt too wide) in paragraph at lines 673--674
+[]\dvng ôí[]y[]<y, s[]-[]tmhAEvçAly[]<y,\halfcr , \dvng pAWAfAlA<y,\halfcr , `\
+dvng c[]	pAWFVol[]<y,\halfcr '
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--674
+\dvng c k[]^^F[]AEDfAsn[]n\halfcr ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--674
+\dvng rA>yAEDfAsn[],\halfcr , \dvng -TAEnks[]-TEB, c dFymAn[]
  []
 
 [341]
-Underfull \hbox (badness 10000) in paragraph at lines 673--674
-\OT1/cmr/m/n/10.95 `\U/dn/m/n/10.95 ct[]	pAWFVol[]<y,\OT1/cmr/m/n/10.95 ' \U/dn
-/m/n/10.95 c k[]^^Fd[]AEDfAsn[]n\OT1/cmr/m/n/10.95 ,
+Overfull \hbox (52.37183pt too wide) in paragraph at lines 677--678
+[]\dvng EvçAET[]n, s[]-[]tA@yyno^^F[]K[] EvDA[][] CA/[]E^^Ft\halfcr , \dvng En,
+[]SkA@yyn[]\halfcr ,
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 677--678
-\U/dn/m/n/10.95 i(y[]vmAdFEn kAEn sADnAEn aAôEyˇ t[]m[]
+Overfull \hbox (11.72778pt too wide) in paragraph at lines 677--678
+\dvng En[][]SyA BojnAvAs&yv-TA\halfcr ---\dvng i(y[]vmAdFEn kAEn sADnAEn
+ []
+
+
+Underfull \hbox (badness 6641) in paragraph at lines 687--688
+[]\dvng t[]-t[], EvòEvçAly[],\halfcr , \dvng s[]-TAEB,\halfcr , \dvng aEDfAsn[]
+,\halfcr ,
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 687--688
+\dvng mAmAtEBñ fA-/Evq y[][] dFymAnAnA[] upADFnA[]
  []
 
 
 Underfull \hbox (badness 3525) in paragraph at lines 696--697
-\OT1/cmr/m/n/10.95 available in your part of the country for
+\halfcr available in your part of the country for
  []
 
 
 Underfull \hbox (badness 1168) in paragraph at lines 698--699
-[]\OT1/cmr/m/n/10.95 Following the taking over of \OT1/cmr/m/it/10.95 Zamindari
-s \OT1/cmr/m/n/10.95 by
+[]\halfcr Following the taking over of \OT1/cmr/m/it/10.95 Zamindaris \halfcr b
+y
+ []
+
+
+Overfull \hbox (0.78111pt too wide) in paragraph at lines 704--705
+[]\halfcr What prin-ci-ples would you rec-om-mend for grants-
  []
 
 [342]
-Overfull \hbox (0.78111pt too wide) in paragraph at lines 704--705
-[]\OT1/cmr/m/n/10.95 What prin-ci-ples would you rec-om-mend for grants-
- []
-
-
 Underfull \hbox (badness 1571) in paragraph at lines 706--707
-\OT1/cmr/m/n/10.95 to \OT1/cmr/m/it/10.95 bona fide\OT1/cmr/m/n/10.95 , Sanskri
-t Colleges, P$[]$tha$[][]$l$[]$s,
+\halfcr to \OT1/cmr/m/it/10.95 bona fide\halfcr , Sanskrit Colleges, P$[]$tha$[
+][]$l$[]$s,
  []
 
 
 Underfull \hbox (badness 1796) in paragraph at lines 708--709
-[]\OT1/cmr/m/n/10.95 In what way can the public participate in
+[]\halfcr In what way can the public participate in
  []
 
 
 Underfull \hbox (badness 2142) in paragraph at lines 710--711
-\OT1/cmr/m/n/10.95 ships, free boarding and lodging, etc., are
+\halfcr ships, free boarding and lodging, etc., are
  []
 
 [343] [344]
 Underfull \hbox (badness 1226) in paragraph at lines 743--744
-\OT1/cmr/m/n/10.95 on which you desirre to place your views before the
+\halfcr on which you desirre to place your views before the
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
- [345]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
- (./mainfile.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
-Package rerunfilecheck Info: File `mainfile.out' has not changed.
-(rerunfilecheck)             Checksum: 409302F9678FC2CC31C1510101CBFAEA;576.
-
+) [345] (./mainfile.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  )
 (\end occurred inside a group at level 2)
 
@@ -11155,12 +11026,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
 ### simple group (level 1) entered at line 2675 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7659 strings out of 493090
- 105914 string characters out of 6134874
- 336252 words of memory out of 5000000
- 10999 multiletter control sequences out of 15000+600000
- 29471 words of font info for 65 fonts, out of 8000000 for 9000
+ 3934 strings out of 493090
+ 49187 string characters out of 6134874
+ 123805 words of memory out of 5000000
+ 7280 multiletter control sequences out of 15000+600000
+ 66543 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,13n,43p,4409b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,13n,43p,4409b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on mainfile.dvi (364 pages, 1610144 bytes).
+Output written on mainfile.dvi (364 pages, 1293184 bytes).
