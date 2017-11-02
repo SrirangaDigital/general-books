@@ -1,5 +1,8 @@
 \documentclass[twoside,openany]{book}
 \input src/macros
+
+\hyphenation{sholxVka-dalilx}
+
 \begin{document}
 
 \fontsize{12}{14}\selectfont
@@ -12,8 +15,8 @@
 \input src/copyright
 \eject
 
-\input src/guruji
-\newpage
+%~ \input src/guruji
+%~ \newpage
 
 \input src/preface
 \newpage
@@ -21,17 +24,26 @@
 \tableofcontents
 \newpage
 
-
+%~ \input src/stotra
 
 \mainmatter
 
-\input src/stotra
+
 \input src/part1/chapter1
 \input src/part1/chapter2
 \input src/part1/chapter3
 \input src/part1/chapter4
 \input src/part1/chapter5
 \input src/part1/chapter6
+
+\setcounter{chapter}{0}
+
+\input src/part2/chapter1
+\input src/part2/chapter2
+\input src/part2/chapter3
+\input src/part2/chapter4
+\input src/part2/chapter5
+\input src/part2/chapter6
 \input src/part2/chapter7
 \input src/part2/chapter8
 \input src/part2/chapter9
