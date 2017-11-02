@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{nudi}
+\renewcommand{\familydefault}{ndi}
+\def\abstractname{sArAMsha}
+\def\appendixname{anubaMdha}
+\def\bibname{garxMthasUci}
+\def\ccname{nakaluparxti}
+\def\chaptername{adhAyxya}
+\def\contentsname{viSayasUci}
+\def\enclname{seVrikegaLu}
+\def\figurename{citarx}
+\def\headpagename{puTa}
+\def\indexname{anukarxmaNike}
+\def\listfigurename{citarxgaLa paTiTx}
+\def\listtablename{koVSaTxkagaLa paTiTx}
+\def\partname{BAga}
+\def\prefacename{mununxDi}
+\def\seename{noVDi}
+\def\refname{ulelxVKa}
+\def\tablename{koVSaTxka}
+\def\today{\ifcase\month\or
+janavari\or
+Pebarxvari\or
+mAcfR\or
+Epirxlf\or
+meV\or
+jUnf\or
+juleY\or
+AgasfTx\or 
+sepeTxMbarf\or 
+akoVTxbarf\or
+navaMbarf\or 
+DiseMbarf
+\fi\space\number\day, \number\year}
+
+\makeatletter
+\defaulthyphenchar=145
+\def\-{\discretionary{}{}{}}
+\makeatother
+\endinput
+

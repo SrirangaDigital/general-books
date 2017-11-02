@@ -1,0 +1,29 @@
+%\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{amsmath}
+\definecolor{mycolor}{RGB}{158,23,23}
+
+
+%~ \usepackage[papersize={136.15mm,216.92mm},textwidth=102mm, textheight=169mm,
+%~ topmargin=25mm,botmargin=22.92mm,
+%~ leftmargin=17.075mm,rightmargin=17.075mm]{zwpagelayout}
+
+\usepackage[papersize={136.15mm,216.92mm},textwidth=102mm, textheight=169mm,
+topmargin=15mm,botmargin=15.92mm,headheight=5mm,headsep=5mm,footskip=7mm,
+leftmargin=17.075mm,rightmargin=17.075mm]{zwpagelayout}
+
+\def\eng#1{\rm#1}
+
+%\setdefaultlanguage{kannada}
+%\setmainfont[Script=Kannada,Ligatures=TeX,AutoFakeBold=3.2,AutoFakeSlant,WordSpace=1.2]{NudiUni01k}
+%\XeTeXgenerateactualtext 1
+%\newfontfamily\eng{Nimbus Roman No9 L}
+%\newfontfamily\dn{AA_NAGARI_SHREE_L2}
+
+
+\def\big#1{\textcolor{mycolor}{{\huge\bfseries #1}}}
+
+\def\shloka{\smallskip\bgroup\noindent\raggedright\leftskip=25pt\vbox\bgroup\fontsize{10pt}{12pt}\selectfont\relax\ignorespaces}
+\def\endshloka{\egroup\egroup\par\smallskip}
