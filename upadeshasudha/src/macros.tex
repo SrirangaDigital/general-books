@@ -1,31 +1,142 @@
-\usepackage{polyglossia}
-\usepackage{fontspec,graphicx}
+\usepackage{nudi}
+\usepackage{pifont}
+\usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{color}
-\usepackage{amsmath}
 \definecolor{mycolor}{RGB}{158,23,23}
 
-
-%~ \usepackage[papersize={136.15mm,216.92mm},textwidth=102mm, textheight=169mm,
-%~ topmargin=25mm,botmargin=22.92mm,
-%~ leftmargin=17.075mm,rightmargin=17.075mm]{zwpagelayout}
-
-\usepackage[papersize={136.15mm,216.92mm},textwidth=102mm, textheight=169mm,
-topmargin=15mm,botmargin=15.92mm,headheight=5mm,headsep=5mm,footskip=7mm,
-leftmargin=17.075mm,rightmargin=17.075mm]{zwpagelayout}
-
-\setdefaultlanguage{kannada}
-\setmainfont[Script=Kannada,Ligatures=TeX,AutoFakeBold=3.2,AutoFakeSlant,WordSpace=1.2]{NudiUni01k}
-\XeTeXgenerateactualtext 1
-\newfontfamily\eng{Nimbus Roman No9 L}
-\newfontfamily\dn{AA_NAGARI_SHREE_L2}
+\usepackage[papersize={137mm,217mm},textwidth=102mm, textheight=173mm,
+topmargin=18mm,botmargin=20mm,headheight=3mm,headsep=3mm,footskip=0mm,
+leftmargin=17.5mm,rightmargin=17.5mm]{zwpagelayout}
 
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
+\def\eng#1{\rm#1}
 
+\makeatletter
+\def\@makechapterhead#1{%
+	\thispagestyle{empty}%
+ \vspace*{16\p@}%
+ {\parindent \z@ \centering \normalfont
+ %~ \ifnum \c@secnumdepth >\m@ne
+ %~ \if@mainmatter
+ %~ \huge\bfseries \@chapapp\space \thechapter
+ %~ \par\nobreak
+ %~ \vskip 20\p@
+ %~ \fi
+ %~ \fi
+ \interlinepenalty\@M
+ \huge \bfseries {\LARGE\bfseries \thechapter.} #1\par\nobreak
+ \vskip 16\p@
+ }}
 
+\def\@makeschapterhead#1{%
+ \thispagestyle{empty}%	
+ \vspace*{50\p@}%
+ {\parindent \z@ \raggedright
+ \normalfont
+ \interlinepenalty\@M
+ \Huge \bfseries #1\par\nobreak
+ \vskip 40\p@
+ }}
+ 
+\renewcommand\tableofcontents{%
+\if@twocolumn
+ \@restonecoltrue\onecolumn
+\else
+ \@restonecolfalse
+\fi
+\chapter*{\contentsname
+	\@mkboth{%
+	 \contentsname}{\contentsname}}%
+\@starttoc{toc}%
+\if@restonecol\twocolumn\fi
+}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\def\addcontentsline#1#2#3{%
+ \addtocontents{#1}{\protect\contentsline{#2}{#3}{\eng\thepage}}}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+ \if@mainmatter
+ \refstepcounter{chapter}%
+ \typeout{\@chapapp\space\thechapter.}%
+ \addcontentsline{toc}{chapter}%
+ {\protect\numberline{\thechapter.}#1}%
+ \else
+ \addcontentsline{toc}{chapter}{#1}%
+ \fi
+ \else
+ \addcontentsline{toc}{chapter}{#1}%
+ \fi
+ \chaptermark{#1}%
+ \addtocontents{lof}{\protect\addvspace{10\p@}}%
+ \addtocontents{lot}{\protect\addvspace{10\p@}}%
+ \if@twocolumn
+ \@topnewpage[\@makechapterhead{#2}]%
+ \else
+ \@makechapterhead{#2}%
+ \@afterheading
+ \fi}
+
+\renewcommand*\l@chapter[2]{%
+ \ifnum \c@tocdepth >\m@ne
+ \addpenalty{-\@highpenalty}%
+ %~ \vskip 1.0em \@plus\p@
+ \setlength\@tempdima{2em}%
+ \begingroup
+ \parindent \z@ \rightskip \@pnumwidth
+ \parfillskip -\@pnumwidth
+ \leavevmode \bfseries
+ \advance\leftskip\@tempdima
+ \hskip -\leftskip
+ #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+ \penalty\@highpenalty
+ \endgroup
+ \fi}
+
+\def\@part[#1]#2{%
+	\thispagestyle{empty}%
+ \ifnum \c@secnumdepth >-2\relax
+ \refstepcounter{part}%
+ \addcontentsline{toc}{part}{#1}%
+ \else
+ \addcontentsline{toc}{part}{#1}%
+ \fi
+ \markboth{}{}%
+ {\centering
+ \interlinepenalty \@M
+ \normalfont
+ \ifnum \c@secnumdepth >-2\relax
+ %~ \huge\bfseries \partname\nobreakspace\thepart
+ \par
+ \vskip 20\p@
+ \fi
+ {\fontsize{40}{42}\selectfont\bfseries #2}\par}%
+ \@endpart}
+
+\makeatother
+ 
+ 
+\def\endchapter{\bigskip\centerline{\ding{96}\ding{96}\ding{96}}} 
 \def\big#1{\textcolor{mycolor}{{\huge\bfseries #1}}}
+\def\s{\char'263}
 
+\def\shloka{\bgroup\noindent\raggedright\leftskip=40pt\vbox\bgroup\relax\ignorespaces}
+\def\endshloka{\egroup\egroup\par}
 
-\def\shloka{\smallskip\bgroup\noindent\raggedright\leftskip=25pt\vbox\bgroup\fontsize{10pt}{12pt}\selectfont\relax\ignorespaces}
-\def\endshloka{\egroup\egroup\par\smallskip}
+\parskip=10pt
+\parindent=22pt
+
+\linespread{1.1}
+\defaulthyphenchar=32
+\input src/dictionary
+
+\renewcommand{\headrulewidth}{0pt}
+
+\def\eng{\fontfamily{txr}\fontsize{10}{12}\selectfont}
+
+\tolerance=4000
