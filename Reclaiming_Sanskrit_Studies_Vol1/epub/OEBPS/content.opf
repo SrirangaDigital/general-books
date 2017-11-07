@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="uid">
+	<metadata  xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<dc:title>एमएस एक्सेल का परिचय</dc:title>
+		<dc:language>hn</dc:language>
+		<dc:identifier id="uid">http://www.sirinudi.org/books/id1</dc:identifier>
+		<dc:subject>Text book on Microsoft Excel</dc:subject>
+		<dc:description>
+			This text book covers all the intricacies of MS Excel in Hindi
+		</dc:description>  
+		<dc:source>Rajasthan government text books</dc:source>		          
+		<dc:creator>Unknown</dc:creator>      
+		<dc:publisher>Unknown</dc:publisher>
+		<dc:date>2017-10-09</dc:date>
+		<meta property="dcterms:modified">2017-10-09T14:34:00Z</meta>
+		<meta property="schema:accessMode">textual</meta>
+		<meta property="schema:accessMode">visual</meta>
+		<meta property="schema:accessModeSufficient">textual,visual</meta>		
+		<meta property="schema:accessibilityHazard">none</meta>
+		<meta property="schema:accessibilityFeature">tableOfContents</meta>
+		<meta property="schema:accessibilitySummary">The publication is missing alternative text for complex diagrams.</meta>
+		<meta property="schema:accessibilityAPI">ARIA</meta>
+	</metadata>
+	<manifest>
+		<item id="ncx"            href="toc.ncx"                             media-type="application/x-dtbncx+xml" />
+		<item id="css"            href="css/style.css"                       media-type="text/css" />
+		<item id="myfont1"        href="css/A-D-NWN-N.ttf"           	       media-type="application/vnd.ms-opentype"/>      
+		<item id="myfont2"        href="css/A-D-NWN-B.ttf"           	       media-type="application/vnd.ms-opentype"/>      
+		<item id="title"          href="title.xhtml"                         media-type="application/xhtml+xml" />
+		<item id="chapter1"       href="chapter1.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter2"       href="chapter2.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter3"       href="chapter3.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter4"       href="chapter4.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter5"       href="chapter5.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter6"       href="chapter6.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter7"       href="chapter7.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter8"       href="chapter8.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter9"       href="chapter9.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter10"       href="chapter10.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter11"       href="chapter11.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter12"       href="chapter12.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter13"       href="chapter13.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="chapter14"       href="chapter14.xhtml"                      media-type="application/xhtml+xml" />
+		<item id="toc"            href="toc.xhtml"     properties="nav"      media-type="application/xhtml+xml" />
+		<item id="chap1_fig1"     href="images/chapter1_fig01.png"            media-type="image/png" />
+		<item id="chap1_fig2"     href="images/chapter1_fig02.png"            media-type="image/png" />
+		<item id="chap1_fig3"     href="images/chapter1_fig03.png"            media-type="image/png" />
+		<item id="chap1_fig4"     href="images/chapter1_fig04.png"            media-type="image/png" />
+		<item id="chap1_fig5"     href="images/chapter1_fig05.png"	media-type="image/png" />		
+		<item id="chap1_fig6"     href="images/chapter1_fig06.png"	media-type="image/png" />		
+		<item id="chap1_fig7"     href="images/chapter1_fig07.png"	media-type="image/png" />		
+		<item id="chap1_fig8"     href="images/chapter1_fig08.png"	media-type="image/png" />		
+		<item id="chap1_fig9"     href="images/chapter1_fig09.png"	media-type="image/png" />		
+		<item id="chap1_fig10" href="images/chapter1_fig10.png"	media-type="image/png" />		
+		<item id="chap1_fig11" href="images/chapter1_fig11.png"	media-type="image/png" />		
+		<item id="chap1_fig12" href="images/chapter1_fig12.png"	media-type="image/png" />		
+		<item id="chap1_fig13" href="images/chapter1_fig13.png"	media-type="image/png" />		
+		<item id="chap1_fig14" href="images/chapter1_fig14.png"	media-type="image/png" />		
+		<item id="chap1_fig15" href="images/chapter1_fig15.png"	media-type="image/png" />		
+		<item id="chap1_fig16" href="images/chapter1_fig16.png"	media-type="image/png" />		
+		<item id="chap1_fig17" href="images/chapter1_fig17.png"	media-type="image/png" />		
+		<item id="chap1_fig18" href="images/chapter1_fig18.png"	media-type="image/png" />		
+		<item id="chap1_fig19" href="images/chapter1_fig19.png"	media-type="image/png" />		
+		<item id="chap1_fig20" href="images/chapter1_fig20.png"	media-type="image/png" />		
+		<item id="chap1_fig21" href="images/chapter1_fig21.png"	media-type="image/png" />		
+		<item id="chap1_fig22" href="images/chapter1_fig22.png"	media-type="image/png" />		
+		<item id="chap1_fig23" href="images/chapter1_fig23.png"	media-type="image/png" />		
+		<item id="chap1_fig24" href="images/chapter1_fig24.png"	media-type="image/png" />		
+		<item id="chap1_fig25" href="images/chapter1_fig25.png"	media-type="image/png" />		
+		<item id="chap1_fig26" href="images/chapter1_fig26.png"	media-type="image/png" />		
+		<item id="chap1_fig27" href="images/chapter1_fig27.png"	media-type="image/png" />		
+		<item id="chap1_fig28" href="images/chapter1_fig28.png"	media-type="image/png" />		
+		<item id="chap1_fig29" href="images/chapter1_fig29.png"	media-type="image/png" />		
+		<item id="chap1_fig30" href="images/chapter1_fig30.png"	media-type="image/png" />		
+		<item id="chap1_fig31" href="images/chapter1_fig31.png"	media-type="image/png" />		
+		<item id="chap1_fig32" href="images/chapter1_fig32.png"	media-type="image/png" />		
+		<item id="chap1_fig33" href="images/chapter1_fig33.png"	media-type="image/png" />		
+		<item id="chap1_fig34" href="images/chapter1_fig34.png"	media-type="image/png" />		
+		<item id="chap1_fig35" href="images/chapter1_fig35.png"	media-type="image/png" />		
+		<item id="chap1_fig36" href="images/chapter1_fig36.png"	media-type="image/png" />		
+		<item id="chap1_fig37" href="images/chapter1_fig37.png"	media-type="image/png" />		
+		<item id="chap1_fig38" href="images/chapter1_fig38.png"	media-type="image/png" />		
+		<item id="chap1_fig39" href="images/chapter1_fig39.png"	media-type="image/png" />		
+		<item id="chap1_fig40" href="images/chapter1_fig40.png"	media-type="image/png" />		
+		<item id="chap1_fig41" href="images/chapter1_fig41.png"	media-type="image/png" />		
+		<item id="chap1_fig42" href="images/chapter1_fig42.png"	media-type="image/png" />		
+		<item id="chap1_fig43" href="images/chapter1_fig43.png"	media-type="image/png" />		
+		<item id="chap1_fig44" href="images/chapter1_fig44.png"	media-type="image/png" />		
+		<item id="chap1_fig45" href="images/chapter1_fig45.png"	media-type="image/png" />		
+		<item id="chap1_fig46" href="images/chapter1_fig46.png"	media-type="image/png" />		
+		<item id="chap1_fig47" href="images/chapter1_fig47.png"	media-type="image/png" />		
+		<item id="chap1_fig48" href="images/chapter1_fig48.png"	media-type="image/png" />		
+		<item id="chap1_fig49" href="images/chapter1_fig49.png"	media-type="image/png" />		
+		<item id="chap1_fig50" href="images/chapter1_fig50.png"	media-type="image/png" />		
+		<item id="chap1_fig51" href="images/chapter1_fig51.png"	media-type="image/png" />		
+		<item id="chap1_fig52" href="images/chapter1_fig52.png"	media-type="image/png" />		
+		<item id="chap1_fig53" href="images/chapter1_fig53.png"	media-type="image/png" />		
+		<item id="chap1_fig54" href="images/chapter1_fig54.png"	media-type="image/png" />		
+		<item id="chap1_fig55" href="images/chapter1_fig55.png"	media-type="image/png" />		
+		<item id="chap1_fig56" href="images/chapter1_fig56.png"	media-type="image/png" />		
+		<item id="chap1_fig57" href="images/chapter1_fig57.png"	media-type="image/png" />		
+		<item id="chap1_fig58" href="images/chapter1_fig58.png"	media-type="image/png" />		
+		<item id="chap1_fig59" href="images/chapter1_fig59.png"	media-type="image/png" />		
+		<item id="chap1_fig60" href="images/chapter1_fig60.png"	media-type="image/png" />		
+		<item id="chap1_fig61" href="images/chapter1_fig61.png"	media-type="image/png" />		
+		<item id="chap1_fig62" href="images/chapter1_fig62.png"	media-type="image/png" />		
+		<item id="chap1_fig63" href="images/chapter1_fig63.png"	media-type="image/png" />		
+		<item id="chap1_fig64" href="images/chapter1_fig64.png"	media-type="image/png" />		
+		<item id="chap1_fig65" href="images/chapter1_fig65.png"	media-type="image/png" />		
+		<item id="chap1_fig66" href="images/chapter1_fig66.png"	media-type="image/png" />		
+		<item id="chap1_fig67" href="images/chapter1_fig67.png"	media-type="image/png" />		
+		<item id="chap1_fig68" href="images/chapter1_fig68.png"	media-type="image/png" />		
+		<item id="chap1_fig69" href="images/chapter1_fig69.png"	media-type="image/png" />		
+		<item id="chap1_fig70" href="images/chapter1_fig70.png"	media-type="image/png" />		
+		<item id="chap1_fig71" href="images/chapter1_fig71.png"	media-type="image/png" />		
+		<item id="chap1_fig72" href="images/chapter1_fig72.png"	media-type="image/png" />		
+		<item id="chap1_fig73" href="images/chapter1_fig73.png"	media-type="image/png" />
+		<item id="chap2_fig1" href="images/chapter2_fig01.png" media-type="image/png" />
+		<item id="chap2_fig2" href="images/chapter2_fig02.png" media-type="image/png" />
+		<item id="chap2_fig3" href="images/chapter2_fig03.png" media-type="image/png" />
+		<item id="chap2_fig4" href="images/chapter2_fig04.png" media-type="image/png" />
+		<item id="chap2_fig5" href="images/chapter2_fig05.png" media-type="image/png" />
+		<item id="chap2_fig6" href="images/chapter2_fig06.png" media-type="image/png" />
+		<item id="chap2_fig7" href="images/chapter2_fig07.png" media-type="image/png" />
+		<item id="chap2_fig8" href="images/chapter2_fig08.png" media-type="image/png" />
+		<item id="chap2_fig9" href="images/chapter2_fig09.png" media-type="image/png" />
+		<item id="chap2_fig10" href="images/chapter2_fig10.png" media-type="image/png" />
+		<item id="chap2_fig11" href="images/chapter2_fig11.png" media-type="image/png" />
+		<item id="chap2_fig12" href="images/chapter2_fig12.png" media-type="image/png" />
+		<item id="chap2_fig13" href="images/chapter2_fig13.png" media-type="image/png" />
+		<item id="chap2_fig14" href="images/chapter2_fig14.png" media-type="image/png" />
+		<item id="chap2_fig15" href="images/chapter2_fig15.png" media-type="image/png" />
+		<item id="chap2_fig16" href="images/chapter2_fig16.png" media-type="image/png" />
+		<item id="chap2_fig17" href="images/chapter2_fig17.png" media-type="image/png" />
+		<item id="chap2_fig18" href="images/chapter2_fig18.png" media-type="image/png" />
+		<item id="chap2_fig19" href="images/chapter2_fig19.png" media-type="image/png" />
+		<item id="chap2_fig20" href="images/chapter2_fig20.png" media-type="image/png" />
+		<item id="chap2_fig21" href="images/chapter2_fig21.png" media-type="image/png" />
+		<item id="chap2_fig22" href="images/chapter2_fig22.png" media-type="image/png" />
+		<item id="chap2_fig23" href="images/chapter2_fig23.png" media-type="image/png" />
+		<item id="chap3_fig01" href="images/chapter3_fig01.png" media-type="image/png" />  
+		<item id="chap3_fig02" href="images/chapter3_fig02.png" media-type="image/png" />  
+		<item id="chap3_fig03" href="images/chapter3_fig03.png" media-type="image/png" />  
+		<item id="chap3_fig04" href="images/chapter3_fig04.png" media-type="image/png" />  
+		<item id="chap3_fig05" href="images/chapter3_fig05.png" media-type="image/png" />  
+		<item id="chap3_fig06" href="images/chapter3_fig06.png" media-type="image/png" />  
+		<item id="chap3_fig07" href="images/chapter3_fig07.png" media-type="image/png" />  
+		<item id="chap3_fig08" href="images/chapter3_fig08.png" media-type="image/png" />  
+		<item id="chap3_fig09" href="images/chapter3_fig09.png" media-type="image/png" />  
+		<item id="chap3_fig10" href="images/chapter3_fig10.png" media-type="image/png" />  
+		<item id="chap3_fig11" href="images/chapter3_fig11.png" media-type="image/png" />  
+		<item id="chap3_fig12" href="images/chapter3_fig12.png" media-type="image/png" />  
+		<item id="chap3_fig13" href="images/chapter3_fig13.png" media-type="image/png" />  
+		<item id="chap3_fig14" href="images/chapter3_fig14.png" media-type="image/png" />  
+		<item id="chap3_fig15" href="images/chapter3_fig15.png" media-type="image/png" />  
+		<item id="chap3_fig16" href="images/chapter3_fig16.png" media-type="image/png" />  
+		<item id="chap3_fig17" href="images/chapter3_fig17.png" media-type="image/png" />  
+		<item id="chap3_fig18" href="images/chapter3_fig18.png" media-type="image/png" />  
+		<item id="chap3_fig19" href="images/chapter3_fig19.png" media-type="image/png" />  
+		<item id="chap3_fig20" href="images/chapter3_fig20.png" media-type="image/png" />  
+		<item id="chap3_fig21" href="images/chapter3_fig21.png" media-type="image/png" />  
+		<item id="chap3_fig22" href="images/chapter3_fig22.png" media-type="image/png" />  
+		<item id="chap3_fig23" href="images/chapter3_fig23.png" media-type="image/png" />  
+		<item id="chap3_fig24" href="images/chapter3_fig24.png" media-type="image/png" />  
+		<item id="chap3_fig25" href="images/chapter3_fig25.png" media-type="image/png" />  
+		<item id="chap3_fig26" href="images/chapter3_fig26.png" media-type="image/png" />  
+		<item id="chap3_fig27" href="images/chapter3_fig27.png" media-type="image/png" />  
+		<item id="chap3_fig28" href="images/chapter3_fig28.png" media-type="image/png" />  
+		<item id="chap3_fig29" href="images/chapter3_fig29.png" media-type="image/png" />  
+		<item id="chap3_fig30" href="images/chapter3_fig30.png" media-type="image/png" />  
+		<item id="chap3_fig31" href="images/chapter3_fig31.png" media-type="image/png" />  
+		<item id="chap3_fig32" href="images/chapter3_fig32.png" media-type="image/png" />  
+		<item id="chap3_fig33" href="images/chapter3_fig33.png" media-type="image/png" />  
+		<item id="chap3_fig34" href="images/chapter3_fig34.png" media-type="image/png" />  
+		<item id="chap3_fig35" href="images/chapter3_fig35.png" media-type="image/png" />  
+		<item id="chap3_fig36" href="images/chapter3_fig36.png" media-type="image/png" />  
+		<item id="chap3_fig37" href="images/chapter3_fig37.png" media-type="image/png" />  
+		<item id="chap3_fig38" href="images/chapter3_fig38.png" media-type="image/png" />  
+		<item id="chap3_fig39" href="images/chapter3_fig39.png" media-type="image/png" />  
+		<item id="chap3_fig40" href="images/chapter3_fig40.png" media-type="image/png" />  
+		<item id="chap3_fig41" href="images/chapter3_fig41.png" media-type="image/png" />  
+		<item id="chap3_fig42" href="images/chapter3_fig42.png" media-type="image/png" />  
+		<item id="chap3_fig43" href="images/chapter3_fig43.png" media-type="image/png" />  
+		<item id="chap3_fig44" href="images/chapter3_fig44.png" media-type="image/png" />  
+		<item id="chap3_fig45" href="images/chapter3_fig45.png" media-type="image/png" />  
+		<item id="chap3_fig46" href="images/chapter3_fig46.png" media-type="image/png" />  
+		<item id="chap3_fig47" href="images/chapter3_fig47.png" media-type="image/png" />  
+		<item id="chap3_fig48" href="images/chapter3_fig48.png" media-type="image/png" />  
+		<item id="chap3_fig49" href="images/chapter3_fig49.png" media-type="image/png" />  
+		<item id="chap3_fig50" href="images/chapter3_fig50.png" media-type="image/png" />  
+		<item id="chap3_fig51" href="images/chapter3_fig51.png" media-type="image/png" />  
+		<item id="chap3_fig52" href="images/chapter3_fig52.png" media-type="image/png" />  
+		<item id="chap3_fig53" href="images/chapter3_fig53.png" media-type="image/png" />  
+		<item id="chap3_fig54" href="images/chapter3_fig54.png" media-type="image/png" />
+		<item id="chap4_fig1" href="images/chapter4_fig01.png" media-type="image/png" />
+		<item id="chap4_fig2" href="images/chapter4_fig02.png" media-type="image/png" />
+		<item id="chap4_fig3" href="images/chapter4_fig03.png" media-type="image/png" />
+		<item id="chap4_fig4" href="images/chapter4_fig04.png" media-type="image/png" />
+		<item id="chap4_fig5" href="images/chapter4_fig05.png" media-type="image/png" />
+		<item id="chap4_fig6" href="images/chapter4_fig06.png" media-type="image/png" />
+		<item id="chap4_fig7" href="images/chapter4_fig07.png" media-type="image/png" />
+		<item id="chap4_fig8" href="images/chapter4_fig08.png" media-type="image/png" />
+		<item id="chap4_fig9" href="images/chapter4_fig09.png" media-type="image/png" />
+		<item id="chap4_fig10" href="images/chapter4_fig10.png" media-type="image/png" />
+		<item id="chap4_fig11" href="images/chapter4_fig11.png" media-type="image/png" />
+		<item id="chap4_fig12" href="images/chapter4_fig12.png" media-type="image/png" />
+		<item id="chap4_fig13" href="images/chapter4_fig13.png" media-type="image/png" />
+		<item id="chap4_fig14" href="images/chapter4_fig14.png" media-type="image/png" />
+		<item id="chap4_fig15" href="images/chapter4_fig15.png" media-type="image/png" />
+		<item id="chap4_fig16" href="images/chapter4_fig16.png" media-type="image/png" />
+		<item id="chap4_fig17" href="images/chapter4_fig17.png" media-type="image/png" />
+		<item id="chap4_fig18" href="images/chapter4_fig18.png" media-type="image/png" />
+		<item id="chap4_fig19" href="images/chapter4_fig19.png" media-type="image/png" />
+		<item id="chap4_fig20" href="images/chapter4_fig20.png" media-type="image/png" />
+		<item id="chap4_fig21" href="images/chapter4_fig21.png" media-type="image/png" />
+		<item id="chap4_fig22" href="images/chapter4_fig22.png" media-type="image/png" />
+		<item id="chap4_fig23" href="images/chapter4_fig23.png" media-type="image/png" />
+		<item id="chap4_fig24" href="images/chapter4_fig24.png" media-type="image/png" />
+		<item id="chap4_fig25" href="images/chapter4_fig25.png" media-type="image/png" />
+		<item id="chap4_fig26" href="images/chapter4_fig26.png" media-type="image/png" />
+		<item id="chap4_fig27" href="images/chapter4_fig27.png" media-type="image/png" />
+		<item id="chap4_fig28" href="images/chapter4_fig28.png" media-type="image/png" />
+		<item id="chap4_fig29" href="images/chapter4_fig29.png" media-type="image/png" />
+		<item id="chap4_fig30" href="images/chapter4_fig30.png" media-type="image/png" />
+		<item id="chap4_fig31" href="images/chapter4_fig31.png" media-type="image/png" />
+		<item id="chap4_fig32" href="images/chapter4_fig32.png" media-type="image/png" />
+		<item id="chap4_fig33" href="images/chapter4_fig33.png" media-type="image/png" />
+		<item id="chap4_fig34" href="images/chapter4_fig34.png" media-type="image/png" />
+		<item id="chap4_fig35" href="images/chapter4_fig35.png" media-type="image/png" />
+		<item id="chap4_fig36" href="images/chapter4_fig36.png" media-type="image/png" />
+		<item id="chap4_fig37" href="images/chapter4_fig37.png" media-type="image/png" />
+		<item id="chap4_fig38" href="images/chapter4_fig38.png" media-type="image/png" />
+		<item id="chap4_fig39" href="images/chapter4_fig39.png" media-type="image/png" />
+		<item id="chap4_fig40" href="images/chapter4_fig40.png" media-type="image/png" />
+		<item id="chap4_fig41" href="images/chapter4_fig41.png" media-type="image/png" />
+		<item id="chap4_fig42" href="images/chapter4_fig42.png" media-type="image/png" />
+		<item id="chap4_fig43" href="images/chapter4_fig43.png" media-type="image/png" />
+		<item id="chap4_fig44" href="images/chapter4_fig44.png" media-type="image/png" />
+		<item id="chap4_fig45" href="images/chapter4_fig45.png" media-type="image/png" />
+		<item id="chap4_fig46" href="images/chapter4_fig46.png" media-type="image/png" />
+		<item id="chap4_fig47" href="images/chapter4_fig47.png" media-type="image/png" />
+		<item id="chap4_fig48" href="images/chapter4_fig48.png" media-type="image/png" />
+		<item id="chap4_fig49" href="images/chapter4_fig49.png" media-type="image/png" />
+		<item id="chap4_fig50" href="images/chapter4_fig50.png" media-type="image/png" />
+		<item id="chap4_fig51" href="images/chapter4_fig51.png" media-type="image/png" />
+		<item id="chap4_fig52" href="images/chapter4_fig52.png" media-type="image/png" />
+		<item id="chap4_fig53" href="images/chapter4_fig53.png" media-type="image/png" />
+		<item id="chap4_fig54" href="images/chapter4_fig54.png" media-type="image/png" />
+		<item id="chap4_fig55" href="images/chapter4_fig55.png" media-type="image/png" />
+		<item id="chap4_fig56" href="images/chapter4_fig56.png" media-type="image/png" />
+		<item id="chap4_fig57" href="images/chapter4_fig57.png" media-type="image/png" />
+		<item id="chap4_fig58" href="images/chapter4_fig58.png" media-type="image/png" />
+		<item id="chap4_fig59" href="images/chapter4_fig59.png" media-type="image/png" />
+		<item id="chap4_fig60" href="images/chapter4_fig60.png" media-type="image/png" />
+		<item id="chap4_fig61" href="images/chapter4_fig61.png" media-type="image/png" />
+		<item id="chap4_fig62" href="images/chapter4_fig62.png" media-type="image/png" />
+		<item id="chap4_fig63" href="images/chapter4_fig63.png" media-type="image/png" />
+		<item id="chap4_fig64" href="images/chapter4_fig64.png" media-type="image/png" />
+		<item id="chap4_fig65" href="images/chapter4_fig65.png" media-type="image/png" />
+		<item id="chap4_fig66" href="images/chapter4_fig66.png" media-type="image/png" />
+		<item id="chap4_fig67" href="images/chapter4_fig67.png" media-type="image/png" />
+		<item id="chap4_fig68" href="images/chapter4_fig68.png" media-type="image/png" />
+		<item id="chap4_fig69" href="images/chapter4_fig69.png" media-type="image/png" />
+		<item id="chap4_fig70" href="images/chapter4_fig70.png" media-type="image/png" />
+		<item id="chap4_fig71" href="images/chapter4_fig71.png" media-type="image/png" />
+		<item id="chap4_fig72" href="images/chapter4_fig72.png" media-type="image/png" />
+		<item id="chap4_fig73" href="images/chapter4_fig73.png" media-type="image/png" />
+		<item id="chap4_fig74" href="images/chapter4_fig74.png" media-type="image/png" />
+		<item id="chap4_fig75" href="images/chapter4_fig75.png" media-type="image/png" />
+		<item id="chap4_fig76" href="images/chapter4_fig76.png" media-type="image/png" />
+		<item id="chap4_fig77" href="images/chapter4_fig77.png" media-type="image/png" />
+		<item id="chap4_fig78" href="images/chapter4_fig78.png" media-type="image/png" />
+		<item id="chap4_fig79" href="images/chapter4_fig79.png" media-type="image/png" />
+		<item id="chap5_fig01" href="images/chapter5_fig01.png" media-type="image/png" />
+		<item id="chap5_fig02" href="images/chapter5_fig02.png" media-type="image/png" />
+		<item id="chap5_fig03" href="images/chapter5_fig03.png" media-type="image/png" />
+		<item id="chap5_fig04" href="images/chapter5_fig04.png" media-type="image/png" />
+		<item id="chap5_fig05" href="images/chapter5_fig05.png" media-type="image/png" />
+		<item id="chap5_fig06" href="images/chapter5_fig06.png" media-type="image/png" />
+		<item id="chap5_fig07" href="images/chapter5_fig07.png" media-type="image/png" />
+		<item id="chap5_fig08" href="images/chapter5_fig08.png" media-type="image/png" />
+		<item id="chap5_fig09" href="images/chapter5_fig09.png" media-type="image/png" />
+		<item id="chap5_fig10" href="images/chapter5_fig10.png" media-type="image/png" />
+		<item id="chap5_fig11" href="images/chapter5_fig11.png" media-type="image/png" />
+		<item id="chap5_fig12" href="images/chapter5_fig12.png" media-type="image/png" />
+		<item id="chap5_fig13" href="images/chapter5_fig13.png" media-type="image/png" />
+		<item id="chap5_fig14" href="images/chapter5_fig14.png" media-type="image/png" />
+		<item id="chap5_fig15" href="images/chapter5_fig15.png" media-type="image/png" />
+		<item id="chap5_fig16" href="images/chapter5_fig16.png" media-type="image/png" />
+		<item id="chap5_fig17" href="images/chapter5_fig17.png" media-type="image/png" />
+		<item id="chap5_fig18" href="images/chapter5_fig18.png" media-type="image/png" />
+		<item id="chap5_fig19" href="images/chapter5_fig19.png" media-type="image/png" />
+		<item id="chap5_fig20" href="images/chapter5_fig20.png" media-type="image/png" />
+		<item id="chap5_fig21" href="images/chapter5_fig21.png" media-type="image/png" />
+		<item id="chap5_fig22" href="images/chapter5_fig22.png" media-type="image/png" />
+		<item id="chap5_fig23" href="images/chapter5_fig23.png" media-type="image/png" />
+		<item id="chap5_fig24" href="images/chapter5_fig24.png" media-type="image/png" />
+		<item id="chap7_fig01" href="images/chapter7_fig01.png" media-type="image/png" />
+		<item id="chap7_fig02" href="images/chapter7_fig02.png" media-type="image/png" />
+		<item id="chap7_fig03" href="images/chapter7_fig03.png" media-type="image/png" />
+		<item id="chap7_fig04" href="images/chapter7_fig04.png" media-type="image/png" />
+		<item id="chap7_fig05" href="images/chapter7_fig05.png" media-type="image/png" />
+		<item id="chap7_fig06" href="images/chapter7_fig06.png" media-type="image/png" />
+		<item id="chap7_fig07" href="images/chapter7_fig07.png" media-type="image/png" />
+		<item id="chap7_fig08" href="images/chapter7_fig08.png" media-type="image/png" />	
+		<item id="chap10_fig01" href="images/chapter10_fig01.png" media-type="image/png" />
+		<item id="chap10_fig02" href="images/chapter10_fig02.png" media-type="image/png" />
+		<item id="chap10_fig03" href="images/chapter10_fig03.png" media-type="image/png" />
+		<item id="chap10_fig04" href="images/chapter10_fig04.png" media-type="image/png" />
+		<item id="chap11_fig01" href="images/chapter11_fig01.png" media-type="image/png" />
+		<item id="chap11_fig02" href="images/chapter11_fig02.png" media-type="image/png" />
+		<item id="chap11_fig03" href="images/chapter11_fig03.png" media-type="image/png" />
+		<item id="chap11_fig04" href="images/chapter11_fig04.png" media-type="image/png" />
+		<item id="chap11_fig05" href="images/chapter11_fig05.png" media-type="image/png" />									  				
+		<item id="chap12_fig01" href="images/chapter12_fig01.png" media-type="image/png" />
+		<item id="chap12_fig02" href="images/chapter12_fig02.png" media-type="image/png" />
+		<item id="chap12_fig03" href="images/chapter12_fig03.png" media-type="image/png" />
+		<item id="chap12_fig04" href="images/chapter12_fig04.png" media-type="image/png" />
+		<item id="chap12_fig05" href="images/chapter12_fig05.png" media-type="image/png" />
+		<item id="chap12_fig06" href="images/chapter12_fig06.png" media-type="image/png" />
+		<item id="chap12_fig07" href="images/chapter12_fig07.png" media-type="image/png" />
+		<item id="chap14_fig01" href="images/chapter14_fig01.png" media-type="image/png" />
+		<item id="chap14_fig02" href="images/chapter14_fig02.png" media-type="image/png" />
+		<item id="chap14_fig03" href="images/chapter14_fig03.png" media-type="image/png" />
+		<item id="chap14_fig04" href="images/chapter14_fig04.png" media-type="image/png" />
+		<item id="chap14_fig05" href="images/chapter14_fig05.png" media-type="image/png" />
+		<item id="chap14_fig06" href="images/chapter14_fig06.png" media-type="image/png" />
+		<item id="chap14_fig07" href="images/chapter14_fig07.png" media-type="image/png" />
+		<item id="chap14_fig08" href="images/chapter14_fig08.png" media-type="image/png" />
+		<item id="chap14_fig09" href="images/chapter14_fig09.png" media-type="image/png" />
+		<item id="chap14_fig10" href="images/chapter14_fig10.png" media-type="image/png" />
+		<item id="chap14_fig11" href="images/chapter14_fig11.png" media-type="image/png" />
+		<item id="chap14_fig12" href="images/chapter14_fig12.png" media-type="image/png" />
+		<item id="chap14_fig13" href="images/chapter14_fig13.png" media-type="image/png" />		
+		<item id="cover"       href="images/cover.jpg"  media-type="image/jpeg" properties="cover-image" />
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="title" linear="yes" />
+		<itemref idref="toc" linear="no" />      
+		<itemref idref="chapter1" linear="yes" />
+		<itemref idref="chapter2" linear="yes" />
+		<itemref idref="chapter3" linear="yes" />
+		<itemref idref="chapter4" linear="yes" />
+		<itemref idref="chapter5" linear="yes" />
+		<itemref idref="chapter6" linear="yes" />
+		<itemref idref="chapter7" linear="yes" />
+		<itemref idref="chapter8" linear="yes" />
+		<itemref idref="chapter9" linear="yes" />
+		<itemref idref="chapter10" linear="yes" />
+		<itemref idref="chapter11" linear="yes" />
+		<itemref idref="chapter12" linear="yes" />
+		<itemref idref="chapter13" linear="yes" />
+		<itemref idref="chapter14" linear="yes" />
+	</spine>
+</package>

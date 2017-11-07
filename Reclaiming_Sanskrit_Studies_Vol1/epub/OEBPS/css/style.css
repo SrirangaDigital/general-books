@@ -1,0 +1,158 @@
+@font-face{
+	font-family: engit;
+	src: url('GentiumPlus-I.ttf');
+}
+@font-face{
+	font-family: eng;
+	src: url('GentiumPlus-R.ttf');
+}
+
+body
+{
+font-family: ApuDevN; 	
+font-size: 1em;	
+text-align: left;
+text-indent: 0em;
+border: 0 none;
+margin: 0em;
+padding: 1em;
+}
+
+.page{
+line-height: 1.5em;	
+}
+
+.en{
+font-family: sans-serif;
+}
+
+.title{
+font-family: ApuDevB;
+font-size: 200%;
+font-weight: bold;
+margin-top: 1em;
+text-align: center; 
+}
+
+.chapter{
+font-family: ApuDevB;
+font-size: 150%;
+font-weight: bold;
+margin-bottom: 1em;
+text-align: left; 
+}
+
+.level1-title {
+font-family: ApuDevB;
+font-size: 140%;
+font-weight: bold;
+margin-bottom: 1em;
+text-align: left;
+}
+
+.level2 {
+	margin-top: 2em;
+}
+
+.level2-title{
+font-family: ApuDevB;
+font-size:  130%;
+font-weight: bold;
+margin-bottom: 1em;
+text-align: left;
+}
+
+.para-title{
+font-family: ApuDevB;
+font-weight: bold;
+text-align: left;
+}
+
+table {
+border-collapse: collapse;
+}
+
+table, th, td {
+border: 1px solid black;
+margin: 0.5em;
+padding: 0.5em;
+}
+
+table caption{
+font-family: ApuDevB;
+font-weight: bold;
+}
+
+figure figcaption{
+font-family: ApuDevB;
+font-weight: bold;
+text-align: center;
+margin-top: 1ex;
+}
+
+p.text-body{
+line-height: 1.5em;
+}
+
+
+div figure img{
+display: block;
+max-width: 500px;
+margin-left: auto;
+margin-right: auto;
+}
+
+figure{
+margin-bottom: 4ex;
+}
+
+
+.author{
+font-family: ApuDevB;
+font-size: 100%;
+font-weight: bold;
+text-align: center;
+}
+
+.left{
+text-align: left;
+}
+
+.right{
+text-align: right;
+}
+
+.center{
+text-align: center;
+}
+
+.it, i{
+font-style: italic; 
+}
+
+.bold, b{
+font-family: ApuDevB;
+font-weight: bold;
+}
+
+dl {
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 60px;
+    text-align: right;
+    font-weight: bold;
+  }
+  dd {
+    margin: 0 0 0 80px;
+    padding: 0 0 0.5em 0;
+  }
+
+dd ul{
+	padding-left: 20px;
+}
+
+dd dd dt{
+width: 40px;
+}
