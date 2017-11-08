@@ -9,7 +9,7 @@
 
 body
 {
-font-family: ApuDevN; 	
+font-family: eng; 	
 font-size: 1em;	
 text-align: left;
 text-indent: 0em;
@@ -27,15 +27,23 @@ font-family: sans-serif;
 }
 
 .title{
-font-family: ApuDevB;
+font-family: eng;
 font-size: 200%;
 font-weight: bold;
 margin-top: 1em;
 text-align: center; 
+line-height: 1.2em;
+}
+
+p img.logo{
+width: 10%;
+display: block;
+padding-bottom: 1em;
+margin: auto auto;
 }
 
 .chapter{
-font-family: ApuDevB;
+font-family: eng;
 font-size: 150%;
 font-weight: bold;
 margin-bottom: 1em;
@@ -43,7 +51,7 @@ text-align: left;
 }
 
 .level1-title {
-font-family: ApuDevB;
+font-family: eng;
 font-size: 140%;
 font-weight: bold;
 margin-bottom: 1em;
@@ -55,7 +63,7 @@ text-align: left;
 }
 
 .level2-title{
-font-family: ApuDevB;
+font-family: eng;
 font-size:  130%;
 font-weight: bold;
 margin-bottom: 1em;
@@ -63,7 +71,7 @@ text-align: left;
 }
 
 .para-title{
-font-family: ApuDevB;
+font-family: eng;
 font-weight: bold;
 text-align: left;
 }
@@ -79,12 +87,12 @@ padding: 0.5em;
 }
 
 table caption{
-font-family: ApuDevB;
+font-family: eng;
 font-weight: bold;
 }
 
 figure figcaption{
-font-family: ApuDevB;
+font-family: eng;
 font-weight: bold;
 text-align: center;
 margin-top: 1ex;
@@ -108,7 +116,7 @@ margin-bottom: 4ex;
 
 
 .author{
-font-family: ApuDevB;
+font-family: eng;
 font-size: 100%;
 font-weight: bold;
 text-align: center;
@@ -126,12 +134,12 @@ text-align: right;
 text-align: center;
 }
 
-.it, i{
+.italic, i{
 font-style: italic; 
 }
 
 .bold, b{
-font-family: ApuDevB;
+font-family: eng;
 font-weight: bold;
 }
 
