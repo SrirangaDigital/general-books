@@ -1,0 +1,1541 @@
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.10.14)  8 NOV 2017 14:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**mainfile.tex
+(./mainfile.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./src/macros.tex (/usr/local/texlive/2017/texmf-dist/tex/latex/polyglossia/p
+olyglossia.sty
+Package: polyglossia 2015/03/25 v1.42.4 Alternative to Babel for XeLaTeX and Lu
+aLaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count88
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/makecmds/makecmds.sty
+Package: makecmds 2009/09/03 v1.0a extra command making commands
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count89
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/05/13 L3 programming layer (loader) 
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/05/13 L3 programming layer (code)
+\c_max_int=\count90
+\l_tmpa_int=\count91
+\l_tmpb_int=\count92
+\g_tmpa_int=\count93
+\g_tmpb_int=\count94
+\g__prg_map_int=\count95
+\c_log_iow=\count96
+\l_iow_line_count_int=\count97
+\l__iow_line_target_int=\count98
+\l__iow_one_indent_int=\count99
+\l__iow_indent_int=\count100
+\c_zero_dim=\dimen103
+\c_max_dim=\dimen104
+\l_tmpa_dim=\dimen105
+\l_tmpb_dim=\dimen106
+\g_tmpa_dim=\dimen107
+\g_tmpb_dim=\dimen108
+\c_zero_skip=\skip43
+\c_max_skip=\skip44
+\l_tmpa_skip=\skip45
+\l_tmpb_skip=\skip46
+\g_tmpa_skip=\skip47
+\g_tmpb_skip=\skip48
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count101
+\c__fp_leading_shift_int=\count102
+\c__fp_middle_shift_int=\count103
+\c__fp_trailing_shift_int=\count104
+\c__fp_big_leading_shift_int=\count105
+\c__fp_big_middle_shift_int=\count106
+\c__fp_big_trailing_shift_int=\count107
+\c__fp_Bigg_leading_shift_int=\count108
+\c__fp_Bigg_middle_shift_int=\count109
+\c__fp_Bigg_trailing_shift_int=\count110
+\l__sort_length_int=\count111
+\l__sort_min_int=\count112
+\l__sort_top_int=\count113
+\l__sort_max_int=\count114
+\l__sort_true_max_int=\count115
+\l__sort_block_int=\count116
+\l__sort_begin_int=\count117
+\l__sort_end_int=\count118
+\l__sort_A_int=\count119
+\l__sort_B_int=\count120
+\l__sort_C_int=\count121
+\c_empty_box=\box26
+\l_tmpa_box=\box27
+\l_tmpb_box=\box28
+\g_tmpa_box=\box29
+\g_tmpb_box=\box30
+\l__box_top_dim=\dimen109
+\l__box_bottom_dim=\dimen110
+\l__box_left_dim=\dimen111
+\l__box_right_dim=\dimen112
+\l__box_top_new_dim=\dimen113
+\l__box_bottom_new_dim=\dimen114
+\l__box_left_new_dim=\dimen115
+\l__box_right_new_dim=\dimen116
+\l__box_internal_box=\box31
+\l__coffin_internal_box=\box32
+\l__coffin_internal_dim=\dimen117
+\l__coffin_offset_x_dim=\dimen118
+\l__coffin_offset_y_dim=\dimen119
+\l__coffin_x_dim=\dimen120
+\l__coffin_y_dim=\dimen121
+\l__coffin_x_prime_dim=\dimen122
+\l__coffin_y_prime_dim=\dimen123
+\c_empty_coffin=\box33
+\l__coffin_aligned_coffin=\box34
+\l__coffin_aligned_internal_coffin=\box35
+\l_tmpa_coffin=\box36
+\l_tmpb_coffin=\box37
+\l__coffin_display_coffin=\box38
+\l__coffin_display_coord_coffin=\box39
+\l__coffin_display_pole_coffin=\box40
+\l__coffin_display_offset_dim=\dimen124
+\l__coffin_display_x_dim=\dimen125
+\l__coffin_display_y_dim=\dimen126
+\l__coffin_bounding_shift_dim=\dimen127
+\l__coffin_left_corner_dim=\dimen128
+\l__coffin_right_corner_dim=\dimen129
+\l__coffin_bottom_corner_dim=\dimen130
+\l__coffin_top_corner_dim=\dimen131
+\l__coffin_scaled_total_height_dim=\dimen132
+\l__coffin_scaled_width_dim=\dimen133
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+File: l3xdvidpfmx.def 2017/03/18 v L3 Experimental driver: xdvipdfmx
+\l__driver_tmp_box=\box41
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2017/05/13 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count122
+\g__xparse_grabber_int=\count123
+\l__xparse_m_args_int=\count124
+\l__xparse_mandatory_args_int=\count125
+\l__xparse_v_nesting_int=\count126
+)
+Package: fontspec 2017/03/31 v2.6a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2017/03/31 v2.6a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count127
+\l__fontspec_language_int=\count128
+\l__fontspec_strnum_int=\count129
+\l__fontspec_tmp_int=\count130
+\l__fontspec_em_int=\count131
+\l__fontspec_emdef_int=\count132
+\l__fontspec_strong_int=\count133
+\l__fontspec_strongdef_int=\count134
+\l__fontspec_tmpa_dim=\dimen134
+\l__fontspec_tmpb_dim=\dimen135
+\l__fontspec_tmpc_dim=\dimen136
+\g__file_internal_ior=\read1
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/tuenc.def
+File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \fontspec with sig. 'O{}mO{}' on line 472.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmainfont with sig. 'O{}mO{}' on line 483.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setsansfont with sig. 'O{}mO{}' on line 503.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmonofont with sig. 'O{}mO{}' on line 523.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setromanfont with sig. 'O{}mO{}' on line 543.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathrm with sig. 'O{}mO{}' on line 547.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 555.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathsf with sig. 'O{}mO{}' on line 563.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \setmathtt with sig. 'O{}mO{}' on line 571.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 586.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontface with sig. 'mO{}mO{}' on line 603.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \defaultfontfeatures with sig. 't+om' on line 614.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \addfontfeatures with sig. 'm' on line 645.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontfeature with sig. 'mm' on line 672.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newAATfeature with sig. 'mmmm' on line 686.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newopentypefeature with sig. 'mmm' on line 700.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newICUfeature with sig. 'mmm' on line 720.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeature with sig. 'mm' on line 724.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 745.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontscript with sig. 'mm' on line 778.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newfontlanguage with sig. 'mm' on line 782.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 786.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 797.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingCommand with sig. 'mO{}m' on line 3438.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingAccent with sig. 'mm' on line 3444.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingSymbol with sig. 'mm' on line 3450.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingComposite with sig. 'mmm' on line 3456.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3462.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3487.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \UndeclareSymbol with sig. 'm' on line 3493.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \UndeclareComposite with sig. 'mm' on line 3501.
+.................................................
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 3686.
+LaTeX Info: Redefining \slshape on input line 3691.
+LaTeX Info: Redefining \scshape on input line 3696.
+LaTeX Info: Redefining \upshape on input line 3701.
+LaTeX Info: Redefining \em on input line 3731.
+LaTeX Info: Redefining \emph on input line 3756.
+LaTeX Info: Redefining \- on input line 3807.
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \oldstylenums with sig. 'm' on line 3902.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \liningnums with sig. 'm' on line 3906.
+.................................................
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\xpg@normalclass=\XeTeXcharclass1
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
+JK)
+))
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/zwpagelayout/zwpagelayout.sty
+Package: zwpagelayout 2013/01/13 ZW Page Layout
+Package zwpagelayout Info: $Id: zwpagelayout.sty 453 2013-01-13 17:12:17Z zw $.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+\zwpl@Driver=\count135
+Package zwpagelayout Info: Driver mode used: xetex.
+(zwpagelayout)              on input line 223.
+\ZW@baselineskip=\skip49
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 147.
+)
+\zwpl@low=\dimen139
+\zwpl@len=\dimen140
+\zwpl@gap=\dimen141
+\zwpl@plus=\dimen142
+\zwpl@minus=\dimen143
+\zwpl@frame=\dimen144
+\zwpl@vsize=\dimen145
+\zwpl@Hshift=\count136
+\zwpl@Vshift=\count137
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/polyglossia/gloss-kannada.ldf
+File: gloss-kannada.ldf polyglossia: module for kannada
+)
+Package polyglossia Info: Default language is kannada.
+\g__fontspec_family_NudiUni01k_int=\count138
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'NudiUni01k(0)' created for font 'NudiUni01k' with options
+. [Ligatures=TeX,Script=Kannada,Ligatures=TeX,AutoFakeBold=3.2,AutoFakeSlant,Wo
+rdSpace=1.2].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+. - 'bold' (bx/n) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;embolden=3.2;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+. - 'italic' (m/it) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;slant=0.2;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+. - 'bold italic' (bx/it) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;embolden=3.2;slant=0.2;mapping=te
+x-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+.................................................
+LaTeX Info: Redefining \rmfamily on input line 12.
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font "Nimbus Roman No9 L" does not contain any OpenType `Script'
+. information.
+.................................................
+\g__fontspec_family_NimbusRomanNo9L_int=\count139
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'NimbusRomanNo9L(0)' created for font 'Nimbus Roman No9 L' with
+. options [].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->"Nimbus Roman No9 L/OT"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. - 'bold' (bx/n) with NFSS spec.: <->"Nimbus Roman No9 L/B/OT"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. - 'italic' (m/it) with NFSS spec.: <->"Nimbus Roman No9 L/I/OT"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. - 'bold italic' (bx/it) with NFSS spec.: <->"Nimbus Roman No9 L/BI/OT"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+.................................................
+)
+(./mainfile.aux
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'NudiUni01k(1)' created for font 'NudiUni01k' with options
+. [Ligatures=TeX,Script=Kannada,Ligatures=TeX,AutoFakeBold=3.2,AutoFakeSlant,Wo
+rdSpace=1.2,Script=Kannada].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+. - 'bold' (bx/n) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;embolden=3.2;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+. - 'italic' (m/it) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;slant=0.2;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+. - 'bold italic' (bx/it) with NFSS spec.:
+. <->"NudiUni01k/OT:script=knd2;language=DFLT;embolden=3.2;slant=0.2;mapping=te
+x-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1.2\fontdimen 2\font \fontdimen 3\font =1.2\fontdimen
+. 3\font \fontdimen 4\font =1.2\fontdimen 4\font 
+.................................................
+
+
+
+
+)
+\openout1 = `mainfile.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+.................................................
+. fontspec info: "setup-math"
+. 
+. Adjusting the maths setup (use [no-math] to avoid this).
+.................................................
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 4.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 4.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 4.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 4.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 4.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 4.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 4.
+LaTeX Font Info:    Redeclaring math accent \check on input line 4.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 4.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 4.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 4.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 4.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 4.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 4.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/NudiUni01k(0)/m/n on input line 4.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 4.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/NudiUni01k(0)/m/n on input line 4.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/NudiUni01k(0)/m/n --> TU/NudiUni01k(0)/m/n on input 
+line 4.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/NudiUni01k(0)/m/it on input line 4.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/NudiUni01k(0)/bx/n on input line 4.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 4.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 4.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/NudiUni01k(0)/m/n --> TU/NudiUni01k(0)/bx/n on input
+ line 4.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/NudiUni01k(0)/bx/it on input line 
+4.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 4.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 4.
+ (./src/preface.tex
+Missing character: There is no a in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+File: om.eps Graphic file (type eps)
+ <om.eps>
+File: 0000a.eps Graphic file (type eps)
+ <0000a.eps>
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [1
+
+
+]
+File: 0000b.eps Graphic file (type eps)
+ <0000b.eps>
+File: om.eps Graphic file (type eps)
+ <om.eps>
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+LaTeX Font Info:    Font shape `TU/NudiUni01k(1)/m/sl' in size <10> not availab
+le
+(Font)              Font shape `TU/NudiUni01k(1)/m/it' tried instead on input l
+ine 64.
+ [2]
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [3])
+(./src/astangayoga.tex
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [4]
+File: om.eps Graphic file (type eps)
+ <om.eps>
+File: 0000d.eps Graphic file (type eps)
+ <0000d.eps>
+Overfull \hbox (20.4474pt too wide) in paragraph at lines 22--23
+[]\TU/NudiUni01k(0)/m/n/12 ತ್ರಿವಿಕ್ರಮವಿಷ್ಣುಲಕ್ಷ್ಮೀನಿಕೇತನೇ, ಜ್ಞಾನವಿಜ್ಞಾನಮಂದಿರವ್ಯ
+ೋಮಾಂಬುಜೇ, ಮಹ-
+ []
+
+
+Overfull \hbox (19.24568pt too wide) in paragraph at lines 24--25
+[]\TU/NudiUni01k(0)/m/n/12 ಮಹಾಮಸ್ತಿಷ್ಕಜ್ಞಾನವಿಜ್ಞಾನವಿಜ್ಞಾನಮಂದಿರೇ ತ್ರಿಧಾಮಬ್ರಹ್ಮಮಾ
+ರ್ಗತತ್ತ್ವ ಸೋ-
+ []
+
+
+Overfull \hbox (5.31792pt too wide) in paragraph at lines 24--25
+\TU/NudiUni01k(0)/m/n/12 ಜೀವನಸುಮನೋವಿಕಾಸಪ್ರಾಣಶಕ್ತ್ಯಾಃ, ಬ್ರಹ್ಮಭಾವಜ್ಯೋತಿರ್ನಾದವಿಜ್ಞ
+ಾನವಿಪಂ-
+ []
+
+)
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [5] (./src/om.tex
+File: om.eps Graphic file (type eps)
+ <om.eps>
+Missing character: There is no c in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+)
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [6] (./src/samarpane.tex)
+(./src/prakashakaranudi.tex
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [7]
+Overfull \hbox (5.7457pt too wide) in paragraph at lines 18--19
+[]\TU/NudiUni01k(0)/m/n/12 ಆರ್ಷವಿದ್ಯಾಸಂಪ್ರದಾಯವು ವೇದ-ಉಪವೇದ-ವೇದಾಂಗ-ಇತಿಹಾಸ ಪು-
+ []
+
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+[8]) (./src/bhumike.tex
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [9]
+Overfull \hbox (4.38295pt too wide) in paragraph at lines 7--8
+[]\TU/NudiUni01k(0)/m/n/12 ಅನ್ವರ್ಥನಾಮಧೇಯದಿಂದ ಬೆಳಗುತ್ತಿರುವ ‘ಅಮರವಾಣೀ’ ಗ್ರಂಥದ ಹನ್ನ
+ೆ-
+ []
+
+
+Overfull \hbox (11.64708pt too wide) in paragraph at lines 7--8
+\TU/NudiUni01k(0)/m/n/12 ರಡನೆಯ ಸಂಪುಟವು ಈ ಮೂಲಕ ಪ್ರಕಾಶಿತವಾಗುತ್ತಿದೆ. ಇಲ್ಲಿ ವೇದಾಂಗಗ
+ಳು-
+ []
+
+
+Overfull \hbox (1.22696pt too wide) in paragraph at lines 7--8
+\TU/NudiUni01k(0)/m/n/12 ದರ್ಶನ-ಇತಿಹಾಸ-ಪುರಾಣ ಇತ್ಯಾದಿ ವಿಷಯಗಳಿಗೆ ಸಂಬಂಧಪಟ್ಟಂತೆ ಮೌ-
+ []
+
+
+Underfull \vbox (badness 1590) has occurred while \output is active []
+
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [14]
+Missing character: There is no – in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+)
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+[15] (./mainfile.toc
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;embol
+den=3.2;mapping=tex-text;!
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;embol
+den=3.2;mapping=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;embol
+den=3.2;mapping=tex-text;!
+ [16
+
+])
+\tf@toc=\write3
+\openout3 = `mainfile.toc'.
+
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [17]
+Missing character: There is no x in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no v in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no i in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [18
+
+] [1
+
+] (./src/chapter1.tex
+ಅಧ್ಯಾಯ 1.
+
+Underfull \vbox (badness 1173) has occurred while \output is active []
+
+ [2
+
+]
+[3] [4]
+Underfull \vbox (badness 1231) has occurred while \output is active []
+
+ [5]
+Missing character: There is no c in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+Underfull \vbox (badness 3039) has occurred while \output is active []
+
+ [6]
+[7]
+Missing character: There is no c in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [8]
+Overfull \hbox (3.47183pt too wide) in paragraph at lines 66--67
+\TU/NudiUni01k(0)/m/n/12 ವೇದದಲ್ಲಿರುವ ಛಂದೋಮಯವಾದ, ಮಂತ್ರಮಯವಾದ ವಾಣಿಯು ಋಷಿ-
+ []
+
+[9] [10] [11]
+Overfull \hbox (0.4889pt too wide) in paragraph at lines 104--105
+[]\TU/NudiUni01k(0)/m/n/12 (‘ಆಕಾರದಿವರ್ಣಗಳು, ಉದಾತ್ತಾದಿಸ್ವರಗಳು, ಉಚ್ಚಾರಣಕಾಲದಮಿತಿ, 
+ಪ್ರ-
+ []
+
+
+Overfull \hbox (4.76953pt too wide) in paragraph at lines 104--105
+\TU/NudiUni01k(0)/m/n/12 ಯತ್ನಗಳು, ಉಚ್ಚಾರಣೆಯಲ್ಲಿ ಸಾಮ್ಯ, ಪೂರ್ವೋತ್ತರವರ್ಣಗಳಸಂಹಿತೆ, 
+ಇವಿ-
+ []
+
+[12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+[14]
+Overfull \hbox (37.48349pt too wide) in paragraph at lines 158--162
+\TU/NudiUni01k(0)/m/n/12 ಹೇಳಿದೆ. [] 
+ []
+
+[15]
+Overfull \hbox (3.73494pt too wide) in paragraph at lines 171--172
+\TU/NudiUni01k(0)/m/n/12 ಕಾಶಕ್ಕೆ ಬರುವಾಗಲೇ ಅದಕ್ಕೆ ಬೇಕಾದ ಸ್ವರ-ವರ್ಣ-ಮಾತ್ರೆ-ಬಲಗಳೊಡನ
+ೆಯೇ
+ []
+
+[16] [17] [18] [19] [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Overfull \hbox (49.05263pt too wide) in paragraph at lines 234--238
+\TU/NudiUni01k(0)/m/n/12 ಹೊಮ್ಮಿತು- [] 
+ []
+
+[22] [23] [24] [25] [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28]) (./src/chapter2.tex [29]
+ಅಧ್ಯಾಯ 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30
+
+]
+Overfull \hbox (1.5758pt too wide) in paragraph at lines 13--14
+[]\TU/NudiUni01k(0)/m/n/12 ಕೆಲವರು ಹಯಗ್ರೀವರನ್ನು ವಾಗೀಶರೆಂದೂ, ವಿದ್ಯಾಧಿಪತಿಯೆಂದೂ ಪೂ-
+
+ []
+
+
+Overfull \hbox (0.18294pt too wide) in paragraph at lines 22--23
+[]\TU/NudiUni01k(0)/m/n/12 ಸಂಸ್ಕೃತಭಾಷೆಯಲ್ಲಿರುವ ಸಕಲವರ್ಣಮಾಲೆಯೂ ಈ ಸೂತ್ರಗಳಲ್ಲಿ ಅಡ-
+ []
+
+
+Underfull \vbox (badness 2318) has occurred while \output is active []
+
+ [31]
+Overfull \hbox (56.97148pt too wide) in paragraph at lines 49--55
+\TU/NudiUni01k(0)/m/n/12 ವಿವರಿಸುತ್ತದೆ. [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+[33]
+Overfull \hbox (25.0pt too wide) in paragraph at lines 103--110
+[] 
+ []
+
+
+Overfull \hbox (25.0pt too wide) in paragraph at lines 113--115
+[] 
+ []
+
+[34] [35] [36]) [37] [38
+
+] (./src/chapter3.tex
+ಅಧ್ಯಾಯ 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39
+
+]
+Missing character: There is no c in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+[40] [41] [42]
+Overfull \hbox (5.73895pt too wide) in paragraph at lines 46--47
+[]\TU/NudiUni01k(0)/m/n/12 ಆಹಾರವನ್ನು ತೆಗೆದುಕೊಳ್ಳುವಾಗ ಷಡ್ರಸೋಪೇತವಾದ ಆಹಾರವನ್ನು ಬಡಿ
+-
+ []
+
+[43]) (./src/chapter4.tex [44]
+ಅಧ್ಯಾಯ 4.
+[45
+
+] [46] [47] [48] [49] [50]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 49.
+ [51] [52]
+Overfull \hbox (31.45264pt too wide) in paragraph at lines 75--79
+[]\TU/NudiUni01k(0)/m/n/12 ‘ [] 
+ []
+
+
+Overfull \hbox (31.45264pt too wide) in paragraph at lines 81--85
+[]\TU/NudiUni01k(0)/m/n/12 ‘ [] 
+ []
+
+
+Overfull \hbox (31.45264pt too wide) in paragraph at lines 87--91
+[]\TU/NudiUni01k(0)/m/n/12 ‘ [] 
+ []
+
+
+Overfull \hbox (25.0pt too wide) in paragraph at lines 94--97
+[] 
+ []
+
+[53] [54] [55] [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+[58] [59]
+Overfull \hbox (15.09221pt too wide) in paragraph at lines 181--182
+\TU/NudiUni01k(0)/m/n/12 ಪ್ರಕೃತಿಯ ಪ್ರವಾಹದಲ್ಲಿ ಸಿಕ್ಕಿಕೊಂಡ ಜೀವಿಗಳು ತಮ್ಮ ಸ್ವರೂಪ ಕಳ
+ೆದುಕೊಂಡಾಗ-
+ []
+
+
+Underfull \vbox (badness 2671) has occurred while \output is active []
+
+ [60]
+[61] [62] [63] [64] [65] [66] [67] [68] [69]
+Overfull \hbox (11.84021pt too wide) in paragraph at lines 277--278
+\TU/NudiUni01k(0)/m/n/12 ಶಂಕರರು ಮತ್ತು ರಾಮಾನುಜರು ತಮ್ಮ ಒಂದು ಸಂಪ್ರದಾಯದಲ್ಲಿ ದ್ಯೈಪಾಯ
+ನ-
+ []
+
+[70]) (./src/chapter5.tex [71]
+ಅಧ್ಯಾಯ 5.
+[72
+
+] [73]
+Missing character: There is no R in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+ [74]
+File: chap5-fig1.eps Graphic file (type eps)
+
+<chap5-fig1.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+File: chap5-fig2.eps Graphic file (type eps)
+
+<chap5-fig2.eps> [77] [78] [79] [80] [81] [82] [83] [84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+[87] [88]) (./src/chapter6.tex [89]
+ಅಧ್ಯಾಯ 6.
+
+Overfull \hbox (23.20319pt too wide) in paragraph at lines 3--4
+\TU/NudiUni01k(0)/m/n/12 (ಈ ಪಾಠಕ್ಕೆ ಉಪಸ್ಠಿತರಿದ್ದವರು-ಶ್ರೀಯುತರಾದ, ಎನ್.ಎಸ್.ರಾಮಭದ್ರ
+ಾಚಾರ್ಯರು,
+ []
+
+[90
+
+] [91] [92]
+Missing character: There is no c in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [94]
+[95] [96] [97]
+Overfull \hbox (0.2636pt too wide) in paragraph at lines 80--81
+\TU/NudiUni01k(0)/m/n/12 ದೋಣಿಯು ಹೋಗುತ್ತಿದ್ದಾಗ ಮೊದಲು ಹತ್ತಿರದಲ್ಲಿ ವಾಟರ್ ಲೆವೆಲ್‌ನಲ
+್ಲಿಯೇ
+ []
+
+
+Underfull \vbox (badness 3568) has occurred while \output is active []
+
+ [98]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+[100]
+Missing character: There is no V in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [101] [102] [103] [104]
+File: Om-PNG.eps Graphic file (type eps)
+ <Om-PNG.eps>
+File: symbol.eps Graphic file (type eps)
+ <symbol.eps> [105]
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+ [106]
+[107] [108] [109] [110]) (./src/chapter7.tex [111]
+ಅಧ್ಯಾಯ 7.
+[112
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [113]
+[114] [115] [116]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117]
+[118] [119]
+Underfull \vbox (badness 7522) has occurred while \output is active []
+
+ [120]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121]
+[122] [123] [124] [125] [126] [127] [128] [129]
+Underfull \vbox (badness 5245) has occurred while \output is active []
+
+ [130]
+[131] [132] [133]
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [134]
+[135] [136] [137] [138] [139]
+Overfull \hbox (1.49086pt too wide) in paragraph at lines 277--277
+[]\TU/NudiUni01k(1)/bx/n/14.4 ಮೂಲದೊಡನೆ ಸಂಬದ್ಧವಾದಾಗ ಯಾವ ವರ್ಣನೆಯೂ ಆಭಾ-
+ []
+
+[140]
+Overfull \hbox (2.24771pt too wide) in paragraph at lines 281--281
+[]\TU/NudiUni01k(1)/bx/n/14.4 ಆರ್ಷವಾಣಿಯ ಯಥಾರ್ಥತೆ ಅರಿವಾಗಿದ್ದರೆ, ಲೋಕಕ್ಕದು ಉಪ-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141]
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+ [142]
+[143] [144]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [145]
+[146] [147] [148]) (./src/chapter8.tex [149]
+ಅಧ್ಯಾಯ 8.
+[150
+
+] [151] [152] [153] [154]) (./src/chapter9.tex [155]
+ಅಧ್ಯಾಯ 9.
+[156
+
+]
+Overfull \hbox (6.70305pt too wide) in paragraph at lines 13--14
+\TU/NudiUni01k(0)/m/n/12 ಯೇ ಅದನ್ನು ತರಬೇಕು. ಆದ್ದರಿಂದಲೇ ಬ್ರಹ್ಮಜ್ಞಾನವುಳ್ಳವನ ‘ಗೈಡೆನ
+್ಸ್‍’ ಬೇಕು.
+ []
+
+) [157] [158
+
+] (./src/chapter10.tex
+ಅಧ್ಯಾಯ 10.
+[159
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [160]
+[161]
+Overfull \hbox (3.26204pt too wide) in paragraph at lines 37--37
+[]\TU/NudiUni01k(1)/bx/n/14.4 ನರರೂಪಿಯಾದ ನಾರಾಯಣನನ್ನು ಅರಿತು ಅನುಸರಿಸಿದರೆ ಎಲ್ಲ-
+ []
+
+[162]
+Overfull \hbox (23.0452pt too wide) in paragraph at lines 76--77
+\TU/NudiUni01k(0)/m/n/12 ಇಂದು ಶ್ರೀರಾಮನವಮೀ. ರಾಮನವಮಿಯನ್ನು ಸೌರಮಾನ-ಚಾಂದ್ರಮಾನಗಳೆಂಬ
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [163]
+[164]
+Overfull \hbox (47.45961pt too wide) in paragraph at lines 109--110
+\TU/NudiUni01k(0)/m/n/12 ಗಿಲೆಯನ್ನು ನಮಸ್ಕರಿಸುತ್ತೇನೆ) ಯೋಗದ ಸ್ಥಿತಿಯಲ್ಲಿದ್ದು ಎಲ್ಲವನ
+್ನೂ ಹೃದಯದಲ್ಲಿನೋಡಿ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[165] [166]
+Overfull \hbox (7.29895pt too wide) in paragraph at lines 160--161
+[]\TU/NudiUni01k(0)/m/n/12 (ಜಗತ್ತಿಗೆ ಕ್ಷೋಭೆಯನ್ನುಂಟುಮಾಡುವ ಧರ್ಮಗ್ಲಾನಿಯು ಯಾವಾಗ ಉಂ-
+
+ []
+
+[167] [168] [169]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [171]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [172]
+[173] [174] [175]) (./src/chapter11.tex
+Overfull \hbox (7.14383pt too wide) in paragraph at lines 371--1
+[]\TU/NudiUni01k(0)/m/n/12 ಇಂತಹ ಆರ್ಷ-ಆರ್ಯಕಾವ್ಯವನ್ನು, ಅನಾರ್ಯತೆಯನ್ನು ಕಳೆದು ಆರ್ಯ-
+ []
+
+
+Overfull \hbox (11.65045pt too wide) in paragraph at lines 371--1
+\TU/NudiUni01k(0)/m/n/12 ರನ್ನಾಗಿಸುವ ಕಾವ್ಯವನ್ನು ವಾಲ್ಮೀಕಿ ಮಹರ್ಷಿಗಳು ಹೊರತಂದರು. ರಾಮ
+ರಾಜ್ಯ-
+ []
+
+[176]
+ಅಧ್ಯಾಯ 11.
+[177
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [178]
+[179] [180] [181] [182] [183] [184] [185] [186]) (./src/chapter12.tex [187]
+ಅಧ್ಯಾಯ 12.
+[188
+
+] [189]
+Overfull \hbox (4.17393pt too wide) in paragraph at lines 31--32
+\TU/NudiUni01k(0)/m/n/12 ದಿವಸ ಖಾರ ತೆಗೆದುಕೊಳ್ಳಕೂಡದು, ಪೂರ್ತಾ ರೆಸ್ಟ್‍ ತೆಗೆದುಕೊಳ್ಳಬ
+ೇಕು, ಈ
+ []
+
+[190] [191] [192] [193] [194]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [195]
+[196] [197]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [198]
+Overfull \hbox (14.66782pt too wide) in paragraph at lines 132--133
+\TU/NudiUni01k(0)/m/n/12 ಬಳಸಿಕೊಂಡು ಬ್ರಹ್ಮನೂ, ನಾರದರೂ ಎನ್‍ಕರೇಜ್‍ಮೆಂಟ್‍ \TU/Nimbus
+RomanNo9L(0)/m/n/12 (Encouragement)
+ []
+
+[199]
+Overfull \hbox (4.62604pt too wide) in paragraph at lines 159--160
+\TU/NudiUni01k(0)/m/n/12 ರಾಮಾಯಣದ ಫಲ, ಭೌತಿಕ-ದೈವಿಕ-ಆಧ್ಯಾತ್ಮಿಕ-ಸೌಂದರ್ಯಾನುಭವ. ರಾ-
+ []
+
+[200] [201] [202] [203] [204] [205] [206] [207]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [208]
+[209] [210]) (./src/chapter13.tex [211]
+ಅಧ್ಯಾಯ 13.
+[212
+
+]
+Missing character: There is no ³ in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+Missing character: There is no ³ in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [213]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [214]
+[215] [216]
+Missing character: There is no ³ in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+ [217]
+Overfull \hbox (4.58684pt too wide) in paragraph at lines 159--159
+[]\TU/NudiUni01k(1)/bx/n/14.4 ಅಂತರ್ವಾಹಿನಿಗೆ ಬಹಿರ್ವಾಹಿನಿಯ ಸಂಗಮವಾದ ಎರಡು ಘಟ-
+ []
+
+[218]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [219]
+Missing character: There is no ³ in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+[220] [221] [222] [223] [224] [225]
+Underfull \vbox (badness 1577) has occurred while \output is active []
+
+ [226]
+Missing character: There is no ³ in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+)
+(./src/chapter14.tex [227]
+ಅಧ್ಯಾಯ 14.
+
+Overfull \hbox (3.20445pt too wide) in paragraph at lines 5--5
+[]\TU/NudiUni01k(1)/bx/n/14.4 ರಾಮಾಯಣದಲ್ಲಿ ಚೇತನನಿಗೂ ಇಂದ್ರಿಯಗಳಿಗೂ ಬೇಕಾದ ರಸ-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [228
+
+]
+[229] [230]
+Overfull \hbox (6.6476pt too wide) in paragraph at lines 68--69
+\TU/NudiUni01k(0)/m/n/12 ನಾರದರಿಂದ ಕೇಳಿದ ಸನಾತನಾದ ರಾಮನ ಗುಣವನ್ನೇ ಧ್ಯಾನಿಸುತ್ತಿದ್ದುದ
+ರಿಂದ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+[231] [232]) (./src/chapter15.tex [233]
+ಅಧ್ಯಾಯ 15.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [234
+
+]
+[235]) (./src/chapter16.tex [236]
+ಅಧ್ಯಾಯ 16.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [237
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [238]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [239]
+[240]) (./src/chapter17.tex [241]
+ಅಧ್ಯಾಯ 17.
+[242
+
+] [243]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [244]
+[245]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [246]
+[247] [248]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [249]
+[250]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [251]
+Overfull \hbox (0.7958pt too wide) in paragraph at lines 177--178
+[]\TU/NudiUni01k(0)/m/n/12 ೫)ರಾಮಾಯಣದ ಪುಸ್ತಕಕ್ಕಿಂತ ವ್ಯಾಸಪಿಠಿಕೆಯೇ ದೊಡ್ಡಬಾಯಿತು, ಎಂ
+-
+ []
+
+) (./src/chapter18.tex [252]
+ಅಧ್ಯಾಯ 18.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [253
+
+]
+[254] [255]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [256]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [257]
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
+
+ []
+
+[258] [259] [260] [261] [262]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [263]
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+ [264]
+Missing character: There is no G in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+[265]
+Overfull \hbox (11.11006pt too wide) in paragraph at lines 153--153
+[]\TU/NudiUni01k(1)/bx/n/14.4 ಭಾವ-ರಸ-ಸಂಗೀತ ಸಮ್ಮೀಲಿತವಾದ ರಾಮಾಯಣದ ಬಗ್ಗೆ ಋಷಿ-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [266]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [267]
+[268]) (./src/chapter19.tex [269]
+ಅಧ್ಯಾಯ 19.
+[270
+
+] [271]
+Overfull \hbox (51.32254pt too wide) has occurred while \output is active
+\TU/NudiUni01k(1)/m/n/10 272 \TU/NudiUni01k(1)/m/it/10 ಅಧ್ಯಾಯ 19.  ಶ್ರೀಮದ್ರಾಮಾಯ
+ಣ ಪಾರಾಯಣದ ಪರಿಸಮಾಪ್ತಿಯಲ್ಲಿ ಪುರುಷಸೂಕ್ತ ಪಠನದ ಔಚಿತ್ಯ
+ []
+
+[272] [273]
+Overfull \hbox (51.50253pt too wide) has occurred while \output is active
+\TU/NudiUni01k(1)/m/n/10 274 \TU/NudiUni01k(1)/m/it/10 ಅಧ್ಯಾಯ 19.  ಶ್ರೀಮದ್ರಾಮಾಯ
+ಣ ಪಾರಾಯಣದ ಪರಿಸಮಾಪ್ತಿಯಲ್ಲಿ ಪುರುಷಸೂಕ್ತ ಪಠನದ ಔಚಿತ್ಯ
+ []
+
+[274] [275]
+Overfull \hbox (50.88254pt too wide) has occurred while \output is active
+\TU/NudiUni01k(1)/m/n/10 276 \TU/NudiUni01k(1)/m/it/10 ಅಧ್ಯಾಯ 19.  ಶ್ರೀಮದ್ರಾಮಾಯ
+ಣ ಪಾರಾಯಣದ ಪರಿಸಮಾಪ್ತಿಯಲ್ಲಿ ಪುರುಷಸೂಕ್ತ ಪಠನದ ಔಚಿತ್ಯ
+ []
+
+[276] [277]
+Overfull \hbox (51.20253pt too wide) has occurred while \output is active
+\TU/NudiUni01k(1)/m/n/10 278 \TU/NudiUni01k(1)/m/it/10 ಅಧ್ಯಾಯ 19.  ಶ್ರೀಮದ್ರಾಮಾಯ
+ಣ ಪಾರಾಯಣದ ಪರಿಸಮಾಪ್ತಿಯಲ್ಲಿ ಪುರುಷಸೂಕ್ತ ಪಠನದ ಔಚಿತ್ಯ
+ []
+
+[278]
+Overfull \hbox (2.57434pt too wide) in paragraph at lines 225--226
+[]\TU/NudiUni01k(0)/m/n/12 ಭೂರ್ಭುವಸ್ಸುವರ್ಲೋಕಗಳನ್ನು ವ್ಯಾಪಿಸಿರುವ ಗಾಯತ್ರ್ಯಾತ್ಮಕವಾದ
+ ಗ್ರಂಥ.
+ []
+
+[279]) (./src/chapter20.tex
+Overfull \hbox (51.46254pt too wide) has occurred while \output is active
+\TU/NudiUni01k(1)/m/n/10 280 \TU/NudiUni01k(1)/m/it/10 ಅಧ್ಯಾಯ 19.  ಶ್ರೀಮದ್ರಾಮಾಯ
+ಣ ಪಾರಾಯಣದ ಪರಿಸಮಾಪ್ತಿಯಲ್ಲಿ ಪುರುಷಸೂಕ್ತ ಪಠನದ ಔಚಿತ್ಯ
+ []
+
+[280]
+ಅಧ್ಯಾಯ 20.
+[281
+
+] [282] [283] [284] [285]
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+ [286]
+[287] [288]
+Overfull \hbox (5.23486pt too wide) in paragraph at lines 76--76
+[]\TU/NudiUni01k(1)/bx/n/14.4 ಭಾಗವತಾದಗಳಲ್ಲಿ ಭೌತಿಕಾಂಶವನ್ನು ಮಾತ್ರ ಗ್ರಹಿಸದಿರಲು ಯೋ-
+
+ []
+
+[289] [290] [291] [292] [293] [294]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [295]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [296]
+[297]
+Overfull \hbox (10.69821pt too wide) in paragraph at lines 151--151
+[]\TU/NudiUni01k(1)/bx/n/14.4 ಭಾಗವತಾದಿ ಗ್ರಂಥಗಳನ್ನು ಉಪದೇಶಿಸುವವನಲ್ಲಿರಬೇಕಾದ ಯೋ-
+ []
+
+) [298] [299
+
+] (./src/anubandha.tex [300] [301]
+
+LaTeX Warning: Reference `53' on page 302 undefined on input line 124.
+
+[302]
+Overfull \hbox (3.19159pt too wide) in paragraph at lines 170--171
+[]\TU/NudiUni01k(0)/m/n/12 ಆಕಾರಕ್ಕೆ ಅನುರೂಪವಾದ ಪ್ರಜ್ಞಾಸಂಪತ್ತನ್ನು ಉಳ್ಳವನು (ದಿಲೀಪ 
+ಮಹಾ-
+ []
+
+[303]
+Overfull \hbox (4.37183pt too wide) in paragraph at lines 191--192
+[]\TU/NudiUni01k(0)/m/n/12 ಆತ್ಮನಲ್ಲಿ ಪರ್ಯವಸಾನಗೊಳ್ಳುವಂತಹ ಕ್ರೀಡೆಯುಳ್ಳವನೂ, ಆತ್ಮನಲ್
+ಲಿ ಮು-
+ []
+
+[304] [305] [306] [307] [308] [309] [310] [311] [312]
+Overfull \hbox (1.65645pt too wide) in paragraph at lines 544--545
+[]\TU/NudiUni01k(0)/m/n/12 ನಂತರ ಧರ್ಮಪರಾಯಣವಾದ ಮನಸ್ಸುಳ್ಳ ವಾಲ್ಮೀಕಿಯು, ಹಿಂದೆ ಯಾವ
+ []
+
+[313] [314] [315] [316]
+Overfull \hbox (0.67381pt too wide) in paragraph at lines 685--686
+[]\TU/NudiUni01k(0)/m/n/12 ನಾನು (ಶ್ರೀಕೃಷ್ಣ) ದಮನಮಾಡುವವರಲ್ಲಿ ದಂಡರೂಪದಲ್ಲಿದ್ದೇನೆ. (
+ಅಧ-
+ []
+
+[317] [318] [319] [320] [321] [322] [323]
+File: Om-PNG.eps Graphic file (type eps)
+ <Om-PNG.eps>
+File: Om-PNG.eps Graphic file (type eps)
+ <Om-PNG.eps> [324]
+Missing character: There is no – in font HMS/OT:script=knd2;language=DFLT;mappi
+ng=tex-text;!
+
+[325] [326]
+Overfull \hbox (12.11183pt too wide) in paragraph at lines 1126--1127
+[]\TU/NudiUni01k(0)/m/n/12 ದುರಾತ್ಮರಾದವರು ಮನದಲ್ಲೊಂದು ಯೋಚಿಸುತ್ತಿದ್ದರೆ, ಬಾಯಲ್ಲಿ ಮತ
+್ತೊಂ-
+ []
+
+
+Overfull \hbox (1.93129pt too wide) in paragraph at lines 1126--1127
+\TU/NudiUni01k(0)/m/n/12 ದನ್ನಾಡುತ್ತಿದ್ದು, ದೇಹತಃ ಇವೆರಡಕ್ಕಿಂತಲು ಬೇರೆಯೇ ಮಾಡುವರು. ಮ
+ಹಾ-
+ []
+
+[327] [328] [329]
+Overfull \hbox (48.53842pt too wide) in paragraph at lines 1241--1242
+[]\TU/NudiUni01k(0)/m/n/12 ಓ ಪ್ರಾಚೇತಸನೇ! ಈ ಧರೆಯಲ್ಲಿ ಎಲ್ಲಿಯವರೆಗೆ ಗಿರಿ-ನದೀ-ಸಮುದ್ರ
+ಾದಿಗಳಿರುವುವೋ
+ []
+
+[330] [331]
+
+LaTeX Warning: Reference `???' on page 332 undefined on input line 1337.
+
+
+Overfull \hbox (0.28232pt too wide) in paragraph at lines 1351--1352
+[]\TU/NudiUni01k(0)/m/n/12 ರಾಮಾಯಣ ಕಾವ್ಯಾರ್ಥವೆಲ್ಲಾ ಮನೋವಿಧೇಯವಾಗಿರುವಂತೆಯೇ ಕಾ-
+ []
+
+[332] [333] [334] [335] [336] [337]
+Overfull \hbox (1.87495pt too wide) in paragraph at lines 1564--1565
+[]\TU/NudiUni01k(0)/m/n/12 ಸದಾಶಿವನಿಂದ ಪ್ರಾರಂಭಗೊಂಡು ಶಂಕರಭಗವತ್ಪಾದರನ್ನು ಮಧ್ಯೆ ಹೊಂ-
+
+ []
+
+[338] [339] [340] [341]) [342] (./mainfile.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 11884 strings out of 493005
+ 250677 string characters out of 6134595
+ 345880 words of memory out of 5000000
+ 15669 multiletter control sequences out of 15000+600000
+ 6648 words of font info for 57 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 45i,13n,68p,10440b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on mainfile.pdf (360 pages).
