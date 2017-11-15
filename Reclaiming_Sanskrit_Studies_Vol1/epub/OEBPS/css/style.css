@@ -1,10 +1,10 @@
 @font-face{
-	font-family: engit;
-	src: url('GentiumPlus-I.ttf');
+font-family: engit;
+src: url('GentiumPlus-I.ttf');
 }
 @font-face{
-	font-family: eng;
-	src: url('GentiumPlus-R.ttf');
+font-family: eng;
+src: url('GentiumPlus-R.ttf');
 }
 
 body
@@ -59,7 +59,7 @@ text-align: left;
 }
 
 .level2 {
-	margin-top: 2em;
+margin-top: 2em;
 }
 
 .level2-title{
@@ -135,6 +135,7 @@ text-align: center;
 }
 
 .italic, i{
+font-family: eng;
 font-style: italic; 
 }
 
@@ -145,22 +146,29 @@ font-weight: bold;
 
 dl {
   }
-  dt {
-    float: left;
-    clear: left;
-    width: 60px;
-    text-align: right;
-    font-weight: bold;
-  }
-  dd {
-    margin: 0 0 0 80px;
-    padding: 0 0 0.5em 0;
-  }
+dt{
+float: left;
+clear: left;
+width: 60px;
+text-align: right;
+font-weight: bold;
+}
+dd{
+margin: 0 0 0 80px;
+padding: 0 0 0.5em 0;
+}
 
 dd ul{
-	padding-left: 20px;
+padding-left: 20px;
 }
 
 dd dd dt{
 width: 40px;
+}
+
+.gap-above-medium{
+margin-top: 1.5em;
+}
+.gap-above-large{
+margin-top: 2.5em;
 }
