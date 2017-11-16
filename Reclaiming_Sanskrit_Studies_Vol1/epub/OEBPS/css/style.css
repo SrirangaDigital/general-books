@@ -121,29 +121,23 @@ font-size: 100%;
 font-weight: bold;
 text-align: center;
 }
-
 .left{
 text-align: left;
 }
-
 .right{
 text-align: right;
 }
-
 .center{
 text-align: center;
 }
-
 .italic, i{
-font-family: eng;
+font-family: engit;
 font-style: italic; 
 }
-
 .bold, b{
 font-family: eng;
 font-weight: bold;
 }
-
 dl {
   }
 dt{
@@ -157,18 +151,50 @@ dd{
 margin: 0 0 0 80px;
 padding: 0 0 0.5em 0;
 }
-
 dd ul{
 padding-left: 20px;
 }
-
 dd dd dt{
 width: 40px;
 }
-
 .gap-above-medium{
 margin-top: 1.5em;
 }
 .gap-above-large{
 margin-top: 2.5em;
+}
+.float-left{
+text-align: left;
+}
+.float-right{
+text-align: right;
+}
+.article-author{
+font-family: engit;
+font-style: italic;
+font-size: 120%;
+font-weight: bold;
+margin-top: 1.5em;
+}
+h1.level1-title.numbered > span{
+display: block;
+margin-top: 1em;
+}
+div.myquote{
+font-size: 0.9em;
+width: 80%;
+margin-top: 1em;
+padding: 0 25px;
+}
+span.author-quote{
+display: block;
+float: right;
+}
+.index{
+display: none;
+}
+ul.hangindent li{
+list-style: none;
+margin-left: 2em;
+text-indent: -2em;
 }
