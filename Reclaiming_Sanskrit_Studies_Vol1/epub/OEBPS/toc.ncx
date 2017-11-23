@@ -115,6 +115,18 @@
 			 </navLabel>
 			 <content src="chapter8.xhtml"/>
 		  </navPoint>
+		  <navPoint id="navPoint-18" playOrder="18">
+			 <navLabel>
+				<text>Our Contributors</text>
+			 </navLabel>
+			 <content src="our_contributors.xhtml"/>
+		  </navPoint>
+		  <navPoint id="navPoint-19" playOrder="19">
+			 <navLabel>
+				<text>Acknowledgements</text>
+			 </navLabel>
+			 <content src="acknowledgements.xhtml"/>
+		  </navPoint>
       </navPoint>
    </navMap>
 </ncx>
