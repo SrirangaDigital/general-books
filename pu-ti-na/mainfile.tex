@@ -1,69 +1,13 @@
 \documentclass[11pt,openany]{book}
 
-\usepackage{nudi}
-\usepackage{color}
-\usepackage{amsmath,amssymb}
-
-\usepackage{graphicx}
-\usepackage{tfrupee}
-
-\def\shloka{\smallskip\bgroup\noindent\raggedright\leftskip=60pt\vbox\bgroup\bfseries\ignorespaces}
-\def\endshloka{\egroup\egroup\smallskip\par}
-
-
-
-\usepackage[papersize={140mm,215mm},textwidth=105mm,textheight=172mm,
-topmargin=14mm,botmargin=14mm,leftmargin=18mm,rightmargin=17mm,
-headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
-
-\usepackage{fancyhdr}
-
-\def\eng{\fontfamily{txr}\selectfont}
-
-\def\mdash{\eng{---}}
-
-\fancypagestyle{plain}{%
-\chead[]{}
-\lhead[]{}
-\rhead[]{}
-\cfoot[{\eng\footnotesize\thepage}]{{\eng\footnotesize\thepage}}
-\renewcommand{\headrulewidth}{0pt}
-}
-
-
-
-
-%\usepackage[papersize={140mm,215mm},textwidth=100mm,
-%textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
-%leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
-
-
-\pagestyle{fancy}
-
-\renewcommand{\footrulewidth}{0pt}
-\chead[]{}
-\lhead[{\eng\footnotesize\thepage}]{\footnotesize\bfseries\rightmark} 
-\rhead[{\footnotesize\bfseries\rightmark}]{{\eng\footnotesize\thepage}}
-\cfoot[]{}
-\rfoot[]{}
-\renewcommand\chaptermark[1]{\markright{\bfseries\thechapter.~\slshape #1}{}}
-
-\pretolerance=9000
-
-\usepackage{endnotes}% http://ctan.org/pkg/endnotes
-
-\renewcommand{\notesname}{aDiTipapxNigaLu}
-\let\footnote=\endnote
-\def\footnotetext{\endnotetext[\number\numexpr\value{endnote}+1]}
-\let\footnotemark\endnotemark
-%\renewcommand{\notesname}{aDiTipapxNigaLu}
+\input macros
 
 \begin{document}
 
 \frontmatter
 
-\input mainpage
-\input sampadakanaharake
+\input src/mainpage
+\input src/sampadakanaharake
 
 \makeatletter
 \def\@makeschapterhead#1{%
@@ -85,8 +29,6 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 % \def\@endanenote{\par\vskip-0.2\baselineskip\endgroup}%
 \makeatother
 
-
-
 \tableofcontents
 
 \label{prelims:end}
@@ -95,21 +37,20 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 %\raggedright
 
 %\input poem
-\input article1
-\input article2
-\input article3
-\input article4
-\input article5
-\input article6
-\input article7
-\input 001
-\input 002
-\input 003
-\input 004
-\input 005
-\input 006
-\input 007
-\input 008
+\input src/article1
+\input src/article2
+\input src/article3
+\input src/article4
+\input src/article5
+\input src/article6
+\input src/article7
+\input src/001
+\input src/002
+\input src/003
+\input src/004
+\input src/005
+\input src/006
+\input src/007
+\input src/008
 \label{book:end}
-
 \end{document}
