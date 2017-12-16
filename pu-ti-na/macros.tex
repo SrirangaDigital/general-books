@@ -19,7 +19,7 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 
 \usepackage{fancyhdr}
 
-\def\eng{\fontfamily{txr}\selectfont}
+\def\eng#1{{\fontfamily{txr}\selectfont#1}}
 
 \def\mdash{\eng{---}}
 
@@ -27,7 +27,7 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 \chead[]{}
 \lhead[]{}
 \rhead[]{}
-\cfoot[{\eng\footnotesize\thepage}]{{\eng\footnotesize\thepage}}
+\cfoot[{\eng{\footnotesize\thepage}}]{{\eng{\footnotesize\thepage}}}
 \renewcommand{\headrulewidth}{0pt}
 }
 
@@ -43,8 +43,8 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 
 \renewcommand{\footrulewidth}{0pt}
 \chead[]{}
-\lhead[{\eng\footnotesize\thepage}]{\footnotesize\bfseries\rightmark} 
-\rhead[{\footnotesize\bfseries\rightmark}]{{\eng\footnotesize\thepage}}
+\lhead[{\eng{\footnotesize\thepage}}]{\footnotesize\bfseries\rightmark} 
+\rhead[{\footnotesize\bfseries\rightmark}]{{\eng{\footnotesize\thepage}}}
 \cfoot[]{}
 \rfoot[]{}
 \renewcommand\chaptermark[1]{\markright{\bfseries\thechapter.~\slshape #1}{}}
