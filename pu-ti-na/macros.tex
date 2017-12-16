@@ -19,7 +19,7 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 
 \usepackage{fancyhdr}
 
-\def\eng{\fontfamily{cmr}\selectfont}
+\def\eng{\fontfamily{txr}\selectfont}
 
 \def\mdash{\eng{---}}
 
@@ -58,3 +58,9 @@ headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 \def\footnotetext{\endnotetext[\number\numexpr\value{endnote}+1]}
 \let\footnotemark\endnotemark
 %\renewcommand{\notesname}{aDiTipapxNigaLu}
+
+
+
+\usepackage{tocloft}% http://ctan.org/pkg/tocloft
+\setlength{\cftchapnumwidth}{1.7em}
+\renewcommand\cftchapafterpnum{\vskip-4pt}
