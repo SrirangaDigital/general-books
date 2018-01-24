@@ -4,7 +4,8 @@
 \usepackage{graphicx,epsfig,wrapfig}
 \usepackage{latexsym,amsfonts,amssymb}
 \usepackage{titlesec}
-
+\usepackage{caption}
+\captionsetup{labelformat=empty}
 \input dnmacs
 
 \usepackage{float}
@@ -68,6 +69,7 @@ leftmargin=20mm,rightmargin=20mm,footskip=6mm,cropmarks]{zwpagelayout}
   \fi
   \null\vfil
   \secdef\@part\@spart}
+  
 \makeatother
 
 \pagestyle{fancy}
