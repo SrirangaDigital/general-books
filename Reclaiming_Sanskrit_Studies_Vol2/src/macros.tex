@@ -132,6 +132,8 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\enoteheading{\section*{\notesname}%
   \mbox{}\par\vskip-\baselineskip}
 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
 \renewenvironment{thebibliography}[1]
      {\section*{\bibname}%
       %\@mkboth{\bibname}{\bibname}%
