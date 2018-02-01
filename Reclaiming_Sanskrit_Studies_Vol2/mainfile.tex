@@ -10,19 +10,25 @@
 \chead[]{}
 \cfoot[]{}
 
-%\input src/titlepage
-%\newpage
+\input src/titlepage
+\newpage
 
-%\input src/copyright
-%\newpage
+\input src/copyright
+\newpage
 
-%\input src/contents
-%\newpage
+\input src/contents
+\newpage
 
-%\input src/about
-%\newpage
+\input trans_scheme
+\newpage
 
-%\input src/editorial
+\input src/about
+\newpage
+
+\input src/key_partners
+\newpage
+
+\input src/editorial
 
 \mainmatter
 
@@ -31,12 +37,9 @@
 \chead[]{}
 \cfoot[]{}
 
-
-%\part{``Link" between Sanskrit and Nazism}
-
 %\input src/chapter1
-\setcounter{chapter}{1}
-\input src/chapter2
+%\setcounter{chapter}{1}
+%\input src/chapter2
 %\setcounter{chapter}{2}
 %\input src/chapter3
 %\setcounter{chapter}{3}
@@ -45,29 +48,23 @@
 %\input src/chapter5
 %\setcounter{chapter}{5}
 %\input src/chapter6
-%\setcounter{chapter}{6}
-%\input src/chapter7
+\setcounter{chapter}{6}
+\input src/chapter7
 
-%\part{``Death" of Sanskrit}
+\input src/biodata
+\newpage
 
-%\input src/chapter4
+\input src/ack
 
-%\input src/chapter5
+\makeatletter
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
 
-%\input src/chapter6
-
-%\makeatletter
-%\renewcommand\thesubsubsection{\thesubsection.\@arabic\c@subsubsection}
-%\makeatother
-
-%\input src/chapter7
-
-%\input src/chapter8
-
-%\input src/biodata
+\lhead[\small\thepage\quad ŚĀSTRA-S THROUGH THE LENS OF WESTERN INDOLOGY - A RESPONSE]{}
+\rhead[]{Index\quad\small\thepage}
 
 \printindex
-
-\label{book:end}
 
 \end{document}
