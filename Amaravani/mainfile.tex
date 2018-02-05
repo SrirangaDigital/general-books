@@ -1,98 +1,12 @@
 \documentclass[11pt]{book}
-\usepackage{nudi,amsmath}
-\usepackage{longtable}
-\usepackage{graphicx,epsfig,wrapfig}
-\usepackage{latexsym,amsfonts,amssymb}
-\usepackage{titlesec}
-\usepackage{caption}
-\captionsetup{labelformat=empty}
-\input dnmacs
-
-\usepackage{float}
-\floatstyle{plain}
-\floatplacement{Figure}{H}
-
-\pretolerance=9000
-
-\titleformat{\section}
-{\normalfont\large\bfseries}{\thesection}{1em}{}
-\titlespacing*{\section}
-{0pt}{1ex plus 075ex minus .1ex}{.75ex plus .1ex}
-
-\usepackage[papersize={140mm,220mm},textwidth=10cm,textheight=16.5cm,
-headheight=6mm,headsep=4mm,topmargin=2.25cm,botmargin=1.65cm,
-leftmargin=20mm,rightmargin=20mm,footskip=6mm,cropmarks]{zwpagelayout}
-
-%\def\heading{\medskip\noindent\large\textbf}
-
-
-\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
-\makeatother
-
-\def\shloka{\smallskip\bgroup\noindent\raggedright\leftskip=25pt\vbox\bgroup\bfseries\ignorespaces}
-\def\endshloka{\egroup\egroup\par\smallskip}
-
-\def\artha{\bgroup\ignorespaces\bf}
-\def\endartha{\par\egroup\smallbreak}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\renewcommand{\footrulewidth}{0pt}
-\chead[]{}
-\lhead[\small\sl\thepage]{\small\sl amaravANi} 
-\rhead[\small\leftmark]{\small\sl\thepage}
-\lfoot[]{}
-\cfoot[]{}
-\rfoot[]{}
-\renewcommand\chaptermark[1]{\markboth{\slshape\thechapter.~ #1}{}}
-\renewcommand\sectionmark[1]{\markright{\slshape\thesection.~ #1}}
-
-\fancypagestyle{plain}{%
-\fancyhf{} % clear all header and footer fields
-\fancyfoot[C]{\small\bfseries \thepage} % except the center
-\renewcommand{\headrulewidth}{0pt}}
-
-\makeatletter
-\renewcommand\part{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
-  \thispagestyle{empty}%   % Original �plain� replaced by �emptyx
-  \if@twocolumn
-    \onecolumn
-    \@tempswatrue
-  \else
-    \@tempswafalse
-  \fi
-  \null\vfil
-  \secdef\@part\@spart}
-  
-\makeatother
-
-\pagestyle{fancy}
-
-%\renewcommand{\footrulewidth}{0pt}
-\chead[]{}
-\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\sl\rightmark} 
-\rhead[{\footnotesize\sl\rightmark}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
-\cfoot[]{}
-\rfoot[]{}
-\renewcommand\chaptermark[1]{\markright{\slshape #1}{}}
-
-\fancypagestyle{plain}{%
-\fancyhf{} % clear all header and footer fields
-\fancyfoot[C]{\small\fontfamily{txr}\selectfont\bfseries \thepage} % except the center
-\renewcommand{\headrulewidth}{0pt}}
-
-
-
+\input src/macros
 \begin{document}
 
 
 \frontmatter
+
+\def\addcontentsline#1#2#3{%
+  \addtocontents{#1}{\protect\contentsline{#2}{#3}{\rm\thepage}}}
 
 \long\def\addTOCLine#1{\addcontentsline{toc}{chapter}{#1}}
 
@@ -116,6 +30,8 @@ leftmargin=20mm,rightmargin=20mm,footskip=6mm,cropmarks]{zwpagelayout}
 
 \mainmatter
 
+\def\addcontentsline#1#2#3{%
+  \addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}}}
 
 \input src/chapter1
 \input src/chapter2
@@ -129,6 +45,8 @@ leftmargin=20mm,rightmargin=20mm,footskip=6mm,cropmarks]{zwpagelayout}
 \thispagestyle{empty}
 
 \part*{anubaMdha}
+\addcontentsline{toc}{chapter}{anubaMdha}
+%~ \addtocontents{toc}{\contentsline{chapter}{anubaMdha}{\thepage}}
 
 \newpage
 \input src/anubanda
