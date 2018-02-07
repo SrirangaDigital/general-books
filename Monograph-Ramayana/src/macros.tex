@@ -9,8 +9,6 @@
 \usepackage{imakeidx}
 \usepackage{amsmath}
 
-
-
 \usepackage{float}
 \floatstyle{plain}
 \floatplacement{Figure}{H}
@@ -20,13 +18,13 @@
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
 leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
+
 %%defining fonts
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Gentium Basic}
 \newfontfamily\AAN[Script=Devanagari,Mapping=velthuis-sanskrit]{AA_NAGARI_SHREE_L3}
 \newfontfamily\dev[Script=Devanagari]{Sanskrit2003}
-
-
+\def\devnag#1{{\dev #1}}
 
 %%fancy header settings
 \fancypagestyle{plain}{%
@@ -195,3 +193,22 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 %~ \makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
 
 
+\makeatletter
+\newcommand\Notefont{\normalsize}
+\long\def\bibNote#1{\gdef\@bibNote{\item[]{\Notefont#1}}}
+\renewenvironment{thebibliography}[1]{%
+  \@xp\section\@xp*\@xp{\bibname}%
+  \normalfont\footnotesize\labelsep -.2em\relax
+  \renewcommand\theenumiv{\arabic{enumiv}}\let\p@enumiv\@empty
+  \list{\@biblabel{\theenumiv}}{\@bibNote\settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth \advance\leftmargin\labelsep
+    \usecounter{enumiv}}%
+  \sloppy \clubpenalty\@M \widowpenalty\clubpenalty
+  \sfcode`\.=\@m
+}{%
+  \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist
+}
+\makeatother
+
+\bibNote{({{\sl This is a dual reference bibliography. Sanskrit texts are noted both under their own names (nominally but in bold) and under the names of their editors (in detail). This collapses the usual double lists into one – the primary sources (Sanskrit) and the secondary sources.}})}
