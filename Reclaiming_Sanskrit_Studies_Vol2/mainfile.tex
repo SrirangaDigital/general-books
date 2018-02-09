@@ -57,17 +57,22 @@
 \input src/ack
 
 \newpage
-
+~\phantom{a}
+\thispagestyle{empty}
+\newpage
 \makeatletter
 \renewcommand{\@idxitem}{\par\hangindent 20\p@}
 \renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
 \renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
 \makeatother
 
+
 \lhead[\small\thepage\quad Śāstra-s Through the Lens of Western Indology - A Response]{}
 \rhead[]{Index\quad\small\thepage}
+\setcounter{page}{217}
 \label{index}
 \printindex
 
+\label{book:end}
 
 \end{document}
