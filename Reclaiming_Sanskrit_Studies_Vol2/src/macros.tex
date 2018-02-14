@@ -23,7 +23,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Gentium Basic}
 \newfontfamily\AAN[Script=Devanagari,Mapping=velthuis-sanskrit]{AA_NAGARI_SHREE_L3}
-\newfontfamily\dev[Script=Devanagari]{Sanskrit2003}
+\newfontfamily\dev[Script=Devanagari,AutoFakeBold=3.5]{Sanskrit2003}
 \def\devnag#1{{\dev #1}}
 
 
@@ -66,7 +66,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedright \normalfont
+  {\parindent \z@ \raggedleft \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
 		\setcounter{endnote}{0}%
@@ -82,7 +82,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
+  {\parindent \z@ \raggedleft
     \normalfont
     \interlinepenalty\@M
     \LARGE \bfseries  #1\par\nobreak
@@ -185,7 +185,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \makeatother
 
