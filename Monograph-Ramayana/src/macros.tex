@@ -9,6 +9,17 @@
 \usepackage{imakeidx}
 \usepackage{amsmath}
 
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \setcounter{endnote}{0}
+                    \secdef\@chapter\@schapter}
+\makeatother
+
+\def\ennotechapterhead#1{\addtoendnotes{\protect\bigskip{\noindent\Large\bfseries\thechapter. #1}\bigskip}}
+
 \usepackage{float}
 \floatstyle{plain}
 \floatplacement{Figure}{H}
@@ -65,10 +76,10 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedright \normalfont
+  {\parindent \z@ \raggedleft \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
-		\setcounter{endnote}{0}%
+%		\setcounter{endnote}{0}%
         \huge\bfseries \@chapapp\space \thechapter
         \par\nobreak
         \vskip 20\p@
@@ -81,7 +92,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
+  {\parindent \z@ \raggedleft
     \normalfont
     \interlinepenalty\@M
     \LARGE \bfseries  #1\par\nobreak
