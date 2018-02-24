@@ -18,7 +18,7 @@
                     \secdef\@chapter\@schapter}
 \makeatother
 
-\def\ennotechapterhead#1{\addtoendnotes{\protect\bigskip{\noindent\Large\bfseries\thechapter. #1}\bigskip}}
+%\def\ennotechapterhead#1{\addtoendnotes{\protect\bigskip{\noindent\Large\bfseries\thechapter. #1}\bigskip}}
 
 \usepackage{float}
 \floatstyle{plain}
@@ -193,7 +193,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \makeatother
 
