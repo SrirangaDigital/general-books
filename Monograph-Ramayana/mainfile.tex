@@ -3,6 +3,7 @@
 \input src/macros
 
 \begin{document}
+
 \frontmatter
 
 \lhead[\small\thepage]{}
@@ -10,58 +11,56 @@
 \chead[]{}
 \cfoot[]{}
 
-%\input src/titlepage
-%\newpage
-
-%\input src/copyright
-%\newpage
-
-%\input src/ack
-%\newpage
-
-%\input src/contents
-%\newpage
-
-%\input src/about
-%\newpage
-
-%\input src/editorial
+\input src/titlepage
+\newpage
+\input src/copyright
+\newpage
+\input src/contents
+\newpage
+\input src/trans_scheme
+\newpage
+\input src/about
+\newpage
+\input src/key_partners
+\newpage
+\input src/ack2
+\newpage
+\input src/series_editorial
+\newpage
+\input src/editorial
+\newpage
+\input src/authors-words
+\newpage
+\input src/ack
+\newpage
 
 \mainmatter
 
-%\input src/introduction
-%\input src/chapter1
-%\setcounter{chapter}{1}
-%\input src/chapter2
-\setcounter{chapter}{2}
+
+\input src/introduction
+
+\newpage
+
+\lhead[\small\thepage\quad Reclaiming the {\sl Rāmāyaṇa}]{}
+\rhead[]{\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+\input src/chapter1
+\input src/chapter2
 \input src/chapter3
-%\setcounter{chapter}{3}
-%\input src/chapter4
-%\setcounter{chapter}{4}
-%\input src/chapter5
-%\setcounter{chapter}{5}
-%\input src/chapter6
-%\setcounter{chapter}{6}
-%\input src/chapter7
 
-%\part{``Death" of Sanskrit}
 
-%\input src/chapter4
+\makeatletter
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
 
-%\input src/chapter5
-
-%\input src/chapter6
-
-%\makeatletter
-%\renewcommand\thesubsubsection{\thesubsection.\@arabic\c@subsubsection}
-%\makeatother
-
-%\input src/chapter7
-
-%\input src/chapter8
-
-%\input src/biodata
-
+\lhead[\small\thepage\quad Reclaiming the {\sl Rāmāyaṇa}]{}
+\rhead[]{Index\quad\small\thepage}
+%\setcounter{page}{129}
+\label{index}
 \printindex
 
 \label{book:end}
