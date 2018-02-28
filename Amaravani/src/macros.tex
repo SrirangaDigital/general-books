@@ -45,8 +45,43 @@ leftmargin=20mm,rightmargin=20mm,footskip=6mm,cropmarks]{zwpagelayout}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot[C]{\small\bfseries \thepage} % except the center
 \renewcommand{\headrulewidth}{0pt}}
-
+\def\Ppageref#1{{\rm\pageref{#1}}}
 \makeatletter
+\renewcommand\@pnumwidth{1.85em}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne%
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@%
+    \setlength\@tempdima{1.5em}%
+    \begingroup%
+      \parindent \z@ \rightskip \@pnumwidth%
+      \parfillskip -\@pnumwidth%
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima%
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\def\addcontentsline#1#2#3{%
+  \addtocontents{#1}{\protect\contentsline{#2}{#3}{\rm\thepage}}}
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+		\centerline{\includegraphics[scale=.9]{om.eps}}
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+
 \renewcommand\part{%
   \if@openright
     \cleardoublepage
@@ -81,3 +116,6 @@ leftmargin=20mm,rightmargin=20mm,footskip=6mm,cropmarks]{zwpagelayout}
 \input src/dictionary
 \tolerance=4000
 \pagestyle{fancy}
+
+\newcounter{slnocounter}
+\def\slno{\stepcounter{slnocounter}{\rm\theslnocounter)}}

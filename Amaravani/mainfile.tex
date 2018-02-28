@@ -5,9 +5,6 @@
 
 \frontmatter
 
-\def\addcontentsline#1#2#3{%
-  \addtocontents{#1}{\protect\contentsline{#2}{#3}{\rm\thepage}}}
-
 \long\def\addTOCLine#1{\addcontentsline{toc}{chapter}{#1}}
 
 
@@ -30,10 +27,25 @@
 
 \mainmatter
 
-\def\addcontentsline#1#2#3{%
-  \addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}}}
-
 \input src/chapter1
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \input src/chapter2
 \input src/chapter3
 \input src/chapter4
@@ -50,6 +62,5 @@
 
 \newpage
 \input src/anubanda
-%\input src/raghu-anubanda
 \input src/hindi
 \end{document}
