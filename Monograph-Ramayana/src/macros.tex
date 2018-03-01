@@ -197,11 +197,19 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \makeatother
 
+
 \setcounter{secnumdepth}{4}
 \def\Break{\break }
+\def\passim#1{\textsl{passim}}
 %~ \makeindex
 %~ \makeindex[title=Index,program=makeindex,options=-s mystyle.ist,columnseprule=true,columns=2]
 \makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
+
+%\setcounter{secnumdepth}{4}
+%\def\Break{\break }
+%~ \makeindex
+%~ \makeindex[title=Index,program=makeindex,options=-s mystyle.ist,columnseprule=true,columns=2]
+%\makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
 
 
 \makeatletter
