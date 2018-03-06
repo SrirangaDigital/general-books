@@ -10,6 +10,11 @@
 \usepackage{amsmath}
 \usepackage{longtable}
 
+
+
+\renewcommand{\contentsname}{Contents in Detail}
+\setcounter{tocdepth}{4}
+
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
                     \thispagestyle{plain}%
@@ -17,6 +22,22 @@
                     \@afterindentfalse
                     \setcounter{endnote}{0}
                     \secdef\@chapter\@schapter}
+\makeatother
+
+\makeatletter
+\newcommand*{\clearevenpage}{%
+  \clearpage
+  \if@twoside
+    \ifodd\c@page
+      \hbox{}%
+      \newpage
+      \if@twocolumn
+        \hbox{}%
+        \newpage
+      \fi
+    \fi
+  \fi
+}
 \makeatother
 
 %\def\ennotechapterhead#1{\addtoendnotes{\protect\bigskip{\noindent\Large\bfseries\thechapter. #1}\bigskip}}

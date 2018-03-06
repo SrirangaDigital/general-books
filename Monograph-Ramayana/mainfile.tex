@@ -17,6 +17,13 @@
 \newpage
 \input src/contents
 \newpage
+
+\begingroup
+  \let\cleardoublepage\clearevenpage
+\label{cid} 
+ \tableofcontents
+\endgroup
+\newpage
 \input src/trans_scheme
 \newpage
 \input src/about
