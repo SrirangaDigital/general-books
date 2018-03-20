@@ -1,6 +1,7 @@
 
 %%importing packages
 \usepackage[utf8]{inputenc}
+\usepackage{polyglossia}
 \usepackage{fontspec,graphicx,array,tabularx}
 \usepackage[hyphens]{url}
 \usepackage{fancyhdr}
@@ -19,12 +20,18 @@
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
 leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
+
 %%defining fonts
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Gentium Basic}
-\newfontfamily\AAN[Script=Devanagari,Mapping=velthuis-sanskrit]{AA_NAGARI_SHREE_L3}
+%\newfontfamily\AAN[Script=Devanagari,Mapping=velthuis-sanskrit]{AA_NAGARI_SHREE_L3}
+\newfontfamily\AAN[Script=Devanagari,Ligatures=TeX,AutoFakeBold=3.5,AutoFakeSlant,WordSpace=1.2]{Sanskrit 2003}
 \newfontfamily\dev[Script=Devanagari,AutoFakeBold=3.5]{Sanskrit2003}
+\setdefaultlanguage{devanagari} % (english)
+\setotherlanguage{english}
 \def\devnag#1{{\dev #1}}
+
+
 
 
 %%fancy header settings
