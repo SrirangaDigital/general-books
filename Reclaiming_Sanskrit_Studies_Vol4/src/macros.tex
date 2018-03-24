@@ -1,5 +1,4 @@
-
-%%importing packages
+%importing packages
 \usepackage[utf8]{inputenc}
 \usepackage{polyglossia}
 \usepackage{fontspec,graphicx,array,tabularx}
@@ -140,7 +139,16 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\enoteheading{\section*{\notesname}%
   \mbox{}\par\vskip-\baselineskip}
 
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage{lipsum}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \renewenvironment{thebibliography}[1]
      {\section*{\bibname}%
