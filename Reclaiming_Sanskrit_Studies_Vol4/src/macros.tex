@@ -11,7 +11,6 @@
 \usepackage{rotating}
 \usepackage{xfrac}
 \usepackage{verbatim}
-
 \usepackage{float}
 \floatstyle{plain}
 \floatplacement{Figure}{H}
@@ -215,3 +214,15 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \DeclareCaptionFormat{empty}{#1}
 \renewcommand*\figurename{Figure.}
 \renewcommand{\thefigure}{\arabic{figure}}
+
+\makeatletter
+\usepackage{etoolbox}
+\newcounter{savedchapter}% for remembering the last chapter number
+\preto\appendix{\setcounter{savedchapter}{\arabic{chapter}}}% remembering!
+\newcommand\resumechapters{% the \appendix command with some tweaks
+  \setcounter{chapter}{\arabic{savedchapter}}% restore chapter number
+  \setcounter{section}{0}% reset section counter
+  \gdef\@chapapp{\chaptername}% reset chapter name
+  \gdef\thechapter{\@arabic\c@chapter}% make chapter numbers arabic
+}
+\makeatother
