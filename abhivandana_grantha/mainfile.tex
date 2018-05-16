@@ -1,0 +1,210 @@
+\documentclass[10pt,twoside]{book}
+
+\input macros
+
+\begin{document}
+
+\frontmatter
+
+\makeatletter
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      %~ \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      %~ \fi
+    \fi
+    \interlinepenalty\@M
+    \kannadafont\Huge \bfseries #1\par\nobreak
+    \vskip 15\p@
+}}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       {\englishfont\huge\bfseries \partname\nobreakspace\thepart}
+       \par
+       \vskip 20\p@
+     \fi
+     \kannadafont\Huge\bfseries #2\par}%
+    \@endpart}
+\makeatother
+
+\part{ಗ್ರಂಥಾಂತರಂಗ}
+
+\lhead[\small\thepage]{\leftmark}
+\rhead[{\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+\selectlanguage{kannada}
+\input src/01-chapter-test
+
+%~ \input src/titlepage
+%~ \newpage
+%~ 
+%~ \input src/copyright
+%~ \newpage
+
+%~ \input src/about
+%~ \newpage
+
+
+\mainmatter
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      %~ \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      %~ \fi
+    \fi
+    \interlinepenalty\@M
+    \devanagarifont\Huge \bfseries #1\par\nobreak
+    \vskip 15\p@
+}}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
+       \par
+       \vskip 20\p@
+     \fi
+     \devanagarifont\Huge\bfseries #2\par}%
+    \@endpart}
+\makeatother
+
+\part{शास्त्रसम्बन्धीनि लेखनानि}
+
+%~ \lhead[\small\thepage\quad ]{}
+%~ \rhead[]{\thechapter. \leftmark\quad\small\thepage}
+%~ \chead[]{}
+%~ \cfoot[]{}
+
+%sanskrit articles
+
+\selectlanguage{sanskrit}
+\input src/02-chapter-01
+\input src/02-chapter-02
+
+\makeatletter
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
+       \par
+       \vskip 20\p@
+     \fi
+     \kannadafont\Huge\bfseries #2\par}%
+    \@endpart}
+\makeatother
+
+\part{ಶ್ರೀಯುತ ಗಂಗಾಧರ ಭಟ್ಟರ ಒಡನಾಡಿಗಳ ಒಳನುಡಿ}
+
+\makeatletter
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      %~ \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      %~ \fi
+    \fi
+    \interlinepenalty\@M
+    \kannadafont\Huge \bfseries #1\par\nobreak
+    \vskip 15\p@
+}}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.2ex \@plus -1.3ex \@minus -.3ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\kannadafont\Large\bfseries}}
+
+\makeatother
+
+\selectlanguage{kannada}
+\input src/03-chapter-00
+\selectlanguage{sanskrit}
+
+\makeatletter
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      %~ \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      %~ \fi
+    \fi
+    \interlinepenalty\@M
+    \devanagarifont\Huge \bfseries #1\par\nobreak
+    \vskip 15\p@
+}}
+
+\makeatother
+\input src/03-chapter-01
+\input src/03-chapter-02
+\selectlanguage{english}
+\makeatletter
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      %~ \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      %~ \fi
+    \fi
+    \interlinepenalty\@M
+    \englishfont\Huge \bfseries #1\par\nobreak
+    \vskip 15\p@
+}}
+
+\makeatother
+\input src/03-chapter-test
+
+
+\end{document}
