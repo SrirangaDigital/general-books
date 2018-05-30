@@ -11,7 +11,7 @@
 \usepackage{rotating}
 \usepackage{xfrac}
 \usepackage{verbatim}
-\usepackage{float}
+\usepackage{float,longtable}
 \floatstyle{plain}
 \floatplacement{Figure}{H}
 
@@ -45,6 +45,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 %%user defined commands
 \newenvironment{myquote}[1]{\par\bgroup\eleven\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
+\newenvironment{normalmyquote}[1]{\par\bgroup\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
 \def\Authorline#1{\hfill{\Large\sl\bfseries --\, #1}}
 \def\eleven{\fontsize{9}{11}\selectfont}
 
@@ -147,7 +148,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
   \endgroup
 }
 
-%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \renewenvironment{thebibliography}[1]
      {\section*{\bibname}%
