@@ -1,0 +1,42 @@
+\usepackage{fontspec, graphicx}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{polyglossia}
+
+\usepackage[papersize={140mm,210mm},textwidth=110mm,
+textheight=170mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
+leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+
+\setdefaultlanguage{malayalam}
+\setmainfont[Script=Malayalam]{Rachana}
+%~ %\setmainfont[Script=Malayalam]{AksharUnicode}
+%~ \setmainfont[Script=Malayalam]{Rachana_w01}
+%~ \setmainfont[Script=Malayalam]{Manjari-Regular}
+\newfontfamily\anuswara[Script=Devanagari,Ligatures=TeX,AutoFakeBold=3.5,AutoFakeSlant,WordSpace=1.2]{Sanskrit2003_Aux}
+\newfontfamily\eng{Gentium Plus}
+
+\def\punctt{\fontsize{14pt}{13pt}\anuswara\selectfont}
+\catcode`\‘=\active\def‘{{\eng\char"2018}}
+\catcode`\’=\active\def’{{\eng\char"2019}}
+\catcode`\“=\active\def“{{\eng\char"201C}}
+\catcode`\”=\active\def”{{\eng\char"201D}}
+
+\lefthyphenmin=3
+\righthyphenmin=4
+
+\linespread{1.2}
+
+\makeatletter
+\def\@makeschapterhead#1{%
+  \vspace*{40\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+
+\renewcommand{\chaptermark}[1]{\markboth{\small\@chapapp\ \thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\small \thesection.\ #1}{}}
+\makeatother  
+  
