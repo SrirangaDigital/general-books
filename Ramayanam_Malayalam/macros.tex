@@ -27,6 +27,14 @@ leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \linespread{1.2}
 
 \makeatletter
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.5ex \@plus -1ex \@minus -.2ex}%
+                                   {1.1ex \@plus.1ex}%
+                                   {\normalfont\Large\bfseries}}
 \def\@makeschapterhead#1{%
   \vspace*{40\p@}%
   {\parindent \z@ \raggedright
