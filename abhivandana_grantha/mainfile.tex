@@ -41,6 +41,7 @@
      \fi
      \kannadafont\Huge\bfseries #2\par}%
     \@endpart}
+    
 \makeatother
 
 \part{ಗ್ರಂಥಾಂತರಂಗ}
@@ -50,8 +51,8 @@
 \chead[]{}
 \cfoot[]{}
 
-\selectlanguage{kannada}
-\input src/01-chapter-test
+%~ \selectlanguage{kannada}
+%~ \input src/01-chapter-test
 
 %~ \input src/titlepage
 %~ \newpage
@@ -66,19 +67,38 @@
 \mainmatter
 
 \makeatletter
-\def\@makechapterhead#1{%
-  \vspace*{10\p@}%
-  {\parindent \z@ \centering \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      %~ \if@mainmatter
-        %~ \huge\bfseries \@chapapp\space \thechapter
-        %~ \par\nobreak
-        %~ \vskip 20\p@
-      %~ \fi
-    \fi
-    \interlinepenalty\@M
-    \devanagarifont\Huge \bfseries #1\par\nobreak
-    \vskip 15\p@
+
+\def\@makechapterhead#1{{%
+\centering
+\setbox0=\vbox{\baselineskip=20pt
+\lineskiplimit=0pt
+\devanagarifont\Huge\bfseries #1
+}
+\newdimen\xdimen
+\xdimen = \ht0
+\advance\xdimen by28pt
+\vbox to\xdimen{%
+\vbox{\hbox to\textwidth{\rule{\textwidth}{1pt}}%
+\kern -9pt
+\hbox to\textwidth{\rule{\textwidth}{0.1pt}}
+}
+\vfill
+\copy0
+\vfill
+\vbox{\hbox to\textwidth{\rule{\textwidth}{0.1pt}}%
+\kern -9pt
+\hbox to\textwidth{\rule{\textwidth}{1pt}}
+}}
+
+%~ \vbox{\rule{\textwidth}{1pt}}
+%~ \vskip -9pt
+%~ \vbox{\rule{\textwidth}{0.2pt}}
+%~ 
+%~ \devanagarifont\Huge \bfseries #1
+%~ 
+%~ \vbox{\rule{\textwidth}{0.2pt}}
+%~ \vskip -26pt
+%~ \vbox{\rule{\textwidth}{1pt}}
 }}
 
 \def\@part[#1]#2{%
@@ -99,6 +119,7 @@
      \fi
      \devanagarifont\Huge\bfseries #2\par}%
     \@endpart}
+
 \makeatother
 
 \part{शास्त्रसम्बन्धीनि लेखनानि}
@@ -107,14 +128,21 @@
 %~ \rhead[]{\thechapter. \leftmark\quad\small\thepage}
 %~ \chead[]{}
 %~ \cfoot[]{}
-
 %sanskrit articles
 
 \selectlanguage{sanskrit}
-\input src/02-chapter-01
-\input src/02-chapter-02
+
+\input src/partII/01-chapter-24.tex
+\input src/partII/02-chapter-27.tex
+\input src/partII/03-chapter-15.tex
+\input src/partII/04-chapter-16.tex
+\input src/partII/05-chapter-10.tex
+\input src/partII/06-chapter-34.tex
+
+\end{document}
 
 \makeatletter
+
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
       \refstepcounter{part}%
@@ -162,11 +190,11 @@
 \makeatother
 
 \selectlanguage{kannada}
-\input src/03-chapter-00
+\input src/partIII/01-chapter-42.tex
+
 \selectlanguage{sanskrit}
 
 \makeatletter
-
 \def\@makechapterhead#1{%
   \vspace*{10\p@}%
   {\parindent \z@ \centering \normalfont
@@ -181,13 +209,11 @@
     \devanagarifont\Huge \bfseries #1\par\nobreak
     \vskip 15\p@
 }}
-
 \makeatother
-\input src/03-chapter-01
-\input src/03-chapter-02
-\selectlanguage{english}
-\makeatletter
 
+\selectlanguage{english}
+
+\makeatletter
 \def\@makechapterhead#1{%
   \vspace*{10\p@}%
   {\parindent \z@ \centering \normalfont
@@ -204,7 +230,6 @@
 }}
 
 \makeatother
-\input src/03-chapter-test
 
 
 \end{document}
