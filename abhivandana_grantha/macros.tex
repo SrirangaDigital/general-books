@@ -11,7 +11,7 @@
 % font declarations for the other languages
 \newfontfamily\englishfont{Gentium Basic}
 %~ \newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{Sanskrit2003}
-\newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
+\newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=0.8,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
 \newfontfamily\kannadafont[Script=Kannada,AutoFakeBold=2,AutoFakeSlant=0.15,HyphenChar="200C]{SHREE_KAN_OTF_0850}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
@@ -22,9 +22,9 @@
 
 
 %%page settings for the book
-\usepackage[papersize={140mm,215mm},textwidth=100mm,
+\usepackage[papersize={140mm,215mm},textwidth=110mm,
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
-leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 
 %%fancy header settings
@@ -108,5 +108,35 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
                                     {1em}%
                                     {\normalfont\normalsize\bfseries}}
                                                                          
+\renewenvironment{thebibliography}[1]
+     {\section*{}%
+      %~ \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
 \makeatother
 
+\def\addrule{\rule{\textwidth}{0.1pt}}
+\def\articleend{\bigskip\centerline{\ding{97}\quad\ding{97}\quad\ding{97}}\medskip}
