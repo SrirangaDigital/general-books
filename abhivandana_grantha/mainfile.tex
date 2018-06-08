@@ -44,6 +44,14 @@
     
 \makeatother
 
+\selectlanguage{kannada}
+\input src/titlepage
+\newpage
+
+\selectlanguage{english}
+\input src/copyright
+\newpage
+
 \part{ಗ್ರಂಥಾಂತರಂಗ}
 
 \lhead[\small\thepage]{\small\leftmark}
@@ -51,14 +59,13 @@
 \chead[]{}
 \cfoot[]{}
 
-%~ \selectlanguage{kannada}
-%~ \input src/01-chapter-test
+\selectlanguage{kannada}
+\input src/partI/01-chapter-01.tex
+\input src/partI/05-chapter-02.tex
+\input src/partI/06-chapter-88.tex
 
-%~ \input src/titlepage
-%~ \newpage
 %~ 
-%~ \input src/copyright
-%~ \newpage
+
 
 %~ \input src/about
 %~ \newpage
