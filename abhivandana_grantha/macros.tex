@@ -9,10 +9,10 @@
 \setmainfont{Sanskrit2003} % main font
 
 % font declarations for the other languages
-\newfontfamily\englishfont{Gentium Basic}
+\newfontfamily\englishfont[Script=Latin,AutoFakeBold=1.2,AutoFakeSlant=0.15]{Gentium Basic}
 %~ \newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{Sanskrit2003}
-\newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=0.8,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
-\newfontfamily\kannadafont[Script=Kannada,AutoFakeBold=2,AutoFakeSlant=0.15,HyphenChar="200C]{SHREE_KAN_OTF_0850}
+\newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
+\newfontfamily\kannadafont[Script=Kannada,AutoFakeBold=3,AutoFakeSlant=0.15,HyphenChar="200C]{SHREE_KAN_OTF_0850}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
@@ -138,5 +138,5 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
   }}
 \makeatother
 
-\def\addrule{\rule{\textwidth}{0.1pt}}
+\def\addrule{\rule{\textwidth}{0.2pt}}
 \def\articleend{\bigskip\centerline{\ding{97}\quad\ding{97}\quad\ding{97}}\medskip}
