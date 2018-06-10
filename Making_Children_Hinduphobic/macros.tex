@@ -10,6 +10,14 @@
 \usepackage{amsmath,lscape}
 \usepackage{rotating}
 \usepackage{longtable}
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+%~ \usepackage[hang,flushmargin]{footmisc} 
+%~ \renewcommand{\hangfootparindent}{0em}% Indentation for 2nd etc. paragraphs in footnotes which cosists of more than one paragraph
+%~ \renewcommand{\hangfootparskip}{0pt}% Vertical space between paragraphs in multiparagraph footnotes
+%~ \renewcommand{\footnotemargin}{3pt}% Setting left margin; this is the smallest value I can get to have second etc. lines indented to footnote number; zero put indentation to some positive value, and negative values do not help actually
+%~ \renewcommand{\footnotelayout}{}
 
 \usepackage{float}
 \floatstyle{plain}
@@ -57,15 +65,6 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 
-\renewcommand\frontmatter{%
-    \cleardoublepage
-  \@mainmatterfalse
-  \pagenumbering{arabic}}
-\renewcommand\mainmatter{%
-    \cleardoublepage
-  \@mainmattertrue
-}
-
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedleft \normalfont
@@ -91,51 +90,6 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \vskip 40\p@
   }}
 
-\renewcommand\part{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
-  \thispagestyle{empty}%
-  \if@twocolumn
-    \onecolumn
-    \@tempswatrue
-  \else
-    \@tempswafalse
-  \fi
-  \null\vfil
-  \secdef\@part\@spart}
-
-\def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
-      \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
-    \else
-      \addcontentsline{toc}{part}{#1}%
-    \fi
-    \markboth{}{}%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \ifnum \c@secnumdepth >-2\relax
-       \huge\bfseries \partname\nobreakspace\thepart
-       \par
-       \vskip 20\p@
-     \fi
-     \Huge \bfseries #2\par}%
-    \@endpart}
-
- 
-\def\notesname{Notes}%  
-
-\def\enoteformat{\rightskip\z@ \leftskip\z@ \parindent=0.3em
-  \leavevmode\llap{\makeenmark}}
-
-\def\enoteheading{\section*{\notesname}%
-  \mbox{}\par\vskip-\baselineskip}
-
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \renewcommand{\arraystretch}{1.1}
 \renewcommand{\bibname}{References}
 
@@ -166,7 +120,7 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
                                    {1ex \@plus.2ex}%
-                                   {\normalfont\Large\bfseries}}
+                                   {\normalfont\large\bfseries}}
 
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-2.25ex\@plus -1ex \@minus -.2ex}%
@@ -189,7 +143,7 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \makeatother
 

@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside]{book}
+\documentclass[10pt,openright]{book}
 
 \input macros
 
@@ -10,14 +10,60 @@
 \chead[]{}
 \cfoot[]{}
 
+\input src/titlepage
+\newpage
+ 
+\input src/copyright
+\newpage
+
+\input src/dedication
+
+\newpage
+~
+\thispagestyle{empty}
+
+\newpage
+
+\input src/ack
+
+\newpage
+~
+\thispagestyle{empty}
+
+\newpage
+
+\input src/introduction
+
 \mainmatter
 
-\lhead[\small\thepage\quad ]{}
 \rhead[]{\small\thepage}
 \chead[]{}
 \cfoot[]{}
 
-\input chapter1
+\input src/chapter-01
+\input src/chapter-02
+\input src/chapter-03
+\input src/chapter-04
+\input src/chapter-05
+\input src/chapter-06
+\input src/chapter-07
+\input src/chapter-08
+\input src/chapter-09
+\input src/chapter-10
+\input src/chapter-11
+\input src/chapter-12
+\input src/chapter-13
+\input src/chapter-14
 
+\appendix
+\renewcommand\chaptername{Appendix}
+
+\input src/appendix-a
+\input src/appendix-b
+\input src/appendix-c
+\input src/appendix-d
+\input src/appendix-e
+\input src/appendix-f
+\input src/appendix-g
 
 \end{document}
