@@ -32,7 +32,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \chead[]{}
 \lhead[]{}
 \rhead[]{}
-\cfoot[{\thepage}]{{\thepage}}
+\cfoot[{\eng{\thepage}}]{{\eng{\thepage}}}
 }
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
@@ -54,10 +54,26 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
       \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+      \addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}#1}%
     \else
       \addcontentsline{toc}{part}{#1}%
     \fi
@@ -136,6 +152,19 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \Huge \bfseries  #1\par\nobreak
     \vskip 40\p@
   }}
+
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\kan{\contentsname}
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
 \makeatother
 
 \def\addrule{\rule{\textwidth}{0.2pt}}
