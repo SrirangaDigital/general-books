@@ -1,7 +1,7 @@
 \documentclass[10pt,openright]{book}
 
 \input macros
-
+\frenchspacing
 \begin{document}
 \frontmatter
 
@@ -17,6 +17,8 @@
 \newpage
 
 \input src/dedication
+
+\tableofcontents
 
 \newpage
 ~
@@ -57,6 +59,24 @@
 
 \appendix
 \renewcommand\chaptername{Appendix}
+\makeatletter
+
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \LARGE\bfseries \MakeUppercase{\@chapapp}\space \AAAlph{chapter}: \uppercase{#1}
+        \addcontentsline{toc}{chapter}{\uppercase{\chaptername\ \word{chapter}: #1}}
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+  }}
+
+%~ \patchcmd{\@makechapterhead}{\thechapter}{\AAAlph{chapter}}{}{}
+\makeatother
+%~ \renewcommand\thechapter{\alph{chapter}}
 
 \input src/appendix-a
 \input src/appendix-b

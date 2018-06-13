@@ -12,7 +12,7 @@
 \usepackage{longtable}
 \usepackage{chngcntr}
 \counterwithout{footnote}{chapter}
-
+\usepackage{fmtcount,etoolbox}
 %~ \usepackage[hang,flushmargin]{footmisc} 
 %~ \renewcommand{\hangfootparindent}{0em}% Indentation for 2nd etc. paragraphs in footnotes which cosists of more than one paragraph
 %~ \renewcommand{\hangfootparskip}{0pt}% Vertical space between paragraphs in multiparagraph footnotes
@@ -56,7 +56,7 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 %%general settings
 \pretolerance=9000
-\parindent=0pt
+%~ \parindent=0pt
 \setlength{\parskip}{5pt}
 
 
@@ -65,30 +65,115 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \addcontentsline{toc}{chapter}{\uppercase{\contentsname}}%       
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+
+\newcommand\words[1]{\expandafter\xwords\csname c@#1\endcsname}
+\def\xwords#1{\ifcase#1\or
+ONE\or
+TWO\or
+THREE\or
+FOUR\or
+FIVE\or
+SIX\or
+SEVEN\or
+EIGHT\or
+NINE\or
+TEN\or
+ELEVEN\or
+TWELVE\or
+THIRTEEN\or
+FOURTEEN\or
+\else
+I need more words\fi}
+
+\newcommand\word[1]{\expandafter\xword\csname c@#1\endcsname}
+\def\xword#1{\ifcase#1\or
+A\or
+B\or
+C\or
+D\or
+E\or
+F\or
+G\or
+\else
+I need more alphabets\fi}
+
+\renewcommand*\l@chapter[2]{%
+   \ifnum \c@tocdepth >\m@ne
+     \addpenalty{-\@highpenalty}%
+     \vskip 1.0em \@plus\p@
+     \setlength\@tempdima{1.5em}%
+     \begingroup
+       \parindent \z@ \rightskip \@pnumwidth
+       \parfillskip -\@pnumwidth
+       \leavevmode \bfseries
+       \advance\leftskip\@tempdima
+       \hskip -\leftskip
+       #1\nobreak\leaders\hbox{\normalfont$\m@th
+         \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+         mu$}\hfill \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+       \penalty\@highpenalty
+     \endgroup
+   \fi}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         %~ \addcontentsline{toc}{chapter}%
+                                   %~ {\protect\numberline{\thechapter}#1}%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft \normalfont
+  {\parindent \z@ \centering \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
-		\setcounter{endnote}{0}%
-        \huge\bfseries \@chapapp\space \thechapter
+        \LARGE\bfseries \MakeUppercase{\@chapapp}\space \thechapter: \uppercase{#1}%
+        \addcontentsline{toc}{chapter}{\uppercase{\chaptername\ \words{chapter}: #1}}
         \par\nobreak
         \vskip 20\p@
       \fi
     \fi
-    \interlinepenalty\@M
-    \LARGE \bfseries #1\par\nobreak
-    \vskip 20\p@
   }}
 
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft
+  {\parindent \z@ \centering
     \normalfont
     \interlinepenalty\@M
-    \LARGE \bfseries  #1\par\nobreak
-    \vskip 40\p@
+    \LARGE \bfseries  \uppercase{#1}\par\nobreak
+    \vskip 20\p@
   }}
+
+\patchcmd{\@makechapterhead}{\thechapter}{\NUMBERstring{chapter}}{}{}
+\patchcmd{\chaptermark}{\thechapter}{\NUMBERstring{chapter}}{}{}
 
 \renewcommand{\arraystretch}{1.1}
 \renewcommand{\bibname}{References}
@@ -114,6 +199,7 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
+
 \renewcommand\@biblabel[1]{}
 
 
