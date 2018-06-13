@@ -44,6 +44,9 @@
     
 \makeatother
 
+%~ \input src/test
+
+
 \selectlanguage{kannada}
 \input src/titlepage
 \newpage
@@ -86,8 +89,12 @@
 \makeatletter
 
 \def\@makechapterhead#1{{%
-\vspace*{50\p@}%
+%~ \vspace*{20\p@}%
 \centering
+\includegraphics{figures/image1.png}
+\includegraphics{figures/image2.png}
+\includegraphics{figures/image1c.png}
+\vskip 10pt
 \setbox0=\vbox{\baselineskip=20pt
 \lineskiplimit=0pt
 \devanagarifont\Huge\bfseries #1
@@ -149,8 +156,12 @@
 \makeatletter
 \renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
 \def\@makechapterhead#1{{%
-\vspace*{50\p@}%
+%~ \vspace*{50\p@}%
 \centering
+\includegraphics{figures/image1.png}
+\includegraphics{figures/image2.png}
+\includegraphics{figures/image1c.png}
+\vskip 10pt
 \setbox0=\vbox{\baselineskip=20pt
 \lineskiplimit=0pt
 \kannadafont\Huge\bfseries #1
