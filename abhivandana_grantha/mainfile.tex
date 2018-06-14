@@ -8,20 +8,15 @@
 \cfoot[{\eng{\thepage}}]{{\eng{\thepage}}}
 \makeatletter
 
-\def\@makechapterhead#1{%
-  \vspace*{10\p@}%
-  {\parindent \z@ \centering \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      %~ \if@mainmatter
-        %~ \huge\bfseries \@chapapp\space \thechapter
-        %~ \par\nobreak
-        %~ \vskip 20\p@
-      %~ \fi
-    \fi
-    \interlinepenalty\@M
-    \kannadafont\Huge \bfseries #1\par\nobreak
-    \vskip 15\p@
-}}
+%~ \def\@makechapterhead#1{%
+  %~ \vspace*{10\p@}%
+  %~ {\parindent \z@ \centering \normalfont
+    %~ \ifnum \c@secnumdepth >\m@ne
+    %~ \fi
+    %~ \interlinepenalty\@M
+    %~ \kannadafont\Huge \bfseries #1\par\nobreak
+    %~ \vskip 15\p@
+%~ }}
 
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
@@ -44,11 +39,10 @@
     
 \makeatother
 
-%~ \input src/test
-
-
 \selectlanguage{kannada}
+
 \input src/titlepage
+
 \newpage
 
 \selectlanguage{english}
@@ -78,43 +72,25 @@
 \input src/partI/05-chapter-02.tex
 \input src/partI/06-chapter-88.tex
 
-%~ 
-
-
-
-
-
 \mainmatter
 
 \makeatletter
 
-\def\@makechapterhead#1{{%
-%~ \vspace*{20\p@}%
-\centering
-\includegraphics{figures/image1.png}
-\includegraphics{figures/image2.png}
-\includegraphics{figures/image1c.png}
-\vskip 10pt
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\devanagarifont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -14pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -13pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
 
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
@@ -152,65 +128,57 @@
 \input src/partII/08-chapter-32.tex
 \input src/partII/09-chapter-20.tex
 \input src/partII/10-chapter-13.tex
+
 \selectlanguage{kannada}
+
 \makeatletter
+
 \renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
-\def\@makechapterhead#1{{%
+
+%~ \def\@makechapterhead#1{{%
 %~ \vspace*{50\p@}%
-\centering
-\includegraphics{figures/image1.png}
-\includegraphics{figures/image2.png}
-\includegraphics{figures/image1c.png}
-\vskip 10pt
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\kannadafont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \input src/partII/11-chapter-41.tex
+
 \selectlanguage{sanskrit}
+
 \makeatletter
+
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\devanagarifont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -14pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -13pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \input src/partII/12-chapter-83.tex
 \input src/partII/13-chapter-21.tex
 \input src/partII/14-chapter-22.tex
@@ -226,61 +194,57 @@
 \input src/partII/24-chapter-26.tex
 \input src/partII/25-chapter-12.tex
 \input src/partII/26-chapter-31.tex
+
 \selectlanguage{kannada}
+
 \makeatletter
+
 \renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\kannadafont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \input src/partII/27-chapter-40.tex
+
 \selectlanguage{sanskrit}
+
 \makeatletter
+
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\devanagarifont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -14pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -13pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \input src/partII/28-chapter-19.tex
 \input src/partII/29-chapter-33.tex
 \input src/partII/30-chapter-80.tex
@@ -296,7 +260,6 @@
 \input src/partII/41-chapter-39.tex
 \input src/partII/42-chapter-36.tex
 
-	
 \makeatletter
 
 \def\@part[#1]#2{%
@@ -318,29 +281,21 @@
      \kannadafont\Huge\bfseries #2\par}%
     \@endpart}
 
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\kannadafont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
@@ -355,35 +310,30 @@
 \selectlanguage{kannada}
 
 \input src/partIII/01-chapter-42.tex
+
 \selectlanguage{sanskrit}
+
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 \lhead[\small\thepage]{\small\dev{\leftmark}}
 
 \makeatletter
 
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\devanagarifont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
 
 
@@ -392,37 +342,35 @@
 \input src/partIII/04-chapter-05.tex
 \input src/partIII/05-chapter-06.tex
 \input src/partIII/06-chapter-07.tex
+
 \clearpage
 
 \selectlanguage{kannada}
+
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
+
 \lhead[\small\thepage]{\small\kan{\leftmark}}
+
 \makeatletter
 
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\kannadafont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \input src/partIII/07-chapter-43.tex
 \input src/partIII/08-chapter-44.tex
 \input src/partIII/09-chapter-46.tex
@@ -458,68 +406,63 @@
 \input src/partIII/36-chapter-68.tex
 \input src/partIII/37-chapter-59.tex
 \input src/partIII/38-chapter-89.tex
+
 \selectlanguage{sanskrit}
+
 \makeatletter
+
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 \lhead[\small\thepage]{\small\dev{\leftmark}}
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\devanagarifont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \input src/partIII/39-chapter-87.tex
 \input src/partIII/40-chapter-77.tex
 \clearpage
+
 \selectlanguage{english}
+
 \makeatletter
 
-\def\@makechapterhead#1{{%
-\vspace*{50\p@}%
-\centering
-\setbox0=\vbox{\baselineskip=20pt
-\lineskiplimit=0pt
-\englishfont\Huge\bfseries #1
-}
-\newdimen\xdimen
-\xdimen = \ht0
-\advance\xdimen by28pt
-\vbox to\xdimen{%
-\vbox{\hbox to\textwidth{\rule{\textwidth}{1.6pt}}%
-\kern -12pt
-\hbox to\textwidth{\rule{\textwidth}{0.2pt}}
-}
-\vfill
-\copy0
-\vfill
-\vbox{\hbox to\textwidth{\rule{\textwidth}{0.2pt}}%
-\kern -11pt
-\hbox to\textwidth{\rule{\textwidth}{1.6pt}}
-}}
-}}
+%~ \def\@makechapterhead#1{{%
+%~ \vspace*{50\p@}%
+%~ \centering
+%~ \begin{center}
+%~ \renewcommand{\arraystretch}{0}%
+%~ \setlength{\arrayrulewidth}{1pt}%
+%~ \begin{tabular}{m{\textwidth}}
+%~ \specialrule{1.6pt}{0pt}{2pt}
+%~ \specialrule{0.2pt}{0pt}{10pt}
+%~ \centering\englishfont\Huge\bfseries #1\tabularnewline
+%~ \specialrule{0.2pt}{10pt}{2pt}
+%~ \specialrule{1.6pt}{0pt}{0pt}
+%~ \end{tabular}%
+%~ \end{center}%
+%~ }}
+
 \makeatother
+
 \lhead[\small\thepage]{\small\eng{\leftmark}}
 \rhead[{\small\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\thepage}
 \chead[]{}
 \cfoot[]{}
+
 \input src/partIII/41-chapter-73.tex
 \input src/partIII/42-chapter-74.tex
 \input src/partIII/43-chapter-75.tex

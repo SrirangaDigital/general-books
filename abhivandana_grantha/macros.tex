@@ -4,16 +4,36 @@
 \usepackage{fontspec}
 \usepackage{fancyhdr}
 \usepackage{polyglossia}
+\usepackage{ctable}
 
 \setdefaultlanguage{sanskrit} % main language
+
 \setotherlanguages{kannada,english,hindi} % other languages 
-\setmainfont{Sanskrit2003} % main font
+
+\setmainfont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701} % main font
 
 % font declarations for the other languages
-\newfontfamily\englishfont[Script=Latin,AutoFakeBold=1.2,AutoFakeSlant=0.15]{Gentium Basic}
+\newfontfamily\englishfont[
+	Script=Latin,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{GentiumBasic}
 %~ \newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{Sanskrit2003}
-\newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
-\newfontfamily\kannadafont[Script=Kannada,AutoFakeBold=3,AutoFakeSlant=0.15,HyphenChar="200C]{SHREE_KAN_OTF_0850}
+\newfontfamily\devanagarifont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701}
+\newfontfamily\kannadafont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
@@ -167,7 +187,30 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \@starttoc{toc}%
     \if@restonecol\twocolumn\fi
     }
+
+\def\@makechapterhead#1{{%
+\vspace*{50\p@}%
+\centering
+\begin{center}
+\renewcommand{\arraystretch}{0}%
+\setlength{\arrayrulewidth}{1pt}%
+\begin{tabular}{m{\textwidth}}
+\specialrule{1.6pt}{0pt}{2pt}
+\specialrule{0.2pt}{0pt}{10pt}
+\centering
+\iflanguage{sanskrit}{\devanagarifont\Huge\bfseries #1}{%
+\iflanguage{kannada}{\kannadafont\Huge\bfseries #1}{%
+\iflanguage{english}{\englishfont\Huge\bfseries #1}{\devanagarifont\Huge\bfseries #1}
+}}\tabularnewline
+\specialrule{0.2pt}{10pt}{2pt}
+\specialrule{1.6pt}{0pt}{0pt}
+\end{tabular}%
+\end{center}%
+}}
+
 \makeatother
 
 \def\addrule{\rule{\textwidth}{0.2pt}}
 \def\articleend{\bigskip\centerline{\ding{97}\quad\ding{97}\quad\ding{97}}\medskip}
+\linespread{1.1}
+
