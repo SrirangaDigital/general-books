@@ -62,9 +62,11 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 %%user defined commands
 
-
-%~ \long\def\Authorline#1{\centerline{\large\textbf{#1}}\medskip\centerline{\hbox{\raise3.5pt\hbox{\rule{2cm}{0.4pt}}}\thinspace\ding{104}\thinspace\hbox{\raise3.5pt\hbox{\rule{2cm}{0.4pt}}}}\vskip 0.75\baselineskip}
 \long\def\Authorline#1{\centerline{\large\textbf{#1}}}
+
+\def\devinline#1{{\fontsize{15}{17}\selectfont\dev{#1}}}
+\def\kaninline#1{{\fontsize{14}{16}\selectfont\kan{#1}}}
+\def\enginline#1{{\fontsize{12}{14}\selectfont\eng{#1}}}
 
 %%general settings
 \pretolerance=9000
@@ -74,7 +76,10 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 %%redefining macros
 \makeatletter
 
-\renewcommand\chaptermark[1]{\markboth{#1}{}}
+\renewcommand\chaptermark[1]{%
+\iflanguage{sanskrit}{\markboth{\dev{#1}}{}}{%
+\iflanguage{kannada}{\markboth{\kan{#1}}{}}{\markboth{\eng{#1}}{}}
+}}
 
 \renewcommand\part{%
   \if@openright
@@ -104,11 +109,14 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
      \interlinepenalty \@M
      \normalfont
      \ifnum \c@secnumdepth >-2\relax
-       \huge\bfseries \partname\nobreakspace\thepart
+       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
        \par
        \vskip 20\p@
      \fi
-     \Huge \bfseries #2\par}%
+     \iflanguage{sanskrit}{\devanagarifont\Huge\bfseries #2}{%
+     \iflanguage{kannada}{\kannadafont\Huge\bfseries #2}{\devanagarifont\Huge\bfseries #2}%
+     }
+     \par}%
     \@endpart}
 
 \def\@makechapterhead#1{%
@@ -189,12 +197,13 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     }
 
 \def\@makechapterhead#1{{%
-~\vskip 30pt%
+\vskip 30pt%
 \centering
 \begin{center}
 \renewcommand{\arraystretch}{0}%
 \setlength{\arrayrulewidth}{1pt}%
-\begin{tabular}{m{\textwidth}}
+\noindent%
+\begin{tabular}{@{}m{\textwidth}@{}}
 \specialrule{1.6pt}{0pt}{2pt}
 \specialrule{0.2pt}{0pt}{10pt}
 \centering

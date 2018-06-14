@@ -6,28 +6,6 @@
 
 \frontmatter
 \cfoot[{\eng{\thepage}}]{{\eng{\thepage}}}
-\makeatletter
-
-\def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
-      \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}#1}%
-    \else
-      \addcontentsline{toc}{part}{#1}%
-    \fi
-    \markboth{}{}%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \ifnum \c@secnumdepth >-2\relax
-       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
-       \par
-       \vskip 20\p@
-     \fi
-     \kannadafont\Huge\bfseries #2\par}%
-    \@endpart}
-    
-\makeatother
 
 \selectlanguage{kannada}
 
@@ -40,6 +18,7 @@
 \newpage
 
 \selectlanguage{kannada}
+
 \input src/about
 \newpage
 
@@ -49,50 +28,19 @@
 \cfoot[]{}
 
 \tableofcontents
+\clearpage
 
 \selectlanguage{kannada}
-
-\lhead[\small\eng{\thepage}]{\small\kan{\leftmark}}
-\rhead[{\small\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\eng{\thepage}}
-\chead[]{}
-\cfoot[]{}
+\lhead[\small\eng{\thepage}]{\small\leftmark}
 
 \input src/partI/01-chapter-01.tex
 \input src/partI/05-chapter-02.tex
 \input src/partI/06-chapter-88.tex
 
-\end{document}
-
-
 \mainmatter
-
-\makeatletter
-
-\def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
-      \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}#1}%
-    \else
-      \addcontentsline{toc}{part}{#1}%
-    \fi
-    \markboth{}{}%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \ifnum \c@secnumdepth >-2\relax
-       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
-       \par
-       \vskip 20\p@
-     \fi
-     \devanagarifont\Huge\bfseries #2\par}%
-    \@endpart}
-
-\makeatother
 
 \selectlanguage{sanskrit}
 \part{शास्त्रसम्बन्धीनि लेखनानि}
-
-\lhead[\small\eng{\thepage}]{\small\dev{\leftmark}}
 
 \input src/partII/01-chapter-24.tex
 \input src/partII/02-chapter-27.tex
@@ -107,21 +55,9 @@
 
 \selectlanguage{kannada}
 
-\makeatletter
-
-\renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
-
-\makeatother
-
 \input src/partII/11-chapter-41.tex
 
 \selectlanguage{sanskrit}
-
-\makeatletter
-
-\renewcommand\chaptermark[1]{\markboth{#1}{}}
-
-\makeatother
 
 \input src/partII/12-chapter-83.tex
 \input src/partII/13-chapter-21.tex
@@ -141,21 +77,9 @@
 
 \selectlanguage{kannada}
 
-\makeatletter
-
-\renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
-
-\makeatother
-
 \input src/partII/27-chapter-40.tex
 
 \selectlanguage{sanskrit}
-
-\makeatletter
-
-\renewcommand\chaptermark[1]{\markboth{#1}{}}
-
-\makeatother
 
 \input src/partII/28-chapter-19.tex
 \input src/partII/29-chapter-33.tex
@@ -174,45 +98,19 @@
 
 \makeatletter
 
-\def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
-      \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}\kan{#1}}%
-    \else
-      \addcontentsline{toc}{part}{#1}%
-    \fi
-    \markboth{}{}%
-    {\centering
-     \interlinepenalty \@M
-     \normalfont
-     \ifnum \c@secnumdepth >-2\relax
-       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
-       \par
-       \vskip 20\p@
-     \fi
-     \kannadafont\Huge\bfseries #2\par}%
-    \@endpart}
-
-
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
                                    {1ex \@plus.2ex}%
                                    {\kannadafont\Large\bfseries}}
-\renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}                                   
-
 \makeatother
 
-\part{ಶ್ರೀಯುತ ಗಂಗಾಧರ ಭಟ್ಟರ ಒಡನಾಡಿಗಳ ಒಳನುಡಿ}
-
 \selectlanguage{kannada}
+
+\part{ಶ್ರೀಯುತ ಗಂಗಾಧರ ಭಟ್ಟರ ಒಡನಾಡಿಗಳ ಒಳನುಡಿ}
 
 \input src/partIII/01-chapter-42.tex
 
 \selectlanguage{sanskrit}
-
-\renewcommand\chaptermark[1]{\markboth{#1}{}}
-\lhead[\small\thepage]{\small\dev{\leftmark}}
-
 
 \input src/partIII/02-chapter-04.tex
 \input src/partIII/03-chapter-03.tex
@@ -223,10 +121,6 @@
 \clearpage
 
 \selectlanguage{kannada}
-
-\renewcommand\chaptermark[1]{\markboth{#1}{}}
-
-\lhead[\small\thepage]{\small\kan{\leftmark}}
 
 \input src/partIII/07-chapter-43.tex
 \input src/partIII/08-chapter-44.tex
@@ -266,19 +160,13 @@
 
 \selectlanguage{sanskrit}
 
-\renewcommand\chaptermark[1]{\markboth{#1}{}}
-\lhead[\small\thepage]{\small\dev{\leftmark}}
-
 \input src/partIII/39-chapter-87.tex
 \input src/partIII/40-chapter-77.tex
-\clearpage
+\newpage
 
 \selectlanguage{english}
 
 \lhead[\small\thepage]{\small\eng{\leftmark}}
-\rhead[{\small\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\thepage}
-\chead[]{}
-\cfoot[]{}
 
 \input src/partIII/41-chapter-73.tex
 \input src/partIII/42-chapter-74.tex
