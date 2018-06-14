@@ -8,16 +8,6 @@
 \cfoot[{\eng{\thepage}}]{{\eng{\thepage}}}
 \makeatletter
 
-%~ \def\@makechapterhead#1{%
-  %~ \vspace*{10\p@}%
-  %~ {\parindent \z@ \centering \normalfont
-    %~ \ifnum \c@secnumdepth >\m@ne
-    %~ \fi
-    %~ \interlinepenalty\@M
-    %~ \kannadafont\Huge \bfseries #1\par\nobreak
-    %~ \vskip 15\p@
-%~ }}
-
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
       \refstepcounter{part}%
@@ -61,7 +51,6 @@
 \tableofcontents
 
 \selectlanguage{kannada}
-\part{ಗ್ರಂಥಾಂತರಂಗ}
 
 \lhead[\small\eng{\thepage}]{\small\kan{\leftmark}}
 \rhead[{\small\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\eng{\thepage}}
@@ -75,22 +64,6 @@
 \mainmatter
 
 \makeatletter
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
 
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
@@ -135,22 +108,6 @@
 
 \renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
 
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
-
 \makeatother
 
 \input src/partII/11-chapter-41.tex
@@ -160,22 +117,6 @@
 \makeatletter
 
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
 
 \makeatother
 
@@ -201,22 +142,6 @@
 
 \renewcommand\chaptermark[1]{\markboth{\kannadafont #1}{}}
 
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
-
 \makeatother
 
 \input src/partII/27-chapter-40.tex
@@ -226,22 +151,6 @@
 \makeatletter
 
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
 
 \makeatother
 
@@ -281,21 +190,6 @@
      \kannadafont\Huge\bfseries #2\par}%
     \@endpart}
 
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
@@ -316,26 +210,6 @@
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 \lhead[\small\thepage]{\small\dev{\leftmark}}
 
-\makeatletter
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
-
-\makeatother
-
 
 \input src/partIII/02-chapter-04.tex
 \input src/partIII/03-chapter-03.tex
@@ -350,26 +224,6 @@
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 
 \lhead[\small\thepage]{\small\kan{\leftmark}}
-
-\makeatletter
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\kannadafont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
-
-\makeatother
 
 \input src/partIII/07-chapter-43.tex
 \input src/partIII/08-chapter-44.tex
@@ -409,54 +263,14 @@
 
 \selectlanguage{sanskrit}
 
-\makeatletter
-
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 \lhead[\small\thepage]{\small\dev{\leftmark}}
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\devanagarifont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
-
-\makeatother
 
 \input src/partIII/39-chapter-87.tex
 \input src/partIII/40-chapter-77.tex
 \clearpage
 
 \selectlanguage{english}
-
-\makeatletter
-
-%~ \def\@makechapterhead#1{{%
-%~ \vspace*{50\p@}%
-%~ \centering
-%~ \begin{center}
-%~ \renewcommand{\arraystretch}{0}%
-%~ \setlength{\arrayrulewidth}{1pt}%
-%~ \begin{tabular}{m{\textwidth}}
-%~ \specialrule{1.6pt}{0pt}{2pt}
-%~ \specialrule{0.2pt}{0pt}{10pt}
-%~ \centering\englishfont\Huge\bfseries #1\tabularnewline
-%~ \specialrule{0.2pt}{10pt}{2pt}
-%~ \specialrule{1.6pt}{0pt}{0pt}
-%~ \end{tabular}%
-%~ \end{center}%
-%~ }}
-
-\makeatother
 
 \lhead[\small\thepage]{\small\eng{\leftmark}}
 \rhead[{\small\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\thepage}
