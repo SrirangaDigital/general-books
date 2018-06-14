@@ -189,7 +189,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     }
 
 \def\@makechapterhead#1{{%
-\vspace*{50\p@}%
+~\vskip 30pt%
 \centering
 \begin{center}
 \renewcommand{\arraystretch}{0}%
@@ -211,6 +211,6 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \makeatother
 
 \def\addrule{\rule{\textwidth}{0.2pt}}
-\def\articleend{\bigskip\centerline{\ding{97}\quad\ding{97}\quad\ding{97}}\medskip}
+\def\articleend{\bigskip\centerline{{\fontsize{10}{12}\selectfont\ding{97}\quad\ding{97}\quad\ding{97}}}}
 \linespread{1.1}
 
