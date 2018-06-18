@@ -69,7 +69,8 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\enginline#1{{\fontsize{12}{14}\selectfont\eng{#1}}}
 
 %%general settings
-\pretolerance=9000
+%~ \pretolerance=9000
+\tolerance=6000
 \parindent=15pt
 \setlength{\parskip}{0pt}
 
@@ -223,3 +224,9 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\articleend{\bigskip\centerline{{\fontsize{10}{12}\selectfont\ding{97}\quad\ding{97}\quad\ding{97}}}}
 \linespread{1.1}
 
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+
+
+\input dictionary
