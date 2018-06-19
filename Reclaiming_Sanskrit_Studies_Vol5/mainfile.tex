@@ -1,7 +1,8 @@
 \documentclass[10pt,twoside]{book}
 
 \input src/macros
-
+\AtBeginEnvironment{quote}{\vspace{0.005\baselineskip}}% Stuff before {quote}
+\AtEndEnvironment{quote}{\vspace{0.005\baselineskip}}% Stuff after {quote}
 \begin{document}
 \frontmatter
 
@@ -42,11 +43,9 @@
 \mainmatter
 
 \lhead[\small\thepage\quad ]{}
-\rhead[]{\small\thechapter. \dev{\leftmark}\quad\small\thepage}
+\rhead[]{\small\thechapter. {\normalsize\dev{\leftmark}}\quad\small\thepage}
 \chead[]{}
 \cfoot[]{}
-
-\input src/chapter-01
 
 \makeatletter
 \def\@makechapterhead#1{%
@@ -66,8 +65,8 @@
   }}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-2.2ex \@plus -1.3ex \@minus -.3ex}%
-                                   {1ex \@plus.2ex}%
+                                   {-0.25ex \@plus -0.5ex \@minus -.2ex}%
+                                   {0.25ex \@plus.1ex}%
                                    {\normalfont\devanagarifont\Large\bfseries}}
 \makeatother
 
