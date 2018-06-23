@@ -1,0 +1,35 @@
+\documentclass[a4,11pt,openany]{book}
+
+%~ \usepackage{array}
+
+\input src/macros
+
+\begin{document}
+
+\frontmatter
+
+%\input src/titlepage
+
+\newpage
+
+%\input src/copyright
+
+\newpage
+
+%\input src/arpane
+%\input src/arike
+%\input src/mununxdi
+
+\newpage
+
+\newpage
+
+%\input src/preface
+
+\tableofcontents 
+ 
+\mainmatter
+\setcounter{chapter}{10}
+\input src/chapter11
+
+\end{document}
