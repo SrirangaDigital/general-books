@@ -1,0 +1,114 @@
+\usepackage{nudi}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage[nodisplayskipstretch]{setspace}
+\usepackage{txfonts}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{multirow,longtable,cancel,rotating}
+\usepackage{multicol}
+
+\usepackage[papersize={140mm,215mm},textwidth=11mm,
+textheight=175mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
+leftmargin=15mm,rightmargin=15mm]{zwpagelayout}
+
+\def\goodbreak{\par\penalty-300 }
+\pretolerance=9000
+
+\usepackage{fancyhdr}
+\usepackage{float}
+\floatstyle{plain}
+\floatplacement{Figure}{H}
+
+\usepackage{caption}
+\renewcommand{\figurename}{citarx}
+
+
+\makeatletter
+
+\newcommand{\ap}{\ensuremath{\swarrow\,\searrow}}
+\linespread{1.1}
+
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{2em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss {\fontfamily{txr}\fontsize{8}{11}\selectfont #2}}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+        \@mkboth{%
+           \contentsname}{\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }  
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\fontfamily{txr}\fontseries{bx}\fontsize{8}{11}\selectfont\thepage}}}
+
+%%%code for widehat begins here%%%%%%%%%%%%%%%%%%%%%
+\def\@tempa#1{\@xp\@tempb\meaning#1\@nil#1}
+\def\@tempb#1>#2#3 #4\@nil#5{%
+  \@xp\ifx\csname#3\endcsname\mathaccent
+    \@tempc#4?"7777\@nil#5%
+  \else
+    \PackageWarningNoLine{amsmath}{%
+      Unable to redefine math accent \string#5}%
+  \fi
+}
+\def\@tempc#1"#2#3#4#5#6\@nil#7{%
+  \chardef\@tempd="#3\relax\set@mathaccent\@tempd{#7}{#2}{#4#5}}
+
+
+\@tempa\widehat
+%%%code for widehat ends here%%%%%%%%%%%%%%%%%%%%%
+
+\makeatother
+
+\def\bookname{gaNita veYvidhayx}
+
+\pagestyle{fancy}
+\renewcommand\sectionmark[1]{}
+\renewcommand\chaptermark[1]{\markboth{}{#1}}
+
+\renewcommand{\footrulewidth}{0pt}
+\chead[]{}
+\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\bfseries\rightmark} 
+\rhead[{\footnotesize\bfseries\bookname}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\cfoot[]{}
+\rfoot[]{}
+
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+%~ \cfoot[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\cfoot[]{}
+\renewcommand{\headrulewidth}{0pt}
+}
+
+\allowdisplaybreaks
+\allowdisplaybreaks
+\AtBeginDocument{%
+ \abovedisplayskip=7pt plus 3pt minus 9pt
+ \abovedisplayshortskip=0pt plus 3pt
+ \belowdisplayskip=7pt plus 3pt minus 9pt
+ \belowdisplayshortskip=7pt plus 3pt minus 4pt
+}
