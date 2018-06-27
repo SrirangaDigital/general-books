@@ -10,7 +10,8 @@
 \usepackage{multicol}
 \usepackage[framemethod=PStricks]{mdframed}
 \mdfsetup{skipabove=0pt,skipbelow=0pt}
-
+\usepackage{wrapfig}
+\usepackage{fancybox}
 
 \setdefaultlanguage{sanskrit} % main language
 
@@ -69,11 +70,12 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 %%user defined commands
 
-\long\def\Authorline#1{\centerline{\large\textbf{#1}}}
+\long\def\Authorline#1{{\centerline{\large\textbf{#1}\addtocontents{toc}{\protect\contentsline{section}{#1}{}}}}}
 
 \def\devinline#1{{\fontsize{15}{17}\selectfont\dev{#1}}}
 \def\kaninline#1{{\fontsize{14}{16}\selectfont\kan{#1}}}
 \def\enginline#1{{\fontsize{12}{14}\selectfont\eng{#1}}}
+\def\parttext{ಅಭಿವಂದನ ಕಾರ್ಯಕ್ರಮದ ಸಂಪೂರ್ಣ ಚಿತ್ರಣ}
 
 %%general settings
 %~ \pretolerance=9000
@@ -84,6 +86,39 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 %%redefining macros
 \makeatletter
 
+\renewcommand*\l@part[2]{%
+  \ifnum \c@tocdepth >-2\relax
+    \addpenalty{-\@highpenalty}%
+    \addvspace{2.7em \@plus\p@}%
+    \setlength\@tempdima{3em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      {\leavevmode
+       \large \bfseries #1\hfil \hb@xt@\@pnumwidth{\hss #2}}\par
+       \nobreak
+         \global\@nobreaktrue
+         \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+  \fi}
+
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 0.7em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\renewcommand\@dotsep{200}
 \renewcommand\chaptermark[1]{%
 \iflanguage{sanskrit}{\markboth{\dev{#1}}{}}{%
 \iflanguage{kannada}{\markboth{\kan{#1}}{}}{\markboth{\eng{#1}}{}}
@@ -117,12 +152,12 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
      \interlinepenalty \@M
      \normalfont
      \ifnum \c@secnumdepth >-2\relax
-       {\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}
+	    \iflanguage{sanskrit}{{\devanagarifont\huge\bfseries द्वितीयो भागः}}{{\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}}	
        \par
        \vskip 20\p@
      \fi
      \iflanguage{sanskrit}{\devanagarifont\Huge\bfseries #2}{%
-     \iflanguage{kannada}{\kannadafont\Huge\bfseries #2}{\devanagarifont\Huge\bfseries #2}%
+     \iflanguage{kannada}{\kannadafont\Huge\bfseries #2\\\large\bfseries\parttext}{\devanagarifont\Huge\bfseries #2}%
      }
      \par}%
     \@endpart}
@@ -183,13 +218,15 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
       \endlist}
 
 \def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
+  \vskip 35pt%
+  {\parindent \z@ \centering
     \normalfont
     \interlinepenalty\@M
     \Huge \bfseries  #1\par\nobreak
     \vskip 40\p@
   }}
+
+\renewcommand\contentsname{\iflanguage{kannada}{ಗ್ರಂಥಾಂತರಂಗ}{Contents}}
 
 \renewcommand\tableofcontents{%
     \if@twocolumn
@@ -197,9 +234,9 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \else
       \@restonecolfalse
     \fi
-    \chapter*{\kan{\contentsname}
+    \chapter*{\kan{ಗ್ರಂಥಾಂತರಂಗ}
         \@mkboth{%
-           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+           ಗ್ರಂಥಾಂತರಂಗ}{ಗ್ರಂಥಾಂತರಂಗ}}%
     \@starttoc{toc}%
     \if@restonecol\twocolumn\fi
     }

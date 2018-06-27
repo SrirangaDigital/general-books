@@ -20,12 +20,16 @@
 \selectlanguage{kannada}
 
 \input src/about
-\newpage
 
 \lhead[\small\eng{\thepage}]{\small\kan{\leftmark}}
 \rhead[{\small\kan{ಜ್ಞಾನಗಂಗಾಧರ}}]{\small\eng{\thepage}}
 \chead[]{}
 \cfoot[]{}
+
+
+\renewcommand{\headrulewidth}{0.6pt}
+\input src/partI/rajamata
+\newpage
 
 \tableofcontents
 \clearpage
@@ -33,36 +37,31 @@
 \selectlanguage{kannada}
 \lhead[\small\eng{\thepage}]{\small\leftmark}
 
-%~ \input src/partI/editorial
-%~ \input src/partI/05-chapter-02.tex
-%~ \input src/partI/06-chapter-88.tex
-%~ \input src/partI/01-chapter-01.tex
-%~ \input src/photos.tex
+\input src/partI/editorial
+\input src/partI/05-chapter-02.tex
+\input src/partI/06-chapter-88.tex
 
-\newpage
-~
-\vfill
-\thispagestyle{empty}
 
-\begin{center}
-{\kannadafont\Huge\bfseries ಚಿತ್ರ ಸಂಪುಟ}\\[4pt]
-{\large\bfseries ಅಭಿವಂದನ ಕಾರ್ಯಕ್ರಮದ ಸಂಪೂರ್ಣ ಚಿತ್ರಣ}
-\end{center}
-
-\vfill
-\eject
+\selectlanguage{kannada}
+\part{ಚಿತ್ರ ಸಂಪುಟ}
 
 \input src/partI/abhivandana_samiti
+\input src/partI/invitation
+\input src/partI/news_paper_cuttings
+\input src/partI/varadi
+\newpage
+
+\input src/partI/01-chapter-01.tex
+\clearpage
+
+\input src/photos.tex
 
 \input dictionary
-
-
-
-\end{document}
 
 \mainmatter
 
 \selectlanguage{sanskrit}
+\lhead[\small\eng{\thepage}]{\small\leftmark}
 \part{शास्त्रसम्बन्धीनि लेखनानि}
 
 \input src/partII/01-chapter-24.tex
@@ -104,81 +103,89 @@
 \input src/partII/40-chapter-17.tex
 \input src/partII/41-chapter-39.tex
 \input src/partII/42-chapter-36.tex
+
 \selectlanguage{kannada}
+
 \input src/partII/11-chapter-41.tex
 \input src/partII/27-chapter-40.tex
+
 \makeatletter
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
                                    {1ex \@plus.2ex}%
                                    {\kannadafont\Large\bfseries}}
+\def\parttext{ ಶ್ರೀಯುತ ಗಂಗಾಧರ ಭಟ್ಟರ ಒಡನಾಡಿಗಳ ಒಳನುಡಿ}
 \makeatother
 
 \selectlanguage{kannada}
 
-\part{ಶ್ರೀಯುತ ಗಂಗಾಧರ ಭಟ್ಟರ ಒಡನಾಡಿಗಳ ಒಳನುಡಿ}
+\part{ಒಳನುಡಿ ಸಂಪುಟ}
 
-\input src/partIII/01-chapter-42.tex
+\input src/partIII/01-chapter-42.tex %%ನನ್ನ ಸೂರು ಮೈಸೂರು
 
 \selectlanguage{sanskrit}
 
-\input src/partIII/02-chapter-04.tex
-\input src/partIII/03-chapter-03.tex
-\input src/partIII/04-chapter-05.tex
-\input src/partIII/05-chapter-06.tex
-\input src/partIII/06-chapter-07.tex
-\input src/partIII/39-chapter-87.tex
-\input src/partIII/40-chapter-77.tex
+\input src/partIII/02-chapter-04.tex %%गङ्गाधरं वीक्ष्य विदन्तु सर्वे
+\input src/partIII/03-chapter-03.tex %%गङ्गाधरो भट्टवरो विराजताम् 
+\input src/partIII/04-chapter-05.tex %%गङ्गाधरसुधीरत्र हव्यकव्योमभास्करः
+\input src/partIII/05-chapter-06.tex %%गङ्गाधरवन्दनम्
+\input src/partIII/06-chapter-07.tex %%अभिनन्दवाचः
+\input src/partIII/39-chapter-87.tex %%प्रशस्यः प्राध्यापकाः
 
 \clearpage
 
 \selectlanguage{kannada}
 
-\input src/partIII/07-chapter-43.tex
-\input src/partIII/08-chapter-44.tex
-\input src/partIII/09-chapter-46.tex
-\input src/partIII/10a-chapter-45.tex
-\input src/partIII/11a-chapter-49.tex
-\input src/partIII/11b-chapter-47.tex
-\input src/partIII/11c-chapter-84.tex
-\input src/partIII/12-chapter-64.tex
-\input src/partIII/13-chapter-48.tex
-\input src/partIII/14-chapter-51.tex
-\input src/partIII/15-chapter-52.tex
-\input src/partIII/16-chapter-54.tex
-\input src/partIII/17-chapter-53.tex
-\input src/partIII/18-chapter-61.tex
-\input src/partIII/19-chapter-55.tex
-\input src/partIII/20-chapter-50.tex
-\input src/partIII/21-chapter-63.tex
-\input src/partIII/22-chapter-58.tex
-\input src/partIII/23-chapter-60.tex
-\input src/partIII/24-chapter-69.tex
-\input src/partIII/25-chapter-56.tex
-\input src/partIII/26-chapter-62.tex
-\input src/partIII/27-chapter-66.tex
-\input src/partIII/28-chapter-90.tex
-\input src/partIII/29-chapter-91.tex
-\input src/partIII/30-chapter-57.tex
-\input src/partIII/31-chapter-67.tex
-\input src/partIII/32-chapter-81.tex
-\input src/partIII/33-chapter-72.tex
-\input src/partIII/34-chapter-71.tex
-\input src/partIII/35a-chapter-70.tex
-\input src/partIII/35b-chapter-65.tex
-\input src/partIII/36-chapter-68.tex
-\input src/partIII/37-chapter-59.tex
-\input src/partIII/38-chapter-89.tex
+\input src/partIII/07-chapter-43.tex %%ನನ್ನ  ಸಹೋದರ \enginline{-} ನಾನು ಕಂಡಂತೆ
+\input src/partIII/08-chapter-44.tex %%ಪ್ರಿಯ ಅಣ್ಣ   \enginline{-}   ಗಂಗಣ್
+\input src/partIII/09-chapter-46.tex %%ಗಂಗಾಧರ ನಮ್ಮ ಕುಟುಂಬದ ಹೆಮ್ಮೆ
+\input src/partIII/10a-chapter-45.tex %%ಸನ್ಮಿತ್ರನಾದ ಗಂಗಾಧರಣ್ಣ
+\input src/partIII/30-chapter-57.tex %% ನಾ ಕಂಡಂತೆ ಗಂಗಾಧರ
+\input src/partIII/25-chapter-56.tex %%ಸಜ್ಜನಪ್ರಿಯ ಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/22-chapter-58.tex %%ನೆನಪು ಹಳತಾಗಿಲ್
+\input src/partIII/20-chapter-50.tex %%ನಮ್ಮ ಪುರೋಹಿತರು   \enginline{-}   ನಮ್ಮ ಹೆಮ್ಮೆ
+\input src/partIII/11a-chapter-49.tex %%ವಿದ್ವತ್ತಿನ ಗಣಿ ಆತ್ಮೀಯ ಮಿತ್ರ
+\input src/partIII/11b-chapter-47.tex %%ನಂದತಿ ನಂದತಿ ನಂದತ್ಯೇವ
+\input src/partIII/11c-chapter-84.tex %%ವೇ॥ಬ್ರ॥ಶ್ರೀ ವಿದ್ವಾನ್ ಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/11d-chapter-92.tex %%ಬಹುಕಾಲದ ಒಡನಾಡಿ
+\input src/partIII/18-chapter-61.tex %%ನಮ್ಮ ನಲ್ಮೆಯ ಶ್ರೀಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/29-chapter-91.tex %%ನಾ ಕಂಡ ನನ್ನ ಸಹವರ್ತಿ ಗಂಗಾಧರ
+\input src/partIII/19-chapter-55.tex %%ನಯ ವಿನಯ ಸಂಪನ್ನ ವಿ~॥ ಶ್ರೀಗಂಗಾಧರ ಭಟ್
+\input src/partIII/23-chapter-60.tex %%ವಿದ್ವಾಂಸರಲ್ಲೊಬ್ಬ ಅಪರಂಜಿ
+\input src/partIII/17-chapter-53.tex %%ಅಪರೂಪದ ಪ್ರಭೇದ ವಿ~॥ ಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/26-chapter-62.tex %%ಗುರವೋ ವಿರಲಾಸ್ಸಂತಿ ಶಿಷ್ಯ ಚಿತ್ತಾಪಹಾರಕಾಃ
+\input src/partIII/15-chapter-52.tex %%ವಿ~। ಗಂಗಾಧರಭಟ್ಟರೊಡನಾಟದ ರಸನಿಮಿಷಗಳು
+\input src/partIII/16-chapter-54.tex %%ವಿ~॥ ಗಂಗಾಧರ ಭಟ್ಟರು ನಾ ಕಂಡಂತೆ
+\input src/partIII/13-chapter-48.tex %%ಹಿತೈಷೀ  \enginline{-}  ಮನೀಷೀ
+\input src/partIII/21-chapter-63.tex %%ಗುರುಭ್ಯೋ ನಮಃ
+\input src/partIII/28-chapter-90.tex %%ಅಪ್ರತಿಮ ಜ್ಞಾಪಕ ಶಕ್ತಿಯ ವಿ~॥ ಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/12-chapter-64.tex %%ರತ್ನಾಕರೋಽಯಂ ಗಂಗಾಧರಃ
+\input src/partIII/14-chapter-51.tex %%ಆಡದೇ ಮಾಡಿದವರು
+\input src/partIII/37-chapter-59.tex %%ಗುರುವಿನೊಡನೆ ಸಂಸ್ಕೃತದೆಡೆಗೆ
+\input src/partIII/27b-chapter-66.tex %%ಗುರುಪ್ರಸಾದ
+\input src/partIII/35a-chapter-70.tex %%ಶಿಷ್ಯರ ಮನಗೆದ್ದ ಸರಳಸ್ವಭಾವದ ವಿ~॥ ಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/31-chapter-67.tex %%ಉತ್ಸಾಹದ ಚಿಲುಮೆ ಗಂಗಾಧರ ಭಟ್ಟರು
+\input src/partIII/27-chapter-66.tex %%ನಮ್ಮ ಹೆಮ್ಮೆ ನಮ್ಮ ಗಂಗಾಧರಭಟ್ಟರು
+\input src/partIII/32-chapter-81.tex %%ಗುರುರೇವ ಜಗತ್ಸರ್ವಮ್
+\input src/partIII/24-chapter-69.tex %%ಗಂಗಾಧರ ಭಟ್ಟರು ನಾ ಕಂಡಂತೆ...
+\input src/partIII/33-chapter-72.tex %%ಆಚಾರ್ಯ ಗಂಗಾಧರಭಟ್ಟರು
+\input src/partIII/36-chapter-68.tex %%ಪರೋಪಕಾರಿ ಗುರುಗಳು
+\input src/partIII/34-chapter-71.tex %%ಗುರುಗುಣ ಅನಾವರಣ
+\input src/partIII/35b-chapter-65.tex %%ಗುರುಜ್ಞಾನ ಗಂಗಾಧರರು
+\input src/partIII/38-chapter-89.tex %%ಭರತ ಮಾತೆ ನಲಿಯಲಿ
+\selectlanguage{sanskrit}
+\input src/partIII/40-chapter-77.tex %%तर्कातीततर्कशात्री वि~। गंङ्गाधर भट्ट
+
 
 \selectlanguage{english}
 
 \lhead[\small\thepage]{\small\eng{\leftmark}}
 
-\input src/partIII/41-chapter-73.tex
-\input src/partIII/42-chapter-74.tex
-\input src/partIII/43-chapter-75.tex
-\input src/partIII/44-chapter-76.tex
-
+\input src/partIII/42-chapter-74.tex %%Pujya Sri Gangadhar Bhat – A Walking Encyclopedia
+\input src/partIII/43-chapter-75.tex %%Gem Of A Teacher
+\input src/partIII/44-chapter-76.tex %%A Great Teacher Sri Gangadhara Bhat
+\input src/partIII/41-chapter-73.tex %%Top Ten Qualities of My Uncle and Teacher
+\label{bookend}
 \end{document}
 
