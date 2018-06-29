@@ -31,7 +31,12 @@ leftmargin=21mm,rightmargin=21mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 %%defining fonts
 \defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Gentium Basic}
+\setmainfont[	
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{Gentium Basic}
 \newfontfamily\AAN[Script=Devanagari,Mapping=velthuis-sanskrit]{AA_NAGARI_SHREE_L3}
 \newfontfamily\dev[Script=Devanagari,AutoFakeBold=3.5]{Sanskrit2003}
 \def\devnag#1{{\dev #1}}
@@ -132,6 +137,7 @@ I need more alphabets\fi}
                        \if@mainmatter
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter.}%
+                         \addcontentsline{toc}{chapter}{\uppercase{\chaptername\ \words{chapter}: #1}}
                          %~ \addcontentsline{toc}{chapter}%
                                    %~ {\protect\numberline{\thechapter}#1}%
                        \else
@@ -156,7 +162,7 @@ I need more alphabets\fi}
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
         \LARGE\bfseries \MakeUppercase{\@chapapp}\space \thechapter: \uppercase{#1}%
-        \addcontentsline{toc}{chapter}{\uppercase{\chaptername\ \words{chapter}: #1}}
+        \rhead[]{#1\quad\small\thepage}
         \par\nobreak
         \vskip 20\p@
       \fi
@@ -229,7 +235,7 @@ I need more alphabets\fi}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+~\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \makeatother
 
