@@ -82,7 +82,7 @@ leftmargin=15mm,rightmargin=15mm]{zwpagelayout}
 
 \makeatother
 
-\def\bookname{gaNita veYvidhayx}
+\def\bookname{gaNita vicAradhAre}
 
 \pagestyle{fancy}
 \renewcommand\sectionmark[1]{}
@@ -113,4 +113,16 @@ leftmargin=15mm,rightmargin=15mm]{zwpagelayout}
  \belowdisplayshortskip=7pt plus 3pt minus 4pt
 }
 
+\def\eng#1{{\fontfamily{txr}\fontsize{11}{13}\selectfont #1}}
 
+\newcounter{num}
+\def\entry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
+\def\endentry{\egroup\par\medskip}
+
+\def\pentry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
+\def\endpentry{\egroup\par\smallskip}
+
+\def\word#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{13pt}{13pt}\selectfont\bf #1}\thinspace:\markboth{#1}{#1}}\relax
+\def\engword#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{9pt}{9pt}\selectfont \eng{#1}}\thinspace:\markboth{\eng{#1}}{\eng{#1}}}\relax
+\def\gl#1{{\bfseries \eng{(#1)}.}}
+\def\kanmng#1{{\fontsize{10pt}{12pt}\selectfont #1.}\relax}
