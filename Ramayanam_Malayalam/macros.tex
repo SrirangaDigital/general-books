@@ -7,8 +7,16 @@
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
 leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
+%%following setting is for sample
+%~ \usepackage[papersize={149mm,235mm},textwidth=115mm,
+%~ textheight=200mm,headheight=6mm,headsep=4mm,topmargin=12.5mm,botmargin=12.5mm,
+%~ leftmargin=17mm,rightmargin=17mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+
 \setdefaultlanguage{malayalam}
-\setmainfont[Script=Malayalam]{Rachana}
+\setmainfont[
+	Script=Malayalam,
+	BoldFont=Rachana-Bold,
+]{Rachana-Regular}
 %~ %\setmainfont[Script=Malayalam]{AksharUnicode}
 %~ \setmainfont[Script=Malayalam]{Rachana_w01}
 %~ \setmainfont[Script=Malayalam]{Manjari-Regular}
@@ -21,10 +29,12 @@ leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \catcode`\“=\active\def“{{\eng\char"201C}}
 \catcode`\”=\active\def”{{\eng\char"201D}}
 
-\lefthyphenmin=3
-\righthyphenmin=4
-
+%~ \lefthyphenmin=3
+%~ \righthyphenmin=4
 \linespread{1.2}
+
+%for sample
+%~ \linespread{1.05}
 
 \makeatletter
 
@@ -34,7 +44,7 @@ leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.5ex \@plus -1ex \@minus -.2ex}%
                                    {1.1ex \@plus.1ex}%
-                                   {\normalfont\Large\bfseries}}
+                                   {\normalfont\fontsize{17.28}{19}\selectfont\bfseries}}
 \def\@makeschapterhead#1{%
   \vspace*{40\p@}%
   {\parindent \z@ \raggedright
