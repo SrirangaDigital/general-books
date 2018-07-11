@@ -2,7 +2,13 @@
 
 \input macros
 
+\makeatletter
+ \def\@textbottom{\vskip \z@ \@plus 5pt}
+ \let\@texttop\relax
+\makeatother
 \begin{document}
+
+\fontsize{14pt}{16pt}\selectfont
 
 \frontmatter
 
@@ -18,3 +24,8 @@
 \input src/chapter6
 
 \end{document}
+
+
+
+
+
