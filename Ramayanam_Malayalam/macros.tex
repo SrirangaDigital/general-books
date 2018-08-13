@@ -3,15 +3,44 @@
 \usepackage{fancyhdr}
 \usepackage{polyglossia}
 
-\usepackage[papersize={140mm,210mm},textwidth=110mm,
-textheight=170mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=15mm,
-leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+
+%%following setting is for sample
+%~ \usepackage[papersize={149mm,235mm},textwidth=115mm,
+%~ textheight=200mm,headheight=6mm,headsep=4mm,topmargin=12.5mm,botmargin=12.5mm,
+%~ leftmargin=17mm,rightmargin=17mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \setdefaultlanguage{malayalam}
-\setmainfont[Script=Malayalam]{Rachana}
-%~ %\setmainfont[Script=Malayalam]{AksharUnicode}
-%~ \setmainfont[Script=Malayalam]{Rachana_w01}
-%~ \setmainfont[Script=Malayalam]{Manjari-Regular}
+\setmainfont[
+	Script=Malayalam,
+	BoldFont=Rachana-Bold,
+]{Rachana-Regular}
+
+\usepackage[papersize={140mm,210mm},textwidth=110mm,
+textheight=170mm,headheight=4.5mm,headsep=5.5mm,topmargin=15mm,botmargin=15mm,
+leftmargin=20mm,rightmargin=10mm,cropmarks]{zwpagelayout}
+
+%%fancy header settings
+
+\renewcommand{\chaptermark}[1]{\markboth{\small\@chapapp\ \thechapter. #1}{}}
+%~ \renewcommand{\sectionmark}[1]{\markright{\small രാമായണം}}
+\renewcommand{\sectionmark}[1]{}
+
+
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[]{}
+}
+\lhead[\small\eng{\thepage}]{\leftmark}
+\rhead[രാമായണം]{\small\eng{\thepage}}
+\chead[]{}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+
+\renewcommand{\headrulewidth}{0pt}
+
 \newfontfamily\anuswara[Script=Devanagari,Ligatures=TeX,AutoFakeBold=3.5,AutoFakeSlant,WordSpace=1.2]{Sanskrit2003_Aux}
 \newfontfamily\eng{Gentium Plus}
 
@@ -21,10 +50,7 @@ leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \catcode`\“=\active\def“{{\eng\char"201C}}
 \catcode`\”=\active\def”{{\eng\char"201D}}
 
-\lefthyphenmin=3
-\righthyphenmin=4
-
-\linespread{1.2}
+\linespread{1.06}
 
 \makeatletter
 
@@ -34,7 +60,7 @@ leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.5ex \@plus -1ex \@minus -.2ex}%
                                    {1.1ex \@plus.1ex}%
-                                   {\normalfont\Large\bfseries}}
+                                   {\normalfont\fontsize{17.28}{19}\selectfont\bfseries}}
 \def\@makeschapterhead#1{%
   \vspace*{40\p@}%
   {\parindent \z@ \raggedright
@@ -44,7 +70,6 @@ leftmargin=20mm,rightmargin=10mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \vskip 40\p@
   }}
 
-\renewcommand{\chaptermark}[1]{\markboth{\small\@chapapp\ \thechapter. #1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\small \thesection.\ #1}{}}
 \makeatother  
   
+\pagestyle{fancy}

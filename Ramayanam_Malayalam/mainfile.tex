@@ -2,11 +2,15 @@
 
 \input macros
 
+\makeatletter
+ \def\@textbottom{\vskip \z@ \@plus 5pt}
+ \let\@texttop\relax
+\makeatother
 \begin{document}
 
-\frontmatter
+\fontsize{14pt}{16pt}\selectfont
 
-\input src/preface
+\frontmatter
 
 \tableofcontents
 
@@ -20,3 +24,8 @@
 \input src/chapter6
 
 \end{document}
+
+
+
+
+
