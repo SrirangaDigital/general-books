@@ -19,13 +19,6 @@
 
 \input src/00c-arpane
 
-\newpage
-
-\input src/00d-arike
-
-\newpage
-
-\input src/00e-preface
 
 \newpage
 
@@ -34,12 +27,43 @@
 
 \newpage
 
+\input src/00d-arike
+
+\newpage
+
+
+
+
+\input src/00e-preface
+
+
+
+ {
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{45\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \large\bfseries \@chapapp\space\thechapter
+        \vskip 4pt
+        \par\nobreak
+        \vskip 5\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \LARGE\bfseries #1\par\nobreak
+    \vskip 20\p@
+  }}
+  \makeatother
+  
+
 \tableofcontents 
 
 \renewcommand{\footrulewidth}{0pt}
 \chead[]{}
-\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\bfseries\rightmark} 
-\rhead[{\footnotesize\bfseries\bookname}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
+\lhead[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{\footnotesize\sl\bfseries\rightmark} 
+\rhead[{\footnotesize\sl\bfseries\bookname}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
 \cfoot[]{}
 \rfoot[]{}
 
@@ -49,8 +73,12 @@
 \rhead[]{}
 %~ \cfoot[{\footnotesize\fontfamily{txr}\selectfont\thepage}]{{\footnotesize\fontfamily{txr}\selectfont\thepage}}
 \cfoot[]{}
-\renewcommand{\headrulewidth}{0pt}
 }
+
+\renewcommand{\headrulewidth}{0pt}
+ 
+ 
+ 
  
 \mainmatter
 \input src/001-chapter1
