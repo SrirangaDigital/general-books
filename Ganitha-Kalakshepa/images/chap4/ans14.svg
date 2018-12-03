@@ -108,7 +108,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -196,15 +196,4 @@
      sodipodi:end="4.6020532"
      sodipodi:open="true"
      d="M 76.7264,79.0889 A 38.954659,38.954659 0 0 1 99.440443,68.447455" />
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:LMRoman12;-inkscape-font-specification:'LMRoman12, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="79.83844"
-     y="117.00307"
-     id="text4503"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4505"
-       x="79.83844"
-       y="117.00307">a</tspan></text>
 </svg>
