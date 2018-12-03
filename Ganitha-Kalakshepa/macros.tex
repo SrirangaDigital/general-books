@@ -28,6 +28,7 @@
   \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
 }
 
+\allowdisplaybreaks
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
@@ -92,7 +93,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 %\long\def\bookTitle#1{\vfill\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}\vfill}
 \def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
 \newenvironment{myquote}[1]{\medskip\par\bgroup\fontsize{10}{12}\selectfont\noindent\leftskip=10pt\rightskip=10pt#1}{\par\egroup\medskip}
-\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
+%\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
 \def\general#1{#1}
 \def\vauthor#1{{\hfill #1}}
 \def\supskpt#1{$^{#1}$}
@@ -154,6 +155,11 @@ I need more words\fi}
 \StrSubstitute{\num}{12}{೧೨}[\num]%
 }
 
+
+\usepackage{float}
+\floatstyle{plain}
+\floatplacement{Figure}{H}
+
 %%fancy header settings
 \fancypagestyle{plain}{%
 \chead[]{}
@@ -161,8 +167,8 @@ I need more words\fi}
 \rhead[]{}
 \cfoot[]{}
 }
-\lhead[{\fontsize{10}{12}\selectfont\arabictokannada{\thepage}\quad\em ಗಣಿತ ಕಲಾಕ್ಷೇಪ}]{}
-\rhead[]{{\fontsize{10}{12}\selectfont\leftmark\quad\arabictokannada{\thepage}}}
+\lhead[{\fontsize{10}{12}\selectfont\arabictokannada{\thepage}}]{\em ಗಣಿತ ಕಲಾಕ್ಷೇಪ}
+\rhead[{\em ಗಣಿತ ಕಲಾಕ್ಷೇಪ}]{{\fontsize{10}{12}\selectfont\leftmark\quad\arabictokannada{\thepage}}}
 \chead[]{}
 \lfoot[]{}
 \rfoot[]{}
@@ -223,4 +229,19 @@ I need more words\fi}
   \sbox0{\begin{otherlanguage}[#1]{#2}
     \hyphenation{#3}\end{otherlanguage}}}
 
-
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{40\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
