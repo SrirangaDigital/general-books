@@ -1,0 +1,294 @@
+%%importing packages
+\usepackage{pifont}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{polyglossia}
+\usepackage{longtable}
+\usepackage{ctable}
+\usepackage{rotating}
+\usepackage{multicol}
+\usepackage[framemethod=PStricks]{mdframed}
+\mdfsetup{skipabove=0pt,skipbelow=0pt}
+\usepackage{wrapfig}
+\usepackage{fancybox}
+
+\setdefaultlanguage{sanskrit} % main language
+
+\setotherlanguages{kannada,english,hindi} % other languages 
+
+\setmainfont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701} % main font
+
+% font declarations for the other languages
+\newfontfamily\englishfont[
+	Script=Latin,
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{GentiumBasic}
+%~ \newfontfamily\devanagarifont[Script=Devanagari,AutoFakeBold=2,AutoFakeSlant=0.15]{Sanskrit2003}
+\newfontfamily\devanagarifont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701}
+\newfontfamily\kannadafont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\kan#1{{\kannadafont\textkannada{#1}}}
+\def\dev#1{{\devanagarifont\textsanskrit{#1}}}
+
+
+
+\setlength\parindent{0cm} % no indent for this example
+
+
+%%page settings for the book
+\usepackage[papersize={140mm,215mm},textwidth=110mm,
+textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
+leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[{\eng{\thepage}}]{{\eng{\thepage}}}
+\renewcommand{\headrulewidth}{0pt}
+}
+\renewcommand{\headrulewidth}{0.6pt}
+\pagestyle{fancy}
+
+
+%%user defined commands
+
+\long\def\Authorline#1{{\centerline{\large\textbf{#1}%
+\addtocontents{toc}{\protect\contentsline{section}{%
+\iflanguage{sanskrit}{{\fontsize{12}{14}\selectfont #1}}{%
+\iflanguage{kannada}{{\fontsize{11}{13}\selectfont #1}}{%
+\iflanguage{english}{{\fontsize{10}{12}\selectfont #1}}{}%
+ }%
+ }%
+}{}}%
+}}}
+
+\def\devinline#1{{\fontsize{15}{17}\selectfont\dev{#1}}}
+\def\kaninline#1{{\fontsize{14}{16}\selectfont\kan{#1}}}
+\def\enginline#1{{\fontsize{12}{14}\selectfont\eng{#1}}}
+\def\parttext{ಅಭಿವಂದನ ಕಾರ್ಯಕ್ರಮದ ಸಂಪೂರ್ಣ ಚಿತ್ರಣ}
+
+%%general settings
+%~ \pretolerance=9000
+\tolerance=6000
+\parindent=15pt
+\setlength{\parskip}{0pt}
+
+%%redefining macros
+\makeatletter
+
+\renewcommand*\l@part[2]{%
+  \ifnum \c@tocdepth >-2\relax
+    \addpenalty{-\@highpenalty}%
+    \addvspace{2.7em \@plus\p@}%
+    \setlength\@tempdima{3em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      {\leavevmode
+       \large \bfseries #1\hfil \hb@xt@\@pnumwidth{\hss #2}}\par
+       \nobreak
+         \global\@nobreaktrue
+         \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+  \fi}
+
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 0.7em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode 
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      \iflanguage{sanskrit}{{\fontsize{15}{18}\selectfont #1}}{%
+      \iflanguage{kannada}{{\fontsize{13}{16}\selectfont #1}}{%
+      \iflanguage{english}{{\fontsize{11}{14}\selectfont #1}}{}%
+      }%
+      }\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\renewcommand\@dotsep{200}
+\renewcommand\chaptermark[1]{%
+\iflanguage{sanskrit}{\markboth{\dev{\fontsize{13}{15}\selectfont #1}}{}}{%
+\iflanguage{kannada}{\markboth{\kan{\fontsize{12}{14}\selectfont #1}}{}}{\markboth{\eng{\fontsize{11}{13}\selectfont #1}}{}}
+}}
+
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      %\addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}#1}%
+    \else
+      %\addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+	{{\selectlanguage{kannada}\kannadafont\fontsize{30}{32}\selectfont\bfseries ಭಾಗ\englishfont{ -- }{\fontsize{24}{30}\selectfont\bfseries\thepart}}}	
+       \par
+       \vskip 20\p@
+     \fi
+     {\kannadafont{\fontsize{34}{36}\selectfont\bfseries #2}\\[12pt] \LARGE\bfseries\parttext}
+     \par}%
+    \@endpart}
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      %~ \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      %~ \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 15\p@
+}}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.2ex \@plus -1.3ex \@minus -.3ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {3.25ex\@plus -4ex \@minus -.6ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {-3.25ex \@plus -1ex \@minus -.2ex}%
+                                    {1em}%
+                                    {\normalfont\normalsize\bfseries}}
+                                                                         
+\renewenvironment{thebibliography}[1]
+     {\section*{}%
+      %~ \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+\def\@makeschapterhead#1{%
+  \vskip 35pt%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+
+\renewcommand\contentsname{\iflanguage{kannada}{ಗ್ರಂಥಾಂತರಂಗ}{Contents}}
+
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\kan{ಗ್ರಂಥಾಂತರಂಗ}
+        \@mkboth{%
+           ಗ್ರಂಥಾಂತರಂಗ}{ಗ್ರಂಥಾಂತರಂಗ}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+
+\def\@makechapterhead#1{{%
+\vskip 30pt%
+\centering
+\begin{center}
+\renewcommand{\arraystretch}{0}%
+\setlength{\arrayrulewidth}{1pt}%
+\noindent%
+\begin{tabular}{@{}m{\textwidth}@{}}
+\specialrule{1.6pt}{0pt}{2pt}
+\specialrule{0.2pt}{0pt}{10pt}
+\centering
+\iflanguage{sanskrit}{\devanagarifont\Huge\bfseries #1}{%
+\iflanguage{kannada}{\kannadafont\Huge\bfseries #1}{%
+\iflanguage{english}{\englishfont\huge\bfseries #1}{\devanagarifont\Huge\bfseries #1}
+}}\tabularnewline
+\specialrule{0.2pt}{10pt}{2pt}
+\specialrule{1.6pt}{0pt}{0pt}
+\end{tabular}%
+\end{center}%
+}}
+
+\makeatother
+
+\def\addrule{\rule{\textwidth}{0.2pt}}
+\def\articleend{\bigskip\centerline{{\fontsize{10}{12}\selectfont\ding{97}\quad\ding{97}\quad\ding{97}}}}
+\linespread{1.1}
+
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+
+
+\def\presetvalues{
+\pretolerance=9000
+\tolerance=200
+}
+\input dictionary1
+
+
