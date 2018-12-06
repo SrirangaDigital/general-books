@@ -47,6 +47,8 @@
 \def\kan#1{{\kannadafont\textkannada{#1}}}
 \def\dev#1{{\devanagarifont\textsanskrit{#1}}}
 
+
+
 \setlength\parindent{0cm} % no indent for this example
 
 
@@ -70,7 +72,15 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 %%user defined commands
 
-\long\def\Authorline#1{{\centerline{\large\textbf{#1}\addtocontents{toc}{\protect\contentsline{section}{#1}{}}}}}
+\long\def\Authorline#1{{\centerline{\large\textbf{#1}%
+\addtocontents{toc}{\protect\contentsline{section}{%
+\iflanguage{sanskrit}{{\fontsize{12}{14}\selectfont #1}}{%
+\iflanguage{kannada}{{\fontsize{11}{13}\selectfont #1}}{%
+\iflanguage{english}{{\fontsize{10}{12}\selectfont #1}}{}%
+ }%
+ }%
+}{}}%
+}}}
 
 \def\devinline#1{{\fontsize{15}{17}\selectfont\dev{#1}}}
 \def\kaninline#1{{\fontsize{14}{16}\selectfont\kan{#1}}}
@@ -110,18 +120,22 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode \bfseries
+      \leavevmode 
       \advance\leftskip\@tempdima
       \hskip -\leftskip
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \iflanguage{sanskrit}{{\fontsize{15}{18}\selectfont #1}}{%
+      \iflanguage{kannada}{{\fontsize{13}{16}\selectfont #1}}{%
+      \iflanguage{english}{{\fontsize{11}{14}\selectfont #1}}{}%
+      }%
+      }\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
       \penalty\@highpenalty
     \endgroup
   \fi}
 
 \renewcommand\@dotsep{200}
 \renewcommand\chaptermark[1]{%
-\iflanguage{sanskrit}{\markboth{\dev{#1}}{}}{%
-\iflanguage{kannada}{\markboth{\kan{#1}}{}}{\markboth{\eng{#1}}{}}
+\iflanguage{sanskrit}{\markboth{\dev{\fontsize{13}{15}\selectfont #1}}{}}{%
+\iflanguage{kannada}{\markboth{\kan{\fontsize{12}{14}\selectfont #1}}{}}{\markboth{\eng{\fontsize{11}{13}\selectfont #1}}{}}
 }}
 
 \renewcommand\part{%
@@ -143,28 +157,26 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
       \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}#1}%
+      %\addcontentsline{toc}{part}{\eng{\thepart}\hspace{1em}#1}%
     \else
-      \addcontentsline{toc}{part}{#1}%
+      %\addcontentsline{toc}{part}{#1}%
     \fi
     \markboth{}{}%
     {\centering
      \interlinepenalty \@M
      \normalfont
      \ifnum \c@secnumdepth >-2\relax
-	    \iflanguage{sanskrit}{{\devanagarifont\huge\bfseries द्वितीयो भागः}}{{\selectlanguage{english}\englishfont\huge\bfseries \partname\nobreakspace\thepart}}	
+	{{\selectlanguage{kannada}\kannadafont\fontsize{30}{32}\selectfont\bfseries ಭಾಗ\englishfont{ -- }{\fontsize{24}{30}\selectfont\bfseries\thepart}}}	
        \par
        \vskip 20\p@
      \fi
-     \iflanguage{sanskrit}{\devanagarifont\Huge\bfseries #2}{%
-     \iflanguage{kannada}{\kannadafont\Huge\bfseries #2\\\large\bfseries\parttext}{\devanagarifont\Huge\bfseries #2}%
-     }
+     {\kannadafont{\fontsize{34}{36}\selectfont\bfseries #2}\\[12pt] \LARGE\bfseries\parttext}
      \par}%
     \@endpart}
 
 \def\@makechapterhead#1{%
   \vspace*{10\p@}%
-  {\parindent \z@ \centering \normalfont
+  {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
       %~ \if@mainmatter
         %~ \huge\bfseries \@chapapp\space \thechapter
@@ -254,7 +266,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \centering
 \iflanguage{sanskrit}{\devanagarifont\Huge\bfseries #1}{%
 \iflanguage{kannada}{\kannadafont\Huge\bfseries #1}{%
-\iflanguage{english}{\englishfont\Huge\bfseries #1}{\devanagarifont\Huge\bfseries #1}
+\iflanguage{english}{\englishfont\huge\bfseries #1}{\devanagarifont\Huge\bfseries #1}
 }}\tabularnewline
 \specialrule{0.2pt}{10pt}{2pt}
 \specialrule{1.6pt}{0pt}{0pt}
