@@ -1,0 +1,506 @@
+\chapter{On ws-Continuous and ws-Irresolute Maps in Topological Spaces}
+\graphicspath{{Chapter3/Chapter3Figs/EPS/}{Chapter3/Chapter3Figs/}}
+
+\section{Introduction}\label{sec3.1}
+
+The concept of continuous functions plays a very important role in general topology. The regular continuous and completely continuous functions are introduced and studied by Arya S P [2]. Later, R S wali et all [31] introduced and investigated $\alpha$rw-continuous functions in topological spaces.
+
+Second part of this chapter, a new class of maps called weakly semi closed-continuous (briefly, ws-continuous) maps are introduced and analyzed their properties with other existing generalized continuous maps.
+
+Third part of this chapter, we analyse the concepts of ws-irresolute maps and strongly ws-continuous maps in topological spaces and investigate some of their properties.
+
+\section{ws-continuous maps and some of their properties}\label{sec3.2}
+
+\begin{dfn}\label{defi3.2.1}
+A function $\TSh$ of topological space $\TSP$ in to a topological space $\TSQ$ is called a ws-continuous if inverse image of each closed set in $\TSQ$ is a ws-closed in $\TSP$.
+\end{dfn}
+
+\begin{exm}\label{exam3.2.2}
+Let $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSP$ and $\sigma = \{\phi, \TSQ \{1\}, \{2\}, \{1, 2\}, \{1, 3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP) = \{\phi, \TSP, \{1\}, \{2\},\{3\}, \{1, 3\},\{2, 3\}\}$. Let $\TSh: \TSP\to \TSQ$ defined by identity function is ws-continuous.
+\end{exm}
+
+\begin{thm}\label{thm3.2.3}
+Each continuous function is ws-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh:(\TSP,\tau )\to(\TSQ \sigma)$ be continuous. $\TSF$ is any closed in $\TSQ$. Then $h^{−1} (\TSF)$ is closed set in $\TSP$. Since each closed in $\TSP$ is ws-closed then $h(\TSF)$ is ws-closed set in $\TSP$. Therefore $\TSh$ is ws-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.2.4}
+Let $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSP$ and $\sigma = \{ \phi, \TSQ \{1\}, \{2\}, \{1, 2\}, \{1, 3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP) = \{\varphi, \TSP, \{1\}, \{2\},\{3\}, \{1, 3\},\{2, 3\}\}$. Let $\TSh: (\TSP,\tau )\to (Q \sigma)$ be a function defined by identity function is ws-continuous but not a continuous function as closed set $\TSF=\{2\}$ in $\TSQ$, $h^{-1} (\TSF)=\{2\}$ is not exist in closed set of $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.2.5}
+If a map $\TSh: \TSP\to \TSQ$ is continuous then the following holds.
+\begin{enumerate}[(i)]
+\item Each semi-continuous is ws-continuous but inverse is untrue.
+\item Each $\alpha$-continuous is ws-continuous but inverse is untrue.
+\item Each g$^{\#}$-continuous is ws-continuous but inverse is untrue.
+\item Each *g$\alpha$-continuous is ws-continuous but inverse is untrue.item
+\item Each g$\xi$*-continuous is ws-continuous but inverse is untrue.
+\item Each $\alpha$gp-continuous is ws-continuous but inverse is untrue.
+\item Each $\ddot{g}$-continuous is ws-continuous but inverse is untrue.
+\item Each regular-continuous is ws-continuous but inverse is untrue
+\item Each rb-continuous is ws-continuous but inverse is untrue.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Proof can be obtained from the evidence that each semi (respectively, $\alpha$, g$^{\#}$, *g$\alpha$-closed, g$\xi$*, $\alpha$gp, $\ddot{g}$, regular and $rb$) closed is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{exm}\label{exam3.2.6}
+In example \ref{exam3.2.4}, $\TSh$ is ws-continuous but not a semi(respectively, $\alpha$, g$^{\#}$, *g$\alpha$, g$\xi$*, $\alpha$gp, $\ddot{g}$, regular and $rb$) continuous as the closed set $F=\{2\}$ in $\TSQ$, $h^{-1}(F)=\{ 2\}$ is not a semi-closed (respectively, $\alpha$, g$^{\#}$ , *g$\alpha$, g$\xi$*, $\alpha$gp, $\ddot{g}$ , regular and $rb$) closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.2.7}
+Each g$^{\#}$s-continuous is ws-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof obtained from the evidence that each g$^{\#}$s -$\TSC(\TSP)$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{exm}\label{exam3.2.8}
+Let $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\{1,2,3\}\}$ be a topology on $\TSP$ and $\sigma =\{\phi, \TSQ, \{1,2\},\{3,4\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP)=\{\TSP, \varphi\{1\},\{2\},\{3\},\{4\},\{1,3\},\{1,4\},\{2,3\},\{2,4\},\{3,4\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$,\break g\#s$\TSC(\TSP)=\{\TSP,\phi,\{2\}, \{3\},\{4\},\{2,3\},\{2,4\},\{3,4\},\{2,3,4\}\}$. Let $\TSh: (\TSP, \tau  )\to (\TSQ, \sigma)$ be a function defined by $\TSh(1)= 1$, $\TSh(2)=4$, $\TSh(3)=3$, $\TSh(4)=2$, is ws-continuous but not a g$^{\#}$s- continuous function as the closed set $\TSF=\{1,2\}$ in $\TSQ, h^{-1} (\TSF)=\{1,4\}$ is not a g$^{\#}$s- closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.2.9}
+Map $\TSh: \TSP\to \TSQ$ is continuous then the following holds.
+\begin{enumerate}[(i)]
+\item If $\TSh$ is ws-continuous then it is gspr-continuous but inverse is untrue.
+\item If $\TSh$ is ws-continuous then it is gsp-continuous but inverse is untrue.
+\item If $\TSh$ is ws-continuous then it is rgb-continuous but inverse is untrue.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\TSF$ be a closed in $\TSQ$. seeing that $\TSh$ is ws-continuous then $\TSh^{-1} (\TSF)$ is ws-closed in $\TSP$. Also each ws-closed is gspr-closed, then $h^{-1}(\TSF)$ is gspr-closed in $\TSP$. Henceforth $\TSh$ is gspr-continuous.
+
+Similarly we prove (ii) and (iii).
+\end{enumerate}
+\end{proof}
+
+\begin{exm}\label{exam3.2.10}
+Let $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau =\{\phi, \TSP, \{1,2\}, \{3,4 \}\}$ be a topology on $\TSP$ and $\sigma =\{\phi, \TSQ, \{1\}, \{2\}, \{1, 2\},\{1,2,3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP)=\{\TSP, \varphi \{1,2\}, \{3,4\}\}$, Let $\TSh: (\TSP, \tau)\to (\TSQ, \sigma)$ be a function defined by $\TSh(1)= 1$, $\TSh(2)=2$, $\TSh(3)=3$, $\TSh(4)=4$, is gspr-continuous, gsp-continuous and rgb-continuous but not a ws-continuous function as the closed set $\TSF=\{4\}$ in $\TSQ, h^{-1} (\TSF)=\{4\}$ is not a ws-closed in $\TSP$.
+\end{exm}
+
+\begin{rem}\label{rem3.2.11}
+Following example shows that ws-continuos is independent of g-continuous, w-continuous, $\beta$-continuos, gp-continuos, g$\alpha$-continuos, swg-continuos, rwg-continuous, wg-continuous, g*p-continuous, gw$\alpha$-continuos, $\alpha$**g-continuous,\break swg*-continuous, gr-continuous, w$\alpha\hat{g}$-continuous, g$\alpha$*-continuous, rg-continuous, rg$\alpha$-continuos, R*-continuous, rgw-continuous, wgr$\alpha$-continuos, gprw-continuous, pgr$\alpha$-continuos, g$\alpha${*}{*}-continuous, $\beta$wg{*}{*}-continuous, mildly g-continuous.
+\end{rem}
+
+\begin{exm}\label{exam3.2.12}
+Let $\TSP= \TSQ = \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSP$ and $\sigma =\{\phi \TSQ, \{1\},\{2,3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP)=\{\TSP, \phi,\{1\}, \{2\}, \{3\},\{2,3\},\{1, 3\}\}$. Let $\TSh:(\TSP, \tau)\to (\TSQ, \sigma)$ be a function defined by identity function is ws-continuous but not g-continuous, w-continuous, $\beta$-continuos, gp-continuos, g$\alpha$-continuos, swg-continuos, rwg-continuous, wg-continuous,\break g*p-continuous, gw$\alpha$-continuos, $\alpha${*}{*}g-continuous, swg*-continuous, gr-continuous,\break w$\alpha\hat{g}$-continuous, g$\alpha$*-continuous, rg-continuous, rg$\alpha$-continuos, R*-continuous, rgw-continuous, wgr$\alpha$-continuos, gprw-continuous, pgr$\alpha$-continuos, g$\alpha${*}{*}-continuous,\break $\beta$wg{*}{*}-continuous, mildly g-continuous as the closed set $H=\{1\}$ in $\TSQ, h^{-1} (\TSH)=\{1\}$ is not a g(respectively w, $\beta$, gp, g$\alpha$, swg, rwg, wg, g*p, gw$\alpha$, $\alpha$**g, swg*, gr, w$\alpha\hat{g}$, g$\alpha$*, rg, rg$\alpha$, R*, rgw, wgr$\alpha$, gprw, pgr$\alpha$, g$\alpha${*}{*}, $\beta$wg{*}{*}, mildly g) closed set in $\TSP$.
+\end{exm}
+
+\begin{exm}\label{exam3.2.13}
+Let $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2,3\}\}$ be a topology on $\TSP$ and $\sigma =\{\phi, \TSQ, \{1\},\{2\}, \{1,2\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP)=\{\phi, \TSP, \{1\},\{2,3\}\}$. Let $\TSh: (\TSP, \tau )\to (\TSQ, \sigma)$ be a function defined by identity function is g-continuous, w-continuous, $\beta$-continuos, gp-continuos, g$\alpha$-continuos, swg-continuos, rwg-continuous, wg-continuous, g*p-continuous, gw$\alpha$-continuos, $\alpha${*}{*}g-continuous, swg*-continuous, gr-continuous, w$\alpha\hat{g}$-continuous, g$\alpha$*-continuous, rg-continuous, rg$\alpha$-continuos, R*-continuous, rgw-continuous, wgr$\alpha$-continuos, gprw-continuous, pgr$\alpha$-continuos, g$\alpha${*}{*}-continuous, $\beta$wg{*}{*}-continuous, mildly g-continuous but not ws-continuous as the closed set $\TSF=\{3\}$ in $\TSQ, h^{-1} (\TSF)=\{3\}$ is not a ws-$\TSC(\TSP)$.
+\end{exm}
+
+\begin{rem}\label{rem3.2.14} 
+From the above discussions and known facts, the relation between ws-continuous and some existing continuous functions in topological space is shown in the following figure.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=.72]{1.eps}
+\end{figure}
+\end{rem}
+
+\begin{thm}\label{thm3.2.15}
+Pretend $\TSh: \TSP\to \TSQ$ is a map. Then the statements given below are one and the same.
+\begin{enumerate}[(i)]
+\item $\TSh$ is ws-continuous
+\item The inverse image of every open set in $\TSQ$ is ws-open in $\TSP$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\TSh: P\to \TSQ$ be a ws-continuous. Let $\TSM$ be an open set in $\TSQ$, then $\TSM^{\text{c}}$ is closed in $\TSQ$. Since $\TSh$ is ws-continuous, $\TSh(\TSM^{\text{c}})$ is ws-closed in $\TSP$. But $h^{-1}(\TSM^{\text{c}})=\TSP- \TSh^{-1}(\TSM)$. Thus $h^{-1}(\TSM)$ is ws-open in $\TSP$.
+
+\item Suppose that inverse image of every open set in $\TSQ$ is ws-open in $\TSP$. Let $\TSV$ be any closed set in $\TSQ$. By hypothesis $h^{-1} (\TSV^{\text{c}})$ is ws-open in $\TSP$. But $h^{-1}(\TSV^{\text{c}}) = \TSP-h^{-1}(\TSV)$. Thus $\TSP\in h^{-1} (\TSV)$ is ws-open in $\TSP$, so $h^{-1}(\TSV)$ is ws-closed in $\TSP$. Thus $\TSh$ is ws-continuous.
+\end{enumerate}
+\end{proof}
+
+\begin{thm}\label{thm3.2.16}
+If $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ is a map then the following holds.
+\begin{enumerate}[(i)]
+\item $\TSh$ is ws-continuous and contra r-irresolute map then $\TSh$ is ws-continuous.
+\item $\TSh$ is semi-continuous and contra continuous map then $\TSh$ is ws-continuous.
+\item $\TSh$ is α-continuous and contra irresolute map then $\TSh$ is ws-continuous.
+\item $\TSh$ is ws-continuous and contra r-irresolute map then $\TSh$ is regular continuous.
+\item $\TSh$ is *g$\alpha$-continuous and contra continuous then $\TSh$ is ws-continuous.
+\item $\TSh$ is $\alpha$gp-continuous and contra irresolute then $\TSh$ is ws-continuous.
+\item $\TSh$ is $\alpha$gp-irresolute then it is ws-continuous.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\clrD$ is any regular closed set of $\TSQ$. Seeing that each regular-closed is closed, $\TSD$ is closed set in $\TSQ$. Since $\TSh$ is ws-continuous and contra r-irresolute map, $h^{-1} (\TSV)$ is ws-closed and regular open in $\TSP$. Now by results 1.3.3[5] $h^{-1} (\TSD)$ is semi-closed in $\TSP$. Thus $\TSh$ is semi-continuous.
+
+\item Take up $\clrD$ be closedset of $\TSQ$. Since $\TSh$ is $\alpha$-continuous and contra continuous, $h^{-1} (\TSD)$ is semi-closed and open in $\TSP$. Now by results 1.3.3 [5] $h^{-1} (\TSV)$ is ws-$\TSC(\TSP)$ in $\TSP$. Thus $\TSh$ is ws-continuous.
+
+Similarly we prove (iii), (iv), (v), (vi) and (vii)
+\end{enumerate}
+\end{proof}
+
+\begin{thm}\label{thm3.2.17}
+If $\TSh: \TSP\to \TSQ$ is ws-continuous then $\TSh(\wscl(\clrD))\subseteq \cl(\TSh(\clrD))$ for each subset $\clrD$ of $\TSP$ but inversely is untrue.
+\end{thm}
+
+\begin{proof}
+Let $\TSh: \TSP\to \TSQ$ be ws-continuous. Let $\clrD$ be subset of $\TSP$. Then $\cl(\TSh(\TSD))$ is closed in $\TSQ$, this implies $h^{-1}((\cl(\TSh(\TSD))$ is ws-closed in $\TSP$. Also $\TSh(\TSD)\subseteq \cl(\TSh(\TSD))$ and $\TSD\subseteq h^{-1}(\cl(\TSh(\TSD))$. Hence $\wscl(\TSD)\subseteq h^{-1}(\cl(\TSh(\TSD)))$. Therefore $\TSh(\wscl(\TSD))\subseteq \cl(\TSh\TSD))$.
+\end{proof}
+
+\begin{exm}\label{exam3.2.18}
+Let $\TSP=\TSQ=\{1,2,3\}$, $\tau =\{\phi, \TSP,\{1\},\{2\},\{1, 2\}\}$, $\sigma =\{\phi, \TSQ, \{2\},\break \{3\}, \{1, 3\}, \{2, 3\}\}$ and $\ws\TSC(\TSP)= \{\phi, \TSP, \{1\},\{2\},\{3\}, \{1, 3\},\{2, 3\}\}$. Let $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ be a function defined by identity function, For each subset $\clrD$ of $\TSP$, $\TSh(\wscl(\TSA))\subseteq \cl(\TSh(\TSA))$ holds. But $\TSh$ is not a ws-continuous as the closed set $\TSV= \{1, 2\}$ in $\TSQ$, $h^{-1}(\TSV) = \{1, 2\}$ is not a ws-closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.2.19}
+Let $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ be a map. Then the following statements are one and the same.
+\begin{enumerate}[(i)]
+\item $\forall \TSx\in \TSP$ and every open set $\TSV$ in $\TSQ$ with $\TSh(\TSx)\in \TSV$, $\exists$ a ws-open set $\TSU$ in $\TSP\ni: \TSx\in\TSU$ and $\TSh(\TSU)\subseteq \TSV$.
+\item For each subset $\clrD$ of $\TSP$, $\TSh(\wscl(\clrD))\subseteq \cl(\TSh(\clrD))$
+\item For each subset $\TSE$ of $\TSQ, \wscl(h^{-1} (\TSE)) \subseteq  h^{-1}(\cl(\TSE))$
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\to$ (ii)
+
+Pretend (i) holds and let $\TSy\in \TSh(\wscl(\clrD))$ and $\TSV$ be an open set containing $\TSQ$. From (i), $\exists \TSx \in \wscl(\clrD) \ni: \TSh(\TSx)=\TSy$ and ws-open set $\TSM$ containing $\TSx \ni: \TSh(\TSM) \subseteq \TSV$ and $\TSx \in\wscl(\clrD)$. Then by theorem \ref{thm3.2.17}, $\TSM\cap \clrD\neq \phi$. That is $\phi \neq \TSh(\TSM\cap \clrD) \subseteq \TSh(\TSM) \cap \TSh(\clrD) \subseteq \TSV\cap \TSh(\clrD)$. Therefore $h(\wscl(\clrD))\subseteq \cl(\TSh(\clrD))$.
+
+(ii) $\to$ (i)
+
+Pretend (ii) holds and $\TSV$ is an open set in $\TSQ$ containing $\TSh(\TSx)$. Let $\clrD\in h^{-1} (\TSV^{\text{c}})$. This implies that $\TSx\not\in \TSD$. Since $\TSh(\wscl(\clrD))\subseteq \cl(\TSh(\clrD)) \subseteq \TSV^{\text{c}}$. This implies that $\wscl(\clrD) \subseteq  h^{-1} (\TSV^{\text{c}})=\clrD$. Since $\TSx\not\in \clrD$ implies that $\TSx\not\in \wscl(\clrD)$ and by theorem \ref{thm3.2.18}, $\exists$ a ws-open set $\TSM$ containing $\TSx \ni: \TSM\cap \clrD = \phi$ then $\TSM\subseteq \clrD^{\text{c}}$ and hence $\TSh(\TSM) \subseteq \TSh(\clrD^{\text{c}}) \subseteq \TSV$.
+
+(ii) $\to$ (iii)
+
+Pretend (ii) holds. Take up $\TSE$ is any subset of $\TSQ$. Changing $\clrD$ by $h^{-1}(\TSE)$ in (ii) we get $h(\wscl(h^{-1}(\TSE)))\subseteq \cl(\TSh(h^{-1}(\TSE))) \subseteq \cl(E)$. Hence $\wscl(h^{-1} (\TSE)) \subseteq  h^{-1}(\cl(\TSE))$.
+
+(iii) $\to$ (ii)
+
+Pretend (iii) holds. Let $\TSE=\TSh(\clrD)$ where $\clrD\supseteq \TSP$. Then from (iii) we get $\wscl(h^{-1} (\TSh(\clrD))) \subseteq  h^{-1} (\cl(\TSh(\clrD)))$. That is $\wscl(\clrD) \subseteq  h^{-1} (\cl(\TSh(\clrD)))$. Therefore $\wscl(h^{-1}(\TSE)) \subseteq  h^{-1} (\cl(\TSE))$.
+\end{proof}
+
+\begin{dfn}\label{defi3.2.20}
+Let $(\TSP, \tau)$ be a topological space and $\tau_{\text{ws}} =\{\TSV\subseteq \TSP / \wscl(\TSV^{\text{c}})=\TSV^{\text{c}}\}$ is a topology on $\TSP$.
+\end{dfn}
+
+\begin{dfn}\label{defi3.2.21}
+A topological space $(\TSP,\tau)$ is called a $\TST_{\text{ws}}$ space if each ws-closed is closed.
+\end{dfn}
+
+\begin{dfn}\label{defi3.2.22}
+A topological space $(\TSP,\tau)$ is called a $_{\text{ws}}\TST_{\scl}$ space if each ws-closed is semi-closed in $\TSP$.
+\end{dfn}
+
+\begin{rem}\label{rem3.2.23}
+Composition of two ws-continuous maps is not continuous.
+\end{rem}
+
+\begin{exm}\label{exam3.2.24}
+Take up $\TSP=\TSQ=\TSR= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\break \{1, 3\}\}$ be a topology on $\TSP$, $\sigma = \{\phi, \TSQ, \{1\},\{2\}, \{1, 2\}\}$ be a topology on $\TSQ$ and $\eta=\{\phi, \TSR, \{1\}, \{2, 3\}\}$ be a topology on $\TSR$. $\ws\TSC(\TSP)= \{\phi, \TSP, \{2\}, \{3\}, \{1, 3\},\{2,3\}\}$, $\ws\TSC(\TSQ)= \{\phi, \TSQ, \{1\},\{2\}, \{3\}, \{1, 3\},\{2,3\}\}$, Let $\TSh: (\TSP, \tau )\to (\TSQ, \sigma)$, $\TSg: (\TSQ, \sigma)\to (\TSR, \eta)$ and $\text{goh}:(\TSP, \tau )\to (\TSR, \eta)$ are identity functions. Both $\TSh$ and $\TSg$ are ws-continuous but goh is not a ws-continuous map as the closed set $\TSF=\{1\}$ in $\TSR$, $(\text{goh})^{-1} (\TSF)=\{1\}$ is not ws-$\TSC(\TSP)$ in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.2.25}
+Let $\TSh: \TSP\to \TSQ$ is ws-continuous and $\TSg: \TSQ\to \TSR$ is continuous then $\text{goh}: \TSP\to \TSR$ is ws-continuous.
+\end{thm}
+
+\begin{proof}
+Take up $\TSV$ is any open set in $\TSR$. Seeing that $\TSg$ is continuous, $\TSg$ −1 (V) is open in $\TSQ$. Since h is ws-continuous, $h^{-1}(h^{-1}(\TSV)) =(goh)^{-1}(\TSV)$ is ws-open in $\TSP$. Hence goh is ws-continuous. 
+\end{proof}
+
+\begin{thm}\label{thm3.2.26}
+Let $\TSh: \TSP\to \TSQ$ and $\TSg: \TSQ\to \TSR$ be ws-continuous functions and $\TSQ$ be $\TST_{\text{ws}}$ space then $\text{goh}: \TSP\to \TSR$ is ws-continuous.
+\end{thm}
+
+\begin{proof}
+Take up $\TSV$ be any open set in $\TSR$. Seeing that $\TSg$ is ws-continuous, $h^{-1}(\TSV)$ is ws-open in $\TSQ$ and $\TSQ$ is $\TST_{\ws}$ space, then $h^{-1}(\TSV)$ is open in $\TSQ$. Seeing that $\TSh$ is ws-continuous $h^{-1} (h^{-1}(\TSV))= goh^{-1} (\TSV)$ is ws-open in $\TSP$. Hence goh is ws-continuous.
+\end{proof}
+
+\begin{dfn}\label{defi3.2.27}
+Map $\TSh: \TSP\to \TSQ$ is called a perfectly ws-continuous if $h^{-1} (\TSV)$ is clopen (open and closed) set in $\TSP$ for each ws-open set $\TSV$ in $\TSQ$.
+\end{dfn}
+
+\begin{thm}\label{thm3.2.28}
+If $\TSh: \TSP\to \TSQ$ is continuous then.
+\begin{enumerate}[(i)]
+\item If $\TSh$ is perfectly ws-continuous then it is ws-continuous
+\item If $\TSh$ is perfectly ws-continuous then it is gspr(resp.gsp and rgb)continuous
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\TSM$ be open set in $\TSQ$. Seeing that $\TSh$ is perfectly continuous then $h^{-1} (\TSM)$ is both open and closed in $\TSP$. Also each open is ws-open, $h^{-1} (\TSM)$ is ws-open in $\TSP$.
+
+Hence $\TSh$ is ws-continuous.
+
+Similarly we can prove (ii)
+\end{enumerate}
+\end{proof}
+
+\begin{dfn}\label{defi3.2.29}
+A function $\TSh: \TSP\to \TSQ$ is called ws*-continuous if $h^{-1} (\TSV)$ is ws-$\TSC(\TSP)$ in $\TSP$ for every semi-closed set $\TSV$ in $\TSQ$.
+\end{dfn}
+
+\begin{thm}\label{thm3.2.30}
+If $\TSh: \TSP\to \TSQ$ is ws*-continuous then it is ws-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be ws*-continuous. Pretending $\TSF$ be any closed set in $\TSQ$. Seeing that $\TSh$ is ws*-continuous and $h^{-1} (\TSF) \in \ws-\TSC(\TSP)$. Since each closed set is semi-closed in $\TSQ$ then the inverse image $h^{-1}(\TSF)$ is ws-closed in $\TSP$. Henceforth $\TSh$ is ws-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.2.31}
+Take up $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\{1,2\}\}$ be a topology on $\TSP$ and $\sigma =\{\phi, \TSQ, \{1\}, \{2\},\{1,2\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP)= \{\phi, \TSP, \{2\},\{3\}, \{1, 433\},\{2,3\}\}$, $\SCL(\TSQ)= \{\phi, \TSQ, \{1\}, \{2\},\{3\}, \{2, 3\},\{1,3\}\}$. Let $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ be a function defined by identity function will be ws-continuous but not a ws*-continuous function as the semi closed set $\TSF=\{1\}$ in $\TSQ$, $h^{-1} (\TSF)=\{1\}$ is not a ws-closed in $\TSP$.
+\end{exm}
+
+\section{ws-Irresolute and strongly ws-continuous functions}\label{sec3.3}
+
+\begin{dfn}\label{defi3.3.1}
+Map $\TSh: \TSP\to  \TSQ$ is called a ws-irresolute map if $h^{-1}(\TSV)$ is ws-closed for every ws-closed set $\TSV$ in $\TSQ$.
+\end{dfn}
+
+\begin{dfn}\label{defi3.3.2}
+Map $\TSh: \TSP\to \TSQ$ is called a strongly ws-continuous map if $h^{-1} (\TSV)$ is $\TSC(\TSP)$ for every ws-closed set $\TSV$ in $\TSQ$.
+\end{dfn}
+
+\begin{thm}\label{thm3.3.3}
+If $\TSh: (\TSP,\tau)\to (\TSQ, \sigma)$ is ws-irresolute then it is ws-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be ws-irresolute. Prerend $\TSF$ be any closed set in $\TSQ$ and hence ws-closed in $\TSQ$. Since $\TSh$ is ws-irresolute, $h^{-1} (\TSV)$ is ws-closed in $\TSP$. Therefore $\TSh$ is ws-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.3.4}
+Take up $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau =\{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}, \{1, 3\}\}$ be a topology on $\TSP$ and $\sigma =\{\phi, \TSQ, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP) =\{\phi, \TSP, \{2\},\{3\}, \{1, 3\},\{2, 3\}\}$, $\ws\TSC(\TSQ)=\{\phi, \TSQ, \{1\}, \{2\},\{3\}, \{1, 3\},\{2, 3\}\}$. Let $\TSh: (\TSP, \tau)\to (\TSQ, \sigma)$ be a function defined by identity function is ws-continuous but not a ws-irresolute map as the ws-closed set $F=\{1\}$ in $\TSQ$, $h^{-1} (\TSF)=\{1\}$ is not a ws-$\TSC(\TSP)$ in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.3.5}
+If $\TSh: (\TSP, \tau )\to (\TSQ, \sigma)$ is ws-irresolute iff $h^{-1} (\TSV)$ is ws-open set in $\TSP\forall$  open set $\TSV$ in $\TSQ$.
+\end{thm}
+
+\begin{proof}
+Pretend that $\TSh: \TSP\to \TSQ$ is ws-irresolute and $\TSU$ be ws-open set in $\TSQ$. hence $\TSM^{\text{c}}$ is ws-closed in $\TSQ$. By the definition of ws-irresolute, $h^{-1}(\TSM^{\text{c}})$ is ws-closed in $\TSP$. But $h^{-1} (\TSM^{\text{c}})= \TSP -h^{-1}(\TSM)$. Thus $\TSh (\TSM)$ is ws-open in $\TSP$.
+
+Inversely,
+
+Pretend that $h^{-1}(\TSH)$ is ws-open set in $\TSP$ for each ws-open set $\TSH$ in $\TSQ$. Assume $\TSH$ be any ws-closed in $\TSQ$. By the definition, $h^{-1} (\TSH^{\text{c}})$ is ws-open in $\TSP$. But $h^{-1}(\TSH^{\text{c}})= \TSP -h^{-1} (\TSH)$. Thus $\TSP-h^{-1} (\TSH)$ is ws-open in $\TSP$ and hence $h^{-1}(\TSH)$ is ws-closed in $\TSP$. Therefore $\TSh$ is ws-irresolute.
+\end{proof}
+
+\begin{thm}\label{thm3.3.6}
+If $\TSh: (\TSP,\tau ) \to (\TSQ, \sigma)$ is ws-irresolute then it is ws*-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be ws-irresolute. Assume $\TSH$ be any semi closed in $\TSQ$. Since each semi closed is ws-closed and hence $\TSH$ is ws-closed in $\TSQ$. By the definition of ws-irresolute, $h^{-1}(\TSH)$ is ws-$\TSC(\TSP)$ . Therefore $\TSh$ is ws*-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.3.7}
+Take up $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau =\{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}, \{1, 3\}\}$ be a topology on $\TSP$ and $\sigma =\{\phi, \TSQ, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSP)= =\{\phi, \TSP, \{2\},\{3\}, \{2, 3\},\{2, 3\}\}$, $\ws\TSC(\TSQ)= \{\phi, \TSQ, \{1\}, \{2\},\{3\}, \{1, 3\},\{2, 3\}\}$. Let $\TSh: (\TSP, \tau )\to (\TSQ, \sigma)$ be a function defined by identity function is ws*-continuous but not a ws-irresolute map as the ws-closed set $\TSH=\{1\}$ in $\TSQ$, $h^{-1}(\TSH)=\{1\}$ is not a ws-closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.3.8}
+Let $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ is ws-irresolute then $\TSh(\wscl(\clrD)) \subseteq \scl(\TSh(\clrD))$ for each subset $\TSD$ of $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSD\subseteq \TSP$ and $\scl(\TSf(\clrD))$ is ws-closed in $\TSQ$. Since $\TSh$ is ws-irresolute $h^{-1} (\wscl(\clrD))$ is ws-closed in $\TSP$. Further $\TSD\subseteq  h^{-1} (\TSh(\clrD)) \subseteq  h^{-1} (\scl(\TSh(\clrD)))$. By the definition of ws-closure, $\wscl(\clrD) \subseteq h^{-1} \cl(\clrD))$. Hence $\TSh(\wscl(\clrD))\subseteq \scl(\TSh(\clrD))$.
+\end{proof}
+
+\begin{thm}\label{thm3.3.9}
+Let $\TSh: (\TSP, \tau)\to (\TSQ, \sigma)$ and $\TSg: (\TSQ, \sigma )\to (\TSR, \eta)$ be any two functions. Then
+\begin{enumerate}[(i)]
+\item $\text{goh}: (\TSP, \tau)\to (\TSR, \eta)$ is ws-irresolute if semi is ws-irresolute and $\TSh$ is ws-irresolute.
+\item $\text{goh}: (\TSP, \tau)\to (\TSR, \eta)$ is ws-continuous if semi is ws-continuous and $\TSh$ is ws-irresolute.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\TSH$ be any ws-closed in $(\TSR,\eta)$. Since semi is ws-irresolute then $g^{-1}(\TSH)$ is ws-closed in $(\TSQ, \sigma)$. Since $\TSh$ is ws-irresolute $h^{-1}(g^{-1}(\TSH))$ is ws-closed in $(\TSP, \tau)$. But $(goh)^{-1} (\TSH)=h^{-1}(g^{-1}(\TSH))$ and hence goh is ws-irresolute.
+
+\item Take up $\TSH$ as ws-closed in $(\TSR,\eta)$. Since semi continuos is ws-continuous then $g^{-1}(\TSH)$ is ws-closed in $(\TSQ, \sigma)$. Seeing that $\TSh$ is ws-irresolute $h^{-1}(g^{-1}(\TSH))$ is ws-closed in $(\TSP,\tau)$. But $(goh)^{-1} (\TSH)=h^{-1} (g^{-1}(\TSH))$ and hence goh is ws-continuous.
+\end{enumerate}
+\end{proof}
+
+\begin{thm}\label{thm3.3.10}
+If $\TSh: (\TSP,\tau)\to (\TSQ, \sigma)$ is strongly ws-continuous then $\TSh$ is continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be a strongly ws-continuous and $\TSH$ be any closed set in $\TSQ$. Seeing that each closed set is ws-closed set and hence $\TSH$ is ws-closed in $\TSQ$. Also $\TSh$ is strongly ws-continuous then $h^{-1}(\TSH)$ is closed set in $\TSP$. Therefore $\TSh$ is continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.3.11}
+Take up $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\{1,3\}\}$ and $\sigma =\{\phi, \TSQ, \{1\}, \{2\}, \{1, 2\}\}$ and $\ws\TSC(\TSP)= \{\phi, \TSP, \{2\}, \{3\}, \{2, 3\},\{2,3\}\}$, $\ws\TSC(\TSQ) = \{\phi, \TSQ, \{1\}, \{2\},\{3\}, \{1, 2\},\{2,3\}\}$. Let $\TSh: (\TSP, \tau)\to (\TSQ, \sigma)$ be a function defined by identity function is continuous but not strongly ws-continuous as the ws-closed set $\TSH=\{1\}$ in $\TSQ$, $h^{-1}(\TSH)=\{1\}$  is not a closed set in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.3.12}
+Each strongly ws-continuous is strongly semi-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be strongly ws-continuous. Assume $\TSF$ be any semi-closed set in $\TSQ$. Seeing that each semi-closed is ws-closed and hence $\TSH$ is ws-closed in $\TSQ$. Seeing that $\TSh$ is strongly ws-continuous then $h^{-1}(\TSH)$ is closed set in $\TSP$ and hence semi-closed in $\TSP$. Therefore $\TSh$ is semi-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.3.13}
+Take up $\TSP= \TSQ = \{1, 2, 3, 4\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\break \{1,2,3\}\}$ and $\sigma =\{\phi, \TSQ, \{1\}, \{1,2\}, \{1,2,3\}\}$ and $\TSS\TSC(\TSQ)= \{\phi, \TSQ, \{2\}, \{3\}, \{4\},\break \{2, 3\},\{2, 4\}, \{3, 4\}, \{2, 3,4\}\}$, $\ws\TSC(\TSQ)= \{\phi, \TSQ, \{2\}, \{3\}, \{4\},\{1,4\},\{2,3\},\{2,4\},\break \{3,4\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, Let $\TSh: (\TSP, \tau )\to (\TSQ, \sigma)$ be a function defined by $\TSh(1)=1$, $\TSh(2)=4$, $\TSh(3)=4$, $\TSh(4)=4$, is continuous but not strongly ws-continuous as the ws-closed set $\TSH=\{1,4\}$ in $\TSQ$, $h^{-1}(\TSH)=\{1,4\}$ is not a closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.3.14}
+If a mapping $\TSh: (\TSP,\tau)\to (\TSQ, \sigma)$ is strongly ws-continuous iff $h^{-1}(\TSM)$ is open set in $\TSP$ for each ws-open set $\TSM$ in $\TSQ$.
+\end{thm}
+
+\begin{proof}
+Suppose that $\TSh: \TSP\to \TSQ$ is strongly ws-continuous. Let $\TSM$ be any ws-open set in $\TSQ$ and hence $\TSM^{\text{c}}$ is ws-closed set in $\TSQ$. Seeing that $\TSh$ is strongly ws-continuous $h^{-1}(\TSM)$ is closed in $\TSP$. But $h^{-1} (\TSM^{\text{c}}) =\TSP - h^{-1} (\TSM)$. Thus $h^{-1}(\TSM)$ is open in $\TSP$.
+
+Inversely suppose that $h^{-1}(\TSM)$ is open set in $\TSP$ for each ws-open set $\TSM$ in $\TSQ$. Assume $\TSH$ is any ws-closed in $\TSQ$ and hence $\TSH^{\text{c}}$ is ws-open in $\TSP$. But $h^{-1}(\TSH^{\text{c}}) =\TSP -h^{-1} (\TSH)$. Hence $\TSP-h^{-1} (\TSH)$ is open in $\TSP$ and so $h^{-1}(\TSH)$ is closed in $\TSP$. Therefore $\TSh$ is strongly ws-continuous.
+\end{proof}
+
+\begin{thm}\label{thm3.3.15}
+Each strongly continuous is strongly ws-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ is strongly continuous, Assume $\TSG$ be any ws-open set in $\TSQ$ and also any subset of $\TSQ$. Seeing that $\TSh$ is strongly continuous then $h^{-1}(\TSG)$ is both open and closed in $\TSP$, say $h^{-1}(\TSG)$ is open in $\TSP$. Therefore $\TSh$ is strongly ws-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.3.16}
+Take up $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\break \{1,2,3\}\}$ and $\sigma =\{\phi, Q, \{1\}, \{1,2\}, \{1,2,3\}\}$ and $\TSC(\TSQ)= \{\phi, \TSQ,\{4\},\{3,4\},\{2,3,4\}\}$, $\ws\TSC(\TSQ)= \{\phi,\TSQ,\{2\},\{3\}, \{4\},\{1,4\},\{2,3\},\{2,4\}, \{3,4\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, Let $\TSh: (\TSP, \tau)\to (\TSQ, \sigma)$ be a function defined by $\TSh(1)=4$, $\TSh(2)=4$, $\TSh(3)=4$, $\TSh(4)=4$ is strongly ws-continuous but not a strongly continuous as the set $\TSH=\{4\}$ in $\TSQ$, $h^{-1}(\TSH)=\{4\}$ is not a clopen set in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.3.17}
+Each strongly ws-continuous is ws-continuous but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be strongly ws-continuous. Let $\TSH$ be any closed in $\TSQ$ and hence ws-closed in $\TSQ$. Seeing that $\TSh$ is strongly ws-continuous then $h^{-1}(\TSH)$ will be closed in $\TSP$ and hence ws-closed in $\TSP$. Therefore $\TSh$ is ws-continuous.
+\end{proof}
+
+\begin{exm}\label{exam3.3.18}
+Take up $\TSP=\TSQ= \{1, 2, 3\}$. Let $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}, \{1, 3\}\}$ and $\sigma = \{\phi, \TSQ, \{1\}, \{2\}, \{1,2\}\}$ and $\ws\TSC(\TSP)= \{\phi, \TSP, \{2\}, \{3\}, \{2, 3\},\{2,3\}\}$. Let $\TSh: (\TSP,\tau)\to (\TSQ, \sigma)$ be a function defined by $\TSh(1)=1$, $\TSh(2)=1$, $\TSh(3)=3$ ws-continuous but not strongly ws-continuous as the ws-closed set $\TSH= \{3\}$ in $\TSQ$, $h^{-1}(\TSH)=\{3\}$ is not a closed set in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm3.3.19}
+In discrete topological space, each strongly ws-continuous is\break strongly continuous.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP\to \TSQ$ be strongly ws-continuous in a discrete topological space. In view that $\TSH$ be any subset of $\TSQ$. Seeing that $\TSH$ is both open and closed subset of $\TSQ$ in discrete space. We get the following two cases.
+\begin{description}
+\item[Case (i)] Take up $\TSH$ is any closed subset of $\TSQ$ and hence ws-closed in $\TSQ$. seeing that $\TSh$ is strongly ws-continuous then $h^{-1}(\TSH)$ is closed in $\TSP$.
+\item[Case (ii)] Take up $\TSH$ be any open subset of $\TSQ$ and hence ws-open in $\TSQ$. Seeing that $\TSh$ is strongly ws-continuous then $h^{-1}(\TSH)$ is open in $\TSP$.
+\end{description}
+Therefore $h^{-1}(\TSH)$ is both open and closed in $\TSP$. Hence $\TSh$ is strongly continuous.
+\end{proof}
+
+\begin{thm}\label{thm3.3.20}
+Pretend $\TSh: \TSP\to \TSQ$ and $\TSg: \TSQ\to \TSR$ be any two functions. Then
+\begin{enumerate}[(i)]
+\item $\text{goh}: \TSP\to \TSR$ is strongly ws-continuous if both $\TSh$ and $\TSg$ are ws-continuous.
+\item $\text{goh}: \TSP\to \TSR$ is strongly ws-continuous if $\TSg$ is strongly ws-continuous and $\TSh$ is continuous.
+\item $\text{goh}: \TSP\to \TSR$ is ws-irresolute if $\TSg$ is strongly ws-continuous and $\TSh$ is ws-continuous.
+\item $\text{goh}: \TSP\to \TSR$ is continuous if $\TSg$ is ws-continuous and $\TSh$ is strongly ws-continuous.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\TSG$ be ws-closed in $(\TSR,\eta)$. Seeing that $\TSg$ is strongly ws-continuous then $g^{-1}(\TSG)$ is closed set in $(\TSQ,\sigma)$ and hence ws-closed set in $(\TSQ,\sigma)$. And $\TSh$ is also strongly ws continuous then $h^{-1} (g^{-1}(\TSG))$ closed set in $(\TSP,\tau)$. But $(goh)^{-1}(\TSG) =h^{-1}(g^{-1}(\TSG))$ and hence goh is strongly ws-continuous.
+
+\item Take up $\TSG$ be ws-closed set in $(\TSR,\eta)$. Seeing that $\TSg$ is strongly ws-continuous then $g^{-1}(\TSG)$ is closed set in $(\TSQ,\sigma)$. Also as $\TSh$ is continuous then $\TSh^{-1}(g^{-1}(\TSG))$ is closed set in $(\TSP,\tau)$. But $(goh)^{-1}(\TSG) = h^{-1} (g^{-1} (\TSG))$ and hence goh is strongly ws-continuous.
+
+\item Take up $\TSG$ be any ws-closed set in $(\TSR, \eta)$. Seeing that $\TSg$ is strongly ws-continuous then $g^{-1}(\TSG)$ is closed set in $(\TSQ,\sigma)$. Also as $\TSh$ is ws-continuous then $h^{-1}(g^{-1}(\TSG))$ is ws-closed in $(\TSP,\tau )$. But $(goh)^{-1}(\TSG) = h^{-1}(g^{-1}(\TSG))$. Hence goh is ws-irresolute.
+
+\item Take up $\TSG$ be any closed set in $(\TSR,\eta)$. Seeing that $\TSg$ is ws-continuous then $g^{-1} (\TSG)$ is ws-closed in $(\TSQ,\sigma)$. Since $\TSh$ is strongly ws continuous then $h^{-1} (g^{-1}(\TSG))$ closed in $(\TSP,\tau)$. But $(goh)^{-1}(\TSG) = h^{-1} (g^{-1}(\TSG))$. Hence goh is continuous.
+\end{enumerate}
+\end{proof}
+
+\begin{thm}\label{thm3.3.21}
+Take up $\TSh: \TSP\to \TSQ$ and $\TSg: \TSQ\to  \TSR$ be two functions. Then
+\begin{enumerate}[(i)]
+\item $\text{goh}: \TSP\to \TSR$ is strongly ws-continuous whenever $\TSg$ is perfectly ws-continuous and $\TSh$ is continuous.
+\item $\text{goh}: \TSP\to \TSR$ is perfectly ws-continuous whenever $\TSg$ is strongly ws-continuous and $\TSh$ is perfectly ws-continuous.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[(i)]
+\item Take up $\TSG$ be any ws-open set in $(\TSR,\eta)$. Seeing that $\TSg$ is perfectly ws-continuous then $g^{-1}(\TSG)$ is clopen set in $(\TSQ,\sigma)$, say $g^{-1}(\TSG)$ is open set in $(\TSQ,\sigma)$. Since $\TSh$ is continuous then $h^{-1} (g^{-1}(\TSG))$ open set in $(\TSP,\tau)$. Thus $(goh)^{-1}(\TSG) = h^{-1} (g^{-1}(\TSG))$.
+
+Hence goh is strongly ws-continuous.
+
+\item Take up $\TSG$ be a ws-open set $\in (\TSR, \eta)$. Seeing that $\TSg$ is strongly ws-continuous then $g^{-1}(\TSG)$ is open set $\in (\TSQ,\sigma)$. Since $\TSh$ is perfectly ws-continuous then $h^{-1} (g^{-1}(\TSG))$ clopen set in $(\TSP,\tau )$. But $(goh)^{-1}(\TSG) = h^{-1}(g^{-1}(\TSG))$. Hence goh is perfectly ws-continuous.
+\end{enumerate}
+\end{proof}
+
+\begin{thm}\label{thm3.3.22}
+Pretend $(\TSP,\tau)$ be a discrete topological space and $(\TSQ,\sigma)$ be any topological space. Let $\TSh: (\TSP,\tau)\to (\TSQ, \sigma)$ be a function. Then the statements given below are one and the same.
+\begin{enumerate}[(i)]
+\item $\TSh$ is strongly ws-continuous
+\item $\TSh$ is perfectly ws-continuous.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\to$ (ii)
+
+Take up $\TSG$ be any open set in $(\TSQ,\sigma)$. Seeing that $\TSh$ is strongly ws-continuous then $h^{-1}(\TSG)$ is open set in $(\TSP,\tau)$. But in discrete space, $h^{-1}(\TSG)$ is closed $\in (\TSP, \tau)$. Thus $h^{-1}(\TSG)$ is both open and closed $\in (\TSP,\tau)$. Therefore $\TSh$ is perfectly ws-continuous.
+
+(ii) $\to$ (i)
+
+Take up $\TSM$ be any ws-open set in $(\TSQ,\sigma)$. Seeing that $\TSh$ is perfectly continuous then $h^{-1}(\TSG)$ is both open and closed set in $(\TSP,\tau)$. Hence $\TSh$ is strongly ws-continuous.
+\end{proof}
+
+\begin{thm}\label{thm3.3.23}
+Pretend $(\TSP,\tau)$ be any topological space and $(\TSQ,\sigma)$ be $\TST_{\ws}$ space and $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ be a map. Then the results given below are one and the same.
+\begin{enumerate}[(i)]
+\item $\TSh$ is strongly ws-continuous
+\item $\TSh$ is continuous
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\to$ (ii)
+
+Take up $\TSH$ be any closed set $\in (\TSQ,\sigma)$. Seeing that each closed set is ws-closed and hence $\TSH$ is ws-closed in $(\TSQ,\sigma)$. Since $\TSh$ is strongly ws-continuous then $h^{-1}(\TSH)$ is $\TSC(\TSP)$ in $(\TSP, \tau)$. Hence $\TSh$ is continuous.
+
+(i) $\to$ (ii)
+
+Take up $\TSG$ be any ws-closed in $(\TSQ, \sigma)$. Since $(\TSQ, \sigma)$ is $\TST_{\ws}$ space, $\TSH$ is closed in $(\TSQ,\sigma)$. Seeing that $\TSh$ is continuous implies $h^{-1}(\TSH)$ is closed in $(\TSP,\tau)$. Hence $\TSh$ is strongly ws-continuous.
+\end{proof}
+
+\begin{thm}\label{thm3.3.24}
+Let $\TSh: (\TSP,\tau )\to (\TSQ, \sigma)$ be a map. Both $(\TSP,\tau)$ and $(\TSQ,\sigma)$ are $\TST_{\ws}$ space. Then the results given below are one and the same.
+\begin{enumerate}[(i)]
+\item  $\TSh$ is ws-irresolute.
+\item $\TSh$ is strongly ws-continuous.
+\item $\TSh$ is continuous.
+\item $\TSh$ is ws-continuous.
+\end{enumerate}
+The proof is obvious.
+\end{thm}
+
+\begin{thm}\label{thm3.3.25}
+Take up $\TSP$ and $\TSQ$ be $_{\ws}\TST_{\text{semi}}$ spaces. Then for $\TSh: (\TSP,\tau)\to (\TSQ,\sigma)$ the results given below are one and the same.
+\begin{enumerate}[(i)]
+\item $\TSh$ is sc-irresolute
+\item $\TSh$ is ws-irresolute
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\to$ (ii)
+
+Take up $\TSh: \TSP\to \TSQ$ be sc-irresolute. Let $\TSH$ be a semi-closed in $\TSQ$ and thus ws-closed in $\TSQ$. Seeing that $\TSh$ is sc-irresolute then $h^{-1}(\TSH)$ is semi-closed in $\TSP$ and thus ws-closed in $\TSP$. Therefore $\TSh$ is ws-irresolute.
+
+(i) $\to$ (ii)
+
+Take up $\TSh: \TSP\to \TSQ$ be ws-irresolute. Let $\TSH$ be a semi-closed in $\TSQ$ and thus ws-closed in $\TSQ$. Seeing that $\TSh$ is ws-irresolute then $h^{-1}(\TSH)$ is ws-$\TSC(\TSP)$ in $\TSP$. But $\TSP$ is $_{\ws}\TST_{\text{semi}}$ space and hence $h^{-1}(\TSH)$ is semi-closed in $\TSP$. Therefore $\TSh$ is semi-irresolute.
+\end{proof}

@@ -1,0 +1,72 @@
+\documentclass[oneside,12pt]{Classes/VTU}
+\title{Title of the Thesis}
+
+\author{by \\ \vspace{1mm}\textbf{Candidate Name} \vspace{1mm}}
+\collegeordept{Department Name}
+\university{ College Name}
+
+\renewcommand{\submittedtext}{A thesis submitted to \\Visvesvaraya Technological University. \\ Belgaum, Karnataka \\for award of degree of }
+\degree{\textbf{\textit{Doctor of Philosophy}} \\ in \\ \textbf{\textit{--------------- }}}
+\degreedate{\textbf{Month Year}}
+
+\hbadness=10000
+\hfuzz=50pt
+
+\usepackage{StyleFiles/watermark}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{alltt}
+
+\begin{document}
+
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+
+\maketitle
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\begin{romanpages}
+\include{Certificate/certificate}
+\include{Declaration/declaration}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\include{Acknowledgement/acknowledgement}
+\include{Dedication/dedication}
+\addcontentsline{toc}{chapter}{Abstract}
+\include{Abstract/abstract}
+\normalsize{\tableofcontents}
+\addcontentsline{toc}{chapter}{List of Figures}
+\normalsize{\listoffigures}
+\addcontentsline{toc}{chapter}{List of Tables}
+\normalsize{\listoftables}
+\end{romanpages}
+                                          
+\include{Introduction/introduction}
+\include{Chapter1/chapter1}
+\include{Chapter2/chapter2}
+\include{Chapter3/chapter3}
+\include{Chapter4/chapter4}
+\include{Chapter5/chapter5}
+\include{Conclusions/conclusions}
+\include{Futurework/futurework}
+
+\appendix
+\include{Appendix1/appendix1}
+\include{Appendix2/appendix2}
+
+\bibliographystyle{plain}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{References/references}
+\end{document}

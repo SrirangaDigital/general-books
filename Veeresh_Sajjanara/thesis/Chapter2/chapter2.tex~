@@ -1,0 +1,540 @@
+\chapter{ws-Closed Sets and ws-Open Sets in Topological Spaces}
+\graphicspath{{Chapter2/Chapter2Figs/EPS/}{Chapter2/Chapter2Figs/}}
+
+N. Levine [50] elaborated generalised closed sets in general topology as a generalisation of closed sets. This Knowledge of generalised closed sets was enhanced the improvisation of many new results in general topology. Many topologist namely Balachandran et al [13], Bhattacharya at al [15], Arockirani[3], Gnanambal[39], Malghan [57],Devi[23], Benchalli, R.S. Walli has contributed their works on generalised closed sets, their generalisation and related concept in general topology.
+
+Second section describes a new class of closed sets known as weekly semi closed sets (ws-closed) in topological spaces which are explored and examined. During practise of study few properties of ws-closed are obtained and it was found that every semi-closed is ws-closed sets,
+
+Third Section describes about a new class of closed sets known as weekly semi open sets (ws-open) in topological spaces which are elaborated and examined. During practise of study few properties ws-open sets are obtained. We introduce ws-neighbourhood in topological spaces by using notations of ws-open sets. The notions of ws-interior, ws -closure are explored and studied with few of its basic properties and its basic results are obtained.
+
+\section{ws-closed sets and their basic properties}\label{sec}
+
+In this section, a new class of sets, called weakly semi-closed (briefly, ws-closed) sets in topological spaces are introduced and studied. During this process some of their properties are obtained.
+
+\begin{dfn}\label{defi2.2.1}
+A subset $\clrD$ of a space $(\TSP,\tau)$ is called ws-closed set if $\scl(\clrD) \subseteq \TSU$, whenever $\TSA \subseteq \TSU$ and $U$ is w-open in $(\TSP,\tau)$. We denote the collection of all ws-closed sets in $\TSP$ by $\mbox{WSC}(\TSP)$.
+\end{dfn}
+
+First we prove that the class ws-closed sets properly lies between the class all semi-closed sets and generalised semi pre-closed sets in topological spaces.
+
+\begin{thm}\label{thm2.2.2}
+Each semi-closed set in $\TSP$ is ws-closed set but inverse is untrue
+\end{thm}
+
+\begin{proof}
+Let $\clrD$ be semi-closed set in $\TSP$. Let $M$ be any w-open set in $\TSP$, s.t $\clrD\subseteq \TSM$. Since $\clrD$ is semi-closed, we have $\scl(\clrD) = D \subseteq M$, we have  $\scl(\clrD) \subseteq M$.   Hence $\clrD$ is ws-closed set in $\TSP$.
+\end{proof}
+
+We use example \ref{exam2.2.3} to prove the inverse of  theorem is untrue. 
+
+\begin{exm}\label{exam2.2.3}
+Let $\TSP= \{1, 2, 3, 4\}$ and  $\tau= \{\TSP, \phi, \{1\}, \{2\},\{1, 2\}, \{1, 2, 3\}\}$ then the set $\clrD= \{1,2,3\}$ is ws-closed set but not semi-closed in $\TSP$.  
+\end{exm}
+
+\begin{thm}\label{thm2.2.4}
+\begin{enumerate}[(i)]
+\item If $\clrD-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+
+\item If $\clrD g^{\#}-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+
+\item If $\clrD$ ${}^{*}g-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+
+\item If $\clrD$ $g\# s$-$\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue. 
+
+\item If $\clrD$ $g^{*}-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+
+\item If $\clrD$ $gp-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+
+\item If $\clrD-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+
+\item If $\clrD$ regular-$\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue
+
+\item If $\clrD$ $rb-\TSC(\TSP)$ is ws-$\TSC(\TSP)$ but inverse is untrue.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Let $\clrD$ be $\alpha$-(respectively, $g\#$, $*g$, $g\# s$, $g*$, $gp$, regular and $rb$) closed set in $\TSP$. Let $M$ be any w-open set in $\TSP$, s.t $\clrD \subseteq M$. Since $\clrD$ is $\alpha$- (respectively, $g\#, *g, g\# s, g*,gp$, regular and $rb$) closed in $\TSP$, we have $\scl(\clrD) = D \subseteq M$, we have $\scl(\clrD) \subseteq M$. Hence $\clrD$ is ws-closed set in $\TSP$.
+\end{proof}
+
+\begin{exm}\label{exam2.2.5}
+Let $\TSP= \{1, 2, 3, 4\}$ and $=\{\TSP, \phi, \{1\}, \{2\},\{1, 2\}, \{1, 2, 3\}\}$ then the set $\clrD=\{1\}$ is ws-closed set but not $\alpha$- (respectively, $g\#$, $*g$, $g\# s$, $g*$, $gp$, regular and $rb$) closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm2.2.6}
+Each $\psi$-closed set in $\TSP$ is ws-closed set but inverse is untrue
+\end{thm}
+
+\begin{proof}
+Let $\TSA$ be $\psi$-closed set in $\TSP$. Let $\TSM$ be any w-open set in $\TSP$, s.t $\clrD\subseteq \TSM$. Since $\clrD$ is $\psi$-closed, we have $\scl(\clrD)=\clrD\subseteq M$, we have $\scl(\clrD)\subseteq \TSM$. Hence $\clrD$ is ws-closed set in $\TSP$.
+\end{proof}
+
+We use example \ref{exam2.2.7} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam2.2.7}
+Let $\TSP= \{1, 2, 3, 4\}$ and  $= \{\TSP, \phi, \{1\}, \{2\},\{1, 2\}, \{1, 2, 3\}\}$ then the set $\clrD= \{1,2,3\}$ is ws-closed set but not $\psi$-closed in $\TSP$.
+\end{exm}
+
+\begin{coro}\label{coro2.2.8}
+If $\clrD$ closed set is ws-$\TSC(\TSP)$ set in $\TSP$.
+\end{coro}
+
+\begin{proof}
+Each closed set is $\alpha$-closed and follows from Theorem \ref{thm2.2.4}.
+\end{proof}
+
+We use example \ref{exam2.2.9} to prove the inverse of theorem is untrue. 
+
+\begin{exm}\label{exam2.2.9}
+Let $\TSP= \{1, 2, 3, 4\}$ and  $= \{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$ then the set $\clrD = \{1\}$ is ws-closed set but not closed in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm2.2.10}
+If $\clrD$ ws-$\TSC(\TSP)$ is gspr-closed set in $\TSP$ but inverse is untrue
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ ws-$\TSC(\TSP)$, let $\TSM$ be any regular open set in $\TSP$ s.t $\clrD \ \TSM$. since each regular open set is w-open set and $\clrD$ is ws-closed set, we have $\scl(\clrD)M$,
+\end{proof}
+
+Therefore $\scl(\clrD)\TSM$, $\TSM$ is regular open in $\TSP$, $\clrD$ is gspr-$\TSC(\TSP)$.
+
+We use example \ref{exam2.2.11} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam2.2.11}
+Let $\TSP = \{1, 2, 3 4\}$, $\tau = \{\TSP,\phi,\{1, 2\}, \{3, 4\}\}$. Then the set $\clrD= \{1\}$ is gspr-closed set but not ws-closed set in $\TSP$.
+\end{exm}
+
+\begin{coro}\label{coro2.2.12}
+\begin{itemize}
+\item[(i)] If $\clrD$ ws-$\TSC(\TSP)$ then $\clrD$ gsp-$\TSC(\TSP)$ but inverse is untrue.
+\item[(ii)] If $\clrD$ ws-$\TSC(\TSP)$ $\clrD$ rgb-$\TSC(\TSP)$ but inverse is untrue.
+\end{itemize}
+\end{coro}
+
+\begin{proof}
+\begin{itemize}
+\item[(i)] Follow from [2010] Govindappa Navalagi, S.V. Gurushantanavar, and Chandrashekarappa A.S.
+
+Each gspr-$\TSC(\TSP)$ set is gsp-$\TSC(\TSP)$ set and then follows from Theorem 3.25
+
+\item[(ii)] Follow from [2013] K. Mariappa, S. Sekar, each rgb-closed is gsp-closedset, then follows from Corollary 3.27(i).
+\end{itemize}
+We use example \ref{exam2.2.13} to prove the inverse of above Corallary is untrue.
+\end{proof}
+
+\begin{exm}\label{exam2.2.13}
+Let $\TSP = \{1, 2, 3 4\}$, $\tau = \{\TSP, \phi, \{1, 2\}, \{3, 4\}\}$. Then the set $\clrD= \{2\}$ is gsp(rgb)-closed set but not ws-closed set in $\TSP$.
+\end{exm}
+
+\begin{rem}\label{rem2.2.14}
+The following examples shows that $ws-\TSC(\TSP)$ sets are independent of $rg-\TSC(\TSP)$ sets, $gpr-\TSC(\TSP)$ sets, $wgr\alpha-\TSC(\TSP)$ sets, $pgr\alpha-\TSC(\TSP)$ sets, $-\TSC(\TSP)$ sets, $\alpha {*}{*}g-\TSC(\TSP)$ sets, $gprw-\TSC(\TSP)$ sets, $rgw-\TSC(\TSP)$ sets, $rw-\TSC(\TSP)$ sets, $rwg-\TSC(\TSP)$ sets, $rg\alpha-\TSC(\TSP)$ sets, $\alpha gr-\TSC(\TSP)$ sets, $g\alpha {*}{*}-\TSC(\TSP)$ sets, $\beta wg{*}{*}-\TSC(\TSP)$ sets.
+\end{rem}
+
+\begin{exm}\label{exm2.2.15}
+Let $\TSP = \{1, 2, 3 4\}$, $\tau = \{\TSP,\phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$. Then 
+\begin{enumerate}[(i)]
+\item Closed sets in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{4\}$, $\{3, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item ws-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item rg-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{1, 3\}$, $\{1 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 3\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item gpr-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{1, 3\}$, $\{1 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 3\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item wgr$\alpha$-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{1, 3\}$, $\{1 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 3\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item pgr$\alpha$-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{1, 3\}$, $\{1 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 3\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item -Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{1, 3\}$, $\{1 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 3\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item $\alpha {*}{*} g$-Closed in $(P, \phi)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{1, 3\}$, $\{1 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2,3\}$, $\{1, 2, 3\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item gprw-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3,4\}$.
+
+\item rgw-Closed in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item rw-Closed in $(\TSP, \tau)$ are $\TSP, \phi,\{4\},\{1, 2\},\{3, 4\},\{1, 2, 3\},\{1, 2, 4\},\{1, 3, 4\},\{2, 3, 4\}$.
+
+\item rwg-Closed in $(\TSP, \tau)$ are $\TSP$, $ \phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1,  3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item rg$\alpha$-Closed in $(\TSP, \tau)$ are $\TSP$, $ \phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $ \{1, 2, 4\}$, $ \{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item $\alpha$gr-Closed in $(\TSP, \tau)$ are $\TSP$, $ \phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $ \{1, 2, 4\}$, $ \{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item $g\alpha {*}{*}$-Closed in $(\TSP, \tau)$ are $\TSP$, $ \phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $ \{1, 2, 4\}$, $ \{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item $\beta wg{*}{*}$-Closed in $(\TSP, \tau)$ are $\TSP$, $ \phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $ \{1, 2, 4\}$, $ \{1, 3, 4\}$, $\{2, 3, 4\}$.
+\end{enumerate}
+\end{exm}
+
+Therefore $\{1\}$ is ws-closed in $\TSP$ but not rg (resp. gpr, wgr$\alpha$, pgr$\alpha$, , $\alpha {*}{*}g$, gprw, rgw, rw, rwg, rg$\alpha$, $\alpha$gr, g$\alpha${*}{*} $\beta wg{*}{*}$) closed set in $\TSP$.
+
+\begin{rem}\label{rem2.2.16}
+The following examples clearly represent that ws-closed sets are independent of sets.*g, Mildly g , wg, gw$\alpha$-, g*p, $\eta$, gp, $\beta$wg*, {*}{*}g$\alpha$ , , , $\alpha$gs, w$\alpha$-, $\#$g$\alpha$-, og$\#$-, g*-pre and g\#p\#) closed sets.
+\end{rem}
+
+\begin{exm}\label{exm2.2.17}
+Let $\TSP = \{1, 2, 3\}$, $\tau_{1} = \{\TSP, \phi, \{1\}, \{2\},\{1, 2\}\}$ and $\tau_{2} = \{\TSP, \phi, \{1\}, \{2, 3\}\}$. Then
+\begin{enumerate}[(i)]
+\item closed sets in $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item ws-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item *g-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item Mildly g-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item wg-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item gw$\alpha$-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item g*p-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item $\eta$-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item gp-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item $\beta$wg*-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item {*}{*}g$\alpha$-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item - closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item - closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item $\alpha$gs-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item \#g$\alpha$-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item g*-pre closed sets $(P, \tau_{1} )$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item g\#p\#-closed sets $(P, \tau_{1} )$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item g$\alpha$*-closed sets $(P, \tau_{1} )$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item $\alpha$g-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
+
+\item g{*}{*}-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$. and also
+\end{enumerate}
+
+\begin{enumerate}[(i)]
+\item closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2, 3\}$.
+
+\item ws-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2, 3\}$.
+\item *g-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item Mildly g-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item wg-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item gw$\alpha$-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item g*p-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item $\eta$-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item gp-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item $\beta$wg*-Closed in$(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item {*}{*}g$\alpha$-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item - closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item - closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item $\alpha$gs-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item \#g$\alpha$-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item g*-pre closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item g\#p\#-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item g$\alpha$*-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item $\alpha$g-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\item g{*}{*}-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 2\}$, $\{1, 3\}$, $\{2, 3\}$.
+\end{enumerate}
+
+Therefore $\{2\}$ is ws-closed set in $(P, \tau_{1})$ but not in *g (resp. Mildly g, wg, gw$\alpha$, g*p, $\eta$, gp, $\beta$wg*, {*}{*}g$\alpha$, , ,$\alpha$gs $\alpha$, \#g$\alpha$, og\#, g*-pre$\TSC(\TSP)$, g\#p\#, g$\alpha$*, $\alpha$g, g{*}{*})$\TSC(\TSP)$ set in $(P,\tau_{1})$.
+
+Meanwhile $\{2\}$ in *g-(resp. gw$\alpha$, g*p, $\eta$, gp, $\beta$wg*, {*}{*}g$\alpha$ , , , $\alpha$gs, $\alpha$, \#g$\alpha$, og\#, g*-pre , g\#p\#, g$\alpha$*, $\alpha$g, g{*}{*})$\TSC(\TSP)$ in $(P, \tau_{2})$ but not ws-$\TSC(\TSP)$ set in $(P, \tau_{2})$.
+\end{exm}
+
+\begin{rem}\label{rem2.2.18}
+The following example clearly represents that ws-closed sets are independent of sets g, sg, gs, g$\alpha$, sgb, rg*b, pgpr, g$\alpha$b and rps-closed sets in $\TSP$.
+\end{rem}
+
+\begin{exm}\label{exm2.2.19}
+Let $\TSP = \{1, 2, 3, 4\}$, $\tau_{1} =\{\TSP, \phi, \{1\}, \{1, 2\},\{1, 2, 3\}\}$ and $\tau_{2} =\{ P, \phi, \{1, 2\},\{3, 4\}\}$. Then
+\begin{enumerate}[(i)]
+\item closed sets in $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item ws-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 3\}$, $\{1, 4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}, \{1, 2, 4\}, \{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item g-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{4\}$, $\{1, 4\}$, $\{2, 4\}$, $\{3, 4\}\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item sg-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item gs-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item g$\alpha$-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item sgb-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item rg*b-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item pgpr-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item g$\alpha$b-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$.
+
+\item rps-closed sets $(P, \tau_{1})$ are $\TSP$, $\phi$, $\{2\}$, $\{3\}$, $\{4\}$, $\{2, 3\}$, $\{2, 4\}$, $\{3, 4\}$, $\{2, 3, 4\}$. and also
+\end{enumerate}
+
+\begin{enumerate}[(i)]
+\item Closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{3, 4\}$, $\{1, 2\}$.
+
+\item ws-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1, 2\}$, $\{3, 4\}$.
+
+\item g-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item sg-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item gs-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item g$\alpha$-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item sgb-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item rg*b-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item pgpr-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item g$\alpha$b-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+
+\item rps-closed sets $(P, \tau_{2})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$, $\{1, 2\}$, $\{, 3\}$, $\{, 4\}$, $\{2, 3\}$, $\{2, 4\}, \{3, 4\}$, $\{1, 2, 3\}$, $\{1, 2, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
+\end{enumerate}
+
+Therefore $\{1\}$ is ws-$\TSC(\TSP)$ set in $(P, \tau_{1})$ but not g-$\TSC(\TSP)$ (resp. sg-$\TSC(\TSP)$, gs-$\TSC(\TSP)$, g$\alpha$-$\TSC(\TSP)$, sgb-$\TSC(\TSP)$ sets, rg*b-$\TSC(\TSP)$, pgpr-$\TSC(\TSP)$, g$\alpha$b-$\TSC(\TSP)$, rps-$\TSC(\TSP)$) set in $(P, \tau_{1})$.
+
+Meanwhile $\{1\}$ is g-(resp. sg-, gs, g$\alpha$, sgb, rg*b, pgpr, g$\alpha$b, rps) closed set in $(P, \tau_{2})$ but not ws-closed set in $(P, \tau_{2})$.
+\end{exm}
+
+\begin{rem}\label{rem2.2.20}
+The next example represents that ws-closed will be independent of R*, rg$\beta$ pgr$\alpha$, rgw and gprw-close sets in $\TSP$.
+\end{rem}
+
+\begin{exm}\label{exm2.2.21}
+Let $\TSP=\{1,2,3\}$, and $\tau=\{\TSP,\phi,\{1\},\{2\},\{1,2\}\}$. Then
+\begin{enumerate}[(i)]
+\item closed sets $(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 3\},\{2, 3\}$.
+\item ws-closed sets $(\TSP, \tau)$ are $\TSP, \phi, \{1\},\{2\},\{3\},\{2, 3\}, \{1, 3\}$.
+\item R*-closed sets $(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
+\item rg$\beta$-closed sets $(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
+\item pgr$\alpha$-closed sets $(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
+\item w-closed sets $(\TSP,\tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
+\item gprw-closed sets $(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
+\end{enumerate}
+
+Therefore $\{1\}$ is ws-$\TSC(\TSP)$ set in $\TSP$ but not R*(respectively. rg$\beta$, pgr$\alpha$, rgw, gprw) closed set in $\TSP$.
+\end{exm}
+
+\begin{rem}\label{rem2.2.22}
+From the results discussed above and the known facts, we have the following implications.
+%\begin{figure}[!htbp]
+%\centering
+%\includegraphics{Chapter2/}
+%\end{figure}
+\end{rem}
+
+\begin{thm}\label{thm2.2.23}
+The union of two ws-closed subsets of $\TSP$ is ws-closed.
+\end{thm}
+
+\begin{exm}\label{exm2.2.24}
+Let $\TSP = \{1, 2, 3\}$ and $\tau = \{\phi, P, \{1\}, \{2\}, \{1, 2\}\}$ thus the sets $\TSA= \{1\}$ and $B= \{2\}$ are ws-$\TSC(\TSP)$ set but $\TSA\TSB = \{1,2 \}$ is not a ws-$\TSC(\TSP)$.
+\end{exm}
+
+\begin{thm}\label{thm2.2.25}
+The intersection of two ws-closed subsets of $\TSP$ is ws-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ and $\TSE$ ws-$\TSC(\TSP)$. Let $U$ be any semiopen set $\TSP : (\clrD\cap \TSE)\subseteq \TSU$ that is $\clrD\subseteq \TSU$ and $E\subseteq \TSU$. Since $\clrD$ and $\TSE$ are ws-$\TSC(\TSP)$ then $\scl(\clrD) \subseteq  \TSU$ and $\scl(\TSE)\subseteq \TSU$ and we know that $(\scl(\clrD)\scl(\TSE)) = \scl(DE)\subseteq \TSU$. Therefore $\clrD\TSE$ is ws-closed in $\TSP$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.26}
+Assuming subset $\clrD$ of a topological space $\TSP$ is ws-$\TSC(\TSP)$ then $\scl(\clrD)-\clrD$ any non-empty open set in $\TSP$ but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ ws-$\TSC(\TSP)$ and Pretend $\TSF$ be an non empty w-$\TSC(\TSP)$ subset of $\scl(\clrD)-\clrD$ $\TSF\scl(\clrD)-\clrD$ $\TSF\scl(\clrD)(\TSP-\clrD)$ $\TSF\scl(\clrD)$ ---(1) \& $\TSF\TSP-\clrD$
+
+$\clrD\TSP-\TSF$ and $\TSP-\TSF$ is w-open set and $\clrD$ is an ws-$\TSC(\TSP)$, $\scl(\clrD)\TSP-\TSF$
+
+$\TSF\TSP-\scl(\clrD)$ ---(2) from equations (1) and (2) we get $\TSF\scl(\clrD)(\TSP-\scl(\clrD))=$
+
+$\TSF$ = thus $\scl(\clrD)-\clrD$ will not contain any non-empty w-$\TSC(\TSP)$.
+
+We use example \ref{exam2.2.27} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam2.2.27}
+Take $\TSP=\{1,2,3,4\}$, $\tau=\{\TSP,\phi,\{1\},\{1, 2\},\{1,2,3\}\}$ then the set $\clrD=\{2\}$ $\scl\{2\}=\{2\}$, $\scl\{\clrD\}-\clrD=\{2\}$ any non-empty w-$\TSC(\TSP)$ but $\clrD$ is not ws-$\TSC(\TSP)$.
+\end{exm}
+
+\begin{thm}\label{thm2.2.28}
+If $\clrD$ ws-$\TSC(\TSP)$ and $\clrD\subseteq \TSE\subseteq \scl(\clrD)$ then $\TSE$ is also ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ ws-$\TSC(\TSP)$, : $\TSE\subseteq \scl(\clrD)$. Assume $\TSU$ be a w-open set of $\TSP : \TSE\subseteq \TSU$ then $\clrD\subseteq \TSU$. Since $\clrD$ is ws-$\TSC(\TSP)$ we have $\scl(\clrD)\subseteq \TSU$ and $\clrD\subseteq \TSU$. Now $\TSE\subseteq \scl(\clrD)$ $\scl(\TSE)\subseteq \scl(\scl(\clrD))=\scl(\clrD)\subseteq \TSU$. That is $\scl(\TSE)\subseteq \TSU$. Therefore $\TSE$ is a ws-$\TSC(\TSP)$.
+\end{proof}
+
+We use example \ref{exam2.2.29} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam2.2.29}
+Take up $\TSP = \{1,2,3 \}$, $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}\}$ then the set $\clrD=\{1\}$, $\TSE=\{1,3\}:\clrD$ and $\TSE$ are ws-$\TSC(\TSP)$ but $\clrD\subseteq \TSE \scl(\clrD)$ because $\scl(\clrD)=\{1\}$.
+\end{exm}
+
+\begin{thm}\label{thm2.2.30}
+Pretend $(\TSP,\tau)$ is a topological space then $\forall x$ belongs to $\TSP$ the set $\TSP-\{\TSx\}$ is ws-$\TSC(\TSP)$ or semi open.
+\end{thm}
+
+\begin{proof}
+Let $\TSx\TSP$. Suppose $\TSP-\{\TSx\}$ semiopen set. Then $\TSP$ is the only semiopen set containing $\TSP-\{\TSx\}$ that is $\TSP-{\TSx} \subseteq \TSP \cl(\TSP-\{\TSx\}) \subseteq \cl(\TSP) \cl(\TSP-\{\TSx\})\subseteq \TSP$. Therefore $P-\{\TSx\}$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.31}
+Take up $\clrD$ ws-$\TSC(\TSP)$. Then $\clrD$ is semi-closed iff $\scl(\clrD)-\clrD$ is w-open.
+\end{thm}
+
+%raghu
+\begin{proof}
+Necessity: Pretend $\clrD$ is g-$\TSC(\TSP)$. Then $\scl(\clrD)=\clrD$ that is $\scl(\clrD)-\clrD=\phi$ which is w-open set in $\TSP$.
+
+Sufficiency: Pretend $\clrD$ is ws-$\TSC(\TSP)$ and $\scl(\clrD)-\clrD$ is w-open, By the Theorem \ref{thm2.2.26} $\scl(\clrD)-\clrD=\phi$ $\scl(\clrD)=\clrD$. Therefore $\clrD$ is semi-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.32}
+Let $\clrD\subseteq Q\subseteq \TSP$ and Pretend that $\clrD$ is ws-$\TSC(\TSP)$. Then $\clrD$ is ws-closed relative to $\TSY$.
+\end{thm}
+
+\begin{proof}
+Let $\clrD\subseteq \TSQ\cap \TSG$ where $\TSG$ is w-open. Since $\clrD$ is ws-$\TSC(\TSP)$, then $\clrD\subseteq G$ and $\scl(\clrD)\subseteq \TSG$. This
+implies that $\TSQ \cap \scl(\clrD) \subseteq \TSQ\cap \TSG$ where $\TSQ \cap \scl(\clrD)$ is closed set of $\clrD$ in $\TSQ$. Thus $\clrD$ is ws-closed
+relative to $\TSQ$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.33}
+In a topological space $\TSP$ if $\TSSO(\TSP) =\{\TSP, \phi\}$ then each subset $\TSP$ is a ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a topological space and $\TSSO(\TSP)=\{\TSP, \phi\}$. Let $\clrD$ be any subset of $\TSP$. Pretend $\clrD=\phi$. Then $\phi$ is ws-$\TSC(\TSP)$. Pretend $\clrD\neq\phi$. Then $\TSP$  is the only semiopen set containing $\TSA$ and so $\scl(\clrD)\subseteq \TSP$. Hence $\clrD$ is ws-$\TSC(\TSP)$. 
+
+We use example \ref{exam2.2.34} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam2.2.34}
+Let $\TSP  = \{1, 2, 3\}$, $\tau = \{\phi, \TSP, \{1\}, \{2, 3\}\}$. Then each subset of $(\TSP,\tau)$ is a ws-$\TSC(\TSP)$, but $\TSSO= \{\phi, \TSP, \{1\}, \{2, 3\}\}$.
+\end{exm}
+
+\begin{thm}\label{thm2.2.35}
+If $\clrD$ regular open and gspr-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ regular open and gspr-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP$.  : $\clrD\subseteq \TSM$. Since $\clrD$ is regular open and gspr-closed, by definition, $\scl(\clrD)\subseteq \clrD$ then $\scl(\clrD)\subseteq \clrD\subseteq \TSU$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.36}
+If $\clrD$ regular open and rgb-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be regular open and rgb-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP$. : $\clrD\subseteq \TSM$. Seeing that $\clrD$ is regular open and rgb-closed in $\TSP$, by definition, $\scl(\clrD)\subseteq \clrD$ thus $\scl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.37}
+If $\clrD$ semiopen and swg*-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Let $\clrD$ semiopen and swg*-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Since $\clrD$ is semiopen and swg*-closed in $\TSP$, by definition, $\scl(\clrD)\subseteq \clrD$ thus $\scl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.38}
+If $\clrD$ is semiopen and swg-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be semiopen and swg-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Since $\clrD$ is semiopen and swg-closed in $\TSP$, by definition, $\scl(\clrD)\subseteq \clrD$ implies $\scl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{2.2.39}
+If $\clrD$ is semiopen and sg-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be semiopen and sg-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Since $\clrD$ is semiopen and sg-closed in $\TSP$, by definition, $\scl(\clrD)\subseteq \clrD$ implies $\scl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.40}
+If $\clrD$ semiopen and sgb-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be semiopen and sgb-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Since $\clrD$ is semiopen and sgb-closed in $\TSP$, by definition, $\scl(\clrD)\subseteq \clrD$ implies $\scl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.41}
+If $\clrD$ semiopen and $\alpha$gs-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ semiopen and $\alpha$gs-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Since $\clrD$ is semiopen and $\alpha$gs-closed in $\TSP$, by definition, $\scl(\clrD)\subseteq \clrD$ implies $\scl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.42}
+If $\clrD$ $\beta$-open and $\beta$wg*-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Let $\clrD$ $\beta$-open and $\beta$wg*-closed in $\TSP$. Let $\TSM$ be any regular semiopen set in $\TSP : \clrD\subseteq \TSM$. Since $\clrD$ is $\beta$-open and $\beta$wg*-closed in $\TSP$, by definition, $\gcl(\clrD)\subseteq \clrD$ implies $\gcl(\clrD)\subseteq \clrD\subseteq \TSM$. Hence $\clrD$ is ws-closed in $\TSP$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.43}
+If $\clrD$ both open and g-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Let $\clrD$ open and g-closed in $\TSP$. Let $\TSM$ be any regular open set in $\TSP \clrD\subseteq \TSM$. by definition, $\cl(\clrD)\subseteq \clrD\subseteq \TSM$ and $\gcl(\clrD)=\clrD$. This implies $\cl(\clrD)\subseteq \gcl(\clrD) \subseteq \clrD\subseteq \TSM$ $\gcl(\clrD)\subseteq \TSM$. Hence $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.44}
+If $\clrD$ regular semiopen and rw-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ regular semiopen and rw-$\TSC(\TSP)$ in $\TSP$. Let $\TSM$ be any w-open set in $\TSP \clrD\subseteq \TSM$. Now $\clrD\subseteq \clrD$ by hypothesis $\cl(\clrD)\subseteq \clrD$ then we know that $\cl(\clrD) \subseteq \scl(\clrD)\subseteq \clrD$. Hence $\scl(\clrD)\subseteq \TSM$ therefore $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.45}
+If $\clrD$ regular semiopen and R*-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ regular semiopen and R*-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP \clrD\subseteq \TSM$. Now $\clrD\subseteq \clrD$ by hypothesis $\cl(\clrD)\subseteq \clrD$ then we know that $\cl(\clrD) \subseteq \scl(\clrD)\subseteq \clrD$. Hence $\scl(\clrD)\subseteq \TSM$ therefore $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.46}
+If $\clrD$ regular semiopen and gprw-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be regular semiopen and gprw-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Now $D\subseteq \clrD$ by hypothesis $\cl(\clrD)\subseteq \clrD$ then we know that $\cl(\clrD) \subseteq \scl(\clrD)\subseteq \clrD$. Hence $\scl(\clrD)\subseteq \TSM$ therefore $\clrD$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm2.2.47}
+If $\clrD$ is regular semiopen and rgw-closed then $\clrD$ ws-$\TSC(\TSP)$.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be regular semiopen and rgw-closed in $\TSP$. Let $\TSM$ be any w-open set in $\TSP : \clrD\subseteq \TSM$. Now $\clrD\subseteq \clrD$ by hypothesis $\cl(\clrD)\subseteq \clrD$ then we know that $\cl(\clrD) \subseteq \scl(\clrD)\subseteq \clrD$. Hence $\scl(\clrD)\subseteq \TSM$ therefore $\clrD$ is ws-$\TSC(\TSP)$ .
+\end{proof}
+
+\section{ws-open sets in topological spaces}
+
+\begin{dfn}\label{defi2.3.1}
+A subset $\clrD$ of a topological space $(\TSP,\tau)$ is called a ws-open set in $\TSP$ if $\clrD^{\text{c}}$ is a ws-closed.
+\end{dfn}
+
+%word page 30
+
+
