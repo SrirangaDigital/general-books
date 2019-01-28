@@ -1,0 +1,366 @@
+\chapter{On ws closed and ws open Maps in Topological Spaces}
+\graphicspath{{Chapter4/Chapter4Figs/EPS/}{Chapter4/Chapter4Figs/}}
+
+\section{Introduction}\label{sec4.1}
+
+In 1982, the concept of generalized closed maps is introduced and studied by S. R, Malghan [23], wg-closed maps and rwg-closed maps were introduced and studied by Nagavani [26]. Later regular closed maps, rw-closed maps and αrw-closed maps have been introduced and studied by Long [20], Benchalli et.all [8] and R S Wali et.all [35] respectively. 
+
+In section 2 of this chapter, a new class of maps called ws-closed maps is introduced and their relations with various generalized closed maps are studied. We prove that the composition of two ws-closed maps need not be ws-closed map. We also introduce ws*-closed maps, ws-open maps and ws*-open maps in topological spaces and obtain certain characterizations of these maps.
+
+\section{ws–closed Maps and ws–open Maps}\label{sec4.2}
+
+\begin{dfn}\label{defi4.2.2} 
+A map $\TSh: \TSP \to \TSQ$ is said to be weakly semi-closed (briefly ws-closed) map if the image of every closed set in $(\TSP, \tau)$ is ws–closed in $(\TSQ, \sigma)$.
+\end{dfn}
+
+\begin{exm}\label{exam4.2.1}
+Let $\TSP = \TSQ = \{1, 2, 3\}$, $\tau = \{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSP$.
+$\sigma = \{\TSQ, \phi, \{1\}, \{2, 3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ) =\{\TSQ, \phi, \{2\},\{3\},\{1,3\},\{2, 3\}\}$. Let $\TSh: \TSP \to \TSQ$ defined by identity map, then $\TSh$ is ws-closed map.
+\end{exm}
+
+\begin{thm}\label{thm4.2.3}
+Each closed map is ws-closed map, but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: (\TSP,\tau)\to (\TSQ, \sigma)$ be closed map and $\TSV$ be any $\TSC(\TSP)$ in $\TSP$. Then $\TSh(\TSV)$ is closed in $\TSQ$, Seeing that each closed set is $\ws$-$\TSC(\TSP)$. Hence $\TSh(\TSV)$ is ws-closed in $\TSQ$. Therefore $\TSh$ is ws-closed.
+\end{proof}
+
+We use example \ref{exam4.2.4} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam4.2.4}
+Take up $\TSP = \TSQ = \{1, 2, 3\}$ $\tau = \{\TSP, \phi, \{2\},\{3\},\{1,3\},\{2, 3\}\}$ be a topology on $\TSP$. $\sigma =\{\TSQ, \phi, \{1\},\{2\},\{1, 2\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ) =\{\TSQ, \phi,\{1\}, \{2\},\{3\},\{1,3\},\{2,3\}\}$. Let $\TSh: \TSP \to \TSQ$ defined by identity map, hence $\TSh$ is ws–closed map but not closed as image of closed set $\{2\}$ in $\TSP$ is $\{2\}$, is not closed in $\TSQ$.
+\end{exm}
+
+\begin{thm}\label{thm4.2.5}
+If $\TSh: \TSP\to \TSQ$ is a closed map then the following holds.
+\begin{enumerate}[(1)]
+\item Each semi-closed is ws-closed but inverse is untrue.
+\item Each $\alpha$-closed is ws-closed but inverse is untrue.
+\item Each $\TSg^{\#}$-closed is ws-closed but inverse is untrue.
+\item Each *g$\alpha$-closed is ws-closed but inverse is untrue.
+\item Each g$\xi$*-closed is ws-closed but inverse is untrue.
+\item Each $\alpha$gp-closed is ws-closed but inverse is untrue.
+\item Each $\ddot{g}$-closed is ws-closed but inverse is untrue.
+\item Each regular-closed is ws-closed but inverse is untrue
+\item Each rb-closed is ws-closed but inverse is untrue.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Proof is obtained from the evidence that each semi (respectively, $\alpha$, g\#-, *g$\alpha$, g$\xi$*, $\ddot{g}$, regular, rb) closed set is ws–closed.
+\end{proof}
+
+We use example \ref{exam4.2.6} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam4.2.6}
+Take up $\TSP = \TSQ = \{1, 2, 3\}$ $\tau = \{\TSP, \phi, \{2\}, \{3\},\{1,3\},\{2, 3\}\}$ be a topology on $\TSP$. $\sigma =\{\TSQ, \phi, \{1\}, \{2\}, \{1, 2\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ)=\{\TSQ, \phi,\{1\},\{2\},\{3\},\{1,3\},\{2,3\}\}$. Let $\TSh: \TSP \to \TSQ$ defined by identity map, hence $\TSh$ is ws-closed map but not closed as image of closed set $\{2\}$ in $\TSP$ is $\{2\}$, is not semi-(respectively $\alpha$, g\#-, *g$\alpha$-, g$\xi$*, $\ddot{g}$, regular, rb) in $\TSQ$.
+\end{exm}
+
+\begin{thm}\label{thm4.2.7}
+Each g\#s-closed map is ws–closed map, but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof of above theorem follows from the evidence that each g\#s -$\TSC(\TSP)$ is ws-$\TSC(\TSP)$.
+\end{proof}
+
+We use example \ref{exam4.2.8} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam4.2.8}
+Take up $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau= \{\varphi, \TSP, \{1,2\}, \{3,4\}\}$ be a topology on $\TSP$ and $\sigma=\{\phi, $\TSQ$, \{1\}, \{2\}, \{1, 2\},\{1,2,3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ)=\{\TSQ, \phi \{1\},\{2\},\{3\},\{4\},\{1,3\}, \{1,4\},\{2,3\},\{2,4\},\{3,4\},\{1,2,4\}, \{1,3,4\}, \{2,3,4\}\}$, g\#s$\TSC(\TSQ)=\{\TSQ, \phi \{2\},\{3\},\{4\},\{2,3\},\{2,4\},\{3,4\},\{2,3,4\}\}$. Let $\TSh: (\TSP, \tau )\to (\TSQ, \sigma)$ be a function defined by $\TSh(1)= 1$, $\TSh(2)=4$, $\TSh(3)=3$, $\TSh(4)=4$, is ws-closed map but not closed as image of closed set $\{1,2\}$ in $\TSP$ is $\{1,4\}$ is not g\#s-closed set in $\TSQ$.
+\end{exm}
+
+\begin{thm}\label{thm4.2.9}
+If $\TSh: \TSP\to \TSQ$ is a closed map then the following holds.
+\begin{enumerate}[(i)]
+\item Each ws–closed map is gspr-closed map but inverse is untrue.
+\item Each ws–closed map is gsp-closed map but inverse is untrue.
+\item Each ws–closed map is rgb-closed map but inverse is untrue.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Proof is obtained from the evidence that each ws–$\TSC(\TSP)$ is gspr $\TSC(\TSP)$ (respectively, rgb-$\TSC(\TSP)$, gsp-$\TSC(\TSP)$).
+\end{proof}
+
+We use example \ref{exam4.2.10} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam4.2.10} 
+Take up $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau= \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\},\{1,2,3\}\}$ be a topology on $\TSP$ and $\sigma=\{\phi, \TSQ, \{1,2\}, \{3,4 \} \}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ)= \{\TSQ, \phi, \{1,2\},\{3,4 \}\}$, gspr$\TSC(\TSQ)=\gsp\TSC(\TSQ)=\rgb\TSC(\TSQ)=\{\TSP(\TSQ)\}$. Let $\TSh: (\TSP, \tau) \to (\TSQ,\sigma)$ defined by identity map, then $\TSh$ is gspr (respectively, rgb, gsp) closed map but not ws-closed as image of closed set $\{4\}$ in $\TSP$ is $\{4\}$ is not ws–closed in $\TSQ$.
+\end{exm}
+
+\begin{rem}\label{rem4.2.11}
+The example given below shows that ws-closed maps are independent of pre, w, gp, g, $\hat{g}$, $\tilde{g}$, g$\alpha$, gw$\alpha$, pgpr, $\alpha$gp, swg-closed, w$\alpha\hat{g}$, $\alpha$g , $\eta$-closed, g*pre , mildly g, g*p, wg, rg, gpr, wgr$\alpha$, pgr$\alpha$, $\alpha$**g, rwg , $\beta$wg** , g$\alpha$**, rg$\alpha$, $\alpha$gr, gpw , $\alpha$gw, g$\alpha$*, R* closed maps,
+\end{rem}
+
+\begin{exm}\label{exam4.2.12}
+Take up $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau= \{\phi, \TSP, \{1\},\{1, 2\},\{1,2,3\}\}$ be a topology on $\TSP$ and $\sigma=\{\phi, \TSQ, \{1,2\}, \{3,4 \}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ)= \{\TSQ, \phi, \{1,2\}, \{3,4 \}\}$. Let $\TSh: \TSP \to \TSQ$ defined by, $\TSh(1) = 1$, $\TSh(2) = 2$, $\TSh(3) = 3$, $\TSh(4)=4$, then $\TSh$ is of pre, w, gp, g, $\hat{g}$, $\tilde{g}$, g$\alpha$, gw$\alpha$, pgpr, $\alpha$gp, swg-closed, w$\alpha\hat{g}$, $\alpha$g, $\eta$-closed, g*pre, mildly g, g*p, wg, rg, gpr, wgr$\alpha$, pgr$\alpha$, $\alpha$**g, rwg, $\beta$wg**, g$\alpha$**, rg$\alpha$, $\alpha$gr, gpw, $\alpha$gw, g$\alpha$*, R* closed maps, But $\TSh$ is not ws–closed map, as closed set $\{\TSd\}$ in $\TSP$ is $\{\TSd$\} is not ws–closed in $\TSQ$.
+\end{exm}
+
+\begin{exm}\label{exam4.2.13}
+Take up $\TSP=\TSQ= \{1, 2, 3, 4\}$. Let $\tau= \{\phi, \TSP, \{1,2\}, \{3,,4 \}\}$ be a topology on $\TSP$ and $\sigma=\{\phi, \TSQ, \{1\}, \{2\}, \{1,2\},\{1,2,3\}\}$ be a topology on $\TSQ$ and $\ws\TSC(\TSQ)=\{\phi, \TSQ, \{1\},\{2\},\{3\},\{4\},\{1,3\}, \{1,4\},\{2,3\},\{2,4\},\{3,4\},\{1,2,4\}, \{1,3,4\}, \{2,3,4\}\}$. Take up $\TSh: \TSP \to \TSQ$ defined by, $\TSh(1) = 1$, $\TSh(2) = 1$, $\TSh(3) = 3$, $\TSh(4)=4$, then $\TSh$ is ws–closed, but not a pre(respectively, w, gp, g, $\hat{g}$, $\tilde{g}$, g$\alpha$, gw$\alpha$, pgpr, $\alpha$gp, swg, w$\alpha\hat{g}$, $\alpha$g, $\eta$, g*pre, mildly g, g*p, wg, rg, gpr, wgr$\alpha$, pgr$\alpha$, $\alpha$**g, rwg, $\beta$wg**, g$\alpha$**, rg$\alpha$, $\alpha$gr, gpw, $\alpha$gw, g$\alpha$*, R*) closed maps as $\TSC(\TSP)$ $\{\TSa , \TSb\}$ in $\TSP$ is $\{1\}$ is not pre(respectively, w, gp, g, $\hat{g}$, $\tilde{g}$, g$\alpha$, gw$\alpha$, pgpr, $\alpha$gp, swg, w$\alpha\hat{g}$, $\alpha$g, $\eta$, g*pre, mildly g, g*p, wg, rg, gpr, wgr$\alpha$, pgr$\alpha$, $\alpha$**g, rwg, $\beta$wg**, g$\alpha$**, rg$\alpha$, $\alpha$gr, gpw, $\alpha$gw, g$\alpha$*, R* ) closed set in $\TSQ$.
+\end{exm}
+
+\begin{rem}\label{rem4.2.14}
+From the above discussions and known facts, the relation between ws-closed map and some existing closed maps in topological space is shown in the following figure
+\begin{figure}[H]
+\centering
+\includegraphics{1.eps}
+\end{figure}
+
+\begin{thm}\label{thm4.2.15}
+Map $\TSh: \TSP \to \TSQ$ is contra regular closed and gspr-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be open and gspr-closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.16}
+A map $\TSh: \TSP \to \TSQ$ is contra closed and rgb-closed map then h is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be open and rgb - closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.17}
+Map $\TSh: \TSP \to \TSQ$ is contra closed and $\alpha$g–closed map then h is ws–closed map.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be open and $\alpha$g-closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws-closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.18}
+Map $\TSh: \TSP \to \TSQ$ is contra closed and rgb-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be open and rgb - closed in $\TSQ$. By results 1.3.3 $\TSh(\TSM)$ is ws-closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws-closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.19}
+Map $\TSh: \TSP \to \TSQ$ is contra semi closed and swg*-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be semi open and swg*–closed in $\TSQ$. By results 1.3. $\TSh(\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.20}
+Map $\TSh: \TSP \to \TSQ$ is contra semi closed and swg-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be semi open and swg-closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.21}
+Map $\TSh: \TSP \to \TSQ$ is contra is semi closed and sg-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in(\TSP, \tau)$. Then $\TSh (\TSM)$ will be semi open and sg–closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.22}
+Map $\TSh: \TSP \to \TSQ$ is contra is semi closed and sgb-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TS (\TSM)$ will be semi open and sgb – closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.23}
+Map $\TSh: \TSP \to \TSQ$ is contra is semi closed and $\alpha$gs-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be semi open and $\alpha$gs-closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.24}
+Map $\TSh: \TSP \to \TSQ$ is contra is $\beta$-closed and $\beta$wg*-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ is $\beta$-open and $\beta$wg*-closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.25}
+Map $\TSh: \TSP \to \TSQ$ is contra is both closed and $\TSg$-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be open and $\TSg$–closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.26}
+Map $\TSh: \TSP \to \TSQ$ is contra is regular semi closed and rw-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in(\TSP, \tau)$. Then $\TSh (\TSM)$ will be semi open and rw–closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.27}
+Map $\TSh: \TSP \to \TSQ$ is contra is regular semi closed and R*-closed map then $\TSh$ is ws-closed map in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ as a closed set $\in (\TSP, \tau)$. Then $\TSh (\TSM)$ will be semi open and R*-closed in $\TSQ$. By results 1.3.3 $\TSh (\TSM)$ is ws–closed in $(\TSQ, \sigma)$. Therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.28}
+A mapping $\TSh: \TSP \to \TSQ$ be ws–closed, then $\wscl (\TSh(\TSD))\subseteq \TSh(\cl (\clrD)) \forall$ subset $\clrD$ of $(\TSP, \tau)$.
+\end{thm}
+
+\begin{proof}
+Pretend that $\TSh$ is ws-closed and $\clrD \subseteq \TSP$. Then $\cl(\clrD)$ is closed in $\TSP$ and so $\TSh(\cl(\clrD))$ is ws–closed in $(\TSQ, \sigma)$. We have $\TSh(\clrD) \subseteq \TSh(\cl(\clrD))$, $\wscl(\TSh(\TSD)) \subseteq \wscl(\TSh(\cl(\clrD))) \to$ (i). Since $\TSh(\cl(\clrD))$ is ws-closed in $(\TSQ, \sigma)$, $\wscl(\TSh(\cl(\clrD))) = \TSh (\cl (\clrD)) \to$ (ii), From (i) and (ii), we have wscl $(\TSh(\clrD)) \subseteq \TSh(\cl(\clrD))$ for each subset $\TSD$ of $(\TSP, \tau)$.
+\end{proof}
+
+\begin{coro}\label{coro4.2.29}
+A mapping $\TSh: \TSP \to \TSQ$ be ws-closed, then the image $\TSh(\TSD)$ of closed set $\TSD$ in $(\TSP, \tau)$ is $\tau_{\ws}$–closed in $(\TSQ, \sigma)$.
+\end{coro}
+
+\begin{proof}
+Take up closed set $\clrD \in (\TSP, \tau)$. Since $\TSh$ is ws-closed, wscl $(\TSh (\clrD)) \subseteq \TSh (\cl (\clrD)) \to$ (i). Also $\cl (\clrD) = \TSD$, as $\TSD$ is a closed set and so $\TSh (\cl(\clrD)) = \TSh(\clrD) \to$ (ii). From (i) and (ii), we have $\wscl (\TSh (\clrD)) \subseteq \TSh (\clrD)$. We know that $\TSh (\clrD) \subseteq \ws \cl (\TSh (\clrD))$ and so $\wscl (\TSh (\clrD)) =\TSh (\TSD)$. Therefore $\TSh (\clrD)$ is $\tau_{\ws}$-closed in $(\TSQ, \sigma)$.
+\end{proof}
+
+\begin{thm}\label{thm4.2.30}
+Take up $(\TSP, \tau)$ be any topological spaces and $\TSQ$ be a topological space where $\wscl (\clrD) = \alpha - \cl (\clrD) \forall \TSD$ of $\TSQ$, and $\TSh: \TSP \to \TSQ$ be a map, and then given statements are one and the same..
+\begin{enumerate}[(i)]
+\item $\TSh$ is ws–closed map.
+\item $\wscl (\TSh (\clrD)) \subseteq \TSh (\cl (\clrD)) \forall$ subset $\clrD$ of $(\TSP, \tau)$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii) obiuosly from Theorem \ref{thm4.2.29}.
+
+(ii) $\Rightarrow$ (i) Take up closed set $\clrD \in (\TSP, \tau)$. Then $\TSD=\cl (\clrD)$ and so $\TSh(\clrD) = \h(\cl (\clrD)) \supseteq \wscl (\TSh (\clrD))$ by hypothesis. We have $\TSh (\clrD) \subseteq \wscl (\TSh (\clrD))$, Therefore $\TSh (\clrD) = \wscl (\TSh (\clrD))$. Also $\TSh (\clrD) = \wscl (\TSh (\clrD)) = \alpha-\cl (\TSh (\clrD))$, by hypothesis. That is $\TSh (\clrD) = \alpha-\cl (\TSh (\clrD))$ and so $\TSh (\clrD)$ is $\alpha$-closed in $(\TSQ, \sigma)$. Thus $\TSh (\clrD)$ is ws–closed $\TSQ$ and therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.31}
+Map $\TSh : \TSP \to \TSQ$ be ws-closed iff $\forall$ subset $\TSS$ of $\TSQ$ and each open set $\TSM$ containing $\h^{-1}(\TSS) \subseteq \TSM$, there is a ws–open set $\TSV$ of $\TSQ \ni: S \subseteq \TSV$ and $h^{-1} (\TSV) \subseteq \TSM$.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSh$ is ws–closed. Assume $\TSS \subseteq \TSQ$ and $\TSM$ is an open set $\in \TSP$, $\ni : h^{-1} (\TSS) \subseteq \TSM$.  Now $\TSP − \TSM$ will be closed in $\TSP$. Seeing that $\TSh$ is ws-closed, $\TSh(\TSP − \TSM)$ is ws closed $\in\TSQ$. Then $\TSV = \TSQ – \TSh (\TSP − \TSM)$ will be ws–open set $\in\TSQ$. and it is known that $h^{-1} (\TSS) \subseteq \TSM$ implies $\TSS \subseteq \TSV$ and $h^{-1}(\TSV) =\TSP − h^{-1} (\TSh(\TSP − \TSM)) \subseteq \TSP − (\TSP − \TSM) = \TSM$. That is $h^{-1}(\TSV)\subseteq  \TSM$.
+
+Inversely,
+
+Pretend $\TSH$ is $\TSC(\TSP)$. Then $h^{-1}((\TSh (\TSH))^{\text{c}}) \subseteq \TSH^{\text{c}}$ and $\TSH^{\text{c}}$ i will be open set $\in\TSP$. From hypothesis, $\exists$ an ws–open set $\TSV \in \TSQ \ni: \TSh(\TSH)^{\text{c}} \subseteq \TSV$ and $h^{-1}(\TSV) \subseteq \TSH^{\text{c}}$ and so $\TSH \subseteq (h^{-1} (\TSV))^{\text{c}}$. Hence $\TSV^{\text{c}} \subseteq \TSh(\TSH) \subseteq \TSh(((h^{-1} (\TSV))^{\text{c}} \subseteq \TSV^{\text{c}}$ which implies $\TSh(\TSH) = \TSV^{\text{c}}$. Seeing that $\TSV^{\text{c}}$ is ws–closed, $\TSh (\TSH)$ is ws–closed. Thus $\TSh (\TSH)$ is ws–closed $\in \TSQ$ and therefore $\TSh$ is ws–closed map.
+\end{proof}
+
+\begin{rem}\label{rem4.2.32}
+As usual, The composition of two ws–closed maps need not be ws–closed map and it is proved from the example given below.
+\end{rem}
+
+\begin{exm}\label{exam4.2.33}
+Take up $\TSP = \TSQ = \TSR = \{1,2,3\}$, $\tau=\{\TSP, \phi, \{1\}, \{2, 3\}\}$ be a topology on $\TSP$, $\sigma = \{\TSQ, \phi, \{1\},\{2\},\{1, 2\}\}$ be a topology on $\TSQ$ and $\eta = \{\TSR, \phi, \{1\}, \{2\}, \{1, 2\}, \{1, 3\}\}$ be a topology on $\TSR$. Define $\TSh: \TSP \to \TSQ$ defined by $\TSh(1)=1$, $\TSh(2)=2$, $\TSh(3)=3$ and $\TSg: \TSQ\to (\TSR, \eta)$ are the identity maps. Then $\TSh$ and $\TSg$ are ws–closed maps, but their composition $\TSg\circ \TSh : (\TSP, \tau) \to (\TSR, \ets)$ will not be ws–closed map, because $\TSH = \{1\}$ is closed in $(\TSP, \tau)$, but $\TSg \circ \TSh (\TSH) =\TSg \circ \TSh (\{1\}) = \TSg(\TSh(\{1\})) = \TSg(\{1\}) = \{1\}$ is not ws–closed in $(\TSR, \eta)$.
+\end{exm}
+
+\begin{thm}\label{thm4.2.34}
+If $\TSh: \TSP \to \TSQ$ is closed map and $\TSg: \TSQ\to (\TSR, \eta)$ is ws–closed map, then the composition $\TSg \circ \TSh: (\TSP, \tau) \to (\TSR, \eta)$ is ws–closed map.
+\end{thm}
+
+\begin{proof}
+Take up closed set $\TSF \in(\TSP, \tau)$. Seeing that $\TSh$ is closed map, $\TSh (\TSF)$ will be closed in $(\TSQ, \sigma)$. Also $\TSg$ is ws–closed map, $\TSg (\TSh(\TSF))$ will be ws–closed in $(\TSR, \eta)$. That is $\TS \circ \TSh (\TSF) = \TSg (\TSh (\TSF))$ is ws–closed and henceforth $\TSg \circ \TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.35}
+If $\TSh: \TSP \to \TSQ$ and $\TSg: \TSQ\to (\TSR, \eta)$ is ws–closed maps and $\TSQ$ be a $\TST$ ws-space then $\TSg \circ \TSh: (\TSP, \tau) \to (\TSR, \eta)$ is ws–closed map.
+\end{thm}
+
+\begin{proof}
+Take up closed set $\TSD \in (\TSP, \tau)$. Seeing that $\TSh$ is ws–closed, $\TSh (\TSD)$ is ws–closed in $\TSQ$. From by hypothesis, $\TSh (\clrD)$ is closed. Also $\TSg$ is ws–closed, $\TSg (\TSh (\clrD))$ will be ws–closed in $\TSR$ and $\TSg(\TSh(\TSD)) = \TSg \circ \TSh(\clrD)$. Henceforth $\TSg \circ \TSh$ is ws–closed map.
+\end{proof}
+
+\begin{thm}\label{thm4.2.36}
+If $\TSh: \TSP \to \TSQ$ is $\TSg$-closed, $\TSg: \TSQ \to \TSR$, $\eta$ be ws–closed and $\TSQ$ is T1/2-space then their composition $\TSg \circ \TSh: \TSP \to \TSR$ is ws–closed map.
+\end{thm}
+
+\begin{proof}
+Take up closed set $\clrD \in (\TSP, \tau)$. Seeing that $\TSh$ is $\TSg$-closed, $\TSh (\clrD)$ will be $\TSg$-closed in $(\TSQ, \sigma)$. Seeing that $\TSQ$ is T1/2-space, $\TSh(\clrD)$ is closed $\in (\TSQ, \sigma)$. Since $\TSg$ is ws–closed, $\TSg (\TSh(\clrD))$ is ws–closed $\in \TSR$ and $\TSg(\TSh(\TSD)) = \TSg \circ \TSh(\clrD)$. Henceforth $\TSg \circ \TSh$ is ws–closed map.
+\end{proof}
+
+\begin{dfn}\label{defi4.2.37}
+A map $\TSh: \TSP \to \TSQ$ is called a ws–open map if the image $\TSh (\clrD)$ is ws–open in $\TSQ\forall$ open set $\clrD$ in $(\TSP, \tau)$. From the definitions we obtain these following results.
+\end{dfn}
+
+
+Theorem 4.2.38:
+i)
+Each open map is ws–open but inverse is untrue.
+ii) Each semi-open map is ws–open but inverse is untrue.
+iii) Each \alpha -open map is ws–open but inverse is untrue.
+iv) Each g#-open map is ws–open but inverse is untrue.
+v) Each *g \alpha -open map is ws–open but inverse is untrue.
+vi) Each gξ*-open map is ws–open but inverse is untrue.
+vii) Each \alphagp-open map is ws–open but inverse is untrue.
+viii) Each g̈ -open map is ws–open but inverse is untrue.
+ix) Each rb-regular open map is ws–open but inverse is untrue
+x)
+Each g#s open map is ws–open but inverse is untrue.
+xi) Each ws–open map is gspr-open but inverse is untrue..
+xii) Each ws–open map is gsp-open but inverse is untrue..
+xiii) Each ws–open map is rgb-open but inverse is untrue..
+Theorem 4.2.39: For each bijection map $\TSh: \TSP \to \TSQ$ following results are one and the same.:
+1) \TSh −1 : $\TSQ$ \to P is ws–continuous.
+2) \TSh is ws–open map
+603) \TSh is ws–closed map.
+Proof:
+(1) $\Rightarrow$ (2) Take up a open set M ∈ $\TSP$. By hypothesis (h −1 ) −1 (M) = \TSh (M) is ws–open ∈ Qand
+so \TSh is ws–open.
+(2) $\Rightarrow$ (3) Take up closed set H∈ $\TSP$. Then \TSh c is open set ∈ $\TSP$. By hypothesis, \TSh (H c ) is ws–
+open ∈ $\TSQ$. Also \TSh (H c ) = \TSh (H) c is ws–open ∈ $\TSQ$ and therefore h(H) is ws– closed in $\TSQ$. Hence
+h is ws–closed.
+(3) $\Rightarrow$ (4) Take up closed set \TSh ∈ $\TSP$. By hypothesis, h(H) is ws–closed ∈ $\TSQ$. But \TSh (H) =
+(h −1 ) −1 (H) and henceforth \TSh −1 is continuous.
+Theorem 4.2.40: A Map h: P\to $\TSQ$ is ws–open, then \TSh (int (D)) \subseteq ws–int (h(D)) for \forall subset
+D ∈ $\TSP$.
+Proof: Take up h: P\to $\TSQ$ be an open map and D is any subset ∈ $\TSP$. Hence int(D) is open ∈ P
+and so h(int(D)) is ws–open ∈ $\TSQ$. We have h(int(D)) \subseteq h(D). Henceforth h(int (D)) \subseteq ws–int
+(h(D)).
+Theorem 4.2.41: A map h: P\to $\TSQ$ is ws–open, then for each neighbourhood $\TSM$ of x ∈ P ∃ a
+ws– neighbourhood W and h(x) ∈ Q, ∋:W \subseteq h(M).
+Proof. Take up h: P\to $\TSQ$ is an ws–open map. Assume xP and $\TSM$ be an arbitrary
+neighbourhood of x ∈ $\TSP$. Then ∃ an open set G ∈ $\TSP$, ∋: x  G \subseteq M. Also h(x) h (G) \subseteq \TSh (M)
+and \TSh (G) is ws–open set ∈ Q, as \TSh is an ws–open map. And also by the result \TSh (G) is ws–
+neighbourhood of each of its points. Taking \TSh (G) = W, W is an ws–neighbourhood of h(x) in
+Q ∋: W \subseteq \TSh (M).
+\begin{dfn}\label{defi4.2.42: A map h: P\to $\TSQ$ is termed as ws*- closed map if the image h(D) is ws–
+closed ∈ $\TSQ$ for each ws–closed set D ∈ $(\TSP, \tau)$.
+Theorem 4.2.43: Each ws*-closed map is ws–closed map but inverse is untrue..
+61Proof. Proof is obtained from the previous results, definations and evidence that each closed
+set is ws–closed.
+Example 4.2.44: Take up P = $\TSQ$ = \{1, 2, 3\}, \tau = \{P, \phi, \{1\}, \{2\}, \{1, 2\}\} be a topology on P
+and $\sigma = \{\TSQ, \phi, \{1\}, \{2\},\{1, 2\},\{1,3\}\} be a topology on $\TSQ$ and $\TSh: \TSP \to \TSQ$ be the identity map.
+Thus \TSh is ws–closed map but not ws*-closed map. Since \{1\} is ws–closed in P but its image
+under \TSh is \{1\},is not ws–closed in $\TSQ$.
+Theorem 4.2.45: If h: P \to Qand g: Q\to (R, η) are ws*-closed maps, then their composition
+g \circ h: $(\TSP, \tau)$ \to (R, η) is also ws∗-closed.
+Proof. Take up a ws- closed set \TSh ∈ $\TSP$. Seeing that \TSh is ws*– closed map, \TSh (H) is ws–closed
+∈ $\TSQ$. Seeing that ws∗– closed map, g (h (H)) is ws–closed ∈ (R, η). Henceforth g \circ \TSh is ws*–
+closed map. Analogous to ws*-closed map, we define another new class of maps called ws*–
+open maps which are stronger than ws–open maps.
+\begin{dfn}\label{defi4.2.46: A map $\TSh: \TSP \to \TSQ$ is termed as ws∗– open map if the image \TSh (D) is ws–
+open set in $\TSQ$ for each ws–open set D in $\TSP$.
+Remark 4.2.47: Seeing that each open set is a ws–open set, we have each ws∗–open map is
+ws–open map. As usual the inverse is untrue as seen from example given below.
+Example 4.2.48: Take up P = $\TSQ$ = \{1, 2, 3\}, \tau = \{P, \phi, \{1\}, \{2\}, \{1, 2\}\} and \sigma =\{\TSQ, \phi, \{1\},
+\{2\}, \{1, 2\},\{1,3\}\} and $\TSh: \TSP \to \TSQ$ be the identity map. Then \TSh is ws –open map but not ws*-
+open map. Seeing that \{2, 3\} is ws–open set ∈ $\TSP$, but its image under \TSh is \{2, 3\} is not ws–
+open in $\TSQ$.
+Theorem 4.2.49: If $\TSh: \TSP \to \TSQ$ and g: $\TSQ$ \to R, are ws∗-open maps, then their composition g ◦
+h: P \to R, is also ws∗-open.
+Proof. Proof is same as Theorem 4.2.45.
+Theorem 4.2.50: For each bijection map $\TSh: \TSP \to \TSQ$ then given results are one and the same:
+i) \TSh −1 : Q\to $(\TSP, \tau)$ is ws irresolute.
+ii) \TSh is ws∗–open map
+iii) \TSh is ws∗–closed map.
+62Proof: Proof is similar to Theorem 4.2.43.
+
