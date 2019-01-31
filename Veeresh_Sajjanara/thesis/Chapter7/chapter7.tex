@@ -1,0 +1,506 @@
+\chapter{ws-Closed Sets and ws-Continuous Maps in Bitopological Spaces}
+\graphicspath{{Chapter7/Chapter7Figs/EPS/}{Chapter7/Chapter7Figs/}}
+
+\section{Introduction}\label{sec7.1}
+
+The triple $(\TSP, \tau_1 , \tau_2)$ where $\tau_1$ and $\tau_2$ are topologies and P is a set is called a bitopological space. In 1963 Kelly [45] started the investigation of such spaces. He generalized the topological concepts to bitopological setting and published a large number of papers. After Kelly’s work on bitopological spaces, various authors, like Arya and Nour [7], Di Maio and Noiri [24], Fukutake [34], Nagaveni [65], Maki, Sundaram and Balachandran [55], Sheik John [85], Sampath Kumar[82], Patty [77], Arockiarani [3], Gnanambal [40], Reilly [8], Rajamani and Viswanthan [80], and Popa [78] have made stremndous effort on all concepts of topology to bitopological spaces instead of topological spaces.
+
+In chapter II, we have introduced and analysed the concept of ws-closed sets, ws-open sets and ws-closure operator in topological spaces. In chapter III, we have introduced and investigated some properties of ws-continuous maps and ws-irresolute maps in topological spaces.
+
+In section 2 of this chapter, $(\TSi,\TSj)$-ws-closed sets in bitopological space have been introduced and studied. In section 3 of this chapter, we have introduced $(\TSi, \TSj)$-ws-open sets in bitopological space and study some of their related properties. In section 4 of this chapter, we shall use the $(\TSi, \TSj)$-ws-closed subsets of bitopological space $(\TSP, \tau_1 , \tau_2)$ to define a new closure operator ``$(\TSi, \TSj)$-ws-cl'', and thus new topology $\tau_{\ws}(\TSi, \TSj)$ on the space and shall examine some of the properties of this new topology.
+
+In section 5 of this chapter, a new kind of maps called $\clrD_{\ws} (\TSi, \TSj)-\sigma_{\TSk}$-continuous maps in bitopological spaces are introduced and investigated. During this process, some of their properties are obtained. Also, we have introduced the concept of ws-bi-continuity, ws-s-bi-continuity and examine some related properties.
+
+Throughout this chapter $(\TSP, \tau_1 , \tau_2)$, $(\TSY, \sigma_{1} , \sigma_{2} )$ and $(\TSZ, \eta_{1}, \eta_{2})$ denote nonempty bitopological spaces on which no separation axioms are assumed, unless otherwise mentioned and fixed integers $\TSi, \TSj, \TSk, \TSe, \TSm, \TSn\in \{1, 2\}$.
+
+\section{$(\tau_{\TSi}, \tau_{\TSj})$ ws-closed sets and their basic properties}
+
+Here we work on concept of $(\tau_{\TSi}, \tau_{\TSj})$-ws-closed sets which are developed on a bitopological space in analogy with ws-closed sets in topological spaces. From now on, $\tau$-$\cl(\clrD)$ denotes the closure of $\clrD$ relative to a topology $\tau$.
+
+\begin{dfn}\label{defi7.2.1}
+Take up $\TSi$, $\tSj \in \{1, 2\}$ be fixed integers. In a bitopological space $(\TSP, \tau_1 , \tau_2)$, a subset $\clrD \subset \TSP$ is said to be $(\tau_{\TSi} , \tau_{\TSj})$-ws-closed (briefly, $(\TSi, \TSj)$-ws-closed) set if $\tau_{\TSj}$-$\scl(\clrD) \subset \TSG$ and $G \in \TSw\TSO(\TSP, \tau_{\TSi})$.
+\end{dfn}
+
+We denote the family of all $(\TSi, \TSj)$ ws-closed sets in a bitopological space $(\TSP, \tau_1 , \tau_2)$ by $\clrD_{\ws}(\tau_{\TSi} , \tau_{\TSj})$ or $\clrD_{\ws}(\TSi, \TSj)$.
+
+\begin{rem}\label{rem7.2.2}
+By setting $\tau_1 = \tau_2$ in Definition \ref{defi7.2.1}, an $(\TSi, \TSj)$-ws-closed set reduces to a ws-closed set in $\TSP$.
+\end{rem}
+
+Firstly we express that the class of $(\TSi, \TSj)$-ws-closed sets properly lies between the class of $(\TSi, \TSj)$-g\#-closed sets and the class of $(\TSi, \TSj)$-gspr-closed sets.
+
+\begin{thm}\label{thm7.2.3}
+If $\TSM$ is $(\TSi, \TSj)$-$\TSg\#$-closed subset of $(\TSP, \tau_1 , \tau_2)$, then $\TSM$ is $(\TSi, \TSj)$-$\TSw$-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2)$. Assume $\TSG\in \TSW\TSO(\TSP, \tau_{\TSi})$ be $\ni: \TSA\subset \TSG$. Seeing that $\TSW\TSO(\TSP, \tau_{\TSi}) \subset \TSS\TSO(\TSP, \tau_{\TSi})$, hence we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi})$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\TSM) \subset \TSG$. Henceforth $\TSM$ is $(\TSi, \TSj)$-g\#-closed.
+
+We use example \ref{exm7.2.4} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.4}
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\}, \{1,2\}\}$. Then the subsets $\{1\}$ and $\{2\}$ are $(1, 2)$-ws-closed sets, but not $(1, 2)$-g\#-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.5}
+If $\TSA$ is $(\TSi, \TSj)$-$*\TSg\alpha$-closed subset of $(\TSX, \tau_1 , \tau_2)$, then $\TSA$ is $(\TSi, \TSj)$-$\TSw$-closed.
+\end{thm}
+
+\begin{proof}
+Let $\TSA$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSX, \tau_1 , \tau_2)$. Let $\TSG\in\TSW\TSO(\TSX, \tau_{\TSi})$ be such that $\TSA \subset \TSG$. Since $\TSW\TSO(\TSX, \tau_{\TSi}) \subset \TSS\TSO(\TSX, \tau_{\TSi})$, we have $\TSG\in\TSS\TSO(\TSX, \tau_{\TSi})$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\TSA) \subset \TSG$. Henceforth $\TSA$ is $(\TSi, \TSj)$-g\#-closed.
+
+We use example \ref{exm7.2.6} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.6}
+Let $\TSX= \{1, 2, 3\}$, $\tau_1 =\{\TSX, \phi, \{1\}, \{2,3\}\}$ and $\tau_2 =\{\TSX, \phi, \{1\}, \{2\}, \{1,2\}\}$. Then the subset $\{2\}$ is $(1, 2)$-ws-closed sets, but not $(1, 2)$-g\#-closed sets in the bitopological space $(\TSX, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.7}
+If $\TSM$ is a $(\TSi, \TSj)$-$\TSg\xi*$-closed subset of $(\TSP, \tau_1, \tau_2)$, then $\TSM$ is $(\TSi, \TSj)$-ws-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$. Assume $\TSG\in \TSW\TSO(\TSP, \tau_{\TSi})$ be $\ni: \TSM \subset
+\TSG$. Seeing that $\TSW\TSO(\TSP, \tau_{\TSi}) \subset \TSS\TSO(\TSP, \tau_{\TSi})$, hence we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi})$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\TSM) \subset \TSG$. Henceforth $\TSM$ is a $(\TSi, \TSj)$-$\TSg\xi*$-closed.
+
+We use example \ref{exm7.2.8} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.8} 
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$. Then the subset $\{2\}$ is $(1, 2)$-ws-closed sets, but not $(1, 2)$-$\TSg\xi*$-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.9}
+If $\TSM$ is a $(\TSi, \TSj)$-$\alpha gp$-closed subset of $(\TSP, \tau_1 , \tau_2)$, then $\TSM$ is $(\TSi, \TSj)$-ws-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2)$. Assume $\TSG\in\TSW\TSO(\TSP, \tau_{\TSi})$ be $\ni: \TSM \subset \TSG$. Seeing that $\TSW\TSO(\TSP, \tau_{\TSi}) \subset \TSS\TSO(\TSP, \tau_{\TSi})$, hence we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi})$. Then by hypothesis, $\tau_{\TSj}$-$
+\scl(\TSM) \subset \TSG$. Henceforth $\TSM$ is a $(\TSi, \TSj)$-$\alpha gp$-closed.
+
+We use example \ref{exm7.2.10} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.10}
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$. Then the subset $\{2\}$ is $(1, 2)$-ws-closed sets, but not $(1, 2)$-$\alpha gp$-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.11}
+If $\TSM$ is a $(\TSi, \TSj)$-$\ddot{g}$-closed subset of $(\TSP, \tau_1 , \tau_2)$, then $\TSM$ is $(\TSi, \TSj)$-ws-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSA$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$. Assume $\TSG\in\TSW\TSO(\TSP, \tau_{\TSi} )$ be $\ni: \TSM \subset \TSG$. Seeing that $\TSW\TSO(\TSP, \tau_{\TSi} ) \subset \TSS\TSO(\TSP, \tau_{\TSi} )$, hence we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi} )$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\clrD) \subset \TSG$. Henceforth $\clrD$ is a $(\TSi, \TSj)$-$\ddot{g}$-closed.
+
+We use example \ref{exm7.2.12} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.12}
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2, 3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$. Then the subset $\{2\}$ is $(1, 2)$-ws-closed sets, but not $(1, 2)$-$\ddot{g}$-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.13}
+If $\clrD$ is a $(\TSi, \TSj)$-rb -closed subset of $(\TSP, \tau_1 , \tau_2 )$, then $\clrD$ is $(\TSi, \TSj)$-ws-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2)$. Assume $\TSG\in\TSW\TSO(\TSP, \tau_{\TSi})$ be $\ni: \TSM \subset \TSG$. Seeing that $\TSW\TSO(\TSP, \tau_{\TSi} ) \subset \TSS\TSO(\TSP, \tau_{\TSi})$, hence we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi})$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\TSM) \subset \TSG$. Henceforth $\TSM$ is a $(\TSi, \TSj)$-rb-closed.
+
+We use example \ref{exm7.2.14} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.14}
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2, 3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$. Then the subset $\{2\}$ is $(1, 2)$-ws-closed sets, but not $(1, 2)$-rb-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.15}
+If $\TSM$ is a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$, then $\TSM$ is $(\TSi, \TSj)$-gspr-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$. Assume $\TSG\in\TSW\TSO(\TSP, \tau_{\TSi} )$ be $\ni: \TSM \subset \TSG$. Since $\TSW\TSO(\TSP, \tau_{\TSi} ) \subset \TSS\TSO(\TSP, \tau_{\TSi} )$, hence we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi} )$. Then by hypothesis, $\tau_{\TSj}$-$\Scl(\TSM) \subset \TSG$. Also $\tau_{\TSj}$-$\spcl(\TSM) \subset \tau_{\TSj}$-$\Scl(\TSM)$ which implies $\tau_{\TSj}$-$\spcl(\TSM)\subset \TSG$. Therefore $\TSM$ is $(\TSi, \TSj)$-$\gspr$-closed.
+
+We use example \ref{exm7.2.16} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.16}
+Take up $\TSP=\{1, 2, 3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{ 2,3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\},\{1,2\}\}$. Then the subsets $\{1,2\}$ are $(1, 2)$-gspr-closed sets but not $(1, 2)$-ws-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.17}
+If $\TSM$ is a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$, then $\TSM$ is $(\TSi, \TSj)$-gsp-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2)$. Let $\TSG\in\TSW\TSO(\TSP, \tau_{\TSi} )$ be $\ni: \TSM \subset \TSG$. Since $\TSW\TSO(\TSP, \tau_{\TSi}) \subset \TSS\TSO(\TSP, \tau_{\TSi})$, we have $\TSG\in\TSS\TSO(\TSP, \tau_{\TSi})$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\TSA) \subset \TSG$. Also $\tau_{\TSj}$-$\spcl(\TSM) \subset \tau_{\TSj}$-$\scl(\TSM)$ which implies $\tau_{\TSj}$-$\spcl(\TSM) \subset \TSG$. Henceforth $\TSM$ is $(\TSi, \TSj)$-gsp-closed.
+
+We use example \ref{exm7.2.18} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.18}
+Take up $\TSP=\{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2, 3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\},\{1,2\}\}$. Then the subsets $\{1,2\}$ are $(1, 2)$-gsp-closed sets but not $(1, 2)$-ws-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.19}
+If $\TSM$ is a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$, then $\TSM$ is $(\TSi, \TSj)$-rgb-closed.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM$ be a $(\TSi, \TSj)$-ws-closed subset of $(\TSP, \tau_1 , \tau_2 )$. Assume $\TSG\in\TSW\TSO(\TSP, \tau_{\TSi} )$ be $\ni: \TSM \subset\TSG$. Seeing that $\TSW\TSO(\TSP, \tau_{\TSi} ) \subset \TSS\TSO(\TSP, \tau_{\TSi} )$, hence we have $\TSG\inSO(\TSP, \tau_{\TSi} )$. Then by hypothesis, $\tau_{\TSj}$-$\scl(\TSM) \subset \TSG$. Also $\tau_{\TSj}$-$\bcl(\TSM) \subset \tau_{\TSj}$-$\scl(\TSM)$ which implies $\tau_{\TSj}$-$\bcl(\TSM) \subset \TSG$. Therefore $\TSM$ is $(\TSi, \TSj)$-rgb-closed.
+
+We use example \ref{exm7.2.20} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exm7.2.20}
+Take up $\TSP=\{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{ 2,3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\}$. Then the subsets $\{1, 2\}$ are $(1, 2)$-rgb-closed sets but not $(1, 2)$-ws-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{rem}\label{rem7.2.21}
+$\tau_{\TSj}$-rw-closed($\TSR$*-closed)sets, and $(\TSi,\TSj)$-ws-closed sets are independent as seen from the following examples.
+\end{rem}
+
+\begin{exm}\label{exm7.2.22}
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1, 2\}\}$. Then the subset $\{2\}$ is $(1, 2)$-ws-closed sets, but not $\tau_2$-rw-closed($\TSR$*-closed)sets set in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{exm}\label{exm7.2.23}
+Take up $\TSP=\{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\},\{1, 3\}\}$. Then the subsets $\{1,2\}$ are $\tau_2$-rw-closed($\TSR$*-closed)sets but not $(1, 2)$-ws-closed sets in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{rem}\label{rem7.2.24}
+From the above discussions and known facts we have the following implications:
+\begin{figure}[H]
+\cenering
+\includegraphics{1.eps}
+\end{figure}
+\end{rem}
+
+\begin{thm}\label{thm7.2.24}
+If $\TSM$, $\TSN\in \clrD_{\ws} (\TSi, \TSj)$, then $\TSM\cap \TSN\in \clrD_{\rw} (\TSi, \TSj)$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSG\in \TSW\TSO(\TSP, \tau_{\TSi})$ be $\ni: \TSM\cap \TSN \subset \TSG$. Then $\TSM \subset \TSG$ and $\TSN \subset \TSG$. Seeing that $\TSM$, $\TSN\in \clrD_{\ws} (\TSi, \TSj)$, we have $\tau_{\TSj}$-$\scl(\TSM) \subset \TSG$ and $\tau_{\TSj}$-$\scl(\TSN) \subset \TSG$. That is $\tau_{\TSj}$-$\scl(\TSM) \cup \tau_{\TSj}$-$\scl(\TSN) \subset \TSG$. Also $\tau_{\TSj}$-$\scl(\TSM) \cap  \tau_{\TSj}$-$\scl(\tSN)= \tau_{\TSj}$-$\cl(\TSM\cap \TSN)$ and so $\tau_{\TSj}$-$\scl(\TSM\cap \TSN) \subset \TSG$. Therefore $\TSM\cap \TSN\in \clrD_{\ws} (\TSi, \TSj)$.
+\end{proof}
+
+\begin{rem}\label{rem7.2.25}
+The union of two $(\TSi, \TSj)$-ws-closed sets is generally not a $(\TSi, \TSj)$-ws-closed set as seen from example given below.
+\end{rem}
+
+\begin{exm}\label{exm7. 2.26}
+Take up $\TSP=\{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\},\{2, 3\}\}$ and $\tau_2 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$. Then subsets $\{1\}$ and $\{2\}$ are $(1, 2)$-ws-closed sets, but $\{1\}\cup \{2\}=\{1,2\}$ is not a $(1, 2)$-ws-closed set in the bitopological space $(\TSP, \tau_1 , \tau_2 )$.
+\end{exm}
+
+\begin{rem}\label{rem7.2.27} 
+As usual, The family $\clrD_{\ws} (1, 2)$ is unequal to the family $\clrD_{\ws} (2, 1)$ as observed in the next example.
+\end{rem}
+
+\begin{exm}\label{exm7.2.28}
+Take up $\TSP= \{1,2,3\}$, $\tau_1 =\{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$ and $\tau_2 =\{\TSP, \phi, \{3\}, \{2, 3\}\}$. Then $\clrD_{\ws}(1, 2)=\{\TSP, \phi, \{1\}, \{3\},\{2,3\},\{1,3\}\}$ and $\clrD_{\ws} (2, 1)=\{\TSP, \phi, \{1\}, \{2\}, \{3\},\{2, 3\}, \{1,3\}\}$. Therefore $\clrD_{\ws} (1, 2)\neq \clrD_{\ws} (2, 1)$.
+\end{exm}
+
+\begin{thm}\label{thm7.2.29}
+If $\tau_1 \subset \tau_2$ and $\SWO(\TSP, \tau_1) \subset \WO(\TSP, \tau_2 )$ in $(\TSP, \tau_1 , \tau_2 )$, then $\clrD_{\ws} (\tau_1 , \tau_2 ) \supset  \clrD_{\ws} (\tau_2 ,\tau_1 )$.
+\end{thm}
+
+\begin{proof}
+Take up $\TSM\in \clrD_{\ws} (\tau_2 , \tau_1 )$. That is $\TSM$ is a $(2, 1)$-ws-closed set. To prove that $\TSM\in \clrD_{\ws} (\tau_1 ,\tau_2 )$. Let $\TSG\in \WO(\TSP, \tau_1 )$ be $\ni: \TSM \subset \TSG$. Since $\WO(\TSP, \tau_1 ) \subset \WO(\TSP, \tau_2 )$, we have $\TSG\in \WO(\TSP, \tau_2 )$. As $\TSM$ is a $(2, 1)$-ws-closed set, we have $\tau_1$-$\scl(\TSM) \subset \TSG$. Since $\tau_1 \subset \tau_2$, we have $\tau_2$-$\scl(\TSM) \subset \tau_1$-$\scl(\TSM)$ and it follows that $\tau_2$-$\scl(\TSM) \subset \TSG$. Hence $\TSM$ is $(1, 2)$-ws-closed. That is $\TSM \in \clrD_{\ws} (\tau_1 , \tau_2 )$. Henceforth $\clrD_{\ws} (\tau_1 , \tau_2 ) \supset  \clrD_{\ws} (\tau_2 , \tau_1 )$.
+\end{proof}
+
+\begin{thm}\label{thm7.2.30}
+Take up $\TSi$, $\TSj$ be fixed integers of $\{1, 2\}$. For each $\TSP$ of $(\TSP, \tau_1 , \tau_2 )$, $\{P\}$ is a $\TSw$-open in $(\TSP, \tau_{\TSi} )$ or $\{P\}^{\text{c}}$ is $(\TSi, \TSj)$-ws-closed.
+\end{thm}
+
+\begin{proof}
+Pretend $\{P\}$ is not w-open in $(\TSP, \tau_{\TSi} )$. Then $\{P\}^{\text{c}}$ is not w-open in $(\TSP, \tau_{\TSi} )$. Now w-open in $(\TSP, \tau_{\TSi} )$ containing $\{P\}^{\text{c}}$ is $\TSP$ alone. Also $\tau_{\TSj}$-$\scl(\{\TSP\}^{\text{c}}) \subset \TSP$. Hence $\{P\}^{\text{c}}$ is $(\TSi, \TSj)$-ws-closed.
+\end{proof}
+
+\begin{coro}\label{coro7.2.31}
+If $\TSM$ is $(\TSi, \TSj)$-ws-closed in $(\TSP, \tau_1 , \tau_2 )$, then $\TSM$ is $\tau_{\TSj}$-closed iff $\tau_{\TSj}$-$\scl(\TSM)-\TSM$ is a $\tau_{\TSi}$-$\TSw$-open set.
+\end{coro}
+
+\begin{proof}
+Pretend $\TSM$ is $\tau_{\TSj}$-closed. Thus $\tau_{\TSj}$-$\scl(\TSM) = \TSM$ and so $\tau_{\TSj}$-$\scl(\TSM)-\TSM=\phi$, is $\tau_{\TSi}$-regular semiopen set.
+
+Inversely, Pretend $\tau_{\TSj}$-$\scl(\TSM)-\TSM$ is a $\tau_{\TSi}$-$\TSw$-open. Since $\TSM$ is $(\TSi, \TSj)$-ws-closed, seeing that $\tau_{\TSj}$-$\scl(\TSM)-\TSM\not\in$ non-empty $\tau_{\TSi}$-w-open set. Henceforth $\tau_{\TSj}$-$\scl(\TSM)-\TSM=\phi$. That is $\tau_{\TSj}$-$\scl(\TSM)=\TSM$ and hence $\TSM$ is $\tau_{\TSj}$-closed.
+\end{proof}
+
+\begin{thm}\label{thm7.2.32}
+In a bitopological space $(\TSP, \tau_1 , \tau_2 )$, $\WO(\TSP, \tau_{\TSi} ) \subset \{\TSF\subsetP: \TSF^{\text{c}} \in\tau_{\TSj}\}$ iff each subset of $(\TSP, \tau_1 , \tau_2 )$ is a $(\TSi, \TSj)$-ws-closed.
+\end{thm}
+
+\begin{proof}
+Pretend that $\WO(\TSP, \tau_{\TSi} ) \subset \{\TSF\subset \TSP: \TSF^{\text{c}} \in\tau_{\TSj} \}$. Let $\TSM$ be any subset of $\TSP$. Let $\TSG\in \WO(\TSP, \tau_{\TSi} )$ be $\ni: \TSM \subset \TSG$. Thus $\tau_{\TSj}$-$\scl(\TSG)=\TSG$. also $\tau_{\TSj}$-$\scl(\TSM) \subset \tau_{\TSj}$-$\scl(\TSG)=\TSG$. That is $\tau_{\TSj}$-$\scl(\TSM) \subset \TSG$. henceforth $\TSM$ is a $(\TSi, \TSj)$-ws-closed set.
+
+Inversely, Pretend that each subset of $(\TSP, \tau_1 , \tau_2 )$ is a $(\TSi, \TSj)$-ws-closed set. Let $\TSG\in \WO(\TSP,\tau_{\TSi} )$. Since $\TSG \subset \TSG$ and $\TSG$ is $(\TSi, \TSj)$-ws-closed, we have $\tau_{\TSj}$-$\scl(\TSG) \subset \TSG$. Thus $\tau_{\TSj}$-$\scl(\TSG) =\TSG$ and so $\TSG$ is $\tau_{\TSj}$-closed. That is $\TSG\in\{\TSF\subset \TSP: \TSF^{\text{c}} \in\tau_{\TSj} \}$. Henceforth $\WO(\TSP, \tau_{\TSi} ) \subset \{\TSF\subset \TSP: \TSF^{\text{c}} \in\tau_{\TSj} \}$. 
+\end{proof}
+
+%raghu, pdf page no. 91
+
+Theorem 7.2.33: Pretend \TSM be a (\TSi, \TSj)-ws-closed subset of a bitopological space (\TSP, \tau_1 , \tau_2 ). If
+M is \tau_{\TSi} -w-open, then \TSM is \tau_{\TSj} -closed.
+Proof: Take up \TSM be \tau_{\TSi} -w-open. Now M\subsetM. Then by hypothesis \tau_{\TSj} -scl(\TSM) \subset M. Therefore
+\tau_{\TSj} -scl(\TSM) = M. That is \TSM is \tau_{\TSj} -closed.
+Theorem 7.2.34: If \TSM is a (\TSi, \TSj)-ws-closed set and \tau_{\TSi} \subset WO(\TSP, \tau_{\TSi} ), then \tau_{\TSj} -scl(\{P\})  \TSM \neq \phi for
+each P \in \tau_{\TSj} -scl(\TSM).
+Proof: Take up \TSM be (\TSi, \TSj)-ws-closed and \tau_{\TSi} \subset WO(\TSP, \tau_{\TSi} ). Suppose \tau_{\TSi} -scl(\{P\})  \TSM = \phi for
+some P \in \tau_{\TSj} -scl(\TSM), then \TSM \subset (\tau_{\TSi} -scl(\{P\})) c . Now (\tau_{\TSi} -scl(\{P\})) c \in\tau_{\TSi} \subset WO(\TSP, \tau_{\TSi} ), by hypothesis.
+That is (\tau_{\TSi} -scl(\{P\})) c is
+\tau_{\TSi} -regular semiopen. Since \TSM is (\TSi, \TSj)-ws-closed, Hence we have \tau_{\TSj} -
+scl(\TSM) \subset (\tau_{\TSi} -scl(\{P\})) c . This shows that P  \tau_{\TSj} -scl(\TSM). This contradicts the assumption.
+Theorem 7.2.35: If \TSM is a (\TSi, \TSj)-ws-closed set and \TSM \subset N \subset \tau_{\TSj} -scl(\TSM), then N is (\TSi, \TSj)-ws-closed.
+Proof: Take up G be a \tau_{\TSi} -w-open set \ni: N \subset \TSG. As \TSM is a
+(\TSi, \TSj)-ws-closed set and \TSM \subset \TSG, we
+have \tau_{\TSj} -scl(\TSM) \subset \TSG. Now N \subset \tau_{\TSj} -scl(\TSM) which implies, \tau_{\TSj} -scl(N) \subset \tau_{\TSj} -scl\{\tau_{\TSj} -scl(\TSM)\}= \tau_{\TSj} -scl(\TSM)
+\subset \TSG. Thus \tau_{\TSj} -scl(N) \subset \TSG. Therefore N is a (\TSi, \TSj)-ws-closed set.
+Corollary 7.2.36: Let K and L be subsets of space (\TSP, \tau_1 , \tau_2 ). If L is (\TSi, \TSj)-ws-open and K \supset  \tau_{\TSj} -
+int(L), then KL is (\TSi, \TSj)-ws-open.
+Proof: Take up L be (\TSi, \TSj)-ws-open and K \supset \tau_{\TSj} -int(L).That is \tau_{\TSj} -int(L)\subsetK. Then \tau_{\TSj} -int(L)\subsetKL.
+Also \tau_{\TSj} -int(L) \subset KL\subsetL and L is (\TSi, \TSj)-ws-open. Seeing that KL is also (\TSi, \TSj)-ws-open.
+Theorem 7.2.37: Each singleton point in space (\TSP, \tau_1 , \tau_2 ) is neither (\TSi, \TSj)-ws-open nor \tau_{\TSi} -w-open.
+91Proof: Take up (\TSP, \tau_1 , \tau_2 ) be a bitopological space. Assume x\inP. To prove \{x\} is either (\TSi, \TSj)-
+ws-open or \tau_{\TSi} -w-open. That is to prove P\{x\}, is either (\TSi, \TSj)-ws-closed or \tau_{\TSi} -w-open, which
+follows from previous results.
+7.3 (\tau_{\TSi} , \tau_{\TSj} )-ws-open sets and their basic properties.
+In this section, we introduce (\TSi, \TSj)-ws-open sets in bitopological spaces and examine
+some of their properties.
+7.3.1 Definition: Let i, j\in\{1, 2\} be fixed integers. In a bitopological space (\TSP, \tau_1 , \tau_2 ), a subset
+D \subset P is said to be (\tau_{\TSi} , \tau_{\TSj} )-ws-open (briefly, (\TSi, \TSj)-ws-open) if \clrD c is (\TSi, \TSj)-ws-closed.
+7.3.2 Theorem: In a bitopological space (\TSP, \tau_1 , \tau_2 ), we have the following
+1) Each (\TSi, \TSj)-g#-open set is (\TSi, \TSj)-ws-open but inverse is untrue.
+2) Each (\TSi, \TSj)- g\xi*-open set is (\TSi, \TSj)-ws-open but inverse is untrue.
+3) Each (\TSi, \TSj)-\alphagp-open set is (\TSi, \TSj)-ws-open but inverse is untrue.
+4) Each (\TSi, \TSj)-\ddot{g} -open set is (\TSi, \TSj)-rw-open but inverse is untrue.
+5) Each (\TSi, \TSj)-rb-open set is (\TSi, \TSj)-rw-open but inverse is untrue.
+6) Each (\TSi, \TSj)-ws-open set is (\TSi, \TSj)-gspr-open but inverse is untrue.
+7) Each (\TSi, \TSj)-ws-open set is (\TSi, \TSj)-gsp-open but inverse is untrue.
+8) Each (\TSi, \TSj)-ws-open set is (\TSi, \TSj)-rgb-open but inverse is untrue.
+Proof: Proof is obtained from the Theorems 7.2.3, to 7.2.18.
+7.3.3 Theorem: If \clrD and E are (\TSi, \TSj)-ws-open sets, then D∪E is (\TSi, \TSj)- ws-open.
+Proof: The result is obtained from theorem 7.2.25.
+7.3.4 Remark: The intersection of two (\TSi, \TSj)-ws-open sets is generally not an (\TSi, \TSj)-ws-open set
+as seen from example 7.3.5.
+7.3.5 Example Take \TSP=\{ 1, 2, 3\}, \tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\} and
+\tau_2 =\{ P, \phi, \{1\}, \{2\}, \{1, 2\}\}.
+Then the subsets \{1, 3\} and \{1, 3\} are (1, 2)-ws-open sets, but \{1, 3\}\cap \{2,3\}=\{3\} is not (1, 2)-
+ws-open set in the bitopological space (\TSP, \tau_1 , \tau_2 ).
+7.3.6 Theorem: A subset \clrD of (\TSP, \tau_1 , \tau_2 ) is (\TSi, \TSj)-ws-open iff F\subset \tau_{\TSj} -int(\clrD), whenever F is \tau_{\TSi} -
+w-open and F\subset D.
+92Proof: Pretend that F\subset \tau_{\TSi} -int(\clrD) whenever F\subset \clrD and F is \tau_{\TSi} -w-open. To show that \clrD is (\TSi, \TSj)-
+ws-open. Assume that G be \tau_{\TSi} -w-open and \clrD c \subset \TSG. Thun G C \subset \clrD and G C is \tau_{\TSi} -w-open, by Lemma
+1.2.5. By hypothesis, G C \subset \tau_{\TSj} -int(\clrD). That is (\tau_{\TSj} -int(\clrD)) c \subset \TSG, since \tau_{\TSj} -scl(D c )=(\tau_{\TSj} -int(\clrD)) c . Thus
+D c is (\TSi, \TSj)-ws-closed. That is \clrD is (\TSi, \TSj)-ws-open.
+Inversly, Pretend that \clrD is (\TSi, \TSj)-ws-open, F\subsetD and F is \tau_{\TSi} -w-open. Then \clrD c \subset F c and F C
+is also \tau_{\TSi} -w-open by Lemma 1.2.5. Seeing that \clrD c is (\TSi, \TSj)-ws-closed, we have \tau_{\TSj} -scl(D c ) \subset F c
+and so F\subset \tau_{\TSj} -int(\clrD), since \tau_{\TSj} -scl(D c ) = (\tau_{\TSj} -int(\clrD)) c .
+7.3 (\tau_{\TSi} , \tau_{\TSj} )-ws-closure in bitopological spaces.
+W. Dunham [33] developed the concept of generalized closure operator C* and
+Fukutake [34] derived and examined the concept of pairwise generalized closure operator (\tau_{\TSi} ,
+\tau_{\TSj} )-cl* in a bitopological spaces. Analogous to that we introduce the pairwise ws-closure
+operator `` (\TSi, \TSj)-ws-cl '' in bitopological spaces and examine some of their related properties.
+
+Definition 7.3.1: Let (\TSP, \tau_1 , \tau_2 ) be a bitopological space and i, j\in\{1, 2\} be fixed integers. For
+each subset E of P, define (\tau_{\TSi} , \tau_{\TSj} )-ws-\cl(\TSE)= \{G: E \subset G\inD \ws (\TSi, \TSj)\} (briefly: (\TSi, \TSj)-ws-\cl(\TSE)).
+
+Theorem 7.3.2: If G and H be subsets of (\TSP, \tau_1 , \tau_2 ). Then
+(1) (\TSi, \TSj)-ws-cl(P)=P and (\TSi, \TSj)-ws-cl(\phi)=\phi.
+(2) G \subset (\TSi, \TSj)-ws-cl(\TSG).
+(3) If H is any (\TSi, \TSj)-ws-closed set containing \TSG, then (\TSi, \TSj)-ws-cl(\TSG)\subsetH.
+
+Proof: Obtained form the Definition 7.3.1.
+Theorem 7.3.3: Let G and H be subsets of (\TSP, \tau_1 , \tau_2 ) and i, j\in\{1, 2\} be fixed integers. If $\TSG \subset \TSH$, then (\TSi, \TSj)-ws-cl(\TSG) \subset (\TSi, \TSj)-ws-cl(\TSH).
+Proof: Take up G\subsetH. By Definition 7.3.1, (\TSi, \TSj)-ws-cl(\TSH)=\{\TSF:H\subsetF\inD \ws (\TSi, \TSj)\} If H\subsetF\inD \ws (i,
+j), since G\subsetH, G\subsetH\subsetF\inD \ws (\TSi, \TSj), we have (\TSi, \TSj)-ws-cl(\TSG) \subset F. Henceforth (\TSi, \TSj)-ws-cl(\TSG) \subset
+\{\TSF:H\subsetF\inD \ws (\TSi, \TSj)\}= (\TSi, \TSj)-ws-cl(\TSH). That is (\TSi, \TSj)-ws-scl(\TSG) \subset (\TSi, \TSj)-ws-cl(\TSH).
+Theorem 7.3.4: Let G be a subset of (\TSP, \tau_1 , \tau_2 ). If \tau_1 , \subset \tau_2 and WO(\TSP, \tau_1 ) \subset WO(\TSP, \tau_2 ), then (1,
+2)-ws-cl(\TSG)\subset (2, 1)-ws-cl(\TSG).
+
+Proof: By definition 7.3.1, (1,2)-ws-cl(\TSG)=\{\TSF:G\subset F\inD \ws (1, 2)\}. Seeing that \tau_1 , \subset \tau_2 , by
+
+Theorem 7.2.34, \clrD_{\ws} (2, 1) \subset \clrD_{\ws} (1, 2). Therefore \{\TSF:G\subset F\inD \ws (1, 2)\}\subset \{\TSF:G\subset F\inD \ws (2,
+1)\}. That is (1, 2)-ws-cl(\TSG)\subset \{\TSF:G\subset F\inD \ws (2, 1)\}= (2, 1)-ws-cl(\TSG). Hence (1, 2)-ws-cl(\TSG)\subset
+(2, 1)-ws-cl(\TSG).
+Theorem 7.3.5: Let G be a subset of (\TSP, \tau_1 , \tau_2 ) and i, j\in\{1, 2\} be fixed integers, then G \subset (\TSi, \TSj)-
+ws-cl(\TSG) \subset \tau_{\TSj} -scl(\TSG).
+Proof: By Definition 7.3.1, it is obtained that G \subset (\TSi, \TSj)-ws-cl(\TSG). Now to prove that (\TSi, \TSj)-ws-
+cl(\TSG) \subset \tau_{\TSj} -scl(\TSG). By definition of closure, \tau_{\TSj} -scl(\TSG)=\{\TSF\subsetP: G\subsetF and F is \tau_{\TSj} -closed\}. If G \subset
+F and F is \tau_{\TSj} -closed, then F is (\TSi, \TSj)-ws-closed, as each \tau_{\TSj} -closed set is is (\TSi, \TSj)-ws-closed.
+Henceforth (\TSi, \TSj)-ws-cl(\TSG) \subset \{\TSF\subsetP: \TSG\subset \TSF and F is \tau_{\TSj} -closed\}= \tau_{\TSj} -scl(\TSG). Hence (\TSi, \TSj)-ws-cl(\TSG)
+\subset \tau_{\TSj} -scl(\TSG).
+7.4 \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous maps and ws-bi-continuous maps.
+In this section a new class of maps called \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous maps in bitopological
+spaces are developed and examined. During this process, some of their related properties are
+obtained. Also, we form the concept of ws-bi-continuity and ws-s-bi-continuity in bitopological
+spaces and examine some of their related properties.
+Definition7.4.1: A map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is called \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous if the inverse
+image of every \sigma  k -closed set is an (\TSi, \TSj)-ws-closed set in (\TSP, \tau_1 , \tau_2 ).
+Remark7.4.2: If \tau_1 =\tau_2 =\tau and \sigma_{1} =\sigma_{2} =\sigma  in Definition 7.4.1, then the \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuity of
+maps coincides with ws-continuity of maps in topological spaces.
+Theorem7.4.3: If a map h :(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is \tau_{\TSj} -\sigma  k -continuous, then it is a \clrD_{\ws} (\TSi, \TSj)-\sigma  k -
+continuous.
+Proof: Take L be a \sigma  k -closed set. Since h is \tau_{\TSj} -\sigma  k -continuous, h  1 (L) is \tau_{\TSj} -closed. By Theorem
+7.2.7, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Therefore h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous.
+We use example 7.4.4 to prove the inverse of theorem is untrue.
+Example 7.4.4: Let \TSP=\{1, 2, 3, 4\}, \tau_1 =\{\TSP, \phi, \{1\},\{2\},\{1,2\},\{1,2,3\} and \tau_2 =\{\TSP, \phi, \{1\},\{1, 2\}\{1,
+2, 3\}\}, \TSQ=\{1, 2, 3\}, \sigma_{1} =\{\TSQ, \phi, \{1\},\{2\},\{1,2\}\} and \sigma_{2} =\{\TSQ, \phi, \{1\},\{2,3\}\}. Define a map \TSh: (\TSP,
+94\tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=4,h(2)=2 ,h(3)=2, ,h(4)=3. Then h is \clrD rw (1, 2)-\sigma_{2} -continuous but it
+is not \tau_1 -\sigma_{2} -continuous, Seeing that for the \sigma_{2} -closed set \{2,3\}, h  1 (\{2,3\})=\{2, 3\} is not \tau_1 -
+closed.
+Theorem 7.4.5: Map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is (\TSi, \TSj)- σ k -g#-continuous, then it is \clrD_{\ws} (\TSi, \TSj)-
+\sigma  k -continuous.
+Proof: Let L be a \sigma  k -closed set. Since h is (\TSi, \TSj)-σ k -g#-continuous, h  1 (L) is (\TSi, \TSj)- g#-closed. By
+Theorem 7.2.3, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Therefore h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous.
+We use example 7.4.6 to prove the inverse of theorem is untrue.
+Example 7.4.6: Let \TSP=\{1, 2, 3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\}\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1, 2\}\} \TSQ=\{1, 2,
+3\},
+\sigma_{1} =\{\TSQ,\phi,\{1\},\{2\},\{1,2\},\{1,3\}\}
+and
+\sigma_{2} =\{\TSQ,\phi,\{1\}\},
+(1,2)-
+D ws
+=\{
+P,
+\phi,
+\{1\},\{2\},\{3\}\{2,3\},\{1,3\}\}, and (1,2)- g# =\{ P, \phi, \{3\},\{2,3\},\{1,2\}\}, Define a map \TSh: (\TSP, \tau_1 ,
+\tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2, h(3)=3. Then h is \clrD_{\ws} (1, 2)-\sigma_{1} -continuous but it is not (i,
+j)-σ k -g#-continuous. Seeing that for the \sigma_{1} -closed set \{2\}, h  1 (\{2\})=\{2\} is not (1, 2)- g#-closed
+set.
+Theorem 7.4.7: Map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is (\TSi, \TSj)-σ k -g\xi*-continuous, then it is \clrD_{\ws} (\TSi, \TSj)-
+\sigma  k -continuous.
+Proof: Assume L be a \sigma  k -closed set. Seeing that h is (\TSi, \TSj)-σ k - g\xi*-continuous, h  1 (L) is (\TSi, \TSj)-
+g\xi*-closed. By Theorem 7.2.7, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Hnceforth h is \clrD_{\ws} (\TSi, \TSj)-
+\sigma  k -continuous.
+We use example 7.4.8 to prove the inverse of theorem is untrue.
+Example 7.4.8: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} \TSQ=\{1,2,3\},
+\sigma_{1} =\{\TSQ, \phi,\{1\},\{2\},\{1,2\},\{1,2\}\} and \sigma_{2} =\{\TSQ,\phi,\{2\}\}, (1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,3\}\},
+and (1,2)- g\xi*=\{ P, \phi, \{1\},\{3\},\{2,3\},\{1,2\}\}, Define a map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1,
+h(2)=2, h(3)=3. Then h is \clrD_{\ws} (1, 2)-\sigma_{1} -continuous but it is not (\TSi, \TSj)-σ k - g\xi*-continuous. Seeing
+that for the \sigma_{1} -closed set \{2\}, h  1 (\{2\})=\{2\}is not (1, 2)- g\xi*-closed set.
+Theorem 7.4.9: Map h :(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is (\TSi, \TSj)-σ k -\alphagp-continuous, then it is \clrD_{\ws} (\TSi, \TSj)-
+\sigma  k -continuous.
+95Proof: Take up L be a \sigma  k -closed set. See h is (\TSi, \TSj)-σ k - \alphagp -continuous, h  1 (L) is (\TSi, \TSj)- \alphagp -
+closed. By Theorem 7.2.9, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Hencefoth h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -
+continuous.
+We use example 7.4.10 to prove the inverse of theorem is untrue.
+Example 7.4.10: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} \TSQ=\{1,2,3\},
+\sigma_{1} =\{\TSQ,\phi,\{1\},\{2\},\{1,2\},\{1,3\}\} and \sigma_{2} =\{\TSQ,\phi, \{2\}\}, (1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,3\}\},
+and (1,2)- \alphagp =\{ P, \phi, \{1\},\{2,3\}\}, Define a map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2,
+h(3)=3. Then h is \clrD_{\ws} (1, 2)-\sigma_{1} -continuous but it is not (\TSi, \TSj)-σ k - \alphagp –continuous. Seeing that
+for the \sigma_{1} -closed set \{2\}, h  1 (\{2\})=\{2\}is not (1, 2)- \alphagp closed set.
+Theorem 7.4.11: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is (\TSi, \TSj)-σ k -\ddot{g} -continuous, then it is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -
+continuous.
+Proof: Take L be a \sigma  k -closed set. Seeing that h is (\TSi, \TSj)-σ k - \ddot{g} -continuous, h  1 (L) is (\TSi, \TSj)- \ddot{g} -
+closed. By Theorem 7.2.11, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Henceforth h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -
+continuous.
+We use example 7.4.12 to prove the inverse of theorem is untrue.
+Example 7.4.12: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} \TSQ=\{1,2,3\},
+\sigma_{1} =\{\TSQ,\phi,\{1\},\{2\},\{1,2\},\{1,2\}\} and \sigma_{2} =\{\TSQ,\phi, \{2\}\}, (1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,3\}\},
+and (1,2)- \ddot{g} =\{ P, \phi, \{1\},\{2,3\}\}, Define a map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2,
+h(3)=3. Then h is \clrD_{\ws} (1, 2)-\sigma_{1} -continuous but it is not (\TSi, \TSj)-σ k - \ddot{g} –continuous. Seeing that for
+the \sigma_{1} -closed set \{2\}, h  1 (\{2\})=\{2\} which is not (1, 2)- \ddot{g} closed set.
+Theorem 7.4.13: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is (\TSi, \TSj)-σ k -rb-continuous, then it is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -
+continuous.
+Proof: Let L be a \sigma  k -closed set. Since h is (\TSi, \TSj)-σ k - rb -continuous, h  1 (L) is (\TSi, \TSj)- rb-closed. By
+Theorem 7.2.13, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Henceforth h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous.
+We use example 7.4.14 to prove the inverse of theorem is untrue.
+96Example 7.4.14: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} \TSQ=\{1,2,3\},
+\sigma_{1} =\{\TSQ, \phi,\{1\},\{2\},\{1,2\},\{1,2\}\} and \sigma_{2} =\{\TSQ,\phi,\{2\}\}, (1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,2\}\},
+and (1,2)- rb=\{ P, \phi, \{1\},\{2,3\}\}, Define a map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2,
+h(3)=3. Then h is \clrD_{\ws} (1, 2)-\sigma_{1} -continuous but it is not (\TSi, \TSj)-σ k - rb –continuous. Seeing that for
+the \sigma_{1} -closed set \{2\}, h  1 (\{2\})=\{2\} which is not (1, 2)- rb closed set.
+Theorem 7.4.15: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is (\TSi, \TSj)-σ k -*g\alpha-continuous, then it is \clrD_{\ws} (\TSi, \TSj)-
+\sigma  k -continuous.
+Proof: Let L be a \sigma  k -closed set. Since h is (\TSi, \TSj)-σ k - *g\alpha -continuous, h  1 (L) is (\TSi, \TSj)- rb-closed.
+By Theorem 7.2.5, h  1 (L) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ). Henceforth h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous.
+We use example 7.4.16 to prove the inverse of theorem is untrue.
+Example 7.4.16: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} \TSQ=\{1,2,3\},
+\sigma_{1} =\{\TSQ,\phi,\{1\},\{2\},\{1,2\},\{1,2\}\} and \sigma_{2} =\{\TSQ,\phi, \{2\}\}, (1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,3\}\},
+and (1,2)- *g\alpha =\{ P, \phi, \{1\},\{2,3\}\}, Define a map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2,
+h(3)=3. Then h is \clrD_{\ws} (1, 2)-\sigma_{1} -continuous but it is not (\TSi, \TSj)-σ k - *g\alpha -continuous, Seeing that for
+the \sigma_{1} -closed set \{2\}, h  1 (\{2\})=\{2\} is not (1, 2)- *g\alpha -closed set.
+Theorem 7.4.17: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, then it is (\TSi, \TSj)-\sigma  k -
+gspr continuous.
+Proof: Take L be a \sigma  k -closed set. Since h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, h  1 (L) is (\TSi, \TSj)-ws-closed.
+By Theorem 7.2.15, h  1 (L) is (\TSi, \TSj)-gspr-closed in (\TSP, \tau_1 , \tau_2 ). Henceforth h is (\TSi, \TSj)-\sigma  k -gspr
+continuous.
+We use example 7.4.18 to prove the inverse of theorem is untrue.
+Example 7.4.18: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}
+\tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} and
+\TSQ=\{1,2,3\}, \sigma_{1} =\{\TSQ, \phi, \{3\}\} and \sigma_{2} =\{\TSQ, \phi\}. (1, 2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,3\}\}, and
+(1,2)- gspr =\{ P(P)\}, Define a map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2 and h(3)=3,
+Then h is (1, 2)-\sigma_{1} -gspr-continuous but it is not \clrD_{\ws} (1, 2)-\sigma_{1} -continuous. Seeing that for the \sigma_{1} -
+closed set \{1,2\}, h  1 (\{1,2\})=\{1,2\} is not a (1, 2)-ws-closed set.
+97Theorem7.4.19: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, then it is (\TSi, \TSj)-\sigma  k - gsp
+continuous.
+Proof: Let L be a \sigma  k -closed set. Since h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, h  1 (L) is (\TSi, \TSj)-ws-closed. By
+Theorem 7.2.17, h  1 (L) is (\TSi, \TSj)-gsp-closed in (\TSP, \tau_1 , \tau_2 ). Henceforth h is (\TSi, \TSj)-\sigma  k -gsp continuous.
+We use example 7.4.20 to prove the inverse of theorem is untrue.
+Example 7.4.20: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}
+\tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} and
+\TSQ=\{1,2,3\}, \sigma_{1} =\{\TSQ, \phi, \{3\}\} and \sigma_{2} =\{\TSQ, \phi\}.(1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,3\}\}, and
+(1,2)- gsp =\{ P(P)\}, Define a map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2 and h(3)=3, Then
+h is (1, 2)-\sigma_{1} -gsp-continuous but it is not \clrD_{\ws} (1, 2)-\sigma_{1} -continuous. for the \sigma_{1} -closed set \{1,2\},
+h  1 (\{1,2\})=\{1,2\} is not a (1, 2)-ws-closed set.
+Theorem 7.4.21: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, then it is (\TSi, \TSj)-\sigma  k -
+rgb continuous.
+Proof: Let L be a \sigma  k -closed set. Since h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, h  1 (L) is (\TSi, \TSj)-ws-closed. By
+Theorem 7.2.19, h  1 (L) is (\TSi, \TSj)-rgb-closed in (\TSP, \tau_1 , \tau_2 ). Henceforth h is (\TSi, \TSj)-\sigma  k -rgb continuous.
+We use example 7.4.22 to prove the inverse of theorem is untrue.
+Example 7.4.22: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\}
+\tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} and
+\TSQ=\{1,2,3\}, \sigma_{1} =\{\TSQ, \phi, \{3\}\} and \sigma_{2} =\{\TSQ, \phi\}. (1,2)- \clrD_{\ws} =\{ P, \phi, \{1\},\{2\},\{3\}\{2,3\},\{1,2\}\}, and
+(1,2)- rgb =\{ P(P)\},Define a map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by h(1)=1, h(2)=2 and h(3)=3, Then
+h is (1, 2)-\sigma_{1} -rgb-continuous but it is not \clrD_{\ws} (1, 2)-\sigma_{1} -continuous. Seeing that for the \sigma_{1} -closed
+set \{1,2\}, h  1 (\{1,2\})=\{1,2\} which is not a (1, 2)-ws-closed set.
+Remark 7.4.23: \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous maps and \clrD rw (\TSi, \TSj)-\sigma  k -continuous((\TSi, \TSj)-\sigma  k -
+R*continuous) maps are independent.
+Example 7.4.24: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\}, \{2,3\}\} and \tau_2 =\{\TSP, \phi, \{1\},\{2\},\{1,2\}\} and
+\TSQ=\{1,2,3\}, \sigma_{1} =\{\TSQ, \phi,\{1\},\{2\},\{1,2\},\{1,2\}\} and \sigma_{2} =\{\TSQ, \phi\}. Define a map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} ,
+\sigma_{2} ) by h(1)=1,h(2)=2 and h(3)=3. Then this function h is \clrD_{\ws} (1, 2)-\sigma_{2} -continuous but it is not
+D rw (1, 2)-\sigma_{1} -continuous((\TSi, \TSj)-\sigma  k -R*continuous), Seeing that for the \sigma_{1} -closed set \{2\},
+h  1 (\{2\})=\{2\} is not (1, 2)-rw-closed(R*-closed ) in (\TSP, \tau_1 , \tau_2 ).
+98Example 7.4.25: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\}, \{2\}, \{1,2\}\} and \tau_2 =\{\TSP, \phi, \{1\}, \{2\},\{1,2\},\{1,3\}\}
+and \TSQ=\{1,2,3\}, \sigma_{1} =\{\TSQ, \phi, \{3\}\}. and \sigma_{2} =\{\TSQ, \phi, \}. Define a map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) by
+h(1)=1, h(2)=2
+and h(3)=3. Then this function h is \clrD rw (1, 2)-\sigma_{1} -continuous((\TSi, \TSj)-\sigma_{1} -
+R*continuous) but it is not \clrD_{\ws} (1, 2)-\sigma_{1} -continuous. Seeing that for the \sigma -closed set \{1,2\},
+h  1 (\{1,2\})=\{1,2\} is not (1, 2)-ws-closed in (\TSP, \tau_1 , \tau_2 ).
+Remark 7.4.26: From the above discussions and known results we have the
+following implications.
+
+Theorem 7.4.28: The f continuous llowing statements are one and the same.
+(1) A map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous.
+99
+spaces(2) The inverse image of every \sigma  k -open set in Q is (\TSi, \TSj)-ws-open in P.
+Proof: (1)  (2) Assume L be a \sigma  k -open set in Q. Then L C is \sigma  k -closed set in Q. Seeing that
+h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous, h  1 (L C ) is (\TSi, \TSj)-ws-closed in P. That is h  1 (L C )=(h  1 (L )) C and so
+h  1 (L ) is (\TSi, \TSj)-ws-open in (\TSP, \tau_1 , \tau_2 ).
+(2) (1) Let \TSM be a \sigma  k -closed set in Q. Then L C is \sigma  k -open set in Q. By hypothesis, h  1 (M C )
+is (\TSi, \TSj)-ws-open in P. That is h  1 (M C ) = (h  1 (\TSM)) C and so h  1 (\TSM) is (\TSi, \TSj)-ws-closed in (\TSP, \tau_1 , \tau_2 ).
+Henceforth h is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous.
+Theorem 7.4.29: Map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is \clrD_{\ws} (\TSi, \TSj)-\sigma  k -continuous and g: (\TSQ, \sigma_{1} ,
+\sigma_{2} )(\TSR, \eta_{1}, \eta_{2} ) is \sigma  k -\eta n -continuous, then gοh is \clrD_{\ws} (\TSi, \TSj)-\eta n -continuous.
+Proof: Let K be \eta n -closed set in (\TSR, \eta_{1}, \eta_{2} ). Seeing that g is \sigma  k -\eta n -continuous, g  1 (K) is a \sigma  k -
+closed set in (\TSQ, \sigma_{1} , \sigma_{2} ). Seeing that h is \clrD rw (\TSi, \TSj)-\sigma  k -continuous, h  1 (g  1 (K))= (gοh)  1 (K) is a (i,
+j)-ws-closed set in (\TSP, \tau_1 , \tau_2 ) and hence gοh is \clrD_{\ws} (\TSi, \TSj)-\eta n -continuous.
+Definition 7.4.30: (i) A map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is called ws-bi- continuous if h is \clrD_{\ws} (1,
+2)-\sigma_{2} -continuous and is \clrD_{\ws} (2, 1)-\sigma_{1} -continuous..
+(ii) A map \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) is called rw-strongly-bi-continuous (briefly rw-s-bi-
+continuous) if h is rw-bi-continuous, \clrD rw (2, 1)-\sigma_{2} -continuous and \clrD rw (1, 2)-\sigma_{1} -continuous.
+Theorem7.4.31: Let \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) be a map.
+(1) If h is bi-continuous then h is ws-bi-continuous.
+(2) If h is s-bi-continuous then h is rw-s-bi-continuous.
+Proof: (i) Take \TSh:(\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} , \sigma_{2} ) be a bi-continuous map. Then h is \tau_1 -\sigma_{1} -continuous
+and \tau_2 -\sigma_{2} -continuous and so by Theorem 7.4.3, h is \clrD_{\ws} (1, 2)-\sigma_{2} -continuous and \clrD_{\ws} (2, 1)-\sigma_{1} -
+continuous. Thus h is ws-bi-continuous.
+(ii) Similar to (i), using Theorem 7.4.3.
+We use example 7.4.32 to prove the inverse of theorem is untrue.
+100Example 7.4.32: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\}\} and \tau_2 =\{\TSP, \phi,\{1\},\{2\} \{1,2\}\} and \TSQ=\{1,
+2,3\}, \sigma_{1} =\{\TSQ, \phi, \{1\}\} and \sigma_{2} =\{\TSQ, \phi, \{1\},\{2\},\{1,2\},\{1,3\}\}. Define a map \TSh: (\TSP, \tau_1 , \tau_2 )(\TSQ, \sigma_{1} ,
+\sigma_{2} ) by h(1)=1 ,h(2)=2,h(3)=3. Then h is ws-bi-continuous but not bi-continuous.
+Example 7.4.33: Let \TSP=\{1,2,3\}, \tau_1 =\{\TSP, \phi, \{1\},\{2,3\}\} and \tau_2 =\{\TSP, \phi,\{1\},\{2\} \{1,2\}\} and
+\TSQ=\{1,2,3\}, \sigma_{1} =\{\TSQ, \phi, \{2\}\} and \sigma_{2} =\{\TSQ, \phi, \{1\}\}. Define a map \TSh: (\TSP, \tau_1 , \tau_2)(\TSQ, \sigma_{1} , \sigma_{2} ) by
+h(1)=1 ,h(2)=2, h(3)=3. Then h is ws-s-bi-continuous but not s-bi-continuous.
+

@@ -1,0 +1,411 @@
+\chapter{ws-Locally Closed Sets in Topological Spaces}
+\graphicspath{{Chapter6/Chapter6Figs/EPS/}{Chapter6/Chapter6Figs/}}
+
+\section{Introduction}\label{sec6.1}
+
+LC-continuity and LC-irresoluteness
+
+Bourbaki [17] defined locally closed set in $(\TSP,\tau)$ as intersection of closed and open sets. Stone [87] used a new term as FG for locally closed. Further LC-continuity and LC-irresoluteness developed by Ganster and Reilly [37] . Sundaram [89] developed the knowledge of generalized locally closed sets, the class of GLC-continuous functions, GLC-irresolute functions and analysed some of their topological properties. Arockiarani [4] popularized regular generalized locally closed sets and obtained six new classes of generalized continuities using the theory of regular generalized closed sets. Recently Sheik John [83] introduced three new classes of sets denoted by w-LC$(\TSP, \tau)$, w-LC{*}$(\TSP, \tau)$ and w-LC{*}{*}$(\TSP, \tau)$ each of which contains LC$(\TSP, \tau)$. Also various authors like Park [75], Balachandran [11] and M.K.R.S.Veera Kumar [92] have put stremendous effort to the growth of locally closed sets and locally continuous maps.
+
+In the second section of this chapter, we describe three weaker forms of locally closed sets called ws-lc set, ws-lc* set and ws-lc{*}{*} set each of which is weaker than locally closed set and examine some properties of ws-lc set, ws-lc* set and ws-lc{*}{*} set. 
+
+\newpage
+
+In third section of this chapter, we introduce wsLC-continuous, wsLC*-continuous and wsLC{*}{*}-continuous functions Also we introduce ws-submaximal spaces and obtain some of their properties.
+
+In fourth section of this chapter, we define wsLC-irresolute, wsLC*-irresolute and wsLC**-irresolute functions and analyse some of their related properties.
+
+\section{ws-Locally Closed Sets}\label{sec6.2}
+
+\begin{dfn}\label{defi6.2.1}
+A subset $\clrD$ of a topological space $(\TSP, \tau)$ is called a weakly semi locally closed set (briefly wslc-set) if $\clrD = \TSS \cap \TSF$ where $\TSS$ is ws-open and $\TSF$ is ws-closed.
+\end{dfn}
+
+The set of all weakly semi locally closed set in $(\TSP,\tau)$ is denoted by wsLC$(\TSP, \tau)$.
+
+\begin{exm}\label{exam6.2.2}
+Take up $\TSP = \{1,2,3,4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1,2\},\{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1,4\} \{3,4\}, \{2,3\},\break \{2,4\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, $\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{1,4\},\break \{2,3\}, \{2,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)=\{\phi,\TSP,\{1\},\{2\},\{3\},\break \{4\},\{1,2\},\{1,3\},\{1,4\},\{1,3\},\{2,4\},\{3,4\},\{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$
+\end{exm}
+
+\begin{rem}\label{rem6.2.3}
+\begin{enumerate}[(1)]
+\item A subset $\clrD$ of a topological space $(\TSP, \tau)$ is a ws-lc set if its complement is the union of ws-open set and ws-closed set.
+\item Each ws-open set of $(\TSP, \tau)$ s a wslc set
+\end{enumerate}
+\end{rem}
+
+\begin{dfn}\label{defi6.2.4}
+A subset $\clrD$ of a space $\TSP$ is termed as $\ws\LC*$-set if $\exists$ ws-open set $\TSS$ and a closed set $\TSF$ of $\TSP$, $\ni: \clrD = \TSS \cap \TSF$.
+\end{dfn}
+
+\begin{dfn}\label{defi6.2.5}
+A subset $\clrD$ of a space $\TSP$ is termed as $\ws\LC{*}{*}$-set if $\exists$ an open set $\TSS$ and ws-closed set $\TSF$ of $\TSP \ni: \clrD = \TSS\cap \TSF$.
+\end{dfn}
+
+\begin{thm}\label{thm6.2.6}
+If a subset $\clrD$ of $(\TSP, \tau)$ is locally closed then it is $\ws\LC(\TSP, \tau)$, $\ws\LC*(\TSP, \tau)$ and $\ws\LC{*}{*}(\TSP, \tau)$ but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD = \TSU \cap \TSV$, $\forall \TSU$ is open and $\TSV$ is closed in $(\TSP, \tau)$. Since each open set is ws-open and each closed set is ws-closed Definition \ref{defi6.2.3} A subset $\clrD$ of a topological space $(\TSP, \tau)$ is said to be $\ws\LC{*}{*}$-set if $\exists$ an open set $\TSS$ and a ws-closed set $\TSF$ of $(\TSP, \tau) \ni: \clrD = \TSS\cap \TSF$., Therefore $\clrD$ is $\ws\LC (\TSP, \tau)$, $\ws\LC*(\TSP, \tau)$ and $\ws\LC{*}{*}(\TSP, \tau)$.
+
+We use example \ref{exam6.2.7} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam6.2.7}
+$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}, \{1,2, 3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1,4\},\{3,4\},\{2,3\}, \{2,4\},\break \{1,2, 4\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\},\{1,3\} \{3,4\}, \{1,4\},\break \{2,3\}, \{2,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \WSLC*(\TSP, \tau) = \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\{1.2\},\{1,3\}, \{1,4\}$, $\WSLC**(\TSP,\tau)=\{\phi,\TSP,\{1\},\{1,3\},\break \{2,4\}, \{3,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, and $\{2\}, \{3\}, \{4\}, \{1,2\}, \{1,3\},\break \{1,4\}, \{2,3\},\{2,4\},\{3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\}\}$ and locally closed sets or $\LC = \{\phi, \TSP, \{1\}, \{2\}, \{4\}, \{1,2\}, \{3, 4\}\{1,2,3\},\{1,3,4\},\{2,3,4\}\}$, Here $\{3\}$ is $\WSLC (\TSP, \tau)$, $\WSLC*(\TSP, \tau)$, $\WSLC{*}{*}(\TSP, \tau)$ but not LC-set
+\end{exm}
+
+\begin{thm}\label{thm6.2.8}
+If a subset $\clrD$ of $(\TSP, \tau)$ is $\WSLC*$-set then it is $\WSLC$-set but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ be a $\WSLC*$-set. Assume $\TSM$ as a ws-open set in $\TSP$ and $\TSN$ as closed set in $\TSP$. Seeing that $\clrD$ is $\ws\LC*$-set by definition, $\clrD = \TSM \ \TSn \ \TSN$. Since each closed set is ws-closed. Henceforth $\clrD$ is $\WSLC$-set.
+
+We use example \ref{exam6.2.9} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam6.2.9}
+Take $\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{1, 2\}, \{1, 2, 3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1, 3\}, \{2, 4\}, \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2,3\},\{1,3,4\},\{1,3,4\}\}$ $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{1,4\}, \{2,3\},\break \{2,4\}, \{1,2, 3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\break \{1,2\},\{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ And\break $\ws\LC*(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\}, \{4\},\{1,2\},\{1,3\}, \{1,4\}, \{2,3\}, \{3,4\}, \{1,2,3\},\break \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, Then the subset $\{2,4\} \in \WSLC(\TSP, \tau)$ but $\{2,4\}\not\in\break \WSLC*(\TSP, \tau)$.
+\end{exm}
+
+\begin{thm}\label{thm6.2.10}
+Each $\WSLC{*}{*} (\TSP, \tau)$ is $\WSLC (\TSP, \tau)$ but inverse is untrue
+\end{thm}
+
+\begin{proof}
+Proof of above theorem follows from definitions \ref{defi6.2.1} and \ref{defi6.2.3}.
+
+We use example \ref{exam6.2.11} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam6.2.11}
+Take up $\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1, 3\}, \{1, 4\} \{3,4\}, \{2,3\},\break \{2,4\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{1,4\},\break \{2,3\}, \{2,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \WSLC*(\TSP, \tau) =\{\phi, \TSP ,\{1\}, \{2\}, \{3\}, \{4\}, \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}, \{1,2,3\}, \{1,2,4\},\break \{1,3,4\},\{2,3,4\}\}$, and $\WSLC{*}{*}(\TSP, \tau)= \{\phi, \TSP ,\{1\},\{2\}, \{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\},\break \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$ Here $\{1,2,4\} \in \WSLC (\TSP, \tau)$, but\break $\{1, 2,4\}\not\in \WSLC{*}{*}(\TSP, \tau)$.
+\end{exm}
+
+\begin{thm}\label{thm6.2.12}
+Each locally closed set is a wslc set but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof is obtained from the facts that each open set is ws-open and each closed set is ws-closed.
+\end{proof}
+
+\begin{exm}\label{exam6.2.13}
+$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}, \{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) =\{\phi, \TSP, \{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$ $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\},\break \{2,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\break \{1,2\},\{1,3\}, \{1,4\}, \{2,3\},\{2,4\},\{3,4\}, \{1,2,3\}, \{1,2,4\}, \{1,3,4\}, \{1,3,4\}\}$, and and locally closed sets or $\LC = \{\phi, \TSP, \{1\},\{2\}, \{4\}, \{1,2\}, \{3, 4\} \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$, Here $\{3\}$ is $\WSLC (\TSP, \tau)$, but not $\LC$-set
+\end{exm}
+
+\begin{thm}\label{thm6.2.14}
+Each $\alpha - \lc(g\xi * -\lc, \alpha \gp-\lc$, $*g\alpha$-$\lc$) set is a $\wslc$ set but the inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof is obtained from the fact that each $\alpha-(\TSg\xi *, \alpha \gp-, *\TSg\alpha)$ closed set is ws-closed and each $\alpha -(\TSg\xi* , \alpha\gp, *\TSg\alpha)$ open set is ws-open set.
+\end{proof}
+
+\begin{exm}\label{exam6.2.15}
+$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}, \{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP)=\{\phi,P,\{1\},\{2\},\{3\},\{1,2\},\{3,4\},\{2,4\},\{2,3\},\break \{2,4\},\{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\break \{1,2\},\{1,3\}, \{1,4\}, \{2,3\},\{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\alpha - \lc(\TSg\xi * -\lc, \alpha \gp-lc, *\TSg\alpha-\lc) = \{\phi, \TSP, \{1\},\{2\}, \{3\}, \{4\}, \{1,2\}, \{3, 4\} \{1,2,3\},\{1,2,3\},\break \{1,3,4\},\{2,3,4\}\}$, Here $\{2,3\}$ is $\ws\LC (\TSP, \tau)$, but not $\alpha - \lc(\TSg\xi * -\lc, \alpha\gp-\lc, *\TSg\alpha-\lc)$ set
+\end{exm}
+
+\begin{thm}\label{thm6.2.16}
+Each $\scl - \lc(g^{\text{\#}} -\lc, \ddot{g} -\lc)$ set is a $\wslc$ set but the inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof is obtained from the evidence that each $\scl - \lc(g^{\text{\#}}\text{-closed}, \ddot{g}\text{-closed})$ set is ws-closed and each $\scl$ - open($g^{\text{\#}}\text{-open}, \ddot{g}\text{-open})$ set is ws-open set.
+\end{proof}
+
+\begin{exm}\label{exam6.2.17}
+$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1,2\}, \{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$ $\ws\TSO(\TSP)=\{\phi, \TSP, \{1\},\{2\},\{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\},\break \{2,4\}, \{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)=\{\phi,P,\{1\},\{2\},\{3\},\{4\},\break \{1,2\},\{1,3\},\{1,4\},\{2,3\},\{2,4\},\{3,4\},\{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\scl - \lc(g^{\text{\#}} -\lc, \ddot{g} -\lc) = \{\phi, \TSP,\{1\},\{4\},\{1,2\}\{3, 4\},\{1,2,3\},\{2,3,4\}\}$, Here $\{2\}$ is\break $\ws\LC (\TSP, \tau)$, but not $\scl - \lc(g^{\text{\#}} -\lc, \ddot{g} \lc)$ set
+\end{exm}
+
+\begin{thm}\label{thm6.2.18}
+\begin{enumerate}[(1)]
+\item $\wslc$ set is $\gsprlc$ set but not conversely.
+\item $\wslc$ set is $\gsplc$ set but not conversel.
+\item $\wslc$ set is $\rgblc$ set but not conversely
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+The proof follows from the two definitions and the fact that every ws-closed (resp. ws-open) set is $\gspr$-closed (resp. $\gspr$-open).
+
+Similrly we can prove the result (2) and (3)
+\end{proof}
+
+\begin{exm}\label{exam6.2.19}
+Let $X= \{1,2, 3\}$ and $\tau=\{\TSX, \phi, \{1\}, \{2,3\}\}$. Then $\{2\}$ is a gsprlc(respectively, gsplc, rgblc) set but not a ws-lc set in $(\TSX, \tau)$.
+\end{exm}
+
+\begin{rem}\label{rem6.2.20}
+The following example shows that wlc, $\hat{g}$lc, $\alpha\hat{g}$lc, pgprlc, swglc, g$\alpha$lc, gw$\alpha$lc, $\alpha$gslc and rwlc are independent with wslc sets.
+\end{rem}
+
+\begin{exm}\label{exam6.2.21}
+Let $\TSX= \{1, 2, 3, 4\}$ and $\tau=\{\TSX, \phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$. Then $\{1, 2\}$ is a wslc set but not a w-lc (respectively, $\hat{g}$lc, $\alpha\hat{g}$lc, pgprlc, swglc, g$\alpha$lc ,gw$\alpha$lc, $\alpha$gslc and rwlc) set in $(\TSX, \tau)$.
+\end{exm}
+
+\begin{exm}\label{exam6.2.22}
+Let $\TSX= \{1,2,3, 4\}$ and $\tau=\{\TSX, \phi, \{1, 2\}, \{3,4\}\}$. Then $\{1\}$ is w-lc (respectively, $\hat{g}$lc, $\alpha\hat{g}$lc, pgprlc, swglc, g$\alpha$lc, gw$\alpha$lc, $\alpha$gslc and rwlc) set but not a wslc set in $(\TSX, \tau)$.
+\end{exm}
+
+\begin{rem}\label{rem6.2.23}
+From the above discussions and known facts we have the following implications:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.72]{1.eps}
+\end{figure}
+\end{rem}
+
+\begin{thm}\label{thm6.2.24}
+In a space $(\TSP, \tau)$, if each semi closed set is closed then semi $\LC(\TSP) \subset \ws\LC(\TSP)$
+\end{thm}
+
+\begin{proof}
+In general, $\LC(\TSP) \subseteq \ws\LC(\TSP)$ and $\LC(\TSP) \subseteq \semi\LC(\TSP)$. Since each semi closed set is closed then semi-$\LC(\TSP) \subset \LC(\TSP)$. Then semi-$\LC(\TSP) = \LC(\TSP)$. Therefore semi-$\LC(\TSP) \subset \semi\LC(\TSP)$.
+\end{proof}
+
+\begin{thm}\label{thm6.2.25}
+The given results are one and the same.
+\begin{enumerate}[(1)]
+\item $\clrD \in\ws\LC * (\TSP, \tau)$
+\item $\clrD = \TSM \cap \cl(\clrD)$ for some ws open set $\TSM$
+\item $\cl(\clrD) - \clrD$ is ws closed
+\item $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open, where $\clrD$ is subset of a topological space $(\TSP, \tau)$
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(1) $\Rightarrow$ (2)
+
+Take up $\clrD \in \ws\LC * \TSP$. Then $\clrD = \TSM \cap \TSF$, where $\TSM$ and $\TSF$ are ws open set and a closed set in $\TSP$. Seeing that $\clrD \subseteq \TSF$, $\cl(\clrD) \subseteq \cl(\TSF) = \TSF$. Now $\TSM \cap \cl(\clrD) \subseteq (\TSM \cap \TSF) = \TSD$. That is $\TSM \cap \cl(\clrD) \subseteq \TSD$. Also, $\clrD \subseteq \TSM$ and $\clrD \subseteq\cl(\clrD)$ then $\clrD \subseteq (\TSM \cap \cl(\clrD))$. Thetrefore $\TSD= \TSM \cap \cl(\clrD)$ for some ws open set $\TSM$.
+
+(2) $\Rightarrow$ (1)
+
+Here $\TSM$ is ws open and $\TSF$ is ws closed set. Therefore $\clrD = (\TSM \cap \cl(\clrD)) \in \ws\LC * (\TSP)$. (iii) $\Rightarrow$ (iv) Take up $\cl(\clrD) - \clrD$ is ws-closed. Now $\TSP - (\cl(\clrD) - \clrD) = \TSP \cap (\cl(\clrD) - \TSD)^{\text{c}} = \clrD \cup (\TSP - \cl(\clrD)) = \clrD \cup (\cl(\clrD))^{\text{c}}$ is a ws-open set, That is $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open set.
+
+(4) $\Rightarrow$ (3)
+
+Take up $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open. Now $\TSP - (\clrD \cup (\cl(\clrD))^{\text{c}}) = \cl(\clrD) \cap (\TSP - \TSD) = \cl(\clrD) - \clrD$ is ws-closed.
+
+(4) $\Rightarrow$ (2)
+
+Take up $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open,. Now $\TSM\cap \cl(\clrD) = (\clrD \cup (\cl(\clrD))^{\text{c}}) \cup \cl(\clrD) = (\clrD \cap \cl(\clrD)) \cup ((\cl(\clrD))^{\text{c}} \cap \cl(\clrD)) = \clrD \cup \varphi = \clrD$
+
+(2) $\Rightarrow$ (4)
+
+Take up $\clrD = \TSM \cap \cl(\clrD)$ for some ws open set $\TSM$. Now $\clrD \cup (\cl(\clrD)^{\text{c}}) = (\TSM \cap \cl(\clrD)) \cup (\cl(\clrD)^{\text{c}}) = \TSM \cap \cl(\clrD) \cup (\cl(\clrD))^{\text{c}} = \TSM \cap \TSP = \TSM$ is a ws-open set.
+\end{proof}
+
+\begin{thm}\label{thm6.2.26}
+If $\clrD \in \ws\LC(\TSP, \tau)$ then $\clrD = \TSM\cap \ws\cl(\clrD)$ for some open set $\TSM$, where $\clrD$ is the subset of a topological space $(\TSP, \tau)$
+\end{thm}
+
+\begin{proof}
+Take up $\clrD \in \ws\LC(\TSP)$. Then $\clrD = \TSM \cap \TSF$ where $\TSM$ and $\TSF$ are ws closed and ws open sets in $(\TSP,\tau)$ respectively. Since $\clrD \subseteq \TSF$, $\ws\cl(\clrD) \subseteq \ws\cl(\TSF)=\TSF$. Now $\TSM \cap \ws\cl(\clrD) \subseteq (\TSM \cap \TSF) = \TSD$. Also, since $\clrD \subseteq \TSM$ and $\clrD \subseteq \ws\cl(\clrD)$ then $\clrD \subseteq (\TSM \cap \ws\cl(\clrD))$. Therefore $\clrD = \TSM \cap \ws\cl(\clrD)$.
+\end{proof}
+
+\begin{thm}\label{thm6.2.27}
+If $\TSA \in \ws\LC{∗}{∗}(\TSP, \tau)$ then $\clrD = \TSM \cap \ws\cl(\clrD)$, where $\TSM$ is an open set and $\clrD$ is subset of a topological space $(\TSP, \tau)$
+\end{thm}
+
+\begin{proof}
+Take up $\clrD \in \ws\LC{∗}{∗}(\TSP, \tau)$. Then $\clrD = \TSM \cap \TSF$, where $\TSM$ is an open set and $\TSF$ is a ws-closed set. Seeing that $\clrD \subseteq \TSF$ and $\ws\cl(\clrD) \subseteq \ws\cl(\TSF) = \TSF$ thus $\TSM \cap \ws\cl(\clrD) \subseteq (\TSM \cap \TSF) = \TSD$. That is $\TSM \cap \ws\cl(\clrD) \subseteq \clrD$. Also $\clrD \subseteq \TSM$ and $\clrD \subseteq \ws\cl(\clrD)$ then $\clrD \subseteq \TSM \cap \ws\cl(\clrD)$. Thus, $\clrD = \TSM \cap \ws\cl(\clrD)$ for some open set $\TSM$.
+\end{proof}
+
+\section{WSLC-Continuous Maps}\label{sec6.3}
+
+\begin{dfn}\label{defi6.3.1}
+The map $\TSh: \TSP \to \TSQ$ is called a $\WSLC$-continuous (respectively $\WSLC{*}$-continuous and $\WSLC{∗}{∗}$-continuous) if the inverse image of each open set in $\TSQ$ is $\ws\lc$-set(respectively $\ws\lc{*}$-set and $\ws\lc{∗}{∗}$-set) in $(\TSP, \tau)$.
+\end{dfn}
+
+\begin{exm}\label{exam6.3.2}
+Take up $\TSP = \TSQ = \{1, 2, 3\}$, $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}\}$ and $\sigma = \{\phi, \TSQ, \{1\}, \{2,3\}\}$. Then $\WSLC(\TSP) = \TSP (\TSP)$ and $\TSh: \TSP \to \TSQ$ is defined as identity map is a $\WSLC$-continuous.
+\end{exm}
+
+\begin{thm}\label{thm6.3.3}
+Take up $\TSh: (\TSP,\tau) \to \TSQ$ be a function. Then If $\TSH$ is locally continuous then it is $\WSLC$-continuous but inverse is untrue
+\end{thm}
+
+\begin{proof}
+Proof is obvious from the well known definitions and evidence
+\end{proof}
+
+\begin{exm}\label{exam6.3.4}
+Take $\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \TSP \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSY, \{1\},\{ 2, 3\}\}$ Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\},\break \{1, 4\} \{3,4\},\{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$ $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\break \{1,2\}, \{3,4\}, \{2,4\},\{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi,\TSP ,\{1\}, \{2\},\{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\break \{1,3,4\},\{1,3,4\}\}$, $\LC(\TSP)=\{ \phi \TSP,\{1\}, \{2\}, \{4\}, \{1, 2\}, \{3,4\}, \{1,2,3\},\{1,3,4\},\break \{2,3,4\}\}$ and Let $\TSh: (\TSP, \tau )\to(\TSY, \sigma)$ be a function defined by identity map is $\ws\lc$-continuous but not a $\LC$ continuous function as the open set $\TSF=\{2,3\}$ in $\TSQ, h^{-1} (\TSF)=\{2,3\}$ is not a locally continuos closed set in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm6.3.5}
+Each $\alpha$-$\lc$ continuous ($\TSg\xi$*-lc continuous, $\alpha\gp$-$\lc$ continuous, $*\TSg\alpha$-$\lc$ continuous) is a $\ws\lc$-continuous but the inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof is obvious from the well known definitions and evidence.
+\end{proof}
+
+\begin{exm}\label{exam6.3.6}
+Take $\TSP = \{1, 2, 3, 4\}$ and $\TSQ = \{1, 2, 3\}$, $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\},\break \{1, 2, 3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSQ, \{1\},\{ 2, 3\}\}$ be a topology on $\TSQ, \ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$,\break $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\},\{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\break \{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP,\{1\}, \{2\}, \{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\},\break \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\alpha - \lc(\TSg\xi* -\lc, \alpha \gp-\lc, *\TSg\alpha-\lc) = \{ \phi, \TSP, \{1\}, \{2\}, \{3\}, \{4\}, \{1,2\}, \{3, 4\} \{1,2,3\},\{1,2,4\},\{1,3,4\},\break \{2,3,4\}\}$, Here $\{2,3\}$ is $\ws\LC (\TSP, \tau)$, but not $\alpha - \lc(\TSg\xi* -\lc, \alpha\gp-\lc, *\TSg\alpha-\lc)$ set. Let $\TSh: (\TSP, \tau )\to(\TSY, \sigma)$ be a function defined by identity map is $\ws\lc$-continuous but not a $\alpha$-$\lc$ continuous ($\TSg\xi*$-$\lc$ continuous, $\alpha\gp$-$\lc$ continuous, *$\TSg\alpha$-$\lc$ continuous)) function as the open set $\TSF=\{2,3\}$ in $\TSQ, h^{-1} (\TSF)=\{2,3\}$ is not a $\alpha - \lc(\TSg\xi * -\lc, \alpha\gp-\lc, *\TSg\alpha-\lc)^{\text{c}}$ losed set in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm6.3.7}
+Each semilc-continuous ($g^{\text{\#}}$-$\lc$ continuos, $\ddot{g}$-$\lc$ continuos) set is a $\ws\lc$ continuos, but the inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Proof is obvious from the well known definitions and evidence.
+\end{proof}
+
+\begin{exm}\label{exam6.3.8}
+Take $\TSP = \{1,2,3,4\}$ and $\TSQ= \{1,2,3\}$ and $\tau = \{\phi, \{1\},\{2\}, \{1,2\},\break \{1,2,3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSQ, \{1\},\{ 2, 3\}\}$ be a topology on $\TSP$. $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\},\{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$\break $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\},\{3,4\}, \{2,4\}, \{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\break \{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\},\{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\},\break \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\scl$-$\lc(g^{\text{\#}}-\lc, \ddot{g}-\lc) = \{\phi, \TSP,\{1\},\{4\},\{1,2\}\{3, 4\},\{1,2,3\},\{2,3,4\}\}$. Let $\TSh: (\TSP, \tau )\to(\TSY, \sigma)$ be a function defined by identity map is $\ws\lc$-continuous but not a semilc-continuous($g^{\text{\#}} -\lc$ continuos, $\ddot{g}$-$\lc$ continuos) function as the open set $\TSF=\{2,3\}$ in $\TSQ, h^{-1} (\TSF)=\{2,3\}$ is not a $\scl$-$\lc(g^{\text{\#}} -\lc, \ddot{g} -\lc)^{\text{c}}$ losed set in $\TSP$.
+\end{exm}
+
+\begin{thm}\label{thm6.3.9}
+Every $\ws$-$\lc$ continuous is $\gspr$ (respectively $\gsp$-$\lc$ continuos, $\rgb$-$\lc$ continuos) continuos, but the converse is not true.
+\end{thm}
+
+\begin{proof}
+The proof follows from the known definitions and facts.
+\end{proof}
+
+\begin{exm}\label{exam6.3.10}
+$\TSX = \{1, 2, 3\}$ and $\TSY= \{1, 2, 3\}$ and $\tau = \{\TSX, \phi, \{1\}, \{2, 3\}\}$ be a topology on $\TSX. \sigma = \{\phi, \TSY, \{1\}, \{1, 2\}, \{1, 2, 3\}\}$, Then $\ws\TSC(\TSX) = \{\phi, \TSX, \{1\}, \{2, 3\}\}$. and $\ws\LC(\TSX)= \{\phi, \TSX \{1\}, \{2, 3\}\}$, and $\gspr - \lc(\gsp-\lc, \rgb-\lc) = \{\TSP(\TSX)\}$ Let $\TSh: (\TSX, \tau)\to(\TSY, \sigma)$ be a function defined by $\TSh(1)= 1$, $\TSh(2)=2$, $\TSh(3)=3$, is $\gspr$-$\lc$(respectively, $\gsp$-$\lc$, $\rgb$-$\lc$)-continuous but not a $\ws$-$\lc$ continuos function as the open set $\TSH=\{1,2,3\}$ in $\TSQ$, $h^{-1}(\TSH)=\{1,2,3\}$ is not a $\ws$-$\lc$ set in $\TSX$.
+\end{exm}
+
+\begin{thm}\label{thm6.3.11}
+Each $\WSLC{*}{*}$ conntinuous is $\WSLC$-continuous.but inverse is untrue
+\end{thm}
+
+\begin{proof}
+Proof is obvious from the well known definitions and evidence.
+\end{proof}
+
+\begin{exm}\label{exam6.3.12}
+$\TSP = \{1,2,3,4\}$ and $\TSY= \{1,2,3\}$ and $\tau = \{\phi, \{1\},\{2\}, \{1,2\},\break \{1,2,3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSY, \{1\},\{ 2, 3\}\}$, $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\},\break \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP) = \{\phi, \TSP,\break \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$\break and $\ws\LC(\TSP)= \{\phi, \{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\}, \TSP ,\{1\}, \{2\}, \{2,3\}, \{2,4\},\{3,4\},\break \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$ and $\ws\LC{*}{*}\TSP)= \{\phi, \TSP,\{1\}, \{2\}, \{3\},\{4\},\{1,2\},\break \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},\{3,4\}, \{1, 2, 3\},\{1,3,4\},\{2,3,4\}\}$, Let $\TSh: (\TSP, \tau )\to(\TSQ, \sigma)$ be a function defined by $\TSh(1)= 2$, $\TSh(2)=2$, $\TSh(3)=4$, is $\ws\lc$-continuous but not a $\ws\LC{*}{*}$-continuous function as the open set $\TSH=\{2,3\}$ in $\TSQ$, $h^{-1} (\TSH)=\{1,2,3\}$ is not a $\ws\LC{*}{*}$ closed set in $\TSP$.
+\end{exm}
+
+\begin{rem}\label{rem6.2.13}
+From the above discussions and known facts we have the following implications:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.75]{2.eps}
+\end{figure}
+\end{rem}
+
+\begin{thm}\label{thm6.3.14}
+Let $\TSh: \TSP \to \TSQ$ is a function defined on a door space $(\TSP,\tau)$ is a $\WSLC$-continuous (respectively $\WSLC*$ continuous and $\WSLC{∗}{∗}$-continuous).
+\end{thm}
+
+\begin{proof}
+Take up $\TSh$ be a function, where $\TSQ$ be any space and $(\TSP, \tau)$ is a door space. Let $\TSE \in \sigma$. Then $\TSh^{-1} (\TSE)$ is either open or closed. In both the cases, $\TSh^{-1} (\TSE) \in \WSLC(\TSP, \tau)$ (respectively $\WSLC*(\TSP)$, $\WSLC{∗}{∗}(\TSP)$). Therefore $\TSh$ is $\WSLC$-continuous (respectively $\WSLC*$ continuous and $\WSLC{∗}{∗}$-continuous).
+\end{proof}
+
+\begin{thm}\label{thm6.3.15}
+Take $\TSh : \TSP \to \TSQ$ be $\WSLC$-continuous and $\TSE$ is an open set in $\TSQ$. Then $\TSh : (\TSP, \tau) \to (\TSE, \tau \TSE)$ is $\WSLC$-continuous.
+\end{thm}
+
+\begin{proof}
+Take up $\TSU$ as an open set in $\TSE$ and hence open in $(\TSQ, \sigma)$. Then $\TSh^{-1} (\TSV)$ is $\ws\lc$-set in $(\TSP, \tau)$, by hypothesis. Therefore $\TSh : (\TSP, \tau) \to (\TSE, \tau \TSE)$ is $\WSLC$-continuous.
+\end{proof}
+
+\begin{thm}\label{thm6.3.16}
+Take $\TSh: \TSP \to \TSQ$ is $\WSLC$-continuous (respectively $\WSLC*$-{\break}continuous and $\WSLC{∗}{∗}$-continuous) and $\TSg: \TSQ \to \TSR$ is continuous then $\goh : \TSP \to \TSR$ is $\WSLC$-continuous (respectively $\WSLC*$-continuous and $\WSLC{∗}{∗}$-continuous).
+\end{thm}
+
+\begin{proof}
+Take up $\TSN$ as any open set in $(\TSR, \eta)$. Seeing that $\TSg$ is continuous map, $\TSg^{-1} (\TSN)$ is open in $(\TSQ, \sigma)$. Also $\TSh$ is $\WSLC$-continuous, $\TSh^{-1} (\TSg^{-1} (\TSN)) = (\goh)^{-1} (\TSN)$ is a $\ws\lc$ set in $(\TSP, \tau)$. Then $\goh$ is $\WSLC$-continuous.
+\end{proof}
+
+\section{WSLC irresolute maps and their properties}\label{sec6.4}
+
+\begin{dfn}\label{defi6.4.1}
+A map $\TSh: \TSP \to \TSQ$ is called $\ws\lc$-irresolute (respectively $\WSLC*$-irresolute, $\WSLC{∗}{∗}$-irresolute) if inverse image of each $\ws$ locally closed set in $\TSQ$ is ws locally closed set (recpectively $\ws\lc*$ locally closed, $\ws\lc{∗}{∗}$ locally closed) set in $(\TSP, \tau)$.
+\end{dfn}
+
+\begin{exm}\label{exam6.4.2}
+Take up $\TSP = \TSQ = \{1,2, 3\}$, $\tau = \{\phi, \{1\}, \{2\}, \{1,2\}\}$ and $\sigma = \{\phi, \TSQ, \{1\}, \{2, 3\}\}$. Then $\WSLC(\TSP) = \TSP (\TSP)$ and $\TSh: \TSP \to \TSQ$ is defined as identity map is a $\WSLC$-irresolute map.
+\end{exm}
+
+\begin{thm}\label{thm6.4.3}
+If $\TSh: (\TSP, \tau) \to \TSQ$ is $\ws$-irresolute then $\TSh$ is $\WSLC$-irresolute but inverse is untrue.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh : (\TSP, \tau) \to \TSQ$ is $\ws$-irresolute. Let $\TSK \in \WSLC(\TSP)$. Then $\TSK = \TSL \cap \TSM$, where $\TSL$ is $\ws$-open set and $\TSM$ is $\ws$-closed set in $(\TSQ, \sigma)$. Now, $\TSh^{-1} (\TSK) = \TSh^{-1} (\TSL \cap \TSM) = \TSh^{-1} (\TSL) \cap \TSh^{-1} (\TSK)$. Seeing that $\TSh$ is $\ws$-irresolute, $\TSh^{-1}(\TSL)$ is $\ws$-open and $\TSh^{-1}(\TSM)$ is $\ws$ closed set in $(\TSP, \tau)$, therefore $\TSh^{-1}(\TSM)\in \ws\lc(\TSP)$, Hence the theorem.
+\end{proof}
+
+\begin{exm}\label{exam6.4.4}
+Take up $\TSP = \TSQ = \{1, 2, 3, 4\}$, and $\tau= \{\phi, \TSP, \{1\}, \{1, 2\}, \{1, 2, 3\}\}$. $\sigma = \{\phi, \TSQ, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$, $\ws\TSC(\TSP) = \{\phi, \TSP, \{2\}, \{3\}, \{4\}, \{1, 4\}, \{2,3\},\break \{2,3\},\{3,4\}, \{1,2, 4\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSC(\TSQ) = \{\phi, \TSQ,\{1\}, \{2\}, \{3\}, \{4\}, \{1, 3\},\break \{1, 4\} \{2,3\}, \{2,4\}, \{3,4\}\{1,2, 4\},\{1,3,4\},\{2,3,4\}\}$. Let $\TSh : \TSP \to \TSQ$ be an identity map but not a $\ws$-irresolute map, as the inverse image of the $\ws$-closed set $\{1\}$ in $\TSQ$ is $\{1\}$ in $(\TSP, \tau)$, which is not a $\ws$-closed set in $(\TSP, \tau)$.
+\end{exm}
+
+\begin{thm}\label{thm6.4.5}
+If a map $\TSh: (\TSP, \tau) \to \TSQ$ is $\WSLC$-irresolute then it is $\ws\lc$-continuous.
+\end{thm}
+
+\begin{proof}
+Result is obvious from the well known definitions and evidence that each open set is a $\ws\lc$-set
+\end{proof}
+
+\begin{thm}\label{thm6.4.6}
+Any function $\TSh : (\TSP, \tau) \to \TSQ$ defined on a door space is $\WSLC$-irresolute.
+\end{thm}
+
+\begin{proof}
+The proof is obvious.
+\end{proof}
+
+\begin{thm}\label{thm6.4.7}
+Consider two functions $\TSh: \TSP \to \TSQ$ and $\TSg: \TSQ\to (\TSR, \eta)$. Then
+\begin{itemize}
+\item[(i)] $\goh : (\TSP, \tau) \to (\TSR, \eta)$ is $\WSLC$-irresolute if both $\TSh$ and $\TSg$ are $\WSLC$-irresolute maps.
+\item[(ii)] $\goh: (\TSP, \tau) \to (\TSR, \eta)$ is $\WSLC$-continuous if $\TSh$ is $\WSLC$-continuous and $\TSg$ is $\WSLC$-irresolute.
+\end{itemize}
+\end{thm}
+
+\begin{proof}
+Take up $\TSL$ be any $\ws\lc$ set in $(\TSR, \eta)$. By hypothesis, $\TSg^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSQ, \sigma)$. Also $\TSh$ is $\WSLC$-irresolute, $\TSh^{-1} (\TSg^{-1} (\TSL)) = (\goh)^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSP, \tau)$. Therefore goh is $\WSLC$-irresolute.
+
+This theorem also hold for $\WSLC*$-irresolute map and $\WSLC{∗}{∗}$-irresolute map. (ii) Take up $\TSL$ be any open set in $(\TSR, \eta)$. By hypothesis, $\TSg^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSQ, \sigma)$. Also, since $\TSh$ is $\WSLC$-irresolute, $\TSh^{-1} (\TSg^{-1} (\TSL)) = (\goh)^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSP, \tau)$. Therefore $\goh$ is $\WSLC$-continuous.
+\end{proof}
+
+\begin{dfn}\label{defi6.4.8}
+Function $\TSh: \TSP \to \TSQ$ is said to be sub-$\WSLC*$-continuous if there is a basis $\beta$ for $\TSQ\ni: \TSh^{-1} (\TSV) \in \WSLC{*}(\TSP)$ for each $\TSV \in \beta$.
+\end{dfn}
+
+\begin{thm}\label{thm6.4.9}
+If $\TSh : (\TSP, \tau) \to \TSQ$ is $\WSLC*$-continuous then it is sub-$\WSLC*$-continuous.
+\end{thm}
+
+\begin{proof}
+Take up $\TSh: \TSP \to \TSQ$ be $\WSLC*$-continuous and $\beta$ is a bais for $\TSQ$ and $\TSu \in \beta$. Since $\TSh$ is $\WSLC*$-continuous, $\TSh^{-1}(\TSu) \in \WSLC * (\TSP, \tau)$. Therefore $\TSh$ is sub-$\WSLC*$-continuous.
+\end{proof}
+
+\begin{thm}\label{thm6.4.10}
+If $\TSh: \TSP \to \TSQ$ is sub-$\LC$-continuous then then it is sub-$\WSLC*$-continuous.
+\end{thm}
+
+\begin{proof}
+Result is obvious from the well known definitions and evidence that $\LC(\TSP,\tau) \subseteq \WSLC(\TSP,\tau)$.
+\end{proof}
+
+\begin{thm}\label{thm6.4.11}
+Take up $\clrD$ and $\TSE$ be two subsets of a topological space $(\TSP, \tau)$. Then these statements are verified.
+\begin{enumerate}[(i)]
+\item If $\clrD \in \WSLC * (\TSP)$ and $\TSE \in \WSLC * (\TSP)$ then $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
+\item If $\clrD \in \WSLC{∗}{∗}(\TSP)$ and $\TSE$ is open then $(\TSD \cap \TSE) \in \WSLC{∗}{∗}(\TSP)$.
+\item If $\clrD \in \WSLC(\TSP)$ and $\TSE$ is $\ws$-open then $(\TSD \cap \TSE) \in \WSLC(\TSP)$
+\item If $\clrD \in \WSLC * (\TSP)$ and $\TSE$ is $\ws$-open then $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
+\item If $\clrD \in \WSLC * (\TSP)$ and $\TSE$ is closed then $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{itemize}
+\item[(i)] Take up $\clrD \in \WSLC * (\TSP)$ and $\TSE \in \WSLC * (\TSP)$. and also we know that $\exists$ two $\ws$-open sets $\TSK$ and $\TSL \ni: \clrD = \TSK \cap \cl(\clrD)$ and $\TSE = \TSL \cap \cl(\TSE)$. Now $\TSD \cap \TSE = (\TSK \cap \TSL) \cap (\cl(\clrD) \cap \cl(\TSE))$. Here $\TSK \cap \TSL$ is $\ws$-open and $(\cl(\clrD) \cap \cl(\TSE))$ is closed. Therefore $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
+
+\item[(ii)] Take up $\clrD \in \WSLC{∗}{∗} (\TSP)$ and $\TSE$ is open. Then $\clrD = \TSK \cap \TSG$, where $\TSK$ is an open set and $\TSG$ is a $\ws$-closed. Consider $\TSD \cap \TSE = (\TSK \cap \TSE) \cap \TSG$, where $\TSK \cap \TSE$ is open and $\TSG$ is $\ws$-closed. Therefore $(\TSD \cap \TSE) \in \WSLC{∗}{∗}(\TSP)$.
+
+\item[(iii)] Take up $\clrD \in \WSLC(\TSP)$ and $\TSE$ is $\ws$-open. Then $\clrD = \TSK \cap \TSG$, where $\TSP$ is $\ws$-open and $\TSG$ is $\ws$-closed. Consider $\TSD \cap \TSE = (\TSK \cap \TSE) \cap \TSG$ where $\TSK \cap \TSE$ is $\ws$-open and $\TSG$ is $\ws$-closed. Therefore $(\TSD \cap \TSE) \in \WSLC(\TSP)$.
+\end{itemize}
+Similarly we can prove (iv) and (v).
+\end{proof}
