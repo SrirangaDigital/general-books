@@ -1,0 +1,505 @@
+\chapter{On Weakly semi closed separation axioms in topological spaces}
+\graphicspath{{Chapter8/Chapter8Figs/EPS/}{Chapter8/Chapter8Figs/}}
+
+\section{Introduction}\label{sec8.1}
+
+
+From the literature survey on separation axioms, we observed that there is an significant work on weak forms of separation axioms like $\TST_{\TSk}$ spaces $(\TSk=0, 1, 2)$, normal and regular axioms in particular, several other neighbouring forms of them have been elaborated in many articals. In the year 1975, Maheshwari and Prasad [6] introduced a new class of spaces called s-normal space using semi open sets. Using the concept of generalized closed sets of Levine [5], T. Noiri and Papa [7] introduced g-regular and g-normal spaces in topological spaces. Sheik John [8] introduced and studied w-regular and w-normal spaces. Recently, Basavaraj M. Ittanagi et al [1, 2, and 3] introduced and studied basic properties of ws-closed sets, ws-continuous functions and ws-closed maps in topological spaces. In this paper, using the notion of ws-open sets, ws-separation axioms are introduced and studied. Also the relationships with some other functions are discussed.
+
+This chapter has four sections. In second section of this chapter, a new class of space known as ws- separation axioms namely ws-$\TST_{0}$ space, ws-$\TST_{1}$ space, ws-$\TST_{2}$ space, are introduced and studied. It is observed that each $\alpha$-$\TST_{0}$ is ws-$\TST_{0}$ space, each $\alpha$-$\TST_{1}$ is ws-$\TST_{1}$ space and each $\alpha$-$\TST_{2}$ is ws-$\TST_{2}$ space, few of its major results are obtained.
+
+\newpage
+
+In third section, we innovate the concepts of ws-regular spaces. It is observed that each ws-regular spaces are regular. Characterizations of ws-regular spaces in topological space are obtained.
+
+In fourth section, we establish the concept of ws-normal spaces by deliberating its characterization with its few properties.
+
+\section{\boldmath$\ws-\TST_{\TSk}$ Space $(\TSk=0,1,2)$}\label{sec8.2}
+
+\begin{dfn}\label{defi8.2.1}
+A topological space $\TSP$ is called an $\ws$-$\TST_{0}$ if for each pair of distinct points $1$, $2$ of $\TSP$, $\exists$ an ws-open sets $\TSH$ in $\TSP$ containing one of them and not the other.
+\end{dfn}
+
+\begin{exm}\label{exam8.2.2}
+Let $\TSP= \{1, 2, 3, 4\}$ and $\tau =\{\TSP, \phi, \{1\},\{2\},\{1,2\},\{1,2,3\}\}$ Then $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space. Seeing that for two distinct points `$1$' and `$2$' of $(\TSP, \tau)$ there exist an ws-open set $\{1\} \ni: 1 \in \{1\}$, $2 \not\in \{1\}$
+\end{exm}
+
+\begin{thm}\label{thm8.2.3}
+\begin{enumerate}[(i)]
+\item $\forall \TST_{0}$-space is $\ws$-$\TST_{0}$ space
+\item $\forall$ semi-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\alpha$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\TSg\#$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\ddot{g}$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\TSg\xi$*-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\TSg\#\TSs$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\rb$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ regular-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) Let $\TSP$ is a $\TST_{0}$ space. For each pair of disjoint points $\TSa$, $\TSb$ of $\TSP \exists$ open set $\TSH$ in $\TSP \ni: \TSa \in \TSH$, $\TSb \not\in \TSH$ and $\TSb \in \TSH$, $\TSa \not\in \TSH$. But every open set is $\ws$-open then $\exists$ $\ws$-open set $\TSH$ in $\TSP \ni: \TSa \in \TSH$, $\TSb \not\in \TSH$ and $\TSb\in \TSH$, $\TSa \not\in \TSH$. Henceforth $\TSP$ is a $\ws$-$\TST_{0}$ space.
+
+Similarly the remaining (ii to ix) results can be proved
+
+We use example \ref{exam8.2.4} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam8.2.4}
+Let $\TSP= \{1,2,3,4\}$ and $\tau =\{\TSP, \phi, \{1\}, \{1,2\},\{1, 2 ,3\}\}$. Then $\TSg\#$-(respectively $\ddot{g}$-, *$\TSg\alpha$) open $(\TSP, \tau)=\{\TSP, \phi, \{1\}, \{1,2\},\{1, 2,3\}\}$. $\alpha$-(semi-open, $\alpha\TSg\TSp$, $\TSg\#\TSs$, *$\TSg\alpha$) open $(\TSP, \tau) =\{\TSP,\phi, \{1\}, \{1,2\},\{1,3\},\{1,4\},\{1,2,3\},\{1,2,4\},\{1,3,4\}\}$, $\rb$-open=$\{\TSP, \phi, \{1\}\}$, $\ws$-open $(\TSP, \tau)=\{\TSP,\phi, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{1,4\},\break \{2,3\},\{1, 2, 3\},\{1,2, 3\},\{1, 3, 4\}\}$. Here $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space but it is not $\TST_{0}$-space, $\TSg\#$-$\TST_{0}$ space, $\ddot{g}$-$\TST_{0}$ space, *$\TSg\alpha$-$\TST_{0}$ space, $\alpha$-$\TST_{0}$ space, $\TSg\#\TSs$-$\TST_{0}$ space, $\TSg\xi$*-$\TST_{0}$ space and $\rb$-$\TST_{0}$ space. Seeing that for two distinct points `$1$' and `$2$' there do not exist open set, $\alpha$-open set, regular-open set $\TSG$ in $\TSP$ containing one of them and not the other.
+\end{exm}
+
+\begin{thm}\label{thm8.2.5}
+Let $\TSP$ is a topological space and $\TSQ$ is an $\ws$-$\TST_{0}$ space. If $\TSh: \TSP \to Q$ is injective and $\ws$-irresolute then $\TSP$ is $\ws$-$\TST_{0}$ space.
+\end{thm}
+
+\begin{proof}
+Suppose $\TSa$, $\TSb \in \TSP \ni:\TSa \neq \TSb$. Seeing that $\TSh$ is injective thus $\TSf(\TSa) \neq \TSf(\TSb)$. Also $\TSQ$ is $\ws$-$\TST_{0}$ space then $\exists$ a $\ws$-open sets $\TSM$ in $\TSQ \ni: \TSf(\TSa) \in \TSM$, $\TSf(\TSb) \not\in \TSM$ or $\exists$  a $\ws$-open sets $\TSN$ in $\TSQ \ni :\TSf(\TSb) \in \TSN$, $\TSf(\TSa) \not\in \TSN$ with $\TSf(\TSa) \neq \TSf(\TSb)$. Seeing that $\TSh$ is $\ws$-irresolute thus $\TSh^{-1} (\TSM)$ is a $\ws$-open sets in $\TSP \ni: \TSa \in \TSh^{-1} (\TSM)$, $\TSb \not\in \TSh^{-1} (\TSM)$ or $\TSh^{-1} (\TSN)$ is a $\ws$-open sets in $\TSP \ni:\TSb \in \TSh^{-1} (\TSN)$, a $\not\in \TSh^{-1} (\TSN)$. Hence $\TSP$ is $\ws$-$\TST_{0}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.6}
+$(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space iff for each pair of distinct $\TSa$, $\TSb$ of $\TSP$, $\ws$-$\cl(\{1\}) \neq \ws-\cl(\{2\})$.
+\end{thm}
+
+\begin{proof}
+Take $(\TSP, \tau)$ be $\ws$-$\TST_{0}$ space. Assume $\TSa$, $\TSb \in \TSP \ni:\TSa \neq \TSb$, thus $\exists$ a $\ws$-open set $\TSN$ containing one of the points but not the other, say a $\in \TSN$ and $\TSb \not\in \TSN$. Then $\TSN^{\text{C}}$ is $\ws$-closed containing $\TSb$ but not $\TSa$. But $\ws$-$\cl(\{2\})$ is the smallest $\ws$-closed set containing $\TSb$. Henceforth $\ws$-$\cl(\{2\}) \subset \TSN^{\text{c}}$ and hence $\TSa\not\in \ws$-$\cl(\{2\})$. Thus $\ws$-$\cl(\{1\}) \neq \ws$-$\cl(\{2\})$. Inversely, Pretend $\TSa$, $\TSb \in \TSP$, $\TSa\neq \TSb$ and $\ws$-$\cl(\{1\}) \neq \ws$-$\cl(\{2\})$. Assume $\TSc\in \TSP \ni: \TSc\in \ws$-$\cl(\{1\})$ but $\TSc \not\in \ws$-$\cl(\{2\})$. If a $\in \ws$-$\cl(\{2\})$ then $\ws$-$\cl(\{1\}) \subset \ws$-$\cl(\{2\})$ and hence $\TSc \in \ws$-$\cl(\{2\})$. This is a contradiction. Henceforth $\TSx\not\in \ws$-$\cl(\{2\})$. That is a $\in (\ws\text{-}\cl(\TSb))^{\text{c}}$. Henceforth ($\ws$-$\cl(\{2\}))^{\text{c}}$ is $\ws$-open set containing $\TSa$ but not $\TSb$. Hence $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space.
+\end{proof}
+
+\begin{dfn}\label{defi8.2.7}
+A topological space $\TSP$ is called a $\ws$-$\TST_{1}$ if for each pair of distinct points $\TSa$, $\TSb$ of $\TSP$, $\exists$ a $\ws$-open sets $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and $\TSb \in \TSH_{2}$, $\TSa \not\in \TSH_{2}$.
+\end{dfn}
+
+\begin{exm}\label{exam8.2.8}
+Let $\TSP= \{1, 2, 3\}$ and $\tau =\{\TSP, \phi, \{1\}, \{2, 3\}\}$. Then $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space. Seeing that for two distinct points `$1$' and `$2$' of $(\TSP, \tau) \exists$ an $\ws$-open set $\{1\}, \{2\} \ni: 1 \in \{1\}$, $2 \not\in \{1\}$ and $2 \in \{2\}$, $1 \not\in \{2\}$.
+\end{exm}
+
+\begin{thm}\label{thm8.2.9}
+\begin{enumerate}[(i)]
+\item $\forall$ $\TST_{1}$-space is $\ws$-$\TST_{1}$ space
+\item $\forall$ semi - $\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\alpha$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\TSg\#$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\ddot{g}$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\TSg\xi$*-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\TSg\#\TSs$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\rb$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ regular-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{itemize}
+\item[(i)] Take $\TSP$ is a $\TST_{1}$ space. For each pair of disjoint points $\TSa$, $\TSb$ of $\TSP \exists$  open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and a $\in \TSH_{2}$, $\TSb \not\in \TSH_{2}$. But each open set is $\ws$-open then $\exists$  $\ws$-open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and $\TSb \in \TSH_{2}$, $\TSa \not\in \TSH_{2}$ Henceforth $\TSP$ is a $\ws$-$\TST_{1}$ space.
+
+Similarly the remaining (ii to ix) results can be proved
+\end{itemize}
+\end{proof}
+
+We use example \ref{exam8.2.10} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam8.2.10}
+Let $\TSP= \{1,2,3,4\}$ and $\tau =\{\TSP, \phi, \{1\}, \{1, 2\},\{1, 2, 3\}\}$. Then $\TSg\#$-(respectively $\ddot{g}$-, *$\TSg\alpha$)open $(\TSP, \tau)=\{\TSP, \phi, \{1\}, \{1,2\},\{1, 2 ,3\}\}$. $\alpha$-(semi-open, $\alpha gp$, $\TSg\#\TSs$, *$\TSg\alpha$)open $(\TSP, \tau)=\{\TSP, \phi, \{1\}, \{1, 2\},\{1, 3\},\{1, 4\},\{1, 2, 3\},\{1, 2, 4\},\{1, 2, 4\}\}$, rb-open$=\{\TSP, \phi, \{1\}\}$, ws-open $(\TSP, \tau)=\{\TSP, \phi, \{1\},\{2\},\{3\},\{1, 2\},\{1, 3\},\{1, 4\},\break \{2 ,3\},\{1, 2, 3\},\{1, 2, 4\},\{1, 2, 4\}\}$. Here $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space but it is not $\TST_{1}$-space, $\TSg\#$-$\TST_{1}$ space, $\ddot{g}$-$\TST_{1}$ space, *$\TSg\alpha$-$\TST_{1}$ space, $\alpha$-$\TST_{1}$ space, $\TSg\#\TSs$-$\TST_{1}$ space, $\TSg\xi$*-$\TST_{1}$ space and rb-$\TST_{1}$ space. Seeing that for two distinct points `$1$' and `$2$' there do not exist open set, $\TSg\#$-open, $\ddot{g}$-open, *$\TSg\alpha$-open, $\alpha$-open, $\TSg\#\TSs$-open, $\TSg\xi$*-open and $\rb$-open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: 1 \in \TSH_{1}$, $2 \not\in \TSH_{1}$ and $2 \in \TSH_{2}$, $1 \not\in \TSH_{2}$.
+\end{exm}
+
+\begin{thm}\label{thm8.2.11}
+Let $\TSP$ is a topological space and $\TSQ$ is a $\ws$-$\TST_{1}$ space. If $\TSh: \TSP \to \TSQ$ is injective and $\ws$-irresolute then $\TSP$ is $\ws$-$\TST_{1}$ space.
+\end{thm}
+
+\begin{proof}
+Theorem \ref{thm8.2.5}.
+\end{proof}
+
+\begin{thm}\label{thm8.2.12}
+If $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space then $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space.
+\end{thm}
+
+\begin{proof}
+Take $(\TSP, \tau)$ be a $\ws$-$\TST_{1}$ space. For each pair of disjoint points $\TSa$, $\TSb$ of $(\TSP, \tau) \exists$ open sets $\TSH_{1}$, $\TSH_{2}$ in $(\TSP, \tau) \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and $\TSb \in \TSH_{2}$, $\TSa \not\in \TSH_{2}$. Hence we have $\TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$. Henceforth $(\TSP, \tau)$ is a $\ws$-$\TST_{0}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.13}
+A topological space $\TSP$ is $\ws$-$\TST_{1}$ space iff $\forall \TSx\in \TSP$ singleton $\{1\}$ is $\ws$-closed set in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take $\TSP$ be $\ws$-$\TST_{1}$ space and Assume $\TSa \in \TSP$, to show that $\{1\}$ is $\ws$-closed set. We will show $\TSP-\{1\}$ is $\ws$-open set in $\TSP$. take $\TSb \in \TSP-\{1\}$, implies $\TSa \neq \TSb \in \TSP$ and seeing that $\TSP$ is $\ws$-$\TST_{1}$ space thus $\exists$ two $\ws$-open sets $\TSH_{1}$, $\TSH_{2} \ni: \TSa \not\in \TSH_{1}$, $\TSb \in \TSH_{2} \subseteq \TSP-\{1\}$.
+
+Seeing that $\TSb\in \TSH_{2} \subseteq \TSP-\{1\}$ then $\TSP-\{1\}$ is $\ws$-open set. Hence $\{1\}$ is $\ws$-closed set. Inversely, let $\TSa \neq \TSb \in \TSP$ then $\{1\}$, $\{2\}$ are $\ws$-closed sets. That is $\TSP-\{1\}$ is $\ws$-open set. Clearly, $\TSa \not\in \TSP-\{1\}$ and $\TSb \in \TSP-\{2\}$. Similarly $\TSP-\{2\}$ is $\ws$-open set, $\TSb \not\in \TSP-\{2\}$ and $\TSa \in \TSP-\{2\}$. Hence $\TSP$ is $\ws$-$\TST_{1}$ space.
+\end{proof}
+
+\begin{dfn}\label{defi8.2.14}
+A topological space $\TSP$ is called a $\ws$-$\TST_{2}$ if for each pair of distinct points $\TSa$, $\TSb$ of $\TSP$, $\exists$ a $\ws$-open sets $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \in \TSH_{2}$ and $\TSH_{1} \cap \TSH_{2} = \phi$.
+\end{dfn}
+
+\begin{exm}\label{exam8.2.15}
+Let $\TSP= \{1,2,3\}$ and $\tau =\{\TSP, \phi, \{1\},\{2\}, \{1,2\}\}$. Then $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space. Seeing that for a pair of distinct points `$1$' and `$2$' of $(\TSP, \tau)$ there exist an $\ws$-open set $\{1\}, \{2\} \ni: 1 \in \{1\}, 2 \in \{2\}$ and $\{1\} \cap \{2\} = \phi$.
+\end{exm}
+
+\begin{thm}\label{thm8.2.16}
+\begin{enumerate}[(i)]
+\item Each $\TST_{2}$-space is $\ws$-$\TST_{2}$ space
+\item Each semi-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\alpha$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\TSg\#$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\ddot{g}$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\TSg\xi$*-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\TSg\#\TSs$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\rb$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each regular-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{itemize}
+\item[(i)] Let $\TSP$ is a $\TST_{2}$ space. $\forall$ pair of disjoint points $\TSa, \TSb$ of $\TSP \exists$ open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \in \TSH_{2}$ and $\TSH_{1} \cap \TSH_{2} = \phi$. But every open set is $\ws$-open then $\exists$  $\ws$-open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP\ni: \TSa \in \TSH_{1}$, $\TSb \in \TSH_{2}$ and $\TSH_{1} \cap \TSH_{2} = \phi$. Henceforth $\TSP$ is a $\ws$-$\TST_{2}$ space.
+
+Similarly the remaining (ii) to (ix) results can be proved.
+\end{itemize}
+\end{proof}
+
+\begin{thm}\label{thm8.2.17}
+If $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space then $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space.
+\end{thm}
+
+\begin{proof}
+Take up $(\TSP, \tau)$ be a $\ws$-$\TST_{2}$ space. $\forall$ pair of disjoint points $\TSa$, $\TSb$ of $(\TSP, \tau) \exists$ disjoint open sets $\TSK$ and $\TSL$ in $(\TSP, \tau) \ni: \TSa \in \TSK$ and $\TSb \in \TSL$. Hence we have $\TSa \in \TSK$, $\TSb \not\in \TSK$ and $\TSa \in \TSL$, $\TSb \not\in \TSL$. Henceforth $(\TSP, \tau)$ is a $\ws$-$\TST_{1}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.18}
+The given Statements are one and the same, for space $(\TSP, \tau)$,
+\begin{itemize}
+\item[(i)] $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space.
+\item[(ii)] If $\TSa \in \TSP$, then $\forall \TSa\neq b$, there will be $\ws$-open set $\TSK$ containing $\TSa \ni: \TSb \not\in \ws$-$\cl(\TSK)$.
+\end{itemize}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii) Let $\TSa \in \TSP$. If $\TSb \in \TSP$ is $\ni: \TSb \neq \TSa$, $\exists$ disjoint $\ws$-open sets $\TSK$ and $\TSL \ni: \TSa\in \TSK$ and $\TSb\in \TSL$.
+
+Then $\TSa \in \TSK \subset \TSP-\TSL$ which implies $\TSP-\TSL$ is $\ws$-open and $\TSb \not\in \TSP-\TSL$. Henceforth $\TSb \not\in \ws$-$\cl(\TSK)$.
+
+(ii) $\Rightarrow$ (i) Take up $\TSa$, $\TSb \in \TSP$ and $\TSa \neq\TSb$. By (ii), $\exists$ a $\ws$-open $\TSK$ containing $\TSa \ni: \TSb \not\in \ws$-$\cl(\TSK)$. Henceforth $\TSb\in \TSP-(\ws\text{-}\cl(\TSK))$. $\TSP-(\ws\text{-}\cl(\TSK))$ is $\ws$-open and $\TSa \in \TSP- (\ws\text{-}\cl(\TSK))$. Also $\TSK\cap\TSP-(\ws\text{-}\cl(\TSK)) = \Phi$. Hence $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.19}
+Pretend $\TSP$ be a topological space and $\TSQ$ is $\ws$-$\TST_{2}$ space. If $\TSh: \TSP \to \TSQ$ is injective and $\ws$-irresolute then $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSa$, $\TSb \in \TSP \ni: \TSa \neq \TSb$. Seeing that $\TSh$ is injective, implies $\TSh(\TSa) \neq \TSh(\TSb)$. Also $\TSQ$ is $\ws$-$\TST_{2}$ space thus there are two $\ws$-open sets $\TSM$ and $\TSN$ in $\TSQ \ni: \TSh(\TSa) \in \TSM$, $\TSh(\TSb) \in \TSN$ and $\TSM\cap \TSN=\Phi$. Seeing that $\TSh$ is $\ws$-irresolute thus $\TSh^{-1}(\TSM)$, $\TSh^{-1} (\TSN)$ are two $\ws$-open sets in $\TSP$, $\TSa \in \TSh^{-1} (\TSM)$, $\TSb \in \TSh^{-1} (\TSN)$, $\TSh^{-1} (\TSM) \cap \TSh^{-1} (\TSN) = \Phi$. Hence $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.20}
+Pretend $\TSP$ is a topological space and $\TSQ$ is a $\TST_{2}$ space. If $\TSh: \TSP \to \TSQ$ is injective and $\ws$-continuous then $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSa$, $\TSb \in \TSP \ni: \TSa \neq \TSb$. Seeing that $\TSh$ is injective, implies $\TSf(\TSa) \neq \TSf(\TSb)$. Also $\TSQ$ is an $\TST_{2}$ space, thus there are two open set $\TSM$ and $\TSN$ in $\TSQ$, $\ni: \TSh(\TSa) \in \TSM$, $\TSh(\TSb) \in \TSN$ and $\TSM\cap\TSN =\Phi$. Seeing that $\TSh$ is $\ws$-continuous thus $\TSh^{-1} (\TSM)$, $\TSh^{-1} (\TSN)$ are two $\ws$-open sets in $\TSP$.
+
+Then $\TSa \in \TSh^{-1} (\TSM)$, $\TSb \in \TSh^{-1} (\TSM)$, $\TSh^{-1} (\TSM) \cap \TSh^{-1} (\TSN) =\Phi$. Hence $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\section{\boldmath$\ws$-Regular Space}\label{sec8.3}
+
+In this section, we determine a new kind of spaces called $\ws$-regular spaces using $\ws$-closed sets and verified some of their related characterizations.
+
+\begin{dfn}\label{defi8.3.1}
+A topological space $\TSP$ is termed as $\ws$-regular if for each $\ws$-closed set $\TSF$ and a point $\TSa \not\in \TSF$, $\exists$ disjoint open sets $\TSG$ and $\TSH \ni: \TSF \subseteq \TSG$ and $\TSP \in \TSH$. We have the following interrelationship between $\ws$-regularity and regularity.
+\end{dfn}
+
+\begin{thm}\label{thm8.3.2}
+Each $\ws$-regular space is regular.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be $\ws$-regular space. Assume $\TSF$ be any closed set in $\TSP$ and a point $\TSa \in \TSP \ni: \TSa \not\in \TSF$. and $\TSF$ is $\ws$-closed and $\TSa \not\in \TSF$. Seeing that $\TSP$ is $\ws$-regular space, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH \ni: \TSF \subseteq \TSG$ and $\TSa \in \TSH$. Hence $\TSP$ is a regular space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.3}
+Pretend $\TSP$ is a regular space and $\TST_{\ws}$-space, then $\TSP$ is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a regular space and $\TST_{\ws}$-space. Assume $\TSF$ be any $\ws$-closed set in $\TSP$ and a point $\TSa \in \TSP \ni: \TSa\not\in \TSF$. Seeing that $\TSP$ is $\TST_{\ws}$-space. $\TSF$ is closed and $\TSa \not\in \TSF$. Seeing that $\TSP$ is a regular space, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH \ni: \TSF \subseteq \TSG$ and $\TSP \epsilon \TSH$. Hence $\TSP$ is $\ws$-regular space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.4}
+Each subspace of a $\ws$-regular space is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Take $\TSP$ be $\ws$-regular space. Assume $\TSQ$ be a subspace of $\TSP$. Let $\TSa \in \TSQ$ and $\TSF$ be a $\ws$-closed set in $\TSQ \ni: \TSa \in \TSF$. Thus there is a closed set and so $\ws$-closed set $\clrD$ of $\TSP$ with $\TSF = \TSQ \cap \TSD$ and $\TSP \in \TSD$. Therefore we have $\TSa \in \TSP$, $\clrD$ is $\ws$-closed in $\TSP \ni: \TSa \in \TSD$. Seeing that $\TSP$ is $\ws$-regular, $\exists$  open sets $\TSG$ and $\TSH \ni: \TSa \in \TSG$, $\TSD\subseteq \TSH$ and $\TSG \cap \TSH = \Phi$. Note that $\TSQ \cap \TSG$ and $\TSQ \cap \TSH$ are open sets in $\TSQ$. Also $\TSa \in \TSG$ and $\TSa \in \TSQ$, which implies $\TSP \in \TSQ \cap \TSG$ and $\clrD \subseteq \TSH$ implies $\TSQ \cap \clrD \subseteq \TSQ \cap \TSH$, $\TSF \subseteq \TSQ \cap \TSH$. Also $(\TSQ \cap \TSG) \cap (\TSQ \cap \TSH) = \Phi$. Hence $\TSQ$ is $\ws$-regular space. We have yet another characterization of $\ws$-regularity in the following.
+\end{proof}
+
+\begin{thm}\label{thm8.3.5}
+Let $\TSP$ is a space. Pretend $\TSP$ is a $\ws$-regular and a $\TST_{1}$ space then $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSa$, $\TSb \in \TSP \ni: \TSa = \TSb$. Seeing that $\TSP$ is $\TST_{1}$-space thus $\exists$ an open set $\TSM \ni:\TSa \in \TSM$, $\TSb \in \TSM$. Seeing that $\TSP$ is $\ws$-regular space and $\TSM$ is an open set which contains $\TSa$, $\exists$  an $\ws$-open set $\TSN \ni: \TSa\in N\subset \ws$-$\cl(\TSN) \subseteq \TSM$. Seeing that $\TSb \in \TSM$, hence $\TSb \in \ws$-$\cl(\TSN)$. Therefore $\TSb \in \TSP$-($\ws$-$\cl(\TSN)$). Hence there are $\ws$-open sets $\TSN$ and $\TSP$-($\ws$-$\cl(\TSN)) \ni:(\TSP\text{-}(\ws-\cl(N)))\cap \TSN = \Phi$. Hence $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.6}
+Let $\TSh: \TSP \to \TSQ$ be a bijective, $\ws$-closed map from a topological space $\TSP$ into a $\ws$-regular space $\TSQ$. If $\TSP$ is $\TST\ws$-space, then $\TSP$ is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Take up $\TSa \in \TSP$ and $\TSF$ be $\ws$-closed set in $\TSP$ with $\TSa \in \TSF$. Seeing that $\TSP$ is $\TST\ws$-space, $\TSF$ is closed in $\TSP$. Then $\TSh(\TSF)$ is $\ws$-closed set with $\TSh(P) \in \TSh(\TSF)$ in $\TSQ$, Seeing that $\TSh$ is $\ws$-closed. As $\TSQ$ is $\ws$-regular, $\exists$ disjoint open sets $\TSM$ and $\TSN \ni: \TSh(\TSa) \in \TSM$ and $\TSh(\TSF) \subseteq \TSN$. Henceforth $\TSa \in \TSh^{-1}(\TSM)$ and $\TSF \subseteq \TSh^{-1} (\TSN)$. Hence $\TSP$ is $\ws$-regular space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.7}
+The given below statements are one and the same. for space $\TSP$.
+\begin{enumerate}[(i)]
+\item $\TSP$ is $\ws$-regular space.
+\item For each $\TSa \in \TSP$ and each $\ws$-open neighbourhood $\TSM$ of $\TSP$ $\exists$ an open neighbourhood $\TSN$ of $\TSP\ni: \cl (\TSN) \subseteq \TSM$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii): Pretend $\TSP$ is a $\ws$-regular space. Let $\TSM$ be any $\ws$-neighbourhood of $\TSP$. Then $\exists$ $\ws$-open set $\TSH \ni: \TSa \in \TSH \subseteq \TSM$. Now $\TSP-\TSH$ is $\ws$-closed set and $\TSa \in\TSP - \TSH$. Seeing that $\TSP$ is $\ws$-regular $\exists$ open sets $\TSM$ and $\TSN \ni: \TSP - \TSH \subseteq \TSM$, $\TSa\in \TSN$ and $\TSM\cap \TSN = \phi$ and so $\TSN \subseteq \TSP -\TSM$. Now $\cl(\TSN) \subseteq \cl(\TSP - \TSM) = \TSP -\TSM$ and $\TSP - \TSH \subseteq \TSM$. This implies $\TSP - \TSM \subseteq \TSH \subseteq \TSM$. Therefore $\cl(\TSN) \subseteq \TSM$.
+
+(ii) $\Rightarrow$ (i): Pretend $\TSF$ be any $\ws$-closed set in $\TSP$ and $\TSa \not\in \TSF$ or $\TSa \in \TSP -\TSF$ and $\TSP -\TSF$ is a $\ws$-open and so $\TSP -\TSF$ is a $\ws$-neighbourhood of $\TSP$. By hypothesis, $\exists$ an open neighbourhood $\TSN$ of $\TSa \ni: \TSa \in \TSN$ and $\cl(\TSN) \subseteq \TSP -\TSF$. This implies $\TSF \subseteq \TSP -\cl(\TSN)$ is an open set containing $\TSF$ and $\TSN \cap \{(\TSP - \cl(\TSN)\} = \phi$. Hence $\TSP$ is $\ws$-regular space. We have another characterization of $\ws$-regularity in the following.
+\end{proof}
+
+\begin{thm}\label{thm8.3.8}
+$\TSP$ is topological space is $\ws$-regular iff for each $\ws$-closed set $\TSF$ of $\TSP$ and each $\TSa \in \TSP -\TSF$ $\exists$ open sets $\TSG$ and $\TSH$ of $\TSP \ni: \TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\cl(\TSG) \cap \cl(\TSH) = \phi$.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSP$ is $\ws$-regular space. Assume $\TSF$ be a $\ws$-closed set in $\TSP$ with $\TSa \in \TSF$. Then $\exists$ open sets $\TSM$ and $\TSH$ of $\TSP \ni: \TSa \in \TSM$, $\TSF \subseteq \TSH$ and $\TSM \cap\TSH = \phi$. This implies $\TSM \cap \cl(\TSH) = \phi$. As $\TSP$ is $\ws$-regular, $\exists$ open sets $\TSM$ and $\TSN \ni: \TSa \in \TSM$, $\cl(\TSH) \subseteq \TSN$ and $\TSM \cap \TSN = \Phi$, so $\cl(\TSM) \cap \TSN = \Phi$. Assume $\TSG = \TSM \cap \TSM$, then $\TSG$ and $\TSH$ are open sets of $\TSP \ni: \TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\cl(\TSH) \cap \cl(\TSH) = \phi$. Inversely, if for each $\ws$-closed set $\TSF$ of $\TSP$ and each $\TSa \in \TSP- \TSF \ni:$ open sets $\TSG$ and $\TSH \ni: \TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\cl(\TSH) \cap \cl(\TSH) = \Phi$. This implies $\TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\TSG \cap \TSH = \phi$. Hence $\TSP$ is $\ws$-regular. Now we prove that $\ws$-regularity is a hereditary property.
+\end{proof}
+
+\begin{thm}\label{thm8.3.9}
+$\TSP$ is a topological space then results given below are one and the same.
+\begin{enumerate}[(i)]
+\item $\TSP$ is $\ws$-regular
+\item For each $\TSa \in \TSP$ and each $\ws$-open set $\TSM$ in $\TSP \ni: \TSP \in \TSM$ $\exists$ an open set $\TSV$ in $\TSP \ni: \TSP \in \TSN \subseteq \cl(\TSN) \subseteq \TSM$
+\item For each point $\TSa\in \TSP$ and for each $\ws$-closed set $\TSA$ with $\TSP \in \TSD$, $\exists$ an open set $\TSN$ containing $\TSP \ni: \cl(\TSN) \cap \clrD = \Phi$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii): Follows from Theorem \ref{thm8.3.5}.
+
+(ii) $\Rightarrow$ (iii): Suppose (ii) holds. Assume $\TSa \in \TSP$ and $\clrD$ be a $\ws$-closed set of $\TSP \ni: \TSa \in \clrD$. Then $\TSP-\TSD$ is a $\ws$-open set with $\TSa \in \TSP-\clrD$. By hypothesis, $\exists$ an open set $\TSN \ni: \TSP \in \TSN \subseteq \cl(\TSN) \subseteq \TSP -\clrD$.
+
+That is $\TSP \in \TSN$, $\TSN \subseteq \cl (\clrD)$ and $\cl(\clrD) \subseteq \TSP -\clrD$. So $\TSP \in \TSN$ and $\cl(\TSN) \cap \clrD = \Phi$.
+
+(iii)$\Rightarrow$ (ii): Let $\TSa \in \TSP$ and $\TSM$ is a $\ws$-open set in $\TSP \ni: \TSa \in \TSM$. Then $\TSP -\TSM$ is a $\ws$-closed set and $\TSa \in \TSP -\TSM$. Then by hypothesis, $\exists$ an open set $\TSN$ containing $\TSP \ni: \cl (\TSN) \cap (\TSP -\TSM) = \Phi$. Therefore $\TSa \in \TSN$, $\cl (\TSN) \subseteq \TSM$ so $\TSP \in \TSN \subseteq \cl(\TSN) \subseteq \TSM$. The invariance of $\ws$-regularity is given in the following.
+\end{proof}
+
+\begin{thm}\label{thm8.3.10}
+Pretend $\TSh: \TSP \to \TSQ$ be a bijective, $\ws$-irresolute and open map from a $\ws$-regular space $\TSP$ ino a topological space $\TSQ$, then $\TSQ$ is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSb \in \TSQ$ and $\TSF$ be a $\ws$-closed set in $\TSQ$ with $\TSb \in \TSF$. Seeing that $\TSh$ is $\ws$-irresolute, $\TSh^{-1} (\TSF)$ is $\ws$-closed set in $\TSP$. Let $\TSh(\TSa) = \TSb$ so that $\TSa = \TSh^{-1} (\TSb)$ and $\TSa \in \TSh^{-1} (\TSF)$. Again $\TSP$ is $\ws$-regular space, $\exists$ open sets $\TSM$ and $\TSN \ni: \TSa \in \TSM$ and $\TSh^{-1} (\TSF) \subseteq \TSG$, $\TSM \cap\TSN = \Phi$. Seeing that $\TSh$ is open and bijective, we have $\TSb \in \TSh(\TSM)$, $\TSF \subseteq \TSh(\TSN)$ and $\TSh(\TSM) \cap \TSh(\TSN)= \TSh(\TSM \cap \TSN) = \TSh(\Phi) = \Phi$. Hence $\TSQ$ is $\ws$-regular space.
+\end{proof}
+
+\section{\boldmath$\ws$-Normal Spaces}
+
+In this section, we introduce the concept of $\ws$-normal spaces and study some of their characterizations.
+
+\begin{dfn}\label{defi8.4.1}
+A topological space $\TSP$ is said to be $\ws$-normal if $\forall$ pair of disjoint $\ws$-closed sets $\clrD$ and $\TSE$ in $\TSP$, $\exists$ a pair of disjoint open sets $\TSM$ and $\TSN$ in $\TSP \ni: \clrD \subseteq \TSM$ and $\TSE \subseteq \TSN$. We have the following interrelationship.
+\end{dfn}
+
+\begin{thm}\label{thm8.4.2}
+Each $\ws$-normal space is normal.
+\end{thm}
+
+\begin{proof}
+Take $\TSP$ be a $\ws$-normal space. Assume $\clrD$ and $\TSE$ be a pair of disjoint closed sets in $\TSP$. And $\clrD$ and $\TSE$ are $\ws$-closed sets in $\TSP$. Seeing that $\TSP$ is $\ws$-normal, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. Hence $\TSP$ is normal. 
+
+We use the following example to prove the inverse of the theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam8.4.4}
+Let Let $\TSP=\{1,2,3,4\}$, $\tau= \{\TSP, \{1\},\{2\},\{1,2\},\{1,2,3\}\}$ Then the space $\TSP$ is normal but not $\ws$-normal, seeing that the pair of disjoint $\ws$-closed sets namely, $\clrD =\{1\}$ for which there do not exists disjoint open sets $\TSG$ and $\TSH \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$.
+\end{exm}
+
+\begin{thm}\label{thm8.4.5}
+A $\ws$-closed subspace of a $\ws$-normal space is $\ws$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be $\ws$-normal space. Assume $\TSQ$ be a $\ws$-closed subspace of $\TSP$. Pretend $\clrD$ and $\TSE$ be pair of disjoint $\ws$-closed sets in $\TSQ$. Thus $\clrD$ and $\TSE$ be pair of disjoint $\ws$-closed sets in $\TSP$. seeing that $\TSP$ is $\ws$-normal, $\exists$ disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. 
+
+Seeing that $\TSG$ and $\TSH$ are open in $\TSP$, $\TSQ \cap \TSG$ and $\TSQ \cap \TSH$ are open in $\TSQ$. Also we have $\clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$ implies $\TSQ \cap \clrD \subseteq \TSQ \cap \TSG$, $\TSQ \cap \TSE \subseteq \TSQ \cap \TSH$. So $\clrD \subseteq \TSQ \cap \TSG$ and $\TSE \subseteq \TSQ \cap \TSH$ and $(\TSQ \cap \TSG)\cap (\TSQ \cap \TSH) = \TSQ \cap (\TSG\cap \TSH) = \phi$. Hence $\TSQ$ is $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.6}
+If $\TSP$ is normal and $\TST\ws$-space, then $\TSP$ is $\ws$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a normal space. Assume $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$. Seeing that $\TST\ws$-space, $\clrD$ and $\TSE$ are closed sets in $\TSP$. Also $\TSP$ normal, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. Hence $\TSP$ is $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.7}
+Each $\ws$-normal space is $\TSw$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a $\ws$-normal space. Assume $\clrD$ and $\TSE$ be a pair of disjoint $\TSw$-closed sets in $\TSP$. $\clrD$ and $\TSE$ are $\ws$-closed sets in $\TSP$. seeing that $\TSP$ is $\ws$-normal, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. Hence $\TSP$ is $\TSw$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.8} 
+Map $\TSh: \TSP \to \TSQ$ is bijective, open, $\ws$-irresolute from a $\ws$-normal space $\TSP$ onto $\TSQ$ then is $\ws$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ and $\TSE$ be disjoint $\ws$-closed sets in $\TSQ$. Thus $\TSh^{-1} (\clrD)$ and $\TSh^{-1} (\TSE)$ are disjoint $\ws$-closed sets in $\TSP$ as $\TSh$ is $\ws$-irresolute. Seeing that $\TSP$ is $\ws$-normal, $\exists$ disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \TSh^{-1} (\clrD) \subseteq \TSG$ and $\TSh^{-1} (\TSE) \subseteq \TSH$. As $\TSh$ is bijective and open, $\TSh(\TSG)$ and $\TSh(\TSH)$ are disjoint open sets in $\TSQ \ni: \clrD \subseteq \TSh(\TSG)$ and $\TSE \subseteq \TSh(\TSH)$. Hence $\TSQ$ is $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.9}
+The following statements for a space $\TSP$ are one and the same:
+\begin{enumerate}[(1)]
+\item $\TSP$ is $\ws$-normal.
+\item $\forall$ $\ws$-closed set $\clrD$ and each $\ws$-open set $\TSK \ni: \clrD \subseteq \TSM$, $\exists$ an open set $\TSN \ni: \clrD \subseteq \TSL \subseteq \cl(\TSL) \subseteq \TSM$.
+\item For any disjoint $\ws$-closed sets $\clrD$, $\TSE$, $\exists$ an open set $\TSL \ni: \clrD \subseteq \TSL$ and $\cl(\TSL) \cap \TSE = \Phi$.
+\item For each pair $\clrD$, $\TSE$ of disjoint $\ws$-closed sets there exist open sets $\TSM$ and $\TSL \ni: \TSD \subseteq \TSM$, $\TSE \subseteq \TSL$ and $\cl(\TSM) \cap \cl(\TSL) = \Phi$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(1) $\Rightarrow$ (2): Take $\clrD$ be a $\ws$-closed set and $\TSM$ be a $\ws$-open set $\ni: \clrD \subseteq \TSM$. 
+
+Then $\clrD$ and $\TSP -\TSM$ are disjoint $\ws$-closed sets in $\TSP$. Seeing that $\TSP$ is $\ws$-normal, $\exists$ a pair of disjoint open sets $\TSL$ and $\TSW$ in $\TSP \ni: \clrD \subseteq \TSL$ and $\TSP -\TSM \subseteq \TSW$.
+
+Now $\TSP -\TSW \subseteq \TSP - (\TSP -\TSM)$, so $\TSP -\TSW \subseteq \TSM$ also $\TSL \cap\TSW = \Phi$ implies $\TSL \subseteq \TSP -\TSW$, so $\cl(\TSL) \subseteq \cl(\TSP -\TSW)$ which implies $\cl(\TSL) \subseteq \TSP - \TSW$. Henceforth $\cl(\TSL) \subseteq \TSP -\TSW \subseteq \TSM$. So $\cl (\TSL) \subseteq \TSM$. Hence $\clrD \subseteq \TSL \subseteq \cl(\TSL) \subseteq \TSM$.
+
+(2) $\Rightarrow$ (3): Let $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$.
+
+Now $\clrD\cap\TSE = \Phi$, so $\TSD\subseteq \TSP -\TSE$, where $\clrD$ is $\ws$-closed and $\TSP - \TSE$ is $\ws$-open. Then by (ii) $\exists$ an open set $\TSL \ni: \clrD \subseteq \TSL \subseteq \cl(\TSL) \subseteq \TSP - \TSE$. Now $\cl (\TSL) \subseteq \TSP -\TSE$ implies $\cl(\TSL) \cap \TSE =\Phi$. Thus $\clrD \subseteq \TSL$ and $\cl(\TSL) \cap \TSE = \Phi$.
+
+(3) $\Rightarrow$ (4): Let $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$. Then from (iii) $\exists$ an open set $\TSM \ni: \clrD \subseteq \TSM$ and $\cl (\TSM) \cap\TSE = \Phi$. Seeing that $\cl (\TSL)$ is closed, so $\ws$-closed set. Therefore $\cl(\TSL)$ and $\TSE$ are disjoint $\ws$-closed sets in $\TSP$. By hypothesis, $\exists$ an open set $\TSL$, $\ni: \TSE \subseteq \TSL$ and $\cl (\TSM)\cap \cl (\TSL) = \Phi$.
+
+(4) $\Rightarrow$ (1): Let $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$. Then from (iv) $\exists$ an open sets $\TSM$ and $\TSL$ in $\TSP \ni: \clrD \subseteq \TSM$, $\TSE \subseteq \TSL$ and $\cl (\TSM) \cap\cl (\TSL) = \Phi$. So $\clrD \subseteq \TSE \subseteq \TSL$ and $\TSM \cap \TSL = \Phi$. Hence $\TSP$ $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.10}
+Let $\TSP$ be a topological space. Then the following are one and the same:
+\begin{enumerate}[(1)]
+\item $\TSP$ is normal.
+\item For any disjoint closed sets $\clrD$ and $\TSE$, $\exists$ disjoint $\ws$-open sets $\TSM$ and $\TSL \ni: \clrD \subseteq \TSM$, $\TSE \subseteq \TSL$.
+\item For any closed set $\clrD$ and any open set $\TSL \ni: \clrD \subseteq \TSL$, $\exists$ an $\ws$-open set $\TSM$ of $\TSP \ni: \clrD \subseteq \TSM \subseteq \alpha$-$\cl(\TSM) \subseteq \TSL$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(1) $\Rightarrow$ (2): Suppose $\TSP$ is normal. Seeing that each open set is $\ws$-open [ ], (ii) follows.
+
+(2) $\Rightarrow$ (3): Suppose (ii) holds. Let $\clrD$ be a closed set and $\TSL$ be an open set containing $\clrD$. Then $\clrD$ and $\TSP -\TSL$ are disjoint closed sets. By (ii), $\exists$  disjoint $\ws$-open sets $\TSM$ and $\TSW \ni: \clrD\subseteq \TSM$ and $\TSP-\TSL \subseteq \TSW$, seeing that $\TSP -\TSL$ is closed, so $\ws$-closed. From Theorem \ref{thm2.3.14} [2], we have $\TSP -\TSL \subseteq \alpha\text{ int} (\TSW)$ and $\TSM \cap \alpha\text{ int} (\TSW) = \Phi$ and so we have $\Cl (\TSM) \cap \alpha\text{ int} (\TSW) = \Phi$. Hence $\clrD \subseteq \TSM \subseteq \alpha-\cl(\TSM) \subseteq \TSP -\alpha\text{ int}(\TSW) \subseteq \TSL$. Thus $\clrD\subseteq\TSM \subseteq \alpha-\cl (\TSM) \subseteq \TSL$.
+
+(3) $\Rightarrow$ (1): Let $\clrD$ and $\TSE$ be a pair of disjoint closed sets of $\TSP$. Then $\TSA \subseteq \TSP-\TSE$ and $\TSP-\TSE$ is open. $\exists$ a $\ws$-open set $\TSG$ of $\TSP \ni: \clrD \subseteq \TSG \subseteq \alpha-\cl (\TSG) \subseteq \TSP-\TSE$. Seeing that $\clrD$ is closed, it is $\ws$-closed, we have $\clrD \subseteq \text{ int} (\TSG)$. Take $\TSM =\text{int} (\cl (\text{int} (\alpha\text{ int} (\TSG))))$ and $\TSL = \text{int} (\cl (\text{int}(\TSP-\alpha\cl (\TSG))))$. Then $\TSM$ and $\TSL$ are disjoint open sets of $\TSP \ni: \TSA \subseteq \TSM$ and $\TSE \subseteq \TSL$. Hence $\TSP$ is normal.
+\end{proof}
+
+\begin{thebibliography}{99}
+\bibitem{key1} [abd] M. E. Abd El-Monsef, S. N. El-Deeb and R. A. Mahmoud, $\beta$-open sets and $\beta$ continuous mappings, Bull. Fac. Sci. Assut Univ., 12(1983), 77--90.
+\bibitem{key2} [Abd1]A S Mashhour Abd M E El-Monsef and S N El-Deeb, On pre-continuous and weak pre continuous mappings, Proc. Math. Phys. Soc. Egypt, 53 (1982), 47--53.
+\bibitem{key3}  [Ahmad] Ahmad Al-Omari and Mohd. Salmi and Md. Noorani, On Generalized b-Closed Sets, Bull. Malays.Math. Sci. Soc. (2) 32(1) (2009), 19--30.
+\bibitem{key4}  [Anitha] M.Anitha and P.Thangavelu, On Pre-Generalized pre-regular closed sets, Acta Ciencia Indica, 31M(4)(2005), 1035--1040.
+\bibitem{key5} [Ganster] I. Arockiarani, K. Balachandran and M. Ganster, Regular generalized locally closed sets and RGL-Continuous functions Indian J. Pure appl. Math., 28(5) (1997), 661--669.
+\bibitem{key6} [Arockiarani] I. Arockiarani, Studies on generalizations of generalized closed sets and maps in topological spaces, Ph.D Thesis, Bharathiar University, Coimbatore, (1997).
+\bibitem{key7} [Arya1] S.P. Arya and R. Gupta, On strongly continuous mappings, Kyungpook Math., J. 14(1974), 131--143.
+\bibitem{key8} [Arya] S. P. Arya and T. M. Nour, Charactarization of S-normal spaces, Indian J. Pure Appl. Math  21(1990), 717--719.
+\bibitem{key9}  [Arya2] S. P. Arya and T. M. Nour, Separation axioms for bitopological spaces, Indian J. Pure Appl. Math., 19(1998), 42--50.
+\bibitem{key10} [Baker] Baker C W, Contra open and Contra Closed functions, Math. Sci., 1994, 17:413--415.
+\bibitem{key11} [Basavaraj] Basavaraj M Ittanagi and Veeresha A Sajjanar ``On weakly semi closed sets in Topological spaces''  International Journal Of Mathematical Archive-8(9), 2017, 126--134 8(9), 126--134.
+\bibitem{key12}  [Benchalli] S.S. Benchalli and R.S. Wali, On RW-closed sets in topological spaces, Malays. Math. sci. Soc. 30 (2007), 99--110.
+\bibitem{key13} [Benchalli1] S.S. Benchalli, P.G. Patil and T.D. Rayanagaudar, $\omega\alpha$-Closed sets is Topological Spaces, The global j. Appl. Math. Sci. 2, 53--63.
+\bibitem{key14} [Benchalli2] S.S. Benchalli, P.G. Patil and P.M. Nalwad. Genaralized  $\omega\alpha$-Closed sets is Topological Spaces, The journal of new results in science Number: 7, Year: 2014, Pages: 7--19.
+\bibitem{key15} [Bhattacharya1] Sharmistha Bhattacharya, On Generalized Regular Closed Sets, Int. J. Contemp. Math.  
+\bibitem{key16} [Bhattacharyya]	P. Bhattacharyya and B.K.Lahiri, Semi-generalized closed sets in topology, Indian J. Math., 29 	(1987), 376--382.
+\bibitem{key17} [Biswas] N. Biswas, On characterization of semi-continuous functions, Atti Accad. Naz. Lincei Rend, Cl. Sci. Fis. Mat. Natur. 48(8)(1970), 399--402.
+\bibitem{key18} [Bourbaki] N. Bourbaki, General topology Part I, Addison-Wesley, Reading, Mass (1966).
+\bibitem{key19} [Cameron] D.E. Cameron, Properties of s-closed spaces Proc. Amer. Math. Soc., 72 (1978), 581--586.(regular semi open) Coimbatore (2009).
+\bibitem{key20} [Crossley] S.G. Crossley and S.K. Hildebrand, Semi topological properties, Fund. Math., 74(1972), 233--254.
+\bibitem{key21} [Devi] K.Nono, R.Devi, M.Devipriya, K. Muthukumaraswamy and H. Maki, On $\TSg\#\alpha$-closed sets and the Digital Plane, Bull. Fukuoka Univ. Ed. Part III, 53(2004), 15--24.
+\bibitem{key22} [Dhanapakyam] C. Dhanapakyam, J. Subashini and K. Indirani, ON - $\beta wg$∗ set and continuity in topological spaces, IJMA-5(5), 2014, 222--233.
+\bibitem{key23} [Dontchev1] J Dontchev, Contra continuous functions and Strongly s-closed spaces, Int. J. Math. Sci. 19(1996), 15--31.
+\bibitem{key24} [Dontchev] J. Dontchev, On generalizing semi pre open sets, Mem. Fac. Sci. Kochi Univ. Scr. A. 
+\bibitem{key25} [Dontchev2] J. Dontchev and T. Noiri, Quasi-normal spaces and g-closed sets, Acta Math. Hungar. 89(3)(2000), 211--219.
+\bibitem{key26} [Fukutake2] T. Fukutake, On generalized closed sets in bitopological spaces, Bull. Fukuoka Univ. Ed. Part III, 35(1986), 19--28.
+\bibitem{key27} [Fukutake] T. Fukutake, P. Sundaram and N, Nagaveni, On weakly generalized closed sets, weakly generalized continuous maps and Twg spaces in bitopological spaces, Bull. Fukuoka Univ. Ed. Part III, 48(1999), 30--40.
+\bibitem{key28}  [Gnanambal] Y. Gnanambal, Studies on generalized pre-regular closed sets and generalization of locally closed sets, Ph.D, Thesis Bharathiar University, Coimbatore, (1998).
+\bibitem{key29} [Gnanambal1] T. Sampoornam, Gnanambal Ilango and N. Selvanayaki, Generalized Pre-Semi Closed Sets. In Topological Spaces, International Journal of Mathematical Archive-4(6), 2013, 151--154.
+\bibitem{key30} [Indirani] K. Indirani and G. Sindhu, On Regular Generalized Star B closed sets, IJMA. International Journal of general topology, 2(1)(2009), 21--30.
+\bibitem{key31}  [Janaki1] A. Jayalakshmi  \& C. Janaki, On wgr$\alpha$-Closed Sets in Topological Spaces, International Journal of Mathematical Archive-3(6), 2012, 2386--2392 KBM  Journal of Mathematical Sciences and computer Applications 2010 1(1): 9--17.
+\bibitem{key32} [Janaki2] Savithiri D and Janaki C,. On Regular Generalized closed sets in topological spaces.
+\bibitem{key33} [Janaki3] C. Janaki and Renu Thomas, On R* closed sets in topological space s, IJMA-3(8), 2012, 3067--3074.
+\bibitem{key34} [Jastad] O.N. Jastad, On some classes of nearly open sets, Pacific J. Math, 15(1965), 961--970.
+\bibitem{key35} [Kelly] J.C. Kelly, Bitopological spaces, Proc. London Math. Soc., 13 (1963), 71--81.
+\bibitem{key36} M. Vivek Prabu, Generalized $\zeta$∗-closed sets in topological spaces, International journal of mathematical archive, 4(5)(2013), 274--279.
+\bibitem{key37} [Levine1] N. Levine, Semi open sets and Semi Continuity in Topological spaces, Amer. Math. Monthly, 70(1963) 36--41.
+\bibitem{key38} [Levine] N. Levine, Generalized closed sets in topology, Rend. Circ. Mat. Palermo,  19(2)(1970), 89--96.
+\bibitem{key39} [Levine2] N. Levine, Strong continuity in topological spaces, Amer. Math. Monthly, 67(1960), 269.
+\bibitem{key40} [Long] Long PE, Herington LL. Basic Properties of Regular Closed Functions, Rend. Cir. Mat. Palermo1978; 27:20--28. 
+\bibitem{key41} [Maheshwari] S.N. Maheshwari and R. Prasad, on s normal spaces, Bull. Math. Soc. Sci. Math. R.S. Roumanie 22 (1978) 27--28.
+\bibitem{key42} [Maki2] K. Balachandran, P. Sundaram and H. Maki, On generalized continuous maps in topological spaces, Mem. Fac. Kochi Univ. Math., 12(1991), 5--13. 
+\bibitem{key43} [Maki3] H. Maki, R. Devi and K. Balachandran, Associated topologies of generalized $\alpha$-closed sets and $\alpha$-generalized closed sets, Mem. Fac. Sci. Kochi Univ. Ser. A. Math., 15 (1994), 51--63.
+\bibitem{key44} [Maki4] R. Devi, H. Maki and V. Kokilavani, The Group Structure of #g$\alpha$-Closed Sets in Topological Spaces.
+\bibitem{key45} [Maki5] Balachandran K, Sundaram P, Maki H. On Generalized homeomorphisms in Topological Spaces, Fukuoka university, Ed., part III. 40(1991) 13--21.
+\bibitem{key46} [Maki6] H. Maki, P. Sundaram and K. Balachandran, On generalized continuous maps and pasting lemma in bitopological spaces, Bull. Fukuoka Univ. Ed. Part-III, 40(1991), 23--31.
+\bibitem{key47} [Maki10] R. Devi, K. Balachandran and H. Maki, Generalized $\alpha$ closed maps and $\alpha$ generalized closed maps, Indian J. Pure Appl. Math., 29(1): 37--49, January 1998.
+\bibitem{key48} [Maki11] R. Devi, K. Balachandran and H. Maki, On generalized $\alpha$ continuous maps, Far East J. Math. Sci. Spacial volume, Part 1 (1997), 1--15.
+\bibitem{key49} [Maki12] R. Devi, K. Balachandran and H. Maki, Semi generalized homeomorphisms and generalized semi homeomorphisms in topological spaces, Indian J. Pure Appl. Math, 26(1995), 271--284.
+\bibitem{key50} [Sundaram] P. Sundaram, Studies on generalizations of continuous maps in topological spaces, Ph.D, Thesis, Bharathiar University, Coimbatore, (1991).
+\bibitem{key51} [Balachandran] K. Balachandran, Y. Gnanambal and P. Sundaram, On generalized locally semi-closed sets and GLSC-continuous functions, Far East J. Math., Sci Special Volume (1997), part II 189--200.
+\bibitem{key52} [Malghan] S.R. Malghan, Generalized closed maps, J. Karnatak Univ. Sci., 27(1982), 82--88.
+\bibitem{key53} [Mariappa] K. Mariappa, S. Sekar, On Regular Generalized b Closed Set, Int. Journal of Math. Analysis, 	Vol. 7, 2013, no. 13, 613--624. Math. Soc., 41 (1937), 374--481.
+\bibitem{key54} [Nagaveni] C. Mukundhan and N. Nagaveni, On semi weakly g* continuous function in topological. 
+\bibitem{key55} [Nagaveni1] D. Iyappan and N. Nagaveni, On semi generalized b-closed set, Nat. Sem. On Math and Comp. Sci,, (2010) Proc.6.
+\bibitem{key56} [Nagaveni5] N. Nagaveni, Studies on generalizations of homeomorphisms in topological spaces, Ph.D., Thesis, Bharathiar University, Coimbatore (1999).
+\bibitem{key57} [Nagaveni2] A. Narmadha, N. Nagaveni and T. Noiri, On Regular b-Open Sets in Topological Spaces Int. Journal of Math. Analysis, Vol. 7, 2013, no. 19, 937--948.
+\bibitem{key58} [Nagaveni3] C. Mukundhan and N. Nagaveni, A Weaker Form of a Generalized Closed Set, Int. J. Contemp. Math. Sciences, Vol. 6, 2011, no. 20, 949--961.
+\bibitem{key59} [Nagaveni6] C. Mukundhan and N. Nagaveni, On semi weakly g homeomorphisms and semi weakly g irresolute maps in topological spaces, Advances in Theoretical and Applied Mathematics, Volume 6, No. 5 (2011), 591--601.
+\bibitem{key60} [Nagaveni7] L.Vinayagamoorthi, N. Nagaveni, On Generalized-$\alpha$ b closed sets in topological spaces bitopological spaces and fuzzy topological spaces, Ph.D Thesis, Anna University, Tamil nadu, India (2014).
+\bibitem{key61} [Navalagi2] Govindappa Navalagi, S.V. Gurushantanavar, and Chandrashekarappa A.S,  On $\alpha$ Generalized Preclosed Sets In Topological Spaces, International Journal of Mathematics and Computing Applications, Vol. 2, Nos. 1--2, January-December 2010, pp. 35--44.
+%raghu, word file 6
+\bibitem{key62} [Navalagi3]G B Navalagi, On Semi pre Continuous Functions and Properties of Generalized semi pre closed in Topology, IJMS 2002, 29(2), 85-98
+\bibitem{key63} [Navalagi]	Govindappa Navalagi and Chandrashekarappa, On gspr closed sets in topological spaces,Vol. 	2, Nos 1-2, (2010), pp. 51-58
+\bibitem{key64}  [Njastad]	O.Njastad,   On some classes of nearly open sets,  Pacific J. Math., 15(1965), 961-970.
+\bibitem{key65} [Noiri2]G. Di Maio and T. Noiri, On s-closed spaces, Indian J. Pure Appl. Math., 18(1987), 226-233.
+\bibitem{key66} [Popa]T. Noiri and V. Popa, On g-regular spaces and some functions, Mem. Fac. Sci. Kochi Univ. Math 20 (1999) 67-74.
+\bibitem{key67} [Noiri]T. Noiri, A generalization of closed mappings, atti. Acad. Naz.lincei rend, cl, Scifis. Mat. Natur. 1973; 54:412-415
+\bibitem{key68} [Noiri1]T. Noiri, H. Maki and J. Umehara, Generalized preclosed functions, Mem. Fac. Kochi Univ. Ser. A, Math., 19(1998), 13-18.
+\bibitem{key69} [Palaniappan]	N.Palaniappan and K.C.Rao, Regular generalized closed sets, Kyungpook, Math. J., 33 (1993), 	211-219.
+\bibitem{key70} [Palaniappan1]	Y.Palaniappan, On Regular Generalised $\BETA$-Closed Sets,  International Journal of 	Scientific & Engineering Research, Volume 4, Issue 4, April-2013 1410
+\bibitem{key71} [Parimelazhagan]  	R. Parimelazhagan and V. Subramonia Pillai, “Strongly g* closed sets in topological spaces”, 	Int. Journal of Math. Analysis, Vol. 6, 2012, no. 30, 1481-1489.
+\bibitem{key72} [Park]H. P. Park and J. K. Park, On Semi-generalized locally closed sets and SGLC-continuous functions, Indian J, Pure Appl. Math., 31(9) (2000), 1103-1112.
+\bibitem{key73} [Patty]C.W.Patty, Bitopological spaces, Duke Math. J., 34 (1967), 387-392.
+\bibitem{key74} [Pious] C. Devamanoharan, S. Pious Missier and S. Jafari, -Closed sets in Topological Spaces, 
+\bibitem{key75} [Pious2]	C. Deva manoharan, S.Pious Missier and S. Jafari, European Journal Of Pure And 	Applied Mathematics, Vol. 5, No. 4, 2012, 554-566
+\bibitem{key76} [Pious1]	N. Palaniappan, J. Antony Rex Rodrigo and S. Pious Misssier, “ On Closed sets in Topological 	Spaces”, Varahamihir Journal of Mathematical Sciences, Vol, 7 No 1 (2007) 33-38.
+\bibitem{key77} [Pious]	S. Pious Missier, K. Ali, and A. Subramanian, “g#p  Closed Sets in Topological Spaces”, 	International Journal of Mathematical Archive, 4 (1) (2013) 176-181.
+\bibitem{key78} [Popa]V.Popa, On certain properties of bitopological semi-separate spaces, Mat. Vensnik., 3(1979), 71-75.
+\bibitem{key79} [Pushpalatha]A Pushpalatha, Studies on generalizations of mapping in topological spaces, PhD Thesis, Bharathiar university ( 2000), Coimbatore.
+\bibitem{key80} [Rajamani]	Rajamani M., Viswanathan K, On $\alpha$gs-closed sets in topological spaces, Acta Ciencia Indica,
+\bibitem{key81} [Reilly]I.L Reilly, On bitopological separation properties, Nanta Math., 29(1972), 14-25.
+\bibitem{key82} [Reilly1]M.Ganster and I.L.Reilly, Locally closed sets and LC-continuous functions Internat. J. Math. Sci., 12 (1989), 417-424.
+\bibitem{key83} [SampathKumar]S.SampathKumar, $\beta$ -open sets, $\beta$ -continuity and $\beta$ -open mappings in bitopological spaces, Journal of the Indian Math. Soc., 62(1996), 187-195.
+\bibitem{key84} [Sanjay] Sanjay Mishra, Nitin Bhardwaj and Varun Joshi, On Regular Generalized weakly (rgw)-Closed Sets in Topological Spaces, Int. Journal of Math. Analysis, Vol. 6, 2012, no. 39, 1939 1952.
+\bibitem{key85} [Sanjay1]Sanjay Mishra, Nitin Bhardwaj and Varun Joshi, On Generalized Pre Regular Weakly (gprw)-Closed Sets in Topological Spaces, International Mathematical Forum, Vol. 7, 2012, no. 40, 1981 1992.
+\bibitem{key86} [Sheik1]M. Sheik John, A study on generalization of closed sets on continuous maps in topological and bitopological spaces, Ph.D Thesis, Bharathiar University, Coim-batore, (2002).
+\bibitem{key87} [Shyala]Shyala Isac Mary T, P Thangavelu.on Regular pre-semi closed sets in topological spaces, KBM J of Math Sc & comp Applications. 2010;1:9-17.
+\bibitem{key88}  [Stone] M.Stone, Application of the theory of Boolean rings to general topology, Trans. Amer. Math Soci  41 (1937), 374-481.
+\bibitem{key89} [Subashini1] Subashini jesu rajan, On $\beta$wg set and Continuity in Topological Spaces, In-ternational journal of computing, Vol 4 Issue 3, July 2014.
+\bibitem{key90} [Subashini] Subashini jesu rajan, On $\beta$wg** set and Continuity in Topological Spaces, International    journal of  computing, Vol 4 Issue 3, July 2014.
+\bibitem{key91} [Sheik] M.Sheik John, On w-closed sets in Topology, Acta Ciencia Indica, 4 (2000), 389-392.
+\bibitem{key92} [Sundaram] P. Sundaram, Studies on Generalizations of Continuous maps in Topological Spaces, Ph. D. Thesies, Bharathiar University, Coimbatore, 1991
+\bibitem{key93} [Shaik John]T.Fukutake, P.Sundaram and M.Shaik John, w-closed sets, w-open sets and w-continuity in bitopological spaces, Bull. Fukuoka Univ. Ed. part III, 51 (2002), 1-9.
+\bibitem{key94} [Vadivel]Vadivel A, K. Vairamanickam, rg$\alpha$-Homeomorphisms in Topological Spaces, Int. Journal of Math. Analysis. 4 (2010) 881-890. 
+\bibitem{key95} [Veera Kumar3]   M.K.R.S. Veera Kumar, On g^ closed sets in topological spaces, Bulletin Allahabad Math. 	Soc.18(2003),  99-112
+\bibitem{key96} [Veera kumar2]  	M.K.R.S. Veera Kumar, Between Semi Closed sets and Semi Pre Closed sets, Rend.Istit.Mat. Univ. Trieste. Vol. XXXI, 25-41 (2000)
+\bibitem{key97} [Veera kumar]  	M.K.R.S. Veera kumar, g#-closed sets in topological spaces, Mem. Fac. Sci. Kochi Univ. Ser. 	A. Math 24(2003), 1-13. 
+\bibitem{key98} [Veera Kumar1]  Veerakumar M.K.R.S, g# semi-closed sets in topological spaces. International Journal of 	Scientific & Research Publications,Vol 2,Issue 6,June 2012 ISSN 2250-3153.
+\bibitem{key99}  [Velicko]N.V.Velicko, H-closed topological spaces. Amer. Math. Soc. Transl. 78 (1968), 103-118.
+\bibitem{key100} [Vigneshwaran1]M. Vigneshwaran and A. Singaravelan, Applications of ∗∗g$\alpha$-closed sets in Topo-logical Spaces, IJMA-5(10), 2014, 139-150.
+\bibitem{key101} [Vigneshwaran]M. Vigneshwaran and R. Devi, On G$\alpha$O-kernel in the digital plane, International Journal of Mathematical Archive-3(6), 2012, 2358-2373.
+\bibitem{key102} [Wali2]R. S. Wali and Prabhavati S. Mandalgeri, On $\alpha$rw-Closed and $\alpha$rw-Open maps Maps in Topological Spaces, International Journal of Applied Research, 1(11) 2015, 511-518.
+\bibitem{key103} [Wali3]R. S. Wali and Prabhavati S. Mandalgeri, on $\alpha$rw-closed sets in topological spaces. Int. Journal of Mathematical Archive-5(10), 2014, 68-76.
+\bibitem{key104} [Wali4]R. S. Wali and Prabhavati S. Mandalgeri, On $\alpha$rw-Continuous and $\alpha$rw-Irresolute Maps in Topological Spaces, IOSR Journal of MathematicsVol. 10, Issue 6, Ver. Vi Dec. 2014, 14-24.
+\end{thebibliography}
