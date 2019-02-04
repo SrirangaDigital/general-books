@@ -1,18 +1,17 @@
 \chapter{Prerequisites}
 \graphicspath{{Chapter1/Chapter1Figs/EPS/}{Chapter1/Chapter1Figs/}}
 
-
 \section{Introduction}
 
 Topology is main branch of pure Mathematics the purpose of subject is to elucidate and inspect the concept of topological spaces, their continuity and continuos mapping, within the structure of Mathematics. The study of these and their general properties leads to a formation of general topology. The fundamental structure on a topological space is not a distance function, but a collection of open sets, thinking directly in terms of open sets often leads to greater clarity as well as greater generality. Here we present an detailed study of a new kind of generalized closed sets termed ws-closed sets and their respective continuous maps, closed maps, open maps, homeomorphisms, locally closed sets, locally continuous maps and bitopological spaces.
 
-This thesis includes an overview on mathematicans and their work on toplogical spaces for the progress of topology. Second section discussion starts with stronger and weaker forms of open sets and closed sets.  In third Section deals with   stronger and weaker forms of continuous functions and irresolute maps. Section 4 deals with some closed maps, open maps, section 5 elaborates homeomorphisms. Section 6 explains the concepts of locally closed sets, furher LC-continuous maps. In section 7 bitopological spaces and in section 8 speration of axioms are explained.
+This thesis includes an overview on mathematicans and their work on toplogical spaces for the progress of topology. Second section discussion starts with stronger and weaker forms of open sets and closed sets. In third Section deals with stronger and weaker forms of continuous functions and irresolute maps. Section 4 deals with some closed maps, open maps, section 5 elaborates homeomorphisms. Section 6 explains the concepts of locally closed sets, furher LC-continuous maps. In section 7 bitopological spaces and in section 8 speration of axioms are explained.
 
-Complete in thesis $\TSP$, $\TSQ$ and $\TSR$ denote the topological spaces $(\TSP,\tau)$, $(\TSQ,\sigma)$ and $(\TSR, \eta)$ respectively for  which separation axioms are not assumed  untill mentioned explicitly. For each  subset $\clrD$ of a space $(P, \tau)$, the closure of $\clrD$, interior of $\clrD$, semi-interior of $\clrD$, semi-closure of $\clrD$, w-interior of $\clrD$, ws-closure of $\clrD$, and the complement of $\clrD$ are denoted by $\mbox{cl}(\clrD)$ or $\tau-\mbox{cl}(\clrD)$, $\mbox{int}(\clrD)$ or $\tau-\mbox{int}(\clrD)$, $\mbox{sint}(\clrD)$, $\mbox{scl}(\clrD)$, $\mbox{ws-int}(\clrD)$, $\mbox{ws-cl}(\clrD)$, and DC or $\TSP$--$\TSD$ respectively.
+Complete in thesis $\TSP$, $\TSQ$ and $\TSR$ denote the topological spaces $(\TSP,\tau)$, $(\TSQ,\sigma)$ and $(\TSR, \eta)$ respectively for which separation axioms are not assumed untill mentioned explicitly. For each subset $\clrD$ of a space $(P, \tau)$, the closure of $\clrD$, interior of $\clrD$, semi-interior of $\clrD$, semi-closure of $\clrD$, w-interior of $\clrD$, ws-closure of $\clrD$, and the complement of $\clrD$ are denoted by $\mbox{cl}(\clrD)$ or $\tau-\mbox{cl}(\clrD)$, $\mbox{int}(\clrD)$ or $\tau-\mbox{int}(\clrD)$, $\mbox{sint}(\clrD)$, $\mbox{scl}(\clrD)$, $\mbox{ws-int}(\clrD)$, $\mbox{ws-cl}(\clrD)$, and DC or $\TSP$--$\TSD$ respectively.
 
 \section{Stronger and weaker forms of open sets and closed sets.}
 
-Stone [88], Tong [91] and Velicko [94] have popularized and investigated stronger type  open sets termed as regular, strong regular open sets respectively. Levine [50], Bhattachary and Lahiri [15], Mashhour [60], Biswas [16], Gnanambal [39], Veera Kumar [93], Palanippan and Rao [72], Sheik Jhon [84] and Nagaveni [65] have respectively determined generalized,  semi-generalized, $\alpha$, semi, $g*$, regular generalized, $w$ and weakly generalized closed sets. The complements of these different types of open (closed) sets are called the same type of closed (open) sets and so on..  The following definitions are the prerequisites for the present study.
+Stone \cite{key88}, Tong \cite{key91} and Velicko \cite{key94} have popularized and investigated stronger type open sets termed as regular, strong regular open sets respectively. Levine \cite{key50}, Bhattachary and Lahiri \cite{key15}, Mashhour \cite{key60}, Biswas \cite{key16}, Gnanambal \cite{key39}, Veera Kumar \cite{key93}, Palanippan and Rao \cite{key72}, Sheik Jhon \cite{key84} and Nagaveni \cite{key65} have respectively determined generalized, semi-generalized, $\alpha$, semi, $g*$, regular generalized, $w$ and weakly generalized closed sets. The complements of these different types of open (closed) sets are called the same type of closed (open) sets and so on.. The following definitions are the prerequisites for the present study.
 
 \begin{dfn}\label{dfn1.2.1}
 For subset $\clrD$ of $(\TSP, \tau)$, if $\clrD \subseteq \cl$ $(\mbox{int} (\clrD))$ then it is semi open set and 
@@ -24,23 +23,23 @@ For subset $\clrD$ of $(P, \tau)$, if $\clrD \subseteq \mbox{int}(\cl(\clrD))$ t
 \end{dfn}
 
 \begin{dfn}\label{dfn1.2.3}
-For subset $\clrD$ of $(P, \tau)$, if $\clrD \subseteq\mbox{int} (\cl(\mbox{int}(\clrD)))$ then it is  $\alpha$-open set (1965)  and  if $\cl(\mbox{int}(\cl(\clrD)))\subseteq \clrD$ then it is $\alpha$ -closed set. 
+For subset $\clrD$ of $(P, \tau)$, if $\clrD \subseteq\mbox{int} (\cl(\mbox{int}(\clrD)))$ then it is $\alpha$-open set (1965) and if $\cl(\mbox{int}(\cl(\clrD)))\subseteq \clrD$ then it is $\alpha$ -closed set. 
 \end{dfn}
 
 \begin{dfn}\label{dfn1.2.4}
-For subset $\clrD$ of $(\TSP, \tau)$, if $\clrD \subseteq \cl(\mbox{int}(\cl(\clrD))))$ then it is semi-pre-open set (1986) ($\beta$-open [1]) and if $\mbox{int}(\cl(\mbox{int}(\clrD))) \subseteq \clrD$ then it is a semi-pre closed set ($\beta$-closed). 
+For subset $\clrD$ of $(\TSP, \tau)$, if $\clrD \subseteq \cl(\mbox{int}(\cl(\clrD))))$ then it is semi-pre-open set (1986) ($\beta$-open \cite{key1} ) and if $\mbox{int}(\cl(\mbox{int}(\clrD))) \subseteq \clrD$ then it is a semi-pre closed set ($\beta$-closed). 
 \end{dfn}
 
 \begin{dfn}\label{dfn1.2.5}
-For a subset $\clrD$ of $(\TSP, \tau)$, if $\clrD = \mbox{int} (\cl(\clrD))$ then it is regular open set (1937) and if $\clrD = \cl(\mbox{int}(\clrD))$ then it is a regular closed set.  
+For a subset $\clrD$ of $(\TSP, \tau)$, if $\clrD = \mbox{int} (\cl(\clrD))$ then it is regular open set (1937) and if $\clrD = \cl(\mbox{int}(\clrD))$ then it is a regular closed set. 
 \end{dfn}
 
 \begin{dfn}\label{dfn1.2.6}
-For  subset $\clrD$ of $(\TSP, \tau)$, if there is a regular open set $\TSP$ such that $\TSP \subseteq \clrD \subseteq \alpha \cl(\TSP)$ then it is regular $\alpha$-open set (2009) (briefly, r$\alpha$-open).
+For subset $\clrD$ of $(\TSP, \tau)$, if there is a regular open set $\TSP$ such that $\TSP \subseteq \clrD \subseteq \alpha \cl(\TSP)$ then it is regular $\alpha$-open set (2009) (briefly, r$\alpha$-open).
 \end{dfn}
 
 \begin{dfn}\label{dfn1.2.7}
-For  subset $\clrD$ of $(\TSP, \tau)$, if there is a regular open set $\TSP$ such that $\TSP \subseteq \clrD \subseteq \cl(\TSP)$ then it is regular semi open set (1978).  
+For subset $\clrD$ of $(\TSP, \tau)$, if there is a regular open set $\TSP$ such that $\TSP \subseteq \clrD \subseteq \cl(\TSP)$ then it is regular semi open set (1978). 
 \end{dfn}
 
 \begin{dfn}\label{dfn1.2.8}
@@ -52,314 +51,309 @@ For subset $\clrD$ of a topological space $(\TSP, \tau)$
 \hline
 \textbf{Sl.no} & \textbf{Name of the set} & \textbf{if} & \textbf{whenever} & {\boldmath $\TSM$} \textbf{is}\tabularnewline
 \hline
-1 & Generalized closed set (g-closed)[35] &  $\cl(\clrD)  \subseteq  \TSM$ &  $\clrD  \subseteq  \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
+1 & Generalized closed set (g-closed) \cite{key35} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-2 & Generalized semi closed set (gs-closed)[7] & $\scl(\clrD)  \subseteq  \TSM$ & $\clrD  \subseteq  \TSM$ & open in $(\TSP, \tau)$\tabularnewline
+2 & Generalized semi closed set (gs-closed) \cite{key7} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$\tabularnewline
 \hline
-3 & Semi generalized closed set (sg-closed) [13] & $\scl(D)  \subseteq  \TSM$ & $\clrD  \subseteq  \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
+3 & Semi generalized closed set (sg-closed) \cite{key13} & $\scl(D) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
 \hline
-4 & Generalized semi pre closed set (gsp-closed) [22] & $\spcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
+4 & Generalized semi pre closed set (gsp-closed) \cite{key22} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-5 & $\alpha$-generalized closed set ($\alpha$g-closed)[37] & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & open in $(\TSP, \tau)$.\tabularnewline
+5 & $\alpha$-generalized closed set ($\alpha$g-closed) \cite{key37} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-6 & Generalized $\alpha$-closed set (g$\alpha$ closed)[38] & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+6 & Generalized $\alpha$-closed set (g$\alpha$ closed) \cite{key38} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-7 & Regular generalized closed set (rg-closed) [46] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & Regular-open in $(\TSP, \tau)$.\tabularnewline
+7 & Regular generalized closed set (rg-closed)\cite{key46} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & Regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-8 & Generalized pre closed set (gp-closed)[39] & $\pcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ &   open in $(\TSP, \tau)$.\tabularnewline
+8 & Generalized pre closed set (gp-closed)\cite{key39} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-9 & Generalized pre regular closed set (gpr-closed)[24] & $\pcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular open in $(\TSP, \tau)$.\tabularnewline
+9 & Generalized pre regular closed set (gpr-closed)\cite{key24} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular open in $(\TSP, \tau)$.\tabularnewline
 \hline
-11 & w-closed set[59] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+11 & w-closed set\cite{key59} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-13 & swg-closed set[42] & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+13 & swg-closed set\cite{key42} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-14 & rwg-closed set[42] & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+14 & rwg-closed set\cite{key42} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-15 & rw-closed set[10] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+15 & rw-closed set\cite{key10} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-16 & R*-closed set[30] & $\rcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+16 & R*-closed set\cite{key30} & $\rcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-17 & rgw-closed set[54] & $\cl(\mbox{int}(\clrD))\subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+17 & rgw-closed set\cite{key54} & $\cl(\mbox{int}(\clrD))\subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-18 & Wgr$\alpha$-closed set[32] & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$\tabularnewline
+18 & Wgr$\alpha$-closed set\cite{key32} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$\tabularnewline
 \hline
-19 & pgpr-closed set[6] & $\pcl(\clrD)) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & rg-open in $(\TSP, \tau)$\tabularnewline
+19 & pgpr-closed set\cite{key6} & $\pcl(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$\tabularnewline
 \hline
-20 & rps-closed set[60] & $\spcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
+20 & rps-closed set\cite{key60} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-21 & gprw-closed set[55] & $\pcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+21 & gprw-closed set\cite{key55} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-22 & $\alpha$rw-closed set[76] & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & rw-open in $(\TSP, \tau)$.\tabularnewline
+22 & $\alpha$rw-closed set\cite{key76} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & rw-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-23 & g$\alpha$**-closed set[] & $\cl(\clrD) \subseteq\mbox{int}(\cl(M))$ & $\clrD  \subseteq  \TSM$ & $\alpha$-open in $(\TSP,\tau)$.\tabularnewline
+23 & g$\alpha$**-closed set\cite{key} & $\cl(\clrD) \subseteq\mbox{int}(\cl(M))$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP,\tau)$.\tabularnewline
 \hline
-24 & $\psi$-closed set[67] & $\scl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
+24 & $\psi$-closed set\cite{key67} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-25 & g\#-closed set [66] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\TSM is \alpha$ g-open in $(\TSP, \tau)$.\tabularnewline
+25 & g\#-closed set\cite{key66} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM is \alpha$ g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-26 & $\alpha$gp-closed set[26] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & pre-open in $(\TSP, \tau)$.\tabularnewline
+26 & $\alpha$gp-closed set\cite{key26} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & pre-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-27 & pgr$\alpha$-closed set[14] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+27 & pgr$\alpha$-closed set\cite{key14} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-28 & $\beta$wg*-closed set[18]  & $\gcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\beta$-open in $(\TSP, \tau)$.\tabularnewline
+28 & $\beta$wg*-closed set\cite{key18} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\beta$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-29 & *g$\alpha$-closed set[73] & if$\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & g$\alpha$-open in $(\TSP,\tau)$.\tabularnewline
+29 & *g$\alpha$-closed set\cite{key73} & if$\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g$\alpha$-open in $(\TSP,\tau)$.\tabularnewline
 \hline
-30 & *g$\alpha$-closed) set[74]  & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & *g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+30 & *g$\alpha$-closed) set\cite{key74} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & *g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-31 & g$\alpha$b-closed set[75] & $\bcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+31 & g$\alpha$b-closed set\cite{key75} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-32 & sgb-closed set[28] & $\bcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+32 & sgb-closed set\cite{key28} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-33 & rgb-closed set[40]  & $\bcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+33 & rgb-closed set\cite{key40} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-34 & rg*b-closed set[27] & $\bcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
+34 & rg*b-closed set\cite{key27} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-35 & Pre-semi-closed set[68] & $\spcl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & $\spcl(\clrD) \subseteq \TSM$\tabularnewline
+35 & Pre-semi-closed set\cite{key68} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & $\spcl(\clrD) \subseteq \TSM$\tabularnewline
 \hline
-36 & r\textasciicircum g-closed set[57]  & $\gcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+36 & r\textasciicircum g-closed set\cite{key57} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-37 & $\hat{g}$-closed set[69] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi-open in $(\TSP, \tau)$\tabularnewline
+37 & $\hat{g}$-closed set\cite{key69} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$\tabularnewline
 \hline
-38 & \#gs-closed set[29]  & $\scl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & *g-open in $(\TSP, \tau)$.\tabularnewline
+38 & \#gs-closed set\cite{key29} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & *g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-39 & $\tilde{g}$-closed set[29] & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ &  \#gs-open in $(\TSP, \tau)$.\tabularnewline
+39 & $\tilde{g}$-closed set\cite{key29} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & \#gs-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-41 & g\#$\alpha$ -closed set[45]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & g-open in $(\TSP, \tau)$.\tabularnewline
+41 & g\#$\alpha$ -closed set\cite{key45} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-42 & $\alpha$gs-closed set[52] & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+42 & $\alpha$gs-closed set\cite{key52} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-43 & g\#s-closed set[71] & $\scl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\TSM$ is $\alpha$ g-open in $(\TSP, \tau)$.\tabularnewline
+43 & g\#s-closed set\cite{key71} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM$ is $\alpha$ g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-47 & gb-closed set[1]  & $\bcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\TSM$ is -open in $(\TSP, \tau)$.\tabularnewline
+47 & gb-closed set\cite{key1} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM$ is -open in $(\TSP, \tau)$.\tabularnewline
 \hline
-48 & rb-closed set[43]  & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & b-open in $(\TSP, \tau)$.\tabularnewline
+48 & rb-closed set\cite{key43} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & b-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-49 & swg*-closed set[41]  & $\gcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+49 & swg*-closed set\cite{key41} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-50 & gr-closed set[58]  & $\rcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ &  open in $(\TSP, \tau)$.\tabularnewline
+50 & gr-closed set\cite{key58} & $\rcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-51 & $\beta$wg**-closed set[62] & $\beta$wg*$\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+51 & $\beta$wg**-closed set\cite{key62} & $\beta$wg*$\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-52 & $\alpha$s-closed set[] & $\scl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\alpha$gs-open in $(\TSP, \tau)$.\tabularnewline
+52 & $\alpha$s-closed set\cite{key} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$gs-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-53 & w$\alpha$-closed set[]  & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & $\alpha$ gs-open in $(\TSP, \tau)$.\tabularnewline
+53 & w$\alpha$-closed set\cite{key} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$ gs-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-54 & R-closed set[] & $\alpha \cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD  \subseteq  \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
+54 & R-closed set\cite{key} & $\alpha \cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD \subseteq \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-55 & g$\alpha$*-closed set[38]  & $\alpha\cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD  \subseteq  \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+55 & g$\alpha$*-closed set\cite{key38} & $\alpha\cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-56 & \'g-closed set[]  & $\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
+56 & \'g-closed set\cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-57 & *g$\alpha$-closed set[73]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+57 & *g$\alpha$-closed set\cite{key73} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-58 & \#g$\alpha$-closed set[17]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & g\#$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+58 & \#g$\alpha$-closed set\cite{key17} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g\#$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-59 & g$\xi$*-closed set[33]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & \#g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+59 & g$\xi$*-closed set\cite{key33} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & \#g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-60 & g\#-pre-closed set[51] &  $\pcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & g\#-open in $(\TSP, \tau)$.\tabularnewline
+60 & g\#-pre-closed set\cite{key51} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g\#-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-61 & gps-closed set[53] & $\pcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
+61 & gps-closed set\cite{key53} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
 \hline
-62 & gspr-closed set[25]  & $\spcl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+62 & gspr-closed set\cite{key25} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-63 & wg-closed set[42]  & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
+63 & wg-closed set\cite{key42} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-64 & rg$\alpha$-closed set[63]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+64 & rg$\alpha$-closed set\cite{key63} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-66 & w$\alpha$-closed set[11]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ &  w-open in $(\TSP, \tau)$.\tabularnewline
+66 & w$\alpha$-closed set\cite{key11} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-67 & gw$\alpha$-closed set[12]  & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD  \subseteq  \TSM$ & w$\alpha$-open in $(\TSP, \tau)$\tabularnewline
+67 & gw$\alpha$-closed set\cite{key12} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & w$\alpha$-open in $(\TSP, \tau)$\tabularnewline
 \hline
 \end{longtable}}
 
-
-
-
-
-The compliment of the above mentioned definition closed sets are their open sets.  
-
+The compliment of the above mentioned definition closed sets are their open sets. 
 
 \section{ws-Continuous maps and irresolute maps:}
 
-In general topology, the concept of continuous functions plays a very important role. This section deals with continuous maps and irresolute maps contributed by few topologist namely Arya and Gupta [6], Dontchev and Maki [31],  Levine [49], Balachandran et al [13], Mashhour [60], Sundaram [90], Devi [22], Gnanambal[41], Palaniappan [72], Sheik John[84], Benchalli[ ] and  R.S. Walli [ ] has explored regular continuous and completely ,  semi, g, $\alpha$, sg, gs, gpr, rg, w-continuous. Irresolute maps were innovated and explored by Crossely and Hildebrand [20].
+In general topology, the concept of continuous functions plays a very important role. This section deals with continuous maps and irresolute maps contributed by few topologist namely Arya and Gupta \cite{key6}, Dontchev and Maki \cite{key31}, Levine \cite{key49}, Balachandran et al \cite{key13}, Mashhour \cite{key60}, Sundaram \cite{key90}, Devi \cite{key22}, Gnanambal \cite{key41}, Palaniappan \cite{key72}, Sheik John \cite{key84}, Benchalli \cite{key} and R.S. Walli \cite{key} has explored regular continuous and completely, semi, g, $\alpha$, sg, gs, gpr, rg, w-continuous. Irresolute maps were innovated and explored by Crossely and Hildebrand \cite{key20} .
 
 \begin{dfn}\label{dfn1.3.1}
 In a map $h: (\TSP, \tau) →(\TSQ, \sigma)$
 \begin{enumerate}
-\item Pretend $h^{-1}(\clrD)$ is r-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as regular-continuous(r-continuous) [3]. 
-\item Pretend $h^{-1}(\clrD)$ is regular closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as completely-continuous [3]. 
-\item Pretend $h^{-1}(\clrD)$ is clopen (both open and closed) in $\TSP$ for all subset $\clrD$ of $\TSQ$ then it is termed as strongly-continuous [26]. 
-\item Pretend $h^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$-continuous [14]. 
-\item Pretend $h^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as strongly $\alpha$-continuous [32]. 
-\item Pretend $h^{-1}(\clrD)$ is $\alpha$g-closed in $\TSP$ for all closed subset $\clrD$ ofQ then it is termed as $\alpha$g-continuous [19]. 
-\item Pretend $h^{-1}(\clrD)$ is wg-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as wg-continuous [23]. 
-\item Pretend $h^{-1}(\clrD)$ is rwg-closed in $\clrD$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rwg-continuous [23]. 
-\item Pretend $h^{-1}(\clrD)$ is gs-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gs-continuous [4]. 
-\item  Pretend $h^{-1}(\clrD)$ is gp-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gp-continuous [20]. 
-\item  Pretend $h^{-1}(\clrD)$ is gpr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gpr-continuous [12]. 
-\item  Pretend $h^{-1}(\clrD)$ is $\alpha$gr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$gr-continuous [30]. 
-\item  Pretend $h^{-1}(\clrD)$ is $\omega\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as w$\alpha$-continuous [7]. 
-\item  Pretend $h^{-1}(\clrD)$ is gspr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gspr-continuous [24]. 
-\item  Pretend $h^{-1}(\clrD)$ is g-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as g-continuous [7]. 
-\item  Pretend $h^{-1}(\clrD)$ is w-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\omega$-continuous [27]. 
-\item  Pretend $h^{-1}(\clrD)$ is rg$\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rg$\alpha$-continuous [28]. 
-\item  Pretend $h^{-1}(\clrD)$ is gr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gr-continuous [9]. 
-\item  Pretend $h^{-1}(\clrD)$ is rps-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rps-continuous [25]. 
-\item  Pretend $h^{-1}(\clrD)$ is R*-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as R*-continuous [15]. 
-\item  Pretend $h^{-1}(\clrD)$ is gprw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gprw-continuous [16]. 
-\item  Pretend $h^{-1}(\clrD)$ is wgr$\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as wgr$\alpha$-continuous [15]. 
-\item  Pretend $h^{-1}(\clrD)$ is swg-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as swg-continuous [23]. 
-\item  Pretend $h^{-1}(\clrD)$ is rw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as r$\omega$-continuous [8]. 
-\item  Pretend $h^{-1}(\clrD)$ is rgw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rgw-continuous [22]. 
+\item Pretend $h^{-1}(\clrD)$ is r-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as regular-continuous(r-continuous) \cite{key3} . 
+\item Pretend $h^{-1}(\clrD)$ is regular closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as completely-continuous \cite{key3} . 
+\item Pretend $h^{-1}(\clrD)$ is clopen (both open and closed) in $\TSP$ for all subset $\clrD$ of $\TSQ$ then it is termed as strongly-continuous \cite{key26} . 
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$-continuous \cite{key14} . 
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as strongly $\alpha$-continuous \cite{key32} . 
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$g-closed in $\TSP$ for all closed subset $\clrD$ ofQ then it is termed as $\alpha$g-continuous \cite{key19} . 
+\item Pretend $h^{-1}(\clrD)$ is wg-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as wg-continuous \cite{key23} . 
+\item Pretend $h^{-1}(\clrD)$ is rwg-closed in $\clrD$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rwg-continuous \cite{key23} . 
+\item Pretend $h^{-1}(\clrD)$ is gs-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gs-continuous \cite{key4} . 
+\item Pretend $h^{-1}(\clrD)$ is gp-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gp-continuous \cite{key20} . 
+\item Pretend $h^{-1}(\clrD)$ is gpr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gpr-continuous \cite{key12} . 
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$gr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$gr-continuous \cite{key30} . 
+\item Pretend $h^{-1}(\clrD)$ is $\omega\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as w$\alpha$-continuous \cite{key7} . 
+\item Pretend $h^{-1}(\clrD)$ is gspr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gspr-continuous \cite{key24} . 
+\item Pretend $h^{-1}(\clrD)$ is g-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as g-continuous \cite{key7} . 
+\item Pretend $h^{-1}(\clrD)$ is w-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\omega$-continuous \cite{key27} . 
+\item Pretend $h^{-1}(\clrD)$ is rg$\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rg$\alpha$-continuous \cite{key28} . 
+\item Pretend $h^{-1}(\clrD)$ is gr-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gr-continuous \cite{key9} . 
+\item Pretend $h^{-1}(\clrD)$ is rps-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rps-continuous \cite{key25} . 
+\item Pretend $h^{-1}(\clrD)$ is R*-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as R*-continuous \cite{key15} . 
+\item Pretend $h^{-1}(\clrD)$ is gprw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as gprw-continuous \cite{key16} . 
+\item Pretend $h^{-1}(\clrD)$ is wgr$\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as wgr$\alpha$-continuous \cite{key15} . 
+\item Pretend $h^{-1}(\clrD)$ is swg-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as swg-continuous \cite{key23} . 
+\item Pretend $h^{-1}(\clrD)$ is rw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as r$\omega$-continuous \cite{key8} . 
+\item Pretend $h^{-1}(\clrD)$ is rgw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as rgw-continuous \cite{key22} . 
 \end{enumerate}
 \end{dfn}
 
 \begin{dfn}\label{dfn1.3.2} 
 In a map h: $(\TSP, \tau) \rightarrow (\TSQ, \sigma)$
 \begin{enumerate}
-\item Pretend $h^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all $\alpha$-closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$-irresolute [14]. 
-\item Pretend $h^{-1}(\clrD)$ is semi- closed in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as irresolute [7].
-\item Pretend $h^{-1}(\clrD)$ is $\omega$-open in $\TSP$ for all w-closed subset $\clrD$ of $\TSQ$ then it is termed as contra w-irresolute [27]. 
-\item Pretend $h^{-1}(\clrD)$ is semi-open in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as contra irresolute [14]. 
-\item Pretend $h^{-1}(\clrD)$ is regular-open in $\TSP$ for all regular-closed subset $\clrD$ of $\TSQ$ then it is termed as contra r-irresolute [3]  
-\item Pretend $h^{-1}(\clrD)$ is open in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as contra continuous [11] . 
-\item Pretend $h(\clrD)$ is rw-open (resp rw-closed) in $\TSQ$ for all rw-open (resp rw-closed) subset $\clrD$ of $\TSP$ then it is termed as rw*-open  (resp rw*-closed) [8] map. 
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all $\alpha$-closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$-irresolute \cite{key14} . 
+\item Pretend $h^{-1}(\clrD)$ is semi- closed in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as irresolute \cite{key7} .
+\item Pretend $h^{-1}(\clrD)$ is $\omega$-open in $\TSP$ for all w-closed subset $\clrD$ of $\TSQ$ then it is termed as contra w-irresolute \cite{key27} . 
+\item Pretend $h^{-1}(\clrD)$ is semi-open in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as contra irresolute \cite{key14} . 
+\item Pretend $h^{-1}(\clrD)$ is regular-open in $\TSP$ for all regular-closed subset $\clrD$ of $\TSQ$ then it is termed as contra r-irresolute \cite{key3} 
+\item Pretend $h^{-1}(\clrD)$ is open in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as contra continuous \cite{key11} . 
+\item Pretend $h(\clrD)$ is rw-open (resp rw-closed) in $\TSQ$ for all rw-open (resp rw-closed) subset $\clrD$ of $\TSP$ then it is termed as rw*-open (resp rw*-closed) \cite{key8} map. 
 \end{enumerate}
 \end{dfn}
 
 
-\begin{dfn}\label{dfn1.3.3}  
+\begin{dfn}\label{dfn1.3.3} 
 A topological space $(\TSP, \tau)$ is termed as 
 \begin{enumerate}[\rm i)]
-\item ${\rm T}_{\frac{1}{2}}$ space [23] if each semi-closed set is closed.  
-\item Tws space [7] if each ws-closed set is closed. 
+\item ${\rm T}_{\frac{1}{2}}$ space \cite{key23} if each semi-closed set is closed. 
+\item Tws space \cite{key7} if each ws-closed set is closed. 
 \end{enumerate}
 \end{dfn}
 
 \section{Closed and open maps and homeomorphism:}
 
-Malghan [57] explored and deliberated generalised closed maps. Sundaram [89], Arockirani[3], Nagaveni[65], Sheik John[83], Benchalli [ ] and  R. S. Walli [  ], Pushpalatha [79], Crossely and Hildebrand[20],mashhour[60] and Gnanambal[40] has explored generalised open maps, rg-closed  maps, wg closed and open maps, w-closed and open maps, rw-closed and open maps, $\alpha$rw-closed and open maps, g*-closed and open maps, pre semi open maps, $\alpha$-open maps, gpr-closed maps respectively.
+Malghan \cite{key57} explored and deliberated generalised closed maps. Sundaram \cite{key89}, Arockirani \cite{key3}, Nagaveni \cite{key65}, Sheik John \cite{key83}, Benchalli \cite{key} and R. S. Walli \cite{key}, Pushpalatha \cite{key79}, Crossely and Hildebrand \cite{key20},mashhour \cite{key60} and Gnanambal \cite{key40} has explored generalised open maps, rg-closed maps, wg closed and open maps, w-closed and open maps, rw-closed and open maps, $\alpha$rw-closed and open maps, g*-closed and open maps, pre semi open maps, $\alpha$-open maps, gpr-closed maps respectively.
 
-The concept of generalised homeomorphism explored and deliberated by Balachandran, Nagaveni [25] Sheik John[30], Vadivel et al, Thangavel [38], Maki has explored rwg-homeomorphism, w-homeomorphism, rg$\alpha$-homeomorphism, gs-homeo\-mor\-phism  and sg-homeomorphism.
+The concept of generalised homeomorphism explored and deliberated by Balachandran, Nagaveni \cite{key25} Sheik John \cite{key30}, Vadivel et al, Thangavel \cite{key38}, Maki has explored rwg-homeomorphism, w-homeomorphism, rg$\alpha$-homeomorphism, gs-homeo\-mor\-phism and sg-homeomorphism.
 
 \begin{dfn}\label{dfn1.4.1}
 A map $h: (\TSP, \tau) \rightarrow (\TSQ \sigma)$ is said to be 
 \begin{enumerate}
-\item $\alpha$ - closed map [15] if $h(\TSN)$ is $\alpha$-closed in $\TSQ$  $\forall$ closed subset $\TSV$ of $\TSP$. 
-\item gspr-closed map [28] if $h(\TSN)$ is gspr-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$ 
-\item semi-closed map [19] if $h(\TSN)$ is semi-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$ 
-\item $\omega$-closed map [31] if $h(\TSN)$ is $\omega$-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$
-\item rg$\alpha$-closed map [33] if  $h(\TSN)$ is rg$\alpha$ -closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$ 
-\item gr-closed map [10] if $h(\TSN)$ is gr-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$ 
-\item g*p-closed map [22] if $h(\TSN)$ is g*p-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$ 
-\item rps-closed map [29] if $h(\TSN)$ is rps-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$ 
-\item R*-closed map [14] if $h(\TSN)$ is R*-closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$ 
-\item  gprw- closed map [17] if $h(\TSN)$ is gprw-closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$.  
-\item  wgr$\alpha$ - closed map [16] if $h(\TSN)$ is wgr$\alpha$ -closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$. 
-\item  $\alpha$g- closed map [21] if $h(\TSN)$ is $\alpha$g-closed in $\TSQ$  $\forall$   closed subset $\TSN$ of $\TSP$. 
-\item  swg- closed map [26] if $h(\TSN)$ is swg-closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$.  
-\item  r$\omega$-closed map [28] if $h(\TSN)$ is rw-closed in $\TSQ$  $\forall$   closed subset $\TSN$ of $\TSP$.  
-\item  rgw-closed map [25] if $h(\TSN)$ is rgw-closed in $\TSQ$  $\forall$   closed subset $\TSN$ of $\TSP$. 
-\item  regular closed map[30] if $h(\TSN)$ is closed in $\TSQ$  $\forall$   regular closed set $\TSN$ of $\TSP$ 
-\item  Contra closed map [4] if $h(\TSN)$ is closed in $\TSQ$  $\forall$   open set $\TSN$ of $\TSP$.  
-\item  Contra regular closed map [30] if $h(\TSN)$ is r-closed in $\TSQ$  $\forall$ open set $\TSN$ of $\TSP$. 
-\item  Contra semi-closed map [27] if $h(\TSN)$ is s-closed in $\TSQ$  $\forall$ open set $\TSN$ of $\TSP$.  
-\item  wg-closed map [26] if $h(\TSN)$ is wg-closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$.  
-\item  rwg-closed map [26] if $h(\TSN)$ is rwg-closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$.  
-\item  gs-closed map [3] if $h(\TSN)$ is gs-closed in $\TSQ$  $\forall$  closed subset $\TSN$ of $\TSP$.  
-\item  gp-closed map [21] if $h(\TSN)$ is gp-closed in $\TSQ$  $\forall$   closed subset $\TSN$ of $\TSP$.  
-\item  gpr-closed map [13] if $h(\TSN)$ is gpr-closed in $\TSQ$  $\forall$   closed subset $\TSN$ of $\TSP$.  
-\item  $\alpha$ gr-closed map [34] if $h(\TSN)$ is $\alpha$ gr-closed in $\TSQ$  $\forall$   closed subset $\TSN$ of $\TSP$.  
-\item  $\omega\alpha$-closed map [9] if $h(\TSN)$ is $\omega\alpha$-closed in $\TSQ$  $\forall$ closed subset $\TSN$ of $\TSP$.  
+\item $\alpha$ - closed map \cite{key15} if $h(\TSN)$ is $\alpha$-closed in $\TSQ$ $\forall$ closed subset $\TSV$ of $\TSP$. 
+\item gspr-closed map \cite{key28} if $h(\TSN)$ is gspr-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item semi-closed map \cite{key19} if $h(\TSN)$ is semi-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item $\omega$-closed map \cite{key31} if $h(\TSN)$ is $\omega$-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$
+\item rg$\alpha$-closed map \cite{key33} if $h(\TSN)$ is rg$\alpha$ -closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item gr-closed map \cite{key10} if $h(\TSN)$ is gr-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item g*p-closed map \cite{key22} if $h(\TSN)$ is g*p-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item rps-closed map \cite{key29} if $h(\TSN)$ is rps-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item R*-closed map \cite{key14} if $h(\TSN)$ is R*-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$ 
+\item gprw- closed map \cite{key17} if $h(\TSN)$ is gprw-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item wgr$\alpha$ - closed map \cite{key16} if $h(\TSN)$ is wgr$\alpha$ -closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item $\alpha$g- closed map \cite{key21} if $h(\TSN)$ is $\alpha$g-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item swg- closed map \cite{key26} if $h(\TSN)$ is swg-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item r$\omega$-closed map \cite{key28} if $h(\TSN)$ is rw-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item rgw-closed map \cite{key25} if $h(\TSN)$ is rgw-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item regular closed map\cite{key30} if $h(\TSN)$ is closed in $\TSQ$ $\forall$ regular closed set $\TSN$ of $\TSP$ 
+\item Contra closed map \cite{key4} if $h(\TSN)$ is closed in $\TSQ$ $\forall$ open set $\TSN$ of $\TSP$. 
+\item Contra regular closed map \cite{key30} if $h(\TSN)$ is r-closed in $\TSQ$ $\forall$ open set $\TSN$ of $\TSP$. 
+\item Contra semi-closed map \cite{key27} if $h(\TSN)$ is s-closed in $\TSQ$ $\forall$ open set $\TSN$ of $\TSP$. 
+\item wg-closed map \cite{key26} if $h(\TSN)$ is wg-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item rwg-closed map \cite{key26} if $h(\TSN)$ is rwg-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item gs-closed map \cite{key3} if $h(\TSN)$ is gs-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item gp-closed map \cite{key21} if $h(\TSN)$ is gp-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item gpr-closed map \cite{key13} if $h(\TSN)$ is gpr-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item $\alpha$ gr-closed map \cite{key34} if $h(\TSN)$ is $\alpha$ gr-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
+\item $\omega\alpha$-closed map \cite{key9} if $h(\TSN)$ is $\omega\alpha$-closed in $\TSQ$ $\forall$ closed subset $\TSN$ of $\TSP$. 
 \end{enumerate}
 \end{dfn}
 
 \begin{dfn}\label{dfn1.4.2}
 A map $h: (\TSP, \tau) \rightarrow (\TSQ \sigma)$ is said to be 
 \begin{enumerate}
-\item semi-open [15] if  $h(\TSN)$ is g-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
-\item gpr-open [13] if $h(\TSN)$ is gpr-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
-\item Regular open [29] if $h(\TSN)$ is open in $(\TSQ, \sigma)$ $\forall$ regular open set $\TSN$ of $(\TSP, \tau)$. 
-\item rwg-open [26] if $h(\TSN)$ is rwg-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
-\item wg-open [26] if $h(\TSN)$ is wg-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
-\item w-open [31] if $h(\TSN)$ is w-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$.
+\item semi-open \cite{key15} if $h(\TSN)$ is g-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
+\item gpr-open \cite{key13} if $h(\TSN)$ is gpr-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
+\item Regular open \cite{key29} if $h(\TSN)$ is open in $(\TSQ, \sigma)$ $\forall$ regular open set $\TSN$ of $(\TSP, \tau)$. 
+\item rwg-open \cite{key26} if $h(\TSN)$ is rwg-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
+\item wg-open \cite{key26} if $h(\TSN)$ is wg-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$, 
+\item w-open \cite{key31} if $h(\TSN)$ is w-open in $\TSQ$ $\forall$ open set $\TSN$ of $(\TSP, \tau)$.
 \end{enumerate}
 \end{dfn}
 
 \begin{dfn}\label{dfn1.4.3}
-Map  $h: \TSP \rightarrow \TSQ$ is said to be 
+Map $h: \TSP \rightarrow \TSQ$ is said to be 
 \begin{enumerate}
 \item homeomorphism if $h$ is both open and continuous
-\item gspr-homeomorphism  if $h$ is both gspr-continuous and gspr-open.
-\item gsp-homeomorphism  if $h$ is both gsp-continuous and gsp-open.
-\item rgb-homeomorphism  if $h$ is both rgb-open and rgb-continuous.
+\item gspr-homeomorphism if $h$ is both gspr-continuous and gspr-open.
+\item gsp-homeomorphism if $h$ is both gsp-continuous and gsp-open.
+\item rgb-homeomorphism if $h$ is both rgb-open and rgb-continuous.
 \end{enumerate}
 \end{dfn}
 
 \section{Locally closed sets and LC-continuous maps.}
 
-Ganster and Reilly [37], Sundaram [89], Arockkiarani and Balachandran ([4], [5]), Park ([74], [76]) and Sheik John [83] have respectively introduced and studied locally, generalized locally, regular generalized locally and w-locally closed sets. 
+Ganster and Reilly \cite{key37}, Sundaram \cite{key89}, Arockkiarani and Balachandran ( \cite{key4}, \cite{key5} ), Park (\cite{key74}, \cite{key76}) and Sheik John \cite{key83} have respectively introduced and studied locally, generalized locally, regular generalized locally and w-locally closed sets. 
 
 \begin{dfn}\label{dfn1.5.1}
 In a subset $\clrD$ of topological space $(\TSP, \tau)$ 
 \begin{enumerate}[\rm (i)]
-\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is open and $\TSN$ is closed in $(\TSX,\tau)$ then it is called as locally closed (briefly lc) set [5]
-\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is $\alpha$-open and $\TSN$ is $\alpha$-closed in $(\TSX, \tau)$. then it is called as $\alpha$-locally closed (briefly $\alpha$lc) set [2]
-\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is w-open and $\TSN$ is w-closed in $(\TSX, \tau)$ then it is called as rw-locally closed (briefly wlc) set [3].
-\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is open and $\TSN$ is semi-closed in $(\TSX, \tau)$ then it is called as semi - locally closed (briefly lsc) set [3].
+\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is open and $\TSN$ is closed in $(\TSX,\tau)$ then it is called as locally closed (briefly lc) set \cite{key5} 
+\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is $\alpha$-open and $\TSN$ is $\alpha$-closed in $(\TSX, \tau)$. then it is called as $\alpha$-locally closed (briefly $\alpha$lc) set \cite{key2} 
+\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is w-open and $\TSN$ is w-closed in $(\TSX, \tau)$ then it is called as rw-locally closed (briefly wlc) set \cite{key3} .
+\item If $\clrD=\TSM \cap \TSN$, where $\TSM$ is open and $\TSN$ is semi-closed in $(\TSX, \tau)$ then it is called as semi - locally closed (briefly lsc) set \cite{key3} .
 \end{enumerate}
 \end{dfn}
 
 \begin{dfn}\label{dfn1.5.2} 
 In a map $h: (\TSP, \tau) \rightarrow (\TSQ, \sigma)$ 
 \begin{enumerate}[\rm (i)]
-\item Pretend $h^{-1}(\clrD)$ is locally closed set in $(\TSP, \tau)$ for each open set $\TSP$ of $(\TSQ, \sigma)$ then it is called as LC-continuous [5].
-\item Pretend $h^{-1}(\clrD)$ is $\alpha$-locally closed set in $(\TSP, \tau)$ for each open set $\clrD$ of $(\TSQ, \sigma)$ then it is called as LC-continuous [2].
-\item Pretend $h^{-1}(\clrD)$ is $\alpha$-locally closed set in $(\TSP,\tau)$ for each open set $\clrD$ of $(\TSQ, \sigma)$ then it is called as rw-LC continuous [3].
+\item Pretend $h^{-1}(\clrD)$ is locally closed set in $(\TSP, \tau)$ for each open set $\TSP$ of $(\TSQ, \sigma)$ then it is called as LC-continuous \cite{key5} .
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$-locally closed set in $(\TSP, \tau)$ for each open set $\clrD$ of $(\TSQ, \sigma)$ then it is called as LC-continuous \cite{key2} .
+\item Pretend $h^{-1}(\clrD)$ is $\alpha$-locally closed set in $(\TSP,\tau)$ for each open set $\clrD$ of $(\TSQ, \sigma)$ then it is called as rw-LC continuous \cite{key3} .
 \end{enumerate}
 \end{dfn}
 
 \begin{dfn}\label{dfn1.5.3} 
 A map $h: (\TSP, \tau)\rightarrow (\TSQ, \sigma)$ is termed
 \begin{enumerate}[\rm (i)]
-\item LC-irresolute [37] if $h^{-1}(\TSN)$ is a lc set in $(\TSP,\tau)$ $\forall$  lc-set $\TSN$ in $(\TSQ, \sigma)$,
-\item w-LC-irresolute [83] if $h^{-1}(\TSN)$ is a w-lc set in $(P,\tau)$ $\forall$ w-lc set $\TSN$ in $(\TSQ, \sigma)$,
-\item GLC-irresolute [12] if $h^{-1}(\TSN)$ is a glc set in $(P,\tau)$ $\forall$ glc set $\TSN$ in $(\TSQ, \sigma)$,
+\item LC-irresolute \cite{key37} if $h^{-1}(\TSN)$ is a lc set in $(\TSP,\tau)$ $\forall$ lc-set $\TSN$ in $(\TSQ, \sigma)$,
+\item w-LC-irresolute \cite{key83} if $h^{-1}(\TSN)$ is a w-lc set in $(P,\tau)$ $\forall$ w-lc set $\TSN$ in $(\TSQ, \sigma)$,
+\item GLC-irresolute \cite{key12} if $h^{-1}(\TSN)$ is a glc set in $(P,\tau)$ $\forall$ glc set $\TSN$ in $(\TSQ, \sigma)$,
 \end{enumerate}
 \end{dfn}
 
 \section{Bitopological spaces.}
 
-Kelly [45] initiated a systematic study of the concept of bitopological spaces in 1963. Furthers various authors, like Arya and Nour [7], Di Maio and Noiri [24], Fukutake [34], Reilly [81], Popa [78], Maki [55], Arockiarani [3], Gnanambal [40] and Sheik Jhon [83] have changed their attention to  put the individual  concepts  of topology to  bitopological spaces . Here we define some of the definitions, which are used in our study. 
+Kelly \cite{key45} initiated a systematic study of the concept of bitopological spaces in 1963. Furthers various authors, like Arya and Nour \cite{key7}, Di Maio and Noiri \cite{key24}, Fukutake \cite{key34}, Reilly \cite{key81}, Popa \cite{key78}, Maki \cite{key55}, Arockiarani \cite{key3}, Gnanambal \cite{key40} and Sheik Jhon \cite{key83} have changed their attention to put the individual concepts of topology to bitopological spaces . Here we define some of the definitions, which are used in our study. 
 
 \begin{dfn}\label{dfn1.6.1}
 Let $i, j\in {1, 2}$ be fixed integers. In a bitopological space $(\TSP, \tau_1, \tau_2)$, a subset $\clrD$ of $(\TSP, \tau_1, \tau_2)$ is said to
 \begin{enumerate}[\rm (i)]
-\item $(i, j)$-g\#-closed [34] if $\tau_j- \cl(\clrD)\subset \TSM$ when $\clrD\subset\TSM$ and $\TSM\in \tau_i$,
-\item $(i, j)$-*g-closed [3] if  $\tau_j- \cl(\clrD)\subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_i$,
-\item $(i, j)$-g*-closed [40] if $\tau_j-\mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_i$,
-\item $(i, j)$-gp-closed [35] if $\tau_j-\cl(\tau_i-\mbox{int}(\clrD))\subset\TSM\ when \clrD\subset\TSM\ \mbox{and}\ \TSM\in\tau_i$,
-\item $(i, j)$-closed [83] if $\tau_j-\cl(\clrD) \subset  \TSM$ when $\clrD\subset\TSM$ and $\TSM$ is semiopen in $\tau_i$,
-\item $(i, j)$-rb-closed [46] if $\tau_j- \mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM\in\tau_i$,
-\item $(i, j)$-gspr-closed [85] if $\tau_j-\cl(\clrD) \subset  \TSM$ when $\clrD \subset  \TSM$ and $\TSM\in\mbox{GO}(\TSP, \tau_i)$.
-\item $(i, j)$-gsp-closed [85] if $\tau_j- \cl(\clrD) \subset  \TSM$ when $\clrD \subset  \TSM$ and $\TSM\in \mbox{GO}(\TSP, \tau_i)$.
-\item $(i, j)$-rgb-closed [85] if $\tau_j- \cl(\clrD) \subset  \TSM$ when $\clrD \subset  \TSM$ and $\TSM\in \mbox{GO}(\TSP, \tau_i)$.
+\item $(i, j)$-g\#-closed \cite{key34} if $\tau_j- \cl(\clrD)\subset \TSM$ when $\clrD\subset\TSM$ and $\TSM\in \tau_i$,
+\item $(i, j)$-*g-closed \cite{key3} if $\tau_j- \cl(\clrD)\subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_i$,
+\item $(i, j)$-g*-closed \cite{key40} if $\tau_j-\mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_i$,
+\item $(i, j)$-gp-closed \cite{key35} if $\tau_j-\cl(\tau_i-\mbox{int}(\clrD))\subset\TSM\ when \clrD\subset\TSM\ \mbox{and}\ \TSM\in\tau_i$,
+\item $(i, j)$-closed \cite{key83} if $\tau_j-\cl(\clrD) \subset \TSM$ when $\clrD\subset\TSM$ and $\TSM$ is semiopen in $\tau_i$,
+\item $(i, j)$-rb-closed \cite{key46} if $\tau_j- \mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM\in\tau_i$,
+\item $(i, j)$-gspr-closed \cite{key85} if $\tau_j-\cl(\clrD) \subset \TSM$ when $\clrD \subset \TSM$ and $\TSM\in\mbox{GO}(\TSP, \tau_i)$.
+\item $(i, j)$-gsp-closed \cite{key85} if $\tau_j- \cl(\clrD) \subset \TSM$ when $\clrD \subset \TSM$ and $\TSM\in \mbox{GO}(\TSP, \tau_i)$.
+\item $(i, j)$-rgb-closed \cite{key85} if $\tau_j- \cl(\clrD) \subset \TSM$ when $\clrD \subset \TSM$ and $\TSM\in \mbox{GO}(\TSP, \tau_i)$.
 \end{enumerate}
 \end{dfn}
 
 The complements of the above mentioned closed sets are their respective open sets. 
 \begin{dfn}\label{dfn1.6.2}
-A map  $h: (\TSP, \tau_1, \tau_2)\rightarrow(\TSQ \sigma_1, \sigma_2)$ is termed  bi-continuous [55] if h is $\tau_1-\sigma_1$-continuous and $\tau_2-\sigma_2$-continuous.
+A map $h: (\TSP, \tau_1, \tau_2)\rightarrow(\TSQ \sigma_1, \sigma_2)$ is termed bi-continuous \cite{key55} if h is $\tau_1-\sigma_1$-continuous and $\tau_2-\sigma_2$-continuous.
 \end{dfn}
 
 \begin{dfn}\label{dfn1.6.3}
-A map $h: (\TSP, \tau_1, \tau_2)\rightarrow(\TSQ \sigma_1, \sigma_2)$ is termed strongly-bi-continuous [55] (briefly s-bi-continuous) if $h$ is bi-continuous, $\tau_1-\sigma_2$-continuous and $\tau_2-\sigma_1$-continuous,
+A map $h: (\TSP, \tau_1, \tau_2)\rightarrow(\TSQ \sigma_1, \sigma_2)$ is termed strongly-bi-continuous \cite{key55} (briefly s-bi-continuous) if $h$ is bi-continuous, $\tau_1-\sigma_2$-continuous and $\tau_2-\sigma_1$-continuous,
 \end{dfn}
 
 \section{Some separation axioms in topological spaces:}
 
 From the literature survey on separation axioms we observed that there is a significant work for different relatively weak form of separation axioms like $\mbox{T}_k$ spaces $(k=0, 1, 2)$, normal and regular axioms in particular several other neighbouring forms of them have been studied in many papers.
-Maheshwari and Prasad [64] established and deliberated the new class of space called s-normal space using semi-open sets. It was further studied by Noiri [85], Dorsett [34], and Arya [8], Manshi [79] introduced g-regular and g-normal spaces using g-closed sets. Noiri and Popa [90] further investigated the concepts introduced by Manshi. Sheik John[104] introduced and studied the w-normal ,w-regular using w-closed sets.
+Maheshwari and Prasad \cite{key64} established and deliberated the new class of space called s-normal space using semi-open sets. It was further studied by Noiri \cite{key85}, Dorsett \cite{key34}, and Arya \cite{key8}, Manshi \cite{key79} introduced g-regular and g-normal spaces using g-closed sets. Noiri and Popa \cite{key90} further investigated the concepts introduced by Manshi. Sheik John\cite{key104} introduced and studied the w-normal,w-regular using w-closed sets.
 
