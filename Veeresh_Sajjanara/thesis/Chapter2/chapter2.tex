@@ -105,6 +105,8 @@ We use example \ref{exam2.2.11} to prove the inverse of theorem is untrue.
 Let $\TSP = \{1, 2, 3 4\}$, $\tau = \{\TSP,\phi,\{1, 2\}, \{3, 4\}\}$. Then the set $\clrD= \{1\}$ is gspr-closed set but not ws-closed set in $\TSP$.
 \end{exm}
 
+\newpage
+
 \begin{coro}\label{coro2.2.12}
 \begin{itemize}
 \item[(i)] If $\clrD\in \ws$-$\TSC(\TSP)$ then $\clrD\in \gsp$-$\TSC(\TSP)$ but inverse is untrue.
@@ -132,7 +134,7 @@ The following examples shows that $\ws$-$\TSC(\TSP)$ sets are independent of $\r
 \end{rem}
 
 \begin{exm}\label{exm2.2.15}
-Let $\TSP = \{1, 2, 3 4\}$, $\tau = \{\TSP,\phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$. Then 
+Let $\TSP = \{1, 2, 3, 4\}$, $\tau = \{\TSP,\phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$. Then 
 \begin{enumerate}[(i)]
 \item Closed sets in $(\TSP, \tau)$ are $\TSP$, $\phi$, $\{4\}$, $\{3, 4\}$, $\{1, 3, 4\}$, $\{2, 3, 4\}$.
 
@@ -175,7 +177,7 @@ The following examples clearly represent that ws-closed sets are independent of 
 \end{rem}
 
 \begin{exm}\label{exm2.2.17}
-Let $\TSP = \{1, 2, 3\}$, $\tau_{1} = \{\TSP, \phi, \{1\}, \{2\},\{1, 2\}\}$ and $\tau_{2} = \{\TSP, \phi, \{1\}, \{2, 3\}\}$. Then
+Let $\TSP = \{1, 2, 3\}$, $\tau_{1} = \{\TSP, \phi, \{1\}, \{2\}, \{1, 2\}\}$ and $\tau_{2} = \{\TSP, \phi, \{1\},\break \{2, 3\}\}$. Then
 \begin{enumerate}[(i)]
 \item closed sets in $(\TSP, \tau_{1})$ are $\TSP$, $\phi$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
 \item ws-closed sets $\in(\TSP, \tau_{1})$ are $\TSP$, $\phi$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1, 3\}$, $\{2, 3\}$.
@@ -267,22 +269,29 @@ Meanwhile $\{1\}$ is g-(resp. sg-, gs, g$\alpha$, sgb, rg*b, pgpr, g$\alpha$b, r
 \end{exm}
 
 \begin{rem}\label{rem2.2.20}
-The next example represents that ws-closed will be independent of R*, rg$\beta$ pgr$\alpha$, rgw and gprw-close sets in $\TSP$.
+The next example represents that ws-closed will be independent of R*, close sets in $\TSX$.
 \end{rem}
 
 \begin{exm}\label{exm2.2.21}
-Let $\TSP=\{1,2,3\}$, and $\tau=\{\TSP,\phi,\{1\},\{2\},\{1,2\}\}$. Then
+Let $\TSX=\{1,2,3\}$, and $\tau=\{\TSX,\phi,\{1\},\{2\},\{1,2\}\}$. Then
 \begin{enumerate}[(i)]
-\item closed sets $\in(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 3\},\{2, 3\}$.
-\item ws-closed sets $\in(\TSP, \tau)$ are $\TSP, \phi, \{1\},\{2\},\{3\},\{2, 3\}, \{1, 3\}$.
-\item R*-closed sets $\in(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
-\item rg$\beta$-closed sets $\in(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
-\item pgr$\alpha$-closed sets $\in(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
-\item w-closed sets $\in(\TSP,\tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
-\item gprw-closed sets $\in(\TSP, \tau)$ are $\TSP, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
+\item closed sets $\in(\TSX, \tau)$ are $\TSX, \phi,\{3\},\{1, 3\},\{2, 3\}$.
+\item ws-$\TSC(\TSX)$ are $\TSX, \phi, \{1\},\{2\},\{3\},\{2, 3\}, \{1, 3\}$.
+\item R*-$\TSC(\TSX)$ are $\TSX, \phi,\{3\},\{1, 2\},\{2, 3\},\{1, 3\}$.
 \end{enumerate}
 
-Therefore $\{1\}$ is ws-$\TSC(\TSP)$ set in $\TSP$ but not R*(respectively. rg$\beta$, pgr$\alpha$, rgw, gprw) closed set in $\TSP$.
+Therefore $\{1\}$ is ws-$\TSC(\TSX)$ set in $\TSX$ but not R* closed set in $\TSX$.
+\end{exm}
+
+\begin{exm}\label{add-exm2.2.21}
+Let $\TSX=\{1,2,3\}$, and $\tau=\{\TSX,\phi,\{1\},\{2,3\}\}$. Then
+\begin{enumerate}[(i)]
+\item closed sets $\in(\TSX, \tau)$ are $\TSX, \phi,\{1\},\{2, 3\}$.
+\item ws-$\TSC(\TSX)$ are $\TSX, \phi, \{1\},\{2, 3\}$.
+\item R*-$\TSC(\TSX)$ are $\{\TSP(\TSX)\}$.
+\end{enumerate}
+
+Therefore $\{2\}$ is R*-$\TSC(\TSX)$ set in $\TSX$ but not ws$\TSC(\TSX)$.
 \end{exm}
 
 \begin{rem}\label{rem2.2.22}
@@ -292,11 +301,6 @@ From the results discussed above and the known facts, we have the following impl
 \centering
 \includegraphics[scale=.75]{fig1.eps}
 \end{figure}
-
-\begin{tabbing}
-Note: \= $\TSA\longrightarrow \TSB$ Means $\TSA$ implies $\TSB$, but inverse is untrue.\\[3pt]
-      \> $\TSA~\not{\kern-8pt\longleftrightarrow} \TSB$ Means $\TSA$ and $\TSB$ are independent.
-\end{tabbing}
 \end{rem}
 
 \begin{thm}\label{thm2.2.23}
@@ -637,11 +641,11 @@ The set of all ws-neighbourhood of $\TSx\in \TSP$ is called ws-neighbourhood sys
 \end{dfn}
 
 \begin{thm}\label{thm2.5.4}
-Each neighbourhood $\TSN$ of $\TSx\in \TSP$ is a ws-neighbourhood of $\TSP$.
+Each neighbourhood $\TSN$ of $\TSx\in \TSP$ is a ws-neighbourhood of~$\TSP$.
 \end{thm}
 
 \begin{proof}
-Take up $\TSN$ be a neighbourhood of $\TSx\in \TSP$. To verify that $\TSN$ is a ws-neighbourhood of $\TSx$ by neighbourhood definition $\exists$ an open set $\TSG \ni: \TSx\in \TSG\subseteq \TSN$. Hencefort $\TSN$ is a ws-neighbourhood of $\TSx$.
+Take up $\TSN$ be a neighbourhood of $\TSx\in \TSP$. To verify that $\TSN$ is a ws-neighbour\-hood of $\TSx$ by neighbourhood definition $\exists$ an open set $\TSG \ni: \TSx\in \TSG\subseteq \TSN$. Hencefort $\TSN$ is a ws-neighbourhood of $\TSx$.
 \end{proof}
 
 \begin{rem}\label{rem2.5.5} 
@@ -661,11 +665,11 @@ The set of all ws-limit points of the set $\clrD$ is termed a derived set $\clrD
 \end{dfn}
 
 \begin{thm}\label{thm2.6.3}
-Each neighbourhood $\TSN$ of $\TSx$ belongs to $\TSP$ is a ws-neighbourhood of $\TSP$.
+Each neighbourhood $\TSN$ of $\TSx$ belongs to $\TSP$ is a ws-neighbourhood of~$\TSP$.
 \end{thm}
 
 \begin{proof}
-Take up $\TSN$ be a neighbourhood of $\TSx\in \TSP$. To verify that $\TSN$ is a ws-neighbourhood of $\TSx$ by the definition of neighbourhood $\exists$ an open set $\TSG \ni: \TSx\in\TSG\subseteq \TSN$. Henceforth $\TSN$ is a ws-neighbourhood of $\TSx$.
+Take up $\TSN$ be a neighbourhood of $\TSx\in \TSP$. To verify that $\TSN$ is a ws-neighbour\-hood of $\TSx$ by the definition of neighbourhood $\exists$ an open set $\TSG \ni: \TSx\in\TSG\subseteq \TSN$. Henceforth $\TSN$ is a ws-neighbourhood of $\TSx$.
 \end{proof}
 
 \begin{rem}\label{rem2.6.4}
