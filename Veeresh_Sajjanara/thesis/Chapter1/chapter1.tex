@@ -5,7 +5,7 @@
 
 Topology is main branch of pure Mathematics the purpose of subject is to elucidate and inspect the concept of topological spaces, their continuity and continuos mapping, within the structure of Mathematics. The study of these and their general properties leads to a formation of general topology. The fundamental structure on a topological space is not a distance function, but a collection of open sets, thinking directly in terms of open sets often leads to greater clarity as well as greater generality. Here we present an detailed study of a new kind of generalized closed sets termed ws-closed sets and their respective continuous maps, closed maps, open maps, homeomorphisms, locally closed sets, locally continuous maps and bitopological spaces.
 
-This thesis includes an overview on mathematicans and their work on toplogical spaces for the progress of topology. Second section discussion starts with stronger and weaker forms of open sets and closed sets. In third Section deals with stronger and weaker forms of continuous functions and irresolute maps. Section 4 deals with some closed maps, open maps, section 5 elaborates homeomorphisms. Section 6 explains the concepts of locally closed sets, furher LC-continuous maps. In section 7 bitopological spaces and in section 8 speration of axioms are explained.
+This thesis includes an overview on mathematicans and their work on toplogical spaces for the progress of topology. Second section discussion starts with stronger and weaker forms of open sets and closed sets. In third Section deals with stronger and weaker forms of continuous functions and irresolute maps. Section 4 deals with some closed maps, open maps, section 5 elaborates homeomorphisms. Section 6 Explains the concepts seperation of axioms and in section 7 Elobarates the concept of locally closed sets, furher LC-continuous. In section 8 Bitopological spaces are explained.
 
 Complete in thesis $\TSP$, $\TSQ$ and $\TSR$ denote the topological spaces $(\TSP,\tau)$, $(\TSQ,\sigma)$ and $(\TSR, \eta)$ respectively for which separation axioms are not assumed untill mentioned explicitly. For each subset $\clrD$ of a space $(P, \tau)$, the closure of $\clrD$, interior of $\clrD$, semi-interior of $\clrD$, semi-closure of $\clrD$, w-interior of $\clrD$, ws-closure of $\clrD$, and the complement of $\clrD$ are denoted by $\mbox{cl}(\clrD)$ or $\tau-\mbox{cl}(\clrD)$, $\mbox{int}(\clrD)$ or $\tau-\mbox{int}(\clrD)$, $\mbox{sint}(\clrD)$, $\mbox{scl}(\clrD)$, $\mbox{ws-int}(\clrD)$, $\mbox{ws-cl}(\clrD)$, and $\clrD^{\text{C}}$ or $\TSP$--$\TSD$ respectively.
 
@@ -50,7 +50,7 @@ For subset $\clrD$ of a topological space $(\TSP, \tau)$
 \hline
 2 & Generalized semi closed set (gs-closed) \cite{Arya} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$\tabularnewline
 \hline
-3 & Semi generalized closed set (sg-closed) \cite{Bhattacharyya} & $\scl(D) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
+3 & Semi generalized closed set (sg-closed) \cite{Bhattacharya1} & $\scl(D) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
 \hline
 4 & Generalized semi pre closed set (gsp-closed) \cite{Dontchev} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
@@ -64,107 +64,105 @@ For subset $\clrD$ of a topological space $(\TSP, \tau)$
 \hline
 9 & Generalized pre regular closed set (gpr-closed) \cite{Gnanambal} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular open in $(\TSP, \tau)$.\tabularnewline
 \hline
-11 & w-closed set \cite{Sheik} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+10 & w-closed set \cite{Sheik} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-12 & swg-closed set \cite{Nagaveni6} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+11 & swg-closed set \cite{Nagaveni6} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-13 & rwg-closed set \cite{Nagaveni6} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+12 & rw-closed set \cite{Benchalli} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-14 & rw-closed set \cite{Benchalli} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+13 & R*-closed set \cite{Janaki3} & $\rcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-15 & R*-closed set \cite{Janaki3} & $\rcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+14 & rgw-closed set \cite{Sanjay} & $\cl(\mbox{int}(\clrD))\subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-16 & rgw-closed set \cite{Sanjay} & $\cl(\mbox{int}(\clrD))\subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+15 & Wgr$\alpha$-closed set \cite{Janaki1} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$\tabularnewline
 \hline
-17 & Wgr$\alpha$-closed set \cite{Janaki1} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$\tabularnewline
+16 & pgpr-closed set \cite{Anitha} & $\pcl(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$\tabularnewline
 \hline
-18 & pgpr-closed set \cite{Anitha} & $\pcl(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$\tabularnewline
+17 & rps-closed set \cite{Shyala} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-19 & rps-closed set \cite{Shyala} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
+18 & gprw-closed set \cite{Sanjay1} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-20 & gprw-closed set \cite{Sanjay1} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular semi-open in $(\TSP, \tau)$.\tabularnewline
+19 & $\alpha$rw-closed set \cite{Wali3} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & rw-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-21 & $\alpha$rw-closed set \cite{Wali3} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & rw-open in $(\TSP, \tau)$.\tabularnewline
+%22 & g$\alpha${*}{*}-closed set \cite{key} & $\cl(\clrD) \subseteq\mbox{int}(\cl(M))$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP,\tau)$.\tabularnewline
+%\hline
+20 & $\psi$-closed set \cite{Veerakumar2} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-22 & g$\alpha${*}{*}-closed set \cite{key} & $\cl(\clrD) \subseteq\mbox{int}(\cl(M))$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP,\tau)$.\tabularnewline
+21 & g\#-closed set \cite{Veerakumar} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM is \alpha$g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-23 & $\psi$-closed set \cite{Veerakumar2} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
+22 & $\alpha$gp-closed set \cite{Navalagi2} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & pre-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-24 & g\#-closed set \cite{Veerakumar} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM is \alpha$g-open in $(\TSP, \tau)$.\tabularnewline
+%26 & pgr$\alpha$-closed set \cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+23 & $\beta$wg*-closed set \cite{Dhanapakyam} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\beta$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-25 & $\alpha$gp-closed set \cite{Navalagi2} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & pre-open in $(\TSP, \tau)$.\tabularnewline
+24 & *g$\alpha$-closed set \cite{Vigneshwaran} & if $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g$\alpha$-open in $(\TSP,\tau)$.\tabularnewline
 \hline
-26 & pgr$\alpha$-closed set \cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+25 & {*}{*}g$\alpha$-closed set \cite{Vigneshwaran1} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & *g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-27 & $\beta$wg*-closed set \cite{Dhanapakyam} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\beta$-open in $(\TSP, \tau)$.\tabularnewline
+26 & g$\alpha$b-closed set \cite{Nagaveni7} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-28 & *g$\alpha$-closed set \cite{Vigneshwaran} & if $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g$\alpha$-open in $(\TSP,\tau)$.\tabularnewline
+%31 & sgb-closed set \cite{Nagaveni7} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+27 & rgb-closed set \cite{Mariappa} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-29 & *g$\alpha$-closed) set \cite{Vigneshwaran1} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & *g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+28 & rg*b-closed set \cite{Indirani} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-30 & g$\alpha$b-closed set \cite{Nagaveni7} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+%34 & Pre-semi-closed set \cite{key} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & $\spcl(\clrD) \subseteq \TSM$\tabularnewline
+%\hline
+29 & r\textasciicircum{g}-closed set \cite{Janaki2} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-31 & sgb-closed set \cite{Nagaveni7} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+%36 & $\hat{\TSg}$-closed set \cite{VeeraKumar3} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$\tabularnewline
+%\hline
+%37 & \#gs-closed set \cite{key} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & *g-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+%38 & $\tilde{\TSg}$-closed set \cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & \#gs-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+30 & g\#$\alpha$-closed set \cite{Devi} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-32 & rgb-closed set \cite{Mariappa} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+31 & $\alpha$gs-closed set \cite{Rajamani} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-33 & rg*b-closed set \cite{Indirani} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & rg-open in $(\TSP, \tau)$.\tabularnewline
+32 & g\#s-closed set \cite{VeeraKumar1} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM$ is $\alpha$g-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-34 & Pre-semi-closed set \cite{key} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & $\spcl(\clrD) \subseteq \TSM$\tabularnewline
+33 & gb-closed set \cite{Ahmad} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM$ is -open in $(\TSP, \tau)$.\tabularnewline
 \hline
-35 & r\textasciicircum{g}-closed set \cite{Janaki2} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+34 & rb-closed set \cite{Nagaveni2} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & b-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-36 & $\hat{\TSg}$-closed set \cite{VeeraKumar3} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$\tabularnewline
+35 & swg*-closed set \cite{Nagaveni} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-37 & \#gs-closed set \cite{key} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & *g-open in $(\TSP, \tau)$.\tabularnewline
+36 & gr-closed set \cite{Bhattacharya1} & $\rcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-38 & $\tilde{\TSg}$-closed set \cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & \#gs-open in $(\TSP, \tau)$.\tabularnewline
+37 & $\beta$wg{*}{*}-closed set \cite{Subashini} & $\beta$wg*$\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-39 & g\#$\alpha$-closed set \cite{Devi} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD\subseteq\TSM$ & g-open in $(\TSP, \tau)$.\tabularnewline
+%47 & $\alpha\hat{\TSg}$s-closed set \cite{key} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$gs-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+%48 & w$\alpha\hat{\TSg}$-closed set \cite{key} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$gs-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+%49 & R-closed set \cite{key} & $\alpha \cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD \subseteq \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+38 & g$\alpha$*-closed set \cite{Maki3} & $\alpha\cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-40 & $\alpha$gs-closed set \cite{Rajamani} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+39 & \"g-closed set \cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-41 & g\#s-closed set \cite{VeeraKumar1} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM$ is $\alpha$g-open in $(\TSP, \tau)$.\tabularnewline
+%52 & *g$\alpha$-closed set \cite{Vigneshwaran} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
+%\hline
+40 & \#g$\alpha$-closed set \cite{Maki4} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g\#$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-42 & gb-closed set \cite{Ahmad} & $\bcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\TSM$ is -open in $(\TSP, \tau)$.\tabularnewline
+41 & g$\xi$*-closed set \cite{VivekPrabu} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & \#g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-43 & rb-closed set \cite{Nagaveni2} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & b-open in $(\TSP, \tau)$.\tabularnewline
+42 & g\#-pre-closed set \cite{Pious} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g\#-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-44 & swg*-closed set \cite{Nagaveni} & $\gcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi-open in $(\TSP, \tau)$.\tabularnewline
+43 & gps-closed set \cite{Gnanambal1} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
 \hline
-45 & gr-closed set \cite{Bhattacharya1} & $\rcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
+44 & gspr-closed set \cite{Navalagi} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-46 & $\beta$wg{*}{*}-closed set \cite{Subashini} & $\beta$wg*$\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
+45 & wg-closed set \cite{Nagaveni3} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
 \hline
-47 & $\alpha\hat{\TSg}$s-closed set \cite{key} & $\scl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$gs-open in $(\TSP, \tau)$.\tabularnewline
+46 & rg$\alpha$-closed set \cite{Vadivel} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-48 & w$\alpha\hat{\TSg}$-closed set \cite{key} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & $\alpha$gs-open in $(\TSP, \tau)$.\tabularnewline
+47 & w$\alpha$-closed set \cite{Benchalli1} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
 \hline
-49 & R-closed set \cite{key} & $\alpha \cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD \subseteq \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-50 & g$\alpha$*-closed set \cite{Maki3} & $\alpha\cl(\clrD) \subseteq\mbox{int}(\TSM)$ & $\clrD \subseteq \TSM$ & $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-51 & \"g-closed set \cite{key} & $\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & sg-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-52 & *g$\alpha$-closed set \cite{Vigneshwaran} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-53 & \#g$\alpha$-closed set \cite{Maki4} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g\#$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-54 & g$\xi$*-closed set \cite{Kokilavani} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & \#g$\alpha$-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-55 & g\#-pre-closed set \cite{Pious} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & g\#-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-56 & gps-closed set \cite{Gnanambal1} & $\pcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & semi open in $(\TSP, \tau)$.\tabularnewline
-\hline
-57 & gspr-closed set \cite{Navalagi} & $\spcl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-58 & wg-closed set \cite{Nagaveni3} & $\cl(\mbox{int}(\clrD)) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & open in $(\TSP, \tau)$.\tabularnewline
-\hline
-59 & rg$\alpha$-closed set \cite{Vadivel} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & regular $\alpha$-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-60 & w$\alpha$-closed set \cite{Benchalli1} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & w-open in $(\TSP, \tau)$.\tabularnewline
-\hline
-61 & gw$\alpha$-closed set \cite{Benchalli2} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & w$\alpha$-open in $(\TSP, \tau)$\tabularnewline
+48 & gw$\alpha$-closed set \cite{Benchalli2} & $\alpha\cl(\clrD) \subseteq \TSM$ & $\clrD \subseteq \TSM$ & w$\alpha$-open in $(\TSP, \tau)$\tabularnewline
 \hline
 \end{longtable}}
 
@@ -174,16 +172,14 @@ The compliment of the above mentioned definition closed sets are their open sets
 
 In general topology, the concept of continuous functions plays a very important role. This section deals with continuous maps and irresolute maps contributed by few topologist namely Arya and Gupta \cite{Arya1},  Levine \cite{Levine1}, Balachandran et al \cite{Maki11}, Mashhour \cite{Abd1}, Sundaram \cite{Maki2},  Gnanambal \cite{Gnanambal}, Palaniappan \cite{Palaniappan}, Sheik John \cite{Sheik1}, and R.S. Walli \cite{Wali4} has explored regular continuous and completely, semi,  $\alpha$, pre, g.sg, gpr, rg, w, $\alpha rw$-continuous. Irresolute maps were innovated and explored by Crossely and Hildebrand \cite{Crossley}.
 
-\newpage
-
 \begin{dfn}\label{dfn1.3.1}
 In a map $\TSh: (\TSP, \tau) →(\TSQ, \sigma)$
 \begin{enumerate}
 \item Pretend $\TSh^{-1}(\clrD)$ is r-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as regular-continuous(r-continuous) \cite{Arya1}. 
 \item Pretend $\TSh^{-1}(\clrD)$ is regular closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as completely-continuous \cite{Levine2}. 
-\item Pretend $\TSh^{-1}(\clrD)$ is clopen (both open and closed) in $\TSP$ for all subset $\clrD$ of $\TSQ$ then it is termed as strongly-continuous \cite{Maki11}. 
+%\item Pretend $\TSh^{-1}(\clrD)$ is clopen (both open and closed) in $\TSP$ for all subset $\clrD$ of $\TSQ$ then it is termed as strongly-continuous \cite{Maki11}. 
 \item Pretend $\TSh^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\alpha$-continuous \cite{Maki11}. 
-\item Pretend $\TSh^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as strongly $\alpha$-continuous \cite{Navalagi}. 
+\item Pretend $\TSh^{-1}(\clrD)$ is $\alpha$-closed in $\TSP$ for all semi-closed subset $\clrD$ of $\TSQ$ then it is termed as strongly $\alpha$-continuous \cite{Maki11}. 
 \item Pretend $\TSh^{-1}(\clrD)$ is w-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\omega$-continuous \cite{Sheik}. 
 \item Pretend $\TSh^{-1}(\clrD)$ is rw-closed in $\TSP$ for all closed subset $\clrD$ of $\TSQ$ then it is termed as $\TSr\omega$-continuous \cite{Benchalli}. 
 \end{enumerate}
@@ -211,7 +207,7 @@ A topological space $(\TSP, \tau)$ is termed as
 
 \section{Closed and open maps}
 
-Malghan \cite{Malghan} explored and deliberated generalised closed maps. Sundaram \cite{Maki2}, Arockirani \cite{Arockiarani}, Nagaveni \cite{Nagaveni}, Sheik John \cite{Sheik1}, Benchalli \cite{Benchalli} and R. S. Walli \cite{Wali2}, Pushpalatha \cite{Pushpalatha}, Crossely and Hildebrand \cite{Crossely}, mashhour \cite{Abd1} and Gnanambal \cite{Gnanambal} has explored generalised open maps, rg-closed maps, wg closed and open maps, w-closed and open maps, rw-closed and open maps, $\alpha$rw-closed and open maps, g*-closed and open maps, pre semi open maps, $\alpha$-open maps, gpr-closed maps respectively.
+Malghan \cite{Malghan} explored and deliberated generalised closed maps. Sundaram \cite{Maki2}, Arockirani \cite{Arockiarani}, Nagaveni \cite{Nagaveni}, Sheik John \cite{Sheik1}, Benchalli \cite{Benchalli} and R. S. Walli \cite{Wali2}, Pushpalatha \cite{Pushpalatha}, Crossely and Hildebrand \cite{Crossley}, mashhour \cite{Abd1} and Gnanambal \cite{Gnanambal} has explored generalised open maps, rg-closed maps, wg closed and open maps, w-closed and open maps, rw-closed and open maps, $\alpha$rw-closed and open maps, g*-closed and open maps, pre semi open maps, $\alpha$-open maps, gpr-closed maps respectively.
 
 \begin{dfn}\label{dfn1.4.1}
 A map $\TSh: (\TSP, \tau) \rightarrow (\TSQ \sigma)$ is said to be
@@ -228,7 +224,7 @@ A map $\TSh: (\TSP, \tau) \rightarrow (\TSQ \sigma)$ is said to be
 Homeomorphism
 
 The concept of generalised homeomorphism explored and deliberated by Balachandran et all. \cite{Maki5}, Sheik John \cite{Sheik1}, Vadivel et al \cite{Vadivel}, 
-Thangavel \cite{Shyala1}, Maki has explored rwg- homeomorphism, w-homeomorphism, rg$\alpha$-homeomorphism, gs-homeomorphism and sg-homeomorphism.
+Thangavel \cite{Shyala}, Maki has explored rwg- homeomorphism, w-homeomorphism, rg$\alpha$-homeomorphism, gs-homeomorphism and sg-homeomorphism.
 \end{enumerate}
 \end{dfn}
 
@@ -247,7 +243,7 @@ Map $\TSh: \TSP \rightarrow \TSQ$ is said to be
 
 \section{Locally closed sets and LC-continuous maps}
 
-Ganster and Reilly \cite{Ganster}, Sundaram \cite{Sundaram}, Arockkiarani \cite{Arockiarani} and Balachandran ([4], [5]), Park \cite{Park} and Sheik John \cite{Sheik1} have respectively introduced and studied locally, generalized locally, regular generalized locally and w-locally closed sets. 
+Ganster and Reilly \cite{Ganster}, Sundaram \cite{Sundaram}, Arockkiarani \cite{Arockiarani}, Park \cite{Park} and Sheik John \cite{Sheik1} have respectively introduced and studied locally, generalized locally, regular generalized locally and w-locally closed sets. 
 
 \begin{dfn}\label{dfn1.5.1}
 In a subset $\clrD$ of topological space $(\TSP, \tau)$ 
@@ -282,14 +278,14 @@ A map $\TSh: (\TSP, \tau)\rightarrow (\TSQ, \sigma)$ is termed
 
 \section{Bitopological spaces}
 
-Kelly \cite{Kelly} initiated a systematic study of the concept of bitopological spaces in 1963. Furthers various authors, like Arya and Nour \cite{Arya2}, Di Maio and Noiri \cite{Noiri2}, Fukutake \cite{Fukutake2}, Reilly \cite{Reilly}, Popa \cite{Popa}, Maki \cite{Maki6}, Arockiarani \cite{Arockiarani}, Gnanambal \cite{Gnanambal} and Sheik Jhon \cite{Sheik} have changed their attention to put the individual concepts of topology to bitopological spaces. Here we define some of the definitions, which are used in our study. 
+Kelly \cite{Kelly} initiated a systematic study of the concept of bitopological spaces in 1963. Furthers various authors, like Arya and Nour \cite{Arya2}, Di Maio and Noiri \cite{Noiri2}, Fukutake \cite{Fukutake2}, Reilly \cite{Reilly}, Popa \cite{Popa1}, Maki \cite{Maki6}, Arockiarani \cite{Arockiarani}, Gnanambal \cite{Gnanambal} and Sheik Jhon \cite{Sheik} have changed their attention to put the individual concepts of topology to bitopological spaces. Here we define some of the definitions, which are used in our study. 
 
 \begin{dfn}\label{dfn1.6.1}
 Let $\TSi, \TSj\in \{1, 2\}$ be fixed integers. In a bitopological space $(\TSP, \tau_1, \tau_2)$, a subset $\clrD$ of $(\TSP, \tau_1, \tau_2)$ is said to
 \begin{enumerate}[\rm (i)]
 \item $(\TSi, \TSj)$-g\#-closed \cite{Veerakumar} if $\tau_\TSj- \cl(\clrD)\subset \TSM$ when $\clrD\subset\TSM$ and $\TSM\in \tau_\TSi$,
 \item $(\TSi, \TSj)$-*g$\alpha$-closed \cite{Vigneshwaran} if $\tau_\TSj$-$\cl(\clrD)\subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_\TSi$,
-\item $(\TSi, \TSj)$-g$\xi$*-closed \cite{Kokilavani} if $\tau_\TSj$-$\mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_i$,
+\item $(\TSi, \TSj)$-g$\xi$*-closed \cite{VivekPrabu} if $\tau_\TSj$-$\mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM$ is regular open in $\tau_i$,
 \item $(\TSi, \TSj)$-$\alpha$gp-closed \cite{Navalagi2} if $\tau_\TSj$-$\cl(\tau_\TSi-\mbox{int}(\clrD))\subset\TSM$ when $\clrD\subset\TSM$ and $\TSM\in\tau_\TSi$,
 \item $(\TSi, \TSj)$-$\ddot{g}$-closed \cite{key} if $\tau_\TSj-\cl(\clrD) \subset \TSM$ when $\clrD\subset\TSM$ and $\TSM$ is semiopen in $\tau_\TSi$,
 \item $(\TSi, \TSj)$-rb-closed \cite{Nagaveni2} if $\tau_\TSj$-$\mbox{pcl}(\clrD) \subset\TSM$ when $\clrD\subset\TSM$ and $\TSM\in\tau_\TSi$,
@@ -330,5 +326,5 @@ A map $\TSh: (\TSP, \tau_1, \tau_2)\rightarrow(\TSQ \sigma_1, \sigma_2)$ is term
 
 From the literature survey on separation axioms we observed that there is a significant work for different relatively weak form of separation axioms like $\TST_\TSk$ spaces $(\TSk=0, 1, 2)$, normal and regular axioms in particular several other neighbouring forms of them have been studied in many papers.
 
-Maheshwari and Prasad \cite{Maheshwari} established and deliberated the new class of space called s-normal space using semi-open sets. It was further studied by Noiri \cite{Dontchev} and Arya \cite{Arya1} introduced g-regular and g-normal spaces using g-closed sets. Noiri and Popa \cite{Popa} further investigated the concepts introduced by Sheik John \cite{ShaikJohn} introduced and studied the w-normal, w-regular using w-closed sets.
+Maheshwari and Prasad \cite{Maheshwari} established and deliberated the new class of space called s-normal space using semi-open sets. It was further studied by Noiri \cite{Dontchev2} and Arya \cite{Arya1} introduced g-regular and g-normal spaces using g-closed sets. Noiri and Popa \cite{Popa} further investigated the concepts introduced by Sheik John \cite{Sheik1} introduced and studied the w-normal, w-regular using w-closed sets.
 
