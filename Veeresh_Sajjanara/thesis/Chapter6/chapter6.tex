@@ -1,413 +1,397 @@
-\chapter{ws-Locally Closed Sets in Topological Spaces}
+\chapter{Weakly semi closed separation axioms in topological spaces}
 \graphicspath{{Chapter6/Chapter6Figs/EPS/}{Chapter6/Chapter6Figs/}}
 
-\section{Introduction}\label{sec6.1}
+\section{Introduction}\label{sec8.1}
 
-LC-continuity and LC-irresoluteness
 
-Bourbaki \cite{Bourbaki} defined locally closed set in $(\TSP,\tau)$ as intersection of closed and open sets. Stone \cite{Stone} used a new term as FG for locally closed. Further LC-continuity and LC-irresoluteness developed by Ganster and Reilly \cite{Ganster}. Sundaram \cite{Sundaram} developed the knowledge of generalized locally closed sets, the class of GLC-continuous functions, GLC-irresolute functions and analysed some of their topological properties. Arockiarani \cite{Arockiarani} popularized regular generalized locally closed sets and obtained six new classes of generalized continuities using the theory of regular generalized closed sets. Recently Sheik John \cite{Sheik1} introduced three new classes of sets denoted by w-LC$(\TSP, \tau)$, w-LC{*}$(\TSP, \tau)$ and w-LC{*}{*}$(\TSP, \tau)$ each of which contains LC$(\TSP, \tau)$. Also various authors like Park \cite{Park}, Balachandran \cite{Balachandran} have put stremendous effort to the growth of locally closed sets and locally continuous maps.
+From the literature survey on separation axioms, we observed that there is an significant work on weak forms of separation axioms like $\TST_{\TSk}$ spaces $(\TSk=0, 1, 2)$, normal and regular axioms in particular, several other neighbouring forms of them have been elaborated in many articals. In the year 1975, Maheshwari and Prasad \cite{Maheshwari} introduced a new class of spaces called s-normal space using semi open sets. Using the concept of generalized closed sets of Levine \cite{Levine}, T. Noiri and Papa \cite{Popa} introduced g-regular and g-normal spaces in topological spaces. Sheik John \cite{Sheik1} introduced and studied w-regular and w-normal spaces. Recently, Basavaraj M. Ittanagi et al \cite{Basavaraj} introduced and studied basic properties of ws-closed sets, ws-continuous functions and ws-closed maps in topological spaces. In this paper, using the notion of ws-open sets, ws-separation axioms are introduced and studied. Also the relationships with some other functions are discussed.
 
-In the second section of this chapter, we describe three weaker forms of locally closed sets called ws-lc set, ws-lc* set and ws-lc{*}{*} set each of which is weaker than locally closed set and examine some properties of ws-lc set, ws-lc* set and ws-lc{*}{*} set. 
-
-\newpage
-
-In third section of this chapter, we introduce wsLC-continuous, wsLC*-continuous and wsLC{*}{*}-continuous functions Also we introduce ws-submaximal spaces and obtain some of their properties.
-
-In fourth section of this chapter, we define wsLC-irresolute, wsLC*-irresolute and wsLC**-irresolute functions and analyse some of their related properties.
-
-\section{ws-Locally Closed Sets}\label{sec6.2}
-
-\begin{dfn}\label{defi6.2.1}
-A subset $\clrD$ of a topological space $(\TSP, \tau)$ is called a weakly semi locally closed set (briefly wslc-set) if $\clrD = \TSS \cap \TSF$ where $\TSS$ is ws-open and $\TSF$ is ws-closed.
-\end{dfn}
-
-The set of all weakly semi locally closed set in $(\TSP,\tau)$ is denoted by wsLC$(\TSP, \tau)$.
-
-\begin{exm}\label{exam6.2.2}
-Take up $\TSP = \{1,2,3,4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1,2\},\{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1,4\} \{3,4\}, \{2,3\},\break \{2,4\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, $\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{1,4\},\break \{2,3\}, \{2,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)=\{\phi,\TSP,\{1\},\{2\},\{3\},\break \{4\},\{1,2\},\{1,3\},\{1,4\},\{1,3\},\{2,4\},\{3,4\},\{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$
-\end{exm}
-
-\begin{rem}\label{rem6.2.3}
-\begin{enumerate}[(1)]
-\item A subset $\clrD$ of a topological space $(\TSP, \tau)$ is a ws-lc set if its complement is the union of ws-open set and ws-closed set.
-\item Each ws-open set of $(\TSP, \tau)$ s a wslc set
-\end{enumerate}
-\end{rem}
-
-\begin{dfn}\label{defi6.2.4}
-A subset $\clrD$ of a space $\TSP$ is termed as $\ws\LC*$-set if $\exists$ ws-open set $\TSS$ and a closed set $\TSF$ of $\TSP$, $\ni: \clrD = \TSS \cap \TSF$.
-\end{dfn}
-
-\begin{dfn}\label{defi6.2.5}
-A subset $\clrD$ of a space $\TSP$ is termed as $\ws\LC{*}{*}$-set if $\exists$ an open set $\TSS$ and ws-closed set $\TSF$ of $\TSP \ni: \clrD = \TSS\cap \TSF$.
-\end{dfn}
-
-\begin{thm}\label{thm6.2.6}
-If a subset $\clrD$ of $(\TSP, \tau)$ is locally closed then it is $\ws\LC(\TSP, \tau)$, $\ws\LC*(\TSP, \tau)$ and $\ws\LC{*}{*}(\TSP, \tau)$ but inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Take up $\clrD = \TSU \cap \TSV$, $\forall \TSU$ is open and $\TSV$ is closed in $(\TSP, \tau)$. Since each open set is ws-open and each closed set is ws-closed Definition \ref{defi6.2.3} A subset $\clrD$ of a topological space $(\TSP, \tau)$ is said to be $\ws\LC{*}{*}$-set if $\exists$ an open set $\TSS$ and a ws-closed set $\TSF$ of $(\TSP, \tau) \ni: \clrD = \TSS\cap \TSF$., Therefore $\clrD$ is $\ws\LC (\TSP, \tau)$, $\ws\LC*(\TSP, \tau)$ and $\ws\LC{*}{*}(\TSP, \tau)$.
-
-We use example \ref{exam6.2.7} to prove the inverse of theorem is untrue.
-\end{proof}
-
-\begin{exm}\label{exam6.2.7}
-$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \TSP, \{1\}, \{2\}, \{1, 2\}, \{1,2, 3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1,4\},\{3,4\},\{2,3\}, \{2,4\},\break \{1,2, 4\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\},\{1,3\} \{3,4\}, \{1,4\},\break \{2,3\}, \{2,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \WSLC*(\TSP, \tau) = \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\{1.2\},\{1,3\}, \{1,4\}$, $\WSLC**(\TSP,\tau)=\{\phi,\TSP,\{1\},\{1,3\},\break \{2,4\}, \{3,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, and $\{2\}, \{3\}, \{4\}, \{1,2\}, \{1,3\},\break \{1,4\}, \{2,3\},\{2,4\},\{3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\}\}$ and locally closed sets or $\LC = \{\phi, \TSP, \{1\}, \{2\}, \{4\}, \{1,2\}, \{3, 4\}\{1,2,3\},\{1,3,4\},\{2,3,4\}\}$, Here $\{3\}$ is $\WSLC (\TSP, \tau)$, $\WSLC*(\TSP, \tau)$, $\WSLC{*}{*}(\TSP, \tau)$ but not LC-set
-\end{exm}
-
-\begin{thm}\label{thm6.2.8}
-If a subset $\clrD$ of $(\TSP, \tau)$ is $\WSLC*$-set then it is $\WSLC$-set but inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Take up $\clrD$ be a $\WSLC*$-set. Assume $\TSM$ as a ws-open set in $\TSP$ and $\TSN$ as closed set in $\TSP$. Seeing that $\clrD$ is $\ws\LC*$-set by definition, $\clrD = \TSM \ \TSn \ \TSN$. Since each closed set is ws-closed. Henceforth $\clrD$ is $\WSLC$-set.
-
-We use example \ref{exam6.2.9} to prove the inverse of theorem is untrue.
-\end{proof}
-
-\begin{exm}\label{exam6.2.9}
-Take $\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{1, 2\}, \{1, 2, 3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1, 3\}, \{2, 4\}, \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2,3\},\{1,3,4\},\{1,3,4\}\}$ $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{1,4\}, \{2,3\},\break \{2,4\}, \{1,2, 3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\break \{1,2\},\{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ And\break $\ws\LC*(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\}, \{4\},\{1,2\},\{1,3\}, \{1,4\}, \{2,3\}, \{3,4\}, \{1,2,3\},\break \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, Then the subset $\{2,4\} \in \WSLC(\TSP, \tau)$ but $\{2,4\}\not\in\break \WSLC*(\TSP, \tau)$.
-\end{exm}
-
-\begin{thm}\label{thm6.2.10}
-Each $\WSLC{*}{*} (\TSP, \tau)$ is $\WSLC (\TSP, \tau)$ but inverse is untrue
-\end{thm}
-
-\begin{proof}
-Proof of above theorem follows from definitions \ref{defi6.2.1} and \ref{defi6.2.3}.
-
-We use example \ref{exam6.2.11} to prove the inverse of theorem is untrue.
-\end{proof}
-
-\begin{exm}\label{exam6.2.11}
-Take up $\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1, 3\}, \{1, 4\} \{3,4\}, \{2,3\},\break \{2,4\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{1,4\},\break \{2,3\}, \{2,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \WSLC*(\TSP, \tau) =\{\phi, \TSP ,\{1\}, \{2\}, \{3\}, \{4\}, \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, \{3,4\}, \{1,2,3\}, \{1,2,4\},\break \{1,3,4\},\{2,3,4\}\}$, and $\WSLC{*}{*}(\TSP, \tau)= \{\phi, \TSP ,\{1\},\{2\}, \{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\},\break \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$ Here $\{1,2,4\} \in \WSLC (\TSP, \tau)$, but\break $\{1, 2,4\}\not\in \WSLC{*}{*}(\TSP, \tau)$.
-\end{exm}
-
-\begin{thm}\label{thm6.2.12}
-Each locally closed set is a wslc set but inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Proof is obtained from the facts that each open set is ws-open and each closed set is ws-closed.
-\end{proof}
-
-\begin{exm}\label{exam6.2.13}
-$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}, \{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) =\{\phi, \TSP, \{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$ $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\},\break \{2,4\}, \{1,2,3\},\{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\break \{1,2\},\{1,3\}, \{1,4\}, \{2,3\},\{2,4\},\{3,4\}, \{1,2,3\}, \{1,2,4\}, \{1,3,4\}, \{1,3,4\}\}$, and and locally closed sets or $\LC = \{\phi, \TSP, \{1\},\{2\}, \{4\}, \{1,2\}, \{3, 4\} \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$, Here $\{3\}$ is $\WSLC (\TSP, \tau)$, but not $\LC$-set
-\end{exm}
-
-\begin{thm}\label{thm6.2.14}
-Each $\alpha - \lc(g\xi * -\lc, \alpha \gp-\lc$, $*g\alpha$-$\lc$) set is a $\wslc$ set but the inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Proof is obtained from the fact that each $\alpha-(\TSg\xi *, \alpha \gp-, *\TSg\alpha)$ closed set is ws-closed and each $\alpha -(\TSg\xi* , \alpha\gp, *\TSg\alpha)$ open set is ws-open set.
-\end{proof}
-
-\begin{exm}\label{exam6.2.15}
-$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}, \{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2,3\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP)=\{\phi,P,\{1\},\{2\},\{3\},\{1,2\},\{3,4\},\{2,4\},\{2,3\},\break \{2,4\},\{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\}, \{3\},\{4\},\break \{1,2\},\{1,3\}, \{1,4\}, \{2,3\},\{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\alpha - \lc(\TSg\xi * -\lc, \alpha \gp-lc, *\TSg\alpha-\lc) = \{\phi, \TSP, \{1\},\{2\}, \{3\}, \{4\}, \{1,2\}, \{3, 4\} \{1,2,3\},\{1,2,3\},\break \{1,3,4\},\{2,3,4\}\}$, Here $\{2,3\}$ is $\ws\LC (\TSP, \tau)$, but not $\alpha - \lc(\TSg\xi * -\lc, \alpha\gp-\lc, *\TSg\alpha-\lc)$ set
-\end{exm}
-
-\begin{thm}\label{thm6.2.16}
-Each $\scl - \lc(g^{\text{\#}} -\lc, \ddot{g} -\lc)$ set is a $\wslc$ set but the inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Proof is obtained from the evidence that each $\scl - \lc(g^{\text{\#}}\text{-closed}, \ddot{g}\text{-closed})$ set is ws-closed and each $\scl$ - open($g^{\text{\#}}\text{-open}, \ddot{g}\text{-open})$ set is ws-open set.
-\end{proof}
-
-\begin{exm}\label{exam6.2.17}
-$\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \{1\}, \{2\}, \{1,2\}, \{1,2,3\}\}$ be a topology on $\TSP$. Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\},\break \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$ $\ws\TSO(\TSP)=\{\phi, \TSP, \{1\},\{2\},\{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\},\break \{2,4\}, \{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)=\{\phi,P,\{1\},\{2\},\{3\},\{4\},\break \{1,2\},\{1,3\},\{1,4\},\{2,3\},\{2,4\},\{3,4\},\{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\scl - \lc(g^{\text{\#}} -\lc, \ddot{g} -\lc) = \{\phi, \TSP,\{1\},\{4\},\{1,2\}\{3, 4\},\{1,2,3\},\{2,3,4\}\}$, Here $\{2\}$ is\break $\ws\LC (\TSP, \tau)$, but not $\scl - \lc(g^{\text{\#}} -\lc, \ddot{g} \lc)$ set
-\end{exm}
-
-\begin{thm}\label{thm6.2.18}
-\begin{enumerate}[(1)]
-\item $\wslc$ set is $\gsprlc$ set but not conversely.
-\item $\wslc$ set is $\gsplc$ set but not conversel.
-\item $\wslc$ set is $\rgblc$ set but not conversely
-\end{enumerate}
-\end{thm}
-
-\begin{proof}
-The proof follows from the two definitions and the fact that every ws-closed (resp. ws-open) set is $\gspr$-closed (resp. $\gspr$-open).
-
-Similrly we can prove the result (2) and (3)
-\end{proof}
-
-\begin{exm}\label{exam6.2.19}
-Let $X= \{1,2, 3\}$ and $\tau=\{\TSX, \phi, \{1\}, \{2,3\}\}$. Then $\{2\}$ is a gsprlc(respectively, gsplc, rgblc) set but not a ws-lc set in $(\TSX, \tau)$.
-\end{exm}
-
-\begin{rem}\label{rem6.2.20}
-The following example shows that wlc, $\hat{g}$lc, $\alpha\hat{g}$lc, pgprlc, swglc, g$\alpha$lc, gw$\alpha$lc, $\alpha$gslc and rwlc are independent with wslc sets.
-\end{rem}
-
-\begin{exm}\label{exam6.2.21}
-Let $\TSX= \{1, 2, 3, 4\}$ and $\tau=\{\TSX, \phi, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$. Then $\{1, 2\}$ is a wslc set but not a w-lc (respectively, $\hat{g}$lc, $\alpha\hat{g}$lc, pgprlc, swglc, g$\alpha$lc ,gw$\alpha$lc, $\alpha$gslc and rwlc) set in $(\TSX, \tau)$.
-\end{exm}
-
-\begin{exm}\label{exam6.2.22}
-Let $\TSX= \{1,2,3, 4\}$ and $\tau=\{\TSX, \phi, \{1, 2\}, \{3,4\}\}$. Then $\{1\}$ is w-lc (respectively, $\hat{g}$lc, $\alpha\hat{g}$lc, pgprlc, swglc, g$\alpha$lc, gw$\alpha$lc, $\alpha$gslc and rwlc) set but not a wslc set in $(\TSX, \tau)$.
-\end{exm}
-
-\begin{rem}\label{rem6.2.23}
-From the above discussions and known facts we have the following implications:
-\begin{figure}[H]
-\centering
-\includegraphics[scale=.75]{1.eps}
-\end{figure}
-\end{rem}
-
-\begin{thm}\label{thm6.2.24}
-In a space $(\TSP, \tau)$, if each semi closed set is closed then semi $\LC(\TSP) \subset \ws\LC(\TSP)$
-\end{thm}
-
-\begin{proof}
-In general, $\LC(\TSP) \subseteq \ws\LC(\TSP)$ and $\LC(\TSP) \subseteq \semi\LC(\TSP)$. Since each semi closed set is closed then semi-$\LC(\TSP) \subset \LC(\TSP)$. Then semi-$\LC(\TSP) = \LC(\TSP)$. Therefore semi-$\LC(\TSP) \subset \semi\LC(\TSP)$.
-\end{proof}
-
-\begin{thm}\label{thm6.2.25}
-The given results are one and the same.
-\begin{enumerate}[(1)]
-\item $\clrD \in\ws\LC * (\TSP, \tau)$
-\item $\clrD = \TSM \cap \cl(\clrD)$ for some ws open set $\TSM$
-\item $\cl(\clrD) - \clrD$ is ws closed
-\item $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open, where $\clrD$ is subset of a topological space $(\TSP, \tau)$
-\end{enumerate}
-\end{thm}
+This chapter has four sections. In second section of this chapter, a new class of space known as ws- separation axioms namely ws-$\TST_{0}$ space, ws-$\TST_{1}$ space, ws-$\TST_{2}$ space, are introduced and studied. It is observed that each $\alpha$-$\TST_{0}$ is ws-$\TST_{0}$ space, each $\alpha$-$\TST_{1}$ is ws-$\TST_{1}$ space and each $\alpha$-$\TST_{2}$ is ws-$\TST_{2}$ space, few of its major results are obtained.
 
 \newpage
 
-\begin{proof}
-(1) $\Rightarrow$ (2)
+In third section, we innovate the concepts of ws-regular spaces. It is observed that each ws-regular spaces are regular. Characterizations of ws-regular spaces in topological space are obtained.
 
-Take up $\clrD \in \ws\LC * \TSP$. Then $\clrD = \TSM \cap \TSF$, where $\TSM$ and $\TSF$ are ws open set and a closed set in $\TSP$. Seeing that $\clrD \subseteq \TSF$, $\cl(\clrD) \subseteq \cl(\TSF) = \TSF$. Now $\TSM \cap \cl(\clrD) \subseteq (\TSM \cap \TSF) = \TSD$. That is $\TSM \cap \cl(\clrD) \subseteq \TSD$. Also, $\clrD \subseteq \TSM$ and $\clrD \subseteq\cl(\clrD)$ then $\clrD \subseteq (\TSM \cap \cl(\clrD))$. Thetrefore $\TSD= \TSM \cap \cl(\clrD)$ for some ws open set $\TSM$.
+In fourth section, we establish the concept of ws-normal spaces by deliberating its characterization with its few properties.
 
-(2) $\Rightarrow$ (1)
+\section{\boldmath$\ws-\TST_{\TSk}$ Space $(\TSk=0,1,2)$}\label{sec8.2}
 
-Here $\TSM$ is ws open and $\TSF$ is ws closed set. Therefore $\clrD = (\TSM \cap \cl(\clrD)) \in \ws\LC * (\TSP)$. (iii) $\Rightarrow$ (iv) Take up $\cl(\clrD) - \clrD$ is ws-closed. Now $\TSP - (\cl(\clrD) - \clrD) = \TSP \cap (\cl(\clrD) - \TSD)^{\text{c}} = \clrD \cup (\TSP - \cl(\clrD)) = \clrD \cup (\cl(\clrD))^{\text{c}}$ is a ws-open set, That is $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open set.
-
-(4) $\Rightarrow$ (3)
-
-Take up $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open. Now $\TSP - (\clrD \cup (\cl(\clrD))^{\text{c}}) = \cl(\clrD) \cap (\TSP - \TSD) = \cl(\clrD) - \clrD$ is ws-closed.
-
-(4) $\Rightarrow$ (2)
-
-Take up $\clrD \cup \cl(\clrD)^{\text{c}}$ is ws open,. Now $\TSM\cap \cl(\clrD) = (\clrD \cup (\cl(\clrD))^{\text{c}}) \cup \cl(\clrD) = (\clrD \cap \cl(\clrD)) \cup ((\cl(\clrD))^{\text{c}} \cap \cl(\clrD)) = \clrD \cup \varphi = \clrD$
-
-(2) $\Rightarrow$ (4)
-
-Take up $\clrD = \TSM \cap \cl(\clrD)$ for some ws open set $\TSM$. Now $\clrD \cup (\cl(\clrD)^{\text{c}}) = (\TSM \cap \cl(\clrD)) \cup (\cl(\clrD)^{\text{c}}) = \TSM \cap \cl(\clrD) \cup (\cl(\clrD))^{\text{c}} = \TSM \cap \TSP = \TSM$ is a ws-open set.
-\end{proof}
-
-\begin{thm}\label{thm6.2.26}
-If $\clrD \in \ws\LC(\TSP, \tau)$ then $\clrD = \TSM\cap \ws\cl(\clrD)$ for some open set $\TSM$, where $\clrD$ is the subset of a topological space $(\TSP, \tau)$
-\end{thm}
-
-\begin{proof}
-Take up $\clrD \in \ws\LC(\TSP)$. Then $\clrD = \TSM \cap \TSF$ where $\TSM$ and $\TSF$ are ws closed and ws open sets in $(\TSP,\tau)$ respectively. Since $\clrD \subseteq \TSF$, $\ws\cl(\clrD) \subseteq \ws\cl(\TSF)=\TSF$. Now $\TSM \cap \ws\cl(\clrD) \subseteq (\TSM \cap \TSF) = \TSD$. Also, since $\clrD \subseteq \TSM$ and $\clrD \subseteq \ws\cl(\clrD)$ then $\clrD \subseteq (\TSM \cap \ws\cl(\clrD))$. Therefore $\clrD = \TSM \cap \ws\cl(\clrD)$.
-\end{proof}
-
-\begin{thm}\label{thm6.2.27}
-If $\TSA \in \ws\LC{∗}{∗}(\TSP, \tau)$ then $\clrD = \TSM \cap \ws\cl(\clrD)$, where $\TSM$ is an open set and $\clrD$ is subset of a topological space $(\TSP, \tau)$
-\end{thm}
-
-\begin{proof}
-Take up $\clrD \in \ws\LC{∗}{∗}(\TSP, \tau)$. Then $\clrD = \TSM \cap \TSF$, where $\TSM$ is an open set and $\TSF$ is a ws-closed set. Seeing that $\clrD \subseteq \TSF$ and $\ws\cl(\clrD) \subseteq \ws\cl(\TSF) = \TSF$ thus $\TSM \cap \ws\cl(\clrD) \subseteq (\TSM \cap \TSF) = \TSD$. That is $\TSM \cap \ws\cl(\clrD) \subseteq \clrD$. Also $\clrD \subseteq \TSM$ and $\clrD \subseteq \ws\cl(\clrD)$ then $\clrD \subseteq \TSM \cap \ws\cl(\clrD)$. Thus, $\clrD = \TSM \cap \ws\cl(\clrD)$ for some open set $\TSM$.
-\end{proof}
-
-\section{WSLC-Continuous Maps}\label{sec6.3}
-
-\begin{dfn}\label{defi6.3.1}
-The map $\TSh: \TSP \to \TSQ$ is called a $\WSLC$-continuous (respectively $\WSLC{*}$-continuous and $\WSLC{∗}{∗}$-continuous) if the inverse image of each open set in $\TSQ$ is $\ws\lc$-set(respectively $\ws\lc{*}$-set and $\ws\lc{∗}{∗}$-set) in $(\TSP, \tau)$.
+\begin{dfn}\label{defi8.2.1}
+A topological space $\TSP$ is called an $\ws$-$\TST_{0}$ if for each pair of distinct points a, b of $\TSP$, $\exists$ an ws-open sets $\TSH$ in $\TSP$ containing one of them and not the other.
 \end{dfn}
 
-\begin{exm}\label{exam6.3.2}
-Take up $\TSP = \TSQ = \{1, 2, 3\}$, $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\}\}$ and $\sigma = \{\phi, \TSQ, \{1\}, \{2,3\}\}$. Then $\WSLC(\TSP) = \TSP (\TSP)$ and $\TSh: \TSP \to \TSQ$ is defined as identity map is a $\WSLC$-continuous.
+\begin{exm}\label{exam8.2.2}
+Let $\TSP= \{1, 2, 3, 4\}$ and $\tau =\{\TSP, \phi, \{1\},\{2\},\{1,2\},\{1,2,3\}\}$ Then $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space. Seeing that for two distinct points `$1$' and `$2$' of $(\TSP, \tau)$ there exist an ws-open set $\{1\} \ni: 1 \in \{1\}$, $2 \not\in \{1\}$
 \end{exm}
 
-\begin{thm}\label{thm6.3.3}
-Take up $\TSh: (\TSP,\tau) \to \TSQ$ be a function. Then If $\TSH$ is locally continuous then it is $\WSLC$-continuous but inverse is untrue
-\end{thm}
-
-\begin{proof}
-Proof is obvious from the well known definitions and evidence
-\end{proof}
-
-\begin{exm}\label{exam6.3.4}
-Take $\TSP = \{1, 2, 3, 4\}$ and $\tau = \{\phi, \TSP \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSY, \{1\},\{ 2, 3\}\}$ Then $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\},\break \{1, 4\} \{3,4\},\{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$ $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\break \{1,2\}, \{3,4\}, \{2,4\},\{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi,\TSP ,\{1\}, \{2\},\{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\break \{1,3,4\},\{1,3,4\}\}$, $\LC(\TSP)=\{ \phi \TSP,\{1\}, \{2\}, \{4\}, \{1, 2\}, \{3,4\}, \{1,2,3\},\{1,3,4\},\break \{2,3,4\}\}$ and Let $\TSh: (\TSP, \tau )\to(\TSY, \sigma)$ be a function defined by identity map is $\ws\lc$-continuous but not a $\LC$ continuous function as the open set $\TSF=\{2,3\}$ in $\TSQ, h^{-1} (\TSF)=\{2,3\}$ is not a locally continuos closed set in $\TSP$.
-\end{exm}
-
-\begin{thm}\label{thm6.3.5}
-Each $\alpha$-$\lc$ continuous ($\TSg\xi$*-lc continuous, $\alpha\gp$-$\lc$ continuous, $*\TSg\alpha$-$\lc$ continuous) is a $\ws\lc$-continuous but the inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Proof is obvious from the well known definitions and evidence.
-\end{proof}
-
-\begin{exm}\label{exam6.3.6}
-Take $\TSP = \{1, 2, 3, 4\}$ and $\TSQ = \{1, 2, 3\}$, $\tau = \{\phi, \{1\}, \{2\}, \{1, 2\},\break \{1, 2, 3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSQ, \{1\},\{ 2, 3\}\}$ be a topology on $\TSQ, \ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$,\break $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\},\{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\break \{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP,\{1\}, \{2\}, \{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\},\break \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\alpha - \lc(\TSg\xi* -\lc, \alpha \gp-\lc, *\TSg\alpha-\lc) = \{ \phi, \TSP, \{1\}, \{2\}, \{3\}, \{4\}, \{1,2\}, \{3, 4\} \{1,2,3\},\{1,2,4\},\{1,3,4\},\break \{2,3,4\}\}$, Here $\{2,3\}$ is $\ws\LC (\TSP, \tau)$, but not $\alpha - \lc(\TSg\xi* -\lc, \alpha\gp-\lc, *\TSg\alpha-\lc)$ set. Let $\TSh: (\TSP, \tau )\to(\TSY, \sigma)$ be a function defined by identity map is $\ws\lc$-continuous but not a $\alpha$-$\lc$ continuous ($\TSg\xi*$-$\lc$ continuous, $\alpha\gp$-$\lc$ continuous, *$\TSg\alpha$-$\lc$ continuous)) function as the open set $\TSF=\{2,3\}$ in $\TSQ, h^{-1} (\TSF)=\{2,3\}$ is not a $\alpha - \lc(\TSg\xi * -\lc, \alpha\gp-\lc, *\TSg\alpha-\lc)^{\text{c}}$ losed set in $\TSP$.
-\end{exm}
-
-\begin{thm}\label{thm6.3.7}
-Each semilc-continuous ($g^{\text{\#}}$-$\lc$ continuos, $\ddot{g}$-$\lc$ continuos) set is a $\ws\lc$ continuos, but the inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Proof is obvious from the well known definitions and evidence.
-\end{proof}
-
-\begin{exm}\label{exam6.3.8}
-Take $\TSP = \{1,2,3,4\}$ and $\TSQ= \{1,2,3\}$ and $\tau = \{\phi, \{1\},\{2\}, \{1,2\},\break \{1,2,3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSQ, \{1\},\{ 2, 3\}\}$ be a topology on $\TSP$. $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\}, \{4\},\{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$\break $\ws\TSO(\TSP) = \{\phi, \TSP, \{1\}, \{2\}, \{3\},\{1,2\},\{3,4\}, \{2,4\}, \{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\break \{1,3,4\},\{2,3,4\}\}$ and $\ws\LC(\TSP)= \{\phi, \TSP ,\{1\}, \{2\},\{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\},\break \{2,3\}, \{2,4\},\{3,4\}, \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$, and $\scl$-$\lc(g^{\text{\#}}-\lc, \ddot{g}-\lc) = \{\phi, \TSP,\{1\},\{4\},\{1,2\}\{3, 4\},\{1,2,3\},\{2,3,4\}\}$. Let $\TSh: (\TSP, \tau )\to(\TSY, \sigma)$ be a function defined by identity map is $\ws\lc$-continuous but not a semilc-continuous($g^{\text{\#}} -\lc$ continuos, $\ddot{g}$-$\lc$ continuos) function as the open set $\TSF=\{2,3\}$ in $\TSQ, h^{-1} (\TSF)=\{2,3\}$ is not a $\scl$-$\lc(g^{\text{\#}} -\lc, \ddot{g} -\lc)^{\text{c}}$ losed set in $\TSP$.
-\end{exm}
-
-\begin{thm}\label{thm6.3.9}
-Every $\ws$-$\lc$ continuous is $\gspr$ (respectively $\gsp$-$\lc$ continuos, $\rgb$-$\lc$ continuos) continuos, but the converse is not true.
-\end{thm}
-
-\begin{proof}
-The proof follows from the known definitions and facts.
-\end{proof}
-
-\begin{exm}\label{exam6.3.10}
-$\TSX = \{1, 2, 3\}$ and $\TSY= \{1, 2, 3\}$ and $\tau = \{\TSX, \phi, \{1\}, \{2, 3\}\}$ be a topology on $\TSX. \sigma = \{\phi, \TSY, \{1\}, \{1, 2\}, \{1, 2, 3\}\}$, Then $\ws\TSC(\TSX) = \{\phi, \TSX, \{1\}, \{2, 3\}\}$. and $\ws\LC(\TSX)= \{\phi, \TSX \{1\}, \{2, 3\}\}$, and $\gspr - \lc(\gsp-\lc, \rgb-\lc) = \{\TSP(\TSX)\}$ Let $\TSh: (\TSX, \tau)\to(\TSY, \sigma)$ be a function defined by $\TSh(1)= 1$, $\TSh(2)=2$, $\TSh(3)=3$, is $\gspr$-$\lc$(respectively, $\gsp$-$\lc$, $\rgb$-$\lc$)-continuous but not a $\ws$-$\lc$ continuos function as the open set $\TSH=\{1,2,3\}$ in $\TSQ$, $h^{-1}(\TSH)=\{1,2,3\}$ is not a $\ws$-$\lc$ set in $\TSX$.
-\end{exm}
-
-\begin{thm}\label{thm6.3.11}
-Each $\WSLC{*}{*}$ conntinuous is $\WSLC$-continuous.but inverse is untrue
-\end{thm}
-
-\begin{proof}
-Proof is obvious from the well known definitions and evidence.
-\end{proof}
-
-\begin{exm}\label{exam6.3.12}
-$\TSP = \{1,2,3,4\}$ and $\TSY= \{1,2,3\}$ and $\tau = \{\phi, \{1\},\{2\}, \{1,2\},\break \{1,2,3\}\}$ be a topology on $\TSP$. $\sigma = \{\phi, \TSY, \{1\},\{ 2, 3\}\}$, $\ws\TSC(\TSP) = \{\phi, \TSP,\{1\}, \{2\}, \{3\},\break \{4\}, \{1,3\}, \{1, 4\} \{3,4\}, \{2,3\}, \{2,4\}, \{1,2, 3\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSO(\TSP) = \{\phi, \TSP,\break \{1\}, \{2\}, \{3\},\{1,2\}, \{3,4\}, \{2,4\}, \{2,3\}, \{2,4\}, \{1,2,3\}, \{1,2,4\},\{1,3,4\},\{2,3,4\}\}$\break and $\ws\LC(\TSP)= \{\phi, \{3\},\{4\},\{1,2\},\{1,3\}, \{1,4\}, \TSP ,\{1\}, \{2\}, \{2,3\}, \{2,4\},\{3,4\},\break \{1,2,3\}\{1,2,4\},\{1,3,4\},\{1,3,4\}\}$ and $\ws\LC{*}{*}\TSP)= \{\phi, \TSP,\{1\}, \{2\}, \{3\},\{4\},\{1,2\},\break \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\},\{3,4\}, \{1, 2, 3\},\{1,3,4\},\{2,3,4\}\}$, Let $\TSh: (\TSP, \tau )\to(\TSQ, \sigma)$ be a function defined by $\TSh(1)= 2$, $\TSh(2)=2$, $\TSh(3)=4$, is $\ws\lc$-continuous but not a $\ws\LC{*}{*}$-continuous function as the open set $\TSH=\{2,3\}$ in $\TSQ$, $h^{-1} (\TSH)=\{1,2,3\}$ is not a $\ws\LC{*}{*}$ closed set in $\TSP$.
-\end{exm}
-
-\begin{rem}\label{rem6.2.13}
-From the above discussions and known facts we have the following implications:
-\begin{figure}[H]
-\centering
-\includegraphics[scale=.78]{2.eps}
-\end{figure}
-\end{rem}
-
-\begin{thm}\label{thm6.3.14}
-Let $\TSh: \TSP \to \TSQ$ is a function defined on a door space $(\TSP,\tau)$ is a $\WSLC$-continuous (respectively $\WSLC*$ continuous and $\WSLC{∗}{∗}$-continuous).
-\end{thm}
-
-\begin{proof}
-Take up $\TSh$ be a function, where $\TSQ$ be any space and $(\TSP, \tau)$ is a door space. Let $\TSE \in \sigma$. Then $\TSh^{-1} (\TSE)$ is either open or closed. In both the cases, $\TSh^{-1} (\TSE) \in \WSLC(\TSP, \tau)$ (respectively $\WSLC*(\TSP)$, $\WSLC{∗}{∗}(\TSP)$). Therefore $\TSh$ is $\WSLC$-continuous (respectively $\WSLC*$ continuous and $\WSLC{∗}{∗}$-continuous).
-\end{proof}
-
-\begin{thm}\label{thm6.3.15}
-Take $\TSh : \TSP \to \TSQ$ be $\WSLC$-continuous and $\TSE$ is an open set in $\TSQ$. Then $\TSh : (\TSP, \tau) \to (\TSE, \tau \TSE)$ is $\WSLC$-continuous.
-\end{thm}
-
-\begin{proof}
-Take up $\TSU$ as an open set in $\TSE$ and hence open in $(\TSQ, \sigma)$. Then $\TSh^{-1} (\TSV)$ is $\ws\lc$-set in $(\TSP, \tau)$, by hypothesis. Therefore $\TSh : (\TSP, \tau) \to (\TSE, \tau \TSE)$ is $\WSLC$-continuous.
-\end{proof}
-
-\begin{thm}\label{thm6.3.16}
-Take $\TSh: \TSP \to \TSQ$ is $\WSLC$-continuous (respectively $\WSLC*$-{\break}continuous and $\WSLC{∗}{∗}$-continuous) and $\TSg: \TSQ \to \TSR$ is continuous then $\goh : \TSP \to \TSR$ is $\WSLC$-continuous (respectively $\WSLC*$-continuous and $\WSLC{∗}{∗}$-continuous).
-\end{thm}
-
-\begin{proof}
-Take up $\TSN$ as any open set in $(\TSR, \eta)$. Seeing that $\TSg$ is continuous map, $\TSg^{-1} (\TSN)$ is open in $(\TSQ, \sigma)$. Also $\TSh$ is $\WSLC$-continuous, $\TSh^{-1} (\TSg^{-1} (\TSN)) = (\goh)^{-1} (\TSN)$ is a $\ws\lc$ set in $(\TSP, \tau)$. Then $\goh$ is $\WSLC$-continuous.
-\end{proof}
-
-\section{WSLC irresolute maps and their properties}\label{sec6.4}
-
-\begin{dfn}\label{defi6.4.1}
-A map $\TSh: \TSP \to \TSQ$ is called $\ws\lc$-irresolute (respectively $\WSLC*$-irresolute, $\WSLC{∗}{∗}$-irresolute) if inverse image of each $\ws$ locally closed set in $\TSQ$ is ws locally closed set (recpectively $\ws\lc*$ locally closed, $\ws\lc{∗}{∗}$ locally closed) set in $(\TSP, \tau)$.
-\end{dfn}
-
-\begin{exm}\label{exam6.4.2}
-Take up $\TSP = \TSQ = \{1,2, 3\}$, $\tau = \{\phi, \{1\}, \{2\}, \{1,2\}\}$ and $\sigma = \{\phi, \TSQ, \{1\}, \{2, 3\}\}$. Then $\WSLC(\TSP) = \TSP (\TSP)$ and $\TSh: \TSP \to \TSQ$ is defined as identity map is a $\WSLC$-irresolute map.
-\end{exm}
-
-\begin{thm}\label{thm6.4.3}
-If $\TSh: (\TSP, \tau) \to \TSQ$ is $\ws$-irresolute then $\TSh$ is $\WSLC$-irresolute but inverse is untrue.
-\end{thm}
-
-\begin{proof}
-Take up $\TSh : (\TSP, \tau) \to \TSQ$ is $\ws$-irresolute. Let $\TSK \in \WSLC(\TSP)$. Then $\TSK = \TSL \cap \TSM$, where $\TSL$ is $\ws$-open set and $\TSM$ is $\ws$-closed set in $(\TSQ, \sigma)$. Now, $\TSh^{-1} (\TSK) = \TSh^{-1} (\TSL \cap \TSM) = \TSh^{-1} (\TSL) \cap \TSh^{-1} (\TSK)$. Seeing that $\TSh$ is $\ws$-irresolute, $\TSh^{-1}(\TSL)$ is $\ws$-open and $\TSh^{-1}(\TSM)$ is $\ws$ closed set in $(\TSP, \tau)$, therefore $\TSh^{-1}(\TSM)\in \ws\lc(\TSP)$, Hence the theorem.
-\end{proof}
-
-\begin{exm}\label{exam6.4.4}
-Take up $\TSP = \TSQ = \{1, 2, 3, 4\}$, and $\tau= \{\phi, \TSP, \{1\}, \{1, 2\}, \{1, 2, 3\}\}$. $\sigma = \{\phi, \TSQ, \{1\}, \{2\}, \{1, 2\}, \{1, 2, 3\}\}$, $\ws\TSC(\TSP) = \{\phi, \TSP, \{2\}, \{3\}, \{4\}, \{1, 4\}, \{2,3\},\break \{2,3\},\{3,4\}, \{1,2, 4\},\{1,3,4\},\{2,3,4\}\}$, $\ws\TSC(\TSQ) = \{\phi, \TSQ,\{1\}, \{2\}, \{3\}, \{4\}, \{1, 3\},\break \{1, 4\} \{2,3\}, \{2,4\}, \{3,4\}\{1,2, 4\},\{1,3,4\},\{2,3,4\}\}$. Let $\TSh : \TSP \to \TSQ$ be an identity map but not a $\ws$-irresolute map, as the inverse image of the $\ws$-closed set $\{1\}$ in $\TSQ$ is $\{1\}$ in $(\TSP, \tau)$, which is not a $\ws$-closed set in $(\TSP, \tau)$.
-\end{exm}
-
-\begin{thm}\label{thm6.4.5}
-If a map $\TSh: (\TSP, \tau) \to \TSQ$ is $\WSLC$-irresolute then it is $\ws\lc$-continuous.
-\end{thm}
-
-\begin{proof}
-Result is obvious from the well known definitions and evidence that each open set is a $\ws\lc$-set
-\end{proof}
-
-\begin{thm}\label{thm6.4.6}
-Any function $\TSh : (\TSP, \tau) \to \TSQ$ defined on a door space is $\WSLC$-irresolute.
-\end{thm}
-
-\begin{proof}
-The proof is obvious.
-\end{proof}
-
-\begin{thm}\label{thm6.4.7}
-Consider two functions $\TSh: \TSP \to \TSQ$ and $\TSg: \TSQ\to (\TSR, \eta)$. Then
-\begin{itemize}
-\item[(i)] $\goh : (\TSP, \tau) \to (\TSR, \eta)$ is $\WSLC$-irresolute if both $\TSh$ and $\TSg$ are $\WSLC$-irresolute maps.
-\item[(ii)] $\goh: (\TSP, \tau) \to (\TSR, \eta)$ is $\WSLC$-continuous if $\TSh$ is $\WSLC$-continuous and $\TSg$ is $\WSLC$-irresolute.
-\end{itemize}
-\end{thm}
-
-\begin{proof}
-Take up $\TSL$ be any $\ws\lc$ set in $(\TSR, \eta)$. By hypothesis, $\TSg^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSQ, \sigma)$. Also $\TSh$ is $\WSLC$-irresolute, $\TSh^{-1} (\TSg^{-1} (\TSL)) = (\goh)^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSP, \tau)$. Therefore goh is $\WSLC$-irresolute.
-
-This theorem also hold for $\WSLC*$-irresolute map and $\WSLC{∗}{∗}$-irresolute map. (ii) Take up $\TSL$ be any open set in $(\TSR, \eta)$. By hypothesis, $\TSg^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSQ, \sigma)$. Also, since $\TSh$ is $\WSLC$-irresolute, $\TSh^{-1} (\TSg^{-1} (\TSL)) = (\goh)^{-1} (\TSL)$ is a $\ws\lc$ set in $(\TSP, \tau)$. Therefore $\goh$ is $\WSLC$-continuous.
-\end{proof}
-
-\begin{dfn}\label{defi6.4.8}
-Function $\TSh: \TSP \to \TSQ$ is said to be sub-$\WSLC*$-continuous if there is a basis $\beta$ for $\TSQ\ni: \TSh^{-1} (\TSV) \in \WSLC{*}(\TSP)$ for each $\TSV \in \beta$.
-\end{dfn}
-
-\begin{thm}\label{thm6.4.9}
-If $\TSh : (\TSP, \tau) \to \TSQ$ is $\WSLC*$-continuous then it is sub-$\WSLC*$-continuous.
-\end{thm}
-
-\begin{proof}
-Take up $\TSh: \TSP \to \TSQ$ be $\WSLC*$-continuous and $\beta$ is a bais for $\TSQ$ and $\TSu \in \beta$. Since $\TSh$ is $\WSLC*$-continuous, $\TSh^{-1}(\TSu) \in \WSLC * (\TSP, \tau)$. Therefore $\TSh$ is sub-$\WSLC*$-continuous.
-\end{proof}
-
-\begin{thm}\label{thm6.4.10}
-If $\TSh: \TSP \to \TSQ$ is sub-$\LC$-continuous then then it is sub-$\WSLC*$-continuous.
-\end{thm}
-
-\begin{proof}
-Result is obvious from the well known definitions and evidence that $\LC(\TSP,\tau) \subseteq \WSLC(\TSP,\tau)$.
-\end{proof}
-
-\begin{thm}\label{thm6.4.11}
-Take up $\clrD$ and $\TSE$ be two subsets of a topological space $(\TSP, \tau)$. Then these statements are verified.
+\begin{thm}\label{thm8.2.3}
 \begin{enumerate}[(i)]
-\item If $\clrD \in \WSLC * (\TSP)$ and $\TSE \in \WSLC * (\TSP)$ then $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
-\item If $\clrD \in \WSLC{∗}{∗}(\TSP)$ and $\TSE$ is open then $(\TSD \cap \TSE) \in \WSLC{∗}{∗}(\TSP)$.
-\item If $\clrD \in \WSLC(\TSP)$ and $\TSE$ is $\ws$-open then $(\TSD \cap \TSE) \in \WSLC(\TSP)$
-\item If $\clrD \in \WSLC * (\TSP)$ and $\TSE$ is $\ws$-open then $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
-\item If $\clrD \in \WSLC * (\TSP)$ and $\TSE$ is closed then $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
+\item $\forall \TST_{0}$-space is $\ws$-$\TST_{0}$ space
+\item $\forall$ semi-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\alpha$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\TSg\#$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\ddot{g}$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\TSg\xi$*-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\TSg\#\TSs$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ $\rb$-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\item $\forall$ regular-$\TST_{0}$ space is $\ws$-$\TST_{0}$ space
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) Let $\TSP$ is a $\TST_{0}$ space. For each pair of disjoint points $\TSa$, $\TSb$ of $\TSP \exists$ open set $\TSH$ in $\TSP \ni: \TSa \in \TSH$, $\TSb \not\in \TSH$ and $\TSb \in \TSH$, $\TSa \not\in \TSH$. But every open set is $\ws$-open then $\exists$ $\ws$-open set $\TSH$ in $\TSP \ni: \TSa \in \TSH$, $\TSb \not\in \TSH$ and $\TSb\in \TSH$, $\TSa \not\in \TSH$. Henceforth $\TSP$ is a $\ws$-$\TST_{0}$ space.
+
+Similarly the remaining (ii to ix) results can be proved
+
+We use example \ref{exam8.2.4} to prove the inverse of theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam8.2.4}
+Let $\TSP= \{1,2,3,4\}$ and $\tau =\{\TSP, \phi, \{1\}, \{1,2\},\{1, 2 ,3\}\}$. Then $\TSg\#$-(respectively $\ddot{g}$, *$\TSg\alpha$) open $(\TSP, \tau)=\{\TSP, \phi, \{1\}, \{1,2\},\{1, 2,3\}\}$. $\alpha$-(semi-open, $\alpha\TSg\TSp$, $\TSg\#\TSs$, *$\TSg\alpha$) open $(\TSP, \tau) =\{\TSP,\phi, \{1\}, \{1,2\},\{1,3\},\{1,4\},\{1,2,3\},\{1,2,4\},\{1,3,4\}\}$, $\rb$-open=$\{\TSP, \phi, \{1\}\}$, $\ws$-open $(\TSP, \tau)=\{\TSP,\phi, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{1,4\},\break \{2,3\},\{1, 2, 3\},\{1,2, 4\},\{1, 3, 4\}\}$. Here $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space but it is not $\TST_{0}$-space, $\TSg\#$-$\TST_{0}$ space, $\ddot{g}$-$\TST_{0}$ space, *$\TSg\alpha$-$\TST_{0}$ space, $\alpha$-$\TST_{0}$ space, $\TSg\#\TSs$-$\TST_{0}$ space, $\TSg\xi$*-$\TST_{0}$ space and $\rb$-$\TST_{0}$ space. Seeing that for two distinct points `$1$' and `$2$' there do not exist open set, $\alpha$-open set, regular-open set $\TSG$ in $\TSP$ containing one of them and not the other.
+\end{exm}
+
+\begin{thm}\label{thm8.2.5}
+Let $\TSP$ is a topological space and $\TSQ$ is an $\ws$-$\TST_{0}$ space. If $\TSh: \TSP \to Q$ is injective and $\ws$-irresolute then $\TSP$ is $\ws$-$\TST_{0}$ space.
+\end{thm}
+
+\begin{proof}
+Suppose $\TSa$, $\TSb \in \TSP \ni:\TSa \neq \TSb$. Seeing that $\TSh$ is injective thus $\TSf(\TSa) \neq \TSf(\TSb)$. Also $\TSQ$ is $\ws$-$\TST_{0}$ space then $\exists$ a $\ws$-open sets $\TSM$ in $\TSQ \ni: \TSf(\TSa) \in \TSM$, $\TSf(\TSb) \not\in \TSM$ or $\exists$  a $\ws$-open sets $\TSN$ in $\TSQ \ni :\TSf(\TSb) \in \TSN$, $\TSf(\TSa) \not\in \TSN$ with $\TSf(\TSa) \neq \TSf(\TSb)$. Seeing that $\TSh$ is $\ws$-irresolute thus $\TSh^{-1} (\TSM)$ is a $\ws$-open sets in $\TSP \ni: \TSa \in \TSh^{-1} (\TSM)$, $\TSb \not\in \TSh^{-1} (\TSM)$ or $\TSh^{-1} (\TSN)$ is a $\ws$-open sets in $\TSP \ni:\TSb \in \TSh^{-1} (\TSN)$, a $\not\in \TSh^{-1} (\TSN)$. Hence $\TSP$ is $\ws$-$\TST_{0}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.6}
+$(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space iff for each pair of distinct $\TSa$, $\TSb$ of $\TSP$, $\ws$-$\cl(\{1\}) \neq \ws-\cl(\{2\})$.
+\end{thm}
+
+\begin{proof}
+Take $(\TSP, \tau)$ be $\ws$-$\TST_{0}$ space. Assume $\TSa$, $\TSb \in \TSP \ni:\TSa \neq \TSb$, thus $\exists$ a $\ws$-open set $\TSN$ containing one of the points but not the other, say a $\in \TSN$ and $\TSb \not\in \TSN$. Then $\TSN^{\text{C}}$ is $\ws$-closed containing $\TSb$ but not $\TSa$. But $\ws$-$\cl(\{2\})$ is the smallest $\ws$-closed set containing $\TSb$. Henceforth $\ws$-$\cl(\{2\}) \subset \TSN^{\text{c}}$ and hence $\TSa\not\in \ws$-$\cl(\{2\})$. Thus $\ws$-$\cl(\{1\}) \neq \ws$-$\cl(\{2\})$. Inversely, Pretend $\TSa$, $\TSb \in \TSP$, $\TSa\neq \TSb$ and $\ws$-$\cl(\{1\}) \neq \ws$-$\cl(\{2\})$. Assume $\TSc\in \TSP \ni: \TSc\in \ws$-$\cl(\{1\})$ but $\TSc \not\in \ws$-$\cl(\{2\})$. If a $\in \ws$-$\cl(\{2\})$ then $\ws$-$\cl(\{1\}) \subset \ws$-$\cl(\{2\})$ and hence $\TSc \in \ws$-$\cl(\{2\})$. This is a contradiction. Henceforth $\TSa\not\in \ws$-$\cl(\{2\})$. That is a $\in (\ws\text{-}\cl(\TSb))^{\text{c}}$. Henceforth ($\ws$-$\cl(\{2\}))^{\text{c}}$ is $\ws$-open set containing $\TSa$ but not $\TSb$. Hence $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space.
+\end{proof}
+
+\begin{dfn}\label{defi8.2.7}
+A topological space $\TSP$ is called a $\ws$-$\TST_{1}$ if for each pair of distinct points $\TSa$, $\TSb$ of $\TSP$, $\exists$ a $\ws$-open sets $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and $\TSb \in \TSH_{2}$, $\TSa \not\in \TSH_{2}$.
+\end{dfn}
+
+\begin{exm}\label{exam8.2.8}
+Let $\TSP= \{1, 2, 3\}$ and $\tau =\{\TSP, \phi, \{1\}, \{2, 3\}\}$. Then $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space. Seeing that for two distinct points `$1$' and `$2$' of $(\TSP, \tau) \exists$ an $\ws$-open set $\{1\}, \{2\} \ni: 1 \in \{1\}$, $2 \not\in \{1\}$ and $2 \in \{2\}$, $1 \not\in \{2\}$.
+\end{exm}
+
+\begin{thm}\label{thm8.2.9}
+\begin{enumerate}[(i)]
+\item $\forall$ $\TST_{1}$-space is $\ws$-$\TST_{1}$ space
+\item $\forall$ semi - $\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\alpha$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\TSg\#$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\ddot{g}$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\TSg\xi$*-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\TSg\#\TSs$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ $\rb$-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
+\item $\forall$ regular-$\TST_{1}$ space is $\ws$-$\TST_{1}$ space
 \end{enumerate}
 \end{thm}
 
 \begin{proof}
 \begin{itemize}
-\item[(i)] Take up $\clrD \in \WSLC * (\TSP)$ and $\TSE \in \WSLC * (\TSP)$. and also we know that $\exists$ two $\ws$-open sets $\TSK$ and $\TSL \ni: \clrD = \TSK \cap \cl(\clrD)$ and $\TSE = \TSL \cap \cl(\TSE)$. Now $\TSD \cap \TSE = (\TSK \cap \TSL) \cap (\cl(\clrD) \cap \cl(\TSE))$. Here $\TSK \cap \TSL$ is $\ws$-open and $(\cl(\clrD) \cap \cl(\TSE))$ is closed. Therefore $(\TSD \cap \TSE) \in \WSLC * (\TSP)$.
+\item[(i)] Take $\TSP$ is a $\TST_{1}$ space. For each pair of disjoint points $\TSa$, $\TSb$ of $\TSP \ \exists$  open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and a $\in \TSH_{2}$, $\TSb \not\in \TSH_{2}$. But each open set is $\ws$-open then $\exists$  $\ws$-open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and $\TSb \in \TSH_{2}$, $\TSa \not\in \TSH_{2}$ Henceforth $\TSP$ is a $\ws$-$\TST_{1}$ space.
 
-\item[(ii)] Take up $\clrD \in \WSLC{∗}{∗} (\TSP)$ and $\TSE$ is open. Then $\clrD = \TSK \cap \TSG$, where $\TSK$ is an open set and $\TSG$ is a $\ws$-closed. Consider $\TSD \cap \TSE = (\TSK \cap \TSE) \cap \TSG$, where $\TSK \cap \TSE$ is open and $\TSG$ is $\ws$-closed. Therefore $(\TSD \cap \TSE) \in \WSLC{∗}{∗}(\TSP)$.
-
-\item[(iii)] Take up $\clrD \in \WSLC(\TSP)$ and $\TSE$ is $\ws$-open. Then $\clrD = \TSK \cap \TSG$, where $\TSP$ is $\ws$-open and $\TSG$ is $\ws$-closed. Consider $\TSD \cap \TSE = (\TSK \cap \TSE) \cap \TSG$ where $\TSK \cap \TSE$ is $\ws$-open and $\TSG$ is $\ws$-closed. Therefore $(\TSD \cap \TSE) \in \WSLC(\TSP)$.
+Similarly the remaining (ii to ix) results can be proved
 \end{itemize}
-Similarly we can prove (iv) and (v).
+\end{proof}
+
+We use example \ref{exam8.2.10} to prove the inverse of theorem is untrue.
+
+\begin{exm}\label{exam8.2.10}
+Let $\TSP= \{1,2,3,4\}$ and $\tau =\{\TSP, \phi, \{1\}, \{1, 2\},\{1, 2, 3\}\}$. Then $\TSg\#$-(respectively $\ddot{g}$, *$\TSg\alpha$)open $(\TSP, \tau)=\{\TSP, \phi, \{1\}, \{1,2\},\{1, 2 ,3\}\}$. $\alpha$-(semi-open, $\alpha gp$, $\TSg\#\TSs$, *$\TSg\alpha$)open $(\TSP, \tau)=\{\TSP, \phi, \{1\}, \{1, 2\},\{1, 3\},\{1, 4\},\{1, 2, 3\},\{1, 2, 4\},\{1, 3, 4\}\}$, rb-open$=\{\TSP, \phi, \{1\}\}$, ws-open $(\TSP, \tau)=\{\TSP, \phi, \{1\},\{2\},\{3\},\{1, 2\},\{1, 3\},\{1, 4\},\break \{2 ,3\},\{1, 2, 3\},\{1, 2, 4\},\{1, 3, 4\}\}$. Here $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space but it is not $\TST_{1}$-space, $\TSg\#$-$\TST_{1}$ space, $\ddot{g}$-$\TST_{1}$ space, *$\TSg\alpha$-$\TST_{1}$ space, $\alpha$-$\TST_{1}$ space, $\TSg\#\TSs$-$\TST_{1}$ space, $\TSg\xi$*-$\TST_{1}$ space and rb-$\TST_{1}$ space. Seeing that for two distinct points `$1$' and `$2$' there do not exist open set, $\TSg\#$-open, $\ddot{g}$-open, *$\TSg\alpha$-open, $\alpha$-open, $\TSg\#\TSs$-open, $\TSg\xi$*-open and $\rb$-open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: 1 \in \TSH_{1}$, $2 \not\in \TSH_{1}$ and $2 \in \TSH_{2}$, $1 \not\in \TSH_{2}$.
+\end{exm}
+
+\begin{thm}\label{thm8.2.11}
+Let $\TSP$ is a topological space and $\TSQ$ is a $\ws$-$\TST_{1}$ space. If $\TSh: \TSP \to \TSQ$ is injective and $\ws$-irresolute then $\TSP$ is $\ws$-$\TST_{1}$ space.
+\end{thm}
+
+\begin{proof}
+Theorem \ref{thm8.2.5}.
+\end{proof}
+
+\begin{thm}\label{thm8.2.12}
+If $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space then $(\TSP, \tau)$ is $\ws$-$\TST_{0}$ space.
+\end{thm}
+
+\begin{proof}
+Take $(\TSP, \tau)$ be a $\ws$-$\TST_{1}$ space. For each pair of disjoint points $\TSa$, $\TSb$ of $(\TSP, \tau) \ \exists$ open sets $\TSH_{1}$, $\TSH_{2}$ in $(\TSP, \tau) \ni: \TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$ and $\TSb \in \TSH_{2}$, $\TSa \not\in \TSH_{2}$. Hence we have $\TSa \in \TSH_{1}$, $\TSb \not\in \TSH_{1}$. Henceforth $(\TSP, \tau)$ is a $\ws$-$\TST_{0}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.13}
+A topological space $\TSP$ is $\ws$-$\TST_{1}$ space iff $\forall \TSx\in \TSP$ singleton $\{1\}$ is $\ws$-closed set in $\TSP$.
+\end{thm}
+
+\begin{proof}
+Take $\TSP$ be $\ws$-$\TST_{1}$ space and Assume $\TSa \in \TSP$, to show that $\{1\}$ is $\ws$-closed set. We will show $\TSP-\{1\}$ is $\ws$-open set in $\TSP$. take $\TSb \in \TSP-\{1\}$, implies $\TSa \neq \TSb \in \TSP$ and seeing that $\TSP$ is $\ws$-$\TST_{1}$ space thus $\exists$ two $\ws$-open sets $\TSH_{1}$, $\TSH_{2} \ni: \TSa \not\in \TSH_{1}$, $\TSb \in \TSH_{2} \subseteq \TSP-\{1\}$.
+
+Seeing that $\TSb\in \TSH_{2} \subseteq \TSP-\{1\}$ then $\TSP-\{1\}$ is $\ws$-open set. Hence $\{1\}$ is $\ws$-closed set. Inversely, let $\TSa \neq \TSb \in \TSP$ then $\{1\}$, $\{2\}$ are $\ws$-closed sets. That is $\TSP-\{1\}$ is $\ws$-open set. Clearly, $\TSa \not\in \TSP-\{1\}$ and $\TSb \in \TSP-\{2\}$. Similarly $\TSP-\{2\}$ is $\ws$-open set, $\TSb \not\in \TSP-\{2\}$ and $\TSa \in \TSP-\{2\}$. Hence $\TSP$ is $\ws$-$\TST_{1}$ space.
+\end{proof}
+
+\begin{dfn}\label{defi8.2.14}
+A topological space $\TSP$ is called a $\ws$-$\TST_{2}$ if for each pair of distinct points $\TSa$, $\TSb$ of $\TSP$, $\exists$ a $\ws$-open sets $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \in \TSH_{2}$ and $\TSH_{1} \cap \TSH_{2} = \phi$.
+\end{dfn}
+
+\begin{exm}\label{exam8.2.15}
+Let $\TSP= \{1,2,3\}$ and $\tau =\{\TSP, \phi, \{1\},\{2\}, \{1,2\}\}$. Then $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space. Seeing that for a pair of distinct points `$1$' and `$2$' of $(\TSP, \tau)$ there exist an $\ws$-open set $\{1\}, \{2\} \ni: 1 \in \{1\}, 2 \in \{2\}$ and $\{1\} \cap \{2\} = \phi$.
+\end{exm}
+
+\begin{thm}\label{thm8.2.16}
+\begin{enumerate}[(i)]
+\item Each $\TST_{2}$-space is $\ws$-$\TST_{2}$ space
+\item Each semi-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\alpha$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\TSg\#$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\ddot{g}$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\TSg\xi$*-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\TSg\#\TSs$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each $\rb$-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\item Each regular-$\TST_{2}$ space is $\ws$-$\TST_{2}$ space
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{itemize}
+\item[(i)] Let $\TSP$ is a $\TST_{2}$ space. $\forall$ pair of disjoint points $\TSa, \TSb$ of $\TSP \exists$ open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP \ni: \TSa \in \TSH_{1}$, $\TSb \in \TSH_{2}$ and $\TSH_{1} \cap \TSH_{2} = \phi$. But every open set is $\ws$-open then $\exists$  $\ws$-open set $\TSH_{1}$, $\TSH_{2}$ in $\TSP\ni: \TSa \in \TSH_{1}$, $\TSb \in \TSH_{2}$ and $\TSH_{1} \cap \TSH_{2} = \phi$. Henceforth $\TSP$ is a $\ws$-$\TST_{2}$ space.
+
+Similarly the remaining (ii) to (ix) results can be proved.
+\end{itemize}
+\end{proof}
+
+\begin{thm}\label{thm8.2.17}
+If $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space then $(\TSP, \tau)$ is $\ws$-$\TST_{1}$ space.
+\end{thm}
+
+\begin{proof}
+Take up $(\TSP, \tau)$ be a $\ws$-$\TST_{2}$ space. $\forall$ pair of disjoint points $\TSa$, $\TSb$ of $(\TSP, \tau) \exists$ disjoint open sets $\TSK$ and $\TSL$ in $(\TSP, \tau) \ni: \TSa \in \TSK$ and $\TSb \in \TSL$. Hence we have $\TSa \in \TSK$, $\TSb \not\in \TSK$ and $\TSa \in \TSL$, $\TSb \not\in \TSL$. Henceforth $(\TSP, \tau)$ is a $\ws$-$\TST_{1}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.18}
+The given Statements are one and the same, for space $(\TSP, \tau)$,
+\begin{itemize}
+\item[(i)] $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space.
+\item[(ii)] If $\TSa \in \TSP$, then $\forall \TSa\neq b$, there will be $\ws$-open set $\TSK$ containing $\TSa \ni: \TSb \not\in \ws$-$\cl(\TSK)$.
+\end{itemize}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii) Let $\TSa \in \TSP$. If $\TSb \in \TSP$ is $\ni: \TSb \neq \TSa$, $\exists$ disjoint $\ws$-open sets $\TSK$ and $\TSL \ni: \TSa\in \TSK$ and $\TSb\in \TSL$.
+
+Then $\TSa \in \TSK \subset \TSP-\TSL$ which implies $\TSP-\TSL$ is $\ws$-open and $\TSb \not\in \TSP-\TSL$. Henceforth $\TSb \not\in \ws$-$\cl(\TSK)$.
+
+(ii) $\Rightarrow$ (i) Take up $\TSa$, $\TSb \in \TSP$ and $\TSa \neq\TSb$. By (ii), $\exists$ a $\ws$-open $\TSK$ containing $\TSa \ni: \TSb \not\in \ws$-$\cl(\TSK)$. Henceforth $\TSb\in \TSP-(\ws\text{-}\cl(\TSK))$. $\TSP-(\ws\text{-}\cl(\TSK))$ is $\ws$-open and $\TSa \in \TSP- (\ws\text{-}\cl(\TSK))$. Also $\TSK\cap\TSP-(\ws\text{-}\cl(\TSK)) = \Phi$. Hence $(\TSP, \tau)$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.19}
+Pretend $\TSP$ be a topological space and $\TSQ$ is $\ws$-$\TST_{2}$ space. If $\TSh: \TSP \to \TSQ$ is injective and $\ws$-irresolute then $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSa$, $\TSb \in \TSP \ni: \TSa \neq \TSb$. Seeing that $\TSh$ is injective, implies $\TSh(\TSa) \neq \TSh(\TSb)$. Also $\TSQ$ is $\ws$-$\TST_{2}$ space thus there are two $\ws$-open sets $\TSM$ and $\TSN$ in $\TSQ \ni: \TSh(\TSa) \in \TSM$, $\TSh(\TSb) \in \TSN$ and $\TSM\cap \TSN=\Phi$. Seeing that $\TSh$ is $\ws$-irresolute thus $\TSh^{-1}(\TSM)$, $\TSh^{-1} (\TSN)$ are two $\ws$-open sets in $\TSP$, $\TSa \in \TSh^{-1} (\TSM)$, $\TSb \in \TSh^{-1} (\TSN)$, $\TSh^{-1} (\TSM) \cap \TSh^{-1} (\TSN) = \Phi$. Hence $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.2.20}
+Pretend $\TSP$ is a topological space and $\TSQ$ is a $\TST_{2}$ space. If $\TSh: \TSP \to \TSQ$ is injective and $\ws$-continuous then $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSa$, $\TSb \in \TSP \ni: \TSa \neq \TSb$. Seeing that $\TSh$ is injective, implies $\TSf(\TSa) \neq \TSf(\TSb)$. Also $\TSQ$ is an $\TST_{2}$ space, thus there are two open set $\TSM$ and $\TSN$ in $\TSQ$, $\ni: \TSh(\TSa) \in \TSM$, $\TSh(\TSb) \in \TSN$ and $\TSM\cap\TSN =\Phi$. Seeing that $\TSh$ is $\ws$-continuous thus $\TSh^{-1} (\TSM)$, $\TSh^{-1} (\TSN)$ are two $\ws$-open sets in $\TSP$.
+
+Then $\TSa \in \TSh^{-1} (\TSM)$, $\TSb \in \TSh^{-1} (\TSM)$, $\TSh^{-1} (\TSM) \cap \TSh^{-1} (\TSN) =\Phi$. Hence $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\section{\boldmath$\ws$-Regular Space}\label{sec8.3}
+
+In this section, we determine a new kind of spaces called $\ws$-regular spaces using $\ws$-closed sets and verified some of their related characterizations.
+
+\begin{dfn}\label{defi8.3.1}
+A topological space $\TSP$ is termed as $\ws$-regular if for each $\ws$-closed set $\TSF$ and a point $\TSa \not\in \TSF$, $\exists$ disjoint open sets $\TSG$ and $\TSH \ni: \TSF \subseteq \TSG$ and $\TSP \in \TSH$. We have the following interrelationship between $\ws$-regularity and regularity.
+\end{dfn}
+
+\begin{thm}\label{thm8.3.2}
+Each $\ws$-regular space is regular.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be $\ws$-regular space. Assume $\TSF$ be any closed set in $\TSP$ and a point $\TSa \in \TSP \ni: \TSa \not\in \TSF$. and $\TSF$ is $\ws$-closed and $\TSa \not\in \TSF$. Seeing that $\TSP$ is $\ws$-regular space, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH \ni: \TSF \subseteq \TSG$ and $\TSa \in \TSH$. Hence $\TSP$ is a regular space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.3}
+Pretend $\TSP$ is a regular space and $\TST_{\ws}$-space, then $\TSP$ is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a regular space and $\TST_{\ws}$-space. Assume $\TSF$ be any $\ws$-closed set in $\TSP$ and a point $\TSa \in \TSP \ni: \TSa\not\in \TSF$. Seeing that $\TSP$ is $\TST_{\ws}$-space. $\TSF$ is closed and $\TSa \not\in \TSF$. Seeing that $\TSP$ is a regular space, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH \ni: \TSF \subseteq \TSG$ and $\TSP \in \TSH$. Hence $\TSP$ is $\ws$-regular space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.4}
+Each subspace of a $\ws$-regular space is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Take $\TSP$ be $\ws$-regular space. Assume $\TSQ$ be a subspace of $\TSP$. Let $\TSa \in \TSQ$ and $\TSF$ be a $\ws$-closed set in $\TSQ \ni: \TSa \in \TSF$. Thus there is a closed set and so $\ws$-closed set $\clrD$ of $\TSP$ with $\TSF = \TSQ \cap \TSD$ and $\TSP \in \TSD$. Therefore we have $\TSa \in \TSP$, $\clrD$ is $\ws$-closed in $\TSP \ni: \TSa \in \TSD$. Seeing that $\TSP$ is $\ws$-regular, $\exists$  open sets $\TSG$ and $\TSH \ni: \TSa \in \TSG$, $\TSD\subseteq \TSH$ and $\TSG \cap \TSH = \Phi$. Note that $\TSQ \cap \TSG$ and $\TSQ \cap \TSH$ are open sets in $\TSQ$. Also $\TSa \in \TSG$ and $\TSa \in \TSQ$, which implies $\TSP \in \TSQ \cap \TSG$ and $\clrD \subseteq \TSH$ implies $\TSQ \cap \clrD \subseteq \TSQ \cap \TSH$, $\TSF \subseteq \TSQ \cap \TSH$. Also $(\TSQ \cap \TSG) \cap (\TSQ \cap \TSH) = \Phi$. Hence $\TSQ$ is $\ws$-regular space. We have yet another characterization of $\ws$-regularity in the following.
+\end{proof}
+
+\begin{thm}\label{thm8.3.5}
+Let $\TSP$ is a space. Pretend $\TSP$ is a $\ws$-regular and a $\TST_{1}$ space then $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSa$, $\TSb \in \TSP \ni: \TSa = \TSb$. Seeing that $\TSP$ is $\TST_{1}$-space thus $\exists$ an open set $\TSM \ni:\TSa \in \TSM$, $\TSb \in \TSM$. Seeing that $\TSP$ is $\ws$-regular space and $\TSM$ is an open set which contains $\TSa$, $\exists$  an $\ws$-open set $\TSN \ni: \TSa\in N\subset \ws$-$\cl(\TSN) \subseteq \TSM$. Seeing that $\TSb \in \TSM$, hence $\TSb \in \ws$-$\cl(\TSN)$. Therefore $\TSb \in \TSP$-($\ws$-$\cl(\TSN)$). Hence there are $\ws$-open sets $\TSN$ and $\TSP$-($\ws$-$\cl(\TSN)) \ni:(\TSP\text{-}(\ws-\cl(N)))\cap \TSN = \Phi$. Hence $\TSP$ is $\ws$-$\TST_{2}$ space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.6}
+Let $\TSh: \TSP \to \TSQ$ be a bijective, $\ws$-closed map from a topological space $\TSP$ into a $\ws$-regular space $\TSQ$. If $\TSP$ is $\TST\ws$-space, then $\TSP$ is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Take up $\TSa \in \TSP$ and $\TSF$ be $\ws$-closed set in $\TSP$ with $\TSa \in \TSF$. Seeing that $\TSP$ is $\TST\ws$-space, $\TSF$ is closed in $\TSP$. Then $\TSh(\TSF)$ is $\ws$-closed set with $\TSh(P) \in \TSh(\TSF)$ in $\TSQ$, Seeing that $\TSh$ is $\ws$-closed. As $\TSQ$ is $\ws$-regular, $\exists$ disjoint open sets $\TSM$ and $\TSN \ni: \TSh(\TSa) \in \TSM$ and $\TSh(\TSF) \subseteq \TSN$. Henceforth $\TSa \in \TSh^{-1}(\TSM)$ and $\TSF \subseteq \TSh^{-1} (\TSN)$. Hence $\TSP$ is $\ws$-regular space.
+\end{proof}
+
+\begin{thm}\label{thm8.3.7}
+The given below statements are one and the same. for space $\TSP$.
+\begin{enumerate}[(i)]
+\item $\TSP$ is $\ws$-regular space.
+\item For each $\TSa \in \TSP$ and each $\ws$-open neighbourhood $\TSM$ of $\TSP$ $\exists$ an open neighbourhood $\TSN$ of $\TSP\ni: \cl (\TSN) \subseteq \TSM$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii): Pretend $\TSP$ is a $\ws$-regular space. Let $\TSM$ be any $\ws$-neighbourhood of $\TSP$. Then $\exists$ $\ws$-open set $\TSH \ni: \TSa \in \TSH \subseteq \TSM$. Now $\TSP-\TSH$ is $\ws$-closed set and $\TSa \in\TSP - \TSH$. Seeing that $\TSP$ is $\ws$-regular $\exists$ open sets $\TSM$ and $\TSN \ni: \TSP - \TSH \subseteq \TSM$, $\TSa\in \TSN$ and $\TSM\cap \TSN = \phi$ and so $\TSN \subseteq \TSP -\TSM$. Now $\cl(\TSN) \subseteq \cl(\TSP - \TSM) = \TSP -\TSM$ and $\TSP - \TSH \subseteq \TSM$. This implies $\TSP - \TSM \subseteq \TSH \subseteq \TSM$. Therefore $\cl(\TSN) \subseteq \TSM$.
+
+(ii) $\Rightarrow$ (i): Pretend $\TSF$ be any $\ws$-closed set in $\TSP$ and $\TSa \not\in \TSF$ or $\TSa \in \TSP -\TSF$ and $\TSP -\TSF$ is a $\ws$-open and so $\TSP -\TSF$ is a $\ws$-neighbourhood of $\TSP$. By hypothesis, $\exists$ an open neighbourhood $\TSN$ of $\TSa \ni: \TSa \in \TSN$ and $\cl(\TSN) \subseteq \TSP -\TSF$. This implies $\TSF \subseteq \TSP -\cl(\TSN)$ is an open set containing $\TSF$ and $\TSN \cap \{(\TSP - \cl(\TSN)\} = \phi$. Hence $\TSP$ is $\ws$-regular space. We have another characterization of $\ws$-regularity in the following.
+\end{proof}
+
+\begin{thm}\label{thm8.3.8}
+$\TSP$ is topological space is $\ws$-regular iff for each $\ws$-closed set $\TSF$ of $\TSP$ and each $\TSa \in \TSP -\TSF$ $\exists$ open sets $\TSG$ and $\TSH$ of $\TSP \ni: \TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\cl(\TSG) \cap \cl(\TSH) = \phi$.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSP$ is $\ws$-regular space. Assume $\TSF$ be a $\ws$-closed set in $\TSP$ with $\TSa \in \TSF$. Then $\exists$ open sets $\TSM$ and $\TSH$ of $\TSP \ni: \TSa \in \TSM$, $\TSF \subseteq \TSH$ and $\TSM \cap\TSH = \phi$. This implies $\TSM \cap \cl(\TSH) = \phi$. As $\TSP$ is $\ws$-regular, $\exists$ open sets $\TSM$ and $\TSN \ni: \TSa \in \TSM$, $\cl(\TSH) \subseteq \TSN$ and $\TSM \cap \TSN = \Phi$, so $\cl(\TSM) \cap \TSN = \Phi$. Assume $\TSG = \TSM \cap \TSM$, then $\TSG$ and $\TSH$ are open sets of $\TSP \ni: \TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\cl(\TSH) \cap \cl(\TSH) = \phi$. Inversely, if for each $\ws$-closed set $\TSF$ of $\TSP$ and each $\TSa \in \TSP- \TSF \ni:$ open sets $\TSG$ and $\TSH \ni: \TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\cl(\TSH) \cap \cl(\TSH) = \Phi$. This implies $\TSa \in \TSG$, $\TSF \subseteq \TSH$ and $\TSG \cap \TSH = \phi$. Hence $\TSP$ is $\ws$-regular. Now we prove that $\ws$-regularity is a hereditary property.
+\end{proof}
+
+\begin{thm}\label{thm8.3.9}
+$\TSP$ is a topological space then results given below are one and the same.
+\begin{enumerate}[(i)]
+\item $\TSP$ is $\ws$-regular
+\item For each $\TSa \in \TSP$ and each $\ws$-open set $\TSM$ in $\TSP \ni: \TSP \in \TSM$ $\exists$ an open set $\TSV$ in $\TSP \ni: \TSP \in \TSN \subseteq \cl(\TSN) \subseteq \TSM$
+\item For each point $\TSa\in \TSP$ and for each $\ws$-closed set $\TSA$ with $\TSP \in \TSD$, $\exists$ an open set $\TSN$ containing $\TSP \ni: \cl(\TSN) \cap \clrD = \Phi$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii): Follows from Theorem \ref{thm8.3.5}.
+
+(ii) $\Rightarrow$ (iii): Suppose (ii) holds. Assume $\TSa \in \TSP$ and $\clrD$ be a $\ws$-closed set of $\TSP \ni: \TSa \in \clrD$. Then $\TSP-\TSD$ is a $\ws$-open set with $\TSa \in \TSP-\clrD$. By hypothesis, $\exists$ an open set $\TSN \ni: \TSP \in \TSN \subseteq \cl(\TSN) \subseteq \TSP -\clrD$.
+
+That is $\TSP \in \TSN$, $\TSN \subseteq \cl (\clrD)$ and $\cl(\clrD) \subseteq \TSP -\clrD$. So $\TSP \in \TSN$ and $\cl(\TSN) \cap \clrD = \Phi$.
+
+(iii)$\Rightarrow$ (ii): Let $\TSa \in \TSP$ and $\TSM$ is a $\ws$-open set in $\TSP \ni: \TSa \in \TSM$. Then $\TSP -\TSM$ is a $\ws$-closed set and $\TSa \in \TSP -\TSM$. Then by hypothesis, $\exists$ an open set $\TSN$ containing $\TSP \ni: \cl (\TSN) \cap (\TSP -\TSM) = \Phi$. Therefore $\TSa \in \TSN$, $\cl (\TSN) \subseteq \TSM$ so $\TSP \in \TSN \subseteq \cl(\TSN) \subseteq \TSM$. The invariance of $\ws$-regularity is given in the following.
+\end{proof}
+
+\begin{thm}\label{thm8.3.10}
+Pretend $\TSh: \TSP \to \TSQ$ be a bijective, $\ws$-irresolute and open map from a $\ws$-regular space $\TSP$ ino a topological space $\TSQ$, then $\TSQ$ is $\ws$-regular.
+\end{thm}
+
+\begin{proof}
+Pretend $\TSb \in \TSQ$ and $\TSF$ be a $\ws$-closed set in $\TSQ$ with $\TSb \in \TSF$. Seeing that $\TSh$ is $\ws$-irresolute, $\TSh^{-1} (\TSF)$ is $\ws$-closed set in $\TSP$. Let $\TSh(\TSa) = \TSb$ so that $\TSa = \TSh^{-1} (\TSb)$ and $\TSa \in \TSh^{-1} (\TSF)$. Again $\TSP$ is $\ws$-regular space, $\exists$ open sets $\TSM$ and $\TSN \ni: \TSa \in \TSM$ and $\TSh^{-1} (\TSF) \subseteq \TSG$, $\TSM \cap\TSN = \Phi$. Seeing that $\TSh$ is open and bijective, we have $\TSb \in \TSh(\TSM)$, $\TSF \subseteq \TSh(\TSN)$ and $\TSh(\TSM) \cap \TSh(\TSN)= \TSh(\TSM \cap \TSN) = \TSh(\Phi) = \Phi$. Hence $\TSQ$ is $\ws$-regular space.
+\end{proof}
+
+\section{\boldmath$\ws$-Normal Spaces}
+
+In this section, we introduce the concept of $\ws$-normal spaces and study some of their characterizations.
+
+\begin{dfn}\label{defi8.4.1}
+A topological space $\TSP$ is said to be $\ws$-normal if $\forall$ pair of disjoint $\ws$-closed sets $\clrD$ and $\TSE$ in $\TSP$, $\exists$ a pair of disjoint open sets $\TSM$ and $\TSN$ in $\TSP \ni: \clrD \subseteq \TSM$ and $\TSE \subseteq \TSN$. We have the following interrelationship.
+\end{dfn}
+
+\begin{thm}\label{thm8.4.2}
+Each $\ws$-normal space is normal.
+\end{thm}
+
+\begin{proof}
+Take $\TSP$ be a $\ws$-normal space. Assume $\clrD$ and $\TSE$ be a pair of disjoint closed sets in $\TSP$. And $\clrD$ and $\TSE$ are $\ws$-closed sets in $\TSP$. Seeing that $\TSP$ is $\ws$-normal, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. Hence $\TSP$ is normal. 
+
+We use the following example to prove the inverse of the theorem is untrue.
+\end{proof}
+
+\begin{exm}\label{exam8.4.4}
+Let Let $\TSP=\{1,2,3,4\}$, $\tau= \{\TSP, \{1\},\{2\},\{1,2\},\{1,2,3\}\}$ Then the space $\TSP$ is normal but not $\ws$-normal, seeing that the pair of disjoint $\ws$-closed sets namely, $\clrD =\{1\}$ for which there do not exists disjoint open sets $\TSG$ and $\TSH \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$.
+\end{exm}
+
+\begin{thm}\label{thm8.4.5}
+A $\ws$-closed subspace of a $\ws$-normal space is $\ws$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be $\ws$-normal space. Assume $\TSQ$ be a $\ws$-closed subspace of $\TSP$. Pretend $\clrD$ and $\TSE$ be pair of disjoint $\ws$-closed sets in $\TSQ$. Thus $\clrD$ and $\TSE$ be pair of disjoint $\ws$-closed sets in $\TSP$. seeing that $\TSP$ is $\ws$-normal, $\exists$ disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. 
+
+Seeing that $\TSG$ and $\TSH$ are open in $\TSP$, $\TSQ \cap \TSG$ and $\TSQ \cap \TSH$ are open in $\TSQ$. Also we have $\clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$ implies $\TSQ \cap \clrD \subseteq \TSQ \cap \TSG$, $\TSQ \cap \TSE \subseteq \TSQ \cap \TSH$. So $\clrD \subseteq \TSQ \cap \TSG$ and $\TSE \subseteq \TSQ \cap \TSH$ and $(\TSQ \cap \TSG)\cap (\TSQ \cap \TSH) = \TSQ \cap (\TSG\cap \TSH) = \phi$. Hence $\TSQ$ is $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.6}
+If $\TSP$ is normal and $\TST\ws$-space, then $\TSP$ is $\ws$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a normal space. Assume $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$. Seeing that $\TST\ws$-space, $\clrD$ and $\TSE$ are closed sets in $\TSP$. Also $\TSP$ normal, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. Hence $\TSP$ is $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.7}
+Each $\ws$-normal space is $\TSw$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\TSP$ be a $\ws$-normal space. Assume $\clrD$ and $\TSE$ be a pair of disjoint $\TSw$-closed sets in $\TSP$. $\clrD$ and $\TSE$ are $\ws$-closed sets in $\TSP$. seeing that $\TSP$ is $\ws$-normal, $\exists$ a pair of disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \clrD \subseteq \TSG$ and $\TSE \subseteq \TSH$. Hence $\TSP$ is $\TSw$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.8} 
+Map $\TSh: \TSP \to \TSQ$ is bijective, open, $\ws$-irresolute from a $\ws$-normal space $\TSP$ onto $\TSQ$ then is $\ws$-normal.
+\end{thm}
+
+\begin{proof}
+Take up $\clrD$ and $\TSE$ be disjoint $\ws$-closed sets in $\TSQ$. Thus $\TSh^{-1} (\clrD)$ and $\TSh^{-1} (\TSE)$ are disjoint $\ws$-closed sets in $\TSP$ as $\TSh$ is $\ws$-irresolute. Seeing that $\TSP$ is $\ws$-normal, $\exists$ disjoint open sets $\TSG$ and $\TSH$ in $\TSP \ni: \TSh^{-1} (\clrD) \subseteq \TSG$ and $\TSh^{-1} (\TSE) \subseteq \TSH$. As $\TSh$ is bijective and open, $\TSh(\TSG)$ and $\TSh(\TSH)$ are disjoint open sets in $\TSQ \ni: \clrD \subseteq \TSh(\TSG)$ and $\TSE \subseteq \TSh(\TSH)$. Hence $\TSQ$ is $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.9}
+The following statements for a space $\TSP$ are one and the same:
+\begin{enumerate}[(1)]
+\item $\TSP$ is $\ws$-normal.
+\item $\forall$ $\ws$-closed set $\clrD$ and each $\ws$-open set $\TSK \ni: \clrD \subseteq \TSM$, $\exists$ an open set $\TSN \ni: \clrD \subseteq \TSL \subseteq \cl(\TSL) \subseteq \TSM$.
+\item For any disjoint $\ws$-closed sets $\clrD$, $\TSE$, $\exists$ an open set $\TSL \ni: \clrD \subseteq \TSL$ and $\cl(\TSL) \cap \TSE = \Phi$.
+\item For each pair $\clrD$, $\TSE$ of disjoint $\ws$-closed sets there exist open sets $\TSM$ and $\TSL \ni: \TSD \subseteq \TSM$, $\TSE \subseteq \TSL$ and $\cl(\TSM) \cap \cl(\TSL) = \Phi$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(1) $\Rightarrow$ (2): Take $\clrD$ be a $\ws$-closed set and $\TSM$ be a $\ws$-open set $\ni: \clrD \subseteq \TSM$. 
+
+Then $\clrD$ and $\TSP -\TSM$ are disjoint $\ws$-closed sets in $\TSP$. Seeing that $\TSP$ is $\ws$-normal, $\exists$ a pair of disjoint open sets $\TSL$ and $\TSW$ in $\TSP \ni: \clrD \subseteq \TSL$ and $\TSP -\TSM \subseteq \TSW$.
+
+Now $\TSP -\TSW \subseteq \TSP - (\TSP -\TSM)$, so $\TSP -\TSW \subseteq \TSM$ also $\TSL \cap\TSW = \Phi$ implies $\TSL \subseteq \TSP -\TSW$, so $\cl(\TSL) \subseteq \cl(\TSP -\TSW)$ which implies $\cl(\TSL) \subseteq \TSP - \TSW$. Henceforth $\cl(\TSL) \subseteq \TSP -\TSW \subseteq \TSM$. So $\cl (\TSL) \subseteq \TSM$. Hence $\clrD \subseteq \TSL \subseteq \cl(\TSL) \subseteq \TSM$.
+
+(2) $\Rightarrow$ (3): Let $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$.
+
+Now $\clrD\cap\TSE = \Phi$, so $\TSD\subseteq \TSP -\TSE$, where $\clrD$ is $\ws$-closed and $\TSP - \TSE$ is $\ws$-open. Then by (ii) $\exists$ an open set $\TSL \ni: \clrD \subseteq \TSL \subseteq \cl(\TSL) \subseteq \TSP - \TSE$. Now $\cl (\TSL) \subseteq \TSP -\TSE$ implies $\cl(\TSL) \cap \TSE =\Phi$. Thus $\clrD \subseteq \TSL$ and $\cl(\TSL) \cap \TSE = \Phi$.
+
+(3) $\Rightarrow$ (4): Let $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$. Then from (iii) $\exists$ an open set $\TSM \ni: \clrD \subseteq \TSM$ and $\cl (\TSM) \cap\TSE = \Phi$. Seeing that $\cl (\TSL)$ is closed, so $\ws$-closed set. Therefore $\cl(\TSL)$ and $\TSE$ are disjoint $\ws$-closed sets in $\TSP$. By hypothesis, $\exists$ an open set $\TSL$, $\ni: \TSE \subseteq \TSL$ and $\cl (\TSM)\cap \cl (\TSL) = \Phi$.
+
+(4) $\Rightarrow$ (1): Let $\clrD$ and $\TSE$ be a pair of disjoint $\ws$-closed sets in $\TSP$. Then from (iv) $\exists$ an open sets $\TSM$ and $\TSL$ in $\TSP \ni: \clrD \subseteq \TSM$, $\TSE \subseteq \TSL$ and $\cl (\TSM) \cap\cl (\TSL) = \Phi$. So $\clrD \subseteq \TSE \subseteq \TSL$ and $\TSM \cap \TSL = \Phi$. Hence $\TSP$ $\ws$-normal.
+\end{proof}
+
+\begin{thm}\label{thm8.4.10}
+Let $\TSP$ be a topological space. Then the following are one and the same:
+\begin{enumerate}[(1)]
+\item $\TSP$ is normal.
+\item For any disjoint closed sets $\clrD$ and $\TSE$, $\exists$ disjoint $\ws$-open sets $\TSM$ and $\TSL \ni: \clrD \subseteq \TSM$, $\TSE \subseteq \TSL$.
+\item For any closed set $\clrD$ and any open set $\TSL \ni: \clrD \subseteq \TSL$, $\exists$ an $\ws$-open set $\TSM$ of $\TSP \ni: \clrD \subseteq \TSM \subseteq \alpha$-$\cl(\TSM) \subseteq \TSL$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+(1) $\Rightarrow$ (2): Suppose $\TSP$ is normal. Seeing that each open set is $\ws$-open [ ] (ii) follows.
+
+(2) $\Rightarrow$ (3): Suppose (ii) holds. Let $\clrD$ be a closed set and $\TSL$ be an open set containing $\clrD$. Then $\clrD$ and $\TSP -\TSL$ are disjoint closed sets. By (ii), $\exists$  disjoint $\ws$-open sets $\TSM$ and $\TSW \ni: \clrD\subseteq \TSM$ and $\TSP-\TSL \subseteq \TSW$, seeing that $\TSP -\TSL$ is closed, so $\ws$-closed. We have $\TSP -\TSL \subseteq \alpha\text{ int} (\TSW)$ and $\TSM \cap \alpha\text{ int} (\TSW) = \Phi$ and so we have $\Cl (\TSM) \cap \alpha\text{ int} (\TSW) = \Phi$. Hence $\clrD \subseteq \TSM \subseteq \alpha-\cl(\TSM) \subseteq \TSP -\alpha\text{ int}(\TSW) \subseteq \TSL$. Thus $\clrD\subseteq\TSM \subseteq \alpha-\cl (\TSM) \subseteq \TSL$.
+
+(3) $\Rightarrow$ (1): Let $\clrD$ and $\TSE$ be a pair of disjoint closed sets of $\TSP$. Then $\TSA \subseteq \TSP-\TSE$ and $\TSP-\TSE$ is open. $\exists$ a $\ws$-open set $\TSG$ of $\TSP \ni: \clrD \subseteq \TSG \subseteq \alpha-\cl (\TSG) \subseteq \TSP-\TSE$. Seeing that $\clrD$ is closed, it is $\ws$-closed, we have $\clrD \subseteq \text{ int} (\TSG)$. Take $\TSM =\text{int} (\cl (\text{int} (\alpha\text{ int} (\TSG))))$ and $\TSL = \text{int} (\cl (\text{int}(\TSP-\alpha\cl (\TSG))))$. Then $\TSM$ and $\TSL$ are disjoint open sets of $\TSP \ni: \TSA \subseteq \TSM$ and $\TSE \subseteq \TSL$. Hence $\TSP$ is normal.
 \end{proof}
