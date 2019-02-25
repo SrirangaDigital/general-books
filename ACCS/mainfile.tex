@@ -1,0 +1,154 @@
+\documentclass[9pt,twosided]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{resizegather}
+\usepackage[a4paper, total={185mm, 225mm}, margin=10mm, includeheadfoot, footnotesep=3mm plus 7pt minus 7pt, asymmetric]{geometry}
+
+%time to use titlespec
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{titleps}
+%\usepackage{framed}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{longtable,booktabs}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\date{}
+
+\newcommand{\chaptitle}[1]{%
+\begin{tikzpicture}
+  \node[fill=white,inner sep=6pt,text width=\dimexpr\linewidth-12pt\relax] {#1};
+\end{tikzpicture}
+}
+
+\titleformat{\chapter}[display]{\color{black}\Huge\bfseries\uppercase\filcenter}{}{2em}{}
+ \titlespacing{\chapter} {0pt}{50pt}{0pt}
+
+\newcommand{\chapterprelude}[1]{%
+\textsf{#1}
+\par\noindent
+%\rule{\textwidth}{0.4pt}
+}
+
+\newcommand{\byline}[1]{%
+\textsf{#1}
+\par\noindent
+}
+
+\setlength{\jot}{10pt}
+
+\usepackage{multicol}
+\usepackage{}
+%\setlength{\columnsep}{-2.5cm}
+
+\usepackage{fontspec,lipsum}
+\defaultfontfeatures{Ligatures=TeX}
+
+\setmainfont{Lora}
+\setsansfont{Lora}
+
+\usepackage{xpatch}
+\newlength{\chaptertopskip}
+\newlength{\chapterbottomskip}
+\setlength{\chaptertopskip}{10pt}
+\setlength{\chapterbottomskip}{10pt}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+% \fancyhead[LO]{\includegraphics[width=\textwidth,height=\textheight, keepaspectratio]{banner_coverstory_left.jpg}}
+% \fancyhead[RE]{\includegraphics[width=\textwidth,height=\textheight, keepaspectratio]{banner_coverstory_right.jpg}}
+% %\chead{\includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{banner_coverstory.jpg}}
+% \fancyfoot[LO]{\fbox{\thepage}\quad Advanced Computing \& Communications Society | June 2018}
+% \fancyfoot[RE]{Advanced Computing \& Communications Society | June 2018 \quad \fbox{\thepage}}
+ \fancyfoot[CO,CE]{}
+ \renewcommand{\headrulewidth}{0.0pt}
+% \renewcommand{\footrulewidth}{0.4pt}
+
+% \fancyhf{}
+% \pagestyle{fancy}
+% \renewcommand{\headrulewidth}{0pt}
+%     \lhead[]{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{banner_coverstory_right.jpg}}%
+%     \chead{}
+%     \rhead[\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{banner_coverstory_left.jpg}]{}%
+%     \setlength{\headrulewidth}{0pt}
+    
+
+ % \fancyhead{}
+ % \fancyhead[]{\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{banner_coverstory_left.jpg}}
+% \fancyhead[R]{\thepage}
+% \fancyfoot{}
+% \fancypagestyle{plain}{
+%   \fancyhead{}
+%   \fancyhead[C]{first page center header}
+%   \fancyfoot{}
+%   \fancyfoot[C]{first page center footer}
+% }
+
+%footnote layout
+\makeatletter
+\newcommand\reffnmark{%
+    \@ifstar{\@reffnmarks}{\@reffnmark}}
+\newcommand{\@reffnmarks}[1]{%
+    \begingroup
+        \unrestored@protected@xdef\@thefnmark{\ref{#1}}%
+    \endgroup
+    \@footnotemark}
+\newcommand{\@reffnmark}[1]{(\ref{#1})}
+\makeatother
+
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+%\setlength{\mathindent}{0pt}
+
+\begin{document}
+
+\frontmatter
+
+\mainmatter
+\input src/001-chapter1
+%\input src/002-chapter2
+
+\end{document}
+
