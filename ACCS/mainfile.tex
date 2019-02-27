@@ -4,10 +4,13 @@
 
 
 \usepackage{multicol}
+\usepackage{float}
 \usepackage{graphicx,epsfig}
 \usepackage{fontspec,lipsum}
 \defaultfontfeatures{Ligatures=TeX}
 
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
 
 \usepackage[hyphens]{url}
 \usepackage[hidelinks]{hyperref}
@@ -28,7 +31,7 @@
 \mainmatter
 
 \input src/001-chapter1
-%\input src/002-chapter2
+\input src/002-chapter2
 
 \end{document}
 
