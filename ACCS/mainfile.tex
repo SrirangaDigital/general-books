@@ -2,21 +2,31 @@
 \usepackage{amssymb,amsmath}
 \usepackage[a4paper, total={185mm, 225mm}, margin=10mm, includeheadfoot, footnotesep=3mm plus 7pt minus 7pt, asymmetric]{geometry}
 
+
 \usepackage{multicol}
-\usepackage{hyperref}
+\usepackage{graphicx,epsfig}
 \usepackage{fontspec,lipsum}
 \defaultfontfeatures{Ligatures=TeX}
+
+
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{breaklinks=true}
+\urlstyle{same}
 
 \setmainfont{Lora}
 \setsansfont{Lora}
 
 \renewcommand*\thesection{\arabic{section}}
 
+\input macros
+
 \begin{document}
 
 \frontmatter
 
 \mainmatter
+
 \input src/001-chapter1
 %\input src/002-chapter2
 
