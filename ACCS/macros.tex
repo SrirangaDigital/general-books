@@ -20,7 +20,7 @@
 \makeatletter
 \renewenvironment{thebibliography}[1]
      {\section*{\bibname}%
-      \@mkboth{\slshape\small\bfseries\bibname}{\slshape\small\bfseries\bibname}%
+      %~ \@mkboth{\slshape\small\bfseries\bibname}{\slshape\small\bfseries\bibname}%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth
@@ -41,22 +41,47 @@
 
 
 \usepackage{fancybox}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\renewcommand{\footrulewidth}{0pt}
-\chead[]{}
-\lhead[\small\bf\thepage]{\slshape\small\rightmark} 
-\rhead[\slshape\bfseries\small\leftmark]{\small\bf\thepage}
-\lfoot[]{}
-\cfoot[]{}
-\rfoot[]{}
-\renewcommand\chaptermark[1]{\markboth{\slshape\bfseries #1}{}}
-\renewcommand\sectionmark[1]{\markright{\slshape\bfseries #1}}
-\renewcommand{\subsectionmark}[1]{\markright{\it\bfseries #1}}
 
-\fancypagestyle{plain}{%
-\fancyhf{} % clear all header and footer fields
-\fancyfoot[C]{\bfseries \thepage} % except the center
-\renewcommand{\headrulewidth}{0pt}}
+\newsavebox\topodd
+\newsavebox\topeven
+\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
 
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
 
+\DeclareNewLayer[
+  foreground,
+  topmargin,
+  oddpage,
+  contents={\usebox\topodd}
+]{top.odd}
+\DeclareNewLayer[
+  clone=top.odd,
+  evenpage,
+  contents={\usebox\topeven}
+]{top.even}
+\DeclareNewLayer[
+  height=120pt,
+  foreground,
+  bottommargin,
+  voffset=285mm,
+  evenpage,
+  contents={\vbox to120pt{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}%
+\hbox to\paperwidth{\quad\raise17pt\hbox{\thepage}\quad\rule{0.4pt}{1.2cm}\quad\raise17pt\hbox{Advanced Computing \& Communications | March 2019}\hfill}%
+}}
+]{bottom.even}
+\DeclareNewLayer[
+  height=120pt,
+  foreground,
+  bottommargin,
+  voffset=285mm,
+  oddpage,
+  contents={\vbox to120pt{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.6pt}}}%
+\hbox to\paperwidth{\hfill\raise17pt\hbox{Advanced Computing \& Communications | March 2019}\quad\rule{0.4pt}{1.2cm}\quad\raise17pt\hbox{\thepage}\quad}%
+}}
+]{bottom.odd}
+\AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
+\AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
+
+\pretolerance=1000

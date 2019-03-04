@@ -1,7 +1,7 @@
 \documentclass[9pt,twosided]{book}
 \usepackage{amssymb,amsmath}
-\usepackage[a4paper, total={185mm, 225mm}, margin=10mm, includeheadfoot, footnotesep=3mm plus 7pt minus 7pt, asymmetric]{geometry}
-
+%~ \usepackage[a4paper, total={185mm, 225mm}, margin=10mm, includeheadfoot, footnotesep=3mm plus 7pt minus 7pt, asymmetric]{geometry}
+\usepackage[a4paper, total={185mm, 225mm}, left=10mm, right=10mm, top=10mm, bottom=10mm, includeheadfoot, footnotesep=3mm plus 7pt minus 7pt, asymmetric]{geometry}
 
 \usepackage{multicol}
 \usepackage{float}
@@ -20,9 +20,19 @@
 \setmainfont{Lora}
 \setsansfont{Lora}
 
+\usepackage{footmisc}
+
 \renewcommand*\thesection{\arabic{section}}
 
 \input macros
+%~ \setlength{\headheight}{60pt}
+
+%~ \setmainfont[
+%~ Path = /usr/share/fonts/truetype/freefont/,
+%~ UprightFont = *-Regular ,
+%~ BoldFont = *-Bold,
+%~ ItalicFont = *-Italic,
+%~ BoldItalicFont = *-BoldItalic]{Lora}
 
 \begin{document}
 
@@ -31,7 +41,17 @@
 \mainmatter
 
 \input src/001-chapter1
-\input src/002-chapter2
+
+%~ \setcounter{page}{25}
+%~ \fancyhead[LO]{\includegraphics[width=\paperwidth,height=\textheight, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
+%~ \fancyhead[RE]{\includegraphics[width=\paperwidth,height=\textheight, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
+%~ \chead[]{}
+%~ \lhead[\small\bf\thepage]{\slshape\bfseries\small\leftmark} 
+%~ \rhead[\slshape\bfseries\small\leftmark]{\small\bf\thepage}
+%~ \lfoot[]{}
+%~ \cfoot[]{}
+%~ \rfoot[]{}
+%\input src/002-chapter2
 
 \end{document}
 

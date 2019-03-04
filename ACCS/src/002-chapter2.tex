@@ -5,6 +5,9 @@
 \end{center}
 
 \bigskip
+\noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth]{src/Figures/bannercoverstoryleft.jpg}}
+
+\begin{multicols}{2}
 
 \begin{quotation}
 \centerline{\bf Abstract}
@@ -14,10 +17,7 @@
 Authentication is the first and foremost security principle that involves validation of identity of an user or a machine. The successful authentication is required for authorization and secure data exchanges. A common classification of authentication system based on factors -- something you know, something you own, something you did and something you are- is explained. Well-known and used password schemes employed in practice is described along with standards. A description Kerberos authentication system based on symmetric key encryption and SSL based authentication which is based on public key encryption is given. Related Single-Sign-On technologies are explained. A brief overview of authentication for cloud computing, IoT and UIDAI is presented.
 \end{quotation}
 
-\bigskip
-\bigskip
 
-\begin{multicols}{2}
 \section*{Introduction}
 
 It is important to know the basic principles of information security as applicable to computer science. This knowledge helps one to develop products with required security and to analyze competing security claims. The first and foremost security principle is ``Authentication", which is the process of verifying the identity of a machine or person. One has to provide valid credentials for successful authentication to get access to computer system resources. The second basic security principle is ``authorization", which controls the access to resources after successful authentication. A common tendency is to combine authentication and authorization, but it is important to understand that they are distinct. The next principles are ``confidentiality'' to provide data protection and ``data integrity'' to assure data is not modified in transit/storage. The related concept of key management is tied with these principles. The final principle is ``availability'' which is to make systems available despite threats and attacks.
@@ -62,7 +62,7 @@ Request for Comments (RFC) is a collaborative publication from engineers and com
 
 The US National Institute of Standards and Technology (NIST) publishes white papers and other resources in its Security Management \& Assurance working group. These standards are followed by mainly, US federal agencies. The recommendations are applicable to other organizations as well and referred to as NIST standards.
 
-\section*{Password based Authentication Schemes}
+\section*{Password based Authentication\hfill\break Schemes}
 
 The users connect to the network via a remote connection over VPN or dial up network. In this case Password Authentication Protocol (PAP) is used \cite{chap2-key4}. After the user establishes a link, it repeatedly sends his id/password to authenticator. If he receives ACK, the connection is established. If the user receives NAK instead, the connection is terminated. The protocol is simple and the drawback is that the password is sent in the clear text.
 
@@ -153,7 +153,7 @@ Checking timestamps assumes all machines in Kerberos authentication network have
 
 Kerberos may be susceptible replay attacks from old and cached authenticators. Although, the timestamps are used to prevent this, replays are possible during ticket's lifetime. The servers are supposed to store all live tickets to stop this but this is not always practicable. Another requirement is that all the clocks in the network are time synchronized. If a host is fooled about the correct time, old authenticator replay is possible. Yet another vulnerability is password cracking attacks. If the intruder collects enough tickets his chances of success are good.
 
-\section*{Public Key Cryptography based Authentication}
+\section*{Public Key Cryptography based\hfil\break Authentication}
 
 Though the use of shared key or symmetric key encryptions is widespread because of its moderate computations, the key distribution and management becomes more unwieldy and complex. If ``n'' users want to securely communicate with each other, this would require ``$(\text{n}^{2}-\text{n})/2$'' secret keys. It is difficult to arrange in advance secure physical means of sharing secret keys for large ``n''. Public key cryptography (PKC) is invented as a solution by Whitefield Diffie and Martin Hellman and independently by Merkle \cite{chap2-key1}, \cite{chap2-key13}. In a PKC system, each user will have only one private key, which should be kept secret and the related public key which can be shared with others.
 
@@ -235,8 +235,11 @@ OAuth is an open standard for access delegation, commonly used as a way for Inte
 The client requests an access to protected resource on the server by using the resource owner's credentials. To facilitate access to restricted resources, the resource owner is required to share its credentials with the third party. This creates several problems and limitations. The credential is a password in clear text needed be stored in third-party applications and to be supported by the server creating a security vulnerability. Resource owners can neither restrict nor revoke access to third-party. OAuth addresses these issues by introducing an authorization layer and separating the role of the client from that of the resource owner. In OAuth, the client request access to protected resources is issued a different set of credentials, called access token -- a string denoting a specific scope, lifetime, and other access attributes. Access tokens are issued to third-party clients by an authorization server with the  approval of the resource owner. The client uses the access token to access the protected resources hosted by the resource server. OAuth 2.0 is the industry-standard protocol for authorization described in RFC 6749 \cite{chap2-key21}.
 
 OAuth is an authorization protocol, rather than an authentication protocol. Using OAuth on its own as an authentication method may be referred to as pseudo-authentication. 
+\bigskip
 
 The communication flow in both processes is similar:
+
+
 \begin{enumerate}
 \item The user requests a website login from the application.
 \item The website formulates a request for the identity provider, encodes it, and sends it to the user as part of a redirect URL.
@@ -346,6 +349,7 @@ A brief overview of PKC is given and authentication schemes based on PKC are des
 To avoid memorizing and entering multiple credentials, SSO authentication is described when logging into an enterprise and accessing many application servers. A secure implementation of SSO requires that enterprise user's identities be strongly protected in a secure directory. Related OpenID and OAuth technologies are described. An overview of cloud architecture is given with security concerns. The role of authentication to mitigate security threats and vulnerabilities is explained and various authentication methods used are given. Finally, a brief overview of authentication in a IoT network of sensors and actuators with limited power and computational capabilities is given. An explanation of authentication method using centralized server is presented. Finally, a brief explanation of UIDAI authentication is given.
 
 While explaining the authentication methods, related RCF and NIST standards are mentioned and a good account of known security weaknesses is given. The direction for future research is to improve various authentication methods to address the security risks. There is no one authentication method befitting all situation and therefore researchers should try to improvise existing and widely used authentication methods and in the meantime to look out for new methods that offer better efficiency and security.
+
 \begin{thebibliography}{99}
 \bibitem{chap2-key1} ``Applied Cryptography -- Protocols, Algorithms and Source Code in C'' by Bruce Schneier, John Wiley \& Sons, Inc. 1996.
 \bibitem{chap2-key2} ``Secrets and Lies: Digital Security in a Networked World'' by Bruce Schneier, John Wiley \& Sons, Inc. 2004.
@@ -376,3 +380,7 @@ While explaining the authentication methods, related RCF and NIST standards are 
 \bibitem{chap2-key27} AADHAAR AUTHENTICATION API SPECIFICATION - VERSION 2.0 (REVISION 1), FEBRUARY 2017, \url{https://uidai.gov.in/images/FrontPageUpdates/aadhaar_authentication_api_2_0.pdf}.
 \end{thebibliography}
 \end{multicols}
+
+
+
+
