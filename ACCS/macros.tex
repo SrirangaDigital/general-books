@@ -40,7 +40,15 @@
 \makeatother
 
 
+\usepackage{longtable}
+\usepackage{array}
 \usepackage{fancybox}
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\definecolor{goldan-yellow}{rgb}{0.8, 0.4, 0.09}
+
 
 \newsavebox\topodd
 \newsavebox\topeven
@@ -85,3 +93,59 @@
 \AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
 
 \pretolerance=1000
+
+
+%%%%%%%%%%%%%%%%
+%chapter 4
+%\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{subfigure}
+%\usepackage[tbtags]{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes}
+
+\newlength{\mytw}
+\settowidth{\mytw}{A few lines of text in a block jkjkopkl}
+%\graphicspath{{./figures/}}
+
+\newcommand{\ffq}{\ensuremath{\mathbb{F}_{q}}}
+\newcommand{\ffqa}{\ensuremath{\mathbb{F}_{q}^{\alpha}}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqn}{\[}
+\newcommand{\eeqn}{\]}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bean}{\begin{eqnarray*}}
+	\newcommand{\eean}{\end{eqnarray*}}
+\newcommand{\re}{\mbox{$\mathfrak{Re}$}}
+\newcommand{\bit}{\begin{itemize}}
+	\newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}}
+	\newcommand{\een}{\end{enumerate}}
+\newcommand{\bc}{\begin{center}}
+	\newcommand{\ec}{\end{center}}
+
+\newtheorem{defn}{Definition}[section]
+\newtheorem{fact}{Fact}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{claim}{Claim}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{constr}[thm]{Construction}
+\usepackage[normalem]{ulem}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\pvk}{\color{red} }
+\newcommand{\pvkred}{\color{red} }
+\newcommand{\fq}{\mbox{$\mathbb{F}_q$}}
+\newcommand{\calc}{\mbox{$\mathcal{C}$}}
+\newcommand{\calcperp}{\mbox{$\mathcal{C}^{\perp}$}}
+
+
