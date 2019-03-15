@@ -17,7 +17,19 @@
   }}
 \makeatother
 
+\renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
+
 \makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2ex \@plus -1ex \@minus -.15ex}%
+                                   {1.3ex \@plus.1ex}%
+                                   {\normalfont\Large\bfseries}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-1ex\@plus -.5ex \@minus -.1ex}%
+                                     {1ex \@plus -.5ex}%
+                                     {\normalfont\large\bfseries}}
+
 \renewenvironment{thebibliography}[1]
      {\section*{\bibname}%
       %~ \@mkboth{\slshape\small\bfseries\bibname}{\slshape\small\bfseries\bibname}%

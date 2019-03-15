@@ -19,8 +19,8 @@ Indian Institute of Science, Bengaluru
 
 \begin{multicols}{2}
 \setcounter{figure}{0}
-\begin{quotation}
-\centerline{\bf Abstract}
+%\begin{quotation}
+\section*{Abstract}
 \medskip
 
 \noindent
@@ -124,7 +124,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 
 	\subsection{Response of Coding Theory} \label{sec:response} 
 	
-	To address this issue, coding theorists came up with two new classes of codes, known respectively as {\em regenerating codes} (RGC) \cite{DimGodWuWaiRam} and {\em locally recoverable codes} (LRC) \cite{GopHuaSimYek}. LRC also go by the name {\em codes with locality} and we will interchangeably use the two terms.  These developments have led to the evolution of coding theory in two new directions~Fig.~\ref{fig:oak_2}.  While these developments also resulted in finding improved methods of repairing RS codes, we will not cover them in this survey and point the reader instead, to a representative set of  references on this topic \cite{ShaPapDimCai,GuruWoot,DauDuuKiaMil}. We also not cover variants of regenerating codes such as the piggybacking framework introduced in \cite{RasShaRam_piggy}, the $\epsilon-$MSR framework \cite{RawTamGurEfr}, codes with cooperative repair \cite{HuXuWanZhaLi} and fractional-repetition codes \cite{ElRam}.
+	To address this issue, coding theorists came up with two new classes of codes, known respectively as {\em regenerating codes} (RGC) \cite{DimGodWuWaiRam} and {\em locally recoverable codes} (LRC) \cite{GopHuaSimYek}. LRC also go by the name {\em codes with locality} and we will interchangeably use the two terms.  These developments have led to the evolution of coding theory in two new directions~Fig.~\ref{fig:oak_2}.  While these developments also resulted in finding improved methods of repairing RS codes, we will not cover them in this survey and point the reader instead, to a representative set of  references on this topic \cite{ShaPapDimCai,GuruWoot,DauDuuKiaMil}. We will also not cover variants of regenerating codes such as the piggybacking framework introduced in \cite{RasShaRam_piggy}, the $\epsilon-$MSR framework \cite{RawTamGurEfr}, codes with cooperative repair \cite{HuXuWanZhaLi} and fractional-repetition codes \cite{ElRam}.
 \end{multicols}
 
 
@@ -170,7 +170,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	
 	\subsection{Explaining the Need for Sub-packetization}
 
-	In Fig.~\ref{fig:vectorize}, the setup on the left represents an $[4,2]$ MDS code.  The symbols stored in the $4$ nodes are respectively, $A,B,A+B,A+2B$.  This makes the code an MDS code.  However, to repair a failed node, say the node node $1$, that stored $A$, we still have to download $2$ symbols to repair the node.  Consider next, the setup on the right.  Here the sub-packetization level is $2$, each symbol is replaced by $2$ `half-symbols'.  Thus $A$ is replaced by $A_1,A_2$, $B$ by $B_1,B_2$.  Note that if the data stored in the remaining two parity nodes is as shown in the figure, then node $1$ can be repaired by downloading $3$ half-symbols in place of two full symbols, thereby achieving a reduction in repair bandwidth. Note however, that in the case of the regenerating code, we have contacted all the remaining nodes, $3$ in this case, as opposed to $k=2$ in the case of the MDS code on the left. Thus while regenerating codes reduce the repair bandwidth, they do in general, result in increased repair degree. 
+	In Fig.~\ref{fig:vectorize}, the setup on the left represents an $[4,2]$ MDS code.  The symbols stored in the $4$ nodes are respectively, $A,B,A+B,A+2B$.  This makes the code an MDS code.  However, to repair a failed node, say the node $1$, that stored $A$, we still have to download $2$ symbols to repair the node.  Consider next, the setup on the right.  Here the sub-packetization level is $2$, each symbol is replaced by $2$ `half-symbols'.  Thus $A$ is replaced by $A_1,A_2$, $B$ by $B_1,B_2$.  Note that if the data stored in the remaining two parity nodes is as shown in the figure, then node $1$ can be repaired by downloading $3$ half-symbols in place of two full symbols, thereby achieving a reduction in repair bandwidth. Note however, that in the case of the regenerating code, we have contacted all the remaining nodes, $3$ in this case, as opposed to $k=2$ in the case of the MDS code on the left. Thus while regenerating codes reduce the repair bandwidth, they do in general, result in increased repair degree. 
 
 	\subsection{Formal Definition of a Regenerating Code} 
 	
@@ -474,7 +474,7 @@ Fig.~\ref{fig:Azure} shows the $(n=18,k=14,r=7)$ LRC employed in conjunction wit
 In terms of reliability, the codes are comparable as they both have the same minimum distance $d_{\min}=4$. In terms of repair degree, the two codes are again comparable, having respective repair degrees of $7$ (Azure LRC) and $6$ (RS).  The big difference is in the storage overhead, which stands at $\frac{18}{14}=1.29$ in the case of the Azure LRC and 
 $\frac{9}{6}=1.5$ in the case of the $[9,6]$ RS code.  This difference has reportedly saved Microsoft millions of dollars \cite{microsoft}.
 
-Am LRC in which every code symbol can be recovered from a linear combination of at most $r$ other code symbols is called an all-symbol LRC.  A construction for optimal all-symbol LRCs can be found in \cite{TamBar}. The codes in the construction may be regarded as subcodes of RS codes. An example is shown in Fig.~\ref{fig:tamo_barg_lrc}. As was noted in Section~\ref{sec:RS}, code symbols in an RS code may be regarded as values of a polynomial associated with the message symbols.  The construction depicted in Fig.~\ref{fig:tamo_barg_lrc}, is one in which code symbols are obtained by evaluating a subclass of polynomials.  This subclass of polynomials has the property that given any code symbol corresponding to the evaluation $f(P_a)$, there exist two other code symbols $f(P_b),f(P_c)$ such that the three values lie on straight line and hence satisfy an equation of the form
+An LRC in which every code symbol can be recovered from a linear combination of at most $r$ other code symbols is called an all-symbol LRC.  A construction for optimal all-symbol LRCs can be found in \cite{TamBar}. The codes in the construction may be regarded as subcodes of RS codes. An example is shown in Fig.~\ref{fig:tamo_barg_lrc}. As was noted in Section~\ref{sec:RS}, code symbols in an RS code may be regarded as values of a polynomial associated with the message symbols.  The construction depicted in Fig.~\ref{fig:tamo_barg_lrc}, is one in which code symbols are obtained by evaluating a subclass of polynomials.  This subclass of polynomials has the property that given any code symbol corresponding to the evaluation $f(P_a)$, there exist two other code symbols $f(P_b),f(P_c)$ such that the three values lie on straight line and hence satisfy an equation of the form
 \bean
 u_af(P_a)+ u_bf(P_b)+ u_cf(P_c) & = & 0.   
 \eean
