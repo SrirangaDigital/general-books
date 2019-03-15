@@ -19,15 +19,11 @@ Indian Institute of Science, Bengaluru
 
 \begin{multicols}{2}
 \setcounter{figure}{0}
-%\begin{quotation}
 \section*{Abstract}
 \medskip
 
 \noindent
 This article deals with the reliable and efficient storage of `Big Data', by which is meant the vast quantities of data that are stored in data centers worldwide.  Given that storage units are prone to failure, to protect against data loss, data pertaining to a data file is stored in distributed and redundant fashion across multiple storage units.  While replication was and continues to be commonly employed, the explosive growth in amount of data that is generated on a daily basis, has forced the industry to increasingly turn to erasure codes such as the Reed-Solomon code.  The reason for this is that erasure codes have the potential to keep to a minimum, the storage overhead required to ensure a given level of reliability.  There is also need for storing data such that the system can recover efficiently from the failure of a single storage unit.  Conventional erasure-coding techniques are inefficient in this respect.  To address this situation, coding theorists have come up with two new classes of erasure codes known respectively as regenerating codes and locally recoverable codes. These codes have served both to address the needs of industry as well as enrich coding theory by adding two new branches to the discipline.  This article provides an overview of these exciting new developments, from the (somewhat biased) perspective of the authors.
-\end{quotation}
-
-
 
 \section{Introduction}
 	
@@ -35,7 +31,7 @@ The setting of the work on developing erasure codes for the storage of Big Data 
 	
 \subsection{Replication Versus Erasure Coding} 
 	
-The key strategy adopted to protect against data loss, given that individual storage units are prone to failure, is to store data pertaining to a single file in distributed and redundant fashion across multiple storage units \cite{ScienceChinaBalajiKVRSK18}.   The simplest means of introducing redundancy is replication of the data file, with triple replication being in common use \cite{hadoop}, see Fig.~\ref{fig:3rep}.  
+The key strategy adopted to protect against data loss, given that individual storage units are prone to failure, is to store data pertaining to a single file in distributed and redundant fashion across multiple storage units \cite{ScienceChinaBalajiKVRSK18}.   The simplest means of introducing redundancy is replication of the data file, with triple replication being in common use \cite{hadoop}, see Figure~\ref{fig:3rep}.  
 
 A more efficient option is to use an $[n,k]$ erasure code. Figure~\ref{fig:erasure_code} shows the procedure for encoding data using an
 \end{multicols}
@@ -48,25 +44,34 @@ A more efficient option is to use an $[n,k]$ erasure code. Figure~\ref{fig:erasu
 
 \begin{multicols}{2}		
 \noindent
- erasure code.  In an $[n,k]$ erasure code, the data file is first split into $k$ fragments.  To this, an additional $m=(n-k)$ redundant fragments are added making for a total of $n$ fragments.  Each fragment is stored on a different storage unit. Within the class of erasure codes, maximum distance separable codes (MDS) are the most efficient in terms of offering reliability for a given amount of storage overhead.  An $[n,k]$ MDS code has the following defining property.  The entire data file can be recovered if one has access to {\em any} collection of $k$ fragments.  We will refer to this as the `any $k$ of $n$' property. Thus, an $[n,k]$ code can recover from the failure of any $\leq (n-k)$ fragments. To protect against the failure of any $\ell$ nodes, a replication code must create $(\ell+1)$ replicas, resulting in a storage overhead of $(\ell+1)$. In contrast, the storage overhead of an MDS code that is resilient against $\ell$ failures has overhead $\frac{n}{(n-\ell)}$. For example with $\ell=2$ and $n=6$, the storage overheads of the two schemes, replication and erasure coding, are respectively given by $3$ and $1.5$. 
+ erasure code.  In an $[n,k]$ erasure code, the data file is first split into $k$ fragments.  To this, an additional $m=(n-k)$ redundant fragments are added making for a total of $n$ fragments.  Each fragment is stored on a different storage unit. Within the class of erasure codes, maximum distance separable codes (MDS) are the most efficient in terms of offering reliability for a given amount of storage overhead.  An $[n,k]$ MDS code has the following defining property.  The entire data file can be recovered if one has access to {\em any} collection of $k$ fragments.  We will refer to this as the `any $k$ of $n$' property. Thus, an $[n,k]$ code can recover from the failure of any $\leq (n-k)$ fragments. To protect against the failure of any $\ell$ nodes, a replication code must create $(\ell+1)$ replicas, resulting in a storage overhead of $(\ell+1)$. In contrast, the storage overhead of an MDS code that is resilient against $\ell$ failures has overhead $\frac{n}{(n-\ell)}$. For example with $\ell=2$ and $n=6$, the storage overheads of the two schemes, replication and erasure coding, are respectively given by $3$ and $1.5$.\\[-22pt]
 
 \subsubsection{Finite Fields}
+
+\vskip -3pt
 	
 The best known of all MDS codes is the Reed-Solomon (RS) code \cite{ReeSol}.  The symbol alphabet of an RS code is a finite field \fq\ (e.g. \cite[Ch.~3]{MacSlo}).  A finite field \fq\ is a collection of $q$ elements together with two operations, addition and multiplication that obey the rules we are accustomed to such as $a(bc)=(ab)c=abc$, $a+b=b+a$, $a(b+c)=ab+ac$ etc. As an example, a finite field $\mathbb{F}_3$ of size $q=3$ is composed of the elements $\{0,1,2\}$ along with two operations: addition $\! \! \pmod{3}$ and multiplication $\! \! \pmod{3}$.  The corresponding addition and multiplication tables are presented below.
 
-Similar addition and multiplication tables can be generated for finite fields of size $q$ where $q$ is a prime number such as $2,3,5,7,\cdots$.  In general, finite fields of size $q$ exist whenever $q$ can be expressed as power of a prime number $p$, i.e., $q=p^e$ for some positive integer $e$.  However the arithmetic there is more involved. For our purposes, it suffices to imagine that we are working in some suitably large finite field. The explanation from here on is agnostic to the inner workings of operations in the finite field. 
+Similar addition and multiplication tables can be generated for finite fields of size $q$ where $q$ is a prime number such as $2,3,5,7,\cdots$.  In general, finite fields of size $q$ exist whenever $q$ can be expressed as power of a prime number $p$, i.e., $q=p^e$ for some positive integer $e$.  However the arithmetic there is more involved. For our purposes, it suffices to imagine that we are working in some suitably large finite field. The explanation from here on is agnostic to the inner workings of operations in the finite field.\\[-22pt] 
 
 \subsubsection{Reed-Solomon Code}\label{sec:RS} 
+
+\vskip -3pt
 	
 We explain in brief, the construction of an $[n,k]$ RS code.  Let the symbols $(a_0,a_1,\cdots,a_{k-1})$, each taking on values in a finite field \fq, represent the $k$ message symbols.  Let $(x_0,x_1,\cdots,x_{n-1})$  be an arbitrary collection of $n$ distinct elements from \fq.  Let the polynomial $f(x)$ be defined by: 
 \bean
 f(x) & = & \sum_{i=0}^{k-1} a_i  \ \prod^{k-1}_{\begin{array}{c} j=0 \\ j \neq i \end{array}}  \frac{(x-x_j)}{(x_i-x_j)}  \ \ := \ \sum_{i=0}^{k-1} b_i x^i .
 \eean
+
+Then clearly, $f$ is a polynomial of degree $(k-1)$ such that 
+\bean
+f(x_i) \ =  \ a_i, & & 0 \leq i \leq (k-1). 
+\eean
 \end{multicols}
 
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[scale=.75]{src/Figures/chap4//erasure_code.png}  
+			\includegraphics[scale=.7]{src/Figures/chap4//erasure_code.png}  
 			\caption{Illustrating the distributed storage of data using an $[n,k]$ erasure code.}  \label{fig:erasure_code}    
 		\end{figure}      
 
@@ -89,15 +94,13 @@ f(x) & = & \sum_{i=0}^{k-1} a_i  \ \prod^{k-1}_{\begin{array}{c} j=0 \\ j \neq i
 		\caption{Addition (on the left)  and multiplication (on the right) in an example finite field of size $3$.  In the example, all arithmetic is carried out modulo $3$. } 
 	\end{figure} 
 
+\newpage
+
 \begin{multicols}{2}
-Then clearly, $f$ is a polynomial of degree $(k-1)$ such that 
-\bean
-f(x_i) \ =  \ a_i, & & 0 \leq i \leq (k-1). 
-\eean
 The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\cdots,a_{k-1})$ are precisely the $n$ values $(f(x_0),f(x_1),\cdots,f(x_{n-1}))$.  The $k$ message symbols are the values $f(x_j)$, of $f$ when $f$ is evaluated at $(x_0,x_1,\cdots,x_{k-1})$.  The $(n-k)$ redundant symbols of an RS code are the values $\{ f(x_j) \mid	k \leq j \leq (n-1) \}$. 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.3]{src/Figures/chap4/RS_code_idea.pdf} 
+			\includegraphics[scale=0.28]{src/Figures/chap4/RS_code_idea.pdf} 
 			\caption{Illustrating the principle of operation of an RS code.}  \label{fig:RS_code_idea}    
 		\end{figure}
 	
@@ -118,27 +121,23 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 
 	\subsection{Node Failures} 
 		
-	A fairly frequent occurrence in a data center is the failure of a single node (i.e., of a single storage unit). Fig.~\ref{fig:FB_failures} shows the number of single-node failures in a Facebook data center containing $3000$ nodes in all. RS codes are efficient in terms of providing the least possible value of storage overhead.  However, the conventional means of recovering from a single-node failure in an MDS code is inefficient (see Fig. \ref{fig:FB_repairtraffic}). This is illustrated in Fig.~\ref{fig:rs_14_10} which shows the $[n=14,k=10]$ RS code employed by Facebook. 
+	A fairly frequent occurrence in a data center is the failure of a single node (i.e., of a single storage unit). Figure~\ref{fig:FB_failures} shows the number of single-node failures in a Facebook data center containing $3000$ nodes in all. RS codes are efficient in terms of providing the least possible value of storage overhead.  However, the conventional means of recovering from a single-node failure in an MDS code is inefficient (see Figure~\ref{fig:FB_repairtraffic}). This is illustrated in Figure~\ref{fig:rs_14_10} which shows the $[n=14,k=10]$ RS code employed by Facebook. 
 
-	In Fig.~\ref{fig:rs_14_10}, in order to repair the code symbol in failed node $1$ (similarly, for any other node), the replacement node for node $1$ will contact $10$ other storage units, use their contents in conjunction with the `any $10$ out of $14$' property to reconstruct the RS codeword, and thereby the lost contents of node $1$.  This is inefficient in $2$ respects: firstly in terms of the number of nodes contacted (which is $10$  here) and secondly in terms of the total amount of data that is downloaded to restore the contents of a single, failed node. Fig.~\ref{fig:rs_14_10} shows that if each failed node stores $100$MB of data, then the total download needed to recover the node is $1$TB, which clearly, is inefficient.
+	In Figure~\ref{fig:rs_14_10}, in order to repair the code symbol in failed node $1$ (similarly, for any other node), the replacement node for node $1$ will contact $10$ other storage units, use their contents in conjunction with the `any $10$ out of $14$' property to reconstruct the RS codeword, and thereby the lost contents of node $1$.  This is inefficient in $2$ respects: firstly in terms of the number of nodes contacted (which is $10$  here) and secondly in terms of the total amount of data that is downloaded to restore the contents of a single, failed node. Figure~\ref{fig:rs_14_10} shows that if each failed node stores $100$MB of data, then the total download needed to recover the node is $1$TB, which clearly, is inefficient.
 
 	\subsection{Response of Coding Theory} \label{sec:response} 
 	
-	To address this issue, coding theorists came up with two new classes of codes, known respectively as {\em regenerating codes} (RGC) \cite{DimGodWuWaiRam} and {\em locally recoverable codes} (LRC) \cite{GopHuaSimYek}. LRC also go by the name {\em codes with locality} and we will interchangeably use the two terms.  These developments have led to the evolution of coding theory in two new directions~Fig.~\ref{fig:oak_2}.  While these developments also resulted in finding improved methods of repairing RS codes, we will not cover them in this survey and point the reader instead, to a representative set of  references on this topic \cite{ShaPapDimCai,GuruWoot,DauDuuKiaMil}. We will also not cover variants of regenerating codes such as the piggybacking framework introduced in \cite{RasShaRam_piggy}, the $\epsilon-$MSR framework \cite{RawTamGurEfr}, codes with cooperative repair \cite{HuXuWanZhaLi} and fractional-repetition codes \cite{ElRam}.
+	To address this issue, coding theorists came up with two new classes of codes, known respectively as {\em regenerating codes} (RGC) \cite{DimGodWuWaiRam} and {\em locally recoverable codes} (LRC) \cite{GopHuaSimYek}. LRC also go by the name {\em codes with locality} and we will interchangeably use the two terms.  These developments have led to the evolution of coding theory in two new directions Figure~\ref{fig:oak_2}.  While these developments also resulted in finding improved methods of repairing RS codes, we will not cover them in this survey and point the reader instead, to a representative set of  references on this topic \cite{ShaPapDimCai,GuruWoot,DauDuuKiaMil}. We will also not cover variants of regenerating codes such as the piggybacking framework introduced in \cite{RasShaRam_piggy}, the $\epsilon-$MSR framework \cite{RawTamGurEfr}, codes with cooperative repair \cite{HuXuWanZhaLi} and fractional-repetition codes \cite{ElRam}.
 \end{multicols}
 
 
 			\begin{figure}[!h]
 				\centering
-				\includegraphics[scale=.5]{src/Figures/chap4/FB_failures2}  
+				\includegraphics[scale=.45]{src/Figures/chap4/FB_failures2}  
 				\caption{Number of node failures over the period of a single month in a $3000$-node production cluster of Facebook. Image taken from the work of Sathiamoorthy et al. \cite{SathiaAstPap_Xorbas}.}  \label{fig:FB_failures}    
 			\end{figure}      
 
 \newpage
-
-\begin{multicols}{2}
-\noindent
-\end{multicols}
 
 		\begin{figure}[!h]
 		\centering
@@ -166,11 +165,11 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	
 	\section{Regenerating Codes} 
 	
-	Each code symbol in an RS code is an element in a finite field.   Regenerating codes are codes over a vector alphabet.  That is, each code symbol is a vector as opposed to a scalar.  This property is key to enabling a regenerating code to achieve savings in repair bandwidth.  This is illustrated in the example depicted in Fig.~\ref{fig:vectorize}. 
+	Each code symbol in an RS code is an element in a finite field.   Regenerating codes are codes over a vector alphabet.  That is, each code symbol is a vector as opposed to a scalar.  This property is key to enabling a regenerating code to achieve savings in repair bandwidth.  This is illustrated in the example depicted in Figure~\ref{fig:vectorize}. 
 	
 	\subsection{Explaining the Need for Sub-packetization}
 
-	In Fig.~\ref{fig:vectorize}, the setup on the left represents an $[4,2]$ MDS code.  The symbols stored in the $4$ nodes are respectively, $A,B,A+B,A+2B$.  This makes the code an MDS code.  However, to repair a failed node, say the node $1$, that stored $A$, we still have to download $2$ symbols to repair the node.  Consider next, the setup on the right.  Here the sub-packetization level is $2$, each symbol is replaced by $2$ `half-symbols'.  Thus $A$ is replaced by $A_1,A_2$, $B$ by $B_1,B_2$.  Note that if the data stored in the remaining two parity nodes is as shown in the figure, then node $1$ can be repaired by downloading $3$ half-symbols in place of two full symbols, thereby achieving a reduction in repair bandwidth. Note however, that in the case of the regenerating code, we have contacted all the remaining nodes, $3$ in this case, as opposed to $k=2$ in the case of the MDS code on the left. Thus while regenerating codes reduce the repair bandwidth, they do in general, result in increased repair degree. 
+	In Figure~\ref{fig:vectorize}, the setup on the left represents an $[4,2]$ MDS code.  The symbols stored in the $4$ nodes are respectively, $A,B,A+B,A+2B$.  This makes the code an MDS code.  However, to repair a failed node, say the node $1$, that stored $A$, we still have to download $2$ symbols to repair the node.  Consider next, the setup on the right.  Here the sub-packetization level is $2$, each symbol is replaced by $2$ `half-symbols'.  Thus $A$ is replaced by $A_1,A_2$, $B$ by $B_1,B_2$.  Note that if the data stored in the remaining two parity nodes is as shown in the figure, then node $1$ can be repaired by downloading $3$ half-symbols in place of two full symbols, thereby achieving a reduction in repair bandwidth. Note however, that in the case of the regenerating code, we have contacted all the remaining nodes, $3$ in this case, as opposed to $k=2$ in the case of the MDS code on the left. Thus while regenerating codes reduce the repair bandwidth, they do in general, result in increased repair degree. 
 
 	\subsection{Formal Definition of a Regenerating Code} 
 	
@@ -178,7 +177,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	\bean
 	\{(n,k,d), (\alpha,\beta), B, \fq\ \}.
 	\eean
-	The parameter $n$ denotes the block length of the code, which is the number of nodes that the data associated with a codeword in the RGC is stored across. Each node stores $\alpha$ symbols over \fq.  A value of $\alpha=1$ would indicate a scalar code, such as an RS code.  Thus $\alpha$ is the level of sub-packetization of the code. The parameter $k$ indicates that the RGC has the `any $k$ of $n$' property.  This is illustrated in Fig.~\ref{fig:RGC} on the left. Node repair is accomplished by having the replacement of a failed node contact any $d$ of the remaining nodes, with $k \leq d \leq (n-1)$ and download $\beta$ symbols from each of the $d$ helper nodes.  The parameter $\beta$ is typically much smaller than $\alpha$.  $B$ is the size of the file being stored, as measured in the number of \fq\ symbols.  The savings in repair bandwidth comes about since $d \beta < k \alpha $.
+	The parameter $n$ denotes the block length of the code, which is the number of nodes that the data associated with a codeword in the RGC is stored across. Each node stores $\alpha$ symbols over \fq.  A value of $\alpha=1$ would indicate a scalar code, such as an RS code.  Thus $\alpha$ is the level of sub-packetization of the code. The parameter $k$ indicates that the RGC has the `any $k$ of $n$' property.  This is illustrated in Figure~\ref{fig:RGC} on the left. Node repair is accomplished by having the replacement of a failed node contact any $d$ of the remaining nodes, with $k \leq d \leq (n-1)$ and download $\beta$ symbols from each of the $d$ helper nodes.  The parameter $\beta$ is typically much smaller than $\alpha$.  $B$ is the size of the file being stored, as measured in the number of \fq\ symbols.  The savings in repair bandwidth comes about since $d \beta < k \alpha $.
  \end{multicols}
 
 	\begin{figure}[!h]
@@ -230,7 +229,7 @@ We now present a simple, yet elegant, construction of an MBR code \cite{RasShaKu
 
 The file to be stored consists of a string of $9$ binary digits $\{a_1,a_2,\cdots,a_9\}$.  Thus $a_i \in \{0,1\}$.  We will use the integer $i$ to represent the $i$th message symbol $a_i$. 
 
-{\em Encoding} To encode the data, in the first step we add a single parity symbol $P$ as shown in Fig.~\ref{fig:pentagon_0}, i.e., 
+{\em Encoding} To encode the data, in the first step we add a single parity symbol $P$ as shown in Figure~\ref{fig:pentagon_0}, i.e., 
 \bean
 a_P & = & a_1+a_2+\cdots+a_{9} \pmod{2}.  
 \eean
@@ -240,14 +239,14 @@ a_P & = & a_1+a_2+\cdots+a_{9} \pmod{2}.
 \eean
 has the `any $9$ of $10$ property', i.e., a missing $10$th symbol can be recovered from the remaining $9$ simply by computing their modulo $2$ sum.
 
-Next, we set up a graph with $5$ nodes so as to form a pentagon and draw all possible edges connecting $2$ nodes of the graph, i.e., form a fully-connected pentagon. The pentagon has ${5 \choose 2}=10$ edges.  We place each of the symbols $a_i$ on a distinct edge, see Fig.~\ref{fig:pentagon}.
+Next, we set up a graph with $5$ nodes so as to form a pentagon and draw all possible edges connecting $2$ nodes of the graph, i.e., form a fully-connected pentagon. The pentagon has ${5 \choose 2}=10$ edges.  We place each of the symbols $a_i$ on a distinct edge, see Figure~\ref{fig:pentagon}.
 
-In the final encoding step, each node in the graph is made to store all the symbols appearing on an edge connected to that node as shown in Fig.~\ref{fig:pentagon}. Thus each node stores $4$ symbols and thus in this contruction, $\alpha=4$.  Note that every pair of nodes in the pentagon share in common, precisely {\em one} of the symbols $\{a_i \mid 1 \leq i \leq 9\} \cup \{a_P\}$.
+In the final encoding step, each node in the graph is made to store all the symbols appearing on an edge connected to that node as shown in Figure~\ref{fig:pentagon}. Thus each node stores $4$ symbols and thus in this contruction, $\alpha=4$.  Note that every pair of nodes in the pentagon share in common, precisely {\em one} of the symbols $\{a_i \mid 1 \leq i \leq 9\} \cup \{a_P\}$.
 
-{\em Node Repair} Let us assume that the node at the top of the pentagon and storing $\{a_2,a_5,a_6,a_P\}$ fails.  Then repair is accomplished by the replacement node requesting each of the remaining $4$ nodes to pass on to the replacement node, the symbol it shares in common with that node, see Fig.~\ref{fig:pentagon_712} (left).  Since each helper node passes on one symbol to aid on the repair of the failed node, it follows that $\beta=1$.
+{\em Node Repair} Let us assume that the node at the top of the pentagon and storing $\{a_2,a_5,a_6,a_P\}$ fails.  Then repair is accomplished by the replacement node requesting each of the remaining $4$ nodes to pass on to the replacement node, the symbol it shares in common with that node, see Figure~\ref{fig:pentagon_712} (left).  Since each helper node passes on one symbol to aid on the repair of the failed node, it follows that $\beta=1$.
 
 {\parfillskip=0pt
-{\em Data Collection Property} The data collection property of an RGC requires that the entire data file comprised in this example of $9$ binary symbols, be recoverable by connecting to any $k=3$ nodes.  Suppose for example that the nodes storing $\{a_1,a_4,a_9,a_P\}$ and $\{a_3,a_5,a_8,a_9\}$ have failed.  Then the data collector is required to recover the\par}
+{\em Data Collection Property} The data collection property of an RGC requires that the entire data file comprised in this example of $9$ binary symbols, be recoverable by connecting to any $k=3$ nodes.  Suppose for example that the nodes storing $\{a_1,a_4,a_9,a_P\}$ and $\{a_3,a_5,a_8,a_9\}$ have failed.  Then the data collector is required to recover the entire data file by connecting to the remaining $3$ nodes as\par}
 \end{multicols}
 
 \newpage
@@ -277,7 +276,7 @@ In the final encoding step, each node in the graph is made to store all the symb
 
 \begin{multicols}{2}
 \noindent
- entire data file by connecting to the remaining $3$ nodes as shown in Fig.~\ref{fig:pentagon_712} (right).  The remaining $3$ nodes store a total of $4 \times 3=12$ binary symbols. However, as every pair of nodes shares a symbol in common, only $9$ of these are distinct.  Now, as noted earlier, the entire data file can be recovered from any $9$ symbols drawn from the set $\{a_i \mid 1 \leq i \leq 9\} \cup \{a_P\}$ and thus we are done. 
+shown in Figure~\ref{fig:pentagon_712} (right).  The remaining $3$ nodes store a total of $4 \times 3=12$ binary symbols. However, as every pair of nodes shares a symbol in common, only $9$ of these are distinct.  Now, as noted earlier, the entire data file can be recovered from any $9$ symbols drawn from the set $\{a_i \mid 1 \leq i \leq 9\} \cup \{a_P\}$ and thus we are done. 
 
 \subsection{Desired Properties of a Regenerating Code} 
 
@@ -294,7 +293,7 @@ An OA-MSR code that achieves the bound in \eqref{eq:sbpl} is said to have optima
 \een
 
  \section{The Clay Code}
- There are multiple MSR constructions in the literature. In \cite{RasShaKum_PM}, the authors introduced explicit MSR constructions called Product Matrix codes that have storage overhead $> (2 -\frac{1}{k})$. Multiple constructions that followed this construction are detailed in the survey \cite{ScienceChinaBalajiKVRSK18}. However, these constructions lacked one or the other of the desired properties.  The Clay (short for coupled-layer) code is an MSR code that is optimal in $4$ respects: it is an MSR code (and hence has both minimum storage overhead and minimum repair bandwidth), it is also OA and has smallest possible level of $\alpha$ (see Fig.~\ref{fig:4way_optimality}).  In a way, the Clay code may be regarded as the culmination of work by many authors towards the construction of an RGC that meets virtually all the requirements of the industry, to the extent  that it is possible for an RGC to do so.
+ There are multiple MSR constructions in the literature. In \cite{RasShaKum_PM}, the authors introduced explicit MSR constructions called Product Matrix codes that have storage overhead $> (2 -\frac{1}{k})$. Multiple constructions that followed this construction are detailed in the survey \cite{ScienceChinaBalajiKVRSK18}. However, these constructions lacked one or the other of the desired properties.  The Clay (short for coupled-layer) code is an MSR code that is optimal in $4$ respects: it is an MSR code (and hence has both minimum storage overhead and minimum repair bandwidth), it is also OA and has smallest possible level of $\alpha$ (see Figure~\ref{fig:4way_optimality}).  In a way, the Clay code may be regarded as the culmination of work by many authors towards the construction of an RGC that meets virtually all the requirements of the industry, to the extent  that it is possible for an RGC to do so.
 
  The Clay code was independently discovered by $2$ research groups, see \cite{YeBargPCTCode},\cite{SasVajhaKum16}.  A fundamental transformation used in the construction of the Clay code was first described in \cite{TianLiTangISIT17}. 
  
@@ -302,7 +301,7 @@ An OA-MSR code that achieves the bound in \eqref{eq:sbpl} is said to have optima
  \bean
  \{ (n=4,k=2,d=3), (\alpha=4,\beta=2), B=8, \fq=\mathbb{F}_4 \ (q=4)\}. 
  \eean
- We will depict the Clay code as a data cube as shown in Fig.~\ref{fig:datacubeA_subchunks42} on the left.  The datacube is composed of $16$ small cylinders, each associated with a symbol in \fq.  A vertical column of $4$ cylinders corresponds to the $4$ symbols contained in a single node (as $\alpha=4$). This code is required to have the following properties:
+ We will depict the Clay code as a data cube as shown in Figure~\ref{fig:datacubeA_subchunks42} on the left.  The datacube is composed of $16$ small cylinders, each associated with a symbol in \fq.  A vertical column of $4$ cylinders corresponds to the $4$ symbols contained in a single node (as $\alpha=4$). This code is required to have the following properties:
 
  \ben
  \item {\em File Size} One should be able to store $B=8$ symbols from \fq\ in redundant fashion within this datacube,
@@ -358,21 +357,26 @@ An OA-MSR code that achieves the bound in \eqref{eq:sbpl} is said to have optima
  		\caption{The Clay code is optimal in $4$ respects as depicted here.}  \label{fig:4way_optimality}  
  \end{figure}
 
+\begin{figure}[!h]
+ 		\centering
+ 		\includegraphics[scale=.7]{src/Figures/chap4/datacubeA_subchunks42}  
+ 		\caption{The Clay code is depicted here in the form of a datacube.  Each vertex of the datacube appears  in the figure as a small cylinder, and is associated to an index of the form $(x,y,z)=(x,y,(z_0,z_1))$ where $\{x,y,z_0,z_1\}$ are all either $0$ or $1$.  Image taken from \cite{VajhaFAST18}.}  \label{fig:datacubeA_subchunks42}    
+ 	\end{figure}
+
 \begin{multicols}{2}
- 
  \subsection{Indexing of Symbols Within the Clay Code} 
  
  As noted earlier, we will view the Clay code as containing a total of $16$ \fq\ symbols, each placed at a distinct vertex of a datacube of size $(2\times 2 \times 4)$. In all of the figures that we show, the vertex appears as a small cylinder. We will index each code symbol by the triple
  \bean
  (x,y,z) & = & (x,y,(z_0,z_1)), 
  \eean
-where $\{x,y,z_0,z_1\}$ all belong to  $\{0,1\}$, as shown in Fig.~\ref{fig:datacubeA_subchunks42}.  The figure on the left identifies each plane with a value of $z=(z_0,z_1)$, whereas the figure on the right identifies the $(x,y)$ coordinates of each vertex within the example plane $z=(0,1)$.
+where $\{x,y,z_0,z_1\}$ all belong to  $\{0,1\}$, as shown in Figure~\ref{fig:datacubeA_subchunks42}.  The figure on the left identifies each plane with a value of $z=(z_0,z_1)$, whereas the figure on the right identifies the $(x,y)$ coordinates of each vertex within the example plane $z=(0,1)$.
 
  \subsection{Actual and Virtual Datacubes} 
  
- For the purposes of describing the encoding and repair properties of the Clay code, it is convenient to introduce a second datacube of identical dimensions.  We will refer to the datacube representing the Clay code itself as the {\em actual} datacube and the second datacube just introduced here, as the {\em virtual} datacube.  Fig.~\ref{fig:actVirtCubes42} shows the two datacubes, with the virtual datacube on the left appearing in blue and the actual datacube appearing on the right in red.  The acronyms PFT and PRT appearing the figure correspond respectively to the expansions {\em pairwise forward transform} and {\em pairwise reverse transform}. These terms will shortly be explained. 
+ For the purposes of describing the encoding and repair properties of the Clay code, it is convenient to introduce a second datacube of identical dimensions.  We will refer to the datacube representing the Clay code itself as the {\em actual} datacube and the second datacube just introduced here, as the {\em virtual} datacube.  Figure~\ref{fig:actVirtCubes42} shows the two datacubes, with the virtual datacube on the left appearing in blue and the actual datacube appearing on the right in red.  The acronyms PFT and PRT appearing the figure correspond respectively to the expansions {\em pairwise forward transform} and {\em pairwise reverse transform}. These terms will shortly be explained. 
  
- Across the two datacubes, the symbols corresponding to the red dots in the same location are identical.  Within each of the datacubes, the symbols associated with vertices that are not colored red, are paired.  Example pairings are identified in Fig.~\ref{fig:actVirtCubes42} in yellow and  connected by dashed lines.  Thus the symbols $\{U,U^{*}\}$ on the left are paired.  So are the symbols $\{C,C^{*}\}$ on the right.   The indices of the paired symbols are given in general, by:
+ Across the two datacubes, the symbols corresponding to the red dots in the same location are identical.  Within each of the datacubes, the symbols associated with vertices that are not colored red, are paired.  Example pairings are identified in Figure~\ref{fig:actVirtCubes42} in yellow and  connected by dashed lines.  Thus the symbols $\{U,U^{*}\}$ on the left are paired.  So are the symbols $\{C,C^{*}\}$ on the right.   The indices of the paired symbols are given in general, by:
  \bean
  (x,y,(z_0,z_1)) \Longleftrightarrow (z_y,y,(u_0,u_1))\\
  \text{ where $(u_y=x \text{ and } u_i=z_i, i \neq y$).}
@@ -389,14 +393,18 @@ where $\{x,y,z_0,z_1\}$ all belong to  $\{0,1\}$, as shown in Fig.~\ref{fig:data
  The symbols belonging to the virtual datacube possess an important property: the symbols in any given horizontal plane, corresponding to a fixed value of indexing parameter $z$, form an $[4,2]$ MDS code.   This naturally, imposes a constraint on the contents of the actual datacube, and is the only constraint placed (in indirect fashion), on the contents of the actual datacube. We will show how this can be used to encode and carry out node repair.
 
  \subsection{Encoding} 
- Encoding is carried out as described in Fig.~\ref{fig:encoding42}.   The four rectangles appearing in the figure represent a top aerial view of the actual (in red) and virtual (in blue) datacubes.
+ Encoding is carried out as described in Figure~\ref{fig:encoding42}.   The four rectangles appearing in the figure represent a top aerial view of the actual (in red) and virtual (in blue) datacubes.
+
+ Encoding is carried out as per the steps given below (see Figure~\ref{fig:encoding42}).
+ \bit
+ \item Step 1: The columns of the actual datacube corresponding to nodes having $(x,y)$ coordinates $(0,0)$, $(1,0)$ are filled with the $4+4=8$ message symbols.  
+ \item Step 2: The PRT is then used to compute the contents of the corresponding nodes in the virtual datacube. This is possible since the two paired symbols always belong to the same $y$-section. 
+ \item Step 3: In the virtual datacube, we know through Step 2, the values of the $8$ symbols belonging to the datacube and corresponding to nodes associated to vertices $(x,y)=(0,0),(1,0)$. The fact that the four symbols in each plane of the virtual datacube (i.e., the $4$ symbols corresponding to a fixed value of $z$ coordinate) form a $[4,2]$ MDS code, allows the remaining two symbols in that plane and having coordinates $(x,y) \in \{(0,1),(1,1)\}$ to be determined. 	Since this procedure can be carried out for each of the $4$ planes, at the end of this step, the entire contents of the virtual datacube have been determined. 
+ \item In the last and final step, we use the PFT to determine the contents of the actual datacube and corresponding to nodes having vertices $(x,y) \in \{(0,1),(1,1)\}$.  This concludes the encoding process. 
+ \eit
  \end{multicols}
  
-  	\begin{figure}[!h]
- 		\centering
- 		\includegraphics[scale=.7]{src/Figures/chap4/datacubeA_subchunks42}  
- 		\caption{The Clay code is depicted here in the form of a datacube.  Each vertex of the datacube appears  in the figure as a small cylinder, and is associated to an index of the form $(x,y,z)=(x,y,(z_0,z_1))$ where $\{x,y,z_0,z_1\}$ are all either $0$ or $1$.  Image taken from \cite{VajhaFAST18}.}  \label{fig:datacubeA_subchunks42}    
- 	\end{figure}
+  	
  
  	\begin{figure}[h!]
  		\centering
@@ -404,33 +412,23 @@ where $\{x,y,z_0,z_1\}$ all belong to  $\{0,1\}$, as shown in Fig.~\ref{fig:data
  		\caption{The virtual (left) and actual (right) datacubes associated with a Clay code.  Image taken from \cite{VajhaFAST18}. }  \label{fig:actVirtCubes42}    
  	\end{figure}
 
+\bigskip
+
  	\begin{figure}[ht!]
  		\centering
  		\includegraphics[scale=.58]{src/Figures/chap4/encoding42}  
  		\caption{Illustrating the $3$-step procedure for encoding of the Clay code.  Image taken from \cite{VajhaFAST18}.}  \label{fig:encoding42}    
  	\end{figure}
 
-\begin{multicols}{2}
- Encoding is carried out as per the steps given below (see Fig.~\ref{fig:encoding42}).
- \bit
- \item Step 1: The columns of the actual datacube corresponding to nodes having $(x,y)$ coordinates $(0,0)$, $(1,0)$ are filled with the $4+4=8$ message symbols.  
- \item Step 2: The PRT is then used to compute the contents of the corresponding nodes in the virtual datacube. This is possible since the two paired symbols always belong to the same $y$-section. 
- \item Step 3: In the virtual datacube, we know through Step 2, the values of the $8$ symbols belonging to the datacube and corresponding to nodes associated to vertices $(x,y)=(0,0),(1,0)$. The fact that the four symbols in each plane of the virtual datacube (i.e., the $4$ symbols corresponding to a fixed value of $z$ coordinate) form a $[4,2]$ MDS code, allows the remaining two symbols in that plane and having coordinates $(x,y) \in \{(0,1),(1,1)\}$ to be determined. 	Since this procedure can be carried out for each of the $4$ planes, at the end of this step, the entire contents of the virtual datacube have been determined. 
- \item In the last and final step, we use the PFT to determine the contents of the actual datacube and corresponding to nodes having vertices $(x,y) \in \{(0,1),(1,1)\}$.  This concludes the encoding process. 
- \eit
- 
- \subsection{Node Repair} 	
 
- Node repair is accomplished by carrying out the $3$-step procedure described below (see Fig.~\ref{fig:repair_flow42}). Let us assume without loss of generality that node associated to $(x_0,y_0)=(1,0)$ has failed.
- \end{multicols}
-
-  	\begin{figure}[h!]
-  		\centering
-  		\includegraphics[scale=.48]{src/Figures/chap4/repair_flow42}  
-  		\caption{Illustrating how node repair is accomplished in the Clay code. Image taken from \cite{VajhaFAST18}.}  \label{fig:repair_flow42}    
-  	\end{figure}
+\newpage
 
 \begin{multicols}{2}
+ \subsection{Node Repair}
+
+\vskip -3pt
+
+ Node repair is accomplished by carrying out the $3$-step procedure described below (see Figure~\ref{fig:repair_flow42}). Let us assume without loss of generality that node associated to $(x_0,y_0)=(1,0)$ has failed.
  \bit
  \item Step 1:  We focus on the planes associated to $z=(z_0,z_1)$ where $z_{y_0}=x_0$, i.e., $z_{0}=1$. There are $2$ such planes and we will refer to these as the {\em repair planes}.  Thus in the present example, the repair planes are the planes corresponding to $z_0=1$, namely the planes $z=(1,0)$ and $z=(1,1)$.  Using the PRT and the known contents of the actual datacube associated to vertex set $(0,1),(1,1)$, the contents of the virtual datacube and associated to the same vertex set $(0,1),(1,1)$ in the repair planes can be determined.  
  \item Step 2: The MDS code binding the $4$ symbols in the repair planes of the virtual datacube is used to decode the remaining symbols in the repair planes. 
@@ -449,13 +447,33 @@ where $\{x,y,z_0,z_1\}$ all belong to  $\{0,1\}$, as shown in Fig.~\ref{fig:data
  This concludes the repair process. 
  \eit
  
- \subsection{Systems Evaluation and Contributions to Ceph}
- In  a joint collaborative effort involving the University of Maryland, NetApp and the Indian Institute of Science, Clay codes have been implemented in an open-source distributed storage system called Ceph \cite{ceph} and evaluated over an AWS (Amazon Web Services) cluster. This effort can be found described in \cite{VajhaFAST18}.  It is planned to have the Clay code made available as an erasure code plugin in the upcoming Nautilus release \cite{nautilusceph2} of Ceph.  An earlier contribution by the authors to Ceph involved enabling vector-code support in Ceph by introducing the notion of sub-chunk and then enabling Clay code as an erasure-code plugin. The current implementation leaves open the choice of scalar MDS building block, i.e., the code can be realized through any available MDS implementation within Ceph, such as the Jerasure, Intel Storage Acceleration (ISA) and Shingled Erasure Code (SHEC) plugins.
+\vskip -20pt
 
+ \subsection{Systems Evaluation and Contributions to Ceph}
+
+\vskip -3pt
+
+ In  a joint collaborative effort involving the University of Maryland, NetApp and the Indian Institute of Science, Clay codes have been implemented in an open-source distributed storage system called Ceph \cite{ceph} and evaluated over an AWS (Amazon Web Services) cluster. This effort can be found described in \cite{VajhaFAST18}.  It is planned to have the Clay code made available as an erasure code plugin in the upcoming Nautilus release \cite{nautilusceph2} of Ceph.  An earlier contribution by the authors to Ceph involved enabling vector-code support in Ceph by introducing the notion of sub-chunk and then enabling Clay code as an erasure-code plugin. The current implementation leaves open the choice of scalar MDS building block, i.e., the code can be realized through any available MDS implementation within Ceph, such as the Jerasure, Intel Storage Acceleration (ISA) and Shingled Erasure Code (SHEC) plugins.\\[-20pt]
 
 \section{Locally Recoverable Codes} 
 
-As mentioned in Section~\ref{sec:response}, locally recoverable codes (LRCs), introduced in \cite{GopHuaSimYek}, are aimed at keeping to a low level, the repair degree.   A linear code is systematic if the $k$ message symbols are explicitly present among the $n$ code symbols.  An $(n,k,r)$ LRC \calc\ over a field \fq\ is a systematic $[n,k]$ linear block code having the property that every message symbol $c_t$, $t \in [k]$ can be recovered by computing a linear combination of the form 
+\vskip -3pt
+
+{\parfillskip=0pt
+As mentioned in Section~\ref{sec:response}, locally recoverable codes (LRCs), introduced in \cite{GopHuaSimYek}, are aimed at keeping to a low level, the repair degree.   A linear code is systematic if the $k$\par}
+\end{multicols}
+
+  	\begin{figure}[h!]
+  		\centering
+  		\includegraphics[scale=.42]{src/Figures/chap4/repair_flow42}  
+  		\caption{Illustrating how node repair is accomplished in the Clay code. Image taken from \cite{VajhaFAST18}.}  \label{fig:repair_flow42}    
+  	\end{figure}
+
+\newpage
+
+\begin{multicols}{2}
+\noindent
+message symbols are explicitly present among the $n$ code symbols.  An $(n,k,r)$ LRC \calc\ over a field \fq\ is a systematic $[n,k]$ linear block code having the property that every message symbol $c_t$, $t \in [k]$ can be recovered by computing a linear combination of the form 
 \bea
 c_t & = & \sum_{j \in S_t} a_j c_j , \ \ a_j \in \fq\ \label{eq:lrc}, 
 \eea 
@@ -469,16 +487,20 @@ An LRC whose minimum distance satisfies the above bound with equality is said to
 
 \subsection{The Windows Azure LRC} 
 
-Fig.~\ref{fig:Azure} shows the $(n=18,k=14,r=7)$ LRC employed in conjunction with Windows Azure \cite{HuaSimXuOguCalGopLiYek} and which is related in structure, to the pyramid code.  The dotted boxes indicate a collection of symbols that satisfy an overall parity check.  This code has minimum distance $4$ which is the same as that of the $[n=9,k=6]$ RS code appearing in Fig.~\ref{fig:RS_9_6}.
+Figure~\ref{fig:Azure} shows the $(n=18,k=14,r=7)$ LRC employed in conjunction with Windows Azure \cite{HuaSimXuOguCalGopLiYek} and which is related in structure, to the pyramid code.  The dotted boxes indicate a collection of symbols that satisfy an overall parity check.  This code has minimum distance $4$ which is the same as that of the $[n=9,k=6]$ RS code appearing in Figure~\ref{fig:RS_9_6}.
 
 In terms of reliability, the codes are comparable as they both have the same minimum distance $d_{\min}=4$. In terms of repair degree, the two codes are again comparable, having respective repair degrees of $7$ (Azure LRC) and $6$ (RS).  The big difference is in the storage overhead, which stands at $\frac{18}{14}=1.29$ in the case of the Azure LRC and 
 $\frac{9}{6}=1.5$ in the case of the $[9,6]$ RS code.  This difference has reportedly saved Microsoft millions of dollars \cite{microsoft}.
 
-An LRC in which every code symbol can be recovered from a linear combination of at most $r$ other code symbols is called an all-symbol LRC.  A construction for optimal all-symbol LRCs can be found in \cite{TamBar}. The codes in the construction may be regarded as subcodes of RS codes. An example is shown in Fig.~\ref{fig:tamo_barg_lrc}. As was noted in Section~\ref{sec:RS}, code symbols in an RS code may be regarded as values of a polynomial associated with the message symbols.  The construction depicted in Fig.~\ref{fig:tamo_barg_lrc}, is one in which code symbols are obtained by evaluating a subclass of polynomials.  This subclass of polynomials has the property that given any code symbol corresponding to the evaluation $f(P_a)$, there exist two other code symbols $f(P_b),f(P_c)$ such that the three values lie on straight line and hence satisfy an equation of the form
+An LRC in which every code symbol can be recovered from a linear combination of at most $r$ other code symbols is called an all-symbol LRC.  A construction for optimal all-symbol LRCs can be found in \cite{TamBar}. The codes in the construction may be regarded as subcodes of RS codes. An example is shown in Figure~\ref{fig:tamo_barg_lrc}. As was noted in Section~\ref{sec:RS}, code symbols in an RS code may be regarded as values of a polynomial associated with the message symbols.  The construction depicted in Figure~\ref{fig:tamo_barg_lrc}, is one in which code symbols are obtained by evaluating a subclass of polynomials.  This subclass of polynomials has the property that given any code symbol corresponding to the evaluation $f(P_a)$, there exist two other code symbols $f(P_b),f(P_c)$ such that the three values lie on straight line and hence satisfy an equation of the form
 \bean
 u_af(P_a)+ u_bf(P_b)+ u_cf(P_c) & = & 0.   
 \eean
 Thus this leads to an LRC with $r=2$.  This construction can be generalized to any $r$ and the resultant codes turn out to be optimal.
+
+\subsection{Hierarchical Codes} 	
+
+One disadvantage of an LRC is that the idea of an LRC is not scalable. Consider an $[24,14]$ linear code which is made up of the union of $6$ disjoint $[4,3]$ `local' codes (see Figure~\ref{fig:hierarchical} on the left).  These local codes are single parity check codes and ensure that the code has locality $3$.  However if there are $2$ or more erasures within a single local code, then recovery is not possible.  Codes with hierarchical locality \cite{SasAgaKum_loc} (see Figure~\ref{fig:hierarchical} (right)) seek to overcome this by building a hierarchy of local codes to ensure that in the event that a codeword in the lowest level fails, then the local code at the next level can take over.  The local codes at higher levels have a minimum distance that permits recovery from more than one erasure.
 \end{multicols}
 
 	\begin{figure}[h!]
@@ -487,80 +509,75 @@ Thus this leads to an LRC with $r=2$.  This construction can be generalized to a
 		\caption{The LRC that is employed in Windows Azure.}  \label{fig:Azure}    
 	\end{figure}      
 
- 
+\medskip
 
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=.36]{src/Figures/chap4/RS_9_6}  
+		\includegraphics[scale=.38]{src/Figures/chap4/RS_9_6}  
 		\caption{An RS code having the same minimum distance as the Windows Azure LRC.}  \label{fig:RS_9_6}    
 	\end{figure}      
 
- 
+\newpage 
 
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=.27]{src/Figures/chap4/tamo_barg_lrc}  
 		\caption{Illustrating the construction of an all-symbol, optimal LRC.}  \label{fig:tamo_barg_lrc}    
 	\end{figure}
 
-\begin{multicols}{2}
-\subsection{Hierarchical Codes} 	
-
-One disadvantage of an LRC is that the idea of an LRC is not scalable. Consider an $[24,14]$ linear code which is made up of the union of $6$ disjoint $[4,3]$ `local' codes (see Fig.~\ref{fig:hierarchical} on the left).  These local codes are single parity check codes and ensure that the code has locality $3$.  However if there are $2$ or more erasures within a single local code, then recovery is not possible.  Codes with hierarchical locality \cite{SasAgaKum_loc} (see Fig.~\ref{fig:hierarchical} (right)) seek to overcome this by building a hierarchy of local codes to ensure that in the event that a codeword in the lowest level fails, then the local code at the next level can take over.  The local codes at higher levels have a minimum distance that permits recovery from more than one erasure.
-
-\section{Recovery from Multiple Erasures} 
-
-Hierarchical codes present one method of designing a code with locality that can recover from more than one erasures.  There are other approaches as well.  {\em Availability} codes \cite{WanZha}, \cite{WanZhaLiu} cater to the situation when a node containing a code symbol that it is desired to access is unavailable as the particular node is busy serving other requests.  To handle such situations, an availability code is designed so that the same code symbol can be recovered in multiple ways, as a linear combination of a small subset of the remaining code symbols.  The binary product code shown in Fig.~\ref{fig:product_code} is one example of an availability code.  The symbols $P$ shown in the figure represent respectively either a row or column parity. Here each code symbol can be recovered in $3$ distinct ways: directly from the node storing the code symbol or else by computing the sum of the remaining entries in either the row or the column containing the desired symbol.
-
-The most general approach, and the one that imposes the least constraint in terms of how recovery is to be accomplished is sequential recovery \cite{PraLalKum} ,\cite{BalKinKum_ISIT}.  An example of a code with sequential recovery is shown in Fig.~\ref{fig:turan}. In the figure, the numbers correspond to the indices of the $8$ message symbols.  The $4$ vertices correspond to the $4$ parity symbols.  It can be seen that if message symbols $1$ and $5$ are erased, and one chooses to decode using locality, then one must first decode $5$ before decoding symbol $1$.
-\end{multicols}
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 		\begin{minipage}[b]{0.45\textwidth}
-			\includegraphics[scale=.44]{src/Figures/chap4/flat} 
+			\includegraphics[scale=.42]{src/Figures/chap4/flat} 
 		\end{minipage}
 		\hspace*{0.55in}
-		\begin{minipage}[b]{0.4\textwidth}
-			\includegraphics[scale=.4]{src/Figures/chap4/hierarchical}  
+		\begin{minipage}[b]{0.44\textwidth}
+			\includegraphics[scale=.38]{src/Figures/chap4/hierarchical}  
 		\end{minipage}
 	\caption{Illustrating on the left, a code with locality, in which each code symbol is protected by a $(4,3,2)$ local code and each local code is contained in a $(24,14,7)$ global code. In the hierarchical-locality code on the right, each local code is a part of one of the $(12,8,3)$ middle codes, which are in turn, contained in a $(24,14,6)$ global code. Image on right is taken from \cite{SasAgaKum_loc}.} \label{fig:hierarchical} 
 \end{figure}
 
+\begin{multicols}{2}
+\section{Recovery from Multiple Erasures} 
+
+\vskip -3pt
+
+Hierarchical codes present one method of designing a code with locality that can recover from more than one erasures.  There are other approaches as well.  {\em Availability} codes \cite{WanZha}, \cite{WanZhaLiu} cater to the situation when a node containing a code symbol that it is desired to access is unavailable as the particular node is busy serving other requests.  To handle such situations, an availability code is designed so that the same code symbol can be recovered in multiple ways, as a linear combination of a small subset of the remaining code symbols.  The binary product code shown in Figure~\ref{fig:product_code} is one example of an availability code.  The symbols $P$ shown in the figure represent respectively either a row or column parity. Here each code symbol can be recovered in $3$ distinct ways: directly from the node storing the code symbol or else by computing the sum of the remaining entries in either the row or the column containing the desired symbol.
+
+The most general approach, and the one that imposes the least constraint in terms of how recovery is to be accomplished is sequential recovery \cite{PraLalKum} ,\cite{BalKinKum_ISIT}.  An example of a code with sequential recovery is shown in Figure~\ref{fig:turan}. In the figure, the numbers correspond to the indices of the $8$ message symbols.  The $4$ vertices correspond to the $4$ parity symbols.  It can be seen that if message symbols $1$ and $5$ are erased, and one chooses to decode using locality, then one must first decode $5$ before decoding symbol~$1$.\\[-15pt]
+
+\section{Codes with Local Regeneration}
+
+There is a class of codes known as {\em codes with local regeneration} that provide the benefits of both reduced degree and reduced repair bandwidth (se Figure~\ref{fig:CLG_idea}).  For details the reader is referred to \cite{KamPraLalKum,RawKoySilVis,KrishnanRK18}.\\[-15pt]
+
+\section{Conclusion}
+
+Erasure coding for distributed storage enables the reliable storage of very large amounts of data with far less overhead in comparison to replication, while efficiently handling node repairs. Over the past decade, this area has seen extensive research and  many exciting codes have been developed as a result. The adoption of LRCs into the Microsoft Azure storage which resulted in significant cost savings, is one of the big success stories along this line of research. Although there are practical implementations of regenerating codes in the literature, regenerating codes are yet to make their way into a production cluster. The planned incorporation of the Clay code into the Nautilus release of Ceph, is an important step in this direction. There remain some open theoretical problems that are also of interest to industry. An example of this is the problem of constructing (vector) MDS codes which are repair bandwidth-efficient, yet offer a low sub-packetization level so as to mitigate the problem of fragmented read.
+\end{multicols}
 
 
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=.5]{src/Figures/chap4/product_code}  
+		\includegraphics[scale=.47]{src/Figures/chap4/product_code}  
 		\caption{The binary product code as an example of an {\em availability} code.  In this example, the code symbol `5' can be recovered either directly from the node storing the code symbol, or else by computing either the row sum: `$4$'+`$6$'+`$P$' or else, the column sum `$2$'+`$8$'+`$P$'.  }  \label{fig:product_code}    
 	\end{figure}
 
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=.48]{src/Figures/chap4/turan}  
 		\caption{An example code with forced sequential recovery from $2$ erasures for certain erasure patterns.}  \label{fig:turan}    
 	\end{figure}	 
 
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=.48]{src/Figures/chap4/CLG_idea}  
+		\includegraphics[scale=.45]{src/Figures/chap4/CLG_idea}  
 		\caption{Codes with local regeneration combine desirable features of both RGC and LRC.}  \label{fig:CLG_idea}    
 	\end{figure}
 
 \begin{multicols}{2}
-\section{Codes with Local Regeneration}
-
-There is a class of codes known as {\em codes with local regeneration} that provide the benefits of both reduced degree and reduced repair bandwidth (se Fig.~\ref{fig:CLG_idea}).  For details the reader is referred to \cite{KamPraLalKum,RawKoySilVis,KrishnanRK18}. 
-
-
-
-\section{Conclusion}
-Erasure coding for distributed storage enables the reliable storage of very large amounts of data with far less overhead in comparison to replication, while efficiently handling node repairs. Over the past decade, this area has seen extensive research and  many exciting codes have been developed as a result. The adoption of LRCs into the Microsoft Azure storage which resulted in significant cost savings, is one of the big success stories along this line of research. Although there are practical implementations of regenerating codes in the literature, regenerating codes are yet to make their way into a production cluster. The planned incorporation of the Clay code into the Nautilus release of Ceph, is an important step in this direction. There remain some open theoretical problems that are also of interest to industry. An example of this is the problem of constructing (vector) MDS codes which are repair bandwidth-efficient, yet offer a low sub-packetization level so as to mitigate the problem of fragmented read.
-
 \section{Acknowledgement}
 The authors would like to acknowledge support from the J. C. Bose National Fellowship, the US National Science
 Foundation under Grant No. 1421848 as well as from the NetApp University Research Fund, a corporate advised fund of the Silicon Valley Community Foundation.
-
 
 \begin{thebibliography}{99}
 \bibitem{datacenterstorage} ``Data center storage capacity worldwide,'' \url{https://www.statista.com/statistics/638593/worldwide-data-center-storage-capacity-cloud-vs-traditional/}, accessed: February 16, 2019. 
