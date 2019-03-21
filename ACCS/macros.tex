@@ -55,9 +55,13 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{fancybox}
+\usepackage{boldline}
+
 
 \usepackage{xcolor}
 \usepackage{colortbl}
+\usepackage{wrapfig}
+
 
 \definecolor{goldan-yellow}{rgb}{0.8, 0.4, 0.09}
 
@@ -104,7 +108,13 @@
 \AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
 \AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
 
-\pretolerance=1000
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%\pretolerance=1000
+%\tolerance=700
 
 
 %%%%%%%%%%%%%%%%
@@ -157,5 +167,4 @@
 \newcommand{\fq}{\mbox{$\mathbb{F}_q$}}
 \newcommand{\calc}{\mbox{$\mathcal{C}$}}
 \newcommand{\calcperp}{\mbox{$\mathcal{C}^{\perp}$}}
-
 
