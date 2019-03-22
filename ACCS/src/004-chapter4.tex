@@ -44,15 +44,15 @@ A more efficient option is to use an $[n,k]$ erasure code. Figure~\ref{fig:erasu
 
 \begin{multicols}{2}		
 \noindent
- erasure code.  In an $[n,k]$ erasure code, the data file is first split into $k$ fragments.  To this, an additional $m=(n-k)$ redundant fragments are added making for a total of $n$ fragments.  Each fragment is stored on a different storage unit. Within the class of erasure codes, maximum distance separable codes (MDS) are the most efficient in terms of offering reliability for a given amount of storage overhead.  An $[n,k]$ MDS code has the following defining property.  The entire data file can be recovered if one has access to {\em any} collection of $k$ fragments.  We will refer to this as the `any $k$ of $n$' property. Thus, an $[n,k]$ code can recover from the failure of any $\leq (n-k)$ fragments. To protect against the failure of any $\ell$ nodes, a replication code must create $(\ell+1)$ replicas, resulting in a storage overhead of $(\ell+1)$. In contrast, the storage overhead of an MDS code that is resilient against $\ell$ failures has overhead $\frac{n}{(n-\ell)}$. For example with $\ell=2$ and $n=6$, the storage overheads of the two schemes, replication and erasure coding, are respectively given by $3$ and $1.5$.\\[-22pt]
+ erasure code.  In an $[n,k]$ erasure code, the data file is first split into $k$ fragments.  To this, an additional $m=(n-k)$ redundant fragments are added making for a total of $n$ fragments.  Each fragment is stored on a different storage unit. Within the class of erasure codes, maximum distance separable codes (MDS) are the most efficient in terms of offering reliability for a given amount of storage overhead.  An $[n,k]$ MDS code has the following defining property.  The entire data file can be recovered if one has access to {\em any} collection of $k$ fragments.  We will refer to this as the `any $k$ of $n$' property. Thus, an $[n,k]$ MDS code can recover from the failure of any $\leq (n-k)$ fragments. To protect against the failure of any $\ell$ nodes, a replication code must create $(\ell+1)$ replicas, resulting in a storage overhead of $(\ell+1)$. In contrast, the storage overhead of an MDS code that is resilient against $\ell$ failures has overhead $\frac{n}{(n-\ell)}$. For example, with $\ell=2$ and $n=6$, the storage overheads of the two schemes, replication and erasure coding, are respectively given by $3$ and $1.5$.\\[-22pt]
 
 \subsubsection{Finite Fields}
 
 \vskip -3pt
 	
-The best known of all MDS codes is the Reed-Solomon (RS) code \cite{ReeSol}.  The symbol alphabet of an RS code is a finite field \fq\ (e.g. \cite[Ch.~3]{MacSlo}).  A finite field \fq\ is a collection of $q$ elements together with two operations, addition and multiplication that obey the rules we are accustomed to such as $a(bc)=(ab)c=abc$, $a+b=b+a$, $a(b+c)=ab+ac$ etc. As an example, a finite field $\mathbb{F}_3$ of size $q=3$ is composed of the elements $\{0,1,2\}$ along with two operations: addition $\! \! \pmod{3}$ and multiplication $\! \! \pmod{3}$.  The corresponding addition and multiplication tables are presented below.
+The best known of all MDS codes is the Reed-Solomon (RS) code \cite{ReeSol}.  The symbol alphabet of an RS code is a finite field \fq\ (e.g. \cite[Ch.~3]{MacSlo}).  A finite field \fq\ is a collection of $q$ elements together with two operations, addition and multiplication that obey the rules we are accustomed to such as $a(bc)=(ab)c=abc$, $a+b=b+a$, $a(b+c)=ab+ac$ etc. As an example, a finite field $\mathbb{F}_3$ of size $q=3$ is composed of the elements $\{0,1,2\}$ along with two operations: addition $\! \! \pmod{3}$ and multiplication $\! \! \pmod{3}$.  The corresponding addition and multiplication tables are presented Figure \ref{004-fig3}.
 
-Similar addition and multiplication tables can be generated for finite fields of size $q$ where $q$ is a prime number such as $2,3,5,7,\cdots$.  In general, finite fields of size $q$ exist whenever $q$ can be expressed as power of a prime number $p$, i.e., $q=p^e$ for some positive integer $e$.  However the arithmetic there is more involved. For our purposes, it suffices to imagine that we are working in some suitably large finite field. The explanation from here on is agnostic to the inner workings of operations in the finite field.\\[-22pt] 
+Similar addition and multiplication tables can be generated for finite fields of size $q$ where $q$ is a prime number such as $2,3,5,7,\cdots$.  In general, finite fields of size $q$ exist whenever $q$ can be expressed as power of a prime number $p$, i.e., $q=p^e$ for some positive integer $e$.  However, the arithmetic there is more involved. For our purposes, it suffices to imagine that we are working in some suitably large finite field. The explanation from here on is agnostic to the inner workings of operations in the finite field.\\[-22pt] 
 
 \subsubsection{Reed-Solomon Code}\label{sec:RS} 
 
@@ -91,7 +91,7 @@ f(x_i) \ =  \ a_i, & & 0 \leq i \leq (k-1).
 			2 & 0 & 2 & 1 
 		\end{tabular}
 		\eean 
-		\caption{Addition (on the left)  and multiplication (on the right) in an example finite field of size $3$.  In the example, all arithmetic is carried out modulo $3$. } 
+		\caption{Addition (on the left)  and multiplication (on the right) in an example finite field of size $3$.  In the example, all arithmetic is carried out modulo $3$. }\label{004-fig3} 
 	\end{figure} 
 
 \newpage
@@ -127,7 +127,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 
 	\subsection{Response of Coding Theory} \label{sec:response} 
 	
-	To address this issue, coding theorists came up with two new classes of codes, known respectively as {\em regenerating codes} (RGC) \cite{DimGodWuWaiRam} and {\em locally recoverable codes} (LRC) \cite{GopHuaSimYek}. LRC also go by the name {\em codes with locality} and we will interchangeably use the two terms.  These developments have led to the evolution of coding theory in two new directions Figure~\ref{fig:oak_2}.  While these developments also resulted in finding improved methods of repairing RS codes, we will not cover them in this survey and point the reader instead, to a representative set of  references on this topic \cite{ShaPapDimCai,GuruWoot,DauDuuKiaMil}. We will also not cover variants of regenerating codes such as the piggybacking framework introduced in \cite{RasShaRam_piggy}, the $\epsilon-$MSR framework \cite{RawTamGurEfr}, codes with cooperative repair \cite{HuXuWanZhaLi} and fractional-repetition codes \cite{ElRam}.
+	To address this issue, coding theorists came up with two new classes of codes, known respectively as {\em regenerating codes} (RGC) \cite{DimGodWuWaiRam} and {\em locally recoverable codes} (LRC) \cite{GopHuaSimYek}. LRC also go by the name {\em codes with locality} and we will interchangeably use the two terms.  These developments have led to the evolution of coding theory in two new directions (see Figure~\ref{fig:oak_2}).  While these developments also resulted in finding improved methods of repairing RS codes, we will not cover them in this survey and point the reader instead, to a representative set of  references on this topic \cite{ShaPapDimCai,GuruWoot,DauDuuKiaMil}. We will also not cover variants of regenerating codes such as the piggybacking framework introduced in \cite{RasShaRam_piggy}, the $\epsilon-$MSR framework \cite{RawTamGurEfr}, codes with cooperative repair \cite{HuXuWanZhaLi} and fractional-repetition codes \cite{ElRam}.
 \end{multicols}
 
 
@@ -177,7 +177,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	\bean
 	\{(n,k,d), (\alpha,\beta), B, \fq\ \}.
 	\eean
-	The parameter $n$ denotes the block length of the code, which is the number of nodes that the data associated with a codeword in the RGC is stored across. Each node stores $\alpha$ symbols over \fq.  A value of $\alpha=1$ would indicate a scalar code, such as an RS code.  Thus $\alpha$ is the level of sub-packetization of the code. The parameter $k$ indicates that the RGC has the `any $k$ of $n$' property.  This is illustrated in Figure~\ref{fig:RGC} on the left. Node repair is accomplished by having the replacement of a failed node contact any $d$ of the remaining nodes, with $k \leq d \leq (n-1)$ and download $\beta$ symbols from each of the $d$ helper nodes.  The parameter $\beta$ is typically much smaller than $\alpha$.  $B$ is the size of the file being stored, as measured in the number of \fq\ symbols.  The savings in repair bandwidth comes about since $d \beta < k \alpha $.
+	The parameter $n$ denotes the block length of the code, which is the number of nodes that the data associated with a codeword in the RGC is stored across. Each node stores $\alpha$ symbols over \fq.  A value of $\alpha=1$ would indicate a scalar code, such as an RS code.  Thus $\alpha$ is the level of sub-packetization of the code. The parameter $k$ indicates that the RGC has the `any $k$ of $n$' property.  This is illustrated in Figure~\ref{fig:RGC}, on the left. Node repair is accomplished by having the replacement of a failed node contact any $d$ of the remaining nodes, with $k \leq d \leq (n-1)$ and download $\beta$ symbols from each of the $d$ helper nodes (see Figure \ref{fig:RGC}, on the right).  The parameter $\beta$ is typically much smaller than $\alpha$.  $B$ is the size of the file being stored, as measured in the number of \fq\ symbols.  The savings in repair bandwidth comes about since $d \beta < k \alpha $.
  \end{multicols}
 
 	\begin{figure}[!h]
@@ -280,16 +280,16 @@ shown in Figure~\ref{fig:pentagon_712} (right).  The remaining $3$ nodes store a
 
 \subsection{Desired Properties of a Regenerating Code} 
 
-In practice there is greatest interest in using a code that has the smallest possible overhead.  This leads directly to the subclass of MSR codes.  MSR codes minimize the repair bandwidth within the class of MDS codes, i.e., within the class of codes having minimum storage overhead.  Two other metrics by which a regenerating code is judged from a practical perspective are:
+In practice there is greatest interest in using a code that has the smallest possible storage overhead.  This leads directly to the subclass of MSR codes.  MSR codes minimize the repair bandwidth within the class of MDS codes, i.e., within the class of codes having minimum storage overhead.  Two other metrics by which a regenerating code is judged from a practical perspective are:
 \ben
 \item {\em Optimal-Access} In general in an RGC, while each helper node sends $\beta$ symbols to the replacement node, these symbols may however, be derived by taking linear transformations of a larger number of symbols stored in the helper node. Potentially this could be as large as $\alpha$, the total number of symbols stored in the helper node. An RGC is said to be optimal-access (OA) if the number of symbols accessed at a helper node is equal to the number $\beta$, of symbols transferred to the replacement node. OA-RGC also go by the name help-by-transfer RGC.  
-\item {\em Small Sub-Packetization Level:} \ By this we mean, the least possible value $\alpha$ of sub-packetization.  A lower value of $\alpha$ helps reduce or eliminate the phenomenon of fragmented reads. Fragmented reads take place when a storage device has its memory structured in such a way that each time a read takes place, a minimum number of $J$ contiguous symbols are read off the memory.  In an RGC, the $\beta$ (or more) symbols transferred to the replacement node may not be contiguous, thereby causing the number of symbols accessed to be larger than the number theoretically needed. A small value of sub-packetization helps as one can obtain contiguous reads by operating on several (in the worst case, $J$) codewords at the same time.  A large value of $\alpha$ would place a lower bound $\geq J(k \alpha)$ on the amount of data needed to be stored to avoid fragmented reads. 
+\item {\em Small Sub-Packetization Level:} \ By this we mean, the least possible value $\alpha$ of sub-packetization.  A lower value of $\alpha$ helps reduce or eliminate the phenomenon of fragmented reads. Fragmented reads take place when a storage device has its memory structured in such a way that each time a read takes place, a minimum number of $J$ contiguous symbols are read off the memory.  In an RGC, the $\beta$ (or more) symbols accessed from each helper node may not be contiguous, thereby causing the number of symbols accessed to be larger than the number theoretically needed. A small value of sub-packetization helps as one can obtain contiguous reads by operating on several (in the worst case, $J$) codewords at the same time.  A large value of $\alpha$ would place a lower bound $\geq J(k \alpha)$ on the amount of data needed to be stored to avoid fragmented reads. 
 
 A lower bound on the smallest possible value of the sub-packetization level $\alpha$ of an OA-MSR code with $d=(n-1)$ is given by \cite{BalKum_subpkt}:
 \bea
 \alpha & \geq & r^{\lceil \frac{n-1}{r} \rceil}. \label{eq:sbpl} 
 \eea
-An OA-MSR code that achieves the bound in \eqref{eq:sbpl} is said to have optimal sub-packetization level.  RGC with $d=(n-1)$ while having large repair degree, have the advantage of having the smallest possible repair bandwidth of any MSR code. 
+An OA-MSR code that achieves the bound in \eqref{eq:sbpl} is said to have optimal sub-packetization level.  MSR codes with $d=(n-1)$ while having large repair degree, have the advantage of having the smallest possible repair bandwidth of any MSR code. 
 \een
 
  \section{The Clay Code}
@@ -500,7 +500,7 @@ Thus this leads to an LRC with $r=2$.  This construction can be generalized to a
 
 \subsection{Hierarchical Codes} 	
 
-One disadvantage of an LRC is that the idea of an LRC is not scalable. Consider an $[24,14]$ linear code which is made up of the union of $6$ disjoint $[4,3]$ `local' codes (see Figure~\ref{fig:hierarchical} on the left).  These local codes are single parity check codes and ensure that the code has locality $3$.  However if there are $2$ or more erasures within a single local code, then recovery is not possible.  Codes with hierarchical locality \cite{SasAgaKum_loc} (see Figure~\ref{fig:hierarchical} (right)) seek to overcome this by building a hierarchy of local codes to ensure that in the event that a codeword in the lowest level fails, then the local code at the next level can take over.  The local codes at higher levels have a minimum distance that permits recovery from more than one erasure.
+One disadvantage of an LRC is that the idea of an LRC is not scalable. Consider an $[24,14]$ linear code which is made up of the union of $6$ disjoint $[4,3]$ `local' codes (see Figure~\ref{fig:hierarchical} on the left).  These local codes are single parity check codes and ensure that the code has locality $3$.  However, if there are $2$ or more erasures within a single local code, then recovery is not possible.  Codes with hierarchical locality \cite{SasAgaKum_loc} (see Figure~\ref{fig:hierarchical} (right)) seek to overcome this by building a hierarchy of local codes to ensure that in the event that a codeword in the lowest level fails, then the local code at the next level can take over.  The local codes at higher levels have a minimum distance that permits recovery from more than one erasure.
 \end{multicols}
 
 	\begin{figure}[h!]
@@ -534,7 +534,7 @@ One disadvantage of an LRC is that the idea of an LRC is not scalable. Consider 
 		\begin{minipage}[b]{0.44\textwidth}
 			\includegraphics[scale=.38]{src/Figures/chap4/hierarchical}  
 		\end{minipage}
-	\caption{Illustrating on the left, a code with locality, in which each code symbol is protected by a $(4,3,2)$ local code and each local code is contained in a $(24,14,7)$ global code. In the hierarchical-locality code on the right, each local code is a part of one of the $(12,8,3)$ middle codes, which are in turn, contained in a $(24,14,6)$ global code. Image on right is taken from \cite{SasAgaKum_loc}.} \label{fig:hierarchical} 
+	\caption{Illustrating on the left, a code with locality, in which each code symbol is protected by a $[4,3,2]$ local code and each local code is contained in a $[24,14,7]$ global code. In the hierarchical-locality code on the right, each local code is a part of one of the $[12,8,3]$ middle codes, which are in turn, contained in a $[24,14,6]$ global code. Image on right is taken from \cite{SasAgaKum_loc}.} \label{fig:hierarchical} 
 \end{figure}
 
 \begin{multicols}{2}
@@ -544,11 +544,11 @@ One disadvantage of an LRC is that the idea of an LRC is not scalable. Consider 
 
 Hierarchical codes present one method of designing a code with locality that can recover from more than one erasures.  There are other approaches as well.  {\em Availability} codes \cite{WanZha}, \cite{WanZhaLiu} cater to the situation when a node containing a code symbol that it is desired to access is unavailable as the particular node is busy serving other requests.  To handle such situations, an availability code is designed so that the same code symbol can be recovered in multiple ways, as a linear combination of a small subset of the remaining code symbols.  The binary product code shown in Figure~\ref{fig:product_code} is one example of an availability code.  The symbols $P$ shown in the figure represent respectively either a row or column parity. Here each code symbol can be recovered in $3$ distinct ways: directly from the node storing the code symbol or else by computing the sum of the remaining entries in either the row or the column containing the desired symbol.
 
-The most general approach, and the one that imposes the least constraint in terms of how recovery is to be accomplished is sequential recovery \cite{PraLalKum} ,\cite{BalKinKum_ISIT}.  An example of a code with sequential recovery is shown in Figure~\ref{fig:turan}. In the figure, the numbers correspond to the indices of the $8$ message symbols.  The $4$ vertices correspond to the $4$ parity symbols.  It can be seen that if message symbols $1$ and $5$ are erased, and one chooses to decode using locality, then one must first decode $5$ before decoding symbol~$1$.\\[-15pt]
+The most general approach, and the one that imposes the least constraint in terms of how recovery is to be accomplished is sequential recovery \cite{PraLalKum}, \cite{BalKinKum_ISIT}.  An example of a code with sequential recovery is shown in Figure~\ref{fig:turan}. In the figure, the numbers correspond to the indices of the $8$ message symbols.  The $4$ vertices correspond to the $4$ parity symbols.  It can be seen that if message symbols $1$ and $5$ are erased, and one chooses to decode using locality, then one must first decode $5$ before decoding symbol~$1$.\\[-15pt]
 
 \section{Codes with Local Regeneration}
 
-There is a class of codes known as {\em codes with local regeneration} that provide the benefits of both reduced degree and reduced repair bandwidth (se Figure~\ref{fig:CLG_idea}).  For details the reader is referred to \cite{KamPraLalKum,RawKoySilVis,KrishnanRK18}.\\[-15pt]
+There is a class of codes known as {\em codes with local regeneration} that provide the benefits of both reduced degree and reduced repair bandwidth (see Figure~\ref{fig:CLG_idea}).  For details the reader is referred to \cite{KamPraLalKum,RawKoySilVis,KrishnanRK18}.\\[-15pt]
 
 \section{Conclusion}
 

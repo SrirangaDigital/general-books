@@ -1,34 +1,40 @@
 \chapter{Experiential Learning of Networking Technologies: Understanding TCP States -- Part 2}
 
 \begin{center}
-\uppercase{Ram P. Rustagi}\footnote{Ram P. Rustagi (Department of CSE, KSIT Bangalore) and Viraj Kumar (Divecha Centre for Climate Change, IISc Bangalore)}  (rprustagi@ksit.edu.in) and \uppercase{Viraj Kumar} (viraj.kumar.cs@gmail.com)
-\end{center}
+\uppercase{Ram P. Rustagi}
+
+\vskip -7pt
+
+Department of CSE, KSIT Bangalore
 
 \bigskip
-\noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth]{src/Figures/chap3/stock-vector-presentation-layer-osi-model-vector-illustration-333711977.jpg}}
+
+\uppercase {Viraj Kumar}
+
+\vskip -7pt
+
+Divecha Centre for Climate Change, IISc Bangalore
+\end{center}
+
+\noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth,height=16cm]{src/Figures/chap3/stock-vector-presentation-layer-osi-model-vector-illustration-333711977.jpg}}
 
 \newpage
 
 \begin{multicols}{2}
 
 \setcounter{figure}{0}
-\begin{quotation}
-\centerline{\bf Abstract}
-\medskip
+\section*{Abstract}
 
-\noindent
 This article focuses on the states of a TCP connection once one of the endpoints decides to terminate the connection. This so-called teardown phase involves the exchange of numerous messages (for reasons we will explore), and the TCP connection itself transitions through several states. Web developers often have only an overly simplistic understanding of these states, which may suffice when the network behaves reliably. However, a deeper understanding of TCP states is essential to design web applications that robustly manage TCP connections even in the presence of network faults during the teardown phase, and debug poorly design applications that exhibit poor resource utilization and poor performance in such situations. As always, we will explore these issues through a series of experiential learning exercises.
-\end{quotation}
 
-
-\section*{Introduction}
+\section{Introduction}
 
 
 In the last article \cite{chap3-key8}, we discussed the three phases of TCP \cite{chap3-key1} communication: (1) connection setup, (2) data transfer, and (3) teardown. For each TCP connection, the two machines communicating via this connection independently maintain information about the present state of this connection from their own perspective (one of the 11 possible states listed in Table \ref{chap3-tab1}). The last column of this table lists the states of a TCP connection after one of the machines decides to close the connection by initiating connection termination. In case of any abnormal network behaviour, an understanding of these states of the TCP connection is critical to accurately diagnose problems and resolve them.
 
 For experiential understanding of these TCP states and the Transport layer \cite{chap3-key2}, we need a basic setup consisting of two machines $H_{1}$ and $H_{2}$ connected via a network as shown in Figure \ref{chap3-fig1}. We will make use of i) a network utility called \textit{netcat} (nc) \cite{chap3-key5}\cite{chap3-key6} that can be used to create both a TCP client and a TCP server (for the latter, run with the option $-1$), ii) a utility to implement firewalls functionality called \textit{iptables} \cite{chap3-key7}, and iii) some custom applications (simple Python programs) to depict the typical application behaviour.
 
-As extensively discussed in \cite{chap3-key8}, the two machines exchange messages during connection setup (Phase 1) and data is transferred during Phase 2 when both machines ``agree'' that the the TCP connection state is ESTABLISHED.
+As extensively discussed in \cite{chap3-key8}, the two machines exchange messages during connection setup (Phase 1) and data is transferred during Phase 2 when both machines ``agree'' that the TCP connection state is ESTABLISHED.
 \end{multicols}
 
 \begin{table}[!ht]
@@ -57,13 +63,13 @@ CLOSED & LISTEN & ESTABLISHED & FIN\_WAIT\_1\\
 \end{figure}
 
 \begin{multicols}{2}
-\section*{TCP Teardown (Phase 3)}
+\section{TCP Teardown (Phase 3)}
 
 At some point during Phase 2, one of the applications will decide that it does not need to transmit data any more and will initiate connection closure (i.e., the TCP connection will enter the teardown phase, Phase 3). This application (which can be either the client or the server application) will follow the \textit{Active Close} path in Figure \ref{chap3-fig2} (shown on the left in purple colour), and the other application will follow the \textit{Passive Close} path (shown on the right in orange colour). Each sent message is identified by a number in parentheses ($n$), and when this is received it is identified as ($n'$). It should be noted that even though connection initiation (connection setup in Phase 1) is always by a client, connection termination can be initiated by either the client or the server (or by both at the same time -- a very rare case that is generally not seen in real-life applications).
 
-To understand why so many states are necessary in Phase 3, note that data transfer may continue for a long time after connection closure is initiated. As a concrete example, consider a typical case of web communication where a web client is downloading a large file (e.g., an image or a document). After the client sends the URL details (which may correspond to only a few hundred bytes, including HTTP headers), it need not send any further data and it may decide to initiate TCP connection closure (to better manage client-side Operating System resources). Despite this, the application should continue to receive data until the server has sent the full file. The connection can only be closed after the server has sent the last byte (which could be for several minutes or even hours after the client’s initial request for closure) and has received the corresponding TCP-level acknowledgement (in accordance with TCP reliable delivery). Keeping in mind that some messages can be lost due to network faults, TCP states must maintain enough information to properly manage the connection. For ease of understanding, let us first consider the simpler (and more common) scenario when the network function correctly.
+To understand why so many states are necessary in Phase 3, note that data transfer may continue for a long time after connection closure is initiated. As a concrete example, consider a typical case of web communication where a web client is downloading a large file (e.g., an image or a document). After the client sends the URL details (which may correspond to only a few hundred bytes, including HTTP headers), it need not send any further data and it may decide to initiate TCP connection closure (to better manage client-side Operating System resources). Despite this, the application should continue to receive data until the server has sent the full file. The connection can only be closed after the server has sent the last byte (which could be for several minutes or even hours after the client’s initial request for closure) and has received the corresponding TCP-level acknowledgement (in accordance with TCP reliable delivery). Keeping in mind that some messages can be lost due to network faults, TCP states must maintain enough information to properly manage the connection. For ease of understanding, let us first consider the simpler (and more common) scenario when the network functions correctly.
 
-\section*{TCP Connection Closure -- Normal case}
+\section{TCP Connection Closure\\ -- Normal case}
 
 Phase 3 starts when either the client or the server application invokes the \textit{connection close} API. For clarity, we will assume that the application on $H_{1}$ initiates the connection close and $H_{2}$ responds to this connection close request. Thus, $H_{1}$ transmits a TCP FIN(ish) message (1) to $H_{2}$ and must wait for a response (typically an acknowledgement). Thus, the TCP connection on $H_{1}$ enters the state FIN\_WAIT1 which indicates that it has initiated connection closure by transmitting the FIN message and is waiting for a response. When $H_{2}$ receives this FIN message ($1'$), it responds with an ACK message (2) and the TCP connection on $H_{2}$ enters the CLOSE\_WAIT state. This state indicates that the other side has initiated connection closure and the same has been acknowledged by, but the connection should not be closed yet because the application running on $H_{2}$ may wish to transmit more data. When $H_{1}$ receives this ACK message ($2'$), the TCP connection on $H_{1}$ enters the state FIN\_WAIT2.
 
@@ -88,7 +94,7 @@ In the screenshots below, the names of the machines $H_{1}$ and $H_{2}$ are part
 
 \medskip
 \noindent
-\textbf{Experiment 1: TCP State transition for normal TCP application closure.}
+\textbf{Experiment 1:\\ TCP State transition for normal TCP application closure.}
 \smallskip
 
 The following experiment demonstrates this typical teardown scenario in Figure \ref{chap3-fig3} Error: Reference source not found and Error: Reference source not found Figure \ref{chap3-fig4}. In Figure \ref{chap3-fig3}, Error: Reference source not foundthe application on $H_{2}$ moves the TCP connection state from LISTEN to ESTABLISHED and then, via intermediate transient states (as discussed above), to TIME\_WAIT as shown by the last line of the lower panel of this figure.
@@ -117,10 +123,10 @@ The states followed by the application on $H_{1}$ similarly shown in Figure \ref
 \begin{multicols}{2}
 Under normal circumstances, the TCP connection closure follows the expected path and there is little reason for developers to have this detailed understanding of state changes. However, in some critical service function applications, the branding image and possibly the revenue of the service provider could be impacted if users perceive unsuccessful or delayed connection. For such applications, it is imperative that developers understand the details of various TCP termination states and the general conditions that lead to these states. We will now consider the situation where network failures during the teardown phase cause problems that can be diagnosed and rectified using our detailed understanding.
 
-\section*{TCP Connection Closure -- FIN\_WAIT1 state}
+\section{TCP Connection Closure\\ FIN\_WAIT1 state}
 
 \noindent
-\textbf{Experiment 2: TCP State FIN\_WAIT1 (\boldmath$H_{1}$) and ESTABLISHED ($H_{2}$)}
+\textbf{Experiment 2:\\ TCP State FIN\_WAIT1 (\boldmath$H_{1}$) and ESTABLISHED ($H_{2}$)}
 \smallskip
 
 In the absence of network faults, when $H_{1}$ sends a FIN message and moves to state FIN\_WAIT1, it can expect to get an ACK almost immediately (i.e., within a few milliseconds) and thus move to state FIN\_WAIT2. Thus, to observe $H_{1}$ in the transient state FIN\_WAIT1, we need to simulate a network fault. As in our previous article \cite{chap3-key8}, we will make use of the \textit{iptables} utility to create abnormal network conditions.
@@ -129,7 +135,7 @@ In Figure \ref{chap3-fig2}, observe that $H_{1}$'s TCP connection state will rem
 
 \medskip
 \noindent
-\textbf{Experiment 3: TCP State CLOSE\_WAIT (\boldmath$H_{1}$) and FIN\_WAIT1 ($H_{2}$)}
+\textbf{Experiment 3:\\ TCP State CLOSE\_WAIT (\boldmath$H_{1}$) and FIN\_WAIT1 ($H_{2}$)}
 \smallskip
 
 Let us now consider the other possibility where $H_{1}$ receives the FIN message, but the ACK it sends back to $H_{2}$ as it moves to the CLOSE\_WAIT state (refer to Figure \ref{chap3-fig2}) gets lost. In this case, the TCP connection state on $H_{2}$ will continue to be FIN\_WAIT1. This scenario can be easily simulated by dropping the ACK message on $H_{2}$, as shown in Figure \ref{chap3-fig7} and Figure \ref{chap3-fig8}. In this experiment, when $H_{1}$ receives FIN it will send only the ACK (but not FIN) because we will assume that it still has some data to send. This functionality to send data even after receiving FIN from the other side cannot be achieved using the \textit{netcat} utility (this utility immediately sends a FIN/ACK as response when it receives a FIN message), so we have developed a simple Python program \textbf{tcp\_client.py} that sends the current date and time as the data at a specified time interval (option \textbf{-d}) for a specified number of times (option \textbf{-c}). This program can be accessed from \cite{chap3-key10}, and the key part of code is given in the Appendix.
@@ -168,16 +174,16 @@ Interestingly, the scenario described here can also arise in a perfectly functio
 \newpage
 
 \noindent
-\textbf{Experiment 4: TCP State FIN\_WAIT1 (\boldmath$H_{2}$) and LAST\_ACK ($H_{1}$)}
+\textbf{Experiment 4:\\ TCP State FIN\_WAIT1 (\boldmath$H_{2}$) and LAST\_ACK ($H_{1}$)}
 \smallskip
 
 Another possible case is that the TCP connection state is FIN\_WAIT1 on one machine and LAST\_ACK on the other. This would occur when $H_{2}$ sends FIN, $H_{1}$ receives FIN and sends the ACK response and moves to the CLOSE\_WAIT state (as in previous case) and then the application on $H_{1}$ invokes the \lstinline|close}()| call because it has no more data to transmit. Thus, the machine $H_{1}$ will send a FIN message and move the TCP connection state to LAST\_ACK state as it waits for the acknowledgement of its FIN in order to finally close the connection. However, when the second FIN message is lost in the network, $H_{2}$ will continue to remain in the FIN\_WAIT1 state. This scenario is captured in Figure \ref{chap3-fig9} and Figure \ref{chap3-fig10}. The experimental steps as shown in Figure \ref{chap3-fig9} are same as those carried out in previous experiment, but on $H_{1}$ we simply use the \textit{netcat} (\textit{nc}) utility. When the TCP connection is closed by the application at other end, \textit{nc} also immediately closes the connection resulting in the issuance of a FIN message. A firewall rule can be defined to drop this second FIN message.
 
-In Figure \ref{chap3-fig9}, the application (\textit{nc} server) on $H_{2}$ starts in the upper panel at time 06:03:58, and its initial state is LISTEN as shown in the output of first command in the lower panel at time 06:04:57. The application (\textit{nc} client) starts on $H_{1}$ at time 06:05:01 and connects to the server as shown in the upper panel of Figure \ref{chap3-fig10}. After the connection setup, the TCP connection state on both machines moves to ESTABLISHED, as shown by the outputs of the first command in the lower panel of Figure \ref{chap3-fig10} and the second command in the lower panel of Figure \ref{chap3-fig9}. The applications subsequently exchange some data (``Hello''). To simulate the network abnormality condition of losing the FIN-ACK packet, an \textit{iptables} command is issued on $H_{1}$ (shown by the second command in the lower panel of Figure \ref{chap3-fig10}) at time 06:05:31. Now, the application is aborted on $H_{2}$ by pressing Ctrl-C (upper panel of Figure \ref{chap3-fig9}). This results in $H_{2}$ sending a FIN message and moving the TCP connection state to FIN\_WAIT1. When $H_{1}$ receives the FIN message, it sends the ACK moves to CLOSE\_WAIT, and the application immediately invokes \lstinline|close()|. This sends a FIN message and the TCP connection on $H_{1}$ moves to the LAST\_ACK state (Figure \ref{chap3-fig2}) as shown by the output of the third command at time 06:05:44 in the lower panel of Figure \ref{chap3-fig10}. Since this packet is dropped in the network on account of the firewall rule, $H_{2}$ receives neither this ACK nor the FIN message. Hence, the TCP connection state on $H_{2}$ continues to be FIN\_WAIT1, as shown by output of the third command in the lower panel of Figure \ref{chap3-fig9}.
+In Figure \ref{chap3-fig9}, the application (\textit{nc} server) on $H_{2}$ starts in the upper panel at time 06:03:58, and its initial state is LISTEN as shown in the output of first command in the lower panel at time 06:04:57. The application (\textit{nc} client) starts on $H_{1}$ at time 06:05:01 and connects to the server as shown in the upper panel of Figure \ref{chap3-fig10}. After the connection setup, the TCP connection state on both machines moves to ESTABLISHED, as shown by the outputs of the first command in the lower panel of Figure \ref{chap3-fig10} and the second command in the lower panel of Figure \ref{chap3-fig9}. The applications subsequently exchange some data (``Hello''). To simulate the network abnormality condition of losing the FIN-ACK packet, an \textit{iptables} command is issued on $H_{1}$ (shown by the second command in the lower panel of Figure \ref{chap3-fig10}) at time 06:05:31. Now, the application is aborted on $H_{2}$ by pressing Ctrl-C (upper panel of Figure \ref{chap3-fig9}). This results in $H_{2}$ sending a FIN message and moving the TCP connection state to FIN\_WAIT1. When $H_{1}$ receives the FIN message, it sends the ACK and moves to CLOSE\_WAIT, and the application immediately invokes \lstinline|close()|. This sends a FIN message and the TCP connection on $H_{1}$ moves to the LAST\_ACK state (Figure \ref{chap3-fig2}) as shown by the output of the third command at time 06:05:44 in the lower panel of Figure \ref{chap3-fig10}. Since this packet is dropped in the network on account of the firewall rule, $H_{2}$ receives neither this ACK nor the FIN message. Hence, the TCP connection state on $H_{2}$ continues to be FIN\_WAIT1, as shown by output of the third command in the lower panel of Figure \ref{chap3-fig9}.
 
 Here again, we note that the scenario described above can also occur in a functional network. This time, a problem can arise because many firewalls block outgoing TCP reset messages (since these may be associated with port scanning, where attackers examine ports to determine if any vulnerable applications are running). Specifically, consider a poorly written client application running on $H_{2}$ that crashes while a TCP connection has been established with a server application running on $H_{1}$. Here, the Operating System running on $H_{2}$ will send a FIN message on behalf of the crashed application. The server application will reply with an ACK and move to the LAST\_ACK state. Next, when the server application sends pending data or the FIN message, $H_{2}$ will respond with a TCP Reset which may be blocked by either the client-side or server-side firewall. Thus, the server will not receive the TCP Reset and will waste resources (and may suffer degraded performance) as it remains in the LAST\_ACK state.
 
-\section*{TCP Connection Closure: FIN\_WAIT2 state}
+\section{TCP Connection Closure:\\ FIN\_WAIT2 state}
 
 {\parfillskip=0pt
 A TCP connection will reach the FIN\_WAIT2 state only when it receives the ACK ($2'$) message from the other side for the FIN (1) message it has sent. This also implies that other side has received the FIN ($1'$) message and moved to the CLOSE\_WAIT state. This is a normal communication process where both the network and the applications are behaving as expected. If the application for which the TCP\par}
@@ -195,7 +201,7 @@ connection is in CLOSE\_WAIT state has no more data to transmit, the application
 
 \medskip
 \noindent
-\textbf{Experiment 5: TCP State FIN\_WAIT2 (\boldmath$H_{2}$) and CLOSE\_WAIT ($H_{1}$)}
+\textbf{Experiment 5:\\ TCP State FIN\_WAIT2 (\boldmath$H_{2}$) and CLOSE\_WAIT ($H_{1}$)}
 \smallskip
 
 We start a netcat server on $H_{2}$. As before, it is necessary to have a client program that continues to send data even after the other side has initiated connection close. Hence, we use the previously described Python client program on $H_{1}$ to establish communication and exchange some data, as shown in the upper panels of Figure \ref{chap3-fig11} and Figure \ref{chap3-fig12}. At this point, the TCP connection is in the ESTABLISHED state as shown by the output of the first command in the lower panel of Figure \ref{chap3-fig12}. The client program \textit{tcp\_client.py} is invoked to send 20 iterations of data transmission (option \textbf{-c}) at an interval of 20 seconds (option \textbf{-d}), and the data transmitted is the current date and time as can been seen in the upper panels of these two figures.
@@ -217,13 +223,13 @@ When the \textit{netcat} application is closed on $H_{2}$ at time 11:19:22, it s
 
 \begin{multicols}{2}
 \noindent
-\textbf{Experiment 6: TCP State FIN\_WAIT2 (\boldmath$H_{2}$) and\hfill\break LAST\_ACK ($H_{1}$)}
+\textbf{Experiment 6:\\ TCP State FIN\_WAIT2 (\boldmath$H_{2}$) and\hfill\break LAST\_ACK ($H_{1}$)}
 \smallskip
 
 In the above experiment, when the FIN (3) message sent by the application on $H_{1}$ does not reach $H_{2}$, then although $H_{1}$ will move the TCP connection state to LAST\_ACK, the state on $H_{2}$ will continue to be FIN\_WAIT2. To realize this situation, one must carefully understand the transitions. When the FIN (1) message sent by $H_{2}$ is received, $H_{1}$ will send the ACK (2) message and move to the CLOSE\_WAIT state. When $H_{2}$ receives this ACK ($2'$) message it will move to the FIN\_WAIT2 state. When $H_{2}$ has finished sending its data, it will send the FIN (3) message that should be lost for the purposes of this experiment. Thus, one must carefully manage the timing of these events as shown in  Figure \ref{chap3-fig13} and Figure \ref{chap3-fig14}.
 
 {\parfillskip=0pt
-The TCP application on $H_{1}$ is invoked, which sends 3 data packets starting at time 15:33:35, at an interval of 10 seconds (option \textbf{-d 10}) as shown in the upper panel of Figure \ref{chap3-fig14}. At 15:33:55, the application is aborted on $H_{2}$ (upper panel of Figure \ref{chap3-fig13}), hence the FIN (1) message is sent. Once the ACK (2) message is received, the TCP connection state on $H_{1}$ moves to FIN\_WAIT2, as shown in the lower panel of Figure \ref{chap3-fig13}. The application on $H_{1}$ will waits for 10 more seconds before invoking \lstinline|close()| at 15:34:05. At time 15:34:01, a firewall rule is invoked on $H_{1}$ to drop the FIN\par}
+The TCP application on $H_{1}$ is invoked, which sends 3 data packets starting at time 15:33:35, at an interval of 10 seconds (option \textbf{-d 10}) as shown in the upper panel of Figure \ref{chap3-fig14}. At 15:33:55, the application is aborted on $H_{2}$ (upper panel of Figure \ref{chap3-fig13}), hence the FIN (1) message is sent. Once the ACK (2) message is received, the TCP connection state on $H_{1}$ moves to FIN\_WAIT2, as shown in the lower panel of Figure \ref{chap3-fig13}. The application on $H_{1}$ will wait for 10 more seconds before invoking \lstinline|close()| at 15:34:05. At time 15:34:01, a firewall rule is invoked on $H_{1}$ to drop the FIN\par}
 \end{multicols}
 
 \begin{figure}[!htb]
@@ -243,17 +249,17 @@ The TCP application on $H_{1}$ is invoked, which sends 3 data packets starting a
 packet, as in the lower panel of Figure \ref{chap3-fig14}. Note that $H_{1}$ has not yet sent the FIN packet -- it is still in the CLOSE\_WAIT state as shown by the output of the fourth command in the lower panel. At time 15:34:05, when the application on $H_{1}$ invokes \lstinline|close()|, it sends the FIN (3) packet and moves to the LAST\_ACK state as shown by the output of the last line in the lower panel of Figure \ref{chap3-fig14}. However, this FIN (3) packet is dropped by the firewall rule, hence it does not reach $H_{2}$. Thus, the state of the TCP connection on $H_{2}$ remains FIN\_WAIT2.
 
 
-\section*{TCP Communication state CLOSING}
+\section{TCP Communication state CLOSING}
 
-You will notice that we have not discussed the CLOSING state. This state is experimentally difficult to observe, because it requires a very high-precision timing of events and is therefore infeasible to create in typical lab scenarios. Thus, we will not define an experimental exercise for this state, but we will describe the general communication scenario that may lead to this state. This state can only be reached when both applications connected by a TCP connection decides to close the connection almost at the same time. Thus, both the applications send the FIN (1) message and move to the FIN\_WAIT1 state awaiting the ACK of its FIN. When in this state, when the first application receives FIN ($1'$) from the second application, it sends the ACK (7) message and moves to the CLOSING state. Similarly, the when the second application receives FIN ($1'$) from the first application, it sends the ACK (7) message and moves to the CLOSING state as well. Both applications will receive ACK ($7'$) messages, and they will then move to TIME\_WAIT state.
+You will notice that we have not discussed the CLOSING state. This state is experimentally difficult to observe, because it requires a very high-precision timing of events and is therefore infeasible to create in typical lab scenarios. Thus, we will not define an experimental exercise for this state, but we will describe the general communication scenario that may lead to this state. This state can only be reached when both applications connected by a TCP connection decides to close the connection almost at the same time. Thus, both the applications send the FIN (1) message and move to the FIN\_WAIT1 state awaiting the ACK of its FIN. When in this state, when the first application receives FIN ($1'$) from the second application, it sends the ACK (7) message and moves to the CLOSING state. Similarly, when the second application receives FIN ($1'$) from the first application, it sends the ACK (7) message and moves to the CLOSING state as well. Both applications will receive ACK ($7'$) messages, and they will then move to TIME\_WAIT state.
 
-\section*{Summary}
+\section{Summary}
 
 In this paper we have explored the basic workings of the TCP state transition for the teardown phase. We have described these transitions for normal communication and have discussed scenarios that arise when specific network error conditions cause packet-loss during this phase. The timing and nature of packet loss has differing types of impact on the TCP connection state, and states that are normally transient (and difficult to observe) become long-lasting. Network applications that fail to handle such scenarios properly can lead to excessive resource utilization and may suffer from degraded performance. Thus, we hope that the insights into the TCP state transitions provided in this article will be valuable to web developers and devops teams to debug and fix such issues.
 
-The ESTABLISHED state, which corresponds to the data transfer phase of TCP connection, is perhaps the simplest one to understand. In thus state, whenever a data packet is received, an acknowledgement is sent back. However, in real life, all performance-related issues for general network communications correspond to this state. Any discussion on TCP communication always entails congestion control and flow control, and both these issues are dealt with in the ESTABLISHED state. These two error-control mechanisms are often (erroneously) perceived to be the same, because the TCP response to both these errors results in same action. In fact, the two error conditions are quite different. Similarly, TCP fairness (the issue of how to allocate bandwidth when a single physical link of limited bandwidth is shared among multiple TCP connections) also corresponds to this state. In our next article, we will discuss the ESTABLISHED state in detail, and aspects of TCP performance or throughput when the network has limited bandwidth or is witnessing packet-loss.
+The ESTABLISHED state, which corresponds to the data transfer phase of TCP connection, is perhaps the simplest one to understand. In this state, whenever a data packet is received, an acknowledgement is sent back. However, in real life, all performance-related issues for general network communications correspond to this state. Any discussion on TCP communication always entails congestion control and flow control, and both these issues are dealt with in the ESTABLISHED state. These two error-control mechanisms are often (erroneously) perceived to be the same, because the TCP response to both these errors results in same action. In fact, the two error conditions are quite different. Similarly, TCP fairness (the issue of how to allocate bandwidth when a single physical link of limited bandwidth is shared among multiple TCP connections) also corresponds to this state. In our next article, we will discuss the ESTABLISHED state in detail, and aspects of TCP performance or throughput when the network has limited bandwidth or is witnessing packet-loss.
 
-\section*{Appendix}
+\section{Appendix}
 
 Partial code for TCP client program to demonstrate FIN\_WAIT1, CLOSE\_WAIT and TIME\_WAIT state. The complete program is accessible at \cite{chap3-key10}.
 \begin{verbatim}
@@ -271,9 +277,9 @@ for i in range(1,count):
     time.sleep(delay
 \end{verbatim}
 
-\section*{Experiential Exercises}
+\section{Experiential Exercises}
 
-All the example exercises discussed in this article make use of i) Linux built in commands related to network utility \textit{nc} for data transfer, ii) \textit{netstat} for monitoring network connection state, and a simple python program (\textit{tcp\_client.py}) to enable timing the packet transmission and respective finer control. If at your Linux installation, the \textit{netstat} utility is not installed, then same can be installed by using the command \lstinline|sudo apt-get install net-tools|. Similarly, the netcat (nc) is available by default on all Linux and Apple Mac machines, and for Windows based systems, there are free open source versions available, which can be downloaded and installed. To develop a lasting understanding, it is suggested that reader should carry out all the experimental exercises. The reader should explore even the different sequencing of steps such as firewall rules, packet loss etc. to help consolidate the understanding.\raisebox{-.1cm}{\includegraphics[scale=.9]{src/Figures/circledC.eps}}
+All the example exercises discussed in this article make use of i) Linux built-in commands related to network utility \textit{nc} for data transfer, ii) \textit{netstat} for monitoring network connection state, and a simple python program (\textit{tcp\_client.py}) to enable timing the packet transmission and respective finer control. If at your Linux installation, the \textit{netstat} utility is not installed, then same can be installed by using the command \lstinline|sudo apt-get install net-tools|. Similarly, the netcat (nc) is available by default on all Linux and Apple Mac machines, and for Windows based systems, there are free open source versions available, which can be downloaded and installed. To develop a lasting understanding, it is suggested that reader should carry out all the experimental exercises. The reader should explore even the different sequencing of steps such as firewall rules, packet loss, etc. to help consolidate the understanding.
 
 \begin{thebibliography}{99}
 \bibitem{chap3-key1} RFC 793, ``Transmission Control Protocol'', Information Sciences Institute, USC, CA, Sep 1981, \url{https://tools.ietf.org/html/rfc793}. Last accessed Feb 2019.
