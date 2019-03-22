@@ -66,47 +66,47 @@
 \definecolor{goldan-yellow}{rgb}{0.8, 0.4, 0.09}
 
 
-\newsavebox\topodd
-\newsavebox\topeven
-\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
-\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
+%~ \newsavebox\topodd
+%~ \newsavebox\topeven
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
 
-\usepackage[automark]{scrlayer-scrpage}
-\clearpairofpagestyles
+%~ \usepackage[automark]{scrlayer-scrpage}
+%~ \clearpairofpagestyles
 
-\DeclareNewLayer[
-  foreground,
-  topmargin,
-  oddpage,
-  contents={\usebox\topodd}
-]{top.odd}
-\DeclareNewLayer[
-  clone=top.odd,
-  evenpage,
-  contents={\usebox\topeven}
-]{top.even}
-\DeclareNewLayer[
-  height=120pt,
-  foreground,
-  bottommargin,
-  voffset=285mm,
-  evenpage,
-  contents={\vbox to120pt{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}%
-\hbox to\paperwidth{\quad\raise17pt\hbox{\thepage}\quad\rule{0.4pt}{1.2cm}\quad\raise17pt\hbox{Advanced Computing \& Communications | March 2019}\hfill}%
-}}
-]{bottom.even}
-\DeclareNewLayer[
-  height=120pt,
-  foreground,
-  bottommargin,
-  voffset=285mm,
-  oddpage,
-  contents={\vbox to120pt{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.6pt}}}%
-\hbox to\paperwidth{\hfill\raise17pt\hbox{Advanced Computing \& Communications | March 2019}\quad\rule{0.4pt}{1.2cm}\quad\raise17pt\hbox{\thepage}\quad}%
-}}
-]{bottom.odd}
-\AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
-\AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
+%~ \DeclareNewLayer[
+  %~ foreground,
+  %~ topmargin,
+  %~ oddpage,
+  %~ contents={\usebox\topodd}
+%~ ]{top.odd}
+%~ \DeclareNewLayer[
+  %~ clone=top.odd,
+  %~ evenpage,
+  %~ contents={\usebox\topeven}
+%~ ]{top.even}
+%~ \DeclareNewLayer[
+  %~ height=120pt,
+  %~ foreground,
+  %~ bottommargin,
+  %~ voffset=285mm,
+  %~ evenpage,
+  %~ contents={\vbox to120pt{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}%
+%~ \hbox to\paperwidth{\quad\raise17pt\hbox{\thepage}\quad\rule{0.4pt}{1.2cm}\quad\raise17pt\hbox{Advanced Computing \& Communications | March 2019}\hfill}%
+%~ }}
+%~ ]{bottom.even}
+%~ \DeclareNewLayer[
+  %~ height=120pt,
+  %~ foreground,
+  %~ bottommargin,
+  %~ voffset=285mm,
+  %~ oddpage,
+  %~ contents={\vbox to120pt{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.6pt}}}%
+%~ \hbox to\paperwidth{\hfill\raise17pt\hbox{Advanced Computing \& Communications | March 2019}\quad\rule{0.4pt}{1.2cm}\quad\raise17pt\hbox{\thepage}\quad}%
+%~ }}
+%~ ]{bottom.odd}
+%~ \AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
+%~ \AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
 
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -168,3 +168,4 @@
 \newcommand{\calc}{\mbox{$\mathcal{C}$}}
 \newcommand{\calcperp}{\mbox{$\mathcal{C}^{\perp}$}}
 
+\pagestyle{empty}
