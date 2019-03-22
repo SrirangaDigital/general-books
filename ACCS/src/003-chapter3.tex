@@ -97,7 +97,7 @@ In the screenshots below, the names of the machines $H_{1}$ and $H_{2}$ are part
 \textbf{Experiment 1:\\ TCP State transition for normal TCP application closure.}
 \smallskip
 
-The following experiment demonstrates this typical teardown scenario in Figure \ref{chap3-fig3} Error: Reference source not found and Error: Reference source not found Figure \ref{chap3-fig4}. In Figure \ref{chap3-fig3}, Error: Reference source not foundthe application on $H_{2}$ moves the TCP connection state from LISTEN to ESTABLISHED and then, via intermediate transient states (as discussed above), to TIME\_WAIT as shown by the last line of the lower panel of this figure.
+The following experiment demonstrates this typical teardown scenario in Figure \ref{chap3-fig3} and Figure \ref{chap3-fig4}. In Figure \ref{chap3-fig3}, the application on $H_{2}$ moves the TCP connection state from LISTEN to ESTABLISHED and then, via intermediate transient states (as discussed above), to TIME\_WAIT as shown by the last line of the lower panel of this figure.
 
 The states followed by the application on $H_{1}$ similarly shown in Figure \ref{chap3-fig4}. Thus, from the ESTABLISHED state, the TCP connection follows intermediate transient states of CLOSE\_WAIT and LAST\_ACK before completely releasing all the associated resource.
 \end{multicols}
@@ -247,7 +247,6 @@ The TCP application on $H_{1}$ is invoked, which sends 3 data packets starting a
 \begin{multicols}{2}
 \noindent
 packet, as in the lower panel of Figure \ref{chap3-fig14}. Note that $H_{1}$ has not yet sent the FIN packet -- it is still in the CLOSE\_WAIT state as shown by the output of the fourth command in the lower panel. At time 15:34:05, when the application on $H_{1}$ invokes \lstinline|close()|, it sends the FIN (3) packet and moves to the LAST\_ACK state as shown by the output of the last line in the lower panel of Figure \ref{chap3-fig14}. However, this FIN (3) packet is dropped by the firewall rule, hence it does not reach $H_{2}$. Thus, the state of the TCP connection on $H_{2}$ remains FIN\_WAIT2.
-
 
 \section{TCP Communication state CLOSING}
 
