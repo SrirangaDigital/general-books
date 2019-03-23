@@ -12,7 +12,7 @@
       \fi
     \fi
     \interlinepenalty\@M
-    \Huge\sf\bfseries #1\par\nobreak
+    \Huge\sf\bfseries \uppercase{#1}\par\nobreak
     \vskip 6pt
     \vskip 20\p@
   }}
@@ -52,6 +52,7 @@
       \endlist}
 \makeatother
 
+\renewcommand\bibname{References}
 
 \usepackage{longtable}
 \usepackage{array}

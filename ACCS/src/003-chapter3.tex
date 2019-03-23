@@ -1,4 +1,4 @@
-\chapter{Experiential Learning of Networking Technologies:\\ {\LARGE\sl Understanding TCP States -- Part 2}}
+\chapter{Experiential Learning\\ of Networking Technologies\\ {\LARGE\sl Understanding TCP States -- Part 2}}
 
 \begin{center}
 \uppercase{Ram P. Rustagi}
@@ -24,7 +24,7 @@ Divecha Centre for Climate Change, IISc Bangalore
 \setcounter{figure}{0}
 \section*{Abstract}
 
-This article focuses on the states of a TCP connection once one of the endpoints decides to terminate the connection. This so-called teardown phase involves the exchange of numerous messages (for reasons we will explore), and the TCP connection itself transitions through several states. Web developers often have only an overly simplistic understanding of these states, which may suffice when the network behaves reliably. However, a deeper understanding of TCP states is essential to design web applications that robustly manage TCP connections even in the presence of network faults during the teardown phase, and debug poorly design applications that exhibit poor resource utilization and poor performance in such situations. As always, we will explore these issues through a series of experiential learning exercises.
+This article focuses on the states of a TCP connection once one of the endpoints decides to terminate the connection. This so-called teardown phase involves the exchange of numerous messages (for reasons we will explore), and the TCP connection itself transitions through several states. Web developers often have only an overly simplistic understanding of these states, which may suffice when the network behaves reliably. However, a deeper understanding of TCP states is essential to design web applications that robustly manage TCP connections even in the presence of network faults during the teardown phase, and debug poorly designed applications that exhibit poor resource utilization and poor performance in such situations. As always, we will explore these issues through a series of experiential learning exercises.
 
 \section{Introduction}
 
@@ -198,7 +198,7 @@ Here again, we note that the scenario described above can also occur in a functi
 
 
 A TCP connection will reach the FIN\_WAIT2 state only when it receives the ACK ($2'$) message from the other side for the FIN (1) message it has sent. This also implies that other side has received the FIN ($1'$) message and moved to the CLOSE\_WAIT state. This is a normal communication process where both the network and the applications are behaving as expected. If the application for which the TCP 
-connection is in CLOSE\_WAIT state has no more data to transmit, the application invokes the \lstinline|close()| call and TCP will send the FIN (3) message and move to the LAST\_ACK state. The originating application that initiated connection close will remain in the FIN\_WAIT2 if the second FIN (3) message is lost, implying network disturbance. Below we describe the experimental exercises to define network conditions depicting the TCP connection states of two communicating applications.
+connection is in CLOSE\_WAIT state has no more data to transmit, the application invokes the \lstinline|close()| call and TCP will send the FIN (3) message and move to the LAST\_ACK state. The originating application that initiated connection close will remain in the FIN\_WAIT2 if the second FIN (3) message is lost, implying network disturbance. Below, we describe the experimental exercises to define network conditions depicting the TCP connection states of two communicating applications.
 \smallskip
 
 \noindent

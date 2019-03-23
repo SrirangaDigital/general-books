@@ -209,7 +209,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	Clearly, an RGC that achieves the above bound on file size with equality is an optimal RGC. Turns out that there are many flavours of optimality, in the sense that for a given file size $B$, there can be several values of the parameter pair $(\alpha,\beta)$ for which the bound holds with equality.  Two special cases of the above bounds are shown below: 
 	\bea
 	B & \leq & k \alpha, \\ \label{eq:msr} 
-	B & \leq & \sum_{i=0}^{k-1} (d-i)\beta \ = \  kd\beta - {k \choose 2}\beta. \label{eq:mbr} 
+	B & \leq & \sum_{i=0}^{k-1} (d-i)\beta \ = \  kd\beta - \Bigl(\begin{array}{@{}c@{}}k\\  2\end{array}\Bigr)\beta. \label{eq:mbr} 
 	\eea
 	Codes which achieve the first upper bound are termed as Minimum Storage Regenerating (MSR) codes while those that achieve the second bound with equality are known as Minimum Bandwidth Regenerating (MBR) codes. MSR codes have the advantage of having the least possible storage overhead as they can be shown to belong to the class of MDS codes.  MBR codes have the minimum possible repair bandwidth, but are not MDS.  The minimum storage overhead of an MBR code is close to the value $2$. 
 
@@ -290,7 +290,7 @@ An OA-MSR code that achieves the bound in \eqref{eq:sbpl} is said to have optima
  
  We explain the structure of the Clay code using an example code having parameters:
  \bean
- \{ (n=4,k=2,d=3), (\alpha=4,\beta=2), B=8, \fq=\mathbb{F}_4 \ (q=4)\}. 
+ \{ (n=4,k=2,d=3), (\alpha=4,\beta=2), B=8, \fq=\mathbb{F}_4 \ \text{\footnotesize $(q=4)$}\}. 
  \eean
  We will depict the Clay code as a data cube as shown in Figure~\ref{fig:datacubeA_subchunks42} on the left.  The datacube is composed of $16$ small cylinders, each associated with a symbol in \fq.  A vertical column of $4$ cylinders corresponds to the $4$ symbols contained in a single node (as $\alpha=4$). This code is required to have the following properties:
 
@@ -362,7 +362,7 @@ where $\{x,y,z_0,z_1\}$ all belong to  $\{0,1\}$, as shown in Figure~\ref{fig:da
 
  \subsection{Actual and Virtual Datacubes} 
  
- For the purposes of describing the encoding and repair properties of the Clay code, it is convenient to introduce a second datacube of identical dimensions.  We will refer to the datacube representing the Clay code itself as the {\em actual} datacube and the second datacube just introduced here, as the {\em virtual} datacube.  Figure~\ref{fig:actVirtCubes42} shows the two datacubes, with the virtual datacube on the left appearing in blue and the actual datacube appearing on the right in red.  The acronyms PFT and PRT appearing the figure correspond respectively to the expansions {\em pairwise forward transform} and {\em pairwise reverse transform}. These terms will shortly be explained. 
+For the purposes of describing the encoding and repair properties of the Clay code, it is convenient to introduce a second datacube of identical dimensions.  We will refer to the datacube representing the Clay code itself as the {\em actual} datacube and the second datacube just introduced here, as the {\em virtual} datacube.  Figure~\ref{fig:actVirtCubes42} shows the two datacubes, with the virtual datacube on the left appearing in blue and the actual datacube appearing on the right in red.  The acronyms PFT and PRT appearing in the figure correspond respectively to the expansions {\em pairwise forward transform} and {\em pairwise reverse transform}. These terms will shortly be explained. 
 
 \begin{figure}[H]
 \centering
