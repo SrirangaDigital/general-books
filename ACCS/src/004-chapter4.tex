@@ -158,11 +158,11 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	
 	Each code symbol in an RS code is an element in a finite field.   Regenerating codes are codes over a vector alphabet.  That is, each code symbol is a vector as opposed to a scalar.  This property is key to enabling a regenerating code to achieve savings in repair bandwidth.  This is illustrated in the example depicted in Figure~\ref{fig:vectorize}. 
 	
-	\subsection{Explaining the Need for Sub-packetization}
+	\subsection{Explaining the Need for {\fontsize{11}{13}\selectfont Sub-packetization}}
 
 	In Figure~\ref{fig:vectorize}, the setup on the left represents an $[4,2]$ MDS code.  The symbols stored in the $4$ nodes are respectively, $A,B,A+B,A+2B$.  This makes the code an MDS code.  However, to repair a failed node, say the node $1$, that stored $A$, we still have to download $2$ symbols to repair the node.  Consider next, the setup on the right.  Here the sub-packetization level is $2$, each symbol is replaced by $2$ `half-symbols'.  Thus $A$ is replaced by $A_1,A_2$, $B$ by $B_1,B_2$.  Note that if the data stored in the remaining two parity nodes is as shown in the figure, then node $1$ can be repaired by downloading $3$ half-symbols in place of two full symbols, thereby achieving a reduction in repair bandwidth. Note however, that in the case of the regenerating code, we have contacted all the remaining nodes, $3$ in this case, as opposed to $k=2$ in the case of the MDS code on the left. Thus while regenerating codes reduce the repair bandwidth, they do in general, result in increased repair degree. 
 
-	\subsection{Formal Definition of a Regenerating Code} 
+	\subsection{Formal Definition of a Regenerating\hfill\break Code} 
 	
 	A regenerating code is characterized by the parameter set
 	\bean
@@ -209,7 +209,7 @@ The $n$ code symbols in the RS codeword corresponding to message vector $(a_0,\c
 	Clearly, an RGC that achieves the above bound on file size with equality is an optimal RGC. Turns out that there are many flavours of optimality, in the sense that for a given file size $B$, there can be several values of the parameter pair $(\alpha,\beta)$ for which the bound holds with equality.  Two special cases of the above bounds are shown below: 
 	\bea
 	B & \leq & k \alpha, \\ \label{eq:msr} 
-	B & \leq & \sum_{i=0}^{k-1} (d-i)\beta \ = \  kd\beta - \Bigl(\begin{array}{@{}c@{}}k\\  2\end{array}\Bigr)\beta. \label{eq:mbr} 
+	B & \leq & \sum_{i=0}^{k-1} (d-i)\beta \ = \  kd\beta - \left(\begin{array}{@{}c@{}}k\\  2\end{array}\right)\beta. \label{eq:mbr} 
 	\eea
 	Codes which achieve the first upper bound are termed as Minimum Storage Regenerating (MSR) codes while those that achieve the second bound with equality are known as Minimum Bandwidth Regenerating (MBR) codes. MSR codes have the advantage of having the least possible storage overhead as they can be shown to belong to the class of MDS codes.  MBR codes have the minimum possible repair bandwidth, but are not MDS.  The minimum storage overhead of an MBR code is close to the value $2$. 
 
@@ -254,7 +254,7 @@ In the final encoding step, each node in the graph is made to store all the symb
 {\em Data Collection Property} The data collection property of an RGC requires that the entire data file comprised in this example of $9$ binary symbols, be recoverable by connecting to any $k=3$ nodes.  Suppose for example that the nodes storing $\{a_1,a_4,a_9,a_P\}$ and $\{a_3,a_5,a_8,a_9\}$ have failed.  Then the data collector is required to recover the entire data file by connecting to the remaining $3$ nodes as
 shown in Figure~\ref{fig:pentagon_712} (right).  The remaining $3$ nodes store a total of $4 \times 3=12$ binary symbols. However, as every pair of nodes shares a symbol in common, only $9$ of these are distinct.  Now, as noted earlier, the entire data file can be recovered from any $9$ symbols drawn from the set $\{a_i \mid 1 \leq i \leq 9\} \cup \{a_P\}$ and thus we are done. 
 
-\subsection{Desired Properties of a Regenerating Code} 
+\subsection{Desired Properties of a Regenerating\hfill\break Code} 
 
 In practice there is greatest interest in using a code that has the smallest possible storage overhead.  This leads directly to the subclass of MSR codes.  MSR codes minimize the repair bandwidth within the class of MDS codes, i.e., within the class of codes having minimum storage overhead.  Two other metrics by which a regenerating code is judged from a practical perspective are:
 \end{multicols}
@@ -629,7 +629,7 @@ Vinayak Ramkumar received his B. Tech. in Electronics and Communication Engineer
 \centerline{\large\bf S.B. Balaji }
 
 \bigskip
-S.B.Balaji received his B.E in Electronics and Communication Engineering from Madras Institute of Technology, Chennai, in 2008 and M.Tech from the Department of Electrical Engineering, Indian Institute of Technology, Kanpur,in 2010 and Ph.D. from Department of Electrical Communication Engineering, Indian Institute of Science, Bangalore, in 2018. His research interests include coding theory and information theory.\\
+Dr.\ S.B.\ Balaji received his B.E in Electronics and Communication Engineering from Madras Institute of Technology, Chennai, in 2008 and M.Tech from the Department of Electrical Engineering, Indian Institute of Technology, Kanpur,in 2010 and Ph.D. from Department of Electrical Communication Engineering, Indian Institute of Science, Bangalore, in 2018. His research interests include coding theory and information theory.\\
 &\\  
 \clineB{1-2}{2.5}
 \end{tabular}
@@ -643,14 +643,14 @@ S.B.Balaji received his B.E in Electronics and Communication Engineering from Ma
 \centerline{\large\bf Birenjith Sasidharan }
 
 \bigskip
-Birenjith Sasidharan received B. Tech. in Electronics and Communication Engineering from College of Engineering, Trivandrum and M. Sc. (Engg.) from Indian Institute of Science, Bangalore in 2008. During 2008–2011, he was on the faculty of Electronics and Communication Engineering at Government Engineering College, Kannur in Kerala. In 2016, he completed his Ph. D. at the department of Electrical Communication Engineering in Indian Institute of Science, Bangalore. Since 2016, he has been working as Assistant Professor at Government Engineering College, Barton Hill at Thiruvananthapuram, Kerala. His research interests include code constructions for distributed storage.\\
+Dr.\ Birenjith Sasidharan received B.Tech.\ in Electronics and Communication Engineering from College of Engineering, Trivandrum and M. Sc. (Engg.) from Indian Institute of Science, Bangalore in 2008. During 2008–2011, he was on the faculty of Electronics and Communication Engineering at Government Engineering College, Kannur in Kerala. In 2016, he completed his Ph. D. at the department of Electrical Communication Engineering in Indian Institute of Science, Bangalore. Since 2016, he has been working as Assistant Professor at Government Engineering College, Barton Hill at Thiruvananthapuram, Kerala. His research interests include code constructions for distributed storage.\\
 &\\  
 \raisebox{-4.5cm}{\includegraphics{src/Figures/authors/PVK_ACCSJPG.jpeg}} & 
 
 \centerline{\large\bf P. Vijay Kumar}
 
 \bigskip
-P. Vijay Kumar received the B.Tech. and M.Tech. degrees from IIT Kharagpur and IIT Kanpur respectively, and the Ph.D. degree from USC in 1983, all in Electrical Engineering. From 1983 to 2003 he was on the faculty of the EE-Systems Department at USC. Since 2003, he has been on the faculty of IISc Bengaluru. He currently also holds the position of Visiting Professor at USC.\break\break His research interests include codes for distributed storage and wireless communication. He is a recipient of the 1995 IEEE Information Theory Society Prize-Paper award and the IEEE Data Storage Best Paper Award of 2011/2012.  A pseudorandom sequence family designed in a 1996 paper co-authored by him now forms the short scrambling code of the 3G WCDMA cellular standard.   He received the USC School of Engineering’s Senior Research Award in 1994, the Rustum Choksi Award for Excellence in Research in Engineering in 2013 at IISc and the 2017-22 J. C. Bose National Fellowship awarded by the Department of Science and Technology.  He was on the Board of Governors of the IEEE Information Theory Society in 2013-15, and 2019-21, was a plenary speaker at ISIT 2014 and a TPC Co-Chair of ISIT 2015.  He is a Fellow of the INAE, IAS and INSA Indian academies.\\
+Dr.\ P.\ Vijay Kumar received B.Tech.\ and M.Tech.\ degrees from IIT Kharagpur and IIT Kanpur respectively, and Ph.D. degree from USC in 1983, all in Electrical Engineering. From 1983 to 2003 he was on the faculty of the EE-Systems Department at USC. Since 2003, he has been on the faculty of IISc Bengaluru. He currently holds the position of Visiting Professor at USC.\break\break His research interests include codes for distributed storage and wireless communication. He is a recipient of the 1995 IEEE Information Theory Society Prize-Paper award and the IEEE Data Storage Best Paper Award of 2011/2012.  A pseudorandom sequence family designed in a 1996 paper co-authored by him now forms the short scrambling code of the 3G WCDMA cellular standard.   He received the USC School of Engineering’s Senior Research Award in 1994, the Rustum Choksi Award for Excellence in Research in Engineering in 2013 at IISc and the 2017-22 J. C. Bose National Fellowship awarded by the Department of Science and Technology.  He was on the Board of Governors of the IEEE Information Theory Society in 2013-15, and 2019-21, was a plenary speaker at ISIT 2014 and a TPC Co-Chair of ISIT 2015.  He is a Fellow of the INAE, IAS and INSA Indian academies.\\
 &\\
 \clineB{1-2}{2.5}
 \end{tabular}
