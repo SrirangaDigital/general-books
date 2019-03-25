@@ -259,8 +259,10 @@ You will notice that we have not discussed the CLOSING state. This state is expe
 In this paper we have explored the basic workings of the TCP state transition for the teardown phase. We have described these transitions for normal communication and have discussed scenarios that arise when specific network error conditions cause packet-loss during this phase. The timing and nature of packet loss has differing types of impact on the TCP connection state, and states that are normally transient (and difficult to observe) become long-lasting. Network applications that fail to handle such scenarios properly can lead to excessive resource utilization and may suffer from degraded performance. Thus, we hope that the insights into the TCP state transitions provided in this article will be valuable to web developers and devops teams to debug and fix such issues.
 
 The ESTABLISHED state, which corresponds to the data transfer phase of TCP connection, is perhaps the simplest one to understand. In this state, whenever a data packet is received, an acknowledgement is sent back. However, in real life, all performance-related issues for general network communications correspond to this state. Any discussion on TCP communication always entails congestion control and flow control, and both these issues are dealt with in the ESTABLISHED state. These two error-control mechanisms are often (erroneously) perceived to be the same, because the TCP response to both these errors results in same action. In fact, the two error conditions are quite different. Similarly, TCP fairness (the issue of how to allocate bandwidth when a single physical link of limited bandwidth is shared among multiple TCP connections) also corresponds to this state. In our next article, we will discuss the ESTABLISHED state in detail, and aspects of TCP performance or throughput when the network has limited bandwidth or is witnessing packet-loss.
+\vskip -0.7cm
 
 \section{Appendix}
+\vskip -10pt
 
 Partial code for TCP client program to demonstrate FIN\_WAIT1, CLOSE\_WAIT and TIME\_WAIT state. The complete program is accessible at \cite{chap3-key10}.
 \begin{verbatim}
@@ -277,12 +279,18 @@ for i in range(1,count):
     sent = sock.send(msg)
     time.sleep(delay
 \end{verbatim}
+\vskip -0.7cm
 
 \section{Experiential Exercises}
+\vskip -10pt
 
 All the example exercises discussed in this article make use of i) Linux built-in commands related to network utility \textit{nc} for data transfer, ii) \textit{netstat} for monitoring network connection state, and a simple python program (\textit{tcp\_client.py}) to enable timing the packet transmission and respective finer control. If at your Linux installation, the \textit{netstat} utility is not installed, then same can be installed by using the command \lstinline|sudo apt-get install net-tools|. Similarly, the netcat (nc) is available by default on all Linux and Apple Mac machines, and for Windows based systems, there are free open source versions available, which can be downloaded and installed. To develop a lasting understanding, it is suggested that reader should carry out all the experimental exercises. The reader should explore even the different sequencing of steps such as firewall rules, packet loss, etc. to help consolidate the understanding.\raisebox{-.1cm}{\includegraphics[scale=.9]{src/Figures/circledC.eps}}
+\vskip -0.8cm
 
+\bgroup
+\fontsize{9pt}{11pt}\selectfont
 \begin{thebibliography}{99}
+\itemsep=0pt
 \bibitem{chap3-key1} RFC 793, ``Transmission Control Protocol'', Information Sciences Institute, USC, CA, Sep 1981, \url{https://tools.ietf.org/html/rfc793}. Last accessed Feb 2019.
 \bibitem{chap3-key2} Ram Rustagi, Viraj Kumar, ``Understanding Transport Layer Basics'', ACCS journal of Computing and Communications, Vol 2, Issue 3, Sep 2018. \url{https://acc.digital/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/}, last accessed Feb 2019.
 \bibitem{chap3-key3} netstat: man page, \url{http://manpages.ubuntu.com/manpages/bionic/man8/netstat.8.html}, Accessed Feb 2019.
@@ -294,7 +302,16 @@ All the example exercises discussed in this article make use of i) Linux built-i
 \bibitem{chap3-key9} Example details for TCP Connection state during connection setup, \url{https://github.com/rprustagi/EL-TCP-States-1.git}. Last accessed Feb 2019.
 \bibitem{chap3-key10} Example details for TCP Connection state during tear down phase, \url{https://github.com/rprustagi/EL-TCP-States-2.git}. Last accessed Feb 2019.
 \end{thebibliography}
+\egroup
 \end{multicols}
+
+~\\[-1.5cm]
+
+\centerline{\includegraphics[scale=0.9]{src/Figures/tcp_QR.png}}
+
+\centerline{{\sf Access this article on the Web}}
+
+
 
 \noindent
 \begin{tabular}{V{2.5}cp{14cm}V{2.5}}
@@ -317,7 +334,3 @@ Dr. Viraj Kumar is a Visiting Professor at the Divecha Centre for Climate Change
 \clineB{1-2}{2.5}
 \end{tabular}
 
-\begin{center}
-\includegraphics{src/Figures/tcp_QR.png}\\
-{\sf Access this article on the Web}
-\end{center}
