@@ -9,17 +9,13 @@
 	</script>
 	<script type="text/javascript" async src="js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>	
 </head>
-
 <body class="maintext">
 
 <h1>An Overview of Authentication for Computer Communications</h1>
-
 <p class="authors">H. S. MADHUSUDHANA<br /><small class="affiliation">Oracle India Pvt. Ltd.</small></p>
-
 <p class="titleimage"><img src="images/authentication.jpg" alt="An Overview of Authentication for Computer Communications" /></p>
 
 <h2>Abstract</h2>
-
 <p>Authentication is the first and foremost security principle that involves validation of identity of an user or a machine. The
 successful authentication is required for authorization and secure data exchanges. A common classification of authentication
 system based on factors &#8211; something you know, something you own, something you did and something you are - is explained.
@@ -29,7 +25,6 @@ is given. Related Single-Sign-On technologies are explained. A brief overview of
 UIDAI is presented.</p>
 
 <h2><span class="num">1</span> Introduction</h2>
-
 <p>It is important to know the basic principles of information security as applicable to computer science. This knowledge helps one to
 develop products with required security and to analyze competing security claims. The first and foremost security principle is
 &#8220;Authentication&#8221;, which is the process of verifying the identity of a machine or person. One has to provide valid credentials for
@@ -39,7 +34,6 @@ authorization, but it is important to understand that they are distinct. The nex
 protection and &#8220;data integrity&#8221; to assure data is not modified in transit/storage. The related concept of key management is tied
 with these principles. The final principle is &#8220;availability&#8221; which is to make systems available despite threats and
 attacks.</p>
-
 <p>The identity of a security principal, either you or a computer, is a declaration of who you are. This is the answer to the question
 &#8220;Who are you?&#8221; Some common examples of identity are user IDs, digital certificates and ATM cards. The system wants to be
 certain that it is indeed you and not someone else. The system will challenge the principal and expects correct responses in some
@@ -47,19 +41,16 @@ way. Common examples of authenticators are passwords, private keys and PINs. Whe
 authentication is private: it&#8217;s a secret known only by the Principal. A typical scenario is where the client authenticates to the
 server to get access to service or resource. The case where both parties want to authenticate to each other is called mutual
 authentication.</p>
-
 <p>Further, authentication is also applicable to message sent to each other. The receiver wants to be confident that the authentic
 message is indeed sent by the intended sender and not by someone masquerading as the sender. He also wants to be sure that the
 message has not been modified in transit. These authentic messages exchanged between the server and the client is the basis for
 arriving at the common shared key for protected data transfers.</p>
-
 <p>This paper is organized as follows. A common classification of authentication into password, biometric and tokens/certificates is
 explained. The well-known standards for authentication is highlighted. A different way of classification based on security level is
 described next. This is followed by a survey of various password based authentication schemes. A description
 of Kerberos standards follows. The popular SSL based authentication is explained next. Related authentication
 technologies OpenID and OAuth are explained. A brief survey of authentication for cloud computing IoT and UIDAI is
 given.</p>
-
 <p>The most common attacks against authentication include impersonation and message tampering. The impersonation attack
 means the attacker pretending to be a bonafide sender and tricking the receiver to think it has come from the sender. The second
 attack is to modify the sender&#8217;s message undetected by the receiver. As and when an authentication method is explained, a
@@ -74,19 +65,16 @@ Something you have - Access tokens, Certificates<br />
 Something you do - make a gesture, read a<br /> 
 text, match a CAPTCHA
 </p>
-
 <p>The password is simple to use and remember. It has been used in military since ancient times. A person wishing to enter
 protected area is to supply a password and he is allowed entry only if the password is correct. Even in modern times, its use is
 widespread to gain entry into computers, mobile phones, ATM, etc. If the password is formed from multiple words it is called
 passphrase and if it is formed from numbers, it is called passcode or passkey. A good practice is to choose password which is easy
 to remember and type but hard to guess <span class="cite">[<a href="#Xchap2-key2">2</a>]</span>.</p>
-
 <p>Biometric authentication makes use of many physiological and behavioral characteristics that are believed to be unique to
 individuals. The identification characteristics is something you are and uniqueness ensures difficulty of forging. A survey of
 physiological and behavioral characteristics useful for biometric identification are fingerprints, voice, iris, retina, hand
 geometry, face recognition, signature, key stroke, bio-electric signals, gait, ear shape, head resonance, odor and
 finger shape is given in <span class="cite">[<a href="#Xchap2-key3">3</a>]</span>. A comparative study of these characteristics for biometric authentication system is presented.</p>
-
 <p>Another type of authentication based on tokens is modeled on a physical key which is restricted to open a room, a building, etc.
 This type has to do with the&#xA0;ownership. Corporate badges, possession of king&#8217;s seal, passport and smart cards are other
 examples. Token verifiers may or may not have readers. In the latter case, the user has a token and can compute the reply to
@@ -94,7 +82,6 @@ challenge posed by the remote host for authentication. Alternatively, a time-bas
 change regularly and in sync with that on the host. Yet another way is to use One-time passwords. The user has
 a list of passwords and uses each of them only once <span class="cite">[<a href="#Xchap2-key2">2</a>]</span>. 
 The certificate based authentication will be described later.</p>
-
 <p>When only a single method among the preceding options is used, it is called single-factor authentication. Multi-factor
 authentication uses more than one of the options simultaneously during the authentication process (two-factor uses two,
 three-factor uses three, and so on) <span class="cite">[<a href="#Xchap2-key2">2</a>]</span>. A familiar example of 
@@ -105,7 +92,6 @@ more tasks are to be completed before the authentication process is finished. Ho
 impersonation attacks become much more difficult. Another example is online mobile banking transactions where the
 user is required to provide a password and One-time pseudorandom number received over the mobile (ownership
 factor).</p>
-
 <p>A biometric system should take into account day-to-day variations in individuals bio-metric and be reliable. Though
 biometrics characteristics are hard to forge, it is easy to forge after a measurement is taken. An important criterion
 during biometric authentication is to check for liveliness of the input data. To make biometrics more effective, it
@@ -114,34 +100,28 @@ other words biometric characteristic should be treated as pure identity and use 
 verification.</p>
 
 <h2><span class="num">3</span>  Standards for Authentication</h2>	
-
 <p>If the security technology has not kept pace with rapid development of Information Technology (IT), IT systems, users and data,
 both organization and private, will be vulnerable to attacks. The attackers could be criminals or politically motivated or
 financially motivated. Information security standards help to prevent most of the threats, to manage security risks by making it 
 harder for attacks to succeed and by reducing the effects of attacks.</p>
-
 <p>The goal of information security standards is to improve the security of the information systems, to define functional and
 assurance requirements, to promote vendors to build standard-compliant product, to enable consistency among product
 developers and to serve as a reliable metric for purchasing products.</p>
-
 <p>Request for Comments (RFC) is a collaborative publication from engineers and computer scientists in the form of a memorandum
 describing methods, behaviors, research, or innovations applicable to the working of the Internet and Internet-connected
 systems. The Internet Engineering Task Force (IETF) adopts some of the proposals published as Request for
 Comments (RFC) as Internet Standards. For authentication methods described here RFC&#8217;s will be mentioned where
 applicable.</p>
-
 <p class="noindent" >The US National Institute of Standards and Technology (NIST) publishes white papers and other resources in its Security
 Management &amp; Assurance working group. These standards are followed by mainly, US federal agencies. The recommendations are
 applicable to other organizations as well and referred to as NIST standards.</p>
 
 <h2><span class="num">4</span> Password based Authentication Schemes</h2>
-
 <p>The users connect to the network via a remote connection over VPN or dial up network. In this case Password Authentication
 Protocol (PAP) is used <span class="cite">[<a 
 href="#Xchap2-key4">4</a>]</span>. After the user establishes a link, it repeatedly sends his id/password to authenticator. If he receives
 ACK, the connection is established. If the user receives NAK instead, the connection is terminated. The protocol is simple and the
 drawback is that the password is sent in the clear text.</p>
-
 <p>Challenge Handshake Authentication Protocol (CHAP) is more secure than the PAP and makes use of a cryptographic hash
 function such as MD5 or SHA <span class="cite">[<a 
 href="#Xchap2-key1">1</a>]</span>. A cryptographic hash is a one-way function takes arbitrary size input and after computations it
@@ -149,31 +129,26 @@ outputs 128-bit output. The security of the cryptographic hash comes from the fa
 hashes to digest &#8220;d&#8221;, it is computationally hard to find another message &#8220;m<span 
 class="cmsy-10">&#x2032;</span>&#8221; that hashes to the same digest
 &#8220;d&#8221;.</p>
-
 <p>RFC 1994 is the standard for CHAP for authentication used by the servers to validate the identity of remote clients <span class="cite">[<a 
 href="#Xchap2-key5">5</a>]</span>. Both the server and the client perform a hash operation on the password and transmits the hash result rather than sending the password
 itself as shown in Figure <a href="#x1-1005r1">1</a>. After the link is established the server sends a random challenge to the authenticating client entity.
 The entity responds with hash value calculated using the password and the challenge. The server checks the client response against its own computation and if the values match authentication is successful, else the connection is
 terminated.</p>
-
 <p>CHAP provides protection against replay attacks through the use of random challenge value. Further the challenge can be used
 repeatedly to limit the time of exposure for any single attack. If the CHAP negotiations can be carried out in both directions, this
 results in mutual authentication.</p>
-
 <p>The Microsoft Windows 2000 default authentication is based on the standard CHAP and the latest version is called MS-CHAP v2
 <span class="cite">[<a href="#Xchap2-key4">4</a>]</span>. It uses two-way authentication so that both the server and the client identities are verified. Like CHAP, MS-CHAP uses
 challenge-response mechanism to authenticate connection without sending any passwords. The MD4-hashed version of the user
 password, the peer-challenge string, the session identifier are combined to form SHA hash based response. Other authentication
 methods related to CHAP is EAP (Extensible Authentication Protocol), and PAP (Password Authentication Protocol)
 <span class="cite">[<a href="#Xchap2-key4">4</a>]</span>.</p>
-
 <p>CRAM-MD5 defined in IETF RFC 2195 <span class="cite">[<a 
 href="#Xchap2-key6">6</a>]</span> is a challenge-response authentication mechanism (CRAM) based on
 the HMAC-MD5 algorithm. HMAC-MD5 is keyed MD5 hash where the key is shared secret. CRAM provides
 protection against replay attacks. However, it can&#8217;t prevent cracking the password through a brute-force attack,
 so it is less effective than alternative mechanisms that avoid passwords or that use connections encrypted with
 SSL/TLS.</p>
-
 <p>A more secure Salted Challenge Response Authentication Mechanism (SCRAM) defined in RFC 5802 <span class="cite">[<a 
 href="#Xchap2-key7">7</a>]</span> is a family of modern, password-based challenge&#8211;response authentication mechanisms providing authentication of a user to a server. In this protocol,
 both the client and the server exchange their respective nonce and prove to each other the knowledge of the shared secret leading
@@ -185,17 +160,14 @@ password. PBKDF2 applies a pseudorandom function to the input password along wit
 the process many times to produce a derived key, which can then be used as a cryptographic key in subsequent
 operations. This makes the computational work for password cracking much more difficult, and is known as key
 stretching.</p>
-
 <figure id="x1-1005r1">
 	<img src="images/chap2/1.jpg" alt="Figure&#x00A0;1: Challenge Handshake Protocol"/>
-	<figcaption>Figure&#x00A0;1: Challenge Handshake Protocol</figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;1:</span> Challenge Handshake Protocol</figcaption>
 </figure>
-
 <figure id="x1-1006r2">
 	<img src="images/chap2/2.jpg" alt="Figure&#x00A0;2: SCRAM Authentication Protocol"/>
-	<figcaption>Figure&#x00A0;2: SCRAM Authentication Protocol</figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;2:</span> SCRAM Authentication Protocol</figcaption>
 </figure>
-
 <p>Remote Authentication Dial-In User Service (RADIUS) is a networking protocol that provides centralized Authentication,
 Authorization, and Accounting management for users who connect and use a network service. RADIUS uses two packet types to
 manage the full AAA process; Access-Request, which manages authentication and authorization defined in RFC 2865 <span class="cite">[<a href="#Xchap2-key8">8</a>]</span>; and
@@ -203,69 +175,56 @@ Accounting-Request accounting, which is described by RFC 2866. RADIUS is often u
 enterprises to manage access to the Internet or internal networks, wireless networks, and integrated e-mail services. These
 networks may incorporate modems, digital subscriber line (DSL), access points, virtual private networks (VPNs), network ports,
 web servers, etc.</p>
-
 <p>The user or machine sends a request to a Network Access Server (NAS) to gain access to a particular network resource using
 access credentials. In turn, the NAS sends a RADIUS Access Request message to the RADIUS server, requesting authorization to
 grant access via the RADIUS protocol. This request includes access credentials, typically in the form of username and password or
 security certificate provided by the user. Additionally, the request may contain other information which the NAS knows about the
 user, such as its network address or phone number, and information regarding the user&#8217;s physical point of attachment to the
 NAS.</p>
-
 <p>The RADIUS server issues &#8220;Access Challenge&#8221; requesting additional information from the user such as a secondary password,
 PIN, token, or card following PAP, CHAP or EAP <span class="cite">[<a 
 href="#Xchap2-key9">9</a>]</span> authentication schemes. Once the user&#8217;s proof of identification is verified,
 along with, optionally, other information related to the request, RADIUS send &#8220;Access Accept&#8221; granting access to the user. In
 case of failure RADIUS returns &#8220;Access Reject&#8221; and the user is unconditionally denied access to all requested network
 resources.</p>
-
 <p>DIAMETER, developed to provide a framework for AAA to overcome the limitations of RADIUS, is described in
 RFC 7075 <span class="cite">[<a href="#Xchap2-key24">24</a>]</span>. The latter had issues with reliability, scalability, security and flexibility. RADIUS cannot deal
 effectively with remote access, IP mobility and policy control. The Diameter protocol defines a policy protocol used
 by clients to perform policy, AAA, and resource control. This allows a single server to handle policies for many
 services.</p>
-
 <p>DIAMETER provides an upgrade path for RADIUS and provides extra features lacking in RADIUS. It has similar features as
 RADIUS: it can work in both local and roaming AAA situations; it supports stateful and stateless modes; and it supports
 application layer acknowledgement and defines failover.</p>
-
 <p>DIAMETER uses TCP or SCTP unlike RADIUS which uses UDP, therefore delegating detection and handling of communication
 problems to those protocols. DIAMETER does not include encryption, but can be protected by transport level security IPSEC or
 TLS. Diameter has enhanced features to support many different interfaces defined by 3rd Generation Partnership Project (3GPP)
 IP Multimedia Subsystem (IMS).</p>
-
 <p>Both RADIUS and Diameter support authentication CHAP and EAP (Extensible Authentication Protocol), and PAP (Password
 Authentication Protocol). However, RADIUS has some limitations: Its CHAP authentication is subject to dictionary attacks, and
 it protects clear-text passwords (PAP) only on a hop-by-hop basis.</p>
 
 <h2><span class="num">5</span> Kerberos Authentication Protocol</h2>
-
 <p>Kerberos is an authentication server developed as a part of Project Athena, MIT. According to Greek mythology, Kerberos is a
 ferocious 3-headed dog guarding the Gates to the Underworld. Since Kerberos authentication requires 3 entities to authenticate
 and has an excellent track record of making computing safer, the naming is appropriate.</p>
-
 <p>Kerberos model is based on Needham-Schroeder trusted third party protocol <span class="cite">[<a 
 href="#Xchap2-key1">1</a>]</span>. It uses symmetric key cryptography and requires
 trusted third-party authorization to verify user identities. It provides centralized private-key third-party authentication in a
 distributed network. The latest Kerberos Version 5 is specified in RFC 4120 <span class="cite">[<a 
 href="#Xchap2-key12">12</a>]</span>.</p>
-
 <p>It is highly reliable and employs a distributed server architecture. As it is scalable, the system should support large number of
 clients and servers. This technology is used by Microsoft Windows, Apple OS, FreeBSD, UNIX and Linux. Kerberos protocol
 messages are protected against eavesdropping and replay attacks. The strong cryptography and third-party ticket authorization 
 make it much more difficult for attackers to infiltrate the network.</p>
-
 <p>Kerberos system has two main parts Authentication Server (AS) and Ticket Granting Server (TGS) as shown in Figure <a 
 href="#x1-1008r3">3</a>. Users
 interact with AS to identify self and negotiate a ticket granting ticket (TGT) which is a non-corruptible authentication credential.
 Users can subsequently request access to other services from TGS based on the TGT.</p>
-
 <figure id="x1-1008r3">
 	<img src="images/chap2/3.jpg" alt="Figure&#x00A0;3: Kerberos Authentication Mechanism"/>
-	<figcaption>Figure&#x00A0;3: Kerberos Authentication Mechanism</figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;3:</span> Kerberos Authentication Mechanism</figcaption>
 </figure>
-
 <p>Kerberos V5 Messages:</p>
-
 <ol>
 <li>
 	<p>The client sends a clear text message consisting of the user ID and the TGS server name to the AS.</p>
@@ -294,7 +253,6 @@ Users can subsequently request access to other services from TGS based on the TG
 <li>The client similar to step 3 creates an authenticator for the app server and sends authenticator encrypted with the shared key and the app server ticket.</li>
 <li>The server decrypts the ticket to retrieve the shared session key and then uses it to decrypt the authenticator. It  compares client credentials and timestamp in the ticket as well as authenticator. If everything checks out, the app server grants service access to the client.</li>
 </ol>
-
 <p>Kerberos may be susceptible to replay attacks from old and cached authenticators. Although, the timestamps are used to prevent
 this, replays are possible during ticket&#8217;s lifetime. The servers are supposed to store all live tickets to stop this but this is not
 always practicable. Another requirement is that all the clocks in the network are time synchronized. If a host is fooled about the
@@ -302,14 +260,12 @@ correct time, old authenticator replay is possible. Yet another vulnerability is
 enough tickets his chances of success are good.</p>
 
 <h2><span class="num">6</span> Public Key Cryptography based Authentication</h2>
-
 <p>Though the use of shared key or symmetric key encryptions is widespread because of its moderate computations, the key
 distribution and management becomes more unwieldy and complex. If &#8220;n&#8221; users want to securely communicate with each other,
 this would require &#8220;$(n^2-n)/2$&#8221; secret keys. It is difficult to arrange in advance secure physical means of sharing secret keys for
 large &#8220;n&#8221;. Public key cryptography (PKC) is invented as a solution by Whitefield Diffie and Martin Hellman and independently by
 Merkle <span class="cite">[<a href="#Xchap2-key1">1</a>]</span>, <span class="cite">[<a href="#Xchap2-key13">13</a>]</span>. In a PKC system, each user will have only one private key, which should be kept secret and the related public key
 which can be shared with others.</p> 
-
 <p>The generation of private and public keys depends on cryptographic algorithms based on mathematical problems to produce
 one-way functions. A typical invertible one-way function &#8220;$f$&#8221; be a function defined over integers modulo a large number N (which
 can be a prime or product of two large primes) such that computing $f(x)=y$, given &#8216;$x$&#8217; is easy; however, given $y=f(x)$, computing
@@ -318,57 +274,48 @@ If &#8220;N&#8221; is the product of 2 prime numbers, the computation of x given
 factorization problem <span class="cite">[<a href="#Xchap2-key1">1</a>]</span>. The well-known Rivest-Shamir-Adelman (RSA) PKC system, named after its inventors, is based on a
 number which is product of two large primes <span class="cite">[<a href="#Xchap2-key14">14</a>]</span>. Typical operations of encryption and decryption are shown in Figure
 <a href="#x1-1016r4">4</a>.</p>
-
 <p>Two of the best-known uses of public key cryptography are to ensure confidentiality and signature. In the first case, if any one
 wants to send a message to user A, the message has to be encrypted with the user-A&#8217;s public key. This encrypted message cannot
 be decrypted by anyone other than user-A, who does not possess the matching private key. Only the user-A can decrypt the
 message who is the owner of that key and the person associated with the public key. This is used in an attempt to ensure
 confidentiality.</p>
-
 <figure id="x1-1016r4">
 	<img src="images/chap2/4.jpg" alt="Figure&#x00A0;4: Typical RSA Encryption and Decryption"/>
-	<figcaption>Figure&#x00A0;4: Typical RSA Encryption and Decryption</figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;4:</span> Typical RSA Encryption and Decryption</figcaption>
 </figure>
-
 <p>Digital signatures, in which a message is signed with the sender&#8217;s private key and can be verified by anyone who has access to the
 sender&#8217;s public key. This verification proves that the sender had access to the private key, and therefore is likely to be the person
 associated with the public key. This also ensures that the message has not been tampered with, as a signature is mathematically
 bound to the message it originally was made with, and verification will fail for practically any other message, no matter how
 similar to the original message.</p>
-
 <p>The security of RSA PKC system is broken if we are able to factorize a large composite integer N. Even though other easier
 approaches to break RSA are proposed, none of them has held up. Different algorithms for factorization are described in <span class="cite">[<a 
 href="#Xchap2-key1">1</a>]</span>.
 Number Field Sieve (NFS) is the fastest known among these algorithms. Based on these results computational complexity needed
 to break can be estimated. The NIST recommends 2048-bit keys for RSA to be secure until 2030. An RSA key length of 3072 bits
 should be used if security is required beyond 2030.</p>
-
 <p>How a user can authenticate using PKC system? A server can send server-random to the client and the client sends encrypted
 server-random using its private key. Then the server decrypts the message using the client&#8217;s public key and allows access if the
 decrypted message matches the server-random. However, it is not advisable to encrypt arbitrary strings by untrusted parties as an
 attacker can collect such messages to mount a cipher text attack. Another vulnerability is man-in-the-middle attack, where the
 attacker can successfully intercept messages and participate in the authentication as a server to the client and as a client to the
 server.</p>
-
 <p>As we shall see later, Security Socket Layer (SSL) based authentication provides protection against both vulnerabilities. An
 alternative PKC authentication method requires the client to perform some computation based on random numbers exchanged
 between the server and the client and the client&#8217;s private key. To support such authentication protocols, a variant
 RSA system based on quadratic residue is needed and described in <span class="cite">[<a 
 href="#Xchap2-key1">1</a>]</span>. However, such systems are not in wide use.</p>
-
 <p>The main problem in PKC is how to get some one&#8217;s public key in a secure way to avoid substitution by attackers. A solution is
 possible if the user&#8217;s public key along with their name, address and so on is signed by a trustworthy person. This credential
 binding between a public key and subject&#8217;s identity is called a digital identity or public key certificate. It is signed by
 Certification Authorities (CA). A public key infrastructure (PKI) is a system for the creation, storage, distribution
 and revocation of digital certificates which are used to verify that a particular public key belongs to a certain
 entity.</p>
-
 <p>There are various roles within PKI. It consists of a certificate authority (CA) that stores, issues and signs the digital certificates, a
 registration authority (RA) which verifies the identity of entities requesting their digital certificates to be stored at the CA, a
 central directory to store and index keys, a certificate management system for managing certificates and a certificate policy
 stating the PKI&#8217;s requirements concerning its procedures. The most common format for public key certificates is X.509 as defined
 in RFC 5280 <span class="cite">[<a href="#Xchap2-key15">15</a>]</span>.</p>
-
 <p>There is a certificate chain of trust in validating a digital certificates. Three CA&#8217;s Symantec, Comodo, GoDaddy dominate the CA
 market issuing certificates to nearly 75% of web servers. These CA&#8217;s or their trusted agents certify organization CA which in turn
 certify their employees. SSL/TLS operation use certificates signed by issuer CA, which is the basis for centralized key
@@ -378,13 +325,11 @@ href="#Xchap2-key1">1</a>]</span>. A user-A can get his certificate signed by hi
 Suppose the user-A wants to connect with the user-D, with whom he does not have any acquaintance; so the user-A presents his
 introducer certificates to the user-D. If the user-D either trusts user-B and/or user-C, then the user-A certificate is acceptable to
 him.</p>
-
 <p>The certificate has an indication of validity period for its use. However, a certificate may be invalidated before expiry date either
 due to compromise or due to administrative reasons. So CA should keep a list of revoked certificates and the users to regularly
 check that list.</p>
 
 <h2><span class="num">7</span> SSL/TLS Authentication Protocol</h2>
-
 <p>Transport Layer Security (TLS), and its now-deprecated predecessor, Secure Sockets Layer (SSL) are cryptographic protocols
 designed to provide confidentiality and data integrity between a client (e.g., a web browser) and a server (e.g., amazon.com).
 Websites can use TLS to secure all communications between their servers and web browsers. The connection established by
@@ -393,11 +338,9 @@ each connection based on shared secret negotiated during the handshake. The prot
 secret is protected against eavesdrop and man-in-the-middle attack. The authentication is provided by PKC and
 server&#8217;s trusted certificates. The connection is reliable as the message integrity is provided using cryptographic
 hash.</p>
-
 <p>TLS involves many configurable parameters and supports many different methods for exchanging keys, encrypting data, and
 authenticating message integrity. TLS is a proposed Internet Engineering Task Force (IETF) standard, first defined in 1999 and
 updated in RFC 5246 <span class="cite">[<a href="#Xchap2-key16">16</a>]</span>.</p>
-
 <p>Figure <a href="#x1-1019r5">5</a> shows the messages in a typical TLS protocol. A client connects to a TLS-enabled server requesting a secure connection
 by sending the ClientHello message which includes ClientRandom and a list of supported cipher suites and hash functions. The
 server sends ServerRandom in the ServerHello message. Then the server picks a cipher and hash function that it also supports and
@@ -408,7 +351,6 @@ generation of the shared session key is done as follows. The client encrypts a p
 public key and sends the result to the server; both parties then use the ServerRandom, ClientRandom and the
 premaster secret to generate unique session keys for subsequent encryption and decryption of data during the
 session.</p>
-
 <p>The most common use of certificates is for HTTPS-based web sites. A web browser validates that an HTTPS web server is
 authentic, so that the user can feel secure that his/her interaction with the web site has no eavesdroppers and that the web site is
 who it claims to be. This security is important for finance and business applications. A web site operator obtains a certificate by
@@ -417,7 +359,6 @@ contains the web site name, company information and the public key. The certific
 public certificate. During web browsing, this public certificate is served to any web browser that connects to the web
 site and proves to the web browser that the provider believes it has issued a certificate to the owner of the web
 site.</p>
-
 <p>A certificate provider has options to issue three types of certificates, each requiring its own degree of rigor, namely, Domain
 Validation, Organization Validation and Extended Validation. A certificate provider will issue a Domain Validation (DV) class
 certificate to a purchaser if the purchaser can demonstrate the right to administratively manage a domain name. An Organization
@@ -425,13 +366,11 @@ Validation (OV) class certificate will be issues to a purchaser if the purchaser
 domain name in question, and based on some vetting of organization&#8217;s actual existence as a legal entity. To acquire an Extended
 Validation (EV) certificate, the purchaser must persuade the certificate provider of its legal identity, including manual verification
 checks by a human.</p>
-
 <p>Browsers will generally offer users a visual indication of the legal identity when a site presents an EV certificate. Most browsers
 show the legal name before the domain, and use a bright green color to highlight the change. In this way, the user can see the
 legal identity of the owner has been verified.</p>
 
 <h2><span class="num">8</span> Related Authentication Technologies</h2>
-
 <p>A typical user in an enterprise can access multiple applications: one, for example, to create expense reports, another to use email,
 and so on. Each application requires the user to enter a valid user name and password to access the services. One of the problems
 is that it is inconvenient for the user to remember password for multiple applications. This makes user to use the same password
@@ -441,10 +380,9 @@ enterprises provide Single-Sign-On (SSO) capability for a user to log in with a 
 access to multiple related, yet independent systems. From user&#8217;s perspective, the user needs to enter his credentials only
 once at a central corporate web portal and authentication to all the needed applications happen transparently
 <span class="cite">[<a href="#Xchap2-key19">19</a>]</span>.</p>
-
 <figure id="x1-1019r5">
 	<img src="images/chap2/5.jpg" alt="Figure&#x00A0;5: TLS Protocol Messages"/>
-	<figcaption>Figure&#x00A0;5: TLS Protocol Messages</figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;5:</span> TLS Protocol Messages</figcaption>
 </figure>
                                                                                            
 <p>As different applications support different authentication mechanisms, SSO must internally store the credentials used for
@@ -459,7 +397,6 @@ Protocol) directories to store the authentication and authorization policies. Th
 identity creation, identity termination or role changes. Further, doing single authentication to LDAP server helps to
 gain access to multiple applications by passing the authentication token seamlessly to configured applications
 <span class="cite">[<a href="#Xchap2-key20">20</a>]</span>.</p>
-
 <p>SSO can facilitate cross enterprise authentication using federated login between enterprise-A and enterprise-B using Security
 Assertion Markup Language (SAML). SAML is an XML-based solution for exchanging user security information between an
 SAML identity provider and a SAML service provider. SAML 2.0 supports W3C XML encryption and service provider
@@ -471,7 +408,6 @@ enterprise-A employee, who is trying to access outsourced benefits supplier syst
 Enterprise-A&#8217;s SSO system would then send a security assertion token to the benefits supplier. The benefits supplier&#8217;s
 SSO system would then take the token, check it and grant access to the employee without making them sign
 on.</p>
-
 <p>The main benefit from SSO is the ability to enforce uniform enterprise authentication and/or authorization policies across the
 enterprise and to enable user audit sessions to improve security reporting and auditing. The administrative benefit is to reduce IT
 costs due to lower number of IT help desk calls about password management. Single Sign-On provides centralized provisioning
@@ -480,7 +416,6 @@ resulting in productivity loss. Therefore, it is essential that your enterprise 
 disaster recovery design.</p>
 
 <h2><span class="num">9</span> OpenID and OAuth</h2>
-
 <p>OpenID is an open standard and decentralized authentication protocol, works in a way similar to SSO authentication system. It
 allows users to be authenticated by co-operating sites, known as Relying Parties (RP), using a third-party service,
 eliminating the need for webmasters to provide their own ad hoc login systems, and allowing users to log into multiple
@@ -488,20 +423,17 @@ unrelated websites without having to have a separate identity and password for e
 selecting an OpenID identity provider, and then use those accounts to sign onto any website that accepts OpenID
 authentication. Many websites including Microsoft, Google, AOL, and Amazon have integrated OpenID consumer
 support.</p>
-
 <p>The OpenID standard provides a framework for the communication that must take place between the identity
 provider and the RP. An extension to the standard facilitates the transfer of user attributes, such as name and
 gender, from the OpenID identity provider to the RP. The OpenID protocol does not rely on a central authority to
 authenticate a user&#8217;s identity. Moreover, neither services nor the OpenID standard may mandate any specific means
 by which to authenticate users. It can support commonly used password mechanisms as well as smart cards or 
 biometrics.</p>
-
 <p>An end-user is the entity that wants to assert a particular identity. A RP is a web site or application that wants to verify the
 end-user&#8217;s identifier. An OpenID provider (OP) is a service that specializes in registering OpenID URLs or XRIs. OpenID enables
 an end-user to communicate with a relying party. This communication is done through the exchange of an identifier or OpenID,
 which is the URL or XRI chosen by the end-user to name the end-user&#8217;s identity. An identity provider provides the OpenID
 authentication.</p>
-
 <p>An end-user typically registers with an OpenID provider (e.g. openid.example.org). Then the end-user interacts with a RP that
 provides an option to specify an OpenID for the purposes of authentication. There are two modes in which the RP may
 communicate with the OpenID provider. The &#8220;checkid_immediate&#8221; mode does not require the OpenID provider to
@@ -517,20 +449,17 @@ OpenID provider by comparing its copy of the shared secret against the one recei
 credentials. After the OpenID has been verified, authentication is considered successful and the end-user is considered
 logged into the RP. The RP typically then stores the end-user&#8217;s OpenID along with the end-user&#8217;s other session
 information.</p>
-
 <p>The OpenID has security weaknesses and may prove vulnerable to phishing attacks. For example, a malicious relying party may
 forward the end-user to a bogus identity provider authentication page asking that end-user to input their credentials. On
 completion of this, the malicious party could then have access to the end-user&#8217;s account with the identity provider, and then use
 that end-user&#8217;s OpenID to log into other services. In an attempt to combat possible phishing attacks some OpenID providers
 mandate that the end-user needs to be authenticated with them prior to an attempt to authenticate with the
 RP.</p>
-
 <p>OAuth is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications
 access to their information on other websites but without giving them the passwords. This mechanism is used by companies such
 as Amazon, Google, Facebook, Microsoft and Twitter to permit the users to share information about their accounts with
 third party applications or websites. The standard OAuth 2.0 Authorization Framework is defined in RFC 6749
 <span class="cite">[<a href="#Xchap2-key26">26</a>]</span>.</p>
-
 <p>The client requests an access to protected resource on the server by using the resource owner&#8217;s credentials. To
 facilitate access to restricted resources, the resource owner is required to share its credentials with the third party.
 This creates several problems and limitations. The credential is a password in clear text needed to be stored in
@@ -542,10 +471,8 @@ lifetime, and other access attributes. Access tokens are issued to third-party c
 with the approval of the resource owner. The client uses the access token to access the protected resources hosted
 by the resource server. OAuth 2.0 is the industry-standard protocol for authorization described in RFC 6749
 <span class="cite">[<a href="#Xchap2-key21">21</a>]</span>.</p>
-
 <p>OAuth is an authorization protocol, rather than an authentication protocol. Using OAuth on its own as an authentication method
 may be referred to as pseudo-authentication.</p>
-
 <p>The communication flow in both processes is similar:</p>
 <ol>
 	<li>The user requests a website login from the application.</li>
@@ -557,7 +484,6 @@ may be referred to as pseudo-authentication.</p>
 	<li>The user&#8217;s browser requests the redirect URL that goes back to the application, including the identity provider&#8217;s
      response. The application decodes the identity provider&#8217;s response, and carries on accordingly.</li>
 </ol>
-
 <p>The crucial difference is that in the OpenID authentication use case, the response from the identity provider is an assertion of
 identity; while in the OAuth authorization use case, the response from the identity provider is an access token that may grant the
 application ongoing access to some of the identity provider&#8217;s APIs, on the user&#8217;s behalf. The access token acts as a kind of &#8220;valet
@@ -565,22 +491,17 @@ key&#8221; that the application can include with its requests to the identity pr
 to access those APIs. Because the identity provider typically, but not always, authenticates the user as part of the process of
 granting an OAuth access token, it&#8217;s tempting to view a successful OAuth access token request as an authentication method
 itself.</p>
-
 <p>However, because OAuth was not designed with this use case in mind, making this assumption can lead to major security flaws.</p>
-
 <p>Similar to OpenID, the most devastating OAuth security failure is phishing vulnerability. An attacker website can visually seem as
 a genuine website to steal credentials from unsuspecting users.</p>
 
 <h2><span class="num">10</span> Authentication for Cloud Computing</h2>
-
 <p>Cloud computing and storage provides users with capabilities to store and process their data in third-party data centers. It
 provides on-demand availability of services such as software, platform, and infrastructure through Software-as-a-Service (SaaS),
 Platform-as-a-Service (PaaS) and Infrastructure-as-a-Service (IaaS). This involves using of shared infrastructure and rapid
 movement of servers and workload within the infrastructure.</p>
-
 <p>Because of the structure of Cloud computing, both the security issues faced at cloud service provider and security issues faced by
 cloud customers need to be taken into account.</p>
-
 <p>As cloud service providers often store more than one customer&#8217;s data on the same server, it is possible that one user&#8217;s private data
 can be viewed by other users. The extensive use of virtualization in implementing cloud infrastructure brings unique security
 concerns for the customers of a public cloud service. The underlying components of cloud infrastructure may not be designed to
@@ -590,12 +511,10 @@ inappropriate levels of control leading to compromise. The cloud service provide
 storage segregation and that the virtualization must be properly configured, managed and secured. Strong compartmentalization
 should be employed to ensure that individual customers do not impact the operations of other tenants running on the same cloud
 provider.</p>
-
 <p>When an organization opts to use cloud storage, potentially sensitive customer data is at risk from insider attacks. The cloud
 service provider promotes his service by simplifying registration process and offering free limited trial periods. By abusing the
 relative anonymity behind these registration and usage models, spammers, malicious code authors, and other criminals have been
 able to break into PaaS and IaaS services.</p>
-
 <p>The cloud users must take measures to safeguard their application and use strong passwords and authentication
 measures. Strong authentication of cloud users makes it less likely that unauthorized users can access cloud systems, 
 and more likely that cloud users are positively identified. Cloud Computing providers expose a set Application
@@ -603,14 +522,12 @@ Programming Interface (APIs) that the customers can use to provision, manage, or
 cloud services. The security and availability of general cloud services is dependent upon the security of these basic
 APIs. These interfaces must be designed to protect against both accidental and malicious attempts to circumvent
 policy.</p>
-
 <p>It is generally recommended that information security controls be selected and implemented according and in proportion to the
 risks, typically by assessing the threats, vulnerabilities and impacts. Cloud Access Security Broker (CASB) is a
 software that sits between cloud users and cloud applications to provide visibility into cloud application usage, data
 protection and governance to monitor all activity and enforce security policies. It is either on-premises or cloud based
 software that sits between cloud service users and cloud applications, and monitors all activity and enforces security
 policies.</p>
-
 <p>A survey of authentication methods used in cloud environment is given in <span class="cite">[<a 
 href="#Xchap2-key18">18</a>]</span>. One type of authentication based on cryptographic
 techniques need a trusted third party using tickets or certificates based on Kerberos or PKI system. The user profile type makes
@@ -624,35 +541,28 @@ management system into their own infrastructure, using federation or SSO technol
 system.</p>
 
 <h2><span class="num">11</span> Authentication for IOT</h2>
-
 <p>Internet of Things (IoT) is a terminology used for a network of low-cost and low-power devices used for sensing and actuating in
 day to day life. A heterogeneous system combining sensors and actuators with general purpose computing elements consisting of
 hundreds to thousands of nodes. These devices are deployed globally and can collect various data and actuate or perform specific
 actions automatically with minimal human interaction.</p>
-
 <p>IoT devices can be deployed to create smart cities, smart grids, smart logistics, etc. IoT devices are also termed as constrained
 devices because they have limited computational capacity, lifetime, throughput, etc. Sensor nodes form multi-hop wireless network
 with aggregation capability and sensors communicate with the nearest base station.</p>
-
 <p>IoT brings with itself unlimited opportunities as well as tremendous challenges. A main challenge is different devices
 utilize different protocols and standards in their network and these networks need to communicate with each other
 securely as well as efficiently. From a security point of view, attackers find it convenient to exploit constrained
 devices and use them to mount DDoS attacks. Standard network security protocols cannot be used for IoT because
 they need high computational complexity. So, there is a requirement of light weight security protocols for IoT
 environment.</p>
-
 <p>No standards for IoT authentication schemes have been proposed so far. Various schemes are proposed based on the centralized
 servers for mutual authentication using different primitives. The authentication scheme proposed by Amin et al. is described in
 some detail highlighting the kind of cryptographic operations <span class="cite">[<a 
 href="#Xchap2-key22">22</a>]</span>.</p>
-
 <p>Amin et al. proposed light weight authentication method in distributed cloud environment <span class="cite">[<a 
 href="#Xchap2-key19">19</a>]</span>. Their scheme is based on a central control server for several cloud servers providing control sequence for authentication in a distributed environment as shown in Figure <a href="#x1-1027r6">6</a>. This scheme makes use of the smart card and based on hash function
 <span class="cite">[<a href="#Xchap2-key23">23</a>]</span>.</p>
-
 <p>Both the cloud server and the client have to perform registration as shown in Figure <a href="#x1-1028r7">7</a> and Figure <a href="#x1-1029r8">8</a>. The cloud server sends the server identity, ServID and the random &#8220;d&#8221;. The Control Server (CS) uses hash function h() and uses its own secret &#8220;y&#8221; to 
 compute BSm and the cloud server stores BSm and &#8220;d&#8221;.</p>
-
 <p>The user registration uses the password Pi, random b1 and b2, computes Ai and PIDi and sends it to the CS. The CS uses its
 secret x to compute Di and sends <span class="cmsy-10">&#x27E8;</span>ci, Di, Ei<span 
 class="cmsy-10">&#x27E9;</span>. The smart card computes DP=h(UIDi||pi) xor b2 saves <span 
@@ -670,21 +580,17 @@ secret &#8220;x&#8221;. Next &#8220;D&#8217;i&#8221; is computed and &#8220;N&#8
 concatenated messages. If G&#8217;i matches Gi, the central server finds N&#8217;m and computes &#8220;k&#8217;m&#8221;. If &#8220;km&#8221; matches
 &#8220;k&#8217;m&#8221; the authentication is considered successful. It next proceeds to computing session keys to be used for the
 session.</p>
-
 <figure id="x1-1027r6">
 	<img src="images/chap2/6.jpg" alt="Figure&#x00A0;6: Cloud Network Architecture for a typical IoT authentication"/>
-	<figcaption>Figure&#x00A0;6: Cloud Network Architecture for a typical IoT authentication</figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;6:</span> Cloud Network Architecture for a typical IoT authentication</figcaption>
 </figure>
-
 <figure id="x1-1028r7">
 	<img src="images/chap2/7.jpg" alt="Figure&#x00A0;7: Server and User Registration"/>
-	<figcaption>Figure&#x00A0;7: Server and User Registration in <span class="cite">[<a href="#Xchap2-key20">20</a>]</span></figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;7:</span> Server and User Registration in <span class="cite">[<a href="#Xchap2-key20">20</a>]</span></figcaption>
 </figure>
-
-
 <figure id="x1-1029r8">
 	<img src="images/chap2/8.jpg" alt="Figure&#x00A0;8: "/>
-	<figcaption>Figure&#x00A0;8: Cloud authentication by Amin et al. <span class="cite">[<a href="#Xchap2-key20">20</a>]</span></figcaption>
+	<figcaption><span class="fignum">Figure&#x00A0;8:</span> Cloud authentication by Amin et al. <span class="cite">[<a href="#Xchap2-key20">20</a>]</span></figcaption>
 </figure>             
                                                                               
 <p>Amin et al. show that their scheme provides user anonymity, session key agreement, mutual authentication as well as early wrong
@@ -695,21 +601,18 @@ can see mutual authentication occurs between the user, the cloud and the control
 chances of a DoS or DDoS attack increases significantly. In Amin et al.&#8217;s scheme, if the centralized control server
 failure is a single point of failure. However, Amin et al. provides no genuine countermeasure for avoiding a DoS
 attack.</p>
-
 <p>There are other authentication schemes making use of centralized servers for authentication. Huang et al. describe an
 authentication method using one-way accumulator, which is a one-way hash function that has quasi-communicative property and
 uses IoT nodes and a proxy server <span class="cite">[<a href="#Xchap2-key22">22</a>]</span>. Another authentication using an elegant variation of Lamport&#8217;s One-Time-Password (OTP) and identity based elliptic curve cryptography is given in <span class="cite">[<a 
 href="#Xchap2-key22">22</a>]</span>.</p> 
 
 <h2><span class="num">12</span> Authentication in Unique Identification Authority of India (UIDAI)</h2>
-
 <p>UIDAI has been created with the objective to issue Unique Identification numbers (UID), named as &#8220;Aadhaar&#8221;, to all residents of
 India that is (a) robust enough to eliminate duplicate and fake identities, and (b) can be verified and authenticated in an easy,
 cost-effective way. UIDAI is responsible for Aadhaar enrolment and authentication and also required to ensure the security of
 identity information and authentication records of individuals. The unique Aadhaar identity enables the Government of India to
 directly reach residents of the country in delivery of various subsidies, benefits and services by using the resident&#8217;s Aadhaar
 number only.</p>
-
 <p>The UIDAI has set up a scalable ecosystem for the purpose of instant authentication of residents. The Aadhaar authentication
 ecosystem is capable of handling tens of millions of authentications on a daily basis, and can be scaled up further as per the
 demand. The UIDAI has appointed a number of Authentication Service Agencies (ASAs) and Authentication User Agencies
@@ -718,12 +621,10 @@ authentication as part of its applications to provide services to Aadhaar holder
 be registered within Aadhaar authentication server to perform secure authentication. ASA is an organization or an entity
 providing connectivity using private secure network to UIDAI&#8217;s data centers for transmitting authentication requests from various
 AUAs.</p>
-
 <p>UIDAI defines &#8220;Aadhaar Authentication&#8221; as a process by which the Aadhaar number along with demographic information (such
 as name, date of birth, gender etc.) or biometric information (Fingerprint or Iris) of an individual is submitted to UIDAI&#8217;s Central
 Identities Data Repository (CIDR) for its verification and UIDAI verifies the correctness of the details submitted, or the lack
 thereof, on the basis of information available with it.</p>
-
 <p>Aadhaar authentication service is exposed as stateless service over HTTPS. Usage of open data format in XML
 and widely used protocol such as HTTPS allows easy adoption and deployment of Aadhaar authentication. It is
 mandated that user&#8217;s identity data to be encrypted at the time of capture and must not be stored for security
@@ -733,14 +634,11 @@ input and output. UIDAI requires AUA and ASA should digital sign authentication 
 format. This assures message security and integrity. AUA can digitally sign after forming the input XML. ASA can
 digitally sign the request XML if it is a domain-specific aggregator and forms the request XML on behalf of the
 AUA.</p>
-
 <p>Aadhaar authentication supports authentication using multiple factors. These factors include demographic data, biometric data,
 PIN, OTP, possession of mobile, or combinations thereof. Adding multiple factors increases the strength of authentication.
 Applications using Aadhaar authentication need to choose appropriate authentication factors based on risk level of the
 transaction. AUAs can add their own factors to strengthen authentication.</p>
-
 <p>A typical authentication flow and is a case of an operator assisted transaction at a PoS terminal:</p>
-
 <ol>
 	<li>Aadhaar holder provides Aadhaar Number, necessary demographic and biometric details to the terminal device belonging to the AUA.</li>
 	<li>The device packages these input parameters as a Personal Identity Data (PID) block, encrypts it, and sends it to AUA server.</li>
@@ -756,7 +654,6 @@ know what goes on inside the brain. We bring in additional support from our memo
 our closest friend. If someone tries to impersonate as a closest friend, we will be on our guard and watchful that something
 fishy is going on. Computer machines and systems should emulate &#8220;human authentication&#8221; to the best possible
 extent.</p>
-
 <p>Traditionally, authentication methods are classified into something you know (password), something you have (tokens), something
 you did (behavioral) and something you are (biometric). Password is the simplest of these methods and biometric/behavioral are
 complex to implement. We can combine these methods to obtain multi-factor authentication to get better security. Banking
@@ -765,24 +662,20 @@ system is described. It is useful to consider biometrics as an unforgeable ident
 encryption to perform a strong authentication. Of late behavioral metrics such as handwriting, keystrokes are receiving
 more attention to identify unique identity trait. These methods come in handy for systems that need continuous
 authentication.</p>
-
 <p>Despite security weakness, password methods are popular and widely used. It is mandated that the password must not be
 transmitted in clear text. CHAP protocol avoids sending the password in clear text and uses challenge-response mechanism to
 avoid replay attacks as well as to assure mutual authentication. Related PAP, EAP and MSCHAP protocols are mentioned.
 CRAM-MD5 uses hashed passwords and challenge response mechanisms to prevent replay attacks. However, it is susceptible to
 offline dictionary attacks. To circumvent this, SCRAM protocol based on salt and iteration is described. A brief account of
 RADIUS and DIAMETER AAA protocols is presented.</p>
-
 <p>An explanation of Kerberos based on trusted Ticket Granting server is given. Kerberos provides better security but requires time
 synchronization requirement across the network. PKC based enhancements are being proposed to improve the
 security.</p>
-
 <p>A brief overview of PKC is given and authentication schemes based on PKC are described. The operations of encryption and
 decryption in RSA is explained. The user is required to prove his knowledge of private key to the server. To avoid
 man-in-the-middle attack and to bind the private key to the user&#8217;s identity, it is required that trusted third party, Certificate
 Authority, sign the user&#8217;s certificates. The well-known TLS protocol is explained. Various kinds of SSL certificates and their
 significance are explained.</p>
-
 <p>To avoid memorizing and entering multiple credentials, SSO authentication is described when logging into an enterprise and
 accessing many application servers. A secure implementation of SSO requires that enterprise user&#8217;s identities be strongly
 protected in a secure directory. Related OpenID and OAuth technologies are described. An overview of cloud
@@ -791,7 +684,6 @@ explained and various authentication methods used are given. Finally, a brief ov
 network of sensors and actuators with limited power and computational capabilities is given. An explanation of
 authentication method using centralized server is presented. Finally, a brief explanation of UIDAI authentication is
 given.</p>
-
 <p>While explaining the authentication methods, related RFC and NIST standards are mentioned and a good account of known
 security weaknesses is given. The direction for future research is to improve various authentication methods to address the
 security risks. There is no one authentication method befitting all situation and therefore researchers should try to improvise
@@ -799,7 +691,6 @@ existing and widely used authentication methods and in the meantime to look out 
 security.<img src="images/circledC.jpg" alt="PIC" /></p>  
 
 <h2>References</h2>
-
 <ul class="bibliography">
 	<li id="Xchap2-key1" class="bibitem"><span class="bibmark">[1]</span> &#8220;Applied Cryptography &#8211; Protocols, Algorithms and Source Code in C&#8221; by Bruce Schneier, John Wiley &amp; Sons, Inc. 1996.</li>
 	<li id="Xchap2-key2" class="bibitem"><span class="bibmark">[2]</span> &#8220;Secrets and Lies: Digital Security in a Networked World&#8221; by Bruce Schneier, John Wiley &amp; Sons, Inc. 2004.</li>
@@ -829,6 +720,5 @@ security.<img src="images/circledC.jpg" alt="PIC" /></p>
 	<li id="Xchap2-key26" class="bibitem"><span class="bibmark">[26]</span> RFC 6749 - The OAuth 2.0 Authorization Framework, Internet Engineering Task Force (IETF), Standards Track, D. Hardt, Ed. (Microsoft), October 2012.</li>
 	<li id="Xchap2-key27" class="bibitem"><span class="bibmark">[27]</span> AADHAAR AUTHENTICATION API SPECIFICATION - VERSION 2.0 (REVISION 1), FEBRUARY 2017, <a  href="https://uidai.gov.in/images/FrontPageUpdates/aadhaar_authentication_api_2_0.pdf" class="url" >https://uidai.gov.in/images/FrontPageUpdates/aadhaar_authentication_api_2_0.pdf</a>.</li>
 </ul>
-
 </body>
 </html> 

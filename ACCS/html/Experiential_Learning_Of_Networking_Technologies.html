@@ -2,105 +2,79 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Experiential Learning of Networking Technologies : Understanding TCP States &#8211; Part 2</title>
+	<title>Experiential Learning of Networking Technologies: Understanding TCP States &#8211; Part 2</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 	</script>
 	<script type="text/javascript" async src="js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>	
 </head>
-
 <body class="maintext">
 
-<h1>Experiential Learning of Networking Technologies: Understanding TCP States &#8211; Part 2</h1>                     
-
+<h1>Experiential Learning of Networking Technologies<br /><span class="subtitle">Understanding TCP States &#8211; Part 2</span></h1>
 <p class="authors">Ram P. Rustagi<br /><small class="affiliation">Department of CSE, KSIT Bangalore</small></p>
-
 <p class="authors">Viraj Kumar<br /><small class="affiliation">Divecha Centre for Climate Change, IISc Bangalore</small></p>
-
 <p class="titleimage"><img src="images/tcp.jpg" alt="Experiential Learning of Networking Technologies" /></p>
 
 <h2>Abstract</h2>
-
 <p>This article focuses on the states of a TCP connection once one of the endpoints decides to terminate the connection. This so-called teardown phase involves the exchange of numerous messages (for reasons we will explore), and the TCP connection itself transitions through several states. Web developers often have only an overly simplistic understanding of these states, which may suffice when the network behaves reliably. However, a deeper understanding of TCP states is essential to design web applications that robustly manage TCP connections even in the presence of network faults during the teardown phase, and debug poorly design applications that exhibit poor resource utilization and poor performance in such situations. As always, we will explore these issues through a series of experiential learning exercises.</p>
 
 <h2><span class="num">1</span> Introduction</h2>
-
 <p>In the last article <span class="cite">[<a href="#Xchap3-key8">8</a>]</span>, we discussed the three phases of TCP <span class="cite">[<a href="#Xchap3-key1">1</a>]</span> communication: (1) connection setup, (2) data transfer, and (3) teardown. For each TCP connection, the two machines communicating via this connection independently maintain information about the present state of this connection from their own perspective (one of the 11 possible states listed in Table <a href="#x1-1002r1">2<!--tex4ht:ref: chap3-tab1 --></a>). The last column of this table lists the states of a TCP connection after one of the machines decides to close the connection by initiating connection termination. In case of any abnormal network behaviour, an understanding of these states of the TCP connection is critical to accurately diagnose problems and resolve them.</p>
 <p>For experiential understanding of these TCP states and the Transport layer <span class="cite">[<a href="#Xchap3-key2">2</a>]</span>, we need a basic setup consisting of two machines $H_{1}$ and $H_{2}$ connected via a network as shown in Figure <a href="#x1-1003r1">1<!--tex4ht:ref: chap3-fig1 --></a>. We will make use of i) a network utility called <span class="rm-lmri-10">netcat </span>(nc) <span class="cite">[<a href="#Xchap3-key5">5</a>]</span><span class="cite">[<a href="#Xchap3-key6">6</a>]</span> that can be used to create both a TCP client and a TCP server (for the latter, run with the option <span  class="cmsy-10">-</span><span  class="cmr-10">1</span>), ii) a utility to implement firewalls functionality called <span  class="rm-lmri-10">iptables </span><span class="cite">[<a href="#Xchap3-key7">7</a>]</span>, and iii) some custom applications (simple Python programs) to depict the typical application behaviour.</p>
                                                                                                     
 <p>As extensively discussed in <span class="cite">[<a href="#Xchap3-key8">8</a>]</span>, the two machines exchange messages during connection setup (Phase&#x00A0;1) and data is transferred during Phase&#x00A0;2 when both machines &#8220;agree&#8221; that the TCP connection state is ESTABLISHED.</p>
-                                                                                                    
-                                                                                                    
-<p><a  id="x1-1002r1"></a><hr class="float"><div class="float" >
-<br /> <div class="caption" 
-><span class="id">Table&#x00A0;2: </span><span  
-class="content">TCP Connection state in various phase of communication</span></div><!--tex4ht:label?: x1-1002r1 -->
-<div class="tabular"> <table id="TBL-1" class="tabular" 
-cellspacing="0" cellpadding="0"  
-><colgroup id="TBL-1-1g"><col 
-id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
-id="TBL-1-2"></colgroup><colgroup id="TBL-1-3g"><col 
-id="TBL-1-3"></colgroup><colgroup id="TBL-1-4g"><col 
-id="TBL-1-4"></colgroup><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-1"  
-class="td11"> <span 
-class="rm-lmbx-10">Initial (no connection)  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-2"  
-class="td11"> <span 
-class="rm-lmbx-10">Phase 1 Connection Setup  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-3"  
-class="td11"> <span 
-class="rm-lmbx-10">Phase 2 Data Transfer  </span></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-4"  
-class="td11"> <span 
-class="rm-lmbx-10">Phase 3 Connection Tear Down  </span></td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-1"  
-class="td11">        CLOSED             </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-2"  
-class="td11">          LISTEN                </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-3"  
-class="td11">     ESTABLISHED        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-4"  
-class="td11">           FIN_WAIT_1                 </td></tr><tr  
- style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-1"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-2"  
-class="td11"> SYN_SENT </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-3"  
-class="td11"> </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-4"  
-class="td11"> FIN_WAIT_2</td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-1"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-2"  
-class="td11">         SYN_RECV              </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-3"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-4"  
-class="td11">            CLOSING                   </td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-1"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-2"  
-class="td11">                            </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-3"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-5-4"  
-class="td11">           TIME_WAIT                 </td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-1"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-2"  
-class="td11">                            </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-3"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-6-4"  
-class="td11">          CLOSE_WAIT                </td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-1"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-2"  
-class="td11">                            </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-3"  
-class="td11">                        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-7-4"  
-class="td11">           LAST ACK                  </td>
-</tr><tr 
-class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
- style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-8-1"  
-class="td11">                        </td></tr></table></div>
-                                                                                            
-                                                                                                    
-</div><hr class="endfloat" />
-                                                                                                    
-
+<table class="ruled">
+	<caption><span class="tabnum">Table&#x00A0;1:</span> TCP Connection state in various phase of communication</caption>
+	<thead>
+		<tr>		
+			<td>Initial (no connection)</td>
+			<td>Phase 1 Connection Setup</td>
+			<td>Phase 2 Data Transfer</td>
+			<td>Phase 3 Connection Tear Down</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>CLOSED</td>
+		<td>LISTEN</td>
+		<td>ESTABLISHED</td>
+		<td>FIN_WAIT_1</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>SYN_SENT</td>
+		<td></td>
+		<td>FIN_WAIT_2</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>SYN_RECV</td>
+		<td></td>
+		<td>CLOSING</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>TIME_WAIT</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>CLOSE_WAIT</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>LAST ACK</td>
+	</tr>
+</table>
+                                                                                                   
 <figure>
 	<img src="images/chap3/1.jpg" alt="PIC" id="x1-1003r1"/>
-	<figcaption>Figure 1. Basic setup of conducting TCP learning exercises</figcaption>
+	<figcaption><span class="fignum">Figure 1:</span> Basic setup of conducting TCP learning exercises</figcaption>
 </figure>
 
 <h2><span class="num">2</span> TCP Teardown (Phase 3)</h2>                                                   
@@ -109,90 +83,66 @@ class="td11">                        </td></tr></table></div>
                                                                                                     
 <figure>
 	<img src="images/chap3/2.jpg" alt="PIC" id="x1-1005r2"/>
-	<figcaption>Figure 2. TCP connection teardown phase</figcaption>
+	<figcaption><span class="fignum">Figure 2:</span> TCP connection teardown phase</figcaption>
 </figure>
                                                                                            
                                                                                                     
 <p>To understand why so many states are necessary in Phase 3, note that data transfer may continue for a long time after connection closure is initiated. As a concrete example, consider a typical case of web communication where a web client is downloading a large file (e.g., an image or a document). After the client sends the URL details (which may correspond to only a few hundred bytes, including HTTP headers), it need not send any further data and it may decide to initiate TCP connection closure (to better manage client-side Operating System resources). Despite this, the application should continue to receive data until the server has sent the full file. The connection can only be closed after the server has sent the last byte (which could be for several minutes or even hours after the client&#8217;s initial request for closure) and has received the corresponding TCP-level acknowledgement (in accordance with TCP reliable delivery). Keeping in mind that some messages can be lost due to network faults, TCP states must maintain enough information to properly manage the connection. For ease of understanding, let us first consider the simpler (and more common) scenario when the network functions correctly.</p>
 
 <h2><span class="num">3</span> TCP  Connection  Closure &#8211; Normal case</h2>
-
 <p>Phase 3 starts when either the client or the server application invokes the <span class="rm-lmri-10">connection close </span>API. For clarity, we will assume that the application on $H_{1}$ initiates the connection close and $H_{2}$ responds to this connection close request. Thus, $H_{1}$ transmits a TCP FIN(ish) message (1) to $H_{2}$ and must wait for a response (typically an acknowledgement). Thus, the TCP connection on $H_{1}$ enters the state FIN_WAIT1 which indicates that it has initiated connection closure by transmitting the FIN message and is waiting for a response. When $H_{2}$ receives this FIN message (<span class="cmr-10">1</span><span class="cmsy-10">&#x2032;</span>), it responds with an ACK message (2) and the TCP connection on $H_{2}$ enters the CLOSE_WAIT state. This state indicates that the other side has initiated connection closure and the same has been acknowledged by, but the connection should not be closed yet because the application running on $H_{2}$ may wish to transmit more data. When $H_{1}$ receives this ACK message (<span class="cmr-10">2</span><span class="cmsy-10">&#x2032;</span>), the TCP connection on $H_{1}$ enters the state FIN_WAIT2.</p>
-
 <p>As long as the application running on $H_{2}$ has more data to send, the data will be sent over the connection (5) and it is received (<span class="cmr-10">5</span><span class="cmsy-10">&#x2032;</span>) and acknowledged by $H_{1}$ (6). This acknowledgement will be received by $H_{2}$ (<span class="cmr-10">6</span><span class="cmsy-10">&#x2032;</span>). As soon as the application running on $H_{2}$ determines that no more data is to be sent, it sends a FIN message (3). When this is received by $H_{1}$ (<span class="cmr-10">3</span><span class="cmsy-10">&#x2032;</span>), the TCP connection state on $H_{1}$ moves from FIN_WAIT2 to TIME_WAIT and an ACK (4) is transmitted. Note that the TCP connection state on $H_{1}$ does not move directly to the CLOSED state because, as discussed in detail in <span class="cite">[<a href="#Xchap3-key8">8</a>]</span>, it is necessary to ensure that no new connection with same TCP tuple (i.e. source IP address, source port number, destination IP address, destination port number) is used until all packets corresponding to an earlier such connection could be lingering in the network. This waiting time is known as 2MSL (twice the maximum segment lifetime) and is typically 120s. Another reason is that if there is no TIME_WAIT state (i.e., if $H_{1}$ directly enters the CLOSED state) and if the ACK (4) message gets lost, then $H_{2}$ will remain in the LAST_ACK state until timeout occurs. When $H_{2}$ retransmits the FIN message again, there may be no connection state on $H_{1}$, and thus $H_{1}$ will respond with TCP Reset (indicating an error condition), which leads to ungraceful connection termination <span class="cite">[<a href="#Xchap3-key8">8</a>]</span>.</p>
-
 <p>Let us consider the typical case of TCP connection teardown, which occurs when there is no network abnormality (as is usually the case). Suppose the application running on $H_{2}$ invokes the <span class="lstinline"></span>close() call. This application will follow the TCP state transitions corresponding to active close (left side of Figure <a href="#x1-1005r2">2<!--tex4ht:ref: chap3-fig2 --></a>) whereas the application on $H_{1}$ will follow the TCP state transitions corresponding to passive close (right side of Figure <a href="#x1-1005r2">2<!--tex4ht:ref: chap3-fig2 --></a>). Thus, $H_{2}$ will send the FIN (1) message and move its TCP connection state to FIN_WAIT1. When $H_{1}$ receives the FIN (<span class="cmr-10">1</span><span class="cmsy-10">&#x2032;</span>) message, it sends the ACK (2) message and moves its TCP connection state to CLOSE_WAIT. When this ACK (<span class="cmr-10">2</span><span class="cmsy-10">&#x2032;</span>) message is received by $H_{2}$, it moves to the FIN_WAIT2 state. At this point, let us suppose that the application on $H_{1}$ has no further need for the connection. Thus, immediately after sending the ACK (2) message, it sends its own FIN (3) message and moves to the LAST_ACK state. When $H_{2}$ receives the FIN (<span class="cmr-10">3</span><span class="cmsy-10">&#x2032;</span>) message, it responds with ACK (4) and moves the state from FIN_WAIT2 to TIME_WAIT. When $H_{1}$ receives the ACK (<span class="cmr-10">4</span><span class="cmsy-10">&#x2032;</span>) message, its releases all the resources associated with this connection and completely closes this connection. This is depicted by the CLOSED state, which essentially implies that no connection exists. However, the application on $H_{2}$ remains in the TIME_WAIT state for 2MSL (two times Max Segment Lifetime), as discussed in detail in <span class="cite">[<a href="#Xchap3-key8">8</a>]</span> and corresponding program details in <span class="cite">[<a href="#Xchap3-key9">9</a>]</span>.</p>
-
 <p>In the screenshots below, the names of the machines $H_{1}$ and $H_{2}$ are part of the command prompts and are preceded by the date/time to show the order in which commands were issued. Command windows are also split into an upper and a lower panel to improve clarity. The upper panel in each figure shows the command to invoke the application, initiate data transfer, and connection termination whereas the lower panel is used to display the TCP connection state and any firewall rule(s) that need to be configured. We assume that all experiments begin with no firewall rules set. To ensure this, we recommend issuing the command <span class="rm-lmbx-10"><strong>sudo iptables -F</strong></span> on the machines before each experiment.</p>
-
 <p><span class="rm-lmbx-10"><strong>Experiment 1:</strong></span><br class="newline" /><span class="rm-lmbx-10"><strong>TCP State transition for normal TCP application closure.</strong></span></p>
-
 <p>The following experiment demonstrates this typical teardown scenario in Figure <a href="#x1-1007r3">3<!--tex4ht:ref: chap3-fig3 --></a> and Figure <a href="#x1-1008r4">4<!--tex4ht:ref: chap3-fig4 --></a>. In Figure <a href="#x1-1007r3">3<!--tex4ht:ref: chap3-fig3 --></a>, the application on $H_{2}$ moves the TCP connection state from LISTEN to ESTABLISHED and then, via intermediate transient states (as discussed above), to TIME_WAIT as shown by the last line of the lower panel of this figure.</p>
                                                                                                     
 <figure>
 	<img src="images/chap3/3.jpg" alt="PIC" id="x1-1007r3"/>
-	<figcaption>Figure 3. TCP state for a general application initiating termination</figcaption>
+	<figcaption><span class="fignum">Figure 3:</span> TCP state for a general application initiating termination</figcaption>
 </figure>
-
 <figure>
 	<img src="images/chap3/4.jpg" alt="PIC" id="x1-1008r4"/>
-	<figcaption>Figure 4. TCP state for a general application receiving termination from other side</figcaption>
+	<figcaption><span class="fignum">Figure 4:</span> TCP state for a general application receiving termination from other side</figcaption>
 </figure>
-
 <p>The states followed by the application on $H_{1}$ similarly shown in Figure <a href="#x1-1008r4">4</a>. Thus, from the ESTABLISHED state, the TCP connection follows intermediate transient states of CLOSE_WAIT and LAST_ACK before completely releasing all the associated resource.</p>
-
 <p>Under normal circumstances, the TCP connection closure follows the expected path and there is little reason for developers to have this detailed understanding of state changes. However, in some critical service function applications, the branding image and possibly the revenue of the service provider could be impacted if users perceive unsuccessful or delayed connection. For such applications, it is imperative that developers understand the details of various TCP termination states and the general conditions that lead to these states. We will now consider the situation where network failures during the teardown phase cause problems that can be diagnosed and rectified using our detailed understanding.</p>
 
 <h2><span class="num">4</span> TCP  Connection  Closure FIN_WAIT1 state</h2>
-
 <p><span class="rm-lmbx-10"><strong>Experiment 2:</strong></span><br class="newline" /><span class="rm-lmbx-10"><strong>TCP State FIN_WAIT1 ($H_{1}$) and ESTABLISHED ($H_{2}$)</strong></span></p>
-
 <p>In the absence of network faults, when $H_{1}$ sends a FIN message and moves to state FIN_WAIT1, it can expect to get an ACK almost immediately (i.e., within a few milliseconds) and thus move to state FIN_WAIT2. Thus, to observe $H_{1}$ in the transient state FIN_WAIT1, we need to simulate a network fault. As in our previous article <span class="cite">[<a href="#Xchap3-key8">8</a>]</span>, we will make use of the <span class="rm-lmri-10">iptables</span> utility to create abnormal network conditions.</p>
-
 <p>In Figure <a href="#x1-1005r2">2</a>, observe that $H_{1}$&#8217;s TCP connection state will remain in FIN_WAIT1 if it sends a FIN message but does not receive an ACK. This can occur either because the FIN message was lost in the network or the FIN was received but the ACK did not reach the application initiating connection close. The upper panel in Figure <a href="#x1-1010r5">5</a> shows an application on machine $H_{2}$ starting to run on TCP port 7777 at time 16:28:53, and the first line in the lower panel shows that the TCP connection state is LISTEN at time 16:28:57 (as described in detail in <span class="cite">[<a href="#Xchap3-key8">8</a>]</span>). The application on machine $H_{1}$ connects to the application on machine $H_{2}$ at 16:30:22, as shown in the upper panel of Figure <a href="#x1-1011r6">6</a>. The TCP connection state becomes ESTABLISHED, as shown by the output of the first command (issued at 16:30:41). Next, the text message &#8220;Hello&#8221; is exchanged, as shown in the upper panels of both these figures. To mimic the scenario where the FIN message is lost in the network, an iptables command is issued on $H_{1}$ to drop all FIN packets sent from $H_{1}$ with the destination port 7777 (shown by the third command in the lower panel of Figure <a href="#x1-1011r6">6</a>). Now the application on $H_{1}$ is terminated by pressing Ctrl-C, as shown by the fourth line in the upper panel of Figure <a href="#x1-1011r6">6</a>. When the TCP state is subsequently checked (fourth command in the lower panel of Figure <a href="#x1-1011r6">6</a>), it is FIN_WAIT1 at time 16:31:48. Since $H_{2}$ does not receive the FIN message (because of the <span class="rm-lmri-10">iptables </span>command on $H_{1}$), the TCP connection remains in the ESTABLISHED state, as shown by the last command in the lower panel of Figure <a href="#x1-1010r5">5</a> at time 16:31:55.</p>
-
 <figure>
 	<img src="images/chap3/5.jpg" alt="PIC" id="x1-1010r5"/>
-	<figcaption>Figure 5. Server states for understanding FIN_WAIT1</figcaption>
+	<figcaption><span class="fignum">Figure 5:</span> Server states for understanding FIN_WAIT1</figcaption>
 </figure>
-
 <figure>
 	<img src="images/chap3/6.jpg" alt="PIC" id="x1-1011r6"/>
-	<figcaption>Figure 6. Client state for understanding FIN_WAIT1</figcaption>
+	<figcaption><span class="fignum">Figure 6:</span> Client state for understanding FIN_WAIT1</figcaption>
 </figure>
                                                                                                     
 <p><strong><span class="rm-lmbx-10">Experiment 3:</span><br class="newline" /><span class="rm-lmbx-10">TCP State CLOSE_WAIT ($H_{1}$) and FIN_WAIT1 ($H_{2}$)</span></strong></p>
-
 <p>Let us now consider the other possibility where $H_{1}$ receives the FIN message, but the ACK it sends back to $H_{2}$ as it moves to the CLOSE_WAIT state (refer to Figure <a href="#x1-1005r2">2</a>) gets lost. In this case, the TCP connection state on $H_{2}$ will continue to be FIN_WAIT1. This scenario can be easily simulated by dropping the ACK message on $H_{2}$, as shown in Figure <a href="#x1-1012r7">7</a> and Figure <a href="#x1-1013r8">8</a>. In this experiment, when $H_{1}$ receives FIN it will send only the ACK (but not FIN) because we will assume that it still has some data to send. This functionality to send data even after receiving FIN from the other side cannot be achieved using the <span class="rm-lmri-10">netcat</span> utility (this utility immediately sends a FIN/ACK as response when it receives a FIN message), so we have developed a simple Python program <strong><span class="rm-lmbx-10">tcp_client.py </span></strong> that sends the current date and time as the data at a specified time interval (option <strong><span class="rm-lmbx-10">-d</span></strong>) for a specified number of times (option <strong><span class="rm-lmbx-10">-c</span></strong>). This program can be accessed from <span class="cite">[<a href="#Xchap3-key10">10</a>]</span>, and the key part of code is given in the Appendix.</p>
-
 <figure>
 	<img src="images/chap3/7.jpg" alt="PIC" id="x1-1012r7"/>
-	<figcaption>Figure 7. Sending FIN but not receiving ack of FIN</figcaption>
+	<figcaption><span class="fignum">Figure 7:</span> Sending FIN but not receiving ack of FIN</figcaption>
 </figure>
-
 <figure>
 	<img src="images/chap3/8.jpg" alt="PIC" id="x1-1013r8"/>
-	<figcaption>Figure 8. Receiving FIN, sending Ack for FIN, Ack is lost</figcaption>
+	<figcaption><span class="fignum">Figure 8:</span> Receiving FIN, sending Ack for FIN, Ack is lost</figcaption>
 </figure>
-
 <p>The upper panel of Figure <a href="#x1-1012r7">7</a> shows the data being received on $H_{2}$. The lower panel of this figure shows the TCP connection  state on this machine, which starts from LISTEN (the output of the first <span class="rm-lmri-10">netstat </span>command <span class="cite">[<a href="#Xchap3-key3">3</a>]</span><span class="cite">[<a href="#Xchap3-key4">4</a>]</span>). Once the application on machine $H_{1}$ connects, the TCP connection state on $H_{2}$ changes to ESTABLISHED (output of the second command issued at time 22:17:51). Now, the application on $H_{2}$ is aborted using Ctrl-C, so it sends the FIN message and moves to state FIN_WAIT1. The application on machine $H_{1}$ is shown in the upper panel of Figure <a  href="#x1-1013r8">8</a>. The lower panel shows the TCP connection state as well as firewall (<span class="rm-lmri-10">iptables</span>) commands that are used to mimic the abnormal network conditions. The first line of the lower panel of this figure shows that the connection is established, and then data communication takes place. To simulate poor network conditions, an <span class="rm-lmri-10">iptables</span> rule is invoked at time 22:18:04 to drop the ACK packet sent on port 7777. Thus, when at time 22:18:12, Ctrl-C (upper panel of Figure <a href="#x1-1012r7">7</a>) is pressed on $H_{2}$, it sends the FIN message which is received by $H_{1}$. However, the ACK response it sends is dropped by firewall and not received by $H_{2}$. Thus, the state of this connection on $H_{2}$ continues to remain FIN_WAIT1 as shown by the last line of the lower panel of Figure <a href="#x1-1012r7">7</a>. Since the application program on $H_{1}$ is still sending data, it does not send the FIN message and thus its state remains CLOSE_WAIT (output of the third netstat command as shown in lower panel of Figure <a href="#x1-1013r8">8</a>).</p>
-
 <p>Interestingly, the scenario described here can also arise in a perfectly functional network if the web applications are written without a full understanding of TCP connection states. For instance, suppose that when a poorly designed client application running on machine $H_{2}$ encounters an error, it sends the FIN message and immediately exits. Thus, even though the network is functional, the client application running on $H_{2}$ does not receive the ACK from the server application running on $H_{1}$, and the TCP connection state on $H_{1}$ remains in CLOSE_WAIT for a long time. This unnecessarily consumes system resources on the server, which can become a performance bottleneck when the faulty client application is a popular one.</p>
-
 <p><strong><span class="rm-lmbx-10">Experiment 4:</span><br class="newline" /><span class="rm-lmbx-10">TCP State FIN_WAIT1 ($H_{2}$) and LAST_ACK ($H_{1}$)</span></strong></p>
-
 <p>Another possible case is that the TCP connection state is FIN_WAIT1 on one machine and LAST_ACK on the other. This would occur when $H_{2}$ sends FIN, $H_{1}$ receives FIN and sends the ACK response and moves to the CLOSE_WAIT state (as in previous case) and then the application on $H_{1}$ invokes the <span class="lstinline"></span>close<span class="lmsy-10">}</span>() call because it has no more data to transmit. Thus, the machine $H_{1}$ will send a FIN message and move the TCP connection state to LAST_ACK state as it waits for the acknowledgement of its FIN in order to finally close the connection. However, when the second FIN message is lost in the network, $H_{2}$ will continue to remain in the FIN_WAIT1 state. This scenario is captured in Figure <a href="#x1-1014r9">9</a> and Figure <a href="#x1-1015r10">10</a>. The experimental steps as shown in Figure <a href="#x1-1014r9">9</a> are same as those carried out in previous experiment, but on $H_{1}$ we simply use the <span class="rm-lmri-10">netcat</span> (<span class="rm-lmri-10">nc</span>) utility. When the TCP connection is closed by the application at other end, <span class="rm-lmri-10">nc </span>also immediately closes the connection resulting in the issuance of a FIN message. A firewall rule can be defined to drop this second FIN message.</p>
-
 <figure>
 	<img src="images/chap3/9.jpg" alt="PIC" id="x1-1014r9"/>
-	<figcaption>Figure 9. Sending FIN, not receiving ACK</figcaption>
+	<figcaption><span class="fignum">Figure 9:</span> Sending FIN, not receiving ACK</figcaption>
 </figure>
-
 <figure>
 	<img src="images/chap3/10.jpg" alt="PIC" id="x1-1015r10"/>
-	<figcaption>Figure 10. Receiving FIN, sending ACK, and FIN-ACK</figcaption>
+	<figcaption><span class="fignum">Figure 10:</span> Receiving FIN, sending ACK, and FIN-ACK</figcaption>
 </figure>                                                                                                    
-
 <p>In Figure <a href="#x1-1014r9">9<!--tex4ht:ref: chap3-fig9 --></a>, the application (<span class="rm-lmri-10">nc </span>server) on $H_{2}$ starts in the upper panel at time 06:03:58, and its initial state is LISTEN as shown in the output of first command in the lower panel at time 06:04:57. The application (<span class="rm-lmri-10">nc </span>client) starts on $H_{1}$ at time 06:05:01 and connects to the server as shown in the upper panel of Figure <a href="#x1-1015r10">10<!--tex4ht:ref: chap3-fig10 --></a>. After the connection setup, the TCP connection state on both machines moves to ESTABLISHED, as shown by the outputs of the first command in the lower panel of Figure <a href="#x1-1015r10">10<!--tex4ht:ref: chap3-fig10 --></a> and the second command in the lower panel of Figure <a href="#x1-1014r9">9<!--tex4ht:ref: chap3-fig9 --></a>. The applications subsequently exchange some data (&#8220;Hello&#8221;). To simulate the network abnormality condition of losing the FIN-ACK packet, an <span class="rm-lmri-10">iptables</span> command is issued on $H_{1}$ (shown by the second command in the lower panel of Figure <a href="#x1-1015r10">10<!--tex4ht:ref: chap3-fig10 --></a>) at time 06:05:31. Now, the application is aborted on $H_{2}$ by pressing Ctrl-C (upper panel of Figure <a href="#x1-1014r9">9<!--tex4ht:ref: chap3-fig9 --></a>). This results in $H_{2}$ sending a FIN message and moving the TCP connection state to FIN_WAIT1. When $H_{1}$ receives the FIN message, it sends the ACK and moves to CLOSE_WAIT, and the application immediately invokes <span class="lstinline"></span>close(). This sends a FIN message and the TCP connection on $H_{1}$ moves to the LAST_ACK state (Figure <a href="#x1-1005r2">2<!--tex4ht:ref: chap3-fig2 --></a>) as shown by the output of the third command at time 06:05:44 in the lower panel of Figure <a href="#x1-1015r10">10<!--tex4ht:ref: chap3-fig10 --></a>. Since this packet is dropped in the network on account of the firewall rule, $H_{2}$ receives neither this ACK nor the FIN message. Hence, the TCP connection state on $H_{2}$ continues to be FIN_WAIT1, as shown by output of the third command in the lower panel of Figure <a href="#x1-1014r9">9<!--tex4ht:ref: chap3-fig9 --></a>.</p>
                                                                                                    
                                                                                                     
@@ -201,80 +151,65 @@ class="td11">                        </td></tr></table></div>
 
 <h2><span class="num">5</span> TCP  Connection  Closure: FIN_WAIT2 state</h2>
 
-
 <p>A TCP connection will reach the FIN_WAIT2 state only when it receives the ACK (<span class="cmr-10">2</span><span class="cmsy-10">&#x2032;</span>) message from the other side for the FIN (1) message it has sent. This also implies that other side has received the FIN (<span class="cmr-10">1</span><span class="cmsy-10">&#x2032;</span>) message and moved to the CLOSE_WAIT state. This is a normal communication process where both the network and the applications are behaving as expected. If the application for which the TCP connection is in CLOSE_WAIT state has no more data to transmit, the application invokes the <span class="lstinline"></span>close() call and TCP will send the FIN (3) message and move to the LAST_ACK state. The originating application that initiated connection close will remain in the FIN_WAIT2 if the second FIN (3) message is lost, implying network disturbance. Below we describe the experimental exercises to define network conditions depicting the TCP connection states of two communicating applications.</p>
-
 <p><strong><span class="rm-lmbx-10">Experiment 5:</span><br class="newline" /><span class="rm-lmbx-10">TCP State FIN_WAIT2 ($H_{2}$) and CLOSE_WAIT ($H_{1}$)</span></strong></p>
-
 <p>We start a netcat server on $H_{2}$. As before, it is necessary to have a client program that continues to send data even after the other side has initiated connection close. Hence, we use the previously described Python client program on $H_{1}$ to establish communication and exchange some data, as shown in the upper panels of Figure <a href="#x1-1017r11">11<!--tex4ht:ref: chap3-fig11 --></a> and Figure <a href="#x1-1018r12">12<!--tex4ht:ref: chap3-fig12 --></a>. At this point, the TCP connection is in the ESTABLISHED state as shown by the output of the first command in the lower panel of Figure <a href="#x1-1018r12">12<!--tex4ht:ref: chap3-fig12 --></a>. The client program <span class="rm-lmri-10">tcp</span><span class="rm-lmri-10">_client.py </span>is invoked to send 20 iterations of data transmission (option <strong><span class="rm-lmbx-10">-c</span></strong>) at an interval of 20 seconds (option <strong><span class="rm-lmbx-10">-d</span></strong>), and the data transmitted is the current date and time as can been seen in the upper panels of these two figures.</p>
                                                                                                     
          
 <figure>
 	<img src="images/chap3/11.jpg" alt="PIC" id="x1-1017r11"/>
-	<figcaption>Figure 11. FIN_WAIT2 state while receiving data</figcaption>
+	<figcaption><span class="fignum">Figure 11:</span> FIN_WAIT2 state while receiving data</figcaption>
 </figure>
-
 <figure>
 	<img src="images/chap3/12.jpg" alt="PIC" id="x1-1018r12"/>
-	<figcaption>Figure 12. CLOSE_WAIT state while other side initiated close</figcaption>
+	<figcaption><span class="fignum">Figure 12:</span> CLOSE_WAIT state while other side initiated close</figcaption>
 </figure>
-
 <p>When the <span class="rm-lmri-10">netcat </span>application is closed on $H_{2}$ at time 11:19:22, it sends a FIN (1) message to $H_{1}$ and moves to the FIN_WAIT1 state. The application on $H_{1}$ receives this FIN (<span class="cmr-10">1</span><span class="cmsy-10">&#x2032;</span>) message, responds with ACK (2) and moves to the CLOSE_WAIT state. Since it has more data to send, it does not send the FIN (3) message and continues to remain in the CLOSE_WAIT state (as shown by the output of the last command in the lower panel of Figure <a href="#x1-1018r12">12<!--tex4ht:ref: chap3-fig12 --></a>). However, when $H_{2}$ receives the ACK (<span class="cmr-10">2</span><span class="cmsy-10">&#x2032;</span>) message, it moves to the FIN_WAIT2 state as shown in the lower panel of Figure <a href="#x1-1017r11">11<!--tex4ht:ref: chap3-fig11 --></a> at time 11:19:25.</p>
-
 <p><strong><span class="rm-lmbx-10">Experiment 6:</span><br class="newline" /><span class="rm-lmbx-10">TCP State FIN_WAIT2 ($H_{2}$) and LAST_ACK ($H_{1}$)</span></strong></p>
-
 <p>In the above experiment, when the FIN (3) message sent by the application on $H_{1}$ does not reach $H_{2}$, then although $H_{1}$ will move the TCP connection state to LAST_ACK, the state on $H_{2}$ will continue to be FIN_WAIT2. To realize this situation, one must carefully understand the transitions. When the FIN (1) message sent by $H_{2}$ is received, $H_{1}$ will send the ACK (2) message and move to the CLOSE_WAIT state. When $H_{2}$ receives this ACK (<span class="cmr-10">2</span><span class="cmsy-10">&#x2032;</span>) message it will move to the FIN_WAIT2 state. When $H_{2}$ has finished sending its data, it will send the FIN (3) message that should be lost for the purposes of this experiment. Thus, one must carefully manage the timing of these events as shown in Figure <a href="#x1-1019r13">13<!--tex4ht:ref: chap3-fig13 --></a> and Figure&#x00A0;<a href="#x1-1020r14">14<!--tex4ht:ref: chap3-fig14 --></a>.</p>
                                                                                                     
 <figure>
 	<img src="images/chap3/13.jpg" alt="PIC" id="x1-1019r13"/>
-	<figcaption>Figure 13. FIN_WAIT2 awaiting FIN from other side</figcaption>
+	<figcaption><span class="fignum">Figure 13:</span> FIN_WAIT2 awaiting FIN from other side</figcaption>
 </figure>
-
 <figure>
 	<img src="images/chap3/14.jpg" alt="PIC" id="x1-1020r14"/>
-	<figcaption>Figure 14. Transition from CLOSE_WAIT to LAST_ACK</figcaption>
+	<figcaption><span class="fignum">Figure 14:</span> Transition from CLOSE_WAIT to LAST_ACK</figcaption>
 </figure>
                                                                                            
 <p>The TCP application on $H_{1}$ is invoked, which sends 3 data packets starting at time 15:33:35, at an interval of 10 seconds (option <strong><span class="rm-lmbx-10">-d 10</span></strong>) as shown in the upper panel of Figure <a href="#x1-1020r14">14<!--tex4ht:ref: chap3-fig14 --></a>. At 15:33:55, the application is aborted on $H_{2}$ (upper panel of Figure <a href="#x1-1019r13">13<!--tex4ht:ref: chap3-fig13 --></a>), hence the FIN (1) message is sent. Once the ACK (2) message is received, the TCP connection state on $H_{1}$ moves to FIN_WAIT2, as shown in the lower panel of Figure <a href="#x1-1019r13">13<!--tex4ht:ref: chap3-fig13 --></a>. The application on $H_{1}$ will wait for 10 more seconds before invoking <span class="lstinline"></span>close() at 15:34:05. At time 15:34:01, a firewall rule is invoked on $H_{1}$ to drop the FIN packet, as in the lower panel of Figure <a href="#x1-1020r14">14<!--tex4ht:ref: chap3-fig14 --></a>. Note that $H_{1}$ has not yet sent the FIN packet &#8211; it is still in the CLOSE_WAIT state as shown by the output of the fourth command in the lower panel. At time 15:34:05, when the application on $H_{1}$ invokes <span class="lstinline"></span>close(), it sends the FIN (3) packet and moves to the LAST_ACK state as shown by the output of the last line in the lower panel of Figure <a href="#x1-1020r14">14<!--tex4ht:ref: chap3-fig14 --></a>. However, this FIN (3) packet is dropped by the firewall rule, hence it does not reach $H_{2}$. Thus, the state of the TCP connection on $H_{2}$ remains FIN_WAIT2.</p>
 
 <h2><span class="num">6</span> TCP  Communication  state CLOSING</h2>
-
 <p>You will notice that we have not discussed the CLOSING state. This state is experimentally difficult to observe, because it requires a very high-precision timing of events and is therefore infeasible to create in typical lab scenarios. Thus, we will not define an experimental exercise for this state, but we will describe the general communication scenario that may lead to this state. This state can only be reached when both applications connected by a TCP connection decides to close the connection almost at the same time. Thus, both the applications send the FIN (1) message and move to the FIN_WAIT1 state awaiting the ACK of its FIN. When in this state, when the first application receives FIN (<span class="cmr-10">1</span><span class="cmsy-10">&#x2032;</span>) from the second application, it sends the ACK (7) message and moves to the CLOSING state. Similarly, when the second application receives FIN (<span class="cmr-10">1</span><span class="cmsy-10">&#x2032;</span>) from the first application, it sends the ACK (7) message and moves to the CLOSING state as well. Both applications will receive ACK (<span class="cmr-10">7</span><span class="cmsy-10">&#x2032;</span>) messages, and they will then move to TIME_WAIT state.</p>
 
 <h2><span class="num">7</span> Summary</h2>
-
 <p>In this paper we have explored the basic workings of the TCP state transition for the teardown phase. We have described these transitions for normal communication and have discussed scenarios that arise when specific network error conditions cause packet-loss during this phase. The timing and nature of packet loss has differing types of impact on the TCP connection state, and states that are normally transient (and difficult to observe) become long-lasting. Network applications that fail to handle such scenarios properly can lead to excessive resource utilization and may suffer from degraded performance. Thus, we hope that the insights into the TCP state transitions provided in this article will be valuable to web developers and devops teams to debug and fix such issues.</p>
-
 <p>The ESTABLISHED state, which corresponds to the data transfer phase of TCP connection, is perhaps the simplest one to understand. In this state, whenever a data packet is received, an acknowledgement is sent back. However, in real life, all performance-related issues for general network communications correspond to this state. Any discussion on TCP communication always entails congestion control and flow control, and both these issues are dealt with in the ESTABLISHED state. These two error-control mechanisms are often (erroneously) perceived to be the same, because the TCP response to both these errors results in same action. In fact, the two error conditions are quite different. Similarly, TCP fairness (the issue of how to allocate bandwidth when a single physical link of limited bandwidth is shared among multiple TCP connections) also corresponds to this state. In our next article, we will discuss the ESTABLISHED state in detail, and aspects of TCP performance or throughput when the network has limited bandwidth or is witnessing packet-loss.</p>
 
 <h2><span class="num">8</span> Appendix</h2>
-
 <p>Partial code for TCP client program to demonstrate FIN_WAIT1, CLOSE_WAIT and TIME_WAIT state. The complete program is accessible at <span class="cite">[<a href="#Xchap3-key10">10</a>]</span>.</p>
-
 <div class="verbatim" id="verbatim-1">
-srvr_addr&#x00A0;=&#x00A0;(ip_addr,&#x00A0;port) &#x00A0;<br />sock&#x00A0;=&#x00A0;socket.socket(socket.AF_INET, &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;socket.SOCK_STREAM) &#x00A0;<br />sock.connect(srvr_addr) &#x00A0;<br /> &#x00A0;<br />for&#x00A0;i&#x00A0;in&#x00A0;range(1,count): &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;#msg&#x00A0;=&#x00A0;chr(64&#x00A0;+&#x00A0;i)&#x00A0;*&#x00A0;buffer&#x00A0;+&#x00A0;"\n" &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;msg&#x00A0;=&#x00A0;datetime.datetime.now(). &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;strftime("%Y-%m-%d:%H:%M:%S")+"\n" &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;print&#x00A0;"Sending:&#x00A0;"&#x00A0;+&#x00A0;msg, &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;sent&#x00A0;=&#x00A0;sock.send(msg) &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;time.sleep(delay </div>
+<code>	
+srvr_addr&#x00A0;=&#x00A0;(ip_addr,&#x00A0;port) &#x00A0;<br />sock&#x00A0;=&#x00A0;socket.socket(socket.AF_INET, &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;socket.SOCK_STREAM) &#x00A0;<br />sock.connect(srvr_addr) &#x00A0;<br /> &#x00A0;<br />for&#x00A0;i&#x00A0;in&#x00A0;range(1,count): &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;#msg&#x00A0;=&#x00A0;chr(64&#x00A0;+&#x00A0;i)&#x00A0;*&#x00A0;buffer&#x00A0;+&#x00A0;"\n" &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;msg&#x00A0;=&#x00A0;datetime.datetime.now(). &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;strftime("%Y-%m-%d:%H:%M:%S")+"\n" &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;print&#x00A0;"Sending:&#x00A0;"&#x00A0;+&#x00A0;msg, &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;sent&#x00A0;=&#x00A0;sock.send(msg) &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;time.sleep(delay </code></div>
 
 <h2><span class="num">9</span> Experiential Exercises</h2>
-
 <p>All the example exercises discussed in this article make use of i) Linux built-in commands related to network utility <span class="rm-lmri-10">nc </span>for data transfer, ii) <span class="rm-lmri-10">netstat </span>for monitoring network connection state, and a simple python program (<span class="rm-lmri-10">tcp</span><span class="rm-lmri-10">_client.py</span>) to enable timing the packet transmission and respective finer control. If at your Linux installation, the <span class="rm-lmri-10">netstat </span>utility is not installed, then same can be installed by using the command <span class="lstinline"></span>sudo&#x00A0;apt<span class="cmsy-10">-</span>get&#x00A0;install&#x00A0;net<span class="cmsy-10">-</span>tools. Similarly, the netcat (nc) is available by default on all Linux and Apple Mac machines, and for Windows based systems, there are free open source versions available, which can be downloaded and installed. To develop a lasting understanding, it is suggested that reader should carry out all the experimental exercises. The reader should explore even the different sequencing of steps such as firewall rules, packet loss, etc. to help consolidate the understanding.<img src="images/circledC.jpg" alt="PIC" class="graphics" width="11" height="11" ><!--tex4ht:graphics name="mainfile0x.png" src="src/Figures/circledC.eps"  --><!--l. 261--></p>
 
 
-<p><span class="rm-lmbx-12x-x-120">References</span><!--l. 261--></p>
-<div class="thebibliography">
-<p class="bibitem" ><span class="biblabel">[1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a  id="Xchap3-key1"></a>RFC   793,   &#8220;Transmission   Control   Protocol&#8221;,   Information   Sciences   Institute,   USC,   CA,   Sep   1981, <a href="https://tools.ietf.org/html/rfc793" class="url" ><span class="rm-lmtt-10">https://tools.ietf.org/html/rfc793</span></a>. Last accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key2"></a>Ram Rustagi, Viraj Kumar, &#8220;Understanding Transport Layer Basics&#8221;, ACCS journal of Computing and Communications, Vol 2, Issue 3, Sep 2018. <a href="https://acc.digital/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/" class="url" ><span class="rm-lmtt-10">https://acc.digital/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/</span></a>, last accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key3"></a>netstat: man  page, <a href="http://manpages.ubuntu.com/manpages/bionic/man8/netstat.8.html" class="url" ><span class="rm-lmtt-10">http://manpages.ubuntu.com/manpages/bionic/man8/netstat.8.html</span></a>, Accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key4"></a>netstat usage examples: <a href="https://www.tecmint.com/20-netstat-commands-for-linux-network-management/" class="url" ><span class="rm-lmtt-10">https://www.tecmint.com/20-netstat-commands-for-linux-network-management/</span></a>, Accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key5"></a>Netcat (nc) command utility,  <a href="http://manpages.ubuntu.com/manpages/xenial/man1/nc.traditional.1.html" class="url" ><span class="rm-lmtt-10">http://manpages.ubuntu.com/manpages/xenial/man1/nc.traditional.1.html</span></a>, last accessed Feb, 2019.</p>
-<p class="bibitem" ><span class="biblabel">[6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key6"></a>nc cheat-sheet, <a href="https://www.sans.org/security-resources/sec560/netcat_cheat_sheet_v1.pdf" class="url" ><span class="rm-lmtt-10">https://www.sans.org/security-resources/sec560/netcat</span><sub><span class="cmr-7">c</span></sub><span class="rm-lmtt-10">heat</span><sub><span class="cmr-7">s</span></sub><span class="rm-lmtt-10">heet</span><sub><span class="cmr-7">v</span></sub><span class="rm-lmtt-10">1.pdf</span></a>, last accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key7"></a>Iptables tutorial. <a href="https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html" class="url" ><span class="rm-lmtt-10">https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html</span></a>, last accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key8"></a>Ram Rustagi, Viraj Kumar, &#8220;Understanding TCP States &#8211; Part I&#8221;, ACCS journal of Computing and Communications, Vol 2, Issue 4, Dec 2018; <a href="https://acc.digital/experiential-learning-of-networking-technologies-understanding-tcp-states-part-1/" class="url" ><span class="rm-lmtt-10">https://acc.digital/experiential-learning-of-networking-technologies-understanding-tcp-states-part-1/</span></a>, last accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key9"></a>Example details for TCP Connection state during connection setup, <a href="https://github.com/rprustagi/EL-TCP-States-1.git" class="url" ><span class="rm-lmtt-10">https://github.com/rprustagi/EL-TCP-States-1.git</span></a>. Last accessed Feb 2019.</p>
-<p class="bibitem" ><span class="biblabel">[10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a id="Xchap3-key10"></a>Example details for TCP Connection state during tear down phase, <a href="https://github.com/rprustagi/EL-TCP-States-2.git" class="url" ><span class="rm-lmtt-10">https://github.com/rprustagi/EL-TCP-States-2.git</span></a>. Last accessed Feb 2019.</p>
-</div>
-</div>
+<h2>References</h2>
+<ul class="bibliography">
+	<li id="Xchap3-key1" class="bibitem"><span class="bibmark">[1]</span> RFC   793,   &#8220;Transmission   Control   Protocol&#8221;,   Information   Sciences   Institute,   USC,   CA,   Sep   1981, <a href="https://tools.ietf.org/html/rfc793" class="url" ><span class="rm-lmtt-10">https://tools.ietf.org/html/rfc793</span></a>. Last accessed Feb 2019.</li>
+	<li id="Xchap3-key2" class="bibitem"><span class="bibmark">[2]</span> Ram Rustagi, Viraj Kumar, &#8220;Understanding Transport Layer Basics&#8221;, ACCS journal of Computing and Communications, Vol 2, Issue 3, Sep 2018. <a href="https://acc.digital/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/" class="url" ><span class="rm-lmtt-10">https://acc.digital/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/</span></a>, last accessed Feb 2019.</li>
+	<li id="Xchap3-key3" class="bibitem"><span class="bibmark">[3]</span> netstat: man  page, <a href="http://manpages.ubuntu.com/manpages/bionic/man8/netstat.8.html" class="url" ><span class="rm-lmtt-10">http://manpages.ubuntu.com/manpages/bionic/man8/netstat.8.html</span></a>, Accessed Feb 2019.</li>
+	<li id="Xchap3-key4" class="bibitem"><span class="bibmark">[4]</span> netstat usage examples: <a href="https://www.tecmint.com/20-netstat-commands-for-linux-network-management/" class="url" ><span class="rm-lmtt-10">https://www.tecmint.com/20-netstat-commands-for-linux-network-management/</span></a>, Accessed Feb 2019.</li>
+	<li id="Xchap3-key5" class="bibitem"><span class="bibmark">[5]</span> Netcat (nc) command utility,  <a href="http://manpages.ubuntu.com/manpages/xenial/man1/nc.traditional.1.html" class="url" ><span class="rm-lmtt-10">http://manpages.ubuntu.com/manpages/xenial/man1/nc.traditional.1.html</span></a>, last accessed Feb, 2019.</li>
+	<li id="Xchap3-key6" class="bibitem"><span class="bibmark">[6]</span> nc cheat-sheet, <a href="https://www.sans.org/security-resources/sec560/netcat_cheat_sheet_v1.pdf" class="url" ><span class="rm-lmtt-10">https://www.sans.org/security-resources/sec560/netcat</span><sub><span class="cmr-7">c</span></sub><span class="rm-lmtt-10">heat</span><sub><span class="cmr-7">s</span></sub><span class="rm-lmtt-10">heet</span><sub><span class="cmr-7">v</span></sub><span class="rm-lmtt-10">1.pdf</span></a>, last accessed Feb 2019.</li>
+	<li id="Xchap3-key7" class="bibitem"><span class="bibmark">[7]</span> Iptables tutorial. <a href="https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html" class="url" ><span class="rm-lmtt-10">https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html</span></a>, last accessed Feb 2019.</li>
+	<li id="Xchap3-key8" class="bibitem"><span class="bibmark">[8]</span> Ram Rustagi, Viraj Kumar, &#8220;Understanding TCP States &#8211; Part I&#8221;, ACCS journal of Computing and Communications, Vol 2, Issue 4, Dec 2018; <a href="https://acc.digital/experiential-learning-of-networking-technologies-understanding-tcp-states-part-1/" class="url" ><span class="rm-lmtt-10">https://acc.digital/experiential-learning-of-networking-technologies-understanding-tcp-states-part-1/</span></a>, last accessed Feb 2019.</li>
+	<li id="Xchap3-key9" class="bibitem"><span class="bibmark">[9]</span> Example details for TCP Connection state during connection setup, <a href="https://github.com/rprustagi/EL-TCP-States-1.git" class="url" ><span class="rm-lmtt-10">https://github.com/rprustagi/EL-TCP-States-1.git</span></a>. Last accessed Feb 2019.</li>
+	<li id="Xchap3-key10" class="bibitem"><span class="bibmark">[10]</span> Example details for TCP Connection state during tear down phase, <a href="https://github.com/rprustagi/EL-TCP-States-2.git" class="url" ><span class="rm-lmtt-10">https://github.com/rprustagi/EL-TCP-States-2.git</span></a>. Last accessed Feb 2019.</li>
+</ul>
  
 </body>
 </html>                                                                                        
-
 

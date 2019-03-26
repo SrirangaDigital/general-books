@@ -25,6 +25,7 @@ body {
 	font-family: "Lora", sans-serif; 	
 	font-size: 1em;
 	box-sizing: border-box;
+	line-height: 1.4;
 }
 
 .maintext{
@@ -45,6 +46,13 @@ body {
 	text-align: center;
 }
 
+.maintext h1 .subtitle{
+	font-weight: normal !important;
+	font-size: 0.8em !important;
+	font-style: italic;
+}
+
+
 .maintext small.affiliation{
 	text-transform: capitalize;
 }
@@ -53,7 +61,7 @@ body {
 	text-transform: uppercase;
 }
 
-.maintext .titleimage, .maintext figure{
+.maintext .titleimage, .maintext figure, maintext table{
 	text-align: center;
 }
 .maintext .titleimage img{
@@ -63,8 +71,22 @@ body {
 .maintext figure img{
 	width: 50%;
 }
-.maintext figure .fignum{
+.maintext figure .fignum, .maintext table .tabnum{
 	font-weight: bold;
+}
+
+.maintext table.ruled{
+	margin-bottom: 2em;
+	border-collapse: collapse;
+	page-break-inside: avoid;
+	display:block;
+	text-align: center;
+}
+.maintext table.ruled tr td, .maintext table.ruled tr th{	
+	border: 1px solid #CCC;
+	text-align: center;
+	padding: 4px;
+	line-height: 2em;
 }
 
 .maintext figure figcaption{
