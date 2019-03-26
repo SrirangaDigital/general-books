@@ -61,7 +61,15 @@ body {
 }
 
 .maintext figure img{
-	width: 75%;
+	width: 50%;
+}
+.maintext figure .fignum{
+	font-weight: bold;
+}
+
+.maintext figure figcaption{
+	margin-top: 1em;
+	margin-bottom: 2em;
 }
 
 .maintext span.num{
