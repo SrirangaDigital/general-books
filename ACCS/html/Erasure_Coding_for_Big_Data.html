@@ -220,8 +220,9 @@ shown in Figure <span class="ref"><a href="#fig:pentagon_712">13</a></span> (rig
 </figure>
 <ol>
 <li><em>Optimal-Access</em> In general in an RGC, while each helper node sends $\beta$ symbols to the replacement node, these symbols may however, be derived by taking linear transformations of a larger number of symbols stored in the helper node. Potentially this could be as large as $\alpha$, the total number of symbols stored in the helper node. An RGC is said to be optimal-access (OA) if the number of symbols accessed at a helper node is equal to the number $\beta$, of symbols transferred to the replacement node. OA-RGC also go by the name help-by-transfer RGC.</li>  
-<li><em>Small Sub-Packetization Level:</em> By this we mean, the least possible value $\alpha$ of sub-packetization.  A lower value of $\alpha$ helps reduce or eliminate the phenomenon of fragmented reads. Fragmented reads take place when a storage device has its memory structured in such a way that each time a read takes place, a minimum number of $J$ contiguous symbols are read off the memory.  In an RGC, the $\beta$ (or more) symbols accessed from each helper node may not be contiguous, thereby causing the number of symbols accessed to be larger than the number theoretically needed. A small value of sub-packetization helps as one can obtain contiguous reads by operating on several (in the worst case, $J$) codewords at the same time.  A large value of $\alpha$ would place a lower bound $\geq J(k \alpha)$ on the amount of data needed to be stored to avoid fragmented reads.</li>
-<li><p>A lower bound on the smallest possible value of the sub-packetization level $\alpha$ of an OA-MSR code with $d=(n-1)$ is given by <span class="cite">[<a href="#BalKum_subpkt">20</a>]</span>:</p>
+<li>
+<p><em>Small Sub-Packetization Level:</em> By this we mean, the least possible value $\alpha$ of sub-packetization.  A lower value of $\alpha$ helps reduce or eliminate the phenomenon of fragmented reads. Fragmented reads take place when a storage device has its memory structured in such a way that each time a read takes place, a minimum number of $J$ contiguous symbols are read off the memory.  In an RGC, the $\beta$ (or more) symbols accessed from each helper node may not be contiguous, thereby causing the number of symbols accessed to be larger than the number theoretically needed. A small value of sub-packetization helps as one can obtain contiguous reads by operating on several (in the worst case, $J$) codewords at the same time.  A large value of $\alpha$ would place a lower bound $\geq J(k \alpha)$ on the amount of data needed to be stored to avoid fragmented reads.</p>
+<p>A lower bound on the smallest possible value of the sub-packetization level $\alpha$ of an OA-MSR code with $d=(n-1)$ is given by <span class="cite">[<a href="#BalKum_subpkt">20</a>]</span>:</p>
 <p>
 \begin{equation}
 \alpha \geq  r^{\lceil \frac{n-1}{r} \rceil}. \label{eq:sbpl} 
@@ -238,7 +239,7 @@ shown in Figure <span class="ref"><a href="#fig:pentagon_712">13</a></span> (rig
 <p>We explain the structure of the Clay code using an example code having parameters:</p>
 <p> 
  \begin{eqnarray*}
- \{ (n=4,k=2,d=3), (\alpha=4,\beta=2), B=8, \fq=\mathbb{F}_4 \ (q=4)$\}. 
+ \{ (n=4,k=2,d=3), (\alpha=4,\beta=2), B=8, \fq=\mathbb{F}_4 \ (q=4)\}. 
  \end{eqnarray*}
 </p> 
 <p>We will depict the Clay code as a data cube as shown in Figure <span class="ref"><a href="#fig:datacubeA_subchunks42">15</a></span> on the left.  The datacube is composed of $16$ small cylinders, each associated with a symbol in $\fq$.  A vertical column of $4$ cylinders corresponds to the $4$ symbols contained in a single node (as $\alpha=4$). This code is required to have the following properties:</p>

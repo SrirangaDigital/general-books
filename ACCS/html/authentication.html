@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>AI Powered Society</title>
+	<title>An Overview of Authentication for Computer Communications</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 	</script>
-	<script type="text/javascript" async src="js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>	
+	<script type="text/javascript" async src="js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 <body class="maintext">
 
@@ -58,13 +58,15 @@ description of various attacks/threats handled by the scheme will be given.</p>
 
 <h2><span class="num">2</span>  Common Authentication Methods</h2>
                                                                                                     
-<p>A traditional way to classify is based on the following factors <span class="cite">[<a href="#Xchap2-key2">2</a>]</span>:
+<p>A traditional way to classify is based on the following factors <span class="cite">[<a href="#Xchap2-key2">2</a>]</span>:</p>
+
+<blockquote>
 Something you know - Password<br /> 
 Something you are - Biometric<br />
 Something you have - Access tokens, Certificates<br />
-Something you do - make a gesture, read a<br /> 
-text, match a CAPTCHA
-</p>
+Something you do - make a gesture, read a text, match a CAPTCHA
+</blockquote>
+
 <p>The password is simple to use and remember. It has been used in military since ancient times. A person wishing to enter
 protected area is to supply a password and he is allowed entry only if the password is correct. Even in modern times, its use is
 widespread to gain entry into computers, mobile phones, ATM, etc. If the password is formed from multiple words it is called
@@ -122,13 +124,7 @@ Protocol (PAP) is used <span class="cite">[<a
 href="#Xchap2-key4">4</a>]</span>. After the user establishes a link, it repeatedly sends his id/password to authenticator. If he receives
 ACK, the connection is established. If the user receives NAK instead, the connection is terminated. The protocol is simple and the
 drawback is that the password is sent in the clear text.</p>
-<p>Challenge Handshake Authentication Protocol (CHAP) is more secure than the PAP and makes use of a cryptographic hash
-function such as MD5 or SHA <span class="cite">[<a 
-href="#Xchap2-key1">1</a>]</span>. A cryptographic hash is a one-way function takes arbitrary size input and after computations it
-outputs 128-bit output. The security of the cryptographic hash comes from the fact that given a message &#8220;m&#8221; which
-hashes to digest &#8220;d&#8221;, it is computationally hard to find another message &#8220;m<span 
-class="cmsy-10">&#x2032;</span>&#8221; that hashes to the same digest
-&#8220;d&#8221;.</p>
+<p>Challenge Handshake Authentication Protocol (CHAP) is more secure than the PAP and makes use of a cryptographic hash function such as MD5 or SHA <span class="cite">[<a href="#Xchap2-key1">1</a>]</span>. A cryptographic hash is a one-way function takes arbitrary size input and after computations it outputs 128-bit output. The security of the cryptographic hash comes from the fact that given a message &#8220;m&#8221; which hashes to digest &#8220;d&#8221;, it is computationally hard to find another message &#8220;m<span class="cmsy-10">&#x2032;</span>&#8221; that hashes to the same digest &#8220;d&#8221;.</p>
 <p>RFC 1994 is the standard for CHAP for authentication used by the servers to validate the identity of remote clients <span class="cite">[<a 
 href="#Xchap2-key5">5</a>]</span>. Both the server and the client perform a hash operation on the password and transmits the hash result rather than sending the password
 itself as shown in Figure <a href="#x1-1005r1">1</a>. After the link is established the server sends a random challenge to the authenticating client entity.
