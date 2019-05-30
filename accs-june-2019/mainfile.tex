@@ -1,0 +1,73 @@
+\documentclass[9pt,twosided]{book}
+\usepackage{amssymb,amsmath}
+
+\usepackage[paperwidth=210mm, paperheight=280mm, total={185mm, 240mm}, ignoreheadfoot, footnotesep=6mm plus 4pt minus 4pt, centering,asymmetric]{geometry}
+%%280mm - 240mm = 40mm (1.5cm(header) + 0.5cm(header gap) + 0.75cm(footer gap) + 1.25cm) 
+
+
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{graphicx,epsfig}
+\usepackage{fontspec,lipsum}
+\usepackage{listings}
+\usepackage{unicode-math,bm}
+\defaultfontfeatures{Ligatures=TeX}
+%\usepackage{parskip}
+
+%\setlength{\parskip}{15pt}
+
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{table}{chapter}
+
+
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{breaklinks=true}
+\urlstyle{same}
+
+\setmainfont{Lora}
+\setsansfont{Lora}
+
+\parindent=0pt
+
+\usepackage{footmisc}
+
+\renewcommand*\thesection{\arabic{section}}
+
+\input macros
+
+\begin{document}
+
+
+
+\frontmatter
+
+
+\mainmatter
+
+%~ \input src/00b-editor
+%~ \newpage
+\input src/001-chapter1
+\message{\the\subsecdimen}
+
+%~ \input src/002-chapter2
+%~ \newpage
+%~ \input src/003-chapter3
+%~ \input src/004-chapter4
+%~ \input src/005-chapter5
+\end{document}
+
+
+%~ \setcounter{page}{25}
+%~ \fancyhead[LO]{\includegraphics[width=\paperwidth,height=\textheight, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
+%~ \fancyhead[RE]{\includegraphics[width=\paperwidth,height=\textheight, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
+%~ \chead[]{}
+%~ \lhead[\small\bf\thepage]{\slshape\bfseries\small\leftmark} 
+%~ \rhead[\slshape\bfseries\small\leftmark]{\small\bf\thepage}
+%~ \lfoot[]{}
+%~ \cfoot[]{}
+%~ \rfoot[]{}
+%\input src/002-chapter2
+
+
