@@ -8,19 +8,22 @@
 \usepackage{graphicx,float}
 \usepackage{epsfig}
 \usepackage{fontspec,lipsum}
-\usepackage{listings}
 \usepackage{unicode-math,bm}
 \defaultfontfeatures{Ligatures=TeX}
-%~ \usepackage{chngcntr}
 \usepackage{txfonts}
 %\usepackage{parskip}
 \usepackage{fancyvrb}
 \usepackage{listings}
 \usepackage{pxfonts}
 
+\usepackage{listings}
+\lstset{
+    escapeinside={(*}{*)}
+}
 
 %\setlength{\parskip}{15pt}
 
+\usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 \counterwithout{equation}{chapter}
 \counterwithout{table}{chapter}
@@ -39,7 +42,7 @@
 \usepackage{footmisc}
 
 \renewcommand*\thesection{\arabic{section}}
-\renewcommand{\thesection}{\Roman{section}} 
+%\renewcommand{\thesection}{\Roman{section}} 
 \input macros
 
 \begin{document}
@@ -51,9 +54,9 @@
 
 \mainmatter
 
-%\input src/001-chapter001
-%\input src/002-chapter002
-%\input src/003-chapter003
+\input src/001-chapter001
+\input src/002-chapter002
+\input src/003-chapter003
 \input src/004-chapter004
 \end{document}
 
