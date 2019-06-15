@@ -23,7 +23,7 @@ International Institute of Information Technology – Bangalore (IIITB), Bangalo
 
 5G promises to support new level of use cases that will deliver a better user experience. The 3rd Generation Partnership Project (3GPP) \cite{art4-key01} defined 5G system introduced fundamental changes on top of its former cellular systems in several design areas, including security. Unlike in the legacy systems, the 5G architecture design considers Home control enhancements for roaming customer, tight collaboration with the 3rd Party Application servers, Unified Authentication framework to accommodate various category of devices and services, enhanced user privacy, and secured the new service based core network architecture. Further, 3GPP is investigating the enhancements to the 5G security aspects to support longer security key lengths, False Base station detection and wireless backhaul in the Phase-2 of 5G standardization \cite{art4-key02}. This paper provides the key enhancements specified by the 3GPP for 5G system, particularly the differences to the 4G system and the rationale behind the decisions.
 
-\section*{Introduction}
+\section{Introduction}
 
 The 3rd Generation Partnership Project (3GPP) is the international standards organization responsible for industry-wide 5G standards \cite{art4-key01}. The security group in 3GPP (Service and System Aspects WG\#3 (SA3)) \cite{art4-key02}, is responsible to specify the security aspects of the cellular systems specified in 3GPP. The 3GPP develops the technical specifications (TS), publishes the TSs under the system ‘Releases’. Each 3GPP Release provides a set of stable features and its functionalities, for the implementation of features at a given point and then permit for the addition of new functionality in the subsequent Releases. The latest Release-15 (Rel-15), published in Dec-2018, specified the first set of TSs for 5G system. As the Release 15 work (often referred as ‘5G Phase 1’) has matured and drawn to 100\% completion, the working groups in 3GPP are focusing now on Release 16 (referred as ‘5G Phase 2’) on the enhancements, which is planned to be published in first quarter of 2020, as shown in Figure~\ref{chap4-fig01}, which is published by the 3GPP\cite{art4-key01}.
 
@@ -39,7 +39,7 @@ This paper provides an outline of the background to the evolution to 5G security
 
 \begin{multicols}{2}
 
-\section*{Home Control Enhancements}
+\section{Home Control Enhancements}
 
 \noindent
 {\bf {\textit{A. Home Participation in Authentication procedure}}}
@@ -57,7 +57,7 @@ Currently, establishment of roaming agreements are based on the trust relationsh
 Unlike the early systems, the 5G system supports end-to-end security between the home network and the UE, for security provisioning of the configuration parameters, using the control plane. Until 5G, the provision of the home network parameters are done as proprietary mechanism (Over-the-Air mechanisms) and there is dependency on the $\text{3}^{rd}$ parties (e.g., Operation and Management servers). The 3GPP enhanced the key hierarchy of the 4G for the 5G and introduced a new key $K_{AUSF}$, derived by the AUSF and the UE, after successful authentication for e2e protection, as shown in Figure~\ref{chap4-fig03} \cite{art4-key03}. By this enhanced key hierarchy, the home network can securely provision the home network configuration parameters like, preferred PLMN list, Routing ID, like so, when the UE is in roaming.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1.9]{src/Figures/chap4/chap4-fig03.jpg}
+\includegraphics[scale=1.8]{src/Figures/chap4/chap4-fig03.jpg}
 \caption{ Enhanced Key hierarchy to support e2e protection between the Home network and the UE}\label{chap4-fig03}
 \end{figure}
 
@@ -71,7 +71,7 @@ The Steering of Roaming is to enable the home network operator to steer its roam
 \caption{Security mechanism for SoR}\label{chap4-fig04}
 \end{figure}
 
-\section*{Unified Authentication Framework}
+\section{Unified Authentication Framework}
 
 3GPP adopts the most reliable IETF EAP framework for the 5G System, as to support various type of authentication methods and at the same time to support access network agnostic authentication procedure \cite{art4-key03}. Support for various authentication method is required to support various category of devices that has different secure storage and execution environments. For example, it is efficient and effective to have certificate based authentication for Machine Type communication devices for accessing the Non-public networks, password/biometric based authentication for accessing private network and AKA credentials based authentication for accessing the public networks. Further access agnostic authentication framework is required to access the 5G core network, as to have single authentication framework to support access from multiple access network technologies 5G, WLAN, Wired line access, like so. The EAP framework is used between the UE and network, over the N1 interface to perform network access authentication using the AKA authentication method, either via Next Radio (NR) or via WLAN, as shown in Figure~\ref{chap4-fig05}.
 \begin{figure}[H]
@@ -83,7 +83,7 @@ The Steering of Roaming is to enable the home network operator to steer its roam
 \end{figure}
 
 
-\section*{User Privacy}
+\section{User Privacy}
 
 \noindent
 {\bf {\textit{A. SUPI concelement}}}
@@ -107,7 +107,7 @@ A UE initiates registration procedure to register to a PLMN by sending a Registr
 
 Initial NAS message protection mechanism has been introduced to provide the encryption of the sensitive data. In this procedure when the UE does not have 5G NAS security context then the UE will send the sensitive data encrypted after the 5G NAS security context has been established using the NAS ciphering algorithm of the 5G NAS security context. If the UE has a valid NAS security context then the UE encrypts the sensitive data using the NAS ciphering algorithm of the current 5G NAS security context. The NAS ciphering algorithm is chosen as per the local regulation.
 
-\section*{Network Security}
+\section{Network Security}
 
 \noindent
 {\bf {\textit{A. User Plane Security}}}
@@ -117,9 +117,11 @@ In legacy systems (2G and 3G), the user plane protection at radio bearer level (
 Thus in 5G System, it is agreed that the use of User Plane protection (Integrity Protection and/or encryption) depends on operator-dependent policy, which means optional for the network to enable the User Plane protection for a PDU session, as shown in Figure~\ref{chap4-fig07}, based on the security policy decided by the operator. The serving network (which may be a roaming partner) can override the security policy of the home network. The operator sets the policy to disable/enable the UP protection for some reason (service-dependent policy, e.g. disabled for online Gaming, enabled for IoT services, etc.).  If bearer level protection is enabled, then all user plane data of a PDU session is encrypted and/or integrity protected based on security policy irrespective of whether the data is already protected or not at the higher layer.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1.25]{src/Figures/chap4/chap4-fig07.jpg}
+\includegraphics[scale=1.15]{src/Figures/chap4/chap4-fig07.jpg}
 \caption{Selective User Plane protection}\label{chap4-fig07}
 \end{figure}
+
+\vskip -.3cm
 
 \noindent
 {\bf {\textit{B. Service Based Interface security}}}
@@ -145,7 +147,7 @@ For authentication of the CAPIF-1e reference point, mutual authentication based 
 \caption{Security Aspects of Common API Framework (CAPIF)}\label{chap4-fig09}
 \end{figure}
 
-\section*{Upcoming Security Aspects\hfill\break (5G Phase-2)}
+\section{Upcoming Security Aspects\hfill\break (5G Phase-2)}
 
 \noindent
 {\bf {\textit{A. Support for 256bits keys}}}
@@ -180,7 +182,7 @@ On receiving the system information the UE generates digital signature.  The sys
 
 The size of the digital signature leads to increase in the signalling overhead. System information is periodically broadcasted, in order to reduce the overhead; protection can be applied once every ‘N’ period instead of every period. However, there are other potential open issues are under consideration, like the UE checks that the timestamp is within an acceptable time-window before it verifies the signature to prevent replay attacks. But, UE does not having access to that accurate clock information for signature verification.
 
-\section*{Conclusion}
+\section{Conclusion}
 
 It is expected from the 5G system to deliver QoS, QoE, reliability and security, at par with previous generation, unlicensed radio access technologies and also with the advancing fixed networking. With the phase-1 specified security mechanism, the 5G system will rule out the vulnerability identified in the legacy wireless generations and the foreseen security threats. 3GPP will drive the work on the Phase-2 topics further to standardize the new enhancements, if any.
 
