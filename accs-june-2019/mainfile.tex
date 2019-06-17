@@ -1,0 +1,63 @@
+\documentclass[9pt,twosided]{book}
+\usepackage{amssymb,amsmath}
+
+\usepackage[paperwidth=210mm, paperheight=280mm, total={185mm, 240mm}, ignoreheadfoot, footnotesep=6mm plus 4pt minus 4pt, centering,asymmetric]{geometry}
+%%280mm - 240mm = 40mm (1.5cm(header) + 0.5cm(header gap) + 0.75cm(footer gap) + 1.25cm) 
+
+\usepackage{blindtext,multicol}
+\usepackage{graphicx,float}
+\usepackage{epsfig}
+\usepackage{fontspec,lipsum}
+\usepackage{unicode-math,bm}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{txfonts}
+%\usepackage{parskip}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{pxfonts}
+
+\usepackage{listings}
+\lstset{
+    escapeinside={(*}{*)}
+}
+
+%\setlength{\parskip}{15pt}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{table}{chapter}
+
+
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{breaklinks=true}
+\urlstyle{same}
+
+\setmainfont{Lora}
+\setsansfont{Lora}
+
+\parindent=0pt
+
+\usepackage{footmisc}
+
+\renewcommand*\thesection{\arabic{section}}
+%\renewcommand{\thesection}{\Roman{section}} 
+\input macros
+
+\begin{document}
+
+
+
+\frontmatter
+
+
+\mainmatter
+
+\input src/001-chapter001
+\input src/002-chapter002
+\input src/003-chapter003
+\input src/004-chapter004
+\end{document}
+
+
