@@ -95,32 +95,32 @@ All the exercise steps described assume that two machines, namely, Client (C\_m)
 \caption{ Basic setup for experiential learning}\label{chap3-fig04}
 \end{figure}
 
-\noindent
-\textbf{Exercise 1}\label{chap3-Exe1}
+\setcounter{section}{0}
+\section{Exercise}\label{chap3-Exe1}
 
 \textbf{Topic: Basic understanding of TCP Flow Control with default setup i.e. with Window Scaling}
 \begin{itemize}
 \item[a.] On the server machine, run the server program as 
 
-python3  accs\_server.py -b 200 -d 1 -p 9999
+\texttt{python3  accs\_server.py -b 200 -d 1 -p 9999}
 
 This will wait for one client to connect and send 200 bytes of data every second.
 
 \item[b.] On the client machine, in one terminal run tcpdump program to look at the window size which is sent. Tcpdump program is used with basic default option and it will show the receive window value (the value of rwnd).  Use the port number 9999 (or any other port of your choice) to capture the traffic. Assuming that the server’s IP address is 10.211.55.2 and uses port number 9999, invoke the command as below
 
-sudo tcpdump -n -i enp0s5 host 10.211.55.2 and port 9999
+\texttt{sudo tcpdump -n -i enp0s5 host 10.211.55.2 and port 9999}
 
 Please check the Ethernet interface name and replace it appropriately instead of enp0s5.
 
 \item[c.] On the client machine, in another terminal, invoke the client program which will read 100 bytes at a time at an interval of 2 seconds, as below
 
-python3 accs\_client.py -s 10.211.55.2 -p 9999 -b 100 -d 2 -c 1000
+\texttt{python3 accs\_client.py -s 10.211.55.2 -p 9999 -b 100 -d 2 -c 1000}
 
 Please check the IP address of server and replace it appropriately instead of 10.211.55.2.
 
 \item[d.] The above will connect to the server, and the server will start sending data, which will be displayed on screen.
 
-\item[e.] Look at the output of tcpdump command (in step 2 above), and look at the window size. Note down the value of win field and it is likely to increase with each packet received from server. Given below are sample output for first 4 capture outputs of packets sent from client to server. Notice that win field value starts increasing slowly. The value of ack field is consecutively as 201, 401, 601 etc. i.e. increases by 200 each time indicating that 200 bytes are received. Since data is continuously received, TCP stack slowly increases the client receive buffer size as well.
+\item[e.] Look at the output of tcpdump command (in step 2 above), and look at the window size. Note down the value of \texttt{win field} and it is likely to increase with each packet received from server. Given below are sample output for first 4 capture outputs of packets sent from client to server. Notice that \texttt{win field} value starts increasing slowly. The value of ack field is consecutively as 201, 401, 601 etc. i.e. increases by 200 each time indicating that 200 bytes are received. Since data is continuously received, TCP stack slowly increases the client receive buffer size as well.
 
 20:09:21.091424 IP 10.211.55.10.60892 $>$\\
 10.211.55.2.9999: Flags [.], ack 201, win 237, options [nop,nop,TS val 1385669 ecr 780230225], length 0
@@ -134,42 +134,42 @@ Please check the IP address of server and replace it appropriately instead of 10
 \item[f.] Both the client and server programs are flexible in terms of buffer size (option –b) and delay interval (option –d) and readers are requested to carry the exercise with different values of these options to develop a better understanding of TCP Flow control.
 \end{itemize}
 
-\noindent
-\textbf{Exercise 2}\label{chap3-Exe2}
+
+\section{Exercise}\label{chap3-Exe2}
 
 \textbf{Topic: TCP Flow Control with Window Scaling disabled.}
 \begin{itemize}
 \item[a.] On the client machine (Ubuntu), note down the default values (or currently configured) of TCP window scaling and receiver buffer size. Use the following commands to obtain the values.
 
-\$ sudo sysctl net.ipv4.tcp\_window\_scaling
+\texttt{\$ sudo sysctl net.ipv4.tcp\_window\_scaling}
 
- net.ipv4.tcp\_window\_scaling = 1 
+\texttt{ net.ipv4.tcp\_window\_scaling = 1 }
  
- \$ sudo sysctl  net.ipv4.tcp\_rmem 
+ \texttt{\$ sudo sysctl  net.ipv4.tcp\_rmem }
  
- net.ipv4.tcp\_rmem = 4096	87380	6291456
+ \texttt{net.ipv4.tcp\_rmem = 4096	87380	6291456}
  
- The default value of Window Scaling is 1 implying Window scaling is supported and we will set it to zero to disable the scaling. Similarly, \url{net.ipv4.tcp\_rmem}  provides 3 set of value, first one corresponds to minimum, $2^{\text{nd}}$ one corresponds to default buffer allocation, and last one the max values. Please make a note of these values so as to restore these back after the exercise is completed, otherwise machine may provide poor performance for any TCP connection. For a simple implementation to understand TCP Flow control, set all these values as 4096. Use the following commands to disable the window scaling and receive buffer size. 
+ The default value of Window Scaling is 1 implying Window scaling is supported and we will set it to zero to disable the scaling. Similarly, \texttt{\url{net.ipv4.tcp\_rmem}}  provides 3 set of value, first one corresponds to minimum, $2^{\text{nd}}$ one corresponds to default buffer allocation, and last one the max values. Please make a note of these values so as to restore these back after the exercise is completed, otherwise machine may provide poor performance for any TCP connection. For a simple implementation to understand TCP Flow control, set all these values as 4096. Use the following commands to disable the window scaling and receive buffer size. 
  
- \$ sudo sysctl-w net.ipv4.tcp\_window\_scaling=0
+ \texttt{\$ sudo sysctl-w net.ipv4.tcp\_window\_scaling=0}
  
-net.ipv4.tcp\_window\_scaling = 0
+\texttt{net.ipv4.tcp\_window\_scaling = 0}
 
-\$ sudo sysctl -w net.ipv4.tcp\_rmem="4096 4096 4096"
+\texttt{\$ sudo sysctl -w net.ipv4.tcp\_rmem="4096 4096 4096"}
 
-net.ipv4.tcp\_rmem = 4096 4096 4096
+\texttt{net.ipv4.tcp\_rmem = 4096 4096 4096}
 
-\$ sudo sysctl net.ipv4.tcp\_window\_scaling
+\texttt{\$ sudo sysctl net.ipv4.tcp\_window\_scaling}
 
-net.ipv4.tcp\_window\_scaling = 0
+\texttt{net.ipv4.tcp\_window\_scaling = 0}
 
-\$ sudo sysctl  net.ipv4.tcp\_rmem
+\texttt{\$ sudo sysctl  net.ipv4.tcp\_rmem}
 
-net.ipv4.tcp\_rmem = 4096	4096	4096
+\texttt{net.ipv4.tcp\_rmem = 4096	4096	4096}
 
 These TCP Tuning parameters are set only temporarily and if machine is booted, TCP will start with its default value.
 
- \item[b.] Repeat the steps of exercise~\ref{chap3-Exe1} i.e. run the server and client program respectively and also observe the value of win field in tcpdump.
+ \item[b.] Repeat the steps of exercise~\ref{chap3-Exe1} i.e. run the server and client program respectively and also observe the value of \texttt{win field} in tcpdump.
 
 \item[c.] As TCP Window scaling is disabled, the rwnd starts from value of 1460 (corresponding to 1500 bytes of Ethernet payload minus 20 bytes of IP header minus 20 bytes of TCP header), and decreases by 200 in each ack packet since data packet contains 200 bytes. A sample dump of tcpdump command for the packets sent from client to server are given below. Thus, the rwnd value starts decreasing from 1460 (initial) to 1260, then 1060, then to 860 and so on. The client program is also reading the data, but at delayed intervals and in smaller amounts, so the read buffer will fill up. You will notice the value remains at 860 for a while (on account of client read as well as some intricate implementations of TCP), and then after a while it starts decreasing again to 660, 460 etc.
 
@@ -197,7 +197,7 @@ These TCP Tuning parameters are set only temporarily and if machine is booted, T
 
 \textbf{Topic: TCP Zero Window Probe.}
 \begin{itemize}
-\item[a.]  Repeat the steps of exercise~\ref{chap3-Exe2} and observe the value of win field for a while. A sample output of TCP exchange between server and client is given below when rwnd becomes zero. This happens after about 12 seconds when 2600 bytes of data have been sent from the server. 
+\item[a.]  Repeat the steps of exercise~\ref{chap3-Exe2} and observe the value of \texttt{win field} for a while. A sample output of TCP exchange between server and client is given below when rwnd becomes zero. This happens after about 12 seconds when 2600 bytes of data have been sent from the server. 
 
 21:19:49.301804 IP 10.211.55.10.60910 $>$\\ 10.211.55.2.9999: Flags [.], ack 1, win 1460, options [nop,nop,TS val 2056798 ecr 782906007], length 0
 
@@ -232,13 +232,13 @@ These TCP Tuning parameters are set only temporarily and if machine is booted, T
 
 The above explains the phenomenon of Zero Window Probe. Please restore the value of TCP window scaling and memory allocation for receive buffer to its system default value by using the following command (or even performing a reboot).
 
-\$ sudo sysctl -w net.ipv4.tcp\_window\_scaling=1
+\texttt{\$ sudo sysctl -w net.ipv4.tcp\_window\_scaling=1}
 
-\$ net.ipv4.tcp\_window\_scaling = 0
+\texttt{\$ net.ipv4.tcp\_window\_scaling = 0}
 
-\$ sudo sysctl -w net.ipv4.tcp\_rmem=" 4096 87380 6291456"
+\texttt{\$ sudo sysctl -w net.ipv4.tcp\_rmem=" 4096 87380 6291456"}
 
-net.ipv4.tcp\_rmem = 4096 87380 6291456
+\texttt{net.ipv4.tcp\_rmem = 4096 87380 6291456}
 \end{itemize}
 
 \section*{Appendix}
