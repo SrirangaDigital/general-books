@@ -160,7 +160,7 @@ z = \sqrt{\zeta_i P} y_i,
 where $y_i$ represents the signal corresponding to the $i^{\text{th}}$ user. The decoding of signals at each user is carried out through successive interference cancellation, which is described next.
 
 \subsubsection{Successive Interference Cancellation}
-The successive interference cancellation (SIC) is a type of multi-user detection technique, and an iterative procedure. Let us consider the 2 user example in Figure~\ref{Fig-SIC2Users}. Since $U_1$ is the far user -- with a lower average received SNR value and higher allocated power, it directly decodes its own signal $y_1$ by treating the interference due to $y_2$ as noise. On the other hand, $U_2$ being allocated lower power, first decodes $y_1$ and cancels it from its from the received superimposed signal before decoding its own signal, $y_2$.
+The successive interference cancellation (SIC) is a type of multi-user detection technique, and an iterative procedure. Let us consider the 2 user example in Figure~\ref{Fig-SIC2Users}. Since $U_1$ is the far user -- with a lower average received SNR value and higher allocated power, it directly decodes its own signal $y_1$ by treating the interference due to $y_2$ as noise. On the other hand, $U_2$ being allocated lower power, first decodes $y_1$ and cancels it from the received superimposed signal before decoding its own signal, $y_2$.
 \begin{figure}[H]
 \centering
   \includegraphics[scale=0.49]{src/Figures/chap5/NOMA_SIC_2Users.eps}
