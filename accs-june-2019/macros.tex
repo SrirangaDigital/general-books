@@ -1,3 +1,5 @@
+\usepackage{changepage}
+
 \makeatletter
 \def\@makechapterhead#1{%
   %~ \thispagestyle{empty}%	
@@ -16,6 +18,7 @@
     \vskip 6pt
     \vskip 20\p@
   }}
+  
 \makeatother
 
 \setlength{\parskip}{1.2em}
@@ -238,3 +241,10 @@
 
 % correct bad hyphenation here
 %\hyphenation{op-tical net-works semi-conduc-tor}
+\newcommand{\adjustimg}{% Horizontal adjustment of image
+  \checkoddpage%
+  \ifoddpage\hspace*{\dimexpr\evensidemargin-\oddsidemargin}\else\hspace*{-\dimexpr\evensidemargin-\oddsidemargin}\fi%
+}
+\newcommand{\centerimg}[2][width=\textwidth]{% Center an image
+  \makebox[\textwidth]{\adjustimg\includegraphics[#1]{#2}}%
+}

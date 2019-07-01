@@ -33,6 +33,7 @@
 \usepackage[hidelinks]{hyperref}
 \hypersetup{breaklinks=true}
 \urlstyle{same}
+\usepackage[absolute,overlay]{textpos}
 
 \setmainfont{Lora}
 \setsansfont{Lora}
@@ -63,7 +64,13 @@
 \thispagestyle{empty}
 ~\phantom{}
 \newpage
+\bgroup
+\makeatletter
+\def\columnseprulecolor\vrule\@width\columnseprule{%
+\vbox to \ht\mult@rightbox{\leaders\vbox{\kern2pt\hbox{.}\kern2pt}\vfill}}
+\makeatother
 \input src/00a-contributors.tex
+\egroup
 \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
 \input src/00b-editor
 \newpage
@@ -86,7 +93,6 @@
 \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-Right.png}}
 \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-left.png}}
 \input src/005-chapter005
-
 \end{document}
 
 
