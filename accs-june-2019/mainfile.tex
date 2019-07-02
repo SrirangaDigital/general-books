@@ -28,6 +28,13 @@
 \counterwithout{equation}{chapter}
 \counterwithout{table}{chapter}
 
+\makeatletter
+\@addtoreset{figure}{chapter}
+\@addtoreset{table}{chapter}
+\@addtoreset{equation}{chapter}
+\@addtoreset{equation}{section}
+\makeatother
+
 
 \usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
