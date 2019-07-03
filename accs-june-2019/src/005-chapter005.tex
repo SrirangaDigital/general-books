@@ -3,15 +3,20 @@
 
 \centerline{{\Huge\sl Understanding TCP Flow Control}}
 
+\vskip 0.8cm
+
 \begin{center}
 {\large\uppercase{Ram P. Rustagi}}, 
 
+\vskip -6pt
+
 Department of CSE, KSIT Bengaluru 
 
-\vskip -6pt
 
 \bigskip
 {\large\uppercase{Viraj Kumar,}} 
+
+\vskip -6pt
 
 Divecha Centre for Climate Change, IISc Bengaluru
 
@@ -64,7 +69,7 @@ During the connection setup, the sender is informed that the receiver can receiv
 
 At this point $({\text{T}}_{35})$, the sender cannot transmit any more data since it has received an ack with rwnd=0, indicating that the receiver’s buffer is full. In the scenario we are considering, the application will read 800 bytes from the receiver’s buffer and update rwnd to 800. However, the receiver cannot send a duplicate ack (this can lead to other implications on TCP connections). Thus, both the sender and the receiver appear to be stuck. This deadlocked scenario is generally known as “TCP Zero Window” \cite{art3-key10}\cite{art3-key11}, and it can lead to severe performance issues. Exercise~\ref{chap3-Exe3} describes an experiment to better understand this phenomenon.
 
-Fortunately, TCP provides a mechanism to deal with Zero Window: the sender can periodically transmit a Zero Window Probe (ZWP) message, which could be as small as a single byte of data. Once the receiver gets this TCP message from the sender, it must respond with an ack. Thus, if a ZWP is received after rwnd has been updated to a positive number, the receiver can indicate to the sender that its buffer is no longer full in the ack. Two ZWPs are shown in yellow in Figure~\ref{chap3-fig02}. The first of these probes is initiated at time ${\text{T}}_{40}$. If we assume that the application clears 800 bytes from the reader’s buffer before this probe arrives at time ${\text{T}}_{40}$, the resulting ack will indicate a positive rwnd value – as shown here. In contrast, consider the second probe initiated at time ${\text{T}}_{45}$. In this case, there still isn’t any free space in the reader’s buffer and hence the ack reports that the value of rwnd is still 0. One or more additional ZWPs (not shown) would have to be issued before data transmission can continue.
+Fortunately, TCP provides a mechanism to deal with Zero Window: the sender can periodically transmit a Zero Window Probe (ZWP) message, which could be as small as a single byte of data. Once the receiver gets this TCP message from the sender, it must respond with an ack. Thus, if a ZWP is received after rwnd has been updated to a positive number, the receiver can indicate to the sender that its buffer is no longer full in the ack. Two ZWPs are shown in yellow in Figure~\ref{chap3-fig02}. The first of these probes is initiated at time ${\text{T}}_{40}$. If we assume that the application clears 800 bytes from the reader’s buffer before this probe arrives at time ${\text{T}}\prime_{\!\!40}$, the resulting ack will indicate a positive rwnd value – as shown here. In contrast, consider the second probe initiated at time ${\text{T}}_{45}$. In this case, there still isn’t any free space in the reader’s buffer and hence the ack reports that the value of rwnd is still 0. One or more additional ZWPs (not shown) would have to be issued before data transmission can continue.
 
 ZWPs are used in many other networking applications. For example, consider a network printer that prints documents sent from the machines it is connected to. Since the printer has no data to send, it is the receiver. Suppose that the printer runs out of paper and it takes several minutes to replenish the paper stock. During this interval, the printer may continue to receive documents (without actually printing anything) until its buffer is full. In this case, it will send an ack with the value of rwnd = 0 to the sender machine. This machine can periodically send ZWPs to the printer, and as soon as the paper stock has been replenished, it will resume printing by consuming the data from the receiver buffer. At this point, the value of rwnd will become greater than zero and the ack for subsequent ZWPs will indicate that the printer is ready to receive new documents.
 
@@ -395,14 +400,14 @@ while True:
 \centerline{\large\bf Prof. Ram P. Rustagi}
 
 \bigskip
-Dr. Ram P. Rustagi is currently working as Professor, CSE dept, KSIT Bangalore, and honed up his academic skills with Ph.D from IIT Delhi, and M.Tech from IISc Bangalore. Prior to KSIT, at Cavisson Systems, he mentored new technology development using Machine Learning techniques in Security and Performance Monitoring. At PES University, he had taught Undergraduates, Post Graduates students, and successfully guided 3 Ph.D scholars. At PESU, he brought innovations in teaching computer network and security courses, and introduced practical experiential learning exercises.\\
+Dr.~Ram P. Rustagi is currently working as Professor, CSE dept, KSIT Bangalore, and honed up his academic skills with Ph.D from IIT Delhi, and M.Tech from IISc Bangalore. Prior to KSIT, at Cavisson Systems, he mentored new technology development using Machine Learning techniques in Security and Performance Monitoring. At PES University, he had taught Undergraduates, Post Graduates students, and successfully guided 3 Ph.D scholars. At PESU, he brought innovations in teaching computer network and security courses, and introduced practical experiential learning exercises.\\
 &\\  
 \raisebox{-3.7cm}{\includegraphics{src/Figures/authors/Viraj_Kumar.png}} & 
 
 \centerline{\large\bf Prof. Viraj Kumar}
 
 \bigskip
-Dr. Viraj Kumar is a Visiting Professor at the Divecha Centre for Climate Change, IISc Bangalore and the Vice-Chair of ACM India’s Special Interest Group in Computer Science Education (iSIGCSE). He was a consultant to the Committee to draft the National Education Policy (2017-18), and contributed to two education-related task groups of the Karnataka Knowledge Commission (2014-16). He holds a PhD in Computer Science from the University of Illinois at Urbana-Champaign.\\
+Dr.~Viraj Kumar is a Visiting Professor at the Divecha Centre for Climate Change, IISc Bangalore and the Vice-Chair of ACM India’s Special Interest Group in Computer Science Education (iSIGCSE). He was a consultant to the Committee to draft the National Education Policy (2017-18), and contributed to two education-related task groups of the Karnataka Knowledge Commission (2014-16). He holds a PhD in Computer Science from the University of Illinois at Urbana-Champaign.\\
 &\\
 \clineB{1-2}{2.5}
 \end{tabular}
