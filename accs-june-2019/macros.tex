@@ -1,3 +1,5 @@
+\usepackage{changepage}
+
 \makeatletter
 \def\@makechapterhead#1{%
   %~ \thispagestyle{empty}%	
@@ -16,6 +18,7 @@
     \vskip 6pt
     \vskip 20\p@
   }}
+  
 \makeatother
 
 \setlength{\parskip}{1.2em}
@@ -42,7 +45,7 @@
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                    {0.75ex \@plus 0.65\baselineskip \@minus 0.35\baselineskip}%
                                    {0.5ex \@plus 0.65\baselineskip \@minus 0.35\baselineskip}%
-                                   {\normalfont\Large\bfseries}}
+                                   {\normalfont\large\bfseries}}
 
 \renewenvironment{thebibliography}[1]
      {\section*{\bibname}%
@@ -78,6 +81,7 @@
 \usepackage{wrapfig}
 
 
+
 \definecolor{goldan-yellow}{rgb}{0.8, 0.4, 0.09}
 
 
@@ -85,8 +89,8 @@
 \newsavebox\topeven
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
 %~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
-\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
-\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
+\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-right.png}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-left.png}}
 
 \usepackage[absolute,overlay]{textpos}
 \usepackage{mdframed}
@@ -237,3 +241,10 @@
 
 % correct bad hyphenation here
 %\hyphenation{op-tical net-works semi-conduc-tor}
+\newcommand{\adjustimg}{% Horizontal adjustment of image
+  \checkoddpage%
+  \ifoddpage\hspace*{\dimexpr\evensidemargin-\oddsidemargin}\else\hspace*{-\dimexpr\evensidemargin-\oddsidemargin}\fi%
+}
+\newcommand{\centerimg}[2][width=\textwidth]{% Center an image
+  \makebox[\textwidth]{\adjustimg\includegraphics[#1]{#2}}%
+}
