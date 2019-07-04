@@ -71,6 +71,8 @@
 \thispagestyle{empty}
 ~\phantom{}
 \newpage
+\savebox\topodd{}
+\savebox\topeven{}
 \bgroup
 \makeatletter
 \def\columnseprulecolor\vrule\@width\columnseprule{%
@@ -78,6 +80,7 @@
 \makeatother
 \input src/00a-contributors.tex
 \egroup
+
 \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
 \input src/00b-editor
 \newpage
