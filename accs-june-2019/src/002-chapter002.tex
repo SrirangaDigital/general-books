@@ -69,17 +69,27 @@ In addition to the underlying nanoscale CMOS technology and ever evolving system
 \section{Future Directions} 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1.2]{src/Figures/chap1/chap1-fig05a.jpg}\qquad\qquad
-\includegraphics[scale=1.2]{src/Figures/chap1/chap1-fig05b.jpg}
+\includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig05a.jpg}\qquad\qquad
+\includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig05b.jpg}
 \caption{The hierarchical view of compute and storage technologies and the representation of emerging technologies along multiple performance metrics (\url{http://www.itrs2.net/})}\label{chap1-fig5}
 \end{figure}
 
 \begin{multicols}{2}
 With CMOS technology entering the sub-10nm regime, fundamental road blocks are appearing with respect to the underlying materials/process technology and device physics.  The big question haunting us quite often is “whether Moore’s law is hitting a red brick wall”? This conundrum can be solved only through some fundamental breakthroughs in nanotechnology in the future. In this context, the guidelines of International Technology Roadmap for Semiconductors (Figure~\ref{chap1-fig5}), are very instructive. 
 
-The current compute and storage technologies use “electric charge” as \textit{state variable}, with “silicon” as the de-facto \textit{material,} “scaled CMOS” as the \textit{device} for “digital” \textit{data representaion} under “von Neumann” computation \textit{architecture.}  At each of these hierarchical levels, multiple other approaches are possible. For instance, the state variable could exploit “spin” of the electrons to build \textit{spintronic} devices. Alternately, the state variable could be “strongly correlated electronic state”, to build \textit{quantum electronic} devices, leading to \textit{quantum computation} architectures. In terms of material choices, we may also go beyond silicon, exploring materials such as carbon, compound semiconductors, 2-dimensional (2D) layered materials such as Transition Metal Dichalcogenides (TMDs) or some other nanostructured materials to realize alternate state variable, device and data representation. All these areas have been  very active research topics over the last few years. However, it would still be a very long way to go, in achieving any meaningful manufacturable technology with these alternative options. It should also be highlighted that each of the emerging technology has its own niche, as illustrated on the 4 dimensions of cost, switching time, size and energy. So it is very instructive to appreciate that one size does not fit all, and other technologies might continue to complement and augment the silicon CMOS technology in niche applications.
+\vskip 4pt
+
+{\parfillskip=0pt
+The current compute and storage technologies use “electric charge” as \textit{state variable}, with “silicon” as the de-facto \textit{material,} “scaled CMOS” as the \textit{device} for “digital” \textit{data representaion} under “von Neumann” computation \textit{architecture.}  At each of these hierarchical levels, multiple other approaches are possible. For instance, the state variable could exploit “spin” of the electrons to build \textit{spintronic} devices. Alternately, the state variable could be “strongly correlated electronic state”, to build \textit{quantum electronic} devices, leading to \textit{quantum computation} architectures. In terms of material choices, we may also go beyond silicon, exploring materials such as carbon, compound semiconductors, 2-dimensional (2D) layered materials such as Transition Metal Dichalcogenides (TMDs) or some other nanostructured materials to realize alternate state variable, device and data representation. All these areas have been  very active research topics over the last few years. However, it would still be a very long way to go, in achieving any meaningful manufacturable technology with these alternative options. It should also be highlighted that each of the emerging technology has its own niche, as illustrated on the 4 dimensions of cost, switching time, size and energy. So it is very instructive to appreciate that one size does not fit all, and other technologies might continue to\par}
+
+\noindent
+complement and augment the silicon CMOS technology in niche applications.
+
+\vskip -2pt
 
 On one hand the number of transistors on a chip ($\sim 50$ billion) is approaching the number of neurons in the brain ($\sim 80$ billion), thus bringing in the excitement of creating computation chips in the next few decades, mimicking the perception functions of the brain. On the other hand, the on-chip power dissipation due to these large number of transistors has skyrocketed in the range of few 100 watts. Hence the typical power consumption of a state of the art supercomputer, consisting of several racks of microprocessor chips, is in the range of a few mega-W ($> 10^6$ Watts). In contrast, human brain which can beat some of the best supercomputers, in functions such as perception and pattern recognition, consumes a mere 20 W power. This is fundamentally due to two important differences. In terms of operating voltage for the basic building blocks, the transistor operates at about 1V, while the neuron operates at few 10s of milli-V. In terms of architecture, the compute engines use digital architecture, with information coded in charge, while human brain adopts massively parallel analog architecture, with information coded in voltage spikes. Thus the realization of truly brain inspired compute engine is one of the holy grail for the future. 
+
+\vskip -2pt	
 
 We have so far focussed on the computation and storage applications, which employ traditional dimensional/feature scaling (Figure~\ref{chap1-fig7}). In the last couple of decades, a new wave of functional scaling has emerged to realize hybrid systems on chips (hybrid SoCs), consisting of sensors and actuators along with the computation and storage elements. It is important to recognize that the miniaturization of electronic chips has been driven by the emergence of new system driver, almost every decade as shown in Figure~\ref{chap1-fig7}.
 \end{multicols}
