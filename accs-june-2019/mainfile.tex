@@ -62,26 +62,29 @@
 
 
 \mainmatter
-\thispagestyle{empty}
-~\phantom{}
-\newpage
-\thispagestyle{empty}
-~\phantom{}
-\newpage
-\thispagestyle{empty}
-~\phantom{}
-\newpage
-\savebox\topodd{}
-\savebox\topeven{}
-\bgroup
-\makeatletter
-\def\columnseprulecolor\vrule\@width\columnseprule{%
-\vbox to \ht\mult@rightbox{\leaders\vbox{\kern2pt\hbox{.}\kern2pt}\vfill}}
-\makeatother
-\input src/00a-contributors.tex
-\egroup
+%~ \thispagestyle{empty}
+%~ ~\phantom{}
+%~ \newpage
+%~ \thispagestyle{empty}
+%~ ~\phantom{}
+%~ \newpage
+%~ \thispagestyle{empty}
+%~ ~\phantom{}
 
+%~ \savebox\topodd{}
+%~ \savebox\topeven{}
+%~ \bgroup
+%~ \makeatletter
+%~ \def\columnseprulecolor\vrule\@width\columnseprule{%
+%~ \vbox to \ht\mult@rightbox{\leaders\vbox{\kern2pt\hbox{.}\kern2pt}\vfill}}
+%~ \makeatother
+%~ \input src/00a-contributors.tex
+%~ \egroup
+
+\setcounter{page}{4}
+\newpage
 \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
 \input src/00b-editor
 \newpage
 \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-right.png}}
@@ -92,17 +95,27 @@
 \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Left.png}}
 \input src/002-chapter002
 \newpage
-\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Right.png}}
-\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Left.png}}
+\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-1-right.png}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-1-left.png}}
 \input src/003-chapter003
 \newpage
-\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Right.png}}
-\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Left.png}}
+\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-2-right.png}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-2-left.png}}
 \input src/004-chapter004
 \newpage
 \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-Right.png}}
 \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-left.png}}
 \input src/005-chapter005
+%~ \newpage
+%~ ~\phantom{a}
+%~ \thispagestyle{empty}
+\newpage
+\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Report-Right.png}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Report-left.png}}
+\input src/adc
+%~ \newpage
+ %~ ~\phantom{a}
+ %~ \thispagestyle{empty}
 \end{document}
 
 
