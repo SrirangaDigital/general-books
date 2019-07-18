@@ -1,0 +1,90 @@
+\documentclass[12pt,twoside,openany]{book}
+
+\usepackage{rotating}
+\input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\lhead[\small\thepage]{}
+\rhead[]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+%\input src/titlepage
+%\newpage
+ 
+%\input src/copyright
+%\newpage
+
+%\lhead[]{}
+%\input src/contents
+%\newpage
+
+%\input src/trans_scheme
+%\newpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+%\newpage
+
+%\input src/000d-about
+%\newpage
+
+%\input src/000e-key-partners
+%\input src/000f-acknowledgements.tex
+%\newpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+%\newpage
+%\lhead[\small\thepage\quad Sharda Narayanan]{}
+%\rhead[]{Introduction - Vedic Tradition has No Racism\quad\small\thepage}
+%\input src/000g-introduction
+%\newpage
+
+
+\mainmatter
+
+\lhead[\small\thepage\quad ]{}
+\rhead[]{\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+
+\newpage
+\rhead[]{\thechapter. \quad\small\thepage}
+\input src/01chapter01
+
+\end{document}
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+
+\lhead[\small\thepage\quad Index]{}
+\rhead[]{Index\quad\small\thepage}
+\label{index}
+\printindex
+\end{document}
