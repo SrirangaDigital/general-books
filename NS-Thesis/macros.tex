@@ -17,12 +17,16 @@
 \usepackage{ifthen}
 \usepackage{pifont}
 \usepackage{float}
+\usepackage{imakeidx}
 
+\def\Break{\break }
+\def\passim#1{\textsl{passim}}
+\makeindex[title=Index,program=xindy,options=-C utf8 -M mystyle.xdy -L Kannada,columnseprule=true,columns=2]
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
 
-\setcounter{tocdepth}{0}
+\setcounter{tocdepth}{1}
 
 %%longtable settings
 \setlength\LTleft{30pt}
