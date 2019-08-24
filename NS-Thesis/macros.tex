@@ -21,7 +21,10 @@
 
 \def\Break{\break }
 \def\passim#1{\textsl{passim}}
-\makeindex[title=Index,program=xindy,options=-C utf8 -M mystyle.xdy -L Kannada,columnseprule=true,columns=2]
+\indexsetup{othercode=\small}
+\makeindex[title=Index,program=xindy,options=-C utf8 -M mystyle.xdy -L Kannada,columnseprule=true,columns=3]
+
+
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
