@@ -1,0 +1,250 @@
+\usepackage{changepage}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  %~ \thispagestyle{empty}%	
+  \vspace*{1\p@}%
+  \vspace*{7\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+%        {\Huge \@chapapp\space\thechapter} %% previously \huge  was \LARGE
+        \par\nobreak
+        \vskip 5\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge\sf\bfseries \uppercase{#1}\par\nobreak
+    \vskip 6pt
+    \vskip 20\p@
+  }}
+  
+\makeatother
+
+\setlength{\parskip}{1.2em}
+
+\newdimen\secdimen
+\secdimen=\baselineskip
+\advance\secdimen - 0.5\parskip
+\message{\the\secdimen}
+
+\newdimen\subsecdimen
+\subsecdimen=\baselineskip
+\advance\subsecdimen - 0.85\parskip
+
+\renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
+
+
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {\secdimen \@plus 0.65\baselineskip \@minus 0.35\baselineskip}%
+                                   {\subsecdimen \@plus 0.65\baselineskip \@minus 0.35\baselineskip}%
+                                   {\normalfont\Large\bfseries}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                   {0.75ex \@plus 0.65\baselineskip \@minus 0.35\baselineskip}%
+                                   {0.5ex \@plus 0.65\baselineskip \@minus 0.35\baselineskip}%
+                                   {\normalfont\large\bfseries}}
+
+\renewenvironment{thebibliography}[1]
+     {\section*{\bibname}%
+      %~ \@mkboth{\slshape\small\bfseries\bibname}{\slshape\small\bfseries\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\renewcommand\bibname{References}
+
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{fancybox}
+\usepackage{boldline}
+
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+
+
+
+\definecolor{goldan-yellow}{rgb}{0.8, 0.4, 0.09}
+
+
+\newsavebox\topodd
+\newsavebox\topeven
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryleft.jpg}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/bannercoverstoryright.jpg}}
+\savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-right.png}}
+\savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-left.png}}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{mdframed}
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+
+\DeclareNewLayer[
+  foreground,
+  topmargin,
+  oddpage,
+  contents={\usebox\topodd}
+]{top.odd}
+\DeclareNewLayer[
+  clone=top.odd,
+  evenpage,
+  contents={\usebox\topeven}
+]{top.even}
+\DeclareNewLayer[
+  height=1.25cm,	
+  foreground,
+  bottommargin,
+  evenpage,
+  area={0pt}{760pt}{\paperwidth}{1.25cm},
+  contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
+\hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | June 2019}\hfill}%
+}}
+]{bottom.even}
+
+\DeclareNewLayer[
+  height=1.25cm,
+  foreground,
+  bottommargin,
+  oddpage,
+  area={0pt}{760pt}{\paperwidth}{1.25cm},
+  contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
+\hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | June 2019}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
+}}
+]{bottom.odd}
+\AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
+\AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
+
+%~ \tolerance=1
+%~ \emergencystretch=\maxdimen
+%~ \hyphenpenalty=10000
+%~ \hbadness=10000
+
+
+
+\pretolerance=5000
+\tolerance=6000 
+\emergencystretch=10pt
+
+%%%%%%%%%%%%%%%%
+%chapter 4
+%\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes}
+
+\newlength{\mytw}
+\settowidth{\mytw}{A few lines of text in a block jkjkopkl}
+%\graphicspath{{./figures/}}
+
+\newcommand{\ffq}{\ensuremath{\mathbb{F}_{q}}}
+\newcommand{\ffqa}{\ensuremath{\mathbb{F}_{q}^{\alpha}}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqn}{\[}
+\newcommand{\eeqn}{\]}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bean}{\begin{eqnarray*}}
+	\newcommand{\eean}{\end{eqnarray*}}
+\newcommand{\re}{\mbox{$\mathfrak{Re}$}}
+\newcommand{\bit}{\begin{itemize}}
+	\newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}}
+	\newcommand{\een}{\end{enumerate}}
+\newcommand{\bc}{\begin{center}}
+	\newcommand{\ec}{\end{center}}
+
+\newtheorem{defn}{Definition}[section]
+\newtheorem{fact}{Fact}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{claim}{Claim}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{constr}[thm]{Construction}
+\usepackage[normalem]{ulem}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+\newcommand{\pvk}{\color{red} }
+\newcommand{\pvkred}{\color{red} }
+\newcommand{\fq}{\mbox{$\mathbb{F}_q$}}
+\newcommand{\calc}{\mbox{$\mathcal{C}$}}
+\newcommand{\calcperp}{\mbox{$\mathcal{C}^{\perp}$}}
+
+%~ \pagestyle{empty}
+
+
+%article 5
+%\usepackage[dvipsnames]{xcolor}
+%\colorlet{LightRubineRed}{RubineRed!70!}
+%\colorlet{Mycolor1}{green!10!orange!90!}
+%\definecolor{Mycolor2}{HTML}{00F9DE}
+%\usepackage{color} 
+%\usepackage{balance}
+%\usepackage[normalem]{ulem}
+%\usepackage{amsmath, amsthm, amssymb}
+%\usepackage{epsfig}
+%\usepackage{latexsym}
+%\usepackage{graphicx} 
+%\usepackage{relsize}
+%\usepackage{cite}
+%\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{bm}
+\usepackage{textcomp}
+\def\diag{\mathrm{diag}}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{proposition}{Proposition}
+%\newtheorem{corollary}{Corollary}  
+%\newtheorem{remark}{Remark}   
+\newcommand{\trabc}{\tilde{R}}
+\newcommand{\teabc}{\tilde{E}}
+\newcommand{\teeabc}{EE}
+\newcommand{\rabc}{R}
+\newcommand{\rb}{R_b}
+\newcommand{\rh}{R_h}
+\newcommand{\eabc}{E}
+\newcommand{\eb}{E_b}
+\newcommand{\eh}{E_h}
+\newcommand{\eeabc}{EE}
+\newcommand{\Bblb}{B_{\scriptscriptstyle b, LB}}
+\newcommand{\Bbub}{B_{\scriptscriptstyle b, UB}}
+
+%\ifCLASSINFOpdf
+%\else
+%\fi
+
+% correct bad hyphenation here
+%\hyphenation{op-tical net-works semi-conduc-tor}
+\newcommand{\adjustimg}{% Horizontal adjustment of image
+  \checkoddpage%
+  \ifoddpage\hspace*{\dimexpr\evensidemargin-\oddsidemargin}\else\hspace*{-\dimexpr\evensidemargin-\oddsidemargin}\fi%
+}
+\newcommand{\centerimg}[2][width=\textwidth]{% Center an image
+  \makebox[\textwidth]{\adjustimg\includegraphics[#1]{#2}}%
+}
