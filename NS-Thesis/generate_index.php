@@ -31,7 +31,7 @@ echo "\\begin{theindex}\n";
 	foreach($entries as $key => $value){
 		
 		$string = "";
-		$string = "\t\\item " . $key . "\\kern2pt\\hfill ";
+		$string = "\t\\item " . $key . "\\kern2pt ";
 		sort($entries[$key]);
 		$value = array_unique($value);
 
