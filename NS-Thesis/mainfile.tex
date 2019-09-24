@@ -57,6 +57,7 @@
 \input src/modalamatu %consider .tex file only not .xhtml
 \input src/000h-sankethaksharasuchi
 
+\rhead[]{{\fontsize{12}{12}ವಿಷಯಾನುಕ್ರಮಣಿಕೆ\quad \thepage}\relax}
 \renewcommand{\contentsname}{ವಿಷಯಾನುಕ್ರಮಣಿಕೆ}
 \tableofcontents
 \newpage
@@ -65,6 +66,7 @@
 
 \mainmatter
 
+\rhead[]{{\fontsize{12}{12}\selectfont\leftmark\quad\thepage}}
 \input src/001-chapter001
 %\addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{\thechapter}Title of this chapter}{}{chapter.\thechapter}}
 {
@@ -296,7 +298,7 @@
 
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft
+  {\parindent \z@ \raggedright
     \normalfont
     \interlinepenalty\@M
     \Huge \bfseries ಪದ ಸೂಚಿ\par\nobreak
