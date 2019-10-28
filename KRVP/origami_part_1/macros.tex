@@ -1,3 +1,4 @@
+
 %%importing packages
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec,graphicx}
@@ -23,6 +24,8 @@
 \usepackage{multirow}
 \usepackage{multicol}
 \usepackage[titles]{tocloft}
+\usepackage{minitoc}
+\usepackage{lipsum}
 
 \setlength{\cftbeforechapskip}{8pt}
 
@@ -176,8 +179,8 @@ I need more words\fi}
 \rhead[]{}
 \cfoot[]{}
 }
-\lhead[\small\thepage]{\small\em ಓರಿಗಾಮಿ - ಭಾಗ 1}
-\rhead[\small\em ಓರಿಗಾಮಿ - ಭಾಗ 1]{\small\thepage}
+\lhead[\small\thepage]{\small\sl  ಓರಿಗಾಮಿ ಭಾಗ 1}
+\rhead[\small\sl ಓರಿಗಾಮಿ ಭಾಗ 1]{\small\thepage}
 \chead[]{}
 \lfoot[]{}
 \rfoot[]{}
@@ -240,7 +243,7 @@ I need more words\fi}
 
 \makeatletter
 \def\@makechapterhead#1{%
-  \vspace*{40\p@}%
+  \vspace*{20\p@}%
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
