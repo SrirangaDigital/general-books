@@ -57,6 +57,12 @@
 %\renewcommand{\thesection}{\Roman{section}} 
 \input macros
 
+
+\makeatletter
+\newcommand{\thnum}[1]{#1\renewcommand{\@currentlabel}{#1}}
+\makeatother
+
+
 \begin{document}
 
 
@@ -89,15 +95,17 @@
 %~ \newpage
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
 %~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
-%~ \input src/00b-editor
-%~ \newpage
+\input src/00b-editor
+\newpage
+ \input src/00d-interview
+\newpage
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-right.png}}
 %~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-left.png}}
 \input src/001-chapter001
- %~ \newpage
+ \newpage
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Right.png}}
 %~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Left.png}}
-  %~ \input src/002-chapter002
+ \input src/002-chapter002
 %~ \newpage
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-1-right.png}}
 %~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-1-left.png}}
@@ -110,8 +118,11 @@
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-Right.png}}
 %~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-left.png}}
 %~ \input src/005-chapter005
-%~ \newpage
-%~ ~\phantom{a}
+
+\newpage
+\input src/event-report
+
+ %~ ~\phantom{a}
 %~ \thispagestyle{empty}
 %~ \newpage
 %~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Report-Right.png}}
