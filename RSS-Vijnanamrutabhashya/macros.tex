@@ -145,28 +145,28 @@ Script=Devanagari,
   \@mainmattertrue
 }
 
-\def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-		\setcounter{endnote}{0}%
-        \huge\bfseries \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 20\p@
-      \fi
-    \fi
-    \interlinepenalty\@M
-    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
-    \vskip 20\p@
-  }}
+%\def\@makechapterhead#1{%
+%  \vspace*{50\p@}%
+%  {\parindent \z@ \raggedleft \normalfont
+%    \ifnum \c@secnumdepth >\m@ne
+%      \if@mainmatter
+%		\setcounter{endnote}{0}%
+%       \huge\bfseries \@chapapp\space \thechapter
+%        \par\nobreak
+%        \vskip 20\p@
+%      \fi
+%    \fi
+%    \interlinepenalty\@M
+%    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+%    \vskip 20\p@
+%  }}
 
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft
+  {\parindent \z@ 
     \normalfont
     \interlinepenalty\@M
-    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \centering\iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
     \vskip 40\p@
   }}
 
