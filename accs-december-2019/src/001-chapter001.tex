@@ -31,214 +31,277 @@ Divecha Centre for Climate Change, IISc Bengaluru
 
 \begin{multicols}{2}
 
-
 \section{Introduction}
  
-\vspace{-.2cm}
- 
- We have studied both transport layers protocol i.e. TCP\cite{art1-key01} and UDP\cite{art1-key02}, in detail in the last few articles, and developed a basic understanding of working of transport layer. It is a communication enabling layer used by applications to exchange application level data. In this article, we will discuss socket programming and its evolution from a simple socket connection to a complex connection management especially when the need arises to attain high TCP performance.  In this article we will focus on TCP Socket programming only. UDP socket programming is simply a best effort delivery and socket implementation support does not impact the application communication performance.
+ In the $21^{\rm st}$ century, the internet has become essential part of everyday tasks including banking, interacting with government services, education, entertainment, text/voice/video communication, etc. Individuals access the internet using client-side applications such as a browser or an app on their mobile phone or laptop/desktop. This client-side application communicates with a server-side application, typically running on a web server, which in turn may interact with other business applications. The underlying protocol is typically HTTP \cite{art1-key01} running on top of the TCP/IP protocol \cite{art1-key02}\cite{art1-key03}. A typical web server supports a large number (hundreds or thousands) of concurrent TCP connections. The most commonly deployed web servers in use today are Apache server \cite{art1-key04}, Nginx \cite{art1-key05}, or Microsoft Internet Information Server (IIS))\cite{art1-key06}. Nginx is mostly used on Linux and IIS runs only on Windows OS. In contrast, Apache web server (which is almost as old as the web itself) is supported on all platforms (Linux, Windows, MacOS, etc.). In its initial release in 1995 (version 1.3), Apache server could serve only a few concurrent clients, but its current release (2.4.41) can support a huge number of concurrent clients. In this article (as well as Part II that will follow), we will present a simplified view of this evolution that nevertheless explains how current web manage such high levels of concurrency. To do so, we will delve into socket programming, which is at the heart of managing TCP connections, and we will examine the key role that it plays in delivering high performance.
 
-\vspace{-.3cm}
+We have studied both transport layers protocol i.e., TCP \cite{art1-key02} and UDP \cite{art1-key07}, in detail in the last few articles, and we have developed a basic understanding of the working of the transport layer. This is a communication-enabling layer used by applications to exchange application-level data. Simple working of applications using TCP (providing reliable delivery) and UDP (providing best effort delivery) socket programming are provided in \cite{art1-key08}.  In this article, however, we will discuss increasingly complex levels of socket programming, from simple socket connections to complex connection management that are necessary to attain high TCP performance.  We will focus on TCP Socket programming only. UDP socket programming is simply a best effort delivery and socket implementation support does not impact the application communication performance. 
 
 \section{Basis of TCP Socket Programming}
 
-\vspace{-.2cm}
+Any network-based application involves a pair of two programs, one that initiates the request and another one that receives the request and responds back. In normal parlance, these are correspondingly called the client and the server. For most practical purposes, these two entities reside on two different end systems and communicate with each other via an end-to-end logical network communication interface, called a socket. These two programs are most likely written by two different sets of developers and thus they need to follow an application protocol standard, such as HTTP, FTP, SMTP, etc.  These applications either run over TCP or UDP, a decision taken by the application developer. In this article, we will discuss the development of application program using TCP. We will start from very simple request/response communication and gradually increase complexity to involve multiple concurrent communications, sharing requests across many server processes with non-blocking socket communication to achieve performance gains. As before, we will have hands-on exercises where you will write and execute actual programs. Our example programs will be in the Python language, which is currently the most popular language (even though socket programming was originally written in C). These programs will explain the basics of socket programming and the various states of socket-enabling communication between the client and the server.
 
-Any network-based applications involve a pair of two entities, one that initiates request and another one that receives the request and responds back. In normal parlance, these are correspondingly called client and server. These two entities, for most practical purposes, reside in two different end systems and communicate to each other via an end to end logical network communication link, called socket. These two programs are most likely written by two different developers and thus need to follow application protocol standard, such as HTTP, FTP, SMTP, etc.  These applications either run over TCP or UDP, a decision taken by the application developer. In this article, we will discuss the development of application program using TCP and its evolution starting from a very simple request/response communication and gradually moving towards increasing complexity involving multiple concurrent communications, sharing or requests across many server processes, non-blocking socket communication and achieving performance improvement. As before, the hands-on exercises will be based on socket programs.  The example program will be in python language (the current most popular language, though socket programming was originally written in C) to explain the basics of socket programming and various states of socket enabling communication between client and server.
-
-To working of socket programming and be explained with the analogy of two people \cite{art1-key03} residing in two different houses and need to communicate/meet with each other. Each house has a door that connects the house to outside world. The person residing in the house has full control over the house, but has little control over the outside world and need to follow the rules of outside world. House can be considered at par with application and outside world is like transport layer, which connects inside of a house to outside world. The door is analogous to a socket. Two houses can be neighbours to each other, across the street or even in different parts of the world. Consider that two people need to communicate with each other using a number of messages from each side and deploy an agent to deliver the messages in a reliable way. The agent receives the message at the door for first house, gets it delivered at the door of the other house and vice versa. The messages originate from the person in the house and consumed by the person in the other house.  These messages can follow any form and not necessarily one request and one reply. There can be number of messages from one side before receiving a number of messages or even none from other side. How, the person responds to each other’s message is up to them, but the job of the agency is to deliver these messages in a reliable way. The agency only ensures that whenever it delivers message to other end, these are delivered in-order, without any loss, corruption of duplication of messages. The working of agency is analogous to a TCP Connection. To ensure their continuous communication, two people first need to establish a connection using the agency, then carry on with sending and receiving the message and once over, release the agency.
-
-Communication between two applications on two machines using sockets work in a similar way as described using above analogy. We will refer these two applications as client and server. The client process initiates the TCP connection to the server using a TCP socket, communicates with the server and then closes the connection. To enable this bidirectional communication, client first creates a socket (treated as flle descriptor in unix system), and connects it to server by specifying the server’s address (IP address and TCP port number). The server must have a created a socket beforehand to enable this connection i.e. accept the connection from the client. This connection setup involves 3-way handshake of TCP \cite{art1-key03}\cite{art1-key04}\cite{art1-key05} protocol which remains transparent to the client and server applications, which is then followed by data transfer in TCP ESTABLISHED state\cite{art1-key05}.  Finally, the connection closure involves handshake of 4 messages \cite{art1-key06}, which again remains transparent to applications. The interaction of client and server programs with network is implemented using socket library API calls. In this article, we first discuss usage of these API calls in a simple way and later on performance implications of socket API calls especially from the server perspective. 
-
-\vspace{-.2cm}
+The client application initiates a TCP connection with the server using a \textit{TCP socket}. It communicates with the server through this socket, and finally closes the connection. To enable this bidirectional communication, the client first creates a socket (treated as file descriptor in the Unix system) and connects it to the server by specifying the server’s address (IP address and TCP port number). The server must have a created a socket beforehand to enable this connection i.e., it must be ready to accept connections from clients. This connection setup involves a 3-way TCP handshake \cite{art1-key09}\cite{art1-key10}\cite{art1-key11} which remains transparent to the client and server applications. This is followed by data transfer in TCP ESTABLISHED state \cite{art1-key11}. Finally, the connection closure involves a handshake of four messages \cite{art1-key12}, which again remains transparent to applications. The interaction of client and server programs with the network is implemented using socket library API calls. In this article, we first discuss the usage of these API calls in a simple way. We will enhance the complexity later to improve server performance.
 
 \section{Socket Programming Approaches}
 
-\vspace{-.2cm}
+An introduction to socket programming is given in \cite{art1-key09}\cite{art1-key13}\cite{art1-key15}, and brief description of each API call can be found at \cite{art1-key14} and from the man pages \cite{art1-key16}.  The most common understanding of a simple client-server interaction is shown in Figure~\ref{fig01}\cite{art1-key11} and elsewhere in the networking literature. At first, the server creates a socket using \textit{socket()}, binds this socket to a well-known address (IP address and port number) using \textit{bind()}, informs the TCP stack of the underlying Operating System about the number of connections that can be in queue waiting to be served by the server using \textit{listen()}, and then accepts one connection at a time using \textit{accept()}. For reasons that will become clear soon, let us understand these API calls through the following analogy. Suppose several students (client applications) want to communicate with their college principal (server application) in his/her office. The \textit{socket()} call is analogous to the principal’s secretary opening the office prior to the principal’s arrival. The \textit{bind()} call is analogous to the principal entering the office, although s/he is still not available to communicate with students. After a while, the principal allows students to enter the waiting room, which is analogous to the \textit{listen()} call. The number of chairs in the waiting hall corresponds to the size of the TCP listen queue. If there are $N$ chairs in the waiting hall, at most $N$ students can wait. If there are $M$ students (where $M > N$), then the secretary must turn away $M – N$ students.
 
-An introduction socket program is given in \cite{art1-key03} \cite{art1-key09}, and brief description of each API call can be found at \cite{art1-key08} and man pages \cite{art1-key10}.  The most common understanding of a simple client server interaction is shown in Figure~\ref{fig01} \cite{art1-key07} and elsewhere in the networking literature. At first, server creates a socket using \textit{socket()}, binds this socket to a well-known address (IP address and port number) using \textit{bind()}, informs the OS TCP stack about the number of connections that can be in queue waiting to be served by the server using \textit{listen()}, and then it accepts one connection at a time using \textit{accept()}. A typical analogy to understand these APIs can be understood by the following example. Consider the case that a number of students want to meet principal of a prospective college for admission purpose. The principal before coming to the college informs the office secretary/security to open the office, and this is equivalent to \textit{socket()} call. When principals enters the office and occupies the chair, this is equivalent to \textit{bind()} call. At this time, it does not mean that students can enter the office or meet the principal just because s/he is in the office. After a while, principal decides to allow students to come to the waiting room and wait there. This is equivalent to \textit{listen()} call. The number of chairs in the waiting hall corresponds to TCP listen queue size. If there are N chairs in the waiting hall, at most N students can wait. If there are M students (M$>$N) that come, then  M-N students have to go back and try again some time later. Still at this point, N students are in waiting room and most likely would meet the principal.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1.2]{src/Figures/chap1/fig01.jpg}
+\includegraphics[scale=2.3]{src/Figures/chap1/fig01.jpg}
 \caption{Typical understanding of client server interaction}\label{fig01}
+
+\vspace{-.4cm}
+
 \end{figure}
 
-After the principal completes any of the initial office work, and is willing to meet the students, s/he instructs the secretary to send one student inside the office. This is equivalent to \textit{accept()} call. The student can interact with principal as per the requirement and this will be equivalent to series of read()/write() calls. When one student enters the principal’s office, one vacancy is created in the waiting room and thus if any new student comes to meet principal, s/he can wait in the waiting room. It is possible for principal to permit multiple students (though one at a tie) to enter in his/her office and talk to them. Therefore, the number of students that can be inside the principal’s office will bear no correlation with number of students waiting in the waiting room. In the similar way, a server can concurrently communicate with multiple clients at the same time, and this number of concurrent communications is independent of number of clients waiting in the TCP listen queue. In brief, a TCP server program follows the path sequence \textit{bind()}, \textit{listen()}, and \textit{accept()} socket API calls, followed by required number of \textit{read()}/\textit{write()} calls. 
+When principal is ready to meet students, the secretary allows one student into the office. This is analogous to the \textit{accept()} call. Typically, the secretary will send students in a first-come first-served (FCFS) manner, although this is not necessary. Analogously, the TCP stack may or may not implement a FCFS policy. (When the student enters, there is a vacancy in the waiting room and another student may now occupy this space.) The student in the office now communicates with the principal, analogous to a series of \textit{read()}/\textit{write()} calls. The principal may permit multiple students to enter the office – this is analogous to the server issuing a series of \textit{accept()} calls and communicating concurrently with multiple clients. Just as the number of students simultaneously within the principal’s office bears no correlation to the number of students waiting outside, the number of concurrent communications is independent of the number of clients waiting in the TCP listen queue. In brief, a TCP server application follows the path sequence \textit{bind()}, \textit{listen()}, and \textit{accept()} socket API calls, followed by needed number of \textit{read()}/\textit{write()} calls. 
 
-The invocation of socket API calls by a client follow a somewhat different path of socket API calls. Client create a socket (its endpoint of communication) using \textit{socket()} call. For a client to be able to talk to server, it must know IP address and port number of server application.  The client program provides these required parameters as part of connect() call to establish communication with server. The invocation of \textit{connect()} initiates the 3-wayTCP  handshake. Once the connection is established, it follows a series of \textit{write()}/\textit{read()} call to send data to and receive from the server and finally closes the TCP connection.
-
-The communication flow in Figure~\ref{fig01} provides a conceptual understanding of TCP client server interaction and generally followed for a typical TCP based application communication. In this figure, it is shown that 3-way handshake is performed after the server issues \textit{accept()} call. However, in real life implementation of TCP stack, the communication flow for the server is slightly different and actual invocation of socket calls and interaction with a client is shown in Figure~\ref{fig02}. Using the earlier described analogy of students and principal interaction, this can be understood in the following way. When a student enters the waiting room, from all practical purpose, student is ready to communicate with principal, and this is equivalent to \textit{connect()} call. The student can start filling the required form which is needed by principal for the interaction. This is equivalent to client invoking \textit{write()} call even though principal hasn’t invoked the \textit{accept()} call yet i.e. hasn’t allowed the student to enter inside the office. Just because student has 
-
-started providing information, it is expected that principal will call the student inside, but there is no guarantee that principal will call the student inside. It may happen that principal leaves the office for some reason (e.g. some emergency in college, or sudden call with university officials etc) which would result in students in the waiting room to leave the office i.e. unsuccessful communication. Same way, a client can invoke a number of \textit{write()} calls to send data and this data will reach the server side but will remain in the queue (like the filled form remains with the student) till server accepts the call and reads the data. Thus, a client can invoked \textit{connect()} to establish communication with the server immediately after server has invoked \textit{listen()}. From the client’s perspective, the connection is successful as shown in Figure~\ref{fig02}, and server can invoke the \textit{accept()} sometime later. Client can continue to send data even before server invokes \textit{accept()} or after it accepts the connection but hasn’t invoked the read(). This call acceptance mechanism on server side is the primary difference between Figure~\ref{fig01} and Figure~\ref{fig02}. In the discussion below we will study this behavior of the server-side TCP connection management w.r.t. multiple concurrent clients and explore the functionality of socket APIs.
+The client-application follows a somewhat different path of socket API calls. It first creates a socket (its endpoint of communication) using the \textit{socket()} call. For a client to be able to talk to server, it must know IP address and port number of server application. The client provides these two parameters (IP address, port number) as part of the \textit{connect()} call to establish communication with the server. The invocation of \textit{connect()} initiates the 3-way TCP handshake. Once the connection is established, the client follows a series of \textit{write()}/\textit{read()} call to send data to and receive data from the server. Finally, the client closes the TCP connection.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1.2]{src/Figures/chap1/fig02.jpg}
+\includegraphics[scale=2.3]{src/Figures/chap1/fig02.jpg}
 \caption{Practical working of TCP sockets interaction}\label{fig02}
+
+\vspace{-.4cm}
+
 \end{figure}
 
+The communication flow in Figure~\ref{fig01} provides a common conceptual understanding of TCP client-server interaction typically followed for TCP-based communication, with the 3-way handshake performed after the server issues the \textit{accept()} call. In actual implementations of the TCP stack, the communication flow for the server is slightly different as shown in Figure~\ref{fig02}. Let us understand this difference using our earlier analogy of students and the college principal. When a student enters the waiting room, s/he is ready to communicate with the principal - this is analogous to the client application making a \textit{connect()} call. Taking the analogy one step further, the student can start filling out necessary paperwork while waiting even though the principal has not yet invited the student to enter. This is analogous to the client application invoking a \textit{write()} call and sending data to the server, even though the server has not yet invoked the \textit{accept()} call. Thus, the key difference between\break Figure~\ref{fig01} and Figure~\ref{fig02} is that the client can invoke \textit{connect()} to establish communication with the server as soon as the server invokes \textit{listen()}. From the client application’s perspective, the connection is successful - it can and even begin to send data to the server on the assumption that the server application will invoke the \textit{accept()} sometime later and read the data sent to it (as shown in 2). Note that there is no guarantee that the server application \textit{will} issue an \textit{accept()} call - the server may crash, for instance - but the client assumes that this will not happen. In the discussion below, we will study this behavior of the server-side TCP connection management with respect to multiple concurrent clients and explore the functionality of socket APIs.
 
-\section{A Server with Just One Client Connection}
+\vspace{-.5cm}
 
-A very simple TCP server program would correspond to accepting request from only a single client, serve these requests and then exit. A simple working of such a communication can be experienced using \texttt{netcat as a server (nc -1 $<$port)}. This would run a TCP server binding on the specified port with option -1 and all the IP Addresses associated with server machine. The netcat server accepts a single client request and as long as client is connected it will receive the message from client and display the same on terminal window. When client closes the connection, this simple server would close the connection and exit as well. However, to develop a better understanding of using \textit{bind(), listen()} and \textit{accept()} call, consider a simple python program \texttt{tcp\_server01.py} \cite{art1-key11}, and the required code snippet is shown in left column of Table~\ref{fig03}. This code is very similar in behaviour to \texttt{netcat (nc)} server, where client connects to server on the known IP address and port number, sends messages and when client closes the connection, the server program also closes the accepted connection and exits. By default, in all our exercises we will \texttt{netcat(nc)} as the client program which will be invoked as \textbf{“nc <server IP> <server port>”}, unless specified otherwise.
+\section{A Server with Just One Client\\ Connection}
 
+A very simple TCP server program would correspond to accepting requests from only a single client, serve these requests and then exiting. We can use \texttt{netcat} as a server \texttt{(nc -1 <port>)} for this simple communication. This command runs a TCP server binding on the specified port with option \texttt{-1} and all the IP addresses associated with the server machine. The netcat server accepts a single client request. As long as the client is connected, the server will receive messages from the client and display these on its terminal window. When the client closes the connection, this simple server closes the connection as well and exits. However, to develop a better understanding of using \textit{bind()}, \textit{listen()} and \textit{accept()} calls, consider a simple python program \texttt{tcp\_server01.py} \cite{art1-key17}. The required code snippet is shown in the left column of Table~\ref{tab01}. The invocation of socket APIs \textit{bind()}, \textit{listen()} and \textit{accept()} are respectively shown on lines 3, 5 and 7. The server reads the client’s requests (lines 9 to 13). The detection of connection closure by the client occurs when the reading of data fails (i.e., it returns NULL) on lines 11-12. When this occurs, the server program comes out of its perpetual loop, closes the connection (line 14) and exits (line 15). This code is very similar in behaviour to netcat \texttt{(nc)} server. By default, in all our exercises we will use \texttt{netcat (nc)} as the simple TCP client program which will be invoked as \textbf{“nc <server IP> <server port>”}, unless specified otherwise.
 \end{multicols}
 
 \setcounter{section}{0}
 \begin{table}[H]
+
+\vspace{-.8cm}
+
 \centering
-\caption{Server program that accepts 1 client request}\label{fig03}
-\includegraphics[scale=3.05]{src/Figures/chap1/fig03.jpg}
+\caption{Server program that accepts 1 client request}\label{tab01}
+\includegraphics[scale=2.25]{src/Figures/chap1/tab01.jpg}
 \end{table}
 
+\vspace{-.6cm}
+
 \begin{multicols}{2}
-To understand interdependencies between \textit{bind()}, \textit{listen()} and \textit{accept()}, consider the code snippets of modified program \texttt{tcp\_server02.py} \cite{art1-key11} as shown in right column of Table~\ref{fig03}. The server invokes \textit{listen()} 60 seconds after its binds to its port number. So, even though program is running, the TCP stack on the server machine has no information if server program would service any requests and if any clients can be put in the queue till \textit{listen()} is invoked by the server. Thus, till \textit{listen()} is invoked by the server, if a client tries to connect to the server, the connection attempt will be unsuccessful. The server program with TCP port number 9999 (default port number value used by the server programs) is started at 15:18:26 as shown by $2^{\rm{nd}}$ line in right column of Table~\ref{fig04}. Netcat program \cite{art1-key12} is used as a client to connect to this server. As shown in left column of Table~\ref{fig04}, first two attempts at time 15:18:31 and 15:19:15 are terminated till time server executes \textit{listen()} call (Line 5 in right column of Table~\ref{fig03}) at 15:19:26 (3rd line in right column of Table~\ref{fig04} . The next attempt after that is successful (line 4 in left column Table~\ref{fig04}). 
+To understand interdependencies between \textit{bind()}, \textit{listen()} and \textit{accept()}, consider the code snippets of its modified version in program \texttt{tcp\_server02.py} \cite{art1-key17} as shown in the right column of Table~\ref{tab01}. The server invokes \textit{listen()} (line 5) 60 seconds (line 4) after its binds (line 3) to its port number. So, when program starts running, for the first 60 seconds, the TCP stack/OS on the server machine has no information if the server program will receive and serve any client requests and if any clients can be put into the waiting queue. Thus, until the time \textit{listen()} is invoked by the server (line 5), if a client tries to connect to the server, the connection attempt will be unsuccessful. To see this behaviour, an example invocation is shown in right column of Table~\ref{tab02}. The server program by default uses TCP port number 9999 (this can be changed using the option \texttt{-p}), and is started at \texttt{08:59:29} as shown by the $2^{\rm nd}$/$3^{\rm rd}$ lines in right column of Table~\ref{tab02}. The \texttt{netcat (nc)} program \cite{art1-key18} is used as a client to connect to this server, and its invocation is shown in the left column of Table~\ref{tab02}. The first two connection attempts at times \texttt{08:59:37} and \texttt{09:00:18} are terminated as the server program hasn’t yet executed the \textit{listen()} call. The status of at server side shows no connection until time \texttt{09:00:30} (shown in lines 1-4 in Table~\ref{tab03}). The \textit{listen()} API (line 5 in the right column of Table~\ref{tab01}) is invoked at time \texttt{09:00:29} (line 4 in right column of Table~\ref{tab02}). The next client connection attempt after \texttt{09:00:29} (i.e., at time \texttt{09:00:36}) is successful (lines 5-8 in the left column of Table~\ref{tab02}). Lines 5-7 of\break Table~\ref{tab03} show that the server is ready to listen for client\break connections.
 \end{multicols}
 
 \begin{table}[H]
+
+\vspace{-.7cm}
+
 \centering
-\caption{Network implication of delayed listen(), accept()}\label{fig04}
-\includegraphics[scale=2.28]{src/Figures/chap1/fig04.jpg}
+\caption{Network implication of delayed \textit{listen()}, \textit{accept()}}\label{tab02}
+\includegraphics[scale=2.15]{src/Figures/chap1/tab02.jpg}
 \end{table}
 
 \begin{table}[H]
+
+\vspace{-.7cm}
+
 \centering
-\caption{Status of network connection at Server Machine}\label{fig05}
-\includegraphics[scale=2.25]{src/Figures/chap1/fig05.jpg}
+\caption{Status of network connection at Server Machine}\label{tab03}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab03.jpg}
 \end{table}
 
 \begin{multicols}{2}
+At this stage, the server program is still waiting for 60 seconds (line 6 in the right column Table~\ref{tab01}), and it has not accepted the client connection yet. The server program invokes \textit{accept()} (line 7 right column of Table~\ref{tab01}) at time \texttt{09:01:29} and accepts the connection only then. However, from the client’s perspective, the TCP connection is established at time \texttt{09:00:36} as shown by lines 8-11 in Table~\ref{tab03}. Since the connection is established from the client’s view, the client can send data on this connection as shown by lines 5-6 in client’s window (left column of Table~\ref{tab02}). This data ( \texttt{“Hello + $\backslash$n + Bye + $\backslash$n”} ; a total of 10 characters) has reached the server and is in the queue of this connection at the server side as shown by value of the second field (line 15 in Table~\ref{tab03}). The data remains in the queue till \texttt{09:01:29}, at which time server accepts the connection. The server program accepts the client connection by invoking \textit{accept()} at time \texttt{09:01:29} (line 5 in right column of Table~\ref{tab02}). After it reads the data, the queue for this connection is cleared. When the client exits at time \texttt{09:01:44}, the connection is closed on the server side as well and the network connection status shows no connection at time \texttt{09:01:49} (lines 16-17 in\break Table~\ref{tab03}).
 
-At this stage server program has not accepted the client connection. The server program accepts the connection 60 seconds after the \textit{listen()} call (line 7, Table~\ref{fig03}). However, from the client and system perspective, the TCP connection is established at time 15:19:51 as shown by first 4 lines in Table~\ref{fig05}. Since connection is established from client’s view, it can send data on this connection as shown by lines 5-6 in clients window (column 1 Table~\ref{fig04}). This data (\texttt{“hello + $\backslash$n + wecome + $\backslash$n”} ; a total of 14 characters)  has reached the server and is in the queue of this connection at server side as shown by $2^{\rm{nd}}$ field of line  3 and line 7 in Table~\ref{fig05}.
-
-When client accepts by invoking accept() the request 60 seconds after \textit{listen()} at time 15:20:26 (line 4 in right column of Table~\ref{fig04}) and reads the data, queue for this connection is cleared as shown by queue size of 0 ($2^{\rm{nd}}$ field of line 10 in Table~\ref{fig05}). When client exits at time 15:20:45, the connection is closed on the server side as well and network connection status shows no connection at time 15:20:51 (last two lines in Table~\ref{fig05}). 
-
-In general, a server program is expected to run forever and should be able to serve multiple clients. Thus, the next stage of server program should evolve to a state where it runs forever, and whenever one client connection closes, it should accept request from next subsequent client and so on. The number of clients that remains in the queue is determined by the parameter value of \textit{listen()} API call. If a new client connects when the queue is full, this connection request would be rejected and client program would exit. To study the impact of queue size, run the server program \texttt{tcp\_server02.py}\cite{art1-key11} and connect to this server with multiple client programs. When listen queue becomes full, TCP stack on server simply ignores TCP SYN (connection setup request\cite{art1-key03}\cite{art1-key13}) and does not respond at all. The client will retry the connection by resending TCP SYN packets a pre-configured number of times, which is identified by system configuration and tuning parameter \texttt{net.ipv4.tcp\_syn\_retries} value, which is default of 6 on Ubuntu. As per TCP timeout implementation, each time it sees a timeout, it doubles the timeout value and thus for our purpose of studying listen queue size behaviour, it is recommended to set this value to 1 (use the command \texttt{sudo sysctl -w net.ipv4.tcp\_syn\_retries=1}) on the client machine. Further, as per Linux system implementation of listen socket call \cite{art1-key12}, the real maximum queue length is 1.5 times more than the value specified in the \textit{listen()} call. As server program invokes \textit{listen(1)}, the queue size is going to be more than 1, and observed value is 2.
-
-To study the behaviour of \textit{listen()} and backlog of queues, modify the server program just to put a delay of 60 seconds between \textit{listen()} and \textit{accept()}. There is no need to have any delay between \textit{bind()} and \textit{listen()}. When we run this new server program \texttt{tcp\_server03.py}, and then connect 3+ clients to it (with \texttt{syn\_retries} value set to 1) within 60 seconds of starting of the server program, it should result in first two clients connecting successfully to server and $3^{\rm rd}$ client program being unsuccessful after retries. This is shown in Table~\ref{fig07} (top row, first two lines), where server program starts 15:28:22, executes \textit{bind()}, \textit{listen()} immediately but waits for 60 seconds before executing \textit{accept()}. Invocation of client programs (nc) is shown in Table~\ref{fig06}, where clients in left column are successful whereas clients in right columns are unsuccessful, which are invoked at 15:28:32 and 15:28:53. The TCP server shows tow connections in ESTABLISHED state (first 10 lines in bottom row of Table~\ref{fig07}) a time 15:28:36 as well as at time 15:28:46.
+In general, a server program should be able to serve multiple clients. Thus, whenever one client connection closes, it should accept a request from the next waiting client, if any, and so on. The number of clients that can remain in the queue is determined by the parameter value of the \textit{listen()} call. If a new client connects when the queue is full, this connection request is rejected and the client program would exit after a certain number of retries. To study the impact of queue size, run the server program \texttt{tcp\_server02.py} \cite{art1-key17} again and connect to this server with multiple client programs. When the listen queue becomes full, the TCP stack implementation on the server machine simply ignores TCP SYN (connection setup request \cite{art1-key09}\cite{art1-key11}) and does not respond at all. The client will retry the connection by resending TCP SYN packets - the number of times is pre-configured and is identified by the system configuration and tuning parameter \texttt{net.ipv4.tcp\_syn\_retries} (the default value is 6 on Ubuntu Linux). As per the TCP timeout implementation, each time it sees a timeout, it doubles the timeout value \cite{art1-key09} and retransmits the packet again. For our purpose of studying the listen queue size behaviour, it is recommended to set this configuration parameter to the smallest positive integer value of \texttt{1}. On a Linux machine, use the command \texttt{sudo sysctl -w net.ipv4.tcp\_syn\_retries=1}. Further, as per the Linux system implementation of the \textit{listen()} socket call \cite{art1-key18}, the real maximum queue length is 1.5 times the parameter value passed in the \textit{listen()} API. In our example, the server program invokes \textit{listen(1)}, the queue size is expected to be 1.5, and thus the observed value is 2. This implies that at any point in time, there will be at most 2 clients in the TCP queue waiting for server to accept the connection.
 \end{multicols}
 
+\begin{table}[H]
+
+\vspace{-.9cm}
+
+\centering
+\caption{Concurrent client requests to a single server}\label{tab04}
+\includegraphics[scale=2.28]{src/Figures/chap1/tab04.jpg}
+\end{table}
 
 \begin{table}[H]
 \centering
-\caption{Concurrent client requests to a single server}\label{fig06}
-\includegraphics[scale=2.26]{src/Figures/chap1/fig06.jpg}
+
+\vspace{-.8cm}
+
+\caption{Single request handling Server connection status}\label{tab05}
+\smallskip
+\includegraphics[scale=2.35]{src/Figures/chap1/tab05.jpg}
 \end{table}
 
 \begin{multicols}{2}
-
-At time 15:29:32, server invokes \textit{accept()}, and when a new clients connects after this time, this $3^{\rm rd}$ client is connected, number of connections in ESTABLISHED state becomes 3 as shown in (lines 11-16, bottom row of Table~\ref{fig07}. The line 13 size of listen queue is 2 corresponding to two connections pending to be accepted, and line 16 shows queue size to be 9 implying that a client has sent 9 bytes of data which needs to be read by server. When $4^{\rm th}$ client, as shown in lines 5-6 in bottom row right column of Table~\ref{fig06} tries to connect at time 15:29:36, the connection fails. The bottom row shows the output of tcpdump which demonstrates that two TCP SYN packets are received (first one corresponding initial connection request and $2^{\rm nd}$ one corresponding to retry) and no response is given by server.
-
-Once the server accepts a connection request from a client (after 60 seconds of listen), the queue for pending connections become 1 less and thus any new client request will be accepted and it will show ESTABLISHED state. Other client connection requests will be ignored as queue has become has full. Table ?????? shows three client requests in connected state, where as $4^{\rm th}$ client is unsuccessful.
+To study the behaviour of \textit{listen()} and backlog of queues in an efficient manner, the server program is modified just to put a delay of 60 seconds between \textit{listen()} and \textit{accept()}. There is no need to have any delay between \textit{bind()} and\textit{listen()}. The invocation of this new server program \textit{tcp\_server03.py} is shown in Line 1 of Table~\ref{tab05}. We invoke 3+ clients to connect to it (with \texttt{syn\_retries} value set to 1 on the client machine) within 60 seconds of starting of the server program. This should result in the first two clients connecting successfully to the server (actually these should be in TCP connection queue) and the third client program should be unsuccessful after retries. The server program \texttt{tcp\_server03.py} \cite{art1-key17} starts at time \texttt{09:26:30} (line 2 of Table~\ref{tab05}), invokes \textit{bind()} and \textit{listen()} at the same time (line 3 of Table~\ref{tab05}) but waits for 60 seconds before executing \textit{accept()}. The invocation of client programs \texttt{(nc)} is shown in Table~\ref{tab04}, where client C1 starts at time \texttt{09:26:35} and client C2 starts at time \texttt{09:26:44}. These clients connect successfully, as shown in the top row of Table~\ref{tab04}, whereas client C3 starting at time \texttt{09:26:49} and client C4 starting at time \texttt{09:27:04} (shown in the bottom row of Table~\ref{tab04}) are unsuccessful in connecting because these two are invoked within 60 seconds of starting of the server program where the server queue has become full, corresponding to a listen queue size being 1. The input \texttt{‘hello from C3’} shown for client C3 does not act as input to this client program, but instead becomes a Bash shell command when C3 exits - this is an unknown command, and hence the Bash shell gives error \texttt{‘hello: command not found’} (lines 4-5 bottom row of left column of Table ~\ref{tab04}). The TCP server shows two connections in the ESTABLISHED state (lines 1-13 of\break Table~\ref{tab06}) during the time from \texttt{09:26:32} to \texttt{09:27:08} - note that both these are before the time 09:27:49, when the server invokes \textit{accept()}.
 \end{multicols}
 
+\begin{table}[H]
 
+\vspace{-.9cm}
+
+\centering
+\caption{Connection Queue status before/after \textit{accept()}}\label{tab06}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab06.jpg}
+\end{table}
 
 \begin{table}[H]
+
+\vspace{-.7cm}
 \centering
-\caption{Single request handling Server connection status}\label{fig07}
-\includegraphics[scale=3.45]{src/Figures/chap1/fig07.jpg}
+\caption{TCP SYN Retries on listen Q full}\label{tab07}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab07.jpg}
 \end{table}
+
+\vspace{-.6cm}
 
 \begin{multicols}{2}
 
-when first client exits (pressing Ctrl-D in nc), the connection is closed,  and exits at time 15:31:00, the server also exits after serving one client. This is because, the server program (\texttt{tcp\_server03.py}) accepts only one connection, and exits after the first connection is closed. The last two lines of bottom row of Table~\ref{fig07} shows no connections at time 15:31:05. The other clients requests are simply terminated without any actual communication accepted by the server. From the client perspective, this is bit puzzling since client sees the connection in ESTABLISHED state, but has no clue why connection was terminated.
+At time \texttt{09:27:30}, the server program invokes \textit{accept()} (line 4 Table~\ref{tab05}). When a new client connects after this time (invocation of C3 is not shown in the table), this client connects successfully and the number of connections in the ESTABLISHED state becomes 3 as shown in lines 14-19 of Table~\ref{tab06}. Line 16 of Table~\ref{tab06} shows the size of the listen queue as 2, corresponding to two connections (C2 and C3) pending to be accepted, and line 18 shows the queue size to be 14 implying that a client has sent 14 bytes of data (this corresponds to \texttt{hello from C2$\backslash$n}) which needs to be read by the server. When the $4^{\rm th}$ client, shown in lines 5-6 in the bottom row of the right column of Table~\ref{tab04}, tries to connect at time \texttt{09:27:36}, the connection fails since the server connection queue is already full on account of clients C2 and C3. Table~\ref{tab07} shows the excerpts of \texttt{tcpdump} output, which demonstrates that two TCP SYN packets are received. The second SYN packet corresponds to TCP retransmit. Lines 5-6 correspond to the first connection request at time \texttt{09:27:04}, and lines 8-9 correspond to the second connection request at time \texttt{09:27:16}. No response is given by the server as these TCP SYN connection requests are ignored because TCP listen queue is full.
 
-\end{multicols}
-
-
-\begin{table}[H]
-\centering
-\includegraphics[scale=3.06]{src/Figures/chap1/fig08.jpg}
-\end{table}
-
-\begin{multicols}{2}
+When the first client exits (by pressing Ctrl-D in \texttt{nc}), the connection is closed and the server also exits after serving one client. This is because the server program \texttt{(tcp\_server03.py)} accepts only one connection, and exits after this first connection is closed. The connection from the other two clients (C2, C3) are simply terminated without any actual connection accepted nor received data read by the server. From the client’s perspective, this is a bit puzzling since the client initially sees that the connection is in the ESTABLISHED state. However, the client has no clue why the connection was terminated.
 
 \setcounter{section}{4}
 \section{A Perpetual Server with Just One Client Connection at a time}
 
-A natural extension to server programs to accept new connection after it complete its interaction with currently client. This will involve and perpetual running loop that would accept a new connection, service the client and then go back to accept connection from the new client. A sample snippet of such a code from server program \texttt{tcp\_server04.py} \cite{art1-key04} is shown in Table~\ref{fig09}. 
+In general, a server program is expected to run for ever, and thus a natural extension to the server program \texttt{tcp\_server03.py} is to accept new client requests after its interaction with the currently connected client is over. This requires that the server program should be in perpetual running loop that would accept a new connection, service the client and then go back to accept next connection from the new client. A sample snippet of such a code from server program \texttt{tcp\_server04.py} \cite{art1-key17} is shown in Table~\ref{tab08}. The perpetual loop starts at line 5, whereas serving of individual client requests is handled in lines 6-13.
 
+This server program works fine in dealing with any number of clients. However, such a server suffers from severe performance issues. Since the sever is handling one client at time, all other clients in the queue have to wait for earlier clients before they get any service. Such a response is unacceptable in real-life situations. Consider a bank website that works in this way i.e., it serves only customer login and associated interactions one at time. All other customers who are waiting in the queue will get totally frustrated and would not use the bank website again at all. Thus, for an effective web server, it is of paramount importance to serve the multiple clients concurrently.
 \end{multicols}
 
-
 \begin{table}[H]
+
+\vspace{-.6cm}
+
 \centering
-\caption{Perpetual server with one connection at a time}\label{fig09}
-\includegraphics[scale=2.92]{src/Figures/chap1/fig09.jpg}
+\caption{Perpetual server with one connection at a time}\label{tab08}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab08.jpg}
 \end{table}
 
 \begin{multicols}{2}
-This server program works fine to deal with any number of clients. However, such a server suffers from severe performance issues. Since sever program is handling one client at time, the other clients which are in queue have to wait for a much longer time to be able to get any service from the server. Such a behaviour is not acceptable in real life situations. Consider a bank website that works in this way i.e. serves only customer login and associated interaction one at time, then all other customers who are waiting in the queue will get totally frustrated and would not use the website again at all. Thus, for an effective web server, it is of paramount importance to serve the multiple clients concurrently.
+
+\vspace{-.17cm}
 
 \section{A Perpetual Server with Multiple Concurrent Connections}
 
-The well know webservers, such as Apache, nginx etc.”, serve hundreds of thousands of concurrent clients. These web servers provide a lot more functionality than just managing concurrent TCP connections and have evolved into a complex implementation to serve these clients efficiently. In this article, we take a simplistic view from TCP perspective on how these concurrent clients can be served. There are many possibilities to serve concurrent client and we will start from a very basic simple approach though inefficient to somewhat complex approach from implementation perspective but efficiently handles concurrent connections.
+Modern webservers (e.g., Apache \cite{art1-key04} and Nginx \cite{art1-key05}) can serve hundreds of thousands of concurrent clients. These web servers provide a lot more functionality than just managing concurrent TCP connections and have evolved into complex implementations with many supported features to serve these clients efficiently. In this article, we will take a simplistic view from the TCP perspective to see how these concurrent clients are served. There are several design/implementation choices to serve multiple concurrent clients, and we will start from a very simple approach and progress towards more complex implementations to demonstrate efficiency improvements.
 
-The most simplistic approach would be to create a separate process for each client. Thus, a parent process starts and waits for new client request. Whenever, client connects, it spawns a new child process and it is that child process that is dedicated to serve the client. Once the client closes the connection, this child process exits. A simple code snippet of simple program \texttt{tcp\_server05.py} \cite{art1-key04} using this approach is shown in Table~\ref{fig10}.
+The most simplistic approach to serve many clients concurrently is to have one main server process that acts as a parent process and creates a separate child process per client. Thus, a parent process starts and waits for new client request. Whenever a client connects, it spawns a new child process dedicated to serving the client. Once the client closes the connection, this child process exits. A simple code snippet of such a simplistic server program \texttt{tcp\_server05.py} \cite{art1-key17} using this approach is shown in Table~\ref{tab09}.
+
 \end{multicols}
 
+\begin{table}[H]
+
+\vspace{-.8cm}
+
+\centering
+\caption{Server spawning child process for each client}\label{tab09}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab09.jpg}
+\end{table}
 
 \begin{table}[H]
+
+\vspace{-.8cm}
+
 \centering
-\caption{Server spawnin child process for each client}\label{fig10}
-\includegraphics[scale=2.92]{src/Figures/chap1/fig10.jpg}
+\caption{Modified sever code waiting for child to exit}\label{tab10}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab10.jpg}
 \end{table}
 
 \begin{multicols}{2}
 
-The inefficiency of this approach lies in the fact that a new process is to be created for each client. Creation of a new process consumes significant amount of OS resource both in terms of memory and compute time, and this approach can work well for a limited number of concurrent clients, few hundreds or possibly thousand. When number of concurrent client exceeds thousands, the process scheduling by operating system will itself take a heavy toll on the system and bring down the system performance. Thus, this approach is not scalable. Another common problem that developers often face in this approach corresponds to zombie or defunct process. This problem arises when a child process exits, but parent does not wait for the exit status of a child process. As per unix process implementation, a parent must wait for child process to exit, receive the exist status of child process and take necessary action which in most case is none. A zombie process though remains idle and does not consume CPU time, but does consume process table resources of the operating system. So if such a server has run for some time, and has received N number of new client connections, there will be N number of zombie processes in the system and at some point in time, system will run out resources (process table memory space). A simple solution to this issue is parent must invoke the waitpid() method for exited child process. A sample snippet of server program\textit{tcp\_server05b.py} is shown in Table~\ref{fig11}. The method waitpid() is invoked with first parameter as -1 implying any of the child, and $2^{\rm nd}$ parameter as WNOHANG implies that his method is non-blocking. If a child has existed, this method will return the exit status of that child else return error -1.
-\end{multicols}
+\vspace{-.7cm}
 
-
-\begin{table}[H]
-\centering
-\caption{Modified sever code waiting for child to exit}\label{fig11}
-\includegraphics[scale=2.92]{src/Figures/chap1/fig11.jpg}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{server creating predefined number of child processes}\label{fig12}
-\includegraphics[scale=2]{src/Figures/chap1/fig12.jpg}
-\end{table}
-
-\begin{multicols}{2}
-One possibly way to improve the above approach is to create a fix number of child processes beforehand and new client can be assigned to any of the free child process. The sample snippet code of program \texttt{tcp\_server06.py}\cite{art1-key04} is shown in Table~\ref{fig11}, which creates 10 children process beforehand. The parent process remains idle for all practical purposes. Each process invokes its own \textit{accept()} and it is up to the OS to pick the child process to which the new incoming connection request should be assigned.  Thus, the approach of distributing the connection also has been from application domain to system domain. This approach certainly helps saves OS overhead of creating a process, and thus performs better than earlier approach.
-
-However, this poses a new problem. When the number of clients exceeds the total number of pre-created children processes plus the required queue size and those children will be denied connection request from the client. A simple solution would be that each client communicates to parent whenever it receives a new request as well as when the connection is closed. This parent knows how many clients are being served and thus, when it sees the number of clients is approaching the number of pre-created children processes or number of free children processes have fallen below a specified threshold, it can create more child process. Thus, this entails some amount of communication between child and parent process and parent process needs to do some book keeping of creating new children or even kill idle children if they are too many. A further improvement can be done by using the threads instead of child process. This way OS scheduling overhead is lower compared to that of dealing with equal number of child processes. But writing a thread safe code is another challenge that developer needs to deal with and not many programmers are efficient in writing multi thread robust code. However, the problem of scaling still persists and only a limited number of clients can be served using this approach. 
+The inefficiency of this approach lies in the fact that a new process needs to be created (lines 13-14 of Table~\ref{tab09}) for each client. Creating a new process consumes significant amount of OS resources, both in terms of memory and compute time. This approach can work well for a limited number of concurrent clients - a few hundred or possibly a thousand. But when the number of concurrent clients increases, the process scheduling by the operating system itself will take a heavy toll on the system performance and bring down the system. Thus, this approach is not scalable. Another common problem that developers often face in this approach corresponds to zombie or defunct processes. This problem arises when a child process exits, but the parent does not wait for the exit status of a child process. As per Unix process implementation, a parent must wait for the child process to exit, receive the exit status of the child process and take necessary action (which in most cases is none). A child process which has exited and is waiting for its parent to receive its exit status is known as zombie process. Although zombie processes remain idle and do not consume CPU time, they nevertheless consume process table resources of the underlying operating system. So, if such a server application has been running for some time and has received $N$ new client connections, there will be $N$ zombie processes in the system when these clients exit. For some large $N$, the system will run out of resources (process table memory space). A simple solution to resolve this issue is that the parent must invoke the \textit{waitpid()} method for the exited child process. A sample snippet of modified server program \texttt{tcp\_server05b.py} \cite{art1-key17} which invokes \textit{waitpid()} is shown in Table~\ref{tab10}. The method \texttt{waitpid()} is invoked with two parameters. The first parameter corresponds to process id of child process (\texttt{-1} implies any child), and the second parameter \texttt{WNOHANG} implies that this method is non-blocking. If a child has exited, this method will return the exit status of that child. Otherwise, it will return error (-1) but it will not wait for the child to exit.
 \end{multicols}
 
 \begin{table}[H]
+
+\vspace{-.3cm}
+
 \centering
-\caption{Concurrent connections handling using select() call}\label{fig13}
-\includegraphics[scale=2.95]{src/Figures/chap1/fig13.jpg}
+\caption{server creating predefined number of child processes}\label{tab11}
+\includegraphics[scale=2.35]{src/Figures/chap1/tab11.jpg}
 \end{table}
+
 
 \begin{multicols}{2}
 
-\section{Serving Multiple Concurrent Connections using \textit{select()}}
+One possibly way to improve the performance efficiency of this approach would be to avoid creating a child process every time a new client connects. Instead, we could pre-create a fix number of children processes beforehand and assign new client connection requests to any of the free children processes. The sample snippet code of a server program \texttt{tcp\_server06.py} \cite{art1-key17} implementing this approach is shown in Table~\ref{tab11}.  This code snippet pre-creates 10 children processes as shown in lines 15-16  \texttt{‘for ii in range(10):’} when the server starts. The parent process remains idle for all practical purposes. Each child process invokes its own \textit{accept()} and it is up to the OS to pick any of the child process waiting on \textit{accept()} and assign the new incoming connection request to it. Thus, the approach of distributing the new connections has also been moved from the user space to the kernel space. This approach certainly helps enormously in saving the OS overhead of creating a process, and thus performs better than the earlier approach of creating a new child process upon arrival of each new client connection request.
 
-For an efficient server process implementation, it is desirable to avoid create one child process for each new client, and avoid pre-forked approach of creating a specified number of children process, but should be able to concurrently handle multiple clients. In general, when N clients are connected to the server, not all of them communicate with server at the same time. For example, consider N browsers accessing a web server. When a web page is downloaded, user will take time to glance over (read) it there will be significant time gap before the next request is made to the web server. Thus, at any point of time, only a few clients would be concurrently sending the requests to web server and receiving the response. A naïve approach to efficiently deal with situation is a single threaded process, which maintains all the connected socket in an array and continuously check which of the socket in the array has data received from the associated client and respond accordingly. The socket library call \texttt{select()} (C language: \cite{art1-key14}, python 3 documentation: \cite{art1-key15}) exactly provide such a functionality. The method has its input as array of sockets to check for which sockets have data availability and return back the list of these active sockets to application. For each of these active sockets i.e. the clients who have sent data, server programs reads the data and communicates accordingly. The original socket also is part of read list. Whenever, a new client connects, this socket is considered equivalent to read and needs to checked for accordingly. The server program using the select() API call is given in \texttt{tcp\_server07.py} and basic code snippets highlighting the use is given in Table~\ref{fig13}.
+However, this approach poses a new problem which can significantly impact the server process performance. When the number of clients exceeds the total number of pre-created children processes plus the required queue size, then those clients will be denied connection requests from the server. A 
 
-This program is a simplified example of concurrent client connections handling limited to reading data from the client requests and does not show the use of select() for writing data on these sockets. The select() requires 4 parameters: a) first is list of sockets on which data can be sent by clients, b) second is the list of sockets where data can be written, but given empty list in this example, c) third parameter is list of sockets which have been closed by the clients(), and d) the last parameter is timeout. This timeout is used for select() call to return if no active sockets are found from the 3 lists. New arriving connection processing is shown in lines 10-13. The data from active clients is shown in lines 14-15, 19-20. The lines 16-18 shows the connection processing when client closes the connection.
+simple solution to address this issue would be that each client communicates its current connection status to the parent. Whenever the child process receives a new client request, or when the connection is closed, it informs the parent process. This requires a separate channel of communication between all clients and the server, leading to additional complexity of implementation. The parent keeps track of the number of clients currently being served. Thus, when it sees that the number of connected clients is approaching the number of pre-created children processes, it pre-creates more children processes. Similarly, when number of free children processes exceeds a specified threshold, it can abort a certain number of idle children processes and thus make efficient use of the server’s system resources. This entails some amount of communication between children and parent process, and it requires the parent process to do some book-keeping to dynamically create/kill child processes. A further improvement can be done by using threads instead of creating child processes. This way, OS scheduling overhead is lower compared to dealing with separate child processes. Although threads are more efficient than child processes, writing a thread-safe code is yet another challenge that developers need to deal - not many programmers can write efficient, robust multi-threaded code. However, the problem of scaling still persists and only a limited number of clients can be served using these approaches. 
+\end{multicols}
 
-The approach using select() performs better than earlier approaches of creating multiple threads/processes. The select() call is based on unix system call \cite{art1-key14}, which in general has a default limit of 1024 connections as this is based on bit size. Thus, a server using select() is generally limited to handling 1024 concurrent clients. In today’s internet, a server needs to deal with large number of connections and thus select() in sufficient for this purpose. This limit of 0f 1024 concurrent clients is overcome by two other socket API calls, namely poll() and epoll(), which we will discuss in the next article. The major difference between poll() and select() is basically internal implementation details and former is more efficient than latter, in addition to former supports more than 1024 clients. Epoll() is event based implementation and even more efficient than poll().
+\begin{table}[H]
+\centering
+\caption{Concurrent connections handling using \textit{select()} call}\label{tab12}
+\includegraphics[scale=3.5]{src/Figures/chap1/tab12.jpg}
+\end{table}
 
-\section{summary}
 
-We have discussed the progression of approaches for a TCP server program to handle multiple concurrent clients. The server processing starts from server processing one client at a time and thus causes significant delays to waiting clients, leading to a poor user experience. The next approach is to create one child process (or thread for more efficient processing) which is a simplified approach as each child process separately deals with each client. This makes the programming simple as developer does not have to write code for managing multiple sockets. This approach works fine though inefficient since child process creation results in high overhead for underlying OS. The alternative approach is to create a pre-configured number of children processes (or threads()).This avoids the overhead of process creation but imposes a limit on number of client processes that can be served. A better efficient approach is to make use of select() to serve multiple concurrent clients, which again has efficiency issues and limit on number of concurrent clients to be 1024 (can be changed by recompiling the linux kernel). More efficient processing is provided by use of poll() and epoll() calls.
+\begin{multicols}{2}
+\section{Serving Multiple Concurrent\\ Connections using \textit{select()}}
 
-An practical example of server side porgram using the above discussed approach is more popular Apache web server \cite{art1-key16}.  The web server supports preforked model where a number preconfigured child server processes are created. The parent process manages the size of server pool and creates or kill child processes as required. The web server also supports a worker model where the child process creates multiple threads to process multiple clients. This is more efficient than preforked approach. Finally, the most efficient supported implementation corresponds to event model, which implements a hybrid multiple process, multi-threaded server. This consumes less resources compared to worker model. The event model is supported on unix variants and not on windows. Another, more popular and widely deployed web server is nginx \cite{art1-key17}, which by default is single threaded server per CPU core. It basically, provides a most efficient implementation using epoll() mechanism.
+For an efficient server process implementation, it is desirable not to dedicate one child process for each new client, and to avoid pre-forked approach of creating a specified number of children processes or 
+
+dynamically creating children processes. However, the server program must concurrently handle multiple clients. In general, when $N$ clients are connected to the server, not all of them communicate with server at the same time and any design approach should keep this in mind. For example, consider $N$ browsers accessing a web server. When a web page is downloaded, a user will take some time to glance over (read) it, and there will be significant time gap before the next request is made from this browser to the web server. Thus, at any point of time, only a few clients would concurrently send request data to the web server and be waiting to receive responses. A naïve approach to efficiently deal with this situation is a single threaded process, where it maintains all the connected socket in an array data structure and continuously checks which of the client socket in the array has received the request data from the associated client and respond accordingly. The socket library call \textit{select()} (C language: \cite{art1-key20}, Python 3 documentation: \cite{art1-key21}) provides exactly this functionality. The method accepts an list of all open sockets as inputs. Upon invocation of \textit{select()}, it checks which of the sockets in the input list have data availability, and it returns back a list of only the active sockets to the server application. For each of these active sockets (i.e., clients which have sent data), the server program reads the data and communicates accordingly. The original listening socket on which new connections arrive is also is part of the input list of sockets. Whenever a new client connects, this listening socket activity is considered at par with read and needs to be checked for accordingly. The server program using the \textit{select()} API call is given in \texttt{tcp\_server07.py} \cite{art1-key17} and the key code snippet is shown in Table~\ref{tab12}.
+
+The server program \texttt{tcp\_server07.py} is a simplified example of handling concurrent client connections. It is limited to reading data from client requests only and it does not show the use of \textit{select()} API for writing data on these sockets. The \textit{select()} method (in Python) requires 4 parameters:
+
+\vspace{-.5cm}
+
+\begin{itemize}
+
+\setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 6pt}
+
+\item[\rm a.] List of sockets on which data can be sent by clients,
+
+\item[\rm b.] List of sockets where data can be written, but given empty list in this example,
+
+\item[\rm c.] List of sockets which have been closed by the \textit{clients()}, and
+
+\item[\rm d.] Timeout value.
+
+\end{itemize}
+
+This timeout is used for \textit{select()} call to return if no active sockets are found from these 3 lists. New arriving connection processing is shown in lines 10-13. The processing of request data from active clients is shown in lines 14-15, 19-20. Lines 16-18 show the connection processing when the client closes the connection.
+
+The approach of using \textit{select()} performs better than earlier approaches of creating multiple threads/processes. The \textit{select()} call is based on a Unix system call \cite{art1-key19}\cite{art1-key20}, which in general has a default limit of 1024 connections as this is internally based on a 1024-bit vector implementation. Thus, a server using \textit{select()} is generally limited to handling 1024 concurrent clients. Modern servers need to deal with many more than 1024 concurrent connections, and thus \textit{select()} is insufficient for this purpose. This limit of 1024 concurrent clients is overcome by two other socket API calls, namely \textit{poll()} and \textit{epoll()}, which we will discuss in our next article. The major difference between \textit{poll()} and \textit{select()} corresponds to internal implementation details, and the former is more efficient than latter. Further, \textit{poll()} supports more than 1024 clients as well. Socket API \textit{epoll()} is an event based implementation and is much more efficient than \textit{poll()} in terms of performance.
+
+\vspace{-.5cm}
+
+\section{Summary}
+
+We have discussed the progression of approaches for a TCP server program to handle multiple concurrent clients. The simplest server processing starts from processing one client at a time . This causes significant delays to waiting clients, leading to a poor user experience. The next approach is to create one server child process (or thread for more efficient processing) per new client, which is a simplified and robust approach as each child process separately deals with each client. This makes the programming simple, as the developer does not have to write code for managing multiple sockets. This approach works fine but it is highly inefficient since creation of child process results in high overhead for the underlying OS. Another alternative is to create a pre-configured number of children processes (or threads). This avoids the overhead of process creation at run-time but it imposes a limit on the number of concurrent clients that can be served. The next approach is to use a mix of pre-creating a fixed number of children processes and then dynamically adjusting the number of children depending upon the number of clients connected. A better and more efficient approach that overcome the known limitations is to make use of the \textit{select()} API to serve multiple concurrent client. This again has some efficiency issues and generally has a limit on number of 1024 concurrent clients (this can be changed by recompiling the Linux kernel). More efficient processing is provided by use of \textit{poll()} and \textit{epoll()} calls, to be explored in the next follow up article.
+
+A practical example of understanding the progression of server-side programming using the above discussed approaches can be seen in the implementation of the popular cross platform Apache web server \cite{art1-key04}. The web server supports a \textit{pre-forked} model where a number of preconfigured children processes are created. The parent process manages the size of server pool and creates or kills child processes as required. The web server also supports a \textit{worker} model where the child process creates multiple threads to process multiple clients. This is more efficient than \textit{pre-forked} approach. Finally, the most efficient supported implementation corresponds to \textit{event} model, which implements a hybrid multi-process, multi-threaded server. This consumes less resources compared to worker model. The event model of Apache web server is supported on Unix variants but not on windows. Another, widely deployed web server is Nginx \cite{art1-key05} which by default is a single threaded server (per CPU core). It basically creates one child process for each CPU core in the system and thus number of children processes remains independent of number of clients connecting to it. It also provides a more efficient implementation using the \textit{epoll()} mechanism.
+
+\vspace{-.3cm}
 
 \section{Experiential Exercises}
 
-The complete code of server programs as discussed in the article for both python and C language (not discussed in the article) can be access from \cite{art1-key11}. The setup for these exercises a simple setup of two machines connected on a network, one acting as a client and other server. The server machine should be running Linux operating systems, where client could be any one. For the client application, netcat (nc) \cite{art1-key12} would be used, which is available by default on Linux and macOS, but need to be installed on Windows OS. On the server, it python scripts would be invoked. As a place holder, the IP Address of client and server are respectively taken as 10.211.55.2/24 and 10.211.55.11/24. The server program \texttt{tcp\_server$<$NN$>$.py} by default uses the port number 9999 and can be changed to other value with option -p. On the client machine, configure the number SYN retries to 1. On linux based clients, this can be done with \texttt{sudo sysctI -w net.ipv4.tcp\_syn\_retries=1}.
+\vspace{-.2cm}
+
+The complete code of server programs as discussed in the article for both python and C language (not shown in the article) can be accessed from \cite{art1-key17}. The experimental setup for these exercises consists of a simple setup of two machines connected on a network, one acting as a client and other server. The server machine should be running Linux operating systems, whereas client could be Linux, MacOS or Windows, but preferably Linux. For the client application, netcat (\texttt{nc}) \cite{art1-key18} would be used, which is available by default on Linux and MacOS, but need to be installed (Free and open source version available on Internet) on Windows OS. On the server machine, python scripts would be invoked. As a place holder, the IP Address of client and server are respectively taken as 10.211.55.2/24 (some examples may show the client address as 10.211.55.9/24) and 10.211.55.11/24. The server programs \texttt{tcp\_server<NN>.py}, by default, uses the port number 9999 and can be invoked with any other value using option -p. On the client machine, configure the number of SYN retries to 1. On Linux based clients, this can be done by changing system TCP SYS retry attempts e.g. \texttt{sudo sysctl -w  net.ipv4.tcp\_syn\_retries=1}.
+
+\vspace{-.3cm}
 
 \setcounter{section}{0}
 \section*{Exercise \thnum{1}\label{chap1-exe01}}
 
-\textbf{Topic: TCP Server handling a single client with multiple clients queueing.}
+\vspace{-.2cm}
+
+\textbf{Topic: TCP Server handling a single client with\\ multiple clients queueing.}
+
+\vspace{-.2cm}
 
 \begin{itemize}
 \item[a.] Invoke the server program \texttt{tcp\_server01.py} on server machine. This server accepts only one client request and exits after client closes the connection.
@@ -247,22 +310,24 @@ The complete code of server programs as discussed in the article for both python
 
 \texttt{nc 10.211.55.11 9999}
 
-\item[c.] All 3 clients would be connected. From each of the client send some data e.g. \texttt{“Hello 1”, “Hello 2”, “Hello 3”}, etc.
+\item[c.] All 3 clients would be connected. From each of the client send some data e.g. \texttt{“Hello 1”, “Hello 2”, “Hello 3”,}, etc.
 
-\item[d.] On the server, check connection status as below. 
+\item[d.] On the server, check connection status as below.
 
 \texttt{Netstat -natp | grep 9999}
 
-\item[e.] It should show 3 connections in ESTABLISHED state similar to that shown in Table~\ref{fig07}. The data from first client will be shown on server terminal, data from other two clients will be shown as queued in $2^{\rm nd}$ column of \texttt{netstat} output.
+\item[e.] It should show 3 connections in ESTABLISHED state similar to that shown in Table~\cite{art1-tab06}. The data sent from first client will be shown on server terminal, data from other two clients will be shown as queued in $2^{\rm nd}$ column of \texttt{netstat} output.
+
 \item[f.] Exit from the first client. Check the connection state on the server. All 3 connections would be closed and server program would also exit.
+
 \item[g.] Repeat the above exercise using the server programs \texttt{tcp\_server02.py} and \texttt{tcp\_server03.py} instead of \texttt{tcp\_server01.py} and analyze the server program behaviour. The former will demonstrate the use of \textit{bind()} and \textit{listen()}, and latter will exhibit the working of \textit{listen()} and \textit{accept()}.
 \end{itemize}
 
-\vspace{-.2cm}
+\vspace{-.3cm}
 
-\textbf{Learning:} Handing of multiple client connections and queueing of these on account of TCP listen().
+\textbf{Learning:} Handing of multiple client connections and queueing of these on account of TCP \textit{listen()}.
 
-\vspace{-.35cm}
+\vspace{-.3cm}
 
 \section*{Exercise \thnum{2}\label{chap1-exe02}}
 
@@ -270,7 +335,7 @@ The complete code of server programs as discussed in the article for both python
 
 \begin{itemize}
 
-\item[a.] Invoke the server program \texttt{tcp\_server04.py} on server machine. This server accepts one client request at a time, accepts the next client request when previous client closes the connection. Thus, the server program runs from ever.
+\item[a.] Invoke the server program \texttt{tcp\_server04.py} on server machine. This server accepts one client request at a time, accepts the next client request when previous client closes the connection. Thus, the server program runs for ever.
 
 \item[b.] On the client machine(s), invoke netcat in 3 different terminal windows as below
 
@@ -282,7 +347,7 @@ The complete code of server programs as discussed in the article for both python
 
 \texttt{Netstat -natp | grep 9999}
 
-\item[e.] It should show 3 connections in ESTABLISHED state similar to that shown in Table~\ref{fig07}. The data from first client will be shown on server terminal, data from other two clients will be shown as queued in $2^{\rm nd}$ column of \texttt{netstat} output.
+\item[e.] It should show 3 connections in ESTABLISHED state similar to that shown in Table~\ref{tab05} . The data from first client will be shown on server terminal, data from other two clients will be shown as queued in $2^{\rm nd}$ column of \texttt{netstat} output.
 
 \item[f.] Exit from the first client. Server would proceed to accept next connection and display the data from second client. Accordingly verify the number of ESTABLISHED connections using \texttt{netstat}.
 
@@ -294,11 +359,11 @@ The complete code of server programs as discussed in the article for both python
 
 \section*{Exercise \thnum{3}\label{chap1-exe03}}
 
-\textbf{Topic: Perpetual TCP Server handling concurrent clients using creating one child process per client}
+\textbf{Topic: Perpetual TCP Server handling concurrent clients by creating one child process per client}
 
 \begin{itemize}
 
-\item[a.] Invoke the server program \texttt{tcp\_server05.py} on server machine. This server accepts one client request at a time, accepts the next client request when previous client closes the connection. Thus, the server program runs from ever.
+\item[a.] Invoke the server program \texttt{tcp\_server05.py} on server machine. This server parent process accepts one client request at a time, creates a child process to serve the client and waits for the next client request. Thus, the server program runs from ever.
 
 \item[b.] On the client machine(s), invoke netcat in N (e.g. 3 or more) different terminal windows as below
 
@@ -306,150 +371,189 @@ The complete code of server programs as discussed in the article for both python
 
 \item[c.] All these clients would be connected. From each of the client send some data e.g. \texttt{“Hello 1”, “Hello 2”, “Hello 3”}, etc.
 
-\item[d.] On the server, check connection status as below and number of server processes. 
+ \item[d.] On the server, check connection status as below and number of server processes.
  
  \texttt{netstat -natp | grep 9999}
  
  \texttt{ps -efw | grep tcp\_server05}
  
-\item[e.] It should show N connections in ESTABLISHED state and N+1 process 1 corresponding to parent process, and 1 child process for each client. The data from all the client will be shown on server terminal. Since each client is served actively and not waiting at all, no data should be shown in queue i.e. $2^{\rm nd}$ column of \texttt{netstat} output should show value 0.
+\item[e.] It should show N connections in ESTABLISHED state and N+1 server processes, 1 corresponding to parent process, and 1 child process for each of the N connected client. The data from all the clients will be shown on server terminal. Since each client is served actively and not waiting at all, no data should be shown in queue i.e. $2^{\rm nd}$ column of \texttt{netstat} output should show value 0.
 
-\item[f.] Exit from some clients e.g. K clients closes the connection and initiate new connections from M other clients. The total number of process that should be equal to 1+N+M. Essentially, even though client has closed the connection, the corresponding server child process continue to remain in the process list (which essentially becomes a zombie process).
+\item[f.] Now exit from some clients e.g. pressing Ctrl-D on K clients will close the connection.  Initiate new connections from M other clients. The total number of process that should be equal to 1+N+M. Essentially, even though K clients have closed the connection, the corresponding server children processes continue to remain in the process list (which essentially becomes a zombie process.
 
-\item[g.] Abort the main server parent process (e.g. Ctrl-C on server window) and where server program is running. This will clean out server processes and also all client netcat process will also exit because nc exits when connection is closed.
+\item[g.] Abort the main server parent process (e.g. Ctrl-C on server window) where server program is running. This will clean out server processes and also all client netcat process will also exit because \texttt{nc} exits when connection is closed.
 
-\item[h.] Repeat the above experiment with variant \texttt{tcp\_server05b.py} of this server program. Verify that at any time, number of server child processes correspond to number of connected clients.
+\item[h.] Repeat the above experiment with variant \texttt{tcp\_server05b.py} of this server program. Verify that at any time, number of server children processes correspond to number of connected clients.
 
 \end{itemize}
 
-\textbf{Learning:} Handing of multiple client connections with a dedicated server child process and clean-up of zombie processes.
+\textbf{Learning:} Handing of multiple client connections with each of the dedicated server child process serving a client and clean-up of zombie processes.
 
 \section*{Exercise \thnum{4}\label{chap1-exe04}}
 
-\textbf{Topic:  Perpetual TCP Server handling multiple concurrent clients using pre-created child process.}
+\textbf{Topic:  Perpetual TCP Server handling multiple\\ concurrent clients using pre-created child process.}
 
 \begin{itemize}
 
-\item[a.] Invoke the server program \texttt{tcp\_server06.py} on server machine. This server program creates fixed number (e.g. 3) child processes. The program, by default, creates 10 children processes. Use option \texttt{-c <N>} to specify count of children processes.
+\item[a.] Invoke the server program \texttt{tcp\_server06.py} on server machine. This server program creates fixed number (e.g. 3) children processes. The program, by default, pre-creates 10 children server processes. Use option \texttt{-c <N>} to specify a different value for number of children processes to be created.
 
-\item[b.] On the server machine, verify number of server processes to be \texttt{N+1}, 1 parent, \texttt{N} children.
+\item[b.] On the server machine, verify number of server processes to be \texttt{N+1} (1 parent, \texttt{N} children).
 
 \texttt{ps -efw | grep tcp\_server06}
 
-\item[c.] Each of child process executes \textit{accept()} on the single listening socket shared by all. Thus, whenever a new client connection request arrives, OS directs the incoming connection to one of the child process which accepts and process the client requests.
+\item[c.] Each of server child process executes \texttt{accept()} on the single listening socket shared by all. Thus, whenever a new client connection request arrives, OS directs the incoming connection to one of the children processes which accepts and process a client’s requests.
 
 \item[d.] On the client machine(s), invoke netcat in N (e.g. 3 or more) different terminal windows as below
 
 \texttt{nc 10.211.55.11 9999}
 
-\item[e.] All these clients would be connected. From each of the client send some data e.g. \texttt{“Hello 1”, “Hello 2”, “Hello 3”}, etc.
+\item[e.] All these clients would be connected to server and connection would be in ESTABLISHED state. From each of the client send some data e.g. \texttt{“Hello 1”, “Hello 2”, “Hello 3”}, etc.
 
 \item[f.] On the server, check TCP connection status.  Verify it should be equal to number of clients.
 
-\item[g.] Invoke few more clients (nc) to exceed queue size. Verify the number of TCP connections in ESTABLISHED state to be equal to number of server children processes plus listen queue size, and other clients would exit after connection timeout.
+\item[g.] Invoke few more clients \texttt{(nc)} to exceed queue size (equal to pre-created server children processes plus the listen queue size) . Verify the number of TCP connections in ESTABLISHED state to be equal to number of server children processes plus listen queue size, and other clients would exit after connection timeout.
 \end{itemize}
+
+\vspace{-.3cm}
 
 \textbf{Learning:} Understand limitations on number of clients that can be concurrently server using pre-forked children processes.
 
+\vspace{-.3cm}
+
 \section*{Exercise \thnum{5}\label{chap1-exe05}}
 
-\textbf{Topic: Perpetual TCP Server handling multiple concurrent clients using \textit{select()} call.}
+\textbf{Topic: Perpetual TCP Server handling multiple\\ concurrent clients using \textit{select()} call.}
+
+\vspace{-.3cm}
 
 \begin{itemize}
 
-\item[a.] Repeat the first six steps of Exercise~\ref{chap1-exe04} with replacing the server program \texttt{tcp\_server06.py} by \texttt{tcp\_server07.py}.
+\item[a.] Repeat the first six steps of Exercise~\ref{chap1-exe04} but by invoking the server program \texttt{tcp\_server07.py.}
 
 \item[b.] Verify that number of ESTABLISHED connections are equal to number of clients communicating with server. All the clients can concurrently communicate with the server.
 
 \item[c.] Verify that there is only a single server process running on the server.
 
 \item[d.] Activate few more clients and these will connect to server successfully and communicate with it. Try as many clients as would like to. The single threaded server process can handle up to 1024 clients concurrently.
+
 \end{itemize}
 
-\textbf{Learning:} Understand general implementation of an efficient server side program that can handle 1000+ concurrent clients.
+\vspace{-.3cm}
 
-\section*{Appendix}
+\textbf{Learning:}  Understand general implementation of an efficient server-side program that can handle 1000+ concurrent clients.
+
+\vspace{-.3cm}
 
 \begin{thebibliography}{99}
-\bibitem{art1-key01} RFC 793, “Transmission Control Protocol “, Information Sciences Institute, USC, CA, Sep 1981, 
+\bibitem{art1-key01} RFC 2616, “Hyper Text Transfer Protocol – HTTP/1.1”,
 
-\url{https://tools.ietf.org/html/rfc793. Last accessed May 2019.}
+\url{https://tools.ietf.org/html/rfc2616,}
 
-\bibitem{art1-key02} RFC 791, “User Datagram Protocol”,.....
+Last accessed Dec 2019.
 
-\bibitem{art1-key03}Kurose, Ross, “Computer Networking: A Top Down Approach”, section 3.5.5, $6^{\rm th}$ edition, Pearson,
+\bibitem{art1-key02} RFC 793, “Transmission Control Protocol,
 
-\bibitem{art1-key04} Ram Rustagi, Viraj Kumar, “Understanding Basics of Transport Layer”, ACCS journal of Computing and Communications, Vol 2, Issue 3, September 2018
+\url{https://tools.ietf.org/html/rfc793.}
 
-\url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/,}
+Last accessed Dec 2019.
 
-last accessed Aug 2019
+\bibitem{art1-key03} RFC 791, “Internet Protocol”,
 
-\bibitem{art1-key05} Ram Rustagi, Viraj Kumar, “Understanding TCP States Part - I”, ACCS journal of Computing and Communications, Vol 2, Issue 4, Decemeber 2018,
+\url{https://tools.ietf.org/html/rfc791},
 
-\url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-tcp-states-part-1,}
+Last accessed Dec 2019
 
-last accessed Dec 2019.
-
-\bibitem{art1-key06} Ram Rustagi, Viraj Kumar, “Understanding TCP States Part - II”, ACCS journal of Computing and Communications, Vol 3, Issue 1, March 2019,
-
-\url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-tcp-states-part-2/,}
-
-last accessed Dec 2019.
-\bibitem{art1-key07} \url{ftp://www.cs.uregina.ca/pub/class/330/Sockets/sockets.html,}
-
- last accessed Dec 2019
-
-\bibitem{art1-key08} Linux Socket programming: 
-
-\url{http://www.linuxhowtos.org/C_C++/socket.html}
-
-\bibitem{art1-key09} Basic description of socket programming,
-
-\url{http://inst.eecs.berkeley.edu/~ee122/fa09/notes/03-SocketProgrammingx6.pdf}
-
-\bibitem{art1-key10} Linux man page for socket APIs,
-
- \url{http://man7.org/linux/man-pages/man2/socket.2.html}
-
-\bibitem{art1-key11} Source code of server socket programs.
-
-\url{https://github.com/rprustagi/EL-Evolution-of-Server-Socket-Programming}
-
-\bibitem{art1-key12} Netcat (nc) command utility,
-
-\url{http://manpages.ubuntu.com/manpages/xenial/man 1/nc.traditional.1.html},
-
-last accessed December 2019. 
-
-\bibitem{art1-key13} Ubuntu man page for listen socket call.
-
-\url{http://manpages.ubuntu.com/manpages/bionic/man2/listen.2freebsd.html}
-
-\bibitem{art1-key14} Man page of select() api,
-
-\url{http://manpages.ubuntu.com/manpages/trusty/man2/select.2.html,}
-
-last accessed Dec 2019.
-
-\bibitem{art1-key15} Documentation of python 3 select API, 
-
-\url{https://docs.python.org/3/library/select.html}, 
-
-last accessed Dec 2019.
-
-\bibitem{art1-key16} Apache web server multi processing module,
+\bibitem{art1-key04} Apache web server multi processing module,
 
 \url{http://httpd.apache.org/docs/2.4/mpm.html},
 
- last accessed Dec 2019.
- 
-\bibitem{art1-key17} Nginx web server, 
+last accessed Dec 2019.
+
+\bibitem{art1-key05} Nginx web server,
 
 \url{http://nginx.org/en/},
 
 last accessed Dec 2019.
 
+\bibitem{art1-key06} Microsoft Internet Information Services Web Server,
+
+\url{https://www.iis.net},
+
+last accessed Dec 2019.
+
+\bibitem{art1-key07} RFC 768, “User Datagram Protocol,
+
+\url{https://tools.ietf.org/html/rfc768},
+
+Last accessed Dec 2019
+
+ \bibitem{art1-key08} Ram Rustagi, Viraj Kumar, “Understanding Transport Layer Basics”, ACCS journal of Computing and Communications, Vol 2, Issue 3, September 2018,
+
+\url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/},
+
+Last accessed Dec 2019.
+
+\bibitem{art1-key09} Kurose, Ross, “Computer Networking: A Top Down Approach”, section 3.5.5, $6^{\rm th}$ edition, Pearson,
+
+\bibitem{art1-key10} Ram Rustagi, Viraj Kumar, “Understanding Basics of Transport Layer”, ACCS journal of Computing and Communications, Vol 2, Issue 3, September 2018
+
+ \url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-transport-layer-basics/},
+ 
+ last accessed Aug 2019.
+
+\bibitem{art1-key11} Ram Rustagi, Viraj Kumar, “Understanding TCP States Part - I”, ACCS journal of Computing and Communications, Vol 2, Issue 4, Decemeber 2018,
+
+\url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-tcp-states-part-1},
+
+last accessed Dec 2019.
+
+\bibitem{art1-key12} Ram Rustagi, Viraj Kumar, “Understanding TCP States Part - II”, ACCS journal of Computing and Communications, Vol 3, Issue 1, March 2019,
+
+\url{https://journal.accsindia.org/experiential-learning-of-networking-technologies-understanding-tcp-states-part-2/},
+
+last accessed Dec 2019.
+
+\bibitem{art1-key13} \url{ftp://www.cs.uregina.ca/pub/class/330/Sockets/sockets.html},
+
+last accessed Dec 2019
+
+\bibitem{art1-key14} Linux Socket programming:
+
+\url{http://www.linuxhowtos.org/C_C++/socket.htm}
+
+\bibitem{art1-key15} Basic description of socket programming, 
+
+\url{http://inst.eecs.berkeley.edu/~ee122/fa09/notes/03-SocketProgrammingx6.pdf}
+
+\bibitem{art1-key16} Linux man page for socket APIs,
+
+\url{http://man7.org/linux/man-pages/man2/socket.2.html}
+
+ \bibitem{art1-key17} Source code of server socket programs. 
+
+\url{https://github.com/rprustagi/EL-Evolution-of-Server-Socket-Programming}
+
+\bibitem{art1-key18} Netcat (nc) command utility,
+
+\url{http://manpages.ubuntu.com/manpages/xenial/man 1/nc.traditional.1.html},
+
+last accessed December 2019.
+
+\bibitem{art1-key19} Ubuntu man page for listen socket call. 
+
+\url{http://manpages.ubuntu.com/manpages/bionic/man2/listen.2freebsd.html}
+
+\bibitem{art1-key20} Man page of select() api,
+
+\url{http://manpages.ubuntu.com/manpages/trusty/man2/select.2.html},
+
+last accessed Dec 2019.
+
+\bibitem{art1-key21} Documentation of python 3 select API,
+
+\url{https://docs.python.org/3/library/select.html},
+
+last accessed Dec 2019.
 \end{thebibliography}
 \end{multicols}
 
