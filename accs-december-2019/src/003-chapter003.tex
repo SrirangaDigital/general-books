@@ -5,7 +5,7 @@
 
 \vskip -6pt
 
-Indian Institute of Technology Kharagpur, India\\ 
+Indian Institute of Technology - Kharagpur \\ 
 \end{center}
 
 
@@ -14,7 +14,7 @@ Indian Institute of Technology Kharagpur, India\\
 
 \vskip -6pt
 
-Indian Institute of Technology Kharagpur, India\\ 
+Indian Institute of Technology - Kharagpur\\ 
 \end{center}
 
 \begin{center}
@@ -22,7 +22,7 @@ Indian Institute of Technology Kharagpur, India\\
 
 \vskip -6pt
 
-Indian Institute of Technology Kharagpur, India\\ 
+Indian Institute of Technology - Kharagpur\\ 
 \end{center}
 
 \begin{center}
@@ -30,7 +30,7 @@ Indian Institute of Technology Kharagpur, India\\
 
 \vskip -6pt
 
-Indian Institute of Technology Kharagpur, India\\ 
+Indian Institute of Technology - Kharagpur\\ 
 \end{center}
 
 \vfill
@@ -47,7 +47,7 @@ Indian Institute of Technology Kharagpur, India\\
 
 Cloud Radio Access Networks (C-RAN) was proposed as a solution to overcome the challenges faced by the current Radio Access Networks (RAN). C-RAN was introduced as a change in the architecture of the Base station (BS). Fronthaul is a communication link between the BS entities of the proposed architecture. The change in BSs’ architecture places some technical challenges to utilize the benefits offered by C-RAN. Fronthaul capacity limitation and delay are the major bottlenecks of the C-RAN practical implementation. To prevail over these limitations, various C-RAN models in terms of functional splits are proposed. But none of the architectures is finalized among the industry and academia. In this paper, exhaustive literature is presented on the advantages offered by C-RAN architecture. To make full utilization of those advantages, different C-RAN architectures and fronthaul architectures were proposed. Fronthaul compression is crucial for bringing sustainability to C-RAN architecture. As part of the study, different compression techniques are discussed in this literature. Besides the theoretical study, various practical implementation of C-RAN testbeds is examined.
 
-\textit{Index Terms}-C-RAN, Fronthaul Compression, Resource Allocation, CoMP, Precoding.
+\textit{Index Terms} - C-RAN, Fronthaul Compression, Resource Allocation, CoMP, Precoding.
 
 \section{Introduction}
 
@@ -56,12 +56,12 @@ Data explosion in the era of smart-phones is skyrocketing. According to the Cisc
 Under C-RAN, the traditional BS (eNodeB) is decoupled into two main components: 1) Remote Radio Heads (RRHs), 2) Base-Band Processing Units (BBUs) \cite{art3-key05}. The RRHs include light-weighted Radio Frequency (RF) units and antennas to provide a wireless interface for User Equipment (UE). Whereas the BBUs include all signal processing units and all functional blocks of L2 and L3 protocol stack, located centrally like data centers. The function split between RRH
 and BBU follows a fully centralized structure \cite{art3-key06}. Fig.~\ref{fig01} depicts the architectural difference between traditional RAN and C-RAN \cite{art3-key07}. Centralization of BBUs at the BBU pool has many advantages like feasibility of resource sharing, on demand resource allocation, the possibility of implementing advanced technologies like joint processing and Coordinated Multi-Point (CoMP), etc. \cite{art3-key08}.
 
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1]{src/Figures/chap3/fig01.jpg}
-%~ \caption{Architectural difference between traditional RAN and C-RAN. (A) traditional RAN architecture, (B) C-RAN architecture.}\label{fig01}
-%~ \vspace{-.5cm}
-%~ \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.15]{src/Figures/chap3/fig01.jpg}
+\caption{Architectural difference between traditional RAN and C-RAN. (A) traditional RAN architecture, (B) C-RAN architecture.}\label{fig01}
+\vspace{-.5cm}
+\end{figure}
 
 Due to the full centralized structure of C-RAN, there is a vast communication overhead between RRH and BBU. Being only RF section at RRH, I/Q samples are sent over the fronthaul to the BBU for further processing. The required fronthaul data rate is directly proportional to the number of antennas used at RRH, due to which the use of C-RAN in 5G with massive MIMO seems to be hypothetical \cite{art3-key09}. There are two possible directions to address the above problem, which are fronthaul compression and baseband functional split. In fronthaul compression, the I/Q data are compressed by using a suitable compression technique, as discussed in \cite{art3-key10}. Under functional split, a redistribution of baseband functions among RRH and BBU are considered \cite{art3-key11}. Due to the lightweight, it is easy to deploy a large number of RRHs in the given coverage area to increase the network capacity \cite{art3-key05}. The two hop links, UE to RRH and RRH to BBU, increase propagation delay, which makes C-RAN technology not a suitable candidate for 5G in terms of latency requirements. These technical challenges, such as the design of fronthaul compression, different C-RAN, and fronthaul architectures, and technical challenges of fronthaul, are discussed in this literature.
 
@@ -107,7 +107,7 @@ In \cite{art3-key27}, an improved version of optical-access-enabled C-RAN Archit
 
 Though tremendous advantages of C-RAN can be seen nowadays from data rate to the total cost of ownership, multicell coordination is one of the biggest hurdles. At the same time, as the fronthaul is not ideal, latency and perfor- mance of the system can be affected by the functional split as well. In \cite{art3-key28}, the authors have investigated the effect of coordination algorithms like coordinated scheduling, dynamic point selection, and uplink joint reception for a given fronthaul latency. It was shown that the coordination performance in fully centralized C-RAN is no better than fully distributed or partially distributed C-RAN. That means the architectural evolution towards decentralization is a correct way to combat the vast data processing jargon. Furthermore, pooling gain is also being examined in this work.
 
-Due to Network Function Virtualization (NFV) and Softwarization in C-RAN, the performance is promising. But as this whole system is becoming very complicated, switching and aggregation concept in fronthaul must come into the picture. At the same time, to combat the limited fronthaul capacity constraints, the functional split is becoming indispensable. In \cite{art3-key29}, the problem of a functional split is analyzed, and a solution approached is also given. The main problem of functional split or flexible centralization is 1. RRHs become more complex, that means expensive. 2. It reduces the opportunities for multiplexing gains, coordinated signal processing, and interference management. But at the same time, it reduces the fronthaul consumption in the order of magnitude. So, there is a trade-off between the complexity of RRH and fronthaul consumption. Now to transmit data through CPRI or OBSAI, packetization has to be done. Received samples from ME is first packetized in RRH, then that packets are sent to the BBU pool, de-packetization is done there to get the samples back. Finally, all baseband processing is done. Now the question is that at what point packetization should be done. The analysis shows that if packetization is done immediately after getting the samples, then FH consumption is very high. If packetization is done after CP removal and FFT conversion, then the consumption will be low. But in that case (de)-packetization latency will be higher. This work examined the most suitable packetization method, taking packetization latency and FH overload into consideration so that HARQ deadlines are met. But this is very situation-specific. The multiplexing gain for different UE densities and functional splits are analyzed, and a conclusion is drawn on the maximum number of supported RRHs for the best packetization method.
+Due to Network Function Virtualization (NFV) and Softwarization in C-RAN, the performance is promising. But as this whole system is becoming very complicated, switching and aggregation concept in fronthaul must come into the picture. At the same time, to combat the limited fronthaul capacity constraints, the functional split is becoming indispensable. In \cite{art3-key29}, the problem of a functional split is analyzed, and a solution approached is also given. The main problem of functional split or flexible centralization is 1. RRHs become more complex, that means expensive 2. It reduces the opportunities for multiplexing gains, coordinated signal processing, and interference management. But at the same time, it reduces the fronthaul consumption in the order of magnitude. So, there is a trade-off between the complexity of RRH and fronthaul consumption. Now to transmit data through CPRI or OBSAI, packetization has to be done. Received samples from ME is first packetized in RRH, then that packets are sent to the BBU pool, de-packetization is done there to get the samples back. Finally, all baseband processing is done. Now the question is that at what point packetization should be done. The analysis shows that if packetization is done immediately after getting the samples, then FH consumption is very high. If packetization is done after CP removal and FFT conversion, then the consumption will be low. But in that case (de)-packetization latency will be higher. This work examined the most suitable packetization method, taking packetization latency and FH overload into consideration so that HARQ deadlines are met. But this is very situation-specific. The multiplexing gain for different UE densities and functional splits are analyzed, and a conclusion is drawn on the maximum number of supported RRHs for the best packetization method.
 
 In \cite{art3-key30}, a flexible framework is proposed where the centralized BBU pool is connected to the SDN controller to make another level of intelligent abstraction for joint coordination and increase scalability. The novelty of the work is a definition of an architecture where given the practical constraints of real-time RAN, a Multicses coordination algorithm for joint processing is proposed, and this processing is centralized. It is also capable of end-to-end connectivity with enhanced QoS for cell-edge users; those are affected by ICI without CoMP.
 
@@ -122,8 +122,20 @@ A study on greenhouse emission in \cite{art3-key33} says, 2\% of the $CO_{\rm 2}
 In C-RAN, RRH becomes very light, and the footprint is reduced due to the shifting of all layers and its functions to BBU. It becomes easy to install RRH, especially in dense urban and hilly areas. The requirement of less construction space for RRH installation helps in reducing CAPEX. In a short period, the installation of RRH is possible; hence network expansion can be easily done to increase the system capacity. To have an insight into the requirement of C-RAN and its benefit, we have chosen two typical areas, which are depicted in Fig.~\ref{fig02}. The chosen areas are football stadium and airport, where better network coverage with high throughput is essentially required. By applying C-RAN architecture, an operator can get more benefits as compared to tradition RAN. 
 
 By implementing Network Function Virtualisation (NFV) over BBUs, it becomes possible to share the same resource among multiple operators. Thus, compared to traditional RAN, fewer resources are required in C-RAN. Hence, it helps in reducing the CAPEX. Cost efficiency is a main driver of NFV. Due to NFV, load-balancing, network scale up and down, move functions across distributed hardware resources become easy in C-RAN. It improves the flexibility of the network service provisioning and reduces the time to deploy new services.
+\end{multicols}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.7]{src/Figures/chap3/fig02.jpg}
+\caption{Benefits of C-RAN compare to traditional RAN. (a) Shows the football ground, (b) shows the airport area}\label{fig02}
+%~ \vspace{-.5cm}
+\end{figure}
+
+\begin{multicols}{2}
 
 \section{Fronthaul Architecture}\label{sect04}
+
+\vspace{-.3cm}
 
 In CRAN, the interface that connects RRH and BBU is known as fronthaul. The concept of the fronthaul is not newly introduced in C-RAN. It was already present in traditional RAN architecture, but unnoticed. In traditional RAN, the fronthaul interface was used to allow the antenna function to be moved to the rooftops and mastheads, keep away from the baseband processing present inside the cabinet. It was unnoticed due to its short distance in the case of traditional RAN. But in C-RAN, the separation distance between the antenna head and BBU unit can be of several kilometers. The interface used for connecting RRH and BBU follows some dedicated transport standards, which set by industry cooperation. The name of these standards are Open Base Station Architecture Initiative (OBSAI) \cite{art3-key34}, Common Public Radio Interface (CPRI) \cite{art3-key35}, Open Radio Interface (ORI) \cite{art3-key36}. 
 
@@ -131,37 +143,46 @@ OBSAI was first introduced in 2002 by a common agreement among BS vendors: Hyund
 
 CPRI has restricted compatibility as compared to OBSAI, due to its closed-based architecture. To address this problem and to provide better compatibility, the European Telecommunication Standards Institute (ETSI) has initiated a new industry specification group (ISG) known as ORI. ISG is also agreed by telecom operators like SK Telecom, Japanese telecommunications operator KDDI and vendors like Samsung, Huawei, ZTE. ORI specification is a modification on CPRI standards by the removal of some options and the addition of other functions. The main difference between CPRI and OBSAI on one side and ORI on other sides is that the first two technologies are formed by cooperation among equipment markers. In contrast, ORI members include several network operators. All three interfaces support digitized data. Among the three, CPRI is dominating and by-default, followed by the fronthaul interface. Sometimes the fronthaul interface is also called a CPRI interface.
 
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=2]{src/Figures/chap3/fig02.jpg}
-%~ \caption{Benefits of C-RAN compare to traditional RAN. (a) Shows the football ground, (b) shows the airport area}\label{fig02}
-%~ \vspace{-.5cm}
-%~ \end{figure}
-
 In \cite{art3-key39}, an overview of CPRI and its application in the LTE scenario is well explained. A CPRI can support many typologies such as star, tree, chain, ring, and multi-hop option. It can support different radio standards such as 3GPP UTRA FDD, 3GPP GSM/EDGE, and WiMAX apart from 3GPP EUTRA (LTE), which is our point of concern. CPRI requires strict synchronization and time accuracy between RRH and BBU. It supports an operating range of at least 10 km and a maximum of 40 km. Apart from the BW requirement, CPRI needs a stringent delay, jitter, and BER requirement. It allows the maximum of $200 \mu s$ delay for round trip transmission. The CPRI link can maximum contributes $5 \mu s$ delay, excluding the propagation delay. The maximum allowed frequency deviation from the link to the base station is of 0.002 ppm.
 
 CPRI supports digital data, and it follows either Time Division Multiplexing (TDD) or Frequency Division Multiplexing (FDD). TDD is widely used in CPRI, and it has a hierarchical frame structure, as shown in Fig.~\ref{fig03}. An LTE frame structure, also known as the CPRI frame, starts from a Basic Frame (BF) of variable size. BF allows transmitting user plane data, control, management plane data, synchronization, and timing data in each frame. It consists of 16 words from which 15 words carry user plane data and the starting word ($W_{0}$ ) of a  frame carry control, management, and synchronization data. Each word length of a BF depends on the number of bits required per I and Q sample and the number of antenna-carrier (A$\times$C). A$\times$C depends on the MIMO scheme and the number of antenna sectoring used. Basic frame duration ($T_{c}$ ) is just the reciprocal of the sampling frequency. In every $T_{c}$ , it is bound that a BF is created and transmitted. For the different channel, BW, and number of A$\times$C, the required CPRI data rate is different. The line coding used in CPRI also depends on the number of A$\times$C. A Collection of BFs equal to the number of FFT points is known as Hyper Frame. The duration of a Hyper frame is the summation OFDM symbol duration ($66.67 \mu s$) and the duration of Cyclic Prefix (CP). A Hyper frame contains 256 control words, one from each BF. These control words are organized into 64 sub-channels; each carries four control words. Total sub-channels divided into seven categories, and each sub-channel belongs to one category. A Grouping of 150 numbers of Hyper frame completes a 10ms of LTE frame (CPRI frame). All the existing fronthaul candidates follow the CPRI frame structure and its three mapping methods to accommodate different A$\times$C
 
-\textit{\textbf {Existing Fronthaul candidates}}- A C-RAN system follows a full centralized structure for its smooth operation and maintenance. Due to this structure, RRH contains only the Radio Frequency (RF) section and has no processing power. So RRH collects the RF signal and sends sampled I/Q data (digital) to BBU for further processing. After processed, BBU sends the digitized data to RRH through the CPRI-based fronthaul link.
+\textit{\textbf {Existing Fronthaul candidates}} - A C-RAN system follows a full centralized structure for its smooth operation and maintenance. Due to this structure, RRH contains only the Radio Frequency (RF) section and has no processing power. So RRH collects the RF signal and sends sampled I/Q data (digital) to BBU for further processing. After processed, BBU sends the digitized data to RRH through the CPRI-based fronthaul link.
 
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=2]{src/Figures/chap3/fig03.jpg}
-%~ \caption{Hierarchical frame structure of CPRI for normal cyclic prefix \cite{art3-key40}.}\label{fig03}
-%~ \vspace{-.5cm}
-%~ \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.34]{src/Figures/chap3/fig03.jpg}
+\caption{Hierarchical frame structure of CPRI for normal cyclic prefix \cite{art3-key40}.}\label{fig03}
+\vspace{-.5cm}
+\end{figure}
 
 There is a vast communication overhead between RRH and BBU due to the full centralized structure. For the above reason, the CPRI link demands a high fronthaul data rate. Fronthaul link with CPRI standard also follows other performance requirements such as maximum one-way delay, maximum jitter, and the allowable BER. These performance specifications are imposed by CPRI \cite{art3-key41}. We can choose those fronthaul candidates who can satisfy the above CPRI requirements. List of exiting fronthaul candidates are A) Optical fronthaul, B) Wireless fronthaul, and C) Ethernet fronthaul. From the above list of candidates, Ethernet fronthaul is a novel and emerging, fronthaul candidate. Optical fronthaul is widely used as compared to Ethernet and Wireless fronthaul.
+
+\vspace{-.3cm}
 
 \begin{itemize}
 
 \item[{\textit{\textbf{ A.}}}] {\textit{\textbf{Optical Fronthaul}}}
 
-Early deployment of C-RAN in China, Japan, South Korea use optical fiber as the only fronthaul candidate. It is mainly due to its high BW and low latency. According to Mavrakis \cite{art3-key42}, optical fronthaul deployment can follow different technologies such as dedicated fiber technology, Passive CWDM technology, Active WDM technology, and Passive Optical Networking (PON) technology. All the above technology uses a mix of passive and active optical equipment. The advantages and disadvantages of each technique are listed in Table-~\ref{tab01}.
+Early deployment of C-RAN in China, Japan, South Korea use optical fiber as the only fronthaul candidate. It is mainly due to its high BW and low latency. According to Mavrakis \cite{art3-key42}, optical fronthaul deployment can follow different technologies such as dedicated fiber technology, Passive CWDM technology, Active WDM technology, and Passive Optical Networking (PON) technology. All the above technology uses a mix of passive and active optical equipment. The advantages and disadvantages of each technique are listed in Table~\ref{tab01}.
+\end{itemize}
+\end{multicols}
+
+\begin{table}[H]
+\centering
+\caption{Different types of Optical fronthaul deployment technology with their pros and cons \cite{art3-key43}}\label{tab01}
+\includegraphics[scale=2.2]{src/Figures/chap3/tab01.jpg}
+\end{table}
+
+\begin{multicols}{2}
+
+\begin{itemize}
+
+
 
 \item[{\textit{\textbf{ B.}}}] {\textit{\textbf{Wireless Fronthaul}}}
 
-Wireless fronthaul seems to be an alternate of optical fronthaul. It is cheap. RRH can be installed anywhere due to no physical wire connection, lightweight, less space requirement, and less construction required. So, it is easy to install either in dense urban areas or any hilly region. It takes less time for setup. Due to its many advantages now, many vendors like EBlink, Cablefree are mainly focused on the development of wireless fronthaul. According to one of the vendor Cablefree \cite{art3-key42}, wireless latency is less compared to optical fiber due to the following reason: 1) Optical fiber paths are not in a straight line, 2) Wireless propagation is faster (around 40\%) than optical fiber due to lower refractive index of air than fiber.
+Wireless fronthaul seems to be an alternate of optical fronthaul. It is cheap. RRH can be \hbox{installed} anywhere due to no physical wire connection, lightweight, less space requirement, and less construction required. So, it is easy to install either in dense urban areas or any hilly region. It takes less time for setup. Due to its many advantages now, many vendors like EBlink, Cablefree are mainly focused on the development of wireless fronthaul. According to one of the vendor Cablefree \cite{art3-key42}, wireless latency is less compared to optical fiber due to the following reason: 1) Optical fiber paths are not in a straight line, 2) Wireless propagation is faster (around 40\%) than optical fiber due to lower refractive index of air than fiber.
 
 \item[{\textit{\textbf{ C.}}}] {\textit{\textbf{Ethernet Fronthaul}}}
 
@@ -186,12 +207,6 @@ CPRI fronthaul capacity requirements are very high. It is difficult for a wirele
 
 For the existence of Ethernet fronthaul, it must meet the two major stringent performance requirements of CPRI, i.e., a) delay should be within $100 \mu s$ b) jitter should be within 65 ns. But standard Ethernet is unable to meet the performance limit. In standard Ethernet, although the delay is under control, jitter is very high (400 ns in the worst case) \cite{art3-key49}. To carry time-sensitive traffic in Ethernet, IEEE has proposed two new enhancement technique named as IEEE802.1Qbu (used frame preemption) and IEEE802.1Qbv (used scheduling). In IEEE802.1 Qbu frame with lower priority is preempted by frame with higher priority, and a frame can be preempted several times.
 
-%~ \begin{table}[H]
-%~ \centering
-%~ \caption{Different types of Optical fronthaul deployment technology with their pros and cons \cite{art3-key43}}\label{tab01}
-%~ \includegraphics[scale=2]{src/Figures/chap3/tab01.jpg}
-%~ \end{table}
-
 Similarly, in 802.1Qbv, a frame gets scheduled to a trans-mission gate, which is either an open or closed state. Timing signals control transmission gates. The experimental result says Ethernet with frame preemption can never achieve jitter requirement (65 ns) either with background traffic (packet injected by nodes) or only with CPRI traffic \cite{art3-key50}. By using IEEE802.1Qbv (Packet scheduling), it is possible altogether to remove jitter in case of without background traffic(only CPRI traffic). In the case of background traffic, jitter is below than CPRI standard. Jitter depends on the packet size and the slot size. By selecting a global scheduling instead of local scheduling, jitter can be removed entirely for the slot size of 1.5 times of Packet Transmission Time (PTT). Maximum delay achieved in the case of Ethernet with preemption for without background traffic is below to the CPRI standards, but it cant reach jitter limit. In the case of Ethernet with scheduled traffic, the maximum delay is lower than $100 \mu s$. So it is concluded that only IEEE802.1Qbv is sufficient to make Ethernet fronthaul feasible for CPRI standards. The physical deployment of Ethernet fronthaul is still far away. All the above results and conclusions are simulation-based. It can not guarantee that Ethernet fronthaul can work in 5G. 
 
 The above three CPRI-based fronthaul is working well for 4G and the traditional network like 2G, 3G, but it is unsuitable for the next-generation network, like 5G. It is due to the following reasons.
@@ -213,31 +228,28 @@ The above three CPRI-based fronthaul is working well for 4G and the traditional 
 
 \section{Fronthaul Compression}\label{sect06}
 
-The fronthaul links carry quantized IQ samples from RRH to BBU pool in uplink; and from BBU pool to RRH in the downlink. The fronthaul links are supposed to meet the upcoming 5G standards in terms of low latency and high data rates. The enormous data rates produced by the quantized IQ samples exploit fronthaul capacity limitation, which is the main bottleneck in the commercial deployment of C-RAN. This fronthaul capacity limitation will degrade the Large Scale Collaborative processing (LSCP) gain that could be achieved
+The fronthaul links carry quantized IQ samples from RRH to BBU pool in uplink; and from BBU pool to RRH in the downlink. The fronthaul links are supposed to meet the upcoming 5G standards in terms of low latency and high data rates. The enormous data rates produced by the quantized IQ samples exploit fronthaul capacity limitation, which is the main bottleneck in the commercial deployment of C-RAN. This fronthaul capacity limitation will degrade the Large Scale Collaborative processing (LSCP) gain that could be achieved through C-RAN architecture. Ex:- With densely deployed RRHs and with a UE operating around a few MHz bandwidths will increase the data rate of fronthaul link that connects the particular RRH to BBU pool will scale up to several Gbps. Hence, uplink and downlink fronthaul compression are required. There are two possible ways to achieve fronthaul compression. One of them is partial C-RAN architecture. In this architecture, RRHs are given some responsibility to do some signal processing that could be done at the BBU-pool, but this will oppose the whole idea of easy network densification to achieve network capacity. Hence the design of robust fronthaul compression techniques is needed that can support the full-centralization of C-RAN architecture.
 
-through C-RAN architecture. Ex:- With densely deployed RRHs and with a UE operating around a few MHz bandwidths will increase the data rate of fronthaul link that connects the particular RRH to BBU pool will scale up to several Gbps. Hence, uplink and downlink fronthaul compression are required. There are two possible ways to achieve fronthaul compression. One of them is partial C-RAN architecture. In this architecture, RRHs are given some responsibility to do some signal processing that could be done at the BBU-pool, but this will oppose the whole idea of easy network densification to achieve network capacity. Hence the design of robust fronthaul compression techniques is needed that can support the full-centralization of C-RAN architecture.
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=2]{src/Figures/chap3/fig04.jpg}
-%~ \caption{Point-to-point compression model for the uplink of C-RAN}\label{fig04}
-%~ \vspace{-.5cm}
-
-%~ \end{figure}
-
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=2]{src/Figures/chap3/fig05.jpg}
-%~ \caption{Multiterminal compression model for the uplink of C-RAN}\label{fig05}
-%~ \vspace{-.5cm}
-
-%~ \end{figure}
-
-There are several fronthaul compression techniques available to reduce the fronthaul IQ data rate, which can be used depending on the requirement. The point-to-point compression technique can be used in low complexity scenarios. Point- to-point compression techniques are generally the basic IQ sample quantization methods. But Point-to-point compression alone cannot serve the purpose in many cases. Point-to- point compression can be used along with network-aware
-
-compression techniques like distributed source coding and joint compression. These network-aware compression techniques bring complexity to the analysis. Spatial filtering and Compressive Sensing (CS) based compression are other types of compression techniques. Like a point-to-point compression technique, spatial filtering is also a low complexity technique. The original idea behind the CS-based compression is to exploit the signal sparsity among UEs. Hence CS-based compression and spatial filtering cannot be used for the downlink signal compression. As part of CS-based compression and spatial filtering, the received UE’s signal will be multiplied with the local RRH matrix. This will lead to a reduction in the dimension of the received signal. Similarly, distributed source coding can only be used for the uplink compression. The basic idea of distributed source coding is to exploit the correlation among the received signals at RRH. Another network-aware compression technique, joint compression, can be used at the BBU side for downlink compression.
+There are several fronthaul compression techniques available to reduce the fronthaul IQ data rate, which can be used depending on the requirement. The point-to-point compression technique can be used in low complexity scenarios. Point- to-point compression techniques are generally the basic IQ sample quantization methods. But Point-to-point compression alone cannot serve the purpose in many cases. Point-to- point compression can be used along with network-aware compression techniques like distributed source coding and joint compression. These network-aware compression techniques bring complexity to the analysis. Spatial filtering and Compressive Sensing (CS) based compression are other types of compression techniques. Like a point-to-point compression technique, spatial filtering is also a low complexity technique. The original idea behind the CS-based compression is to exploit the signal sparsity among UEs. Hence CS-based compression and spatial filtering cannot be used for the downlink signal compression. As part of CS-based compression and spatial filtering, the received UE’s signal will be multiplied with the local RRH matrix. This will lead to a reduction in the dimension of the received signal. Similarly, distributed source coding can only be used for the uplink compression. The basic idea of distributed source coding is to exploit the correlation among the received signals at RRH. Another network-aware compression technique, joint compression, can be used at the BBU side for downlink compression.
 
 In the following subsections, the uplink compression and downlink compression are discussed. Mostly, the compression techniques discussed under the uplink and downlink compression subsections are not simple point-to-point compression techniques. The quantization-based and similar point-to-point compression techniques are discussed separately under point- to-point compression subsection.
+\end{multicols}
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.58]{src/Figures/chap3/fig04.jpg}
+\caption{Point-to-point compression model for the uplink of C-RAN}\label{fig04}
+%~ \vspace{-.5cm}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.56]{src/Figures/chap3/fig05.jpg}
+\caption{Multiterminal compression model for the uplink of C-RAN}\label{fig05}
+\end{figure}
+
+
+\begin{multicols}{2}
 \begin{itemize}
 
 \item[{\textit{\textbf{ A.}}}] {\textit{\textbf{Uplink Compression:}}}
@@ -251,33 +263,45 @@ statistical model of the side information makes the distributed source coding us
 
 Moreover, the network energy efficiency problem is addressed by selecting active RRHs. A joint optimization problem of compression and RRH selection is formulated by introducing sparsity inducing terms in the objective function. To solve this problem, an iterative block-coordinate ascent algorithm is proposed, which is converged to a locally optimal point. The quantization noise introduced while doing the compression operation, which is the critical parameter of fronthaul compression. The quantization noise level is optimized based on a per-RRH base.
 
-The performance evaluation of standard point-to-point and multiterminal fronthaul compression techniques for both up- link and downlink of C-RAN are studied in \cite{art3-key52}. The simulation results are carried over standard cellular networks by focusing on performance metrics such as proportional-fairness utility, sum-rate, and cell-edge throughput. The multiterminal fronthaul compression showed 60\% performance gain more compared to that of standard point-to-point fronthaul compression. Hence, it is claimed that the point-to-point fronthaul compression techniques fail to achieve optimal performance in even the simplest multiterminal settings of C-RAN.
+The performance evaluation of standard point-to-point and multiterminal fronthaul compression techniques for both up-link and downlink of C-RAN are studied in \cite{art3-key52}. The simulation results are carried over standard cellular networks by focusing on performance metrics such as proportional-fairness utility, sum-rate, and cell-edge throughput. The multiterminal fronthaul compression showed 60\% performance gain more compared to that of standard point-to-point fronthaul compression. Hence, it is claimed that the point-to-point fronthaul compression techniques fail to achieve optimal performance in even the simplest multiterminal settings of C-RAN.
 
-The work proposed in \cite{art3-key53} deals with the optimization of fronthaul compression. Here uplink C-RAN model is considered, where the fronthaul link is noiseless and has finite sum capacity constraint. The independent messages sent from each UE within a cooperating cluster, interfere with other UE’s messages at their respective RRH. The RRHs compress and forward these received UE messages, which are decoded successively at the centralized processor. The quantization codewords are decoded initially. Later, based on the quantized signals from all the RRHs, the UE’s messages are decoded. This compression, decompression, and decoding operations are done within the constant gap to the sum capacity of the network. In this way, the uplink C-RAN model can be thought of as a virtual multiple access channel(VMAC) between UEs and BBU pools while RRHs acting as relays. Distributed Wyner-Ziv (WZ) coding, and Single-User (SU) compression are considered as the candidates for compression at RRH. These compression techniques are named by the authors as VMC-WZ and VMAC-SU, respectively. The main objective of this work is to set the optimization levels for quantization noise. The quantization noise level of all RRHs is optimized jointly. The optimization of quantization noise levels for VMAC-ZV is formulated as a weighted sum-rate maximization under fronthaul capacity constraints, which is solved through alternating convex optimization algorithm. For VMAC-SU, the problem is reformulated in terms of optimiz- ing fronthaul capacities. It was observed that, during the high Signal-to-Quantization-noise-ratio (SQNR) times, setting the quantization noise levels proportional to background noise levels, irrespective of channel conditions and transmission power is near-optimal to attain maximum sum rate. With that choice of quantization noise level, VMAC-ZV schemes achieve the sum capacity of the uplink C-RAN model within the constant gap. VMAC-SU produces a similar constant gap with diagonally dominant channel conditions. Since VMAC schemes have low decoding complexity and low decoding delay as compared to joint decoding, these consistent gap results motivate to extend this VMAC scheme in practical C-RAN.
+The work proposed in \cite{art3-key53} deals with the optimization of fronthaul compression. Here up-link C-RAN model is considered, where the fronthaul link is noiseless and has finite sum capacity constraint. The independent messages sent from each UE within a cooperating cluster, interfere with other UE’s messages at their respective RRH. The RRHs compress and forward these received UE messages, which are decoded successively at the centralized processor. The quantization codewords are decoded initially. Later, based on the quantized signals from all the RRHs, the UE’s messages are decoded. This compression, decompression, and decoding operations are done within the constant gap to the sum capacity of the network. In this way, the uplink C-RAN model can be thought of as a virtual multiple access channel(VMAC) between UEs and BBU pools while RRHs acting as relays. Distributed Wyner-Ziv (WZ) coding, and Single-User (SU) compression are considered as the candidates for compression at RRH. These compression techniques are named by the authors as VMC-WZ and VMAC-SU, respectively. The main objective of this work is to set the optimization levels for quantization noise. The quantization noise level of all RRHs is optimized jointly. The optimization of quantization noise levels for VMAC-ZV is formulated as a weighted sum-rate maximization under fronthaul capacity constraints, which is solved through alternating convex optimization algorithm. For VMAC-SU, the problem is reformulated in terms of optimiz- ing fronthaul capacities. It was observed that, during the high Signal-to-Quantization-noise-ratio (SQNR) times, setting the quantization noise levels proportional to background noise levels, irrespective of channel conditions and transmission power is near-optimal to attain maximum sum rate. With that choice of quantization noise level, VMAC-ZV schemes achieve the sum capacity of the uplink C-RAN model within the constant gap. VMAC-SU produces a similar constant gap with diagonally dominant channel conditions. Since VMAC schemes have low decoding complexity and low decoding delay as compared to joint decoding, these consistent gap results motivate to extend this VMAC scheme in practical \break C-RAN.
 
-The benefits of exploiting the uplink signal sparsity are not utilized in \cite{art3-key52}, \cite{art3-key53}, and hence the uplink signal sparsity structure is ignored in those works. Because of the uplink delay-sensitive services or the random access of the UEs in the uplink transmission, the transmission is bursty, which leads to the sparsity of the uplink packets. This uplink sparsity can be used to reduce the fronthaul loading. Classical distributed CS technique can’t be used directly for C-RAN. In traditional Classical distributed CS, signals are compressed distributively at different sensors, and later the joint recovery of these signals is made. Like conventional distributed CS technique, the uplink signals are compressed locally at RRHs. Still, these signals are an aggregation of multi-users transmitted from different UEs over multiaccess fading channels. Hence in C-RAN, the target of joint recovery at the BBU pool is the transmitted signals from UEs rather than the locally received signals from RRHs. So, if a distributed CS algorithm is used for joint signal recovery in C-RAN, it should incorporate multiaccess fading effects of C-RAN in it. For Robust CS recovery, restricted isometry property (RIP) is commonly adopted to derive sufficient conditions; but establishing adequate condi- tions for the RIP of the associated measurement matrix is non- trivial. Conventional results about the RIP condition can’t be applied for the aggregate CS measurement matrix, because of the complicated multiaccess fading channels between UE and RRHs in C-RAN system. Hence, by embracing multiaccess fading, a new characterization of the sufficient conditions for robust CS recovery should be done. While applying CS signal recovery to achieve fronthaul compression, it is also important to quantify a closed-form trade-off between uplink C-RAN capacity and the fronthaul loading at each RRH. All these challenges are addressed in \cite{at3-key54} by proposing an uplink C-RAN model and distributed fronthaul compression at each RRH. A joint signal recovery is made at the BBU pool by using distributed CS, which exploits multiaccess fading between the UEs and RRHs and the signal sparsity of UEs. The aggregated CS measurement matrix contains both the multiaccess fading and distributed fronthaul compression. The performance of the end-to-end signal recovery algorithm is analyzed, and it was showed that the aggregated CS measurement matrix satisfies the RIP conditions with high probability under some mild conditions. Based on these results, the correct probability of active user detection is analyzed. Furthermore, the achievable uplink capacity is characterized in terms of the fronthaul compression rate, which will help conclude uplink performance and fronthaul loading. 
+The benefits of exploiting the uplink signal sparsity are not utilized in \cite{art3-key52}, \cite{art3-key53}, and hence the uplink signal sparsity structure is ignored in those works. Because of the uplink delay-sensitive services or the random access of the UEs in the uplink transmission, the transmission is bursty, which leads to the sparsity of the uplink packets. This uplink sparsity can be used to reduce the fronthaul loading. Classical distributed CS technique can’t be used directly for C-RAN. In traditional Classical distributed CS, signals are compressed distributively at different sensors, and later the joint recovery of these signals is made. Like conventional distributed CS technique, the uplink signals are compressed locally at RRHs. Still, these signals are an aggregation of multi-users transmitted from different UEs over multiaccess fading channels. Hence in C-RAN, the target of joint recovery at the BBU pool is the transmitted signals from UEs rather than the locally received signals from RRHs. So, if a distributed CS algorithm is used for joint signal recovery in C-RAN, it should incorporate multiaccess fading effects of C-RAN in it. For Robust CS recovery, restricted isometry property (RIP) is commonly adopted to derive sufficient conditions; but establishing adequate condi- tions for the RIP of the associated measurement matrix is non- trivial. Conventional results about the RIP condition can’t be applied for the aggregate CS measurement matrix, because of the complicated multiaccess fading channels between UE and RRHs in C-RAN system. Hence, by embracing multiaccess fading, a new characterization of the sufficient conditions for robust CS recovery should be done. While applying CS signal recovery to achieve fronthaul compression, it is also important to quantify a closed-form trade-off between uplink C-RAN capacity and the fronthaul loading at each RRH. All these challenges are addressed in \cite{art3-key54} by proposing an uplink C-RAN model and distributed fronthaul compression at each RRH. A joint signal recovery is made at the BBU pool by using distributed CS, which exploits multiaccess fading between the UEs and RRHs and the signal sparsity of UEs. The aggregated CS measurement matrix contains both the multiaccess fading and distributed fronthaul compression. The performance of the end-to-end signal recovery algorithm is analyzed, and it was showed that the aggregated CS measurement matrix satisfies the RIP conditions with high probability under some mild conditions. Based on these results, the correct probability of active user detection is analyzed. Furthermore, the achievable uplink capacity is characterized in terms of the fronthaul compression rate, which will help conclude uplink performance and fronthaul loading. 
 
 CS is an effective method for signal acquisition and processing. The key idea of this technique is that the collected signals are not purely random, and hence can be compressed because of the redundancy. So, this nature can be taken as prior knowledge for compression and recompression of the collected signals. Therefore, CS provides a new sampling paradigm for sparse signals and enables the decoder to retrieve the original signal accurately from the reduced number of samples. The CS-based distributed fronthaul compression in \cite{art3-key54} considers the uplink random access channel scenario between UEs and RRHs. Still, in general, only the active UEs and the uplink signals are sparse. Thus, by considering the correlation of the received uplink baseband signals at different RRHs within one cluster, a compressive sensing based uplink compression is proposed in \cite{art3-key55}. To save the transport expenses in a multi-clustered C-RAN, one cluster Head (CH) collects the information from all the RRHs and sends it to the BBU pool. Since the number of RRHs are huge in a C-RAN cluster, the amount of information collected at CH would be too high to transmit over a capacity limited fronthaul. Whereas, the collected information at different RRHs within one cluster is correlated in nature because of the multiaccess fading effect. So, the CH performs CS-based fronthaul compression before transmission, and the BBU implements the joint recovery to reconstruct the gathered uplink signals by RRHs. Later, the original baseband signals of all the UEs are decoded at the end using a Successive Interference Cancellation (SIC) mechanism. The uplink rate increases with the UE SNR and the SIC implemented at the BBU side. It was also observed that the SNR increases with the fronthaul capacity, and the maximum SNR can be reached when the measurement channel capacity equals the fronthaul capacity. 
 
 All the works till now studied the fronthaul compression schemes, in which the RRH communicates to the BBU pool by itself. The fronthaul compression scheme for multihop C- RAN is considered in \cite{art3-key56}, where each RRH manages to communicate with BBU through a set of intermediate RRHs. In this work, the generalized C-RAN model is followed, where each RRH either compresses and forwards or forwards the received baseband signal without any demodulation. Initially, a baseline Multiplex-and-Forward (MF) scheme is studied, in which each RRH receives the bitstream from a connected RRH and forwards it without any processing. It was observed that the MF scheme leads to performance degradation in the case when each RRH has many incoming links from other RRHs. To overcome this problem, the Decompress- Process-and-Recompress (DPR) scheme is proposed. In the DPR scheme, RRH decompresses the received bitstream and performs the linear in-network processing of the decompressed signals. Both MF and DPR fronthaul schemes are designed to maximize the sum-rate under the limited fronthaul capacity constraints. The advantage of in-network processing is highlighted by comparing the performance of MF and DPR strategies. The optimal solutions in the DPR scheme demand full CSI, but acquiring full CSI at every RRH is difficult in the case of dense C-RAN. Hence a decentralized DPR scheme for the optimal solution is proposed, where the RRHs require only local CSI to compute linear processing. The future extension of this work is the consideration of non-linear in-network processing at the RRHs, investigating the ways to utilize the side information available at intermediate RRHs, and the consideration of imperfect CSI of other RRHs at every RRH.
 
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=2]{src/Figures/chap3/fig06.jpg}
-%~ \caption{Point-to-point compression model for the downlink of C-RAN}\label{fig06}
-%~ \vspace{-.5cm}
-%~ \end{figure}
-
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=2]{src/Figures/chap3/fig07.jpg}
-%~ \caption{Multiterminal compression model for the downlink of C-RAN}\label{fig07}
-%~ \vspace{-.5cm}
-%~ \end{figure}
-
 Multiple antenna RRHs are considered while study-ing the uplink C-RAN compression technique in \cite{art3-key57}. In order to exploit this multi-antenna spatial sparsity, a Spatial-Compression-and-Forward (SCF) technique is proposed. Rather than using a complex quantization scheme like the authors did in \cite{art3-key51}, \cite{art3-key53}, a less complex linear filter is considered for compressing the received correlated signals at all the antennas of each RRH. An optimization problem is framed to maximize the minimum SINR of all the users. The optimization problem considers the joint optimization of the user’s power allocation, RRH’s spatial filter design and quantization bits allocation, and BBU’s receive beamforming.
 
 A localization problem of positioning a single antenna radio transmitter in the C-RAN system is studied in \cite{art3-key58}. The problem is formulated as the quantization strategy optimization while minimizing the worst case localization error under fron- thaul capacity constraints. The Charnes-Cooper transformation and difference-of-convex programming are utilized to design corresponding optimization algorithms. From the numerical simulations, it was observed that the localization becomes better with the large fronthaul capacity. It was also shown that the fronthaul rate requirements are less for localization when compared to data communication.
+
+\end{itemize}
+\end{multicols}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.49]{src/Figures/chap3/fig06.jpg}
+\caption{Point-to-point compression model for the downlink of C-RAN}\label{fig06}
+\vspace{2cm}
+\end{figure}
+
+
+\begin{figure}[H]
+\vspace{-.6cm}
+\centering
+\includegraphics[scale=.5]{src/Figures/chap3/fig07.jpg}
+\caption{Multiterminal compression model for the downlink of C-RAN}\label{fig07}
+\vspace {.3cm}
+\end{figure}
+
+
+
+\begin{multicols}{2}
+\begin{itemize}
 
 \item[{\textit{\textbf{ B.}}}] {\textit{\textbf{Downlink Compression:}}}
 
@@ -291,7 +315,7 @@ The works in \cite{art3-key59}-\cite{art3-key61} considered static channels, whi
 
 LTE was originally introduced to improve system performance. With the help of OFDM and MIMO, LTE has become a major key player in cellular technology. The cell throughput has increased enormously from 3G to 4G. Later, LTE-A has introduced CoMP, carrier aggregation, and enhanced MIMO. The introduction of these technologies into LTE-A causes the amount of bandwidth required to be five times that of LTE. In order to support these high data rates, a huge amount of fiber is required in LTE/LTE-A based C-RAN for the connection between BBU and RRHs. Hence, IQ sample compression techniques are required to reduce the amount of fiber required.
 
-A low latency baseband signal compression algorithm for CPRI transmission in the LTE system is proposed in \cite{art3-key63}. The IQ samples are with certain bit-width and complex values. Based on the characteristics of the LTE signal, the amount of transmission data can be reduced by removing the redundant spectrum bandwidths and bit-bit-wide compression. Removing the redundant spectrum bandwidth means reducing the number of signals. The bit-bit-wide or bit-width compression is done by combining block scaling and non-uniform (\textit{non − linear}) quantizer. This combination also minimizes the quantization error. Reducing the number of signals and bit-width com- pression will be done before CPRI framing. The results are observed for low compression ratio and high compression ratio. For low compression ratios, EVM is observed to be less than 1\%, and for high compression ratios, the EVM is deteriorating. Hence, loss of information is negligible in the case of low compression ratios. The performance results are observed to be ideal until 11 bits. The proposed compression scheme is lossy and achieves a 1/2 compression ratio.
+A low latency baseband signal compression algorithm for CPRI transmission in the LTE system is proposed in \cite{art3-key63}. The IQ samples are with certain bit-width and complex values. Based on the characteristics of the LTE signal, the amount of transmission data can be reduced by removing the redundant spectrum bandwidths and bit-bit-wide compression. Removing the redundant spectrum bandwidth means reducing the number of signals. The bit-bit-wide or bit-width compression is done by combining block scaling and non-uniform (\textit{non − linear}) quantizer. This combination also minimizes the quantization error. Reducing the number of signals and bit-width compression will be done before CPRI framing. The results are observed for low compression ratio and high compression ratio. For low compression ratios, EVM is observed to be less than 1\%, and for high compression ratios, the EVM is deteriorating. Hence, loss of information is negligible in the case of low compression ratios. The performance results are observed to be ideal until 11 bits. The proposed compression scheme is lossy and achieves a 1/2 compression ratio.
 
 Even the compression ratio is excellent in lossy compression algorithms, the distortion of the reconstructed signal after decompression is high as compared to the original signal before compression. So, the signal quality decreases. The signal distortion depends on the compression ratio and the compression algorithm used. The compression algorithm in \cite{art3-key63}, involves the transmission of overhead since the scaling factor for block scaling is needed to be transmitted for de-compression node. Thus, there is a need for a low complexity compression algorithm that does not involve any transfer of overhead. A simple IQ data compression scheme that can run with low-performance processors either at BBU or RRH is proposed in \cite{art3-key64}. The compression scheme involves IQ-bit width reduction and a common lossless audio compression scheme, FLAC algorithm. The proposed IQ compression scheme is both lossy and lossless, with a 1/2 compression ratio. In lossless compression algorithms, even though the compression ratio is less, but the original signal will be reconstructed fully. The proposed compression scheme is observed to meet the performance requirements of a system. Hence, the amount of optical fronthaul links can be reduced by half. 
 
@@ -299,30 +323,245 @@ In LTE/LTE-A based Cloud-RAN architecture, RRH nodes cooperate to perform advanc
 
 In downlink precoding information, the time and frequency redundancy are exploited. The compression ratio depends on the resource blocks’ occupancy in each cell. Hence, in the aggregation of multiple cell networks, the statistical multiplexing of the user’s data reduces the aggregate data rate requirement of the fronthaul links. Thus this compression scheme avoids utilizing all the links under less load situations. The proposed lossless compression scheme achieves a high compression ratio of 30:1 at low cell loads, such as LTE 2$\times$2 MIMO cells. At 50\% cell loads, a compression ratio of 6:1 is achieved, and even at high cell loads, a compression ratio of 3:1 is achieved. Despite the high compression ratios, the disadvantage of this scheme is that all the modulation and demodulation functionalities are moved to the RRH. The BBU only supplies the bits needed as inputs for the QAM constellation, which causes a burden on the RRH. 
 
+A low complexity, time-domain based compression scheme for LTE uplink and downlink is proposed in \cite{art3-key66}, which exploits redundancies in temporal and spectral characteristics of LTE signal. The proposed scheme is a combination of rescaling, non-uniform quantization, noise-shaping error feedback, and resampling. The proposed compression technique achieved a compression ratio of 5 for the 15-bit representation of complex baseband values. The proposed method is validated using LTE-link level simulation.
 
-%~ page no14
+As part of the compression algorithms in \cite{art3-key67}- \cite{art3-key63}, the sample value of the baseband signal is quantized directly without exploiting the characteristics of the sample values. Hence, in view of this point and to reduce the transmission bandwidth, a low latency CPRI compression algorithm for the LTE downlink baseband signal is presented in \cite{art3-key68}. Since, in the case of high SNR, the modulated LTE downlink signal is distributed around constellation points in the spectrum. The codebook space and code length can be reduced if the modulation signal’s constellation points are clustered into a number of clustering centers. As part of the algorithm, clustering and coding are done in the frequency domain. The redundant bandwidth is removed through I/Q data in the frequency domain, clustering and quantifying the points on the constellation and finally adaptively selecting the appropriate modulation scheme. The proposed compression scheme is analyzed through both MATLAB simulation and FPGA-based performance analysis. In the low throughput scenarios, such as QPSK modulation, the data compression is observed to be 4\%. In the high throughput scenarios, such as 64-QAM modulation, the data compression is observed to be 15\%. In all the testing scenarios, EVM is observed to be less than 0.025\%.
+
+As a considerable amount of redundancy can be reduced in time-domain based compression schemes, a time-domain based compression is proposed in \cite{art3-key69}. Resampling, block scaling, and quantization is used in \cite{art3-key69} to do fronthaul compression. A compression factor of 3.9, 3.4, 2.9, and an EVM of 4.6\%, 2.3\%, 1.15\% is achieved for LTE downlink signals with 5, 6, and 7 quantized bits/sample respectively.
+
+A low complexity compression scheme for LTE uplink and downlink is proposed in \cite{art3-key70}, which exploits the baseband signal’s temporal and spatial characteristics. The compression scheme is a combination of reducing signal sampling, Digital Automatic Gain Control (DAGC) compression, Lloyd-Max quantization, and Cyclic prefix replacement. In this context, the objective of the DAGC is to reduce the baseband signal dynamic range, normalize the power of each symbol and selection of the average power reference based on the best de-modulation range. DAGC is easy to implement in digital logic, but it alone can not achieve high compression ratios. Lloyd-Max quantization is a non-linear quantization technique, which studies the statistical characteristics of the baseband signal to minimize the average noise power. Resampling leaves the low-frequency components of the recovered OFDM signal leaves unchanged, whereas the distortion is introduced in the high-frequency components of the OFDM symbol, such as the start and end of the OFDM symbol. In view of this fact, the cyclic prefix is replaced at the start and end of the OFDM symbol. The compression scheme achieved a compression ratio of 3.56, a latency of $3.4 \mu$sec, and an EVM of approximately 1.89\%. The proposed compression architecture is also implemented on the FPGA board. 
+
+A Linear predictive coding based compression scheme for LTE downlink is proposed in \cite{art3-key71}, which is based on linear prediction and Huffman coding. Since a large amount of redundancy can be reduced in time-domain based compression schemes, this scheme also focuses on time-based compression. Instead of using the resampling to reduce LTE oversampling overhead, time-domain based linear predictive coding takes LTE frame-based LTE structure into account. Here, LPC is adapted to OFDM. The Huffman encoder at the BBU compresses the I/Q samples, and the decoder at the RRH decompresses the samples. The filter which implements this compression scheme is called the LPC filter, which has fewer taps than the ones used in resampling techniques. The computation cost in terms of encoding and decoding is also less. This technique has strict restrictions on power consumption and latency. The proposed scheme achieves an EVM of 0.9\% and 2.1\% at a compression ratio of 3.3:1 and 4:1, respectively. 
+
+A combination of resampling and vector quantization is adapted in \cite{art3-key72} to do fronthaul compression. A compression factor of 5.5, 4.5, 3.8, and an EVM of 4.2\%, 2.1\%, 1\% is achieved for LTE downlink signals with 5, 6, and 7 quantized bits/sample respectively.
+
+Most of the proposed compression schemes are not applicable in the case of multipoint-to-multipoint operation over packetized networks. The point-to-point compression schemes mostly offer compression schemes targeting a dedicated link. In multipoint-to-multipoint operation, the fronthaul traffic has to coexist with the other variable-rate traffics, which may cause network congestion. In the distributive network, even the addition of one RRH causes the previously attained compression ratio to be changed. Hence, a rate-adaptive fronthaul network should be realized with the tunable fronthaul compression scheme. The Linear predictive coding based compression scheme proposed in \cite{art3-key71} is extended in \cite{art3-key73} to realize such a network. As part of the extension, LPC is adapted to OFDM with adjustable scaling. The compression technique uses both the number of quantization bits and a loading factor, which is a continuous variable to fine-tune the compression ratio. Adjustable gains are introduced to do LPC based compression. Adjustable gains are combined to fixed quantizer and fixed Huffman dictionary. Depending on the fronthaul capacity, the adjustable gain can be used to make the fine regulation between EVM and achievable compression ratio. This type of compression through adjustable gains is an alternative to other compression schemes that varies a discrete number of bits of the quantizer.
 \end{itemize}
 
+\section{Hardware Design}\label{sect07}
+
+\begin{itemize}
+\item[{\textit{\textbf{ A.}}}] {\textit{\textbf{Existing Hardware Setups}}}
+
+Industry and Academia propose different C-RAN architectures. Out of them, Fully centralized and Partially centralized C-RAN architectures are popular ones. In Fully centralized C-RAN architecture, RRH is associated with only the RF section, and BBU has L1/L2/L3 layers. This architecture helps to increase the network capacity by increasing the density of the RRHs, whereas huge fronthaul capacity is required to transfer the IQ samples. In Partially C-RAN architecture, along with the RF section, RRH is also associated with L1 layer functionality. Hence, less capacity fronthaul link connection is sufficient between RRH and BBU pool; but the network expansion is not so easy due to the increase in complexity of the RRH. Hence, a decision needs to be made on the final architecture of C-RAN through various experiments on a hardware test-bed. There is much software available to support the cloud-RAN setup; out of them, OAI(Open Air Interface) is the popular one. OAI is initially developed by EURECOM and made as open-source by OpenAir Interface Software Alliance. OAI is the real-time software written in the C-programming language and can be supported on the Linux platform. 3-GPP protocol stack for Evolved Universal Terrestrial Radio Access (E-UTRAN) and EPC is wholly implemented in OAI.
+
+In \cite{art3-key74}, Next Generation Fronthaul Interface (NGFI) based C-RAN architecture is emulated with the help of OAI frame-work, commodity hardware, and Ethernet fronthauling. Since, CPRI-based C-RANs are not able to meet the scalability and performance requirements, NGFI redefines the fronthaul transport network architecture through baseband splitting between BBU and RRH. In NGFI terminology, BBU is termed as Radio Cloud Center (RCC) and RRH as Remote Radio Unit (RRU). The performance of the Time-domain I/Q split (IF5) and frequency-domain I/Q split (IF4) are analyzed in this work. In IF4 split, some of the physical layer processing such as FFT/IFFTs and IQ sample compression. After employing A law compression at the RRH side, it is observed that almost 28\% of the capacity requirement has come down as compared to IF5 split. The same work is explained in detail by the same group of authors in \cite{art3-key75}. Both the functional splits are compared in terms of different performance metrics like fronthaul throughput, the round trip delay between fronthaul and RF circuits, the CPU utilization, data plane delay, and data-plane QoS.
+
+Similar kinds of work with OAI software supported Ethernet fronthaul based C-RAN testbed is studied in \cite{art3-key76} by MAC layer split at RCC. RRU is kept with RF and Physical layer processing functionalities. Unlike CPRI, Ethernet fronthaul can’t be used for transportation of high data rate IQ sample data. MAC layer split at the RCC relieves the burden of high data requirements over Ethernet fronthaul by sending MAC PDUs to the Physical layer at the RRU. Latency, jitter, and throughput for different sizes of packet data are studied in this work. As part of latency, the round trip delay is calculated between RRC’s MAC layer and RRU’s Physical layer to avoid synchronization issues. The packet data consists of overhead in the form of Ethernet header, and MAC-PHY control header. The overhead is considered in throughput calculation. 
+
+PDCP used in IP based networks. PDCP does packet compression and removes the IP header before processing the packet further down to the lower layers. RLC transfers higher layer PDUs to MAC SDUs. MAC layer does resource allocation to the UEs, and the scheduled transmissions are delivered to the PHY layer in subframes. In the PDCP/RLC split, the PDCP layer is kept in BBU and RLC, and it’s below layers are present at RRU. After the RLC process, the received packet from PDCP will be kept in buffer till the MAC protocol send a request for it. A right amount of buffer needs to be maintained at the RRU so that it won’t run out of memory. In MAC/PHY split, the MAC layer is kept in the BBU and PHY layer along with RF present in RRU. The PDCP/RLC split is not much advantageous, since many transmissions are required to the BBU as the RLC layer didn’t do concatenation at the BBU. MAC/PHY split has its advantages, such as beamforming coordination and dynamic scheduling of multiple UEs. Given these points, PDCP/RLC and MAC/PHY split performance in downlink is studied in \cite{art3-key77} using real-time heterogeneous testbed and OAI emulation platform. The communication between BBU and RRU is carried over 1 Gbps copper link, and it is termed as a backhaul link. The throughput achieved in both cases is studied under different Modulation and Coding Scheme (MCS) and Transport Block Size (TBS). PDCP/RLC is analyzed using a stateless protocol, UDP, and state-ful protocols TCP and SCTP. UDP achieves more throughput than the other state-ful protocols, TCP and STCP. As STCP implementation for Linux kernel is not good enough, TCP outperforms STCP. MAC/PHY layer split is studied using the UDP protocol, and a throughput of 14 Mbps is achieved. 
+
+While coming to other technologies, IQ sample compression is the important one to alleviate fronthaul capacity requirement. In \cite{art3-key78}, partial bit sampling compression is proposed to compress IQ samples. The proposed scheme is compared along with already existing compression techniques like Non-linear quantization and block scaling. These comparisons are carried by implementing these compression techniques using the Xil-inx Zynq 706 evaluation board and Xilinx FPGA. All three compression techniques are compared using up/down sam-pling. In the proposed partial bit sampling scheme, up/down sampling achieves 25\% compression. Later the IQ sample is
+
+converted to 15 bits. As part of the algorithm, the low-order five bits are removed to compress the data. While recovering, those bits are replaced with ’1’ and ’0’ assuming Gaussian distribution. This process achieves around 50\% CPRI data compression. To validate the proposed scheme, EVM, compression delay, and FPGA logic utilization are observed. EVM degradation for partial bit sampling is found to be less than 0.2\%. The delay caused by the introduction of the compression logic is called compression delay, which is found to be $3.2 \mu$sec and $4.8 \mu$sec, respectively, for partial bit sampling/non-linear quantization and block scaling. The extra delay of $1.6 \mu$sec for block scaling is because of the complex logic involved in it. The FPGA logic utilization is compared among all three compression techniques along with\break up/down sampling. Non-linear quantization utilizes 100\%, whereas Partial bit sampling utilizes 85.7\%, and block scaling utilizes 86.2\%.
+
+In \cite{art3-key79}, C-RAN controller architecture is designed and experimentally tested to reconfigure the network if the network performance is in degradation. As BBUs are located in the Central Office (CO), a CO controller is present to monitor received power and BER for optical transponders and latency, jitter, and BER for CPRI protocol. CPRI has some firm requirements like the one-way delay of\break $100 \mu$ sec, maximum jitter of 65 nsec, and BER of $10^{−12}$ . When the detected data from packet nodes and BBU shows degradation, a notification will be sent from the CO controller to the C-RAN controller. Upon receiving the request, the C-RAN controller releases the used resources and allot the new ones. This proposed model is experimentally validated using SYNERGY test-bed.
+
+In \cite{art3-key80}, the processing time of LTE subframes, and delay performance are measured for OAI based\break C-RAN setup. It was observed that the LTE subframes processing time increases with the number of PRBs and MCS index.
+
+None of the above mentioned works have compared the performance of C-RAN with the traditional RAN. We have analyzed the performance\break difference in the following section.
+
+\item[{\textit{\textbf{ B.}}}] {\textit{\textbf{Our Hardware Setup}}}
+
+We have emulated the C-RAN setup with the Labview framework and NI USRP 2943R \cite{art3-key81}. As the implementation of the LTE framework on the Labview framework is a tedious job. Thus, we have\break experimented with a packet transceiver scenario to mimic the C-RAN setup. Ethernet fronthaul was used as a communication link between RRH and BBU. UDP and TCP protocols were used for the fronthaul transmission. To understand the intricacies of fronthaul limitation, a comparison between C-RAN and traditional RAN is observed for performance metrics like goodput, and total latency. Since, it was a point-to-point link, not much drop in the goodput of C-RAN was observed with TCP protocol. But, the fronthaul latency in C-RAN was observed to be very high as compared to traditional RAN.
+
+The latency and drop in fronthaul data increase with the increase in the number of RRHs. Hence, the necessity of fronthaul compression is observed. We are working towards a better IQ sample quantization technique, which can balance the trade-off between the compression ratio and EVM.
+\end{itemize}
+
+\section{Conclusion}\label{sect08}
+
+Even though C-RAN architecture was proposed a few years ago, the fronthaul limitation acting as a hurdle for the practical deployment. Many solutions like change in C-RAN architecture, fronthaul compression, edge caching, etc.., are proposed to alleviate the burden on the fronthaul link, but they aid up to only some extent. The change in C-RAN architecture brings a limitation on the densification of network to achieve high network capacity and introduces complexity at the RRH, which nullifies the purpose of the introduction of Fully centralized C-RAN. Various fronthaul compression techniques that were also studied not supporting the 5G data rate requirements. Network-information theoretic compression techniques are performing better as compared to point-to-point compression techniques based on quantization. Hence, there is a need for the design of more robust network-information theoretic compression techniques to make C-RAN a feasible network\break architecture.\raisebox{-.1cm}{\includegraphics[scale=.9]{src/Figures/circledC.eps}}
+
+\begin{thebibliography}{99}
+\bibitem{art3-key01} Cisco Corporation, “Cisco visual networking index: Global mobile data traffic forecast, 2016-2021,” 2016.
+\bibitem{art3-key02} N. Bhushan, J. Li, D. Malladi, R. Gilmore, D. Brenner, A. Damnjanovic, R. Sukhavasi, C. Patel, and S. Geirhofer, “Network densification: the dominant theme for wireless evolution into 5g,” \textit{IEEE Communications Magazine}, vol. 52, no. 2, pp. 82–89, 2014.
+\bibitem{art3-key03} J. Wu, Z. Zhang, Y. Hong, and Y. Wen, “Cloud radio access network (c-ran): a primer,” \textit{IEEE Network}, vol. 29, no. 1, pp. 35–41, 2015.
+\bibitem{art3-key04} C. Mobile, “C-ran: the road towards green ran,” \textit{White Paper}, ver, vol. 2, 2011.
+\bibitem{art3-key05} A. Checko, H. L. Christiansen, Y. Yan, L. Scolari, G. Kardaras, M. S. Berger, and L. Dittmann, “Cloud ran for mobile networksâĂŤa tech- nology overview,” \textit{IEEE Communications surveys \& tutorials}, vol. 17, no. 1, pp. 405–426, 2015.
+\bibitem{art3-key06} T. Salman, “Cloud ran: Basics, advances and challenges,” \textit{Wireless and Mobile Networking}, 2016.
+\bibitem{art3-key07} M. Peng, Y. Sun, X. Li, Z. Mao, and C. Wang, “Recent advances in cloud radio access networks: System architectures, key techniques, and open issues,” \textit{IEEE Communications Surveys \& Tutorials}, vol. 18, no. 3, pp. 2282–2308, 2016.
+\bibitem{art3-key08} I. Chih-Lin, J. Huang, R. Duan, C. Cui, J. X. Jiang, and L. Li, “Recent progress on c-ran centralization and cloudification,” \textit{IEEE Access}, vol. 2, pp. 1030–1039, 2014.
+\bibitem{art3-key09} I. Chih-Lin, Y. Yuan, J. Huang, S. Ma, C. Cui, and R. Duan, “Rethink fronthaul for soft ran,” \textit{IEEE Communications Magazine}, vol. 53, no. 9, pp. 82–88, 2015.
+\bibitem{art3-key10} S.-H. Park, O. Simeone, O. Sahin, and S. S. Shitz, “Fronthaul compression for cloud radio access networks: Signal processing advances inspired by network information theory,” \textit{IEEE Signal Processing Magazine}, vol. 31, no. 6, pp. 69–79, 2014.
+\bibitem{art3-key11} L. M. Larsen, A. Checko, and H. L. Christiansen, “A survey of the functional splits proposed for 5g mobile crosshaul networks,” \textit{IEEE Communications Surveys \& Tutorials}, 2018.
+\bibitem{art3-key12} I. A. Alimi, A. L. Teixeira, and P. P. Monteiro, “Toward an efficient c-ran optical fronthaul for the future networks: A tutorial on technologies, requirements, challenges, and solutions,” \textit{IEEE Communications Surveys \& Tutorials}, vol. 20, no. 1, pp. 708–769, 2017.
+\bibitem{art3-key13} L. Liu, F. Yang, R. Wang, Z. Shi, A. Stidwell, and D. Gu, “Analysis of handover performance improvement in cloud-ran architecture,” in \textit{Communications and Networking in China (CHINACOM), 2012 7th International ICST Conference on}. IEEE, 2012, pp. 850–855.
+\bibitem{art3-key14} L. Guangjie, Z. Senjie, Y. Xuebin, L. Fanglan, N. Tin-fook, Z. Sunny, and K. Chen, “Architecture of gpp based, scalable, large-scale c-ran bbu
+pool,” in \textit{Globecom Workshops (GC Wkshps), 2012 IEEE}. IEEE, 2012, pp. 267–272.
+\bibitem{art3-key15} Z. Ghebretensaé, K. Laraqui, S. Dahlfort, F. Ponzini, L. Giorgi, S. Stracca, J. Chen, Y. Li, J. Hansryd, and A. R. Pratt, “Transmission solutions and architectures for heterogeneous networks built as c-rans,” in \textit{Communications and Networking in China (CHINACOM), 2012 7th International ICST Conference on}. IEEE, 2012, pp. 748–752.
+\bibitem{art3-key16} D. Sabella, P. Rost, Y. Sheng, E. Pateromichelakis, U. Salim, P. Guitton-Ouhamou, M. Di Girolamo, and G. Giuliani, “Ran as a service: Challenges of designing a flexible ran architecture in a cloud-based heterogeneous mobile network,” in \textit{Future Network and Mobile Summit (FutureNetworkSummit)}, 2013. IEEE, 2013, pp. 1–8.
+\bibitem{art3-key17} L. S. Ferreira, D. Pichon, A. Hatefi, A. Gomes, D. Dimitrova, T. Braun, G. Karagiannis, M. Karimzadeh, M. Branco, and L. M. Correia, “An architecture to offer cloud-based radio access network as a service,” in \textit{Networks and Communications (EuCNC), 2014 European Conference on}. IEEE, 2014, pp. 1–5.
+\bibitem{art3-key18} A. Maeder, M. Lalam, A. De Domenico, E. Pateromichelakis, D. Wubben, J. Bartelt, R. Fritzsche, and P. Rost, “Towards a flexible functional split for cloud-ran networks,” in \textit{Networks and Communications (EuCNC), 2014 European Conference on}. IEEE, 2014, pp. 1–5.
+\bibitem{art3-key19} D. Sabella, P. Rost, A. Banchs, V. Savin, M. Consonni, M. Di Girolamo, M. Lalam, A. Maeder, and I. Berberana, “Benefits and challenges of cloud technologies for 5g architecture,” in \textit{Vehicular Technology Conference (VTC Spring), 2015 IEEE 81st}. IEEE, 2015, pp. 1–5.
+\bibitem{art3-key20} J. Liu, S. Zhou, J. Gong, Z. Niu, and S. Xu, “Graph-based framework for flexible baseband function splitting and placement in c-ran,” in \textit{Communications (ICC), 2015 IEEE International Conference on}. IEEE, 2015, pp. 1958-1963.
+\bibitem{art3-key21} S.-C. Hung, H. Hsu, S.-Y. Lien, and K.-C. Chen, “Architecture harmonization between cloud radio access networks and fog networks,” IEEE Access, vol. 3, pp. 3019-3034, 2015.
+\bibitem{art3-key22} M. Peng, Y. Li, Z. Zhao, and C. Wang, “System architecture and key technologies for 5g heterogeneous cloud radio access networks,” \textit{IEEE network}, vol. 29, no. 2, pp. 6–14, 2015.
+\bibitem{art3-key23} Y. D. Beyene, R. Jäntti, and K. Ruttik, “Cloud-ran architecture for indoor das,” \textit{IEEE Access}, vol. 2, pp. 1205–1212, 2014.
+\bibitem{art3-key24} A. Marotta and L. M. Correia, “A model to evaluate c-ran architectures deployment impact in urban scenarios,” in \textit{Broadband Communications for Next Generation Networks and Multimedia Applications (CoBCom), International Conference on}. IEEE, 2016, pp. 1–6.
+\bibitem{art3-key25} X. Xu, Z. Sun, X. Dai, X. Tao, and P. Zhang, “A frameless network architecture for the way forward of c-ran,” \textit{China Communications}, vol. 13, no. 6, pp. 154–166, 2016.
+\bibitem{art3-key26} O. Chabbouh, S. B. Rejeb, Z. Choukair, and N. Agoulmine, “A novel cloud ran architecture for 5g hetnets and qos evaluation,” in \textit{Networks, Computers and Communications (ISNCC), 2016 International Sympo-sium on}. IEEE, 2016, pp. 1–6.
+\bibitem{art3-key27} H. Liu, N. Hua, Y. Li, Y. Li, and X. Zheng, “A solution for high-speed railway communication enabled by an improved c-ran architecture,” in \textit{Optical Fiber Communications Conference and Exhibition (OFC), 2016}. IEEE, 2016, pp. 1–3.
+\bibitem{art3-key28} R. Agrawal, A. Bedekar, S. Kalyanasundaram, T. Kolding, H. Kroener, and V. Ram, “Architecture principles for cloud ran,” in \textit{Vehicular Technology Conference (VTC Spring), 2016 IEEE 83rd}. IEEE, 2016, pp. 1–5
+\bibitem{art3-key29} C. Chia-Yu, S. Ruggero, N. Navid, S. Thrasyvoulos, and B. Christian, “Impact of packetization and functional split on c-ran fronthaul performance,” in \textit{Proc. of IEEE ICC}, 2016.
+\bibitem{art3-key30} D. Boviz, N. Abbas, G. Aravinthan, C. S. Chen, and M. A. Dridi, “Multi-cell coordination in cloud ran: Architecture and optimization,” in \textit{Wireless Networks and Mobile Communications (WINCOM), 2016 International Conference on}. IEEE, 2016, pp. 271–277.
+\bibitem{art3-key31} J. Duan, X. Lagrange, and F. Guilloud, “Performance analysis of several functional splits in c-ran,” in \textit{Vehicular Technology Conference (VTC Spring), 2016 IEEE 83rd}. IEEE, 2016, pp. 1–5.
+\bibitem{art3-key32} P. Rost, C. J. Bernardos, A. De Domenico, M. Di Girolamo, M. Lalam, A. Maeder, D. Sabella, and D. Wübben, “Cloud technologies for flexible 5g radio access networks,” \textit{IEEE Communications Magazine}, vol. 52, no. 5, pp. 68–76, 2014.
+\bibitem{art3-key33} J. Malmodin, Å. Moberg, D. Lundén, G. Finnveden, and N. Lövehagen, “Greenhouse gas emissions and operational electricity use in the ict and entertainment \& media sectors,” \textit{Journal of Industrial Ecology}, vol. 14, no. 5, pp. 770–790, 2010.
+\bibitem{art3-key34} O. B. S. A. Initiative et al., “Bts system reference document, version 2.0,” 
+
+\url{URL: http://www. obsai. com/specs/OBSAI_System_Spec_V2. 0. pdf}, 2006.
+
+\bibitem{art3-key35} C. P. R. Interface, “Interface specification v6. 0,” \textit{Acedido em}, vol. 28, 2013.
+
+\bibitem{art3-key36} O. R. equipment Interface, “Requirements for open radio equipment interface (ori)(release 4), etsi std., oct. 2014.”
+
+\bibitem{art3-key37} A. Pizzinat, P. Chanclou, F. Saliou, and T. Diallo, “Things you should know about fronthaul,” \textit{Journal of Lightwave Technology}, vol. 33, no. 5, pp. 1077–1083, 2015.
+
+\bibitem{art3-key38} M. Nahas, A. Saadani, J.-P. Charles, and Z. El-Bazzal, “Base stations evolution: Toward 4g technology,” in \textit{Telecommunications (ICT), 2012 19th International Conference on}. IEEE, 2012, pp. 1–6. 
+
+\bibitem{art3-key39} A. de la Oliva, J. A. Hernández, D. Larrabeiti, and A. Azcorra, “An overview of the cpri specification and its application to c-ran-based lte scenarios,” \textit{IEEE Communications Magazine}, vol. 54, no. 2, pp. 152-159, 2016.
+
+\bibitem{art3-key40} M. Rumney \textit{et al., LTE and the evolution to 4G wireless: Design and measurement challenges}. John Wiley \& Sons, 2013.
+
+\bibitem{art3-key41} A. Ericsson et al., “Common public radio interface (cpri); interface specification v7. 0,” \textit{Huawei Technologies Co. Ltd, NEC Corporation, Alcatel Lucent, and Nokia Networks,} 2015.
+
+\bibitem{art3-key42}\url{http://www.cablefree.net/wirelesstechnology/4glte/cpri-front-haul-technology/.}
+
+\bibitem{art3-key43} D. Mavrakis, “Why fronthaul matters–a key foundation for centralized and cloud rans,” White Paper. Ovum, 2015.
+
+\bibitem{art3-key44}\url{http://white-rabbit.web.cern.ch/.}
+
+\bibitem{art3-key45} C. Pan, Y. Kai, H. Zhu et al., “intelligent converged network consolidat-ing radio and optical access around user equipment,” \textit{Resource}, vol. 27, p. 07, 2017.
+
+\bibitem{art3-key46} I. . A. N. W. Group et al., “Some views on next generation radio interface,” 2015.
+
+\bibitem{art3-key47} I. S. Association et al., “Standard for a precision clock synchronization protocol for networked measurement and control systems,” \textit{IEEE 1588}, 2002.
+
+\bibitem{art3-key48} I. . W. Group et al., “Next generation fronthaul interface.”
+
+\bibitem{art3-key49} T. Wan and P. Ashwood, “A performance study of cpri over ethernet,” 1904.
+
+\bibitem{art3-key50} T. Wan and P. Ashwood-Smith, “A performance study of cpri over ethernet with ieee 802.1 qbu and 802.1 qbv enhancements,” in \textit{Global Communications Conference (GLOBECOM), 2015 IEEE}. IEEE, 2015, pp. 1–6.
+
+\bibitem{art3-key51} S.-H. Park, O. Simeone, O. Sahin, and S. Shamai, “Robust and efficient distributed compression for cloud radio access networks,” \textit{IEEE Transactions on Vehicular Technology}, vol. 62, no. 2, pp. 692–703, 2013.
+
+\bibitem{art3-key52} ——, “Robust layered transmission and compression for distributed uplink reception in cloud radio access networks,” \textit{IEEE Transactions on Vehicular Technology}, vol. 63, no. 1, pp. 204–216, 2014.
+
+\bibitem{art3-key53} Y. Zhou and W. Yu, “Optimized backhaul compression for uplink cloud radio access network,” \textit{IEEE Journal on Selected Areas in Communications}, vol. 32, no. 6, pp. 1295–1307, 2014.
+
+\bibitem{art3-key54} X. Rao and V. K. Lau, “Distributed fronthaul compression and joint signal recovery in cloud-ran,” \textit{IEEE Transactions on Signal Processing}, vol. 63, no. 4, pp. 1056–1065, 2015.
+
+\bibitem{art3-key55} Y. Wang, Z. Chen, and M. Shen, “Compressive sensing for uplink cloud radio access network with limited backhaul capacity,” in \textit{Computer Science and Network Technology (ICCSNT), 2015 4th International Conference on}, vol. 1. IEEE, 2015, pp. 898–902.
+
+\bibitem{art3-key56}S.-H. Park, O. Simeone, O. Sahin, and S. Shamai, “Multihop backhaul compression for the uplink of cloud radio access networks,” \textit{IEEE Transactions on Vehicular Technology}, vol. 65, no. 5, pp. 3185–3199, 2016.
+
+\bibitem{art3-key57} L. Liu and R. Zhang, “Optimized uplink transmission in multi-antenna c-ran with spatial compression and forward,” \textit{IEEE Transactions on Signal Processing}, vol. 63, no. 19, pp. 5083–5095, 2015.
+
+\bibitem{art3-key58} S. Jeong, O. Simeone, A. Haimovich, and J. Kang, “Optimal fronthaul quantization for cloud radio positioning,” \textit{IEEE Transactions on Vehicular Technology}, vol. 65, no. 4, pp. 2763–2768, 2016.
+
+\bibitem{art3-key59} S.-H. Park, O. Simeone, O. Sahin, and S. Shamai, “Joint precoding and multivariate backhaul compression for the downlink of cloud radio access networks,” \textit{IEEE Transactions on Signal Processing}, vol. 61, no. 22, pp. 5646–5658, 2013.
+
+\bibitem{art3-key60} ——, “Inter-cluster design of precoding and fronthaul compression for cloud radio access networks,” \textit{IEEE Wireless Communications Letters}, vol. 3, no. 4, pp. 369–372, 2014.
+
+\bibitem{art3-key61} P. Patil and W. Yu, “Hybrid compression and message-sharing strategy for the downlink cloud radio-access network,” in \textit{Information Theory and Applications Workshop (ITA), 2014}.\break IEEE, 2014, pp. 1–6. 
+
+\bibitem{art3-key62} J. Kang, O. Simeone, J. Kang, and S. Shamai, “Fronthaul compression and precoding design for c-rans over ergodic fading channels,” \textit{IEEE Transactions on Vehicular Technology}, vol. 65, no. 7, pp. 5022–5032, 2016.
+
+\bibitem{art3-key63} B. Guo, W. Cao, A. Tao, and D. Samardzija, “Cpri compression transport for lte and lte-a signal in c-ran,” in \textit{Communications and Networking in China (CHINACOM), 2012 7th International ICST Conference on}. IEEE, 2012, pp. 843–849
+
+\bibitem{art3-key64} S. Nanba and A. Agata, “A new iq data compression scheme for front-haul link in centralized ran,” in \textit{Personal, Indoor and Mobile Radio Communications (PIMRC Workshops), 2013 IEEE 24th International Symposium on}. IEEE, 2013, pp. 210–214.
+
+\bibitem{art3-key65} J. Lorca and L. Cucala, “Lossless compression technique for the fronthaul of lte/lte-advanced cloud-ran architectures,” in \textit{World of Wire-less, Mobile and Multimedia Networks (WoWMoM), 2013 IEEE 14th International Symposium and Workshops on a}. IEEE, 2013, pp. 1–9.
+
+\bibitem{art3-key66} K. F. Nieman and B. L. Evans, “Time-domain compression of complex-baseband lte signals for cloud radio access networks,” in \textit{Global Conference on Signal and Information Processing (GlobalSIP), 2013 IEEE}. IEEE, 2013, pp. 1198–1201.
+
+\bibitem{art3-key67} D. Samardzija, J. Pastalan, M. MacDonald, S. Walker, and R. Valenzuela, “Compressed transport of baseband signals in radio access networks,” \textit{IEEE Transactions on Wireless Communications}, vol. 11, no. 9, pp. 3216–3225, 2012.
+
+\bibitem{art3-key68} Z. He, C. Hu, T. Peng, and C. Ma, “A compression scheme for lte baseband signal in c-ran,” in \textit{Communications and Networking in China (CHINACOM), 2014 9th International Conference on}. IEEE, 2014, pp. 202–207.
+
+\bibitem{art3-key69} B. Guo, W. Cao, A. Tao, and D. Samardzija, “Lte/lte-a signal compres-sion on the cpri interface,” \textit{Bell Labs Technical Journal}, vol. 18, no. 2, pp. 117–133, 2013.
+
+\bibitem{art3-key70} D. Peng-ren and Z. Can, “Compressed transport of baseband signals in cloud radio access networks,” in \textit{Communications and Networking in China (CHINACOM), 2014 9th International Conference on}. IEEE, 2014, pp. 484–489.
+
+\bibitem{art3-key71} L. Ramalho, M. N. Fonseca, A. Klautau, C. Lu, M. Berg, E. Trojer, and S. Höst, “An lpc-based fronthaul compression scheme,” \textit{IEEE Communications Letters}, vol. 21, no. 2, pp. 318–321, 2017.
+
+\bibitem{art3-key72} H. Si, B. L. Ng, M. S. Rahman, and J. Zhang, “A novel and efficient vector quantization based cpri compression algorithm,” \textit{IEEE Transactions on Vehicular Technology}, vol. 66, no. 8, pp. 7061–7071, 2017.
+
+\bibitem{art3-key73} L. Ramalho, I. Freire, C. Lu, M. Berg, and A. Klautau, “Improved lpc-based fronthaul compression with high rate adaptation resolution,” \textit{IEEE Communications Letters}, vol. 22, no. 3, pp. 458–461, 2018.
+
+\bibitem{art3-key74} S. S. Kumar, R. Knopp, N. Nikaein, D. Mishra, B. R. Tamma, A. A. Franklin, K. Kuchi, and R. Gupta, “Flexcran: Cloud radio access network prototype using openairinterface,” in \textit{Communication Systems and Networks (COMSNETS), 2017 9th International Conference on}. IEEE, 2017, pp. 421–422.
+
+\bibitem{art3-key75} C.-Y. Chang, N. Nikaein, R. Knopp, T. Spyropoulos, and S. S. Kumar, “Flexcran: A flexible functional split framework over ethernet fronthaul in cloud-ran,” in \textit{Communications (ICC), 2017 IEEE International Conference on}. IEEE, 2017, pp. 1–7.
+
+\bibitem{art3-key76} G. Mountaser, M. L. Rosas, T. Mahmoodi, and M. Dohler, “On the fea-sibility of mac and phy split in cloud ran,” in \textit{Wireless Communications and Networking Conference (WCNC), 2017 IEEE}. IEEE, 2017, pp. 1–6.
+
+\bibitem{art3-key77} N. Makris, P. Basaras, T. Korakis, N. Nikaein, and L. Tassiulas, “Experimental evaluation of functional splits for 5g cloud-rans,” in \textit{Communications (ICC), 2017 IEEE International Conference on}. IEEE, 2017, pp. 1–6.
+
+\bibitem{art3-key78} S. H. Kim, H. S. Chung, and S. M. Kim, “Experimental demonstration of cpri data compression based on partial bit sampling for mobile front-haul link in c-ran,” in \textit{Optical Fiber Communication conference}. Optical Society of America, 2016, pp. W1H–5.
+
+\bibitem{art3-key79} L. Gifre, M. Ruiz, A. Castro, R. Proietti, S.-J. B. Yoo, and L. Velasco, “Experimental assessment of degradation-triggered reconfiguration in optically interconnected cloud-ran,” in \textit{Optical Fiber Communications Conference and Exhibition (OFC)}, 2017. IEEE, 2017, pp. 1–3.
+
+\bibitem{art3-key80}  T. X. Tran, A. Younis, and D. Pompili, “Understanding the computational requirements of virtualized baseband units using a programmable cloud radio access network testbed,” in \textit{Autonomic Computing (ICAC), 2017 IEEE International Conference on}. IEEE, 2017, pp. 221–226.
+
+\bibitem{art3-key81} V. B. Vinnakota, N. Manne, A. Mondal, D. Sen, and S. Chakraborty, “An experimental study of c-ran fronthaul workload characteristics: Protocol choice and impact on network performance,” in \textit{2019 IEEE 89th Vehicular Technology Conference (VTC2019-Spring)}. IEEE, 2019, pp. 1–7.
+
+\end{thebibliography}
 \end{multicols}
 
-%~ \vskip 1cm
+\vskip -1.95cm
 
+\noindent
+\begin{tabular}{V{2.5}cp{14cm}V{2.5}}
+\clineB{1-2}{2.5}
+ &\\
+
+\raisebox{-4.8cm}{\includegraphics{src/Figures/authors/Venu.png}} & 
+
+\centerline{\large\bf Venu Balaji Vinnakota}
+
+\bigskip
+Venu Balaji Vinnakota has completed his B.Tech degree in electronics and communication engineering from Jawaharlal Nehru technological university, Hyderabad, and M.Tech in advanced communication systems from NIT Warangal. He is currently working toward the Ph.D. degree in the G.S. Sanyal School of Telecommuni- cations, IIT Kharagpur, India, under the supervision of Prof. D. Sen. His research interests include the application of stochastic geometry analysis to cloud radio access networks and green wireless communications.\\
+&\\
+
+\raisebox{-4.6cm}{\includegraphics{src/Figures/authors/Kirtan.png}} & 
+
+\centerline{\large\bf Kirtan Gopal Panda}
+
+\bigskip
+Kirtan Gopal Panda received the B.Tech degree in electronics and communication engineering from the NM Institute of Engineering and Technology, Bhubaneswar, India, in 2010, and the M.Tech. in communication and signal processing engineering from the National Institute of Technology, Silchar, India, in 2016. He is currently pursuing the Ph.D. degree with the G.S. Sanyal School of Telecommunications, IIT Kharagpur, India, under the supervision of Prof. D. Sen. He was a Junior Project Assistant in the project entitled as Development of National Disaster Spectrum (NDS) and Disaster Communication Backbone Architecture (DiCoBA) with Prototype Development, from 2016 to 2018. His research interests include wireless communication systems, resource allocation in cloud RAN, and emergency network design.\\
+&\\
+\clineB{1-2}{2.5}
+\end{tabular}
+
+\noindent
+\begin{tabular}{V{2.5}cp{14.3cm}V{2.5}}
+\clineB{1-2}{2.5}
+
+&\\
+\raisebox{-4cm}{\includegraphics{src/Figures/authors/Debarati.png}} & 
+
+\centerline{\large\bf Debarati Sen}
+
+\bigskip
+Debarati Sen is currently an Associate Professor with the Indian Institute of Technology Kharagpur, India. She received her Ph.D in Telecommunication Engineering from IIT Kharagpur, India in 2010. She was a Post-Doctoral Research Fellow with the Chalmers University of Technology, Sweden, and a Senior Chief Engineer with the Samsung Research, Bengaluru, India prior to join IIT Kharagpur. In 2014, Dr. Sen was a visiting faculty with the Institute for Communications Engineering, Technical University of Munich, Germany, and in 2019, she was an academic visitor with the Dept. of ECSE, Monash University, Melbourne, Australia. In her research, Debarati focuses on Wireless and Optical Communication Systems, mostly on 5G \& Beyond Communications, Millimeter Wave Communications, Large MIMO Systems, Short Range Communications, Terahertz Communications, Cloud RAN, and Baseband algorithm design for coherent optical communications. She is an Editorial Board Member of two international journals; recipient of Best Paper Awards at Samsung Tech. Conference 2010 and IEEE ANTS 2016; IE(I) Young Engineers Award 2010; IETE N.V.G. Memorial Award 2013; Qualcomm Innovation Fellowship 2017. She is a Senior Member of IEEE, Fellow of IE(I), and Life Member, Indian Science Congress Association.\\
+&\\
+%~ \clineB{1-2}{2.5}
+%~ \end{tabular}
 
 %~ \noindent
-%~ \begin{tabular}{V{2.5}cp{14.6cm}V{2.5}}
+%~ \begin{tabular}{V{2.5}cp{14.4cm}V{2.5}}
 %~ \clineB{1-2}{2.5}
  %~ &\\
 
-%~ \raisebox{-4.5cm}{\includegraphics{src/Figures/authors/SanjeevG.png}} & 
+\raisebox{-5cm}{\includegraphics{src/Figures/authors/Sandip.png}} & 
 
-%~ \centerline{\large\bf Prof. Sanjeev Gurugopinath}
+\centerline{\large\bf Sandip Chakraborty}
 
-%~ \bigskip
-%~ Dr.~Sanjeev Gurugopinath received B.~E.~degree in Electrical and Electronics Engineering from Dr.~Ambedkar Institute of Technology, Visvesvaraya Technological University, Bengaluru, in 2004, the M.~Tech.~degree in Digital Electronics and Communication Engineering from  M.~S.~Ramaiah Institute of Technology, Visvesvaraya Technological University, Bengaluru, in 2006, and  Ph.D. in signal processing for communications from the Indian Institute of Science, Bengaluru, in 2015. He is currently a Professor with the Department of Electronics and Communication Engineering, PES University, Bengaluru. His research interests are in the areas of cognitive radios and heterogeneous networks for 5G communication systems, powerline communications, underwater acoustics, and speech signal processing. He was a co-recipient of the Best Paper Award across all tracks at IEEE INDICON 2016. He is a member of IEEE, and a life member of ACCS.\\
-
-%~ &\\
-%~ \clineB{1-2}{2.5}
-%~ \end{tabular}
+\bigskip
+Sandip Chakraborty received the BE degree in information technology from Jadavpur University, Kolkata, India, in 2009, and the MTech and Ph.D. degrees from the Indian Institute of Technology Guwahati, India, in 2011 and 2014, respectively. Currently, he is an assistant professor with the Department of Computer Science and Engineering, Indian Institute of Technology Kharagpur, India. His research interests include computer systems and distributed computing.\\
+&\\
+\clineB{1-2}{2.5}
+\end{tabular}
 
 %~ \vskip 1cm
 
