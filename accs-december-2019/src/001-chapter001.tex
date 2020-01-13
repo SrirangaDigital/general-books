@@ -256,7 +256,7 @@ The server program \texttt{tcp\_server07.py} is a simplified example of handling
 \begin{itemize}
 
 \setlength{\parskip}{0pt}
-  \setlength{\itemsep}{0pt plus 6pt}
+  \setlength{\itemsep}{0pt plus 7pt}
 
 \item[\rm a.] List of sockets on which data can be sent by clients,
 
@@ -271,6 +271,8 @@ The server program \texttt{tcp\_server07.py} is a simplified example of handling
 This timeout is used for \textit{select()} call to return if no active sockets are found from these 3 lists. New arriving connection processing is shown in lines 10-13. The processing of request data from active clients is shown in lines 14-15, 19-20. Lines 16-18 show the connection processing when the client closes the connection.
 
 The approach of using \textit{select()} performs better than earlier approaches of creating multiple threads/processes. The \textit{select()} call is based on a Unix system call \cite{art1-key19}\cite{art1-key20}, which in general has a default limit of 1024 connections as this is internally based on a 1024-bit vector implementation. Thus, a server using \textit{select()} is generally limited to handling 1024 concurrent clients. Modern servers need to deal with many more than 1024 concurrent connections, and thus \textit{select()} is insufficient for this purpose. This limit of 1024 concurrent clients is overcome by two other socket API calls, namely \textit{poll()} and \textit{epoll()}, which we will discuss in our next article. The major difference between \textit{poll()} and \textit{select()} corresponds to internal implementation details, and the former is more efficient than latter. Further, \textit{poll()} supports more than 1024 clients as well. Socket API \textit{epoll()} is an event based implementation and is much more efficient than \textit{poll()} in terms of performance.
+
+\vspace{-.3cm}
 
 \section{Summary}
 
@@ -551,7 +553,7 @@ last accessed Dec 2019.
 \end{thebibliography}
 \end{multicols}
 
-\vskip -.3cm
+\vskip -.2cm
 
 \noindent
 \begin{tabular}{V{2.5}cp{14.2cm}V{2.5}}
