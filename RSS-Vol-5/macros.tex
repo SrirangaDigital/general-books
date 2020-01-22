@@ -47,6 +47,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 	BoldFont=SHREE_DEV_OTF_0702
 ]{SHREE_DEV_OTF_0701}
 
+
 \newfontfamily\slanteddev[Script=Devanagari,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
 
 %%defining fonts
@@ -57,6 +58,12 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\devinline#1{{\fontsize{13}{15}\selectfont\dev{#1}}}
 \def\enginline#1{{\fontsize{10}{12}\selectfont\eng{#1}}}
+
+%\newfontfamily\AAN[Script=Devanagari,
+%           Mapping=velthuis-sanskrit,
+%]{AA_NAGARI_SHREE_L3}
+\newfontfamily\aandev[Script=Devanagari]{Sanskrit2003}
+\def\aandevnag#1{{\fontsize{10}{12}\selectfont\aandev #1}}
 
 
 %%fancy header settings
