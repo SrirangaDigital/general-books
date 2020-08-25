@@ -1,0 +1,136 @@
+\documentclass[9pt,openany]{book}
+\usepackage{amssymb,amsmath}
+
+\usepackage[paperwidth=210mm, paperheight=280mm, total={185mm, 240mm}, ignoreheadfoot, footnotesep=6mm plus 4pt minus 4pt, centering,asymmetric]{geometry}
+%%280mm - 240mm = 40mm (1.5cm(header) + 0.5cm(header gap) + 0.75cm(footer gap) + 1.25cm) 
+
+\usepackage{blindtext,multicol}
+\usepackage{graphicx,float}
+\usepackage{fixltx2e}
+\usepackage{epsfig}
+\usepackage{fontspec,lipsum}
+\usepackage{unicode-math,bm}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{txfonts}
+%\usepackage{parskip}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{pxfonts}
+\usepackage{enumerate}
+
+\usepackage[overload]{textcase}
+
+\usepackage{listings}
+\lstset{
+    escapeinside={(*}{*)}
+}
+
+%\setlength{\parskip}{15pt}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{table}{chapter}
+
+\makeatletter
+\@addtoreset{figure}{chapter}
+\@addtoreset{table}{chapter}
+\@addtoreset{equation}{chapter}
+\@addtoreset{equation}{section}
+\makeatother
+
+
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{breaklinks=true}
+\urlstyle{same}
+\usepackage[absolute,overlay]{textpos}
+
+\setmainfont{Lora}
+\setsansfont{Lora}
+
+\parindent=0pt
+
+\usepackage{footmisc}
+
+\renewcommand*\thesection{\arabic{section}}
+%\renewcommand{\thesection}{\Roman{section}} 
+\input macros
+
+
+\makeatletter
+\newcommand{\thnum}[1]{#1\renewcommand{\@currentlabel}{#1}}
+\makeatother
+
+
+\begin{document}
+
+
+
+\frontmatter
+
+
+
+\mainmatter
+%~ \thispagestyle{empty}
+%~ ~\phantom{}
+%~ \newpage
+%~ \thispagestyle{empty}
+%~ ~\phantom{}
+%~ \newpage
+%~ \thispagestyle{empty}
+%~ ~\phantom{}
+
+%~ \savebox\topodd{}
+%~ \savebox\topeven{}
+%~ \bgroup
+%~ \makeatletter
+%~ \def\columnseprulecolor\vrule\@width\columnseprule{%
+%~ \vbox to \ht\mult@rightbox{\leaders\vbox{\kern2pt\hbox{.}\kern2pt}\vfill}}
+%~ \makeatother
+%~ \input src/00a-contributors.tex
+%~ \egroup
+
+%~ \setcounter{page}{4}
+%~ \newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/From-the-editor.png}}
+%~ \input src/00b-editor
+%~ \newpage
+ %~ \input src/00d-interview
+\newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-right.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Cover-feature-left.png}}
+\input src/001-chapter001
+ %~ \newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Right.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-Left.png}}
+ %~ \input src/002-chapter002
+%~ \newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-1-right.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-1-left.png}}
+%~ \input src/003-chapter003
+%~ \newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-2-right.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Feature-2-left.png}}
+%~ \input src/004-chapter004
+%~ \newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-Right.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/hands-on-left.png}}
+%~ \input src/005-chapter005
+
+%~ \newpage
+%~ \input src/event-report
+
+ %~ ~\phantom{a}
+%~ \thispagestyle{empty}
+%~ \newpage
+%~ \savebox\topodd{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Report-Right.png}}
+%~ \savebox\topeven{\includegraphics[width=\paperwidth, keepaspectratio]{src/Figures/Report-left.png}}
+%~ \input src/adc
+%~ \newpage
+ %~ ~\phantom{a}
+ %~ \thispagestyle{empty}
+\end{document}
+
+
