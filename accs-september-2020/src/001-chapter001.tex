@@ -29,7 +29,7 @@ This paper presents a concept of the protocol for public registries based on blo
 
 \textbf{Keywords:} blockchain, electronic government, public registry, land registry, smart law, digital authority
 
-\section{Introduction}
+\section{Introduction}\label{sec-01}
  
 Governments play a crucial role in keeping public registries to prevent legal disputes about “who owns what.” Thus, the government acts as a trusted third party in private relations. However, if the government as a mediator loses the ability to be a source of law and order, it becomes a cause of conflicts.
 
@@ -77,8 +77,8 @@ Straightforward use of blockchain for running public registries is impossible. T
 
 It introduces the concept of “smart laws.” This is a framework for smart contracts and enforcement. Smart laws consist of algorithms that enable digital authorities to address legal issues: disputes, inheritance, loss of private keys, etc.
 
-\section{Theoretical Framework, Methodology and Literature Review}
-\subsection{Methodology and Theoretical Framework}
+\section{Theoretical Framework,\\ Methodology and Literature\\ Review}\label{sec-02}
+\subsection{Methodology and Theoretical\\ Framework}\label{subsec-02.1}
 
 This paper is framed with design science research (DSR) provided by Hevner et al. \cite{art1-key02}. As per DSR, the research is meant to present an “artifact” which is defined as “constructs (vocabulary and symbols), models (abstractions and representations), methods (algorithms and practices), and instantiations (implemented and prototype systems).” This research deals mostly with \textit{models} and \textit{methods}.
 
@@ -86,7 +86,7 @@ In particular, the cross-blockchain database is a model, and cross-blockchain pr
 
 This research is complaint with 7-step research guidelines provided by Hevner et al., and corresponds with Design Science Research Publication Schema \cite{art1-key03} by Gregor and Hevner. The following table outlines steps of the performed SDR:
 
-The following table outlines steps of the performed SDR: \textit{Method}. The primary method for this DSR is \textit{exaptation}, i.e., adoption of solutions from other fields. The research is looking into existing technologies which are applied here as elements of the protocol: Name-Value Storage, Berkley DB, RAID protocol, among others. The choice of Name-Value Storage as a reference technology for creating a database over blockchain is based on the analysis and comparison with two other similar technologies Bigchain and Amazon QLDB, presented in Section 4.1.a.
+The following table outlines steps of the performed SDR: \textit{Method}. The primary method for this DSR is \textit{exaptation}, i.e., adoption of solutions from other fields. The research is looking into existing technologies which are applied here as elements of the protocol: Name-Value Storage, Berkley DB, RAID protocol, among others. The choice of Name-Value Storage as a reference technology for creating a database over blockchain is based on the analysis and comparison with two other similar technologies Bigchain and Amazon QLDB, presented in Section~\ref{subsubsec-4.1.a}.
 \end{multicols}
 \begin{center}
 \begin{tabular}{|l|l|m{13cm}|}
@@ -113,7 +113,7 @@ Lastly, the development of the running system may require substantial resources.
 
 Therefore, this research was focused on designing the concept of the protocol and, more generally, the concept of public registries across multiple blockchains, while all elements of this architecture exist and tested in various other applications.
 
-\subsection{Literature review}
+\subsection{Literature review}\label{subsec-02.2}
 
 Recent academic literature creates a valuable context on the blockchain use, its benefits, applications, characteristics, classification and constraints.
 
@@ -139,13 +139,23 @@ More recently, the paper “Smart Contracts for Government Processes: Case Study
 
 To sum up, the recent research introduced a variety of opinions about the blockchain technology, its features, benefits, and limits. This creates grounds for further research and development, especially application in various spheres of economic activity far beyond cryptocurrency. Yet to be noticed; still, a lot of perspective ideas remain in theoretical phases, or early stages of piloting. Therefore, the future challenge is to observe, collect and analyze more empirical data to define better practices and pitfalls across multiple fields and disciplines.
 
-\section{Public blockchains issues}
+\vspace{-.1cm}
+
+\setcounter{secnumdepth}{5}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}
+\section{Public blockchains issues}\label{sec-03}
 
 This section defines problems on the way of the blockchain use for public registries: risks of multiplication of assets due to hardforks, enforceability, anonymity, digital identity, privacy, data integrity, scalability and price volatility. In the end, it is summarized what is opposed to blockchains and why blockchain is still a good choice for infrastructure.
 
-\subsection{Why blockchain is impossible to use in public service as it is}
+\vspace{-.2cm}
 
-\subsubsection{Hardforks}
+\subsection{Why blockchain is impossible to use in public service as it is}\label{subsec-03.1}
+
+\vspace{-.2cm}
+
+\subsubsection{Hardforks}\label{subsubsec-03.1.1}
+
+\vspace{-.3cm}
 
 The hardfork is the major concern for systems with open competition because there are no authorities that impose and enforce one exclusive status quo. 
 
@@ -153,11 +163,19 @@ The system can split into two or more branches or so-called “forks,” after w
 
 In the result of the split, tokens are duplicated. For example, if the system is used to manage rights on movable or immovable property (often mentioned as “asset-backed tokens”), in the result of a hardfork, the user will still have one plot of land but two title records in parallel systems. In the result of the fork, they can be managed independently, thereby creating legal collisions. For example, in one system, the user sells the plot, but in the other, the user still owns it.
 
-\subsubsection{Immutability}
+\vspace{-.7cm}
+
+\subsubsection{Immutability}\label{subsubsec-03.1.2}
+
+\vspace{-.4cm}
 
 Being an advantage of blockchain technology, the immutability of the ledger can cause a lot of untoward use cases. For example, the loss of private keys will make cryptocurrency, a token, or a smart contract uncontrolled with negligible possibilities ever to restore it. Even if the blockchain can prevent many ownership disputes, the imperfect nature of people’s relationships will always cause issues with ownership and the need to settle when they arise. The blockchain itself, in its pure design, does not leave practical possibilities for enforcing any legitimate judicial decisions or any legal actions by authorities.
 
-\subsubsection{Anonymity (pseudonymity)}
+\vspace{-.7cm}
+
+\subsubsection{Anonymity (pseudonymity)}\label{subsubsec-03.1.3}
+
+\vspace{-.4cm}
 
 The authorization and authentication for a transaction are provided only with the relevant private key within the asymmetric pair owned by the user. The public key of the pair is taken to generate the address. The concept of addresses is the cornerstone of the blockchain. In the result of a transaction, a coin is spent from one address and added to another address, but to enable such transfer, the owner of the coin must use the relevant private key. Thus, the address is the only public record in the ledger that identifies the user. 
 
@@ -165,7 +183,11 @@ However, some research showed that addresses could be deanonymized by different 
 
 Beyond that, at the practical level, the censorless nature of the blockchain creates confusion in identifying records. Anyone may perform any transaction and publish any data in the blockchain. If the government must authorize a land title deed, how do you define if any transaction on the blockchain belongs to the town clerk if they are all pseudonymous? Without overlaid solutions for digital identities and trust services, it is almost impossible to create any scalable model for governance.
 
-\subsubsection{Data integrity, off-chain data and issues of personal data}
+\vspace{-.7cm}
+
+\subsubsection{Data integrity, off-chain data and issues of\\ personal data}\label{subsubsec-03.1.4}
+
+\vspace{-.4cm}
 
 In blockchain, any published data is exposed, and removal is not an option. Alternatively, users can insert into the blockchain cryptographic hashes of the data. The blockchain that stores hash sums will provide for two things: the user can verify the authenticity of the data (whether it is still the same or not) and timestamping because blocks are chronologically stored.
 
@@ -175,7 +197,11 @@ Today all personal data and property records (title records) are stored in close
 
 Even if public blockchain is used to store hashes, there is still in this scheme a trusted party as the source of “truth,” and so concentrating many risks for leaks and corruption of data as a single point of failure.
 
-\subsubsection{Scalability}
+\vspace{-.7cm}
+
+\subsubsection{Scalability}\label{subsubsec-03.1.5}
+
+\vspace{-.4cm}
 
 One exclusively chosen blockchain for governance will necessarily create issues. Again because of the open and free nature, the blockchain protocol does not restrain publishing junk data in the ledger.
 
@@ -187,11 +213,15 @@ For blockchain using other consensus protocols or other data structure, scalabil
 
 The choice of one network in favor of others is a discussion about technological neutrality – a principle that is often discussed in the context of public policy. The reader may find discussions that compare one specific blockchain network with some specific centralized system, where usually blockchain performance is fewer. Having in mind the principle of technological neutrality, it is proposed to consider the problem of scalability from another perspective. One blockchain network does not necessarily provide enough scalability, while a bundle of blockchains may become much more effective.
 
-\subsubsection{Price volatility}
+\vspace{-.7cm}
+
+\subsubsection{Price volatility}\label{subsubsec-03.1.6}
+
+\vspace{-.4cm}
 
 Due to speculations, the price can dramatically fluctuate; therefore, creating a bad user experience for those who need cryptocurrency to pay fees for publishing and managing data and running smart contracts. Together with the mentioned scalability issues, it makes it infeasible for the government to use or even to announce their intention to use any specific blockchain. It will inevitably incentivize agiotage on the market, exacerbating the problem of scalability even more.
 
-\subsection{What is opposed to blockchains and why it is still a good idea to use them}
+\subsection{What is opposed to blockchains and why it is still a good idea to use them}\label{subsubsec-03.2}
 
 Eventually, as might be thought, the permissioned DLT is much better than the blockchain, as it addresses all these issues due to its centralized nature, purposed to control and restrict unwanted practices and manually fix troubles.
 
@@ -212,6 +242,9 @@ The principle of decentralization is the basis of this research; therefore, we n
 Blockchain is a new word in governance, but this technology has some principal features that can restrain its implementation at the state level, and the following research conceptualizes ideas to address them.
 
 Among various properties of the blockchain technology, we distinguish the following highly considerable for a new generation of public property registries:
+
+\vspace{-.4cm}
+
 \begin{itemize}
 \item[-] Blockchain provides an append-only type of database, which is called an immutable ledger. It prevents data corruption and unauthorized changes.
 \item[-] Blockchain has a native mechanism for managing ownership through public-key cryptography; thus, it is not only an immutable storage, but also it is a system for peer-to-peer transactions. On the contrary to traditional, for example, real estate registry, it does not require a trusted third party to record a deed in the database.
@@ -220,16 +253,17 @@ Among various properties of the blockchain technology, we distinguish the follow
 
 The proposal in this research concept utilizes the immutability of the blockchain with the help of “smart laws.” It reduces centralization when possible and makes it accountable when centralization is inevitable.
 
-\section{Building a database across blockchains}\label{sec-4}
+\section{Building a database across\\ blockchains}\label{sec-4}
 
 The first subsection introduces an idealistic design model of a database across a bundle of blockchains (Subsection~\ref{subsec-4.1}). Subsections~\ref{subsec-4.2} and \ref{subsec-4.3} analyze constraints of the model and evaluate possible design solutions to get the system working.
 
 \subsection{General idea and basic elements}\label{subsec-4.1}
 
+\vspace{.1cm}
 
-\subsubsection{General idea}\label{subsubsec-4.1.1}
+\subsubsection{General idea}\label{subsubsec-4.1.a}
 
-A cross-blockchain database is a logic superstructure over a bundle of blockchains, see Fig~\ref{chap1-fig01}. To create a mutual interaction, users should agree which blockchains they include in the bundle and according to which rules and filters - the cross-blockchain protocol - they create the database.
+A cross-blockchain database is a logic superstructure over a bundle of blockchains, see Figure~\ref{chap1-fig01}. To create a mutual interaction, users should agree which blockchains they include in the bundle and according to which rules and filters - the cross-blockchain protocol - they create the database.
 
 The designed system collects users’ records from the blockchains of the bundle into a consistent end-to-end public database. The “record” is an entry the user inserts into any blockchain in the bundle, it can be a token (or a “colored coin”) or a key-value record.
 
@@ -241,19 +275,25 @@ When a user applies the same protocol on any computer, he or she will receive th
 
 The consensus of the overlaid structure is a sort of a social contract because users must agree on the initial architecture of any particular database: which ledgers to scan and from which blocks, the format of the entry, and filtering rules, how to add new ledgers and drop a ledger from the bundle, how to transfer entries from ledger to ledger, how to upgrade and create patches in the protocol by collective decisions or by a central authority, etc. Thus, by applying the protocol and scanning blocks, users independently build a copy of the database.
 
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=.85]{src/Figures/chap1/chap1-fig01.jpg}
-%~ \caption{Basic scheme of a bundle of blockchains with overlaid database}\label{chap1-fig01}
-%~ \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.5]{src/Figures/chap1/chap1-fig01.jpg}
+\caption{Basic scheme of a bundle of blockchains with overlaid database}\label{chap1-fig01}
+\end{figure}
 
 \begin{quote}
 The bundle can contain any number of ledgers but at any point in time, the list must be definite. The protocol provides for format rules and filters for entries and rules for scanning, adding new and deleting included ledgers intro the bundle. The system scans block across ledger of the bundle and hooks records that are compliant with the rules and adds them to the database.
 \end{quote}
 
+\vspace{.1cm}
+
 The blockchain provides for a native mechanism of ownership through public-key cryptography: the user publishes a record and the protocol considers the address from which he or she created this transaction as the owner of the record. Thus, to perform any update, the user must create a new record using the same private key because the private key is the authorizing mechanism for the address.
 
-This mechanism was developed by a number of blockchain projects. To better explain this protocol, let us refer to Emercoin’s Name-Value Storage (NVS) technology, which is working since 2014 as one of the successful designs for storing arbitrary users’ data in the structured form in the database. Emercoin’s itself became a successor of a Namecoin’s non-ICANN TLD service (Top-Level Domain “.bit”). 
+\vspace{.1cm}
+
+This mechanism was developed by a number of blockchain projects. To better explain this protocol, let us refer to Emercoin’s Name-Value Storage (NVS) technology, which is working since 2014 as one of the successful designs for storing arbitrary users’ data in the structured form in the database. Emercoin’s itself became a successor of a Namecoin’s non-ICANN TLD service (Top-Level Domain “.bit”).
+
+\vspace{.5cm}
 
 It should be noted that other types of databases and technologies may be applied, and therefore, it will require a compatible format of a DB entry.
 
@@ -263,11 +303,14 @@ To address the legitimate question of why other types of blockchain-enabled data
 
 In stacks like Bigchain\footnote{Note, that is coin-less DLTs “transaction” is an arbitrary byte array, see for reference Tendermint specification \url{https://github.com/tendermint/spec/blob/953523c3cb99fdb8c8f7a2d21e3a99094279e9de/spec/blockchain/blockchain.md}} and Amazon QLDB\footnote{In the block example the transaction does not contain user’s digital signature, as per the specification the authentication is performed through Amazon ID protocol out of the transaction itself, \url{https://docs.aws.amazon.com/qldb/latest/developerguide/journal-contents.html?fbclid=IwAR2L563qjoUlH72yWM-9-HT39PvSntO9FggMDNtcBfLYmg4AjBPXcbuyRwU\#journal.bl}ock-example}, the transaction carries only an instruction (create, update, delete) for DB entry, while the authentication for the transaction is performed in the level of interaction with “validators” (also through public-key cryptography though). We can conclude that authorization for pushing DB entries through the ledger to the DB is performed as a mechanism of coin ownership, which is not natively present in the mentioned frameworks. Without this mechanism it is impossible to transfer the ownership over the DB entry from one address to another. Of course, it can be developed; however, the purpose was not to choose one particular technology but to analyze the benefits of various technologies and extract their useful features to develop the database across a bundle of ledgers. Therefore, we refer to such technologies which natively included required elements. To add, Fabric and Tendermint also can be used in a bundle of ledgers, though in both cases, the transaction must contain the user’s signature of the data, while the user’s public key will be used as the address.
 
-\subsubsection{Key-value format and transaction processing}\label{subsubsec-4.1.2}
+\vspace{-.5cm}
+
+\subsubsection{Key-value format and transaction processing}\label{subsubsec-4.1.b}
 
 According to the proposed concept, users insert key-value records into any blockchain of the bundle using a native mechanism of data insertion of the chosen blockchain. Though these are not just records, but tokens, because they can be owned by users through their private keys.
 
 Here are basic rules for any cross-blockchain protocol design:
+
 \begin{itemize}
 \item [-]data published in the blockchain must be compliant with the format, so the scanner knows what to hook into the database upon the bundle of blockchains;
 \item [-] keys of this database must be unique. The hook collects a new entry if the key has never been published before.
@@ -279,13 +322,13 @@ The database itself is a standard technology. In this research, we refer to Berk
 
 The database file, because it is a standard technology, can play the role of a building block for developing end user-applications.
 
-A simplified scheme of the relation of blockchain and database and entry structure are presented in Fig.~\ref{chap1-fig02}.
+A simplified scheme of the relation of blockchain and database and entry structure are presented in Figure.~\ref{chap1-fig02}.
 
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig02.jpg}
-%~ \caption{Relation of blockchain data to key-value database}\label{chap1-fig02}
-%~ \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.06]{src/Figures/chap1/chap1-fig02.jpg}
+\caption{Relation of blockchain data to key-value database}\label{chap1-fig02}
+\end{figure}
 
 \begin{quote}
 The system scans upcoming blocks according to the provided format standard and adds records to the database table. The entry may also contain the field which specifies till which block the entry is valid and some other data.
@@ -316,25 +359,44 @@ A key-value entry, or particularly an NVS record (as it is referred to Name-Valu
 \end{itemize}
 \item \textbf{name delete}-the owner publishes the name record with the instruction for deletion; from the block where it has been published, the records become invalid. The protocol passes the command to the database to erase the record. From the following block, any user may publish the same key again (because nobody owns it anymore).
 \end{itemize}
+\end{multicols}
 
-The concept of a database across a bundle of blockchains is presented in Fig.~\ref{chap1-fig03}. The example of NVS in action is the following. The user publishes the key “Alice” and Value “+61414739692” to store the record of her public contact unless “Alice” already belongs to someone in the database. Anyone who enquires in their cross-blockchain node “Alice” will see the telephone number which belongs to a specific cryptocurrency address.
+\vspace{-.5cm}
 
-Timestamps provide the exclusiveness of keys in the database. Blockchain is a “timestamp machine,” which ensures certainty in the chronology of facts (transactions). 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.65]{src/Figures/chap1/chap1-fig03.jpg}
+\caption{Cross-blockchain “key-value” database}\label{chap1-fig03}
+\end{figure}
 
-The concept of blockchain timestamping is a matter of academic interest presented in several publications \cite{art1-key29}, \cite{art1-key30}, \cite{art1-key31}, \cite{art1-key32} and \cite{art1-key33}.
+\begin{multicols}{2}
 
-Thus, the Name which is published first in the bundle of blockchains appears in the cross-blockchain database, any other entries with the same keys are rejected; therefore, name squatting is impossible.
+\vspace{-.6cm}
 
-Key-value storage is a “raw material” for any sort of monetary and non-monetary tokens, overlaid digital currencies, smart contracts and decentralized applications.
-
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig03.jpg}
-%~ \caption{Cross-blockchain “key-value” database}\label{chap1-fig03}
-%~ \end{figure}
 \begin{quote}
 The scheme presents the bundle in dynamics. The system scans three ledgers: Redcoin (R), Greencoin (G), and Blackcoin (B). When it detects a complaint record, it hooks it up and adds to the overlaid database. The format is simplified; only Key and Value are traced. The hook detected blocks R-71, G-121, G-122 and R-74. Because R-74 contains the key from R-71, it updates the field Value in the relevant database record. 
 \end{quote}
+
+\vspace{-.4cm}
+The concept of a database across a bundle of blockchains is presented in Figure.~\ref{chap1-fig03}. The example of NVS in action is the following. The user publishes the key “Alice” and Value “+61414739692” to store the record of her public contact unless “Alice” already belongs to someone in the database. Anyone who enquires in their cross-blockchain node “Alice” will see the telephone number which belongs to a specific cryptocurrency address.
+
+\vspace{-.1cm}
+
+Timestamps provide the exclusiveness of keys in the database. Blockchain is a “timestamp machine,” which ensures certainty in the chronology of facts (transactions). 
+
+\vspace{-.1cm}
+
+The concept of blockchain timestamping is a matter of academic interest presented in several publications \cite{art1-key29}, \cite{art1-key30}, \cite{art1-key31}, \cite{art1-key32} and \cite{art1-key33}.
+
+\vspace{-.1cm}
+
+Thus, the Name which is published first in the bundle of blockchains appears in the cross-blockchain database, any other entries with the same keys are rejected; therefore, name squatting is impossible.
+
+\vspace{-.1cm}
+
+Key-value storage is a “raw material” for any sort of monetary and non-monetary tokens, overlaid digital currencies, smart contracts and decentralized applications.
+
+\vspace{-.1cm}
 
 From the perspective of any user, a cross-blockchain database is a public storage. Every user that installed the cross-blockchain protocol and full nodes (wallets) of every blockchain of the bundle will obtain a copy of such a public database.
 
@@ -354,19 +416,37 @@ A standard wallet with integrated key-value storage should have UI and API, whic
 
 Nevertheless, as far as public blockchain is an uncensored system, anyone may write manually the code of the transaction, which will not be necessarily compliant and send it directly to the mempool omitting the protocol. Therefore, a non-compliant entry will not appear as the record in the database. This is the major role of the output tool – to build a database as per the rules.
 
+\setcounter{secnumdepth}{5}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}
+\vspace{-.2cm}
+
 \subsection{Setting and Operation of the System}\label{subsec-4.2}
 
-\subsubsection{How and which blockchain is to include in the bundle?}\label{subsubsec-4.2.1}
+\vspace{-.3cm}
+
+\subsubsection{How and which blockchain is to include in the bundle?}\label{subsubsec-4.2.a}
+
+\vspace{-.3cm}
 
 The cross-blockchain protocol is based on a social consensus, the same as any blockchain protocol at a higher level, is a social consensus: the one who agrees with rules provided by the blockchain protocol installs the node and run it.
 
+\vspace{-.1cm}
+
 In the architecture of a future cross-blockchain database, the first step is to define which blockchains are scanned, in other words, added in the bundle, and how to add and exclude blockchains. Typically, the user will download and install the same software, assuming that in this way the user expresses the consent.
+
+\vspace{-.1cm}
 
 At the same time, any other designed protocol may create an entirely different database using other lists of blockchains or the same blockchains but with other rules and filters.
 
+\vspace{-.1cm}
+
 It is also assumed that the provider of a rightful version of the national cross-blockchain protocol may be a government and therefore, it can be centralized to some extent. Furthermore, every user may decide to use multiple versions of protocols, including those provided by the government and or any other community.
 
-\subsubsection{Initialization of a bundle}\label{subsubsec-4.2.2}
+\vspace{-.7cm}
+
+\subsubsection{Initialization of a bundle}\label{subsubsec-4.2.b}
+
+\vspace{-.3cm}
 
 There are different types of blockchain protocols, and each may have different mechanisms of data insertion, which is discussed above. If the blockchain supports the Data Format and Basic Transactions described in the previous subsection, such blockchain can become a part of the bundle.
 
@@ -374,17 +454,30 @@ For better user experience, the blockchain wallet (node) should provide user-int
 
 The criterion for choosing a blockchain to a bundle is reliability. Obviously, a PoW network with three nodes is less resistant to an attack then the network with three thousand nodes. As of today, there is no golden standard of blockchain security. Therefore, any decision must be empirically and expertly motivated.
 
+\vspace{-.1cm}
 The issue of network reliability is the subject of a separate study that is beyond the scope of this paper. However, for this work, we show which approach should be taken to automatically and independently diagnose the reliability.
 
-\subsubsection{Exclusion of ledgers and rescue of names}\label{subsubsec-4.2.3}
+\vspace{-.9cm}
+
+\subsubsection{Exclusion of ledgers and rescue of names}\label{subsubsec-4.2.c}
+
+\vspace{-.3cm}
 
 The cross-blockchain protocol must be able to smoothly exclude on the run from the bundle any blockchain that becomes unreliable. The same action must be performed intendedly by all nodes of the system; otherwise, nodes will have different versions of their databases. 
 
+\vspace{-.1cm}
+
 The algorithms of exclusion and security criterion are defined during the initial set-up of the protocol.
+
+\vspace{-.1cm}
 
 The system should not receive metrics that trigger the exclusion from any third-party source, except the blockchains themselves since we strive for decentralization as the fundamental criterion of reliability.
 
+\vspace{-.1cm}
+
 However, in the following section certain centralized scenarios are also explained. 
+
+\vspace{-.1cm}
 
 A decentralized system works as follows. Each cross-blockchain node collects data from included blockchains for analysis. A blockchain network is indexed in the bundle while it meets the security threshold. Eventually, any running node will locally calculate these parameters and automatically exclude the network from indexing. Hence, every cross-blockchain node will apply the same algorithm, and it will end up with the same copy of the database across the bundle.
 
@@ -398,67 +491,122 @@ After the exclusion of a blockchain, all records till the block of exclusion rem
 
 The proposed concept of security leaves space for designing systems with different parameters. Here is one example. The bundle includes a few blockchains which have PoW and PoW+PoS consensus. The criteria for reliability for PoS and PoW are their dynamics of difficulty. If average difficulty decreases, say twice, nodes drop such blockchain. The difficulty is calculated periodically for each blockchain of the bundle, taking the longest period of difficult recalculation among blockchains in the bundle. For example, in Bitcoin, difficulty is recalculated every 2016 blocks (approximately two weeks), in Ethereum, it is dynamically recalculated so that on average, one block is produced by the entire network every 12 seconds \cite{art1-key34}.
 
-\subsubsection{Adding on the run}\label{subsubsec-4.2.4}
+\vspace{-.7cm}
+
+\subsubsection{Adding on the run}\label{subsubsec-4.2.d}
+
+\vspace{-.3cm}
 
 Once chosen and built, the cross-blockchain system may require adding blockchains in the future. The main issue here is choosing the block to begin indexing from. This question is also relevant to initiating any new cross-blockchain protocol: from which block to start scanning if the blockchain is not new.
 
+\vspace{-.1cm}
+
 When a blockchain (which is running a while) is added in the bundle, rebuilding a database from the very first block may lead to a logic conflict with ownership. If in the added blockchain, one of the record already exists but was created earlier than the one in the current cross-blockchain database, a new re-indexed version of the database will re-assign this record. Thus, the owner of the record will lose control over it in the new database.
+
+\vspace{-.1cm}
 
 A better approach is to index a blockchain from the current block when it is being added. Hence, the reallocation of ownership is excluded.
 
-\subsubsection{How to transfer a name between blockchains}\label{subsubsec-4.2.5}
+\vspace{-.7cm}
+
+\subsubsection{How to transfer a name between blockchains}\label{subsubsec-4.2.e}
+
+\vspace{-.4cm}
 
 The name record can be transferred from the dropped blockchain. For better user experience and competition between existing blockchains, the user should have this transferability also in running blockchains.
 
+\vspace{-.1cm}
+
 A user of a blockchain may transfer the record to any blockchain in the bundle. The user signs the string [record key + challenge] with their private key from the dropped network and then publishes this key in another blockchain. The system will see that someone is trying to capture the record, which already exists in the database. It will verify the digital signature, and if it belongs to the original owner of the record in the dropped blockchain, it will update the entry in the database.
 
+\vspace{-.15cm}
+
 The “challenge” is needed to exclude attempts of non-authorized capture of records. The owner could sign the key in the past for various reasons. Thus, the attacker could obtain the signature to reuse it. To exclude this, the owner signs the key with the ID of the latest block:
+
+\vspace{-.4cm}
+
 \begin{center}
 \texttt{priv\_key(record\_key, latest block ID)}
 \end{center}
 
+\vspace{-.45cm}
+
 Transferability of assets between blockchains is one of the most fundamental ideas of the cross-blockchain protocol because it supports competition between blockchains, which inevitably leads to a better quality of technology and services.
 
-\subsubsection{Local Name-Value Storage vs. Cross-blockchain}\label{subsubsec-4.2.6}
+\vspace{-.6cm}
+
+\subsubsection{Local Name-Value Storage vs. Cross-blockchain}\label{subsubsec-4.2.f}
+
+\vspace{-.3cm}
 
 Another issue of better design is the relation of a local and cross-blockchain key-value storage.
 
+\vspace{-.1cm}
+
 Any blockchain may have its own key-value storage even before it becomes a part of a cross-blockchain protocol. For example, Namecoin has NVS database to run TLD (Top-Level Domain) $^\ast$.bit, Emercoin runs NVS as a public database for general purposes and also maintains four TLDs (.coin, .emc, .lib, .bazar).
+
+\vspace{-.1cm}
 
 It is possible that names in one blockchain, when added to a global bundle, may conflict with other blockchains. Therefore, it is better for the design of the system that the local NVS running in parallel with the cross-blockchain database will prevent (or at least notify users) from publishing conflicting records.
 
-\subsubsection{Name squatting protection}\label{subsubsec-4.2.7}
+\vspace{-.7cm}
+
+\subsubsection{Name squatting protection}\label{subsubsec-4.2.g}
+
+\vspace{-.3cm}
 
 Namecoin designed the squatting protection for their system. When the user publishes a Name (key), it becomes available publicly in the mempool before publishing in the blockchain. In PoW, users can compete for the priority of a transaction by proposing miners a higher fee. The attacker right after has seen the name in the mempool can try to push the same name first by proposing a higher fee, and so to capture it.
 
+\vspace{-.1cm}
+
 For that reason, Namecoin designed a two-step publishing protocol \cite{art1-key35}: (1) publish the hash of the name; then (2) publish the name itself.
+
+\vspace{-.15cm}
 
 In Emercoin, the queue is ordered chronologically, and fees even though are proposed they are burned instead, the miner/minter gets no fee from the user.
 
+\vspace{-.15cm}
+
 Cross-blockchain must be designed in the way to accommodate both models. For blockchains, where easy squatting is possible, there should be two steps.
+
+\vspace{-.15cm}
 
 When the squatter is a miner (minter), there is no simple solution though, because the miner may shuffle the queue. However, if the system design does not allow cheating, squatting is just a free-market competition of who registers the name first. It is recommended to use two-step protocol in all cases, propose higher fees and publish a new name simultaneously in all blockchains of the bundle; it reduces the chances for a squatter to capture the name. Once a new name is published, its capture in further transactions is impossible.
 
-\subsubsection{Database}\label{subsubsec-4.2.8}
+\vspace{-.9cm}
+
+\subsubsection{Database}\label{subsubsec-4.2.h}
+
+\vspace{-.3cm}
 
 The choice of appropriate technology for the database is an essential step in designing the cross-blockchain system. Obviously, it may be unreasonable to create from scratch a new technology for the database; the market proposes an extensive choice of reliable solutions.
 
+\vspace{-.1cm}
+
 Under the hood of Emercoin’s Name-Value Storage is Berkeley DB \cite{art1-key36}, an Oracle’s key-value database. Initially, many elements of the Bitcoin system relied heavily on Berkeley DB. Subsequently, in version 0.8.1, developers migrated to LevelDB \cite{art1-key37} to store transactions and block indices but left “wallet.dat” on Berkley DB \cite{art1-key38}. 
+
+\vspace{-.1cm}
 
 There might be reasons to choose one or another solution (LevelDB, Redis, among others) or a database from SQL family, depending on the needs of the specific project. Worth noting that the database is the fundamental of software.
 
+\vspace{-.1cm}
+
 Furthermore, since we create the cross-blockchain database for applications, the choice of the database should match the needs of further development.
 
-A high-level design concept is presented in Fig~\ref{chap1-fig04}.
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig04.jpg}
-%~ \caption{Cross-blockchain protocol scheme}\label{chap1-fig04}
-%~ \end{figure}
+\vspace{-.1cm}
+
+A high-level design concept is presented in Figure~\ref{chap1-fig04}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.38]{src/Figures/chap1/chap1-fig04.jpg}
+\caption{Cross-blockchain protocol scheme}\label{chap1-fig04}
+\end{figure}
 
 \begin{quote}
 The scheme presents a more general scheme of the bundle interaction. Users may choose any ledger in the bundle to publish records. The protocol creates a database of user’s entries across these ledgers. The database is used to develop decentralized applications. 
 \end{quote}
+
+\vspace{-.35cm}
 
 Blockchains towards the database play the role of the channel through which users insert and manage data.
  
@@ -476,12 +624,15 @@ In the result of data insertion in the blockchain, the entry gets into the datab
 
 The database may be used for developing various user applications. Since DB is local, the interaction is instant, which makes possible development of heavily loaded applications.
 
-
 \subsection{How to chronologize the index}\label{subsec-4.3}
+
+\vspace{-.2cm}
 
 This section discusses the problem of the inaccuracy of time in blockchains compared to each other and astronomical time, the possible consequences of hardforks, and roll-back attacks and variants of the system design to address these issues.
 
-\subsubsection{Inherent issues of blockchain to deal with in the bundle architecture}\label{subsubsec-4.3.1}
+\vspace{-.6cm}
+
+\subsubsection{Inherent issues of blockchain to deal with in the bundle architecture}\label{subsubsec-4.3.a}
 
 Let us define and evaluate issues to deal with in a cross-blockchain architecture.
 
@@ -495,15 +646,21 @@ Let us define and evaluate issues to deal with in a cross-blockchain architectur
 
 Let us discuss possible solutions and evaluate their applicability.
 
-\subsubsection{Assumption of time inaccuracy}\label{subsubsec-4.3.2}
+\vspace{-.3cm}
 
-Inaccuracy may create some negative user experience. For instance, in green blockchain (see Fig.~\ref{chap1-fig05}), the miner finalizes the block with the timestamp that is 02:12 ahead of the current astronomical time. In red blockchain, the block is closed 19 seconds earlier astronomical time. If the same records are published there, they will be accepted only from the red blockchain, even though they are published at the same astronomical time. Technically, even though they happened simultaneously according to the astronomical time, the red one will be earlier, which is compliant with the protocol.
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig05.jpg}
-%~ \caption{Mistiming of key publication}\label{chap1-fig05}
-%~ \end{figure}
+\subsubsection{Assumption of time inaccuracy}\label{subsubsec-4.3.b}
 
+\vspace{-.5cm}
+
+Inaccuracy may create some negative user experience. For instance, in green blockchain (see Figure.~\ref{chap1-fig05}), the miner finalizes the block with the timestamp that is 02:12 ahead of the current astronomical time. In red blockchain, the block is closed 19 seconds earlier astronomical time. If the same records are published there, they will be accepted only from the red blockchain, even though they are published at the same astronomical time. Technically, even though they happened simultaneously according to the astronomical time, the red one will be earlier, which is compliant with the protocol.
+\end{multicols}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.71]{src/Figures/chap1/chap1-fig05.jpg}
+\caption{Mistiming of key publication}\label{chap1-fig05}
+\end{figure}
+
+\begin{multicols}{2}
 \begin{quote}
 Three transactions happened simultaneously as per the astronomical time, at 1:30, but each network has time discrepancy; therefore, the red chain is taken first (19 seconds earlier)
 \end{quote}
@@ -514,13 +671,24 @@ Time inaccuracy is a natural limit that cannot be resolved in a cross-blockchain
 
 Therefore, it is proposed that time inaccuracy will be the assumption users must accept. Free market competition will demand blockchain communities to provide for better services and user experience. If the record is valuable, the user may wish to send the same key simultaneously for the registration in all blockchains of the bundle, thus competing with themselves. Once one transaction arrives first in one of the blockchains, the user may wish to transfer it to that blockchain where they want to manage it.
 
-\subsubsection{Orphan blocks}\label{subsubsec-4.3.3}
+\setcounter{secnumdepth}{5}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}
+
+\vspace{-.6cm}
+
+\subsubsection{Orphan blocks}\label{subsubsec-4.3.c}
+
+\vspace{-.4cm}
 
 The cross-blockchain protocol solves the problem of orphan blocks by pending a few blocks after the record was published. In general, this period is called “confirmations,” and it is specific for different consensus; for example, in Bitcoin, 6-blocks are the reasonable time that reduces the probability of the fork \cite{art1-key40}.
 
 Therefore, in the cross-blockchain system, each blockchain will have its own pending time, and the protocol is tasked to add records to the cross-blockchain database after this quarantine.
 
-\subsubsection{Hardforks}\label{subsubsec-4.3.4}
+\vspace{-.6cm}
+
+\subsubsection{Hardforks}\label{subsubsec-4.3.d}
+
+\vspace{-.4cm}
 
 Hardforks are different from just orphan blocks due to how they create two sustainable independent networks. One will be the majority, and users will typically see this branch of the network. If the minority is organized enough, they may establish a new network. Till the block of the hardfork, two networks have the same blockchain history. However, from the next block after the fork, all assets can be independently moved within the new blockchain, thereby creating a kind of double-spending.
 
@@ -535,7 +703,11 @@ To address this issue, let us define the scenarios of a hardfork.
 
 In both cases with flags, the system requires the user’s consent; otherwise, the protocol stops running the bundle in the user’s machine, thereby preventing the cross-blockchain database forking.
 
-\subsubsection{Retroactivity}\label{subsubsec-4.3.5}
+\vspace{-.5cm}
+
+\subsubsection{Retroactivity}\label{subsubsec-4.3.e}
+
+\vspace{-.3cm}
 
 Retroactivity can cause the reallocation of ownership of NVS records in the blockchain locally, as well as capturing records from other blockchains of the bundle.
 
@@ -568,22 +740,23 @@ Here is the solution.
 
 For instance, for Bitcoin, the norm will be to change up 6 blocks in depth. For each blockchain, this figure will vary. When the system detects an abnormal fork, it defines the depth of the fork by comparing two states of headers and marks the blockchain excluded from this block and continues indexing other ledgers of the bundle. When the attack is detected, it also recommended to backup the database. An automatic backup must happen when a new version with the chain of blocks deeper then $n$‑blocks appears in the node. As a result of this step, the running system will preserve the original state of the database and will detach the fault blockchain from the further indexing and will continue working.
 
-\item[(b)] To detect corruption when installing a new node/re-indexing, an approach of redundant copies can be used, similar to RAID massive, see Fig~\ref{chap1-fig06}. Existing methods for data storage among multiple drives are relevant to name-value storage. RAID has different methods. For example, in cross-blockchain protocol with RAID 1 \cite{art1-key41}, the user will store the name in two or more blockchains. If one blockchain is attacked, when re-indexing the system, the node will detect the collision at some block by analysis of RAID collisions.
+\item[(b)] To detect corruption when installing a new node/re-indexing, an approach of redundant copies can be used, similar to RAID massive, see Figure~\ref{chap1-fig06}. Existing methods for data storage among multiple drives are relevant to name-value storage. RAID has different methods. For example, in cross-blockchain protocol with RAID 1 \cite{art1-key41}, the user will store the name in two or more blockchains. If one blockchain is attacked, when re-indexing the system, the node will detect the collision at some block by analysis of RAID collisions.
 
 \item[(c)] The publication of a RAID record must contain the signatures of the [record\_key+challenge] from the parallel blockchain. The pointer to the highest block will help to detect the exact height of the blockchain attack. From this moment, the system will detach the blockchain from indexing, allowing the possibility to rescue records from the fault blockchain by a transfer to rest in the bundle.
 \end{itemize}
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig06.jpg}
-%~ \caption{RAID 1}\label{chap1-fig06}
-%~ \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=3]{src/Figures/chap1/chap1-fig06.jpg}
+\caption{RAID 1}\label{chap1-fig06}
+\end{figure}
+
 \begin{quote}
 Basic RAID 1 scheme with two storages where data is duplicated.
 \end{quote}
 
 Because the probability of a successful attack of two blockchains at the same time is significantly lower, RAID methods may create enough protection. The more redundancy, the lower are chances of the fault of the cross-blockchain database.
 
-\section{Evaluation of the invention or why does the cross-blockchain protocol suit governments?}\label{sec-5}
+\section{Evaluation of the invention or why does the cross-blockchain\\ protocol suit governments?}\label{sec-5}
 
 This section evaluates how the cross-blockchain protocol addresses the issues defined in Section 3 and corresponds with the initial goal to develop a system that suits government purposes, i.e., to run, for example, property registry using various public blockchains. It consists of two subsections: brief evaluation (\ref{subsec-5.1}) and extended discussion with scenarios (\ref{subsec-5.2}).
 
@@ -613,7 +786,10 @@ The cross-blockchain protocol addresses the problem of scalability and price vol
 
 \subsection{Why does the cross-blockchain protocol suit governments?}\label{subsec-5.2}
 
-\subsubsection{Hardforks}\label{subsubsec-5.2.1}
+\setcounter{secnumdepth}{5}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}
+
+\subsubsection{Hardforks}\label{subsubsec-5.2.a}
 
 Nowadays, the government plays the role of a keeper of property registries. In different countries, they may have different names and specializations (cadastre, land title registry, real estate registry, among others). Still, the purpose is the same: to provide certainty in property rights by tracking records of transactions (title deeds). Besides land titles, there are registries for movable properties (cars, boats, aircraft, etc.), shares, and other securities and corporate rights.
 
@@ -621,7 +797,9 @@ The use of any decentralized system, including the blockchain, was limited becau
 
 The cross-blockchain protocol addresses it with a free choice for users. The proposed protocol may support both blockchains after their fork. The same as Schrödinger’s cat, the record has a dual nature until the user chooses. Having two records is not a legal collision; it becomes so when the user performs two different transactions with the same record in different blockchains of the bundle. Therefore, the protocol ensures that a user’s choice is irrevocable. Once it is done, they will not be able to perform a conflicting transaction in the second blockchain. Therefore, hardfork is not a problem anymore.
 
-\subsubsection{}\label{subsubsec-5.2.2}
+\subsubsection{Immutability, trusted third parties and\\ governance}\label{subsubsec-5.2.b}
+
+\vspace{-.2cm}
 
 Blockchain immutability is considered as one of the major advantages of blockchain technology. The transaction records and inserted data are irrevocable and immutable. Since the blockchain was invented, the discussion of its use for state governance is opened, especially towards property registries.
 
@@ -629,24 +807,29 @@ In the previous subsections, we discussed the example when the key-value record 
 
 The record itself worth nothing unless there is a certainty that it has a legal connection with the real-world asset. With the cross-blockchain database, it is possible to create an ecosystem of trust, where records refer to other records certifying them.
 
-For example, Alice publishes her land title record. Bob, a town clerk, creates his record where he certifies that Alice’s record duly represents her land title (see Fig.~\ref{chap1-fig07}).
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig07.jpg}
-%~ \caption{Scheme of trust services}\label{chap1-fig07}
-%~ \end{figure}
+For example, Alice publishes her land title record. Bob, a town clerk, creates his record where he certifies that Alice’s record duly represents her land title (see Figure.~\ref{chap1-fig07}).
+\end{multicols}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{src/Figures/chap1/chap1-fig07.jpg}
+\caption{Scheme of trust services}\label{chap1-fig07}
+\end{figure}
+
+\begin{multicols}{2}
 \begin{quote}
 Alice included in Value the reference to Bob’s record with the key “TrustThisTitle” (read, any valid key). Bob’s record says that Alice’s record is valid. Alice used Redcoin, Bob - Greencoin. Because they are in the bundle, the system may resolve an inquiry on the validity of Alice’s token. It searches in the database the key [cadastral number], parses it to find a reference. When the reference [TrustThisTitle] is found, the system searches it as the key to the database entry. When [TrustThisTitle] entry is found, it parses its value to find the status “valid.” Because we trust Bob, he is our town clerk, we trust Alice’s record that represents her property right. Land title used here as an example. Any property rights and facts can be certified.
 \end{quote}
 
 To buy Alice’s land, Charles needs to acquire her record. Charles will enquire Alice’s record in the cross-blockchain database and will find in this record the reference to Bob’s record. The system will enquire Bob’s statement, which certifies Alice’s asset. Charles trusts Bob; hence, Charles can trust Alice’s record and make a title deed even without meeting her in person. The parties may do an atomic swap: Alice will send him the title record, and Charles will pay cryptocurrency in return.
 
-In this way, any real-world facts can be certified: immovable and movable property, digital identity, facts of life (birth, death, missing, etc.), contracts, for instance, acknowledgment by a notary public (for civil law countries), facts of some events (force majeure, etc.). See Fig.~\ref{chap1-fig08}.
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig08.jpg}
-%~ \caption{Map of trust records and trust providers}\label{chap1-fig08}
-%~ \end{figure}
+In this way, any real-world facts can be certified: immovable and movable property, digital identity, facts of life (birth, death, missing, etc.), contracts, for instance, acknowledgment by a notary public (for civil law countries), facts of some events (force majeure, etc.). See Figure.~\ref{chap1-fig08}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.35]{src/Figures/chap1/chap1-fig08.jpg}
+\caption{Map of trust records and trust providers}\label{chap1-fig08}
+\end{figure}
+
 \begin{quote}
 The map shows examples of how third parties in real-world cases certify identity, assets, contracts, and facts \& events: Identity by Certificate Authorities or Trust Service Providers (EU), by a notary public and different government agencies. Assets are verified by auditors, land and marine surveyors. Contracts can be certified by notaries, land title deeds by title companies. Facts and events by Dispache (a person who certifies claims, especially for marine insurance), by Chamber of Commerce and Industry the origin of products and force majore events, Commissioner for Affidavits certifies witnesses declarations and statements. 
 \end{quote}
@@ -667,12 +850,12 @@ To protect the private key from a theft, Alice will use a hardware wallet. For e
 
 The government may keep the “root” of trust, the record which is used to sign certificates of trusted third parties, also known as “Certificate Authorities” and more specifically for eIDAS “Trust Service Providers.”
 
-Such identity and trust services, even though they require third parties, are not necessarily highly centralized. Opposite to a single root record, there can be multiple roots and self-signed certificates of numerous third parties. Alice as an end-user decides whom she trusts creating her white list of credible entities, including government root, commercial providers, or even her circle, similar to the concept of “web-of-trust” \cite{art1-key44}: Alice trusts Bob, but does not know Charles, Bob trusts Charles, therefore, Alice trusts Charles. See Fig.~\ref{art1-key09}.
-%~ \begin{figure}[H]
-%~ \centering
-%~ \includegraphics[scale=1.15]{src/Figures/chap1/chap1-fig09.jpg}
-%~ \caption{Multiple TSP providers}\label{chap1-fig09}
-%~ \end{figure}
+Such identity and trust services, even though they require third parties, are not necessarily highly centralized. Opposite to a single root record, there can be multiple roots and self-signed certificates of numerous third parties. Alice as an end-user decides whom she trusts creating her white list of credible entities, including government root, commercial providers, or even her circle, similar to the concept of “web-of-trust” \cite{art1-key44}: Alice trusts Bob, but does not know Charles, Bob trusts Charles, therefore, Alice trusts Charles. See Figure.~\ref{chap1-fig09}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{src/Figures/chap1/chap1-fig09.jpg}
+\caption{Multiple TSP providers}\label{chap1-fig09}
+\end{figure}
 
 \begin{quote}
 In a decentralized trust scheme, Alice can create her list of trusted addresses that belong to the government, a commercial trust service provider and Bob (web-of-trust scheme). Because she trusts Bob and Bob certified Charles’s digital identity, Alice can trust Charles, even without knowing and meeting him personally.
@@ -703,11 +886,19 @@ If the root record is compromised, the cross-blockchain authority must reset the
 
 It is considered that in the future, direct e-voting on the blockchain with automatic implementation may also be designed to address the issue of decentralized governance in large-scaled online systems. The combination of these methods can make the system more sustainable.
 
+\vspace{-.1cm}
+
 Also, many other cases are possible in a “smart law.” For instance, Alice died, and Charles has the right to inherit her record. When Alice designed her “smart will,” she could not know which notary would fulfill her will, even if she specifies all licensed notaries in the country, by the time of her death, it might appear a notary cannot execute the smart will because the list is invalid anymore, for example, because of the root reset. Hence, none notary has access to trigger the “smart” inheritance.
+
+\vspace{-.1cm}
 
 In traditional “paper” bureaucracy, Charles will apply to any notary to issue a record of inheritance that grants him Alice’s title right; the only thing that matters here is that, by the time of application, he has to choose one of the existing authorized notaries. Even if Alice designed her will to perform execution automatically without any notary, this similar issue would still arise. Who will certify her death to trigger self-execution of the will?
 
+\vspace{-.1cm}
+
 Even if Alice assigns a redundant\footnote{Redundancy is not the best option. If too many people have access to her assets, it may decrease security.} list of trusted third parties that has such authorization, they may still have legal issues that will lead to the impossibility to run successfully without the violation of someone's rights. For example, if Alice leaves everything to Bob, Charles may appear and claim that his rights are violated. If the parties do not come to a mutual agreement in the dispute, Charles has the right to bring it to a court. How and who will enforce justice in such a system?
+
+\vspace{-.1cm}
 
 And, finally, if Alice did not leave any will, therefore, someone must apply general norms of inheritance law.
 
@@ -729,7 +920,14 @@ This kind of scenario requires a certain level of trusted third parties’ invol
 
 A purely voluntary model may not be scalable though; it will probably work in small communities. Therefore, to extend the system but not to jeopardize it by centralization, it is essential to adopt more structured forms of governance, including electronic voting on the blockchain. Let us leave this issue for further research and development since this was not the purpose of this research. Also, it is important to notice that forms of governance should be developed according to the political system where the cross-blockchain protocol is applied.
 
-\subsubsection{Market mechanism of free competition}\label{subsubsec-5.2.3}
+\setcounter{secnumdepth}{5}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\alph{subsubsection}}
+
+\vspace{-.4cm}
+
+\subsubsection{Market mechanism of free competition}\label{subsubsec-5.2.c}
+
+\vspace{-.3cm}
 
 The issue of scalability and price volatility are addressed by one mechanism. The cross-blockchain protocol is a mechanism that supports free-market competition, and this is the key answer.
 
@@ -749,7 +947,11 @@ For speculations, investors will be choosing those cryptocurrencies that are mor
 
 Therefore, the answer to which blockchain the government should choose is “none.” Instead, the government should support the cross-blockchain protocol that enables the unified ecosystem of blockchain technologies, and each user decides which technology to choose.
 
-\subsubsection{Privacy issues: where to store personal data?}\label{subsubsec-5.2.4}
+\vspace{-.6cm}
+
+\subsubsection{Privacy issues: where to store personal data?}\label{subsubsec-5.2.d}
+
+\vspace{-.2cm}
 
 The use of public blockchains raises questions about privacy. It is impossible to fully convert the cadastral register into an open database because it contains personal data. The blockchain cannot be used to publish any personal data in an open format.
 
@@ -763,11 +965,16 @@ It would be appropriate as an example to consider the project proposed by the de
 
 Incorrect design of the system leads to redundant disclosure of personal data. In many cases, both from a practical point of view and the point of view of the law, not all personal data of a person is required. Having personal data under control on the local user’s device, and cryptographic identifiers on-chain, the personal data is not disclosed. Still, only cryptographic evidence of the correctness/existence of the fact is presented. We leave this issue for further research and development.
 
+\vspace{.2cm}
 The largest companies and government agencies lose personal data from time to time. Storing data on centralized servers inevitably leads to leaks. For example, in September 2019, a database with the names, phone numbers and other information of about half a million Facebook accounts appeared on the Internet \cite{art1-key50}. Assuming that the data of active users \cite{art1-key51} is stolen (who needs to steal outdated accounts?), this means that the leak could touch 17\% accounts of the social network.
 
 The model in which users store their data locally, without transferring it to centralized databases, has the advantage that it is much more challenging to hack half a million devices than one server with half a million accounts.
 
-\subsubsection{Miscellaneous Scenarios}\label{subsubsec-5.2.4}
+\vspace{-.5cm}
+
+\subsubsection{Miscellaneous Scenarios}\label{subsubsec-5.2.e}
+
+\vspace{-.3cm}
 
 The cross-blockchain protocol is a flexible technology. There can be designed one single cross-blockchain protocol for general purposes. But also, possible to create various customized databases for different applications: decentralized DNS system, property registry, Public Key Infrastructure, etc. There also can be localized databases that are dedicated to a territory or community of its application.
 
@@ -800,6 +1007,8 @@ The patch in the cross-blockchain protocol aims to provide for nodes a command w
 Such filters, authorized addresses, algorithms, how they are introduced, run and updated, constitute the “smart law” of a cross-blockchain database. The smart law can work in a democratic and decentralized way by electronic voting on the blockchain, which is a matter of the political system where it is introduced.
 
 The protocol can be used to build a comprehensive database for any records, also for customized and localized databases for specific communities, countries, and so on.
+
+\vspace{-.4cm}
 
 \section*{Annex}
 
@@ -848,7 +1057,7 @@ Thanks to Oleg Khovayko (CTO Emercoin, U.S.) and Denis Dmitriev (CTO Emertech, H
 
 \textbf{Ethical approval:} This article does not contain any studies with human participants or animals performed by the author.
 
-\textbf{Informed consent:} No individual participants included in the study.
+\textbf{Informed consent:} No individual participants included in the study.\raisebox{-.1cm}{\includegraphics[scale=.9]{src/Figures/circledC.eps}}
 
 \begin{thebibliography}{99}
 \bibitem{art1-key01} Weber, M.: Bureaucracy. In: Waters, T. and Waters, D. (eds.) Weber’s Rationalism and Modern Society: New translations on Politics, Bureaucracy, and Social Stratification. pp. 73–128. Palgrave MacMillan (1922).
