@@ -1,0 +1,116 @@
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{rotating}
+\usepackage{xfrac}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{imakeidx}
+\usepackage[dvips,breaklinks]{hyperref}
+\usepackage{cite}
+
+\numberwithin{equation}{section}
+
+\allowdisplaybreaks
+
+\floatstyle{plain}
+%~ \floatplacement{Figure}{H}
+
+%%page settings for the book
+\usepackage[papersize={140mm,215mm},textwidth=100mm,
+textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
+leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
+\usepackage[justification=centering]{caption}
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[{\thepage}]{{\thepage}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+\def\Authorline#1{\hfill{{\Large\sl\bfseries -- \,#1}}}
+%\lhead[\small\thepage\quad #1]{}}
+%\def\authoraffiliation#1{{~\hfill\fontsize{11}{13}\selectfont #1}}
+
+
+
+%%general settings
+\pretolerance=9000
+\parindent=0pt
+\setlength{\parskip}{5pt}
+
+%%redefining macros
+\makeatletter
+
+\renewcommand\chaptermark[1]{\markboth{\thechapter. #1}{}}
+\renewcommand\sectionmark[1]{\markright{\thesection~ #1}}
+
+\renewcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{arabic}}
+\renewcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+}
+
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \huge\bfseries #1\par\nobreak
+    \vskip 20\p@
+  }}
+
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+                              
+
+\renewcommand\thesection{\@arabic\c@section}
+\renewcommand\thesubsubsection{\@arabic\c@subsubsection}
+\renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\renewcommand*\seealso[2]{(\emph{\alsoname} #1)}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\def\Break{\break }
+\def\passim#1{\textsl{passim}}
+
+\usepackage{caption}
+%\DeclareCaptionFormat{empty}{#1}
+\renewcommand*\figurename{Figure}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\bibname}{References}
+
+\DeclareMathOperator{\Iim}{\mathrm{Im}}
+
+
+%\makeatletter
+%\usepackage{etoolbox}
+%\newcounter{savedchapter}% for remembering the last chapter number
+%\preto\appendix{\setcounter{savedchapter}{\arabic{chapter}}}% remembering!
+%\newcommand\resumechapters{% the \appendix command with some tweaks
+%  \setcounter{chapter}{\arabic{savedchapter}}% restore chapter number
+%  \setcounter{section}{0}% reset section counter
+%  \gdef\@chapapp{\chaptername}% reset chapter name
+%  \gdef\thechapter{\@arabic\c@chapter}% make chapter numbers arabic
+%}
+%\makeatother
