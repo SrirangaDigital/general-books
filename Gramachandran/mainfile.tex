@@ -1,0 +1,29 @@
+\documentclass[10pt,twoside,openany]{book}
+
+\usepackage{rotating}
+\usepackage{hyperref}
+\input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\lhead[\small\thepage]{}
+\rhead[]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+\newpage
+
+\mainmatter
+
+
+\newpage
+%\rhead[]{\small\thechapter. The Music of Muttusvāmi Dīkṣita – ...\quad\small\thepage}
+\input src/chapter1
+
+\end{document}
