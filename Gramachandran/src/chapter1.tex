@@ -128,8 +128,156 @@ If $|0\rangle$ is the Fock vacuum, we have, as can be checked,
 
 Now if $F$ is a linear functional on test functions, we can twist $\omega_{0}$ to a new state $\omega_{F}$:
 \begin{equation}
-\omega_{F}(W(f))=\omega_{0}(W(f))e^{i \Iim F(f)}.\label{chap1-eq2.20}
+\omega_{F}(W(f))=\omega_{0}(W(f))e^{i \Iim F(f)}.\label{chap1-eq2.20} 
 \end{equation}
+Suppose we can write
+\begin{equation}
+F(f) = \langle\eta, f\rangle, \qquad \eta \in \mathcal{H} \label{chap1-eq2.21}
+\end{equation}
+Then, by Schwarz inequality,
+\begin{equation}
+|| F(f) || \leq ||\eta || ~ || f ||.\label{chap1-eq2.22}
+\end{equation}
+Conversely, by the Riesez-Frechet theorem \cite{key9}, we can write $F(f)= \langle \eta, f\rangle$ for $\eta \in \mathcal{H}$ iff
+\begin{equation}
+|| F(f) || < c || f||, \qquad c= \text{constant}. \label{chap1-eq2.23}
+\end{equation}
+
+Now if there is such an $\eta$, we can check that
+\begin{equation}
+\omega_F (W (f))= \langle 0| W (\Iim \eta)^\dagger W (f)W (\Iim \eta)|\rangle. \label{chap1-eq2-24}
+\end{equation}
+Since $W(\Iim \eta | 0 \rangle)$ is in the Fock space, the GNS representation from $\omega_F$ is unitarily equivalent to the one from $\omega_0$.
+
+Any smooth $\xi \in \mathcal{C}^\infty$ which is not in $\mathcal{H}$ also gives an $F$:
+\begin{equation}
+  F(f)= (\xi, f), \label{chap1-eq2.25}
+\end{equation}
+since $f$ is a test function and hence compactly supported. In this case,
+\begin{equation}
+\omega_F (W(f))= \langle 0| W (\Iim \xi)^\dagger W (f)W (\Iim \xi)|0\rangle, \label{chap1-eq2.26}
+\end{equation}
+but $W (\Iim \xi)|0 \rangle$ is not in the fock space. So the representation of $\mathcal{W}$ built on $W (\Iim \xi)|0 \rangle$ is not unitarily equivalent to the Fock representation.
+
+Thise considerations can be adapted to QED. Let $\alpha_\mu$ be the test function for the potential in the Lorentz gauge $\partial^\mu \alpha_\mu =0$. If
+\begin{equation}
+f_{\mu \nu} (\alpha) = \partial_{\mu} \alpha_{\nu}- \partial_\nu \alpha_\mu, \label{chap1-eq-2.27}
+\end{equation}
+the symplectic form (modulo the kernel) is $\sigma:$
+\begin{equation}
+  \sigma (\alpha_1, \alpha_2) = i \int d^4 x d^4 y \alpha^\mu_1 (x) D (x-y) \alpha_{2 \mu} (y). \label{chap1-eq2.28}
+\end{equation}
+It depends only on $f_{i, \mu \nu}= \partial_\mu \alpha_{i \nu}- \partial_\nu \alpha_{i, \mu}$, as it is gauge invariant: $\sigma(\alpha_1, \alpha_2)$ remains invariant under $\alpha_\mu \to \alpha_\mu + \partial_{\mu} \eta$. Thus, the Weyl algebra is defined by
+\begin{equation}
+W (\alpha_1) W (\alpha_2)= W ((\alpha_1 + \alpha_2)) e^{\frac{i}{2} \sigma(\alpha_1, \alpha_2)}. \label{chap1-eq2.29}
+\end{equation}
+With
+\begin{align}
+  &\tilde{\alpha_\mu} (k) = \int d^4 x \alpha_\mu (x)e^{ik\cdot x}, \qquad k_0 = |\overrightarrow{k}|,\label{chap1-eq2.30}\\
+  &\Longrightarrow k^{\mu} \tilde{\alpha_\mu} (k)=0,\label{chap1-eq2.31}
+\end{align}
+We introduce the scalar product
+\begin{equation}
+(\alpha_1, \alpha_2)= \frac{1}{(2\pi)^3} \int \frac{d^3 k}{2|\overrightarrow{k}|} \sum^3_{i=1} (\overline{\tilde{\alpha}}_{1, i} -  \frac{k_i}{k_0} \overline{\tilde{\alpha}}_{1, 0}) (\tilde{\alpha}_{2, i}- \frac{k_i}{k_0} \tilde{\alpha}_{2, 0})(k) \label{chap1-eq2.32}
+\end{equation}
+We can then adapt the scalar field considerations to the electromagnetic field.
+
+The choice
+\begin{equation}
+F(\alpha) = (\omega, \alpha) \label{chap1-eq2.33}
+\end{equation}
+when $\omega$ is given by \eqref{chap1-eq2.6} leada to the vertex operator in \eqref{chap1-eq2.2}.
+
+We note that
+\begin{equation}
+F(\alpha) = \int dx dy {J}^\mu (x) {D}(x-y) \alpha_\mu (y) \label{chap1-eq2.34}
+\end{equation}
+if the $\tau$ integration in ${J}_\mu$ is restricted to $\tau \leq 0$ and the Lorentz gauge is changed to the Coulomb gauge. See Appendix.
+
+\section{The Case of QCD}\label{chap1-sec3}
+
+By the axioms of QFT \cite{key9}, observables are local. They generate the algebra $\mathcal{A}$ of local observables.
+
+The group $SU(3)$ of QCD commutes with all elements of $\mathcal{A}$, just as the $U(1)$ of charge commutes with all elements of  $\mathcal{A}$. But $SU(3)$ unlike $U(1)$ is non-abelian. For this reason, we argued \cite{key1, key4} that $SU(3)$ is spontaneously broken.
+
+Our arguments were as follows. If $\mathbb{C}SU(3)$ is the group algebra of $SU(3)$, $\mathbb{C}SU(3)$ also commutes with $\mathcal{A}$. A maximal abelian subalgebra of $\mathbb{C}SU(3)$ is spanned by the complete commuting set (CCS) $c_2, c_3, \hat{\lambda}_3 \hat{\lambda}_8$ where $c_2, c_3$ are the quadratic and cubic Casimir operators and $\hat{\lambda}_3 \hat{\lambda}_8$ are the operators which represent the $\hat{\lambda}_3 \hat{\lambda}_8$ of the Gell-Mann matrices on the Hilbert space. In any IRR of $\mathcal{A}$, we can diagonalise the CCS. The basis vectors in this IRR can be written as
+\begin{equation}
+  |c_2, c_3, i_3, y;\cdot \rangle,\label{chap1-eq3.1}
+\end{equation}
+where $c_2, c_3, i_3, y$ are the eigenvalues of $c_2, c_3, \hat{\lambda}_3 \hat{\lambda}_8$. No observable can affect them. They label a superselection sector.
+
+But in a coloured representation $(c_2, c_3 ~\text{or both}~\neq 0)$, a generic $SU(3)$ transformation will change $i_3, y$. That is, it will change the superselection sector. Hence, such an $SU(3)$ transformation is spontaneously broken.
+
+We have analysed a similar situation which occurs for the ethylene molecule \cite{key10}. The gauge group there is $D^\ast_8$, the binary dihedrall group isomorphic to the group
+\begin{equation}
+\left\{ \pm \mathbb{I}_{2 \times 2}, \pm i \tau_j :\quad j=1, 2, 3, \quad \tau_j = \text{Pauli matrices}\right\}.\label{chap1-eq3.2}
+\end{equation}
+This is non-abelian. Its two-dimensional representation is relevant for certain confirmations of the molecule. We proved explicitly that its maximal abelian subgroup, say
+\begin{equation}
+H = \left\{ \pm \mathbb{I}_{2 \times 2}, \pm  i \tau_3\right\}\label{chap1-eq3.3}
+\end{equation}
+is diagonal in an IRR of the molecule: no observable changes the eigenvalues of elements of $H$.
+
+A consequence of the above observation is that coloured states, such as
+\begin{equation}
+|c_2, c_3, i_3, y; \cdot \rangle ~ \langle c_2, c_3, i_3, y; \cdot | \label{chap1-eq3.4}
+\end{equation}
+for $c_2, c_3$ or both $\neq 0$, are \textit{mixed} \cite{key4}. That has consequence for colour confinement \cite{key4}.
+
+In what follows, we give another argument to show that the $SU(3)$ of colour is spontaneously broken. It uses the infrared cloud in QCD which dresses the coloured particle. An extra result we find is that Lorentz invariance is broken in QCD too.
+
+We approach this problem as in the QED case. The charged particle in QED gets dressed by the infrared radiation and becomes the in and out state. The latter is not in the Fock space and breaks Lorentz invariance.
+
+In a similar manner, we can expect novel physical consequences from the gluon radiation of Yang-Mills particles such as quarks.
+
+The dynamics of Yang-Mills gluous is non-linear. Hence, gluous can also radiate gluons. We do not treat this radiation. Perhaps by using a null four vector for $dz_\mu (\tau)/\tau$ in what follows we can get an adequate description of infra-gluon radiation buy gluons.
+
+Nor do we treat effects of confinement.
+
+The electric charge $e$ is replaced by an ``internal'' vector of operators $\hat{\lambda}= (\hat{\lambda}_\alpha, \alpha = 1, 2, \ldots , 8)$ for a Yang-Mills or Wong \cite{key11} particle. (We absorb the Yand-Mills coupling constant in the gluon field.) The operators $\hat{\lambda}$ are $SU(3)$ Lie algebra valued with the standard commutators
+\begin{equation}
+\left[ \hat{\lambda}_\alpha \hat{\lambda}_\beta \right] = if_{\alpha \beta} {}^\gamma \hat{\lambda}_\gamma. \label{chap1-eq3.5}
+\end{equation}
+Their representation on the quantum Hilbert space identifies the particle as a quark, a di-quark, etc.
+
+The quantum Yang-Mills current is
+\begin{equation}
+J_\mu^\alpha (x) = \int d \tau \delta^4 (x -z) (\tau) \hat{\lambda} {}^\alpha (\tau) \frac{dz_\mu (\tau)}{d \tau}. \label{chap1-eq3.6}
+\end{equation}
+The vector $\hat{\lambda} (\tau)$ can change with $\tau$, fulfilling \eqref{chap1-eq3.5}.
+
+There is a consistency condition on $J_\mu$: it must be covariantly constant. Thus the field equation gives
+\begin{equation}
+D^\mu F_{\mu \nu} = J_\nu, \qquad F= \text{curvature of the gluon connection}~ A. \label{chap1-eq3-7}
+\end{equation}
+where
+\begin{equation}
+D^\mu D^\nu F_{\mu \nu}=0 \label{chap1-eq3.8}
+\end{equation}
+as an indentity. Hence,
+\begin{equation}
+D^\mu J_\mu =0 \label{chap1-eq3.9}
+\end{equation}
+or
+\begin{equation}
+D_\tau \hat{\lambda} (\tau) \equiv \partial_\tau \hat{\lambda} (\tau) + i \frac{dz^\mu(\tau)}{d \tau} \left[A_\mu (z(\tau)), \hat{\lambda}(\tau)\right] =0. \label{chap1-eq3.10}
+\end{equation}
+Thus if
+\begin{align}
+  & g(\tau) = P \exp \left(-i \int^\tau_0 d \tau' \frac{dz^\mu(\tau')}{d \tau'} A_\mu (z(\tau')) \right), \label{chap1-eq3.11}\\
+  & \Longrightarrow [\partial_\tau +i A_\tau (z(\tau))] g (\tau)=0, \label{chap1-eq3.12}
+\end{align}
+then
+\begin{equation}
+\hat{\lambda} (\tau) = g (\tau) \hat{\lambda} (0) g (\tau)^{-1}. \label{chap1-eq3.13}
+\end{equation}
+This equation determines the evolution of $\hat{\lambda}$ with $\tau$. Since $g(\tau) \in SU(3)$, this is by a gauge transformation.
+
+Because of \eqref{chap1-eq3.13}, the $\tau$-evolution of $J$ does not mix different IRR's of $\hat{\lambda}$ and commutes with the Casimir invariants. We therefore assume that $\hat{\lambda}$ belongs to a fixed IRR of \underline{$SU(3)$} (the underline denoting Lie algebra).
+
+The Wong equations have a Lagrangian description found by us long ago \cite{key12}.
+
+\subsection{The Gauge Choice}\label{chap1-sec3.1}
 
 \begin{thebibliography}{99}
 \bibitem{key1} A. P. Balachandran and S. Vaidya, \textit{Spontaneous Lorentz Violation in Gauge Theories}, Eur. Phys. J. Plus \textbf{128}, 118 (2013) [arXiv:1302.3406 [hep-th]]. 
@@ -149,4 +297,8 @@ A. M. Polyakov, Zh. Eksp. Teor. Fiz. Pis'ma. Red. \textbf{20}, 430 (1974) [JETP 
 \bibitem{key8} M. E. Peshkin and D. V. Schr\"oeder, \textit{An Introduction To Quantum Field Theory (Frontiers in Physics)}, Perseus Books, Reading, Massachusetts (1995).
 \bibitem{key9} F. Riesz and B. S. Nagy, \textit{Functional Analysis}, Dover Books on Mathematics, Reprint Edition (1956).
 \bibitem{key10} A. P. Balachandran, A. R. de Queiroz and S. Vaidya, \textit{Quantum Entropic Ambiguities: Ethylene}, Phys. Rev. D \textbf{88}, no. 2, 025001 (2013) [arXiv:1302.4924 [hep-th]].
+\bibitem{key11} S. K. Wong \textit{Field and particle equations for the classical Yang-Mills field and particles with isotopic spin}, Nuove Cimento A \textbf{65}, 689-694 (1970).
+\bibitem{key12} A. P. Balachandran, S. Borchardt and A. Stern, \textit{Lagrangian and Hamiltonian Descriptions of Yang-Mills Particles}, Phys. rev. D \textbf{17}, 3247 (1978);
+\bibitem{key13} A. P. Balachandran, S. Vaidya and A. R. de Queiroz, \textit{A Matrix Model for QCD}, Mod. Phys. Lett. A \textbf{30}, no. 16, 1550080 (2015) [arXiv:1412.7900 [hep-th]];
+\bibitem{key14} K. E. Eriksson, \textit{Asymptotic states in quantum electrodynamics}, Phys. Scripta \textbf{1}, e (1970). doi:10.1088/0031-8949/1/1/001
 \end{thebibliography}
