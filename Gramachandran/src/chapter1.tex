@@ -178,7 +178,7 @@ With
 \end{align}
 We introduce the scalar product
 \begin{equation}
-(\alpha_1, \alpha_2)= \frac{1}{(2\pi)^3} \int \frac{d^3 k}{2|\overrightarrow{k}|} \sum^3_{i=1} (\overline{\tilde{\alpha}}_{1, i} -  \frac{k_i}{k_0} \overline{\tilde{\alpha}}_{1, 0}) (\tilde{\alpha}_{2, i}- \frac{k_i}{k_0} \tilde{\alpha}_{2, 0})(k) \label{chap1-eq2.32}
+(\alpha_1, \alpha_2)= \frac{1}{(2\pi)^3} \int \frac{d^3 k}{2|\overrightarrow{k}|} \sum^3_{i=1} \left(\overline{\tilde{\alpha}}_{1, i} -  \frac{k_i}{k_0} \overline{\tilde{\alpha}}_{1, 0}\right) (\tilde{\alpha}_{2, i}- \frac{k_i}{k_0} \tilde{\alpha}_{2, 0})(k) \label{chap1-eq2.32}
 \end{equation}
 We can then adapt the scalar field considerations to the electromagnetic field.
 
@@ -248,7 +248,7 @@ The vector $\hat{\lambda} (\tau)$ can change with $\tau$, fulfilling \eqref{chap
 
 There is a consistency condition on $J_\mu$: it must be covariantly constant. Thus the field equation gives
 \begin{equation}
-D^\mu F_{\mu \nu} = J_\nu, \qquad F= \text{curvature of the gluon connection}~ A. \label{chap1-eq3-7}
+D^\mu F_{\mu \nu} = J_\nu, \qquad F= \text{curvature of the gluon connection}~ A. \label{chap1-eq3.7}
 \end{equation}
 where
 \begin{equation}
@@ -278,6 +278,195 @@ Because of \eqref{chap1-eq3.13}, the $\tau$-evolution of $J$ does not mix differ
 The Wong equations have a Lagrangian description found by us long ago \cite{key12}.
 
 \subsection{The Gauge Choice}\label{chap1-sec3.1}
+
+Let $K$ be a fixed element of \underline{$SU(3)$} which is in the orbit of $\hat{\lambda}(0)$. Then we can find $h (\tau) \in SU(3)$ such that
+\begin{equation}
+  K= h (\tau) \hat{\lambda} (\tau) h(\tau)^{-1}.\label{chap1-eq3.14}
+\end{equation}
+That is because the $\tau$-evolution \eqref{chap1-eq3.13} is by gauge transformation.
+
+Let us assume that $K$ is a ``generic'' element of \underline{$SU(3)$}, so that its stability group $[U(1) \times U (1)]$ is abelian. (We comment on-abelian stability groups below.) In that case,
+\begin{equation}
+A_\tau [z(\tau)]: = \frac{dz^\mu(\tau)}{d\tau} A_\mu [z(\tau)] \in \underline{U(1) \times U(1)}.\label{chap1-eq3.15}
+\end{equation}
+That is because $A_\tau [z(\tau)]$ commutes with $K$ by \eqref{chap1-eq3.10}.
+
+The current is now abelian, in the direction $K$:
+\begin{equation}
+J^\mu (x) = K \int d \tau \delta^4 [x-z(\tau)] \frac{dz^\mu(\tau)}{d\tau}. \label{chap1-eq3.16}
+\end{equation}
+
+We must now solve \eqref{chap1-eq3.7} for the emitted radiation at low frequencies by this current. That can be done as in Peshkin and Schr\"oeder \cite{key8}, by setting
+\begin{equation}
+A_\mu = a_\mu K + b_\mu L, \label{chap1-eq3.17}
+\end{equation}
+where $Tr (KL)=0, K, L$ are the basis of the two \underline{$U(1)$}'s and commute, and $a_\mu(x)$, $b_\mu(x)\in \mathbb{R}$. Then, from \eqref{chap1-eq3.7},
+\begin{equation}
+\partial^\mu (\partial_\mu a \nu - \partial_\nu a_\mu) K = J^\mu, \label{chap1-eq3.18}
+\end{equation}
+whereas $b$ has no source.
+
+This equation for $a$ can be treated exactly in QCD. the particle state vectors have eigenvalues $k_i$ of $K$. so the radiation is $k_i \omega_\mu$ for a fixed $k_j$ and its dressed in state is
+\begin{equation}
+|\text{in}, \omega, \ldots \rangle = e^{kj \int d^3 x (Tr\lambda_K[A_i^- (x) \omega_i^+ (x)- a_i^+ (x) \omega_i^-(x)])} | P; k_j \rangle |0\rangle_\gamma, \label{chap1-eq3.19} 
+\end{equation}
+where $\lambda_K = K / \sqrt{TrK^2}, |0\rangle_\gamma$ is the gluon Fock vacuum and $|P; k_j \rangle$ is the particle vacuum with eigenvalue $k_j$ for $K$.
+
+In \cite{key4}, we have shown how the twist of the in state vector in \eqref{chap1-eq3.19} can be absorbed as an instanton-like term in the action.
+
+\subsection{Lorentz Invariance}\label{chap1-sec3.2}
+
+Just as in QED, Lorentz invariance is spontaneously broken in QCD. The proof follows from \eqref{chap1-eq3.19} as in QED.
+
+\section{QCD Breaks Colour}\label{chap1-sec4}
+
+The considerations leading to the gauge choice $K$ imply that the test functions $\alpha$ are proportional to $K: \alpha = K \beta$, where $\beta$ are real-valued. The linear functional $F$ in \eqref{chap1-eq2.34} now involves a trace over the Lie algebra elements. Correspondingly, there is now a trace in \eqref{chap1-eq2.34}. Also, the electric charge $q_n$ is replaced by $k_j$.
+
+Now $K$ has in general manuy eigenvalues and we can transform one eigenvalue $k_j$ to another, $k_l$, by conjugating $K$ by a suitable $SU(3)$ element. Consider the case where $k_j \neq k_l$. The change in $F(\alpha)$ is then by
+\begin{equation}
+(\zeta, \alpha) \label{chap1-eq4.1}
+\end{equation}
+where
+\begin{equation}
+  \zeta^\mu = (k_l - k_j) \int_{\tau \leq 0} d^4 y d\tau \delta^4 (y -z(\tau)) \frac{dz^\mu}{d \tau} D (y-x). \label{chap1-eq4.2}
+\end{equation}
+But $\zeta$ is not square integrable and $(\zeta, f)$ does not fulfill the bound $|(\zeta, f)|\leq c || f ||$, with $c=$ constant. Thus by the theorem in \cite{key6}, this transformation cannot be unitarily implemented. Thus the gauge transformation on $K$ which changes its eigenvalue from $k_j$ to $k_l$ cannot be unitarily implemented. That is, $SU(3)$ is spontaneously broken.
+
+The change from $k_j$ to $k_l \neq k_j$ is very much like changing the charge in QED from $q_n$ to $q_m \neq q_n$. We see that just as in the QED case, such a change is not unitarily implementable.
+
+\textit{Remarks on phenomenogy:} After the gauge choice which leads to \eqref{chap1-eq3.19}, the vertex operator there is as in QED \cite{key4}, with $k_j$ replacing the total electric charge. Therefore, we can twist the mass term of coloured particles as in that paper. In QCD as well, that explicitly realises the known QED results \cite{key2, key3} about the mass and spin shells of particles not being sharp. It also gives simple models for phenomenolgy and shows, for example, that life times and decays of coloured particles are frame dependent.
+
+\subsection{The Case where $K$ is Non-Generic}\label{chap1-sec4.1}
+
+In this case, $K$ is parallel to $\hat{\lambda}_8$ and its stability group is non-abelian, being $s(U(2) \times U(1))$, which is isomorphic to $U(2)$. Its Lie algebra is the direct sum of those of $SU(2)$ and $U(1)$, where the latter has $\lambda_8$ as a basis. Also, \underline{$U(1)$} commutes with \underline{$SU(2)$}. The generators of \underline{$SU(2)$} and \underline{$U(1)$} are trace orthogonal while the current $J_\mu$ has only the \underline{$U(1)$} or $\lambda_8$ component. Thus the current is non-zero only for the abelian component $\lambda_8$ of $A_\tau(z (\tau))$. The \underline{$SU(1)$} part of $A_\tau (z(\tau))$ decouples from this \underline{$U(1)$} part. So the \underline{$U(1)$} part can be treated as before, with similar conclusions.
+
+\noindent \textbf{\large Acknowledgements}
+\medskip
+
+The original claim that non-abelian superselection rules are spontaneously broken is contained in the paper with Vaidya \cite{key1}. In papers with Queiroz and Baidya \cite{key10, key13}, The related result was shown that coloured states are mixed and hence cannot be produced from colour singlets. The work on Lorentz symmetry breaking was done with K\"urk\c{c}\"{u}o\u{g}lu, Queiroz and Vaidya \cite{key4}. I am grateful to all these colleagues and to Kumar Gupta for valuable inputs. I bery much appreciate the invaluable help I received from Nirmalendu Acharyya and Ver\'onica Errasti D\'iez in preparing the paper. Vero was especially helpful, carefully reading the paper and suggesting improvements. I also thank Andr\'es Reyes at the Universidad de Los Andes for hosting me as the Sanford Professor and for warm hospitality while this work was being completed.
+
+\medskip
+\noindent \textbf{\large A Apprndix: Derivation of \eqref{chap1-eq2.2}}
+\medskip
+
+This appendix gives a derivation of equation \eqref{chap1-eq2.2}. It is not new and its variations may be found in several papers (cf. \cite{key3, key6, key14}). We describe it here to help the reader.
+
+Equation \eqref{chap1-eq2.2} shows the in-state of the charged particle of momentum $P$ and charge $q_n$ after it is dressed by the cloud of infrared photons. If there are several particles with total momentum $P$ and charge $q_n$, we can approximate them by a single particle of momentum $P$ and charge $q_n$ as explained by previous works.
+
+We start with non-interacting charges and photons, the latter being in their vacuum state:
+\begin{align*}
+  |n, P, \cdots \rangle \otimes | 0 \rangle_\gamma. \label{chap1-eqA.1}\tag{A.1}
+\end{align*}
+Here $|0 \rangle_\gamma$ is the photon vacuum and $n$ as before denotes charge $q_n$. Let $H_0$ be the Hamiltonian associated with \eqref{chap1-eqA.1}
+
+The current $j^\mu$ of the charged particle can be approximated by that of a particle moving with charge $q_n$ and constant velocity $\dfrac{P^\mu}{(P\cdot P)^{\frac{1}{2}}}: = \dfrac{P^\mu}{M}$. It radiates photons of various momenta, but since we are interested in the infrared limit where they approach zero, we van assume that $\dfrac{P^\mu}{M}$ is constant.
+
+The current $J^\mu$ is thus
+\begin{align*}
+  J^\mu (x) & = q_n \int^\infty_{-\infty} d \tau \delta^4 (x- z (\tau)) \frac{dz^\mu(\tau)}{d\tau}\\
+  & = \infty^\infty_{-\infty} d \tau \delta^4 \left(x- \tau \frac{P}{M}\right) \frac{P^\mu}{M}\label{chap1-eqA.2}\tag{A.2}
+\end{align*}
+where for the charged particle tragectory $z(\tau)$, we assume that
+\begin{equation*}
+z^\mu (\tau) = \tau \frac{P^\mu}{M}. \label{chap1-eqA.3}\tag{A.3}
+\end{equation*}
+
+The interaction of $A_\mu$ with $J^\mu$ is described by the interaction Hamiltonian
+\begin{align*}
+  H_I(t) & = q_n \int d^3 x a_\mu (x) \int d \tau \frac{P^\mu}{M} \delta^4 \left( x- \tau \frac{P}{M} \right) \label{chap1-eqA.4}\tag{A.4}\\
+  & = q_n \left( \frac{P^\mu}{P_0}\right) A_\mu \left( x_0 \frac{P}{P^0}\right), \quad t= x_0 \label{chap1-eqA.5}\tag{A.5}
+\end{align*}
+
+The in-state associated with \eqref{chap1-eqA.1} is obtained by applying the M\o{}ller operator
+\begin{equation*}
+\Omega = \lim\limits_{t \to -\infty} e^{iHt}e^{-iH_0t}\equiv \lim\limits_{t \to -\infty} U(t)\label{chap1-eqA.6}\tag{A.6}
+\end{equation*}
+to \eqref{chap1-eqA.1}. It is \eqref{chap1-eq2.2} where $\omega$ will make its appearance below. Thus
+\begin{align*}
+  | n, P, \omega, \cdots \rangle & = \Omega | n, P, \cdots \rangle \otimes | 0 \rangle_\gamma\\
+  & \equiv \Omega|n, P, 0, \cdots \rangle \otimes |0 \rangle_\gamma \label{chap1-eqA.7}\tag{A.7}
+\end{align*}
+
+Now
+\begin{align*}
+  i \frac{dU(t)}{dt} & = -U (t) \hat{H}_I(t)\\
+  \hat{H}_I (t) & = e^{iH_0t} H_I (t) e^{-iH_0t}, \label{chap1-eqA.8}\tag{A.8}
+\end{align*}
+$\hat{H}_I(t)$ being the interaction Hamiltonian in the interaction representation.
+
+Thus,
+\begin{equation*}
+U(t)= T\exp \left[-i \int^0_t dt' \hat{H}_I (t') \right]\label{chap1-eqA.9}\tag{A.9}
+\end{equation*}
+If $\hat{A}_\mu$ is the vector potential in interaction representation, we can also write \eqref{chap1-eqA.9} as a $T$-ordered Dirac-Wilson line integral
+\begin{equation*}
+U(t) = T \exp \left[-i \int^0_t dz^\mu (x_0) A_\mu  \left( x_0 \frac{P}{M}\right)\right]. \label{chap1-eqA.10}\tag{A.10}
+\end{equation*}
+
+Since
+\begin{equation*}
+  [[\hat{H}_I (t), \hat{H}_I(t')], \hat{H}_I (t'')]=0 \label{chap1-eqA.11}\tag{A.11}
+\end{equation*}
+it is known that \cite{key14}
+\begin{equation*}
+U(t) = \exp \left[ -i \int^0_t dt' \hat{H}_I (t')\right] \times u(t) \label{chap1-eqA.12}\tag{A.12}
+\end{equation*}
+where $u(t)$ is a (time- and $P$-dependent) phase commuting with all operators of the electromagnetic field. It does not affect us. Hence we can drop it form $\Omega$ and write
+\begin{align*}
+  \Omega & = \exp \left[-i \int^0_{-\infty} dt' \hat{H}_I (t') \right] \label{chap1-eqA.13}\tag{A.13}\\
+  & = \exp \left[ -iq_n \int^0_{-\infty} dz^\mu (x_0) a_\mu \left( x_0 \frac{P}{M}\right)\right] \label{chap1-eqA.14}\tag{A.14}
+\end{align*}
+
+Let
+\begin{equation*}
+  A_\mu^+ (x) = \int \frac{d^3k}{\sqrt{2k}} \frac{1}{(2\pi)^3}a_\mu^+ (k)e^{ik\cdot x}, \qquad k \cdot x = k_0 x_0- \vec{k} \cdot \vec{x} \label{chap1-eqA.15}\tag{A.15}
+\end{equation*}
+denote the positive frequency part of $A_\mu(x)$ and let
+\begin{equation*}
+A_\mu^- (x) = (a_\mu^+ (x))^\dagger, \qquad a_\mu^- (k) = (a_\mu^+ (k))^\dagger. \label{chap1-eqA.16}\tag{A.16}
+\end{equation*}
+
+Then
+\begin{align*}
+  q_n \int^0_{-\infty} dx_0 \frac{P^\mu}{P^0} A_\mu \left( \frac{P}{P^0}\right) & = -i \int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} a_\mu^+ (k) \tilde{\omega}^{\mu -} (k)\\
+  & \qquad + i \int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} a_\mu^- (k) \tilde{\omega}^{\mu +}(k), \label{chap1-eqA.17}\tag{A.17}\\
+  \tilde{\omega}^{\mu +} (k) & = \frac{q_n P^\mu}{k \cdot P + i\epsilon} = \bar{\tilde{\omega}}^{\mu +} (k) \label{chap1-eqA.18}\tag{A.18}
+\end{align*}
+where $\epsilon$ as usual decreases to zero when all calculations are done.
+
+Thus we get
+\begin{equation*}
+\Omega = \exp - \left\{ \int \frac{d^3 k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} \left[a_\mu^+ (k) \tilde{\omega}^{\mu -} (k) - a_\mu^- (k) \tilde{\omega}^{\mu + (k)} \right]\right\}. \label{chap1-eqA.19}\tag{A.19}
+\end{equation*}
+
+The gauge choice in \eqref{chap1-eqA.19} is Lorentz: $k^\mu a_\mu^+ (k) =0$. so we can replace $a_\mu^{\pm} (k)$ by
+\begin{equation*}
+{a_\mu^{\pm}}' (k) = a_\mu^{\pm} (k) - \frac{k_\mu}{k_0} a_0^\pm (k) \label{chap1-eqA.20}\tag{A.20}
+\end{equation*}
+which is in the Coulomb gauge:
+\begin{equation*}
+  {a_0^{+}}' (k) =0, \qquad k_i {a_i^\pm} ' (k) =0. \label{chap1-eqA.21}\tag{A.21}
+\end{equation*}
+
+Hence
+\begin{equation*}
+a_\mu^{\mp} (k) \tilde{\omega}^{\mu \pm} \to {a_i^{\mp}}' (k) \tilde{\omega}^{i \pm}. \label{chap1-eqA.22}\tag{A.22}
+\end{equation*}
+Since ${a_i^{\pm}}'$ are transverse by \eqref{chap1-eqA.21}, we can now change $\tilde{\omega}^{i \pm }$ to
+\begin{equation*}
+\hat{\omega}^{i \pm} (k) = \tilde{\omega}^{i \pm} (k) - k^i \hat{k}^i \cdot \tilde{\omega}^{i \pm}(k). \label{chap1-eqA.23}\tag{A.23}
+\end{equation*}
+
+On fourier transforming
+\begin{equation*}
+\int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} \left[ {a_\mu^-}' (k) \hat{\omega}^{\mu +} (k) - {a_\mu^+}' (k) \hat{\omega}^{\mu -} (k)\right]' (k) e^{ik \cdot x} \label{chap1-eqA.24}\tag{A.24}
+\end{equation*}
+and calling
+\begin{equation*}
+\int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} \left[ {a_\mu^+}' (k) e^{ik \cdot x} + {a_\mu^-}' (k) e^{-i k \cdot x}\right] \label{chap1-eqA.25}\tag{A.25}
+\end{equation*}
+as $A_i (x)$ (with no prime), we get \eqref{chap1-eq2.2}. This $A_i$ is in Coulomb gauge.
+
 
 \begin{thebibliography}{99}
 \bibitem{key1} A. P. Balachandran and S. Vaidya, \textit{Spontaneous Lorentz Violation in Gauge Theories}, Eur. Phys. J. Plus \textbf{128}, 118 (2013) [arXiv:1302.3406 [hep-th]]. 
