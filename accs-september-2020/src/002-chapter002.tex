@@ -224,4 +224,48 @@ Using this reachability knowledge of these new networks, routing table entries f
 \hline
 \end{tabular}
 \end{table}
+
+The routing table entries are shown as output of line 04 (host ${\rm H}_{1}$) and 08 (host ${\rm H}_{2}$). Routing entries for ${\rm H}_{1}$ shows that network 10.1.3.0/24 is directly connected using enp0s5 (network interface) and there is no (via) gateway. For networks 10.1.4.0/24 and 10.1.5.0/24, the next hop gateway is 10.211.55.11 (i.e. ${\rm H}_{2}$) reachable via network interface enp0s5. Similarly, line 08 shows the routing entries for host ${\rm H}_{2}$. Now if from ${\rm H}_{1}$, when “ping -c2 10.1.4.1” or “ping -c2 10.1.5.1” is invoked, two ICMP requests will be sent to these addresses via host ${\rm H}_{2}$ and corresponding responses will be received. A successful ping response implies that routing table entries are correct. Ping to any other unassigned network IP address e.g. 10.1.5.2 will result in timeout and no response will be received. It is interesting to know that when an IP address is assigned to a loopback interface in Linux, it automatically assumes that all IP addresses belong to it as well. Thus, when IP address 10.1.4.2 or 10.1.4.200 is pinged from ${\rm H}_{1}$, it will still be successful even though these IP addresses are not directly assigned to loopback interface of ${\rm H}_{2}$ and neither shown (line 04 Table~\ref{chap2-table-5}).
+
+The set of steps for experiential exercise to construct the routing table and its usage in delivering packet to next hop router is given in Exercise~\ref{chap2-exe2}.
+
+\section{Route Aggregation}\label{chap2-sec5}
+
+Internet consists of large number of networks and if a router needs to keep an entry for each network, then number of entries in routing table are likely to exceed millions and thus puts a constraint on memory and compute resources of a router. Routers would like to minimize the number of routing entries and thereby improve upon the packet forwarding performance. The technique to minimize the number of routing entries is achieved by using route aggregation mechanism, in which multiple routing entries are aggregated into a single routing entry. To understand route aggregation mechanism, consider our simple network setup as shown in Figure~\ref{chap2-fig02}. Host ${\rm H}_{2}$ acts as the gateway for 2 networks 10.1.4.0/24 and 10.1.5.0/24 and correspondingly there are 2 routing entries in the routing table of ${\rm H}_{1}$. For the routing purpose from the perspective of ${\rm H}_{1}$, both the networks 10.1.4.0/24 and 10.1.5.0/24 are reachable via gateway ${\rm H}_{2}$. Thus, if these two networks can be aggregated into a single network, ${\rm H}_{1}$ will have only one routing entry for these two networks. These two networks are contiguous, each having 256 IP addresses, and thus can be aggregated as 10.1.4.0/23 representing a total of 512 IP addresses. Thus, a single routing entry can be created using the command “ip route add 10.4.1.0/23 via 10.211.55.11 dev enp0s5”. This technique of using a single subnet prefix (mask) to aggregate and advertise multiple network is also called route summarization or address aggregation.
+
+
+Address aggregation requires that networks being aggregated should be contiguous and have same number of IP addresses in them. However, though this is a necessary requirement but not sufficient. For example, two networks 10.1.1.0/24 and 10.1.2.0/24 can’t be combined into a single network with a prefix of /23, though both the networks have 256 IP addresses and are contiguous. The summarized network number and the two (or more) networks being combined must have the same higher order bits in the network portion, and should follow the proper hierarchical fashion of address allocation. In this example, first network 10.1.1.0/24 has high order 23 bits as “00001010 00000001 0000000” and the second network 10.1.2.0/24 has high order 23 bits as “00001010 00000001 0000001”. These high order 23 bits differ in last bit i.e. $23^{\rm rd}$ bit which is value 0 for first network and value 1 for the second network. However, since these two networks have high order 22 bits as same i.e.”00001010 00000001 000000”, so one would like to aggregate these as 10.1.0.0/22. This cannot be done since the subnet prefix of /22 will have 10 bits in its host part and thus total number of possible IP addresses in the aggregated network would become 1024.  This would imply that this aggregation will include the network 10.1.0.0/24 as well as the network 10.1.3.0/24, which are not part of original aggregation.
+
+So, requirements for route summarization of N networks are listed as below. 
+\begin{itemize}
+\item[i.] The number N should be equal to some power k of 2 i.e. N=$2^{\rm k}$ where 0<k<31.
+\item[ii.] All the networks should have same number of IP addresses i.e. they should have same subnet prefix (mask) e.g. /m.
+\item[iii.] The networks should be contiguous i.e. when the range of IP addresses of one network ends, the next IP address starts the range of next network (being aggregated).
+\item[iv.] The high order m-k bits in aggregated network should be same in all individual networks which are being summarized. The subnet prefix of aggregate network would become /m-k i.e. k number of bits will be taken from network part and added to host part. Thus, total number of IP addresses in aggregated network would be equal to $2^{\rm m+k}$.
+\end{itemize}
+
+Let us illustrate the summarization process using an example. Consider the following 8 ($=2^{3}$) networks with their representation in bits with network part (highlighted in yellow) and host part (in orange) shown as separated by “|” (and last 3 bits of network parts are underlined and in italics).
+
+\begin{itemize}
+\item[i.] 172.16.32.0/23 i.e. 10101100 00010000 0010$\underline{\textit{000}}$ | 0 00000000/23
+\item[ii.] 172.16.34.0/23 i.e. 10101100 00010000 0010$\underline{\textit{001}}$ | 0 00000000/23
+\item[iii.] 172.16.36.0/23 i.e. 10101100 00010000 0010$\underline{\textit{010}}$ | 0 00000000/23
+\item[iv.] 172.16.38.0/23 i.e. 10101100 00010000 0010$\underline{\textit{011}}$ | 0 00000000/23
+\item[v.] 172.16.40.0/23 i.e. 10101100 00010000 0010$\underline{\textit{100}}$ | 0 00000000/23
+\item[vi.] 172.16.42.0/23 i.e. 10101100 00010000 0010$\underline{\textit{101}}$ | 0 00000000/23
+\item[vii.] 172.16.44.0/23 i.e. 10101100 00010000 0010$\underline{\textit{110}}$ | 0 00000000/23
+\item[viii.] 172.16.46.0/23 i.e. 10101100 00010000 0010$\underline{\textit{111}}$ | 0 00000000/23
+\end{itemize}
+
+The total number of networks are $2^{3}=8$, have same subnet mask of /23, and are contiguous. High order 20 (=23-3) bits are same in all these 8 networks and thus, subnet prefix of aggregated network would be equal to /20 (=23-3), as 3 bits are moved from network part to host part. The new aggregated network number would become 172.16.32.0/20.
+
+When any of the above-mentioned requirement is not satisfied, then networks can’t be aggregated. For example, consider the middle 4 ($=2^{2}$) networks, that is, 172.16.36.0/23, 172.16.38.0/23, 172.16.40.0/23, and 172.16.42.0/23. Thus, the subnet prefix of aggregated network should be /21(=23-2). The $21^{\rm st}$ high order
+
+bit value is 0 in first two networks and has value 1 in the last two networks. Since the last requirement is not met, these 4 networks can’t be aggregated. However, if we consider the first 4 networks, that is, 172.16.32.0/23, 172.16.34.0/23, 172.16.36.0/23 and 172.16.38.0/23, these satisfy all the requirements and thus can be aggregated into the network 172.16.32.0/21. Similarly, if we consider the last 4 networks, that is, 172.16.40.0/23, 172.16.42.0/23, 172.16.44.0/23, and 172.16.46.0/23, these meet all the requirements and can be aggregated as 172.16.40.0/21.
+
+The set of steps for experiential exercise to learn route aggregation and use the route summarization to forward packets in real networks is given in Exercise~\ref{chap2-exe3}.
+
+\section{Longest Prefix Match in Routing Table}\label{chap2-sec6}
+
+
 \end{multicols}
