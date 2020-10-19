@@ -122,10 +122,10 @@ If there are three tensor operators $A_{l_1}$, $B_{l_2}$, $C_{l_3}$ , then it is
 \end{equation}
 One can go from on coupling scheme to another by a unitary transformation,
 \begin{align}
-\left[ (A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}\right]^M_L  & = \sum_{l_{23}} U (l_1, l_2 L l_3, l_{12} l_{23}) 
-\left[A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}} \right]^M_L. \label{chap3-eq7}\\ 
-\left[ A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}}\right]^M_L & = \sum_{l_{12}} U (l_1, l_2 L l_3, l_{12} l_{23}) 
-\left[(A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}) \right]^M_L. \label{chap3-eq8} 
+\left[ (A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}\right]^M_L  & = \sum_{l_{23}} U (l_1, l_2 L l_3, l_{12} l_{23})\notag \\ 
+& \qquad \qquad \qquad \left[A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}} \right]^M_L. \label{chap3-eq7}\\ 
+\left[ A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}}\right]^M_L & = \sum_{l_{12}} U (l_1, l_2 L l_3, l_{12} l_{23}) \notag \\
+& \qquad \qquad \qquad \left[(A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}) \right]^M_L. \label{chap3-eq8} 
 \end{align}
 The unitary transformation coefficients $U (l_1 l_2 L l_3, l_{12} l_{23})$ defined in Eqs. \eqref{chap3-eq7} and \eqref{chap3-eq8} are exactly the recoupling coefficients that occur in the addition of three angular momenta \cite{key11,key12}. The recoupling coefficient $U (l_1 l_2 Ll_3 , l_{12} l_{23})$ can be expressed in terms of Racah coefficient $W (l_1 l_2 Ll_3 , l_{12} l_{23})$ 
 \begin{equation}
@@ -387,6 +387,123 @@ Substituting \eqref{chap3-eq41} and \eqref{chap3-eq42} into Eq. \eqref{chap3-eq4
   t_{op} & = 4 \pi \sum_{ln \lambda m_\lambda} (i)^l jl (qr) (-1)^{l + n - \lambda} (-1)^{m_\lambda} (Y_l({\boldmath \hat{r}}) \times \sigma_n)_\lambda^{m_\lambda} (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda^{-m_\lambda} \notag \\
   & = 4 \pi \sum_{ln \lambda m_\lambda} (i)^l jl (qr) (-1)^{l+n-\lambda} (Y_l ({\boldmath \hat{r}}) \times \sigma_{n})_\lambda \cdot (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda. \label{chap3-eq43}
 \end{align}
+
+The matrix element $M_{fi}$ of the transition operator $t_{\text{op}}$ taken between the initial and final nuclear states\footnote{The bound state of the nucleon is represented by $|R(r), l \tfrac{1}{2} jm \rangle$, where $R(r)$ denotes the radial part and $|l\tfrac{1}{2} jm \rangle$ denotes the angular part.} is the transition amplitude.
+\begin{align}
+  M_{fi} & = \langle R_f (r), l_f \tfrac{1}{2} j_f m_f| t_{\text{op}}| R_i (r) , l_i \tfrac{1}{2} j_i m_i \rangle \notag \\
+  & = 4 \pi \sum_{ln\lambda m_\lambda} (i)^l (-1)^{l + n -\lambda} (-1)^{m_\lambda} (Y_l ({{\hat{\boldmath q}}}) \times {\boldmath K}_n)_{\lambda}^{-m_\lambda} \notag \\
+  & \qquad \times \langle r_f (r), l_f \tfrac{1}{2} j_f m_f | j_i (qr) (Y_l ({\boldmath \hat{r}}) \times \sigma_n)_\lambda^{m_\lambda} |R_i (r), l_i \tfrac{1}{2} j_i m_i \rangle \notag \\
+  & = 4\pi \sum_{ln \lambda m_\lambda} (i)^l (-1)^{l + n -\lambda} (-1)^{m \lambda} (Y_l({\boldmath \hat{q}})\times {\boldmath K}_n)^{-m_\lambda}_\lambda \langle j_l (qr)\rangle_{fi}\notag \\
+  & = \times \begin{bmatrix} j_i & \lambda & j_f \\ m_i & m_\lambda & m_f \end{bmatrix}
+  \langle l_f \tfrac{1}{2} j_f || (Y_l ({\boldmath \hat{r}}) \times \sigma_n)_\lambda|| l_i \tfrac{1}{2} j_i \rangle, \label{chap3-eq44}
+\end{align}
+where
+$$
+\langle j_i (qr)\rangle_{fi} = \int R_f (r)^\ast jl (qr) R_i (r) r^2 dr
+$$
+is the radial integral. The C.G. coefficient in Eq. \eqref{chap3-eq44} is obtained by the application of Wigner-Eckart theorem.
+
+The matrix element is a linear sum of several terms and so its square will include cross terms also. Hence
+\begin{align}
+  |M_{fi}|^2 & = 16\pi^2 \sum_{ln\lambda m_\lambda} \sum_{l' n' \lambda' m_\lambda '} (i)^{l-l'} (-1)^{l + n - \lambda} (-1)^{l' + n' \lambda'} (-1)^{m\lambda} (-1)^{m_\lambda'} \notag \\
+  &  \quad \times (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda^{-m\lambda}  \left\{ (Y_{l'} ({\boldmath \hat{q}}) \times {\boldmath K}_{n'})_{\lambda'}^{-m_\lambda'}\right\}^\ast \langle jl (qr)\rangle_{fi} \langle j_{l'}(qr)\rangle^\ast_{f_i} \notag \\
+  & \quad \times \begin{bmatrix} j_i & \lambda & j_f\\ m_i & m_\lambda & j_f \end{bmatrix}
+  \langle l_f \tfrac{1}{2} j_f || (Y_l ({\boldmath \hat{r}}) \times \sigma_n)_\lambda || l_2 \tfrac{1}{2} j_i \rangle \notag \\
+  & \quad \times \begin{bmatrix} j_i & \lambda' & j_f\\ m_i & m_\lambda' & m_f \end{bmatrix}
+  \langle l_f \tfrac{1}{2} j_f || (Y_{l'} ({\boldmath \hat{r}}) \times \sigma_{n'})_{\lambda'} || l_i \tfrac{1}{2} j_i \rangle^\ast. \label{chap3-eq45}
+\end{align}
+Summing over the final spin states and averaging over the initial spin states, we obtain the transition probability.
+\begin{equation}
+  T_{fi} = \frac{1}{2j_i +1} \sum_{m_i m_f} |M_{fi}|^2. \label{chap3-eq46}
+\end{equation}
+Summing over $m_i$ and using the orthonormality of C.G. coefficients as shown in \eqref{chap3-eq29}, we obtain the relations $\lambda = \lambda'$ and $m_\lambda= m_\lambda'$. Of the summations $m_f$ and $m_\lambda$, one is redundant since $m_f= m_i+ m_\lambda$. Substituting the results \eqref{chap3-eq29} and \eqref{chap3-eq45} into Eq. \eqref{chap3-eq46}, we obtain the transition probalility $T_{fi}$.
+\begin{align}
+  T_{fi} & = 16\pi^2 \frac{2j_f +1}{2j_i+1} \sum{lnl'n'} \sum_{\lambda m_\lambda} \frac{1}{[\lambda]^2} (i)^{l-l'} (-1)^{l+ n - \lambda} (-1)^{l' + n'-\lambda}\notag \\
+  &  \times (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)^{-m\lambda}_\lambda \left\{ (Y_{l'}({\boldmath \hat{q}}) \times {\boldmath K}_{n'})_\lambda^{-m_\lambda}\right\}^\ast \langle j_l (qr)\rangle_{f_i} \langle j_{l'}(qr)\rangle_{f_i}^\ast \notag \\
+  &  \times \langle l_f \tfrac{1}{2} j_f || (Y_l (({\boldmath \hat{r}}) \times \sigma_n)_\lambda || l_i \tfrac{1}{2}j_i \rangle \langle l_f \tfrac{1}{2} j_f  || (Y_{l'} ({\boldmath \hat{r}}) \times \sigma_{n'})_\lambda || l_i \tfrac{1}{2} j_i \rangle^\ast. \label{chap3-eq47}
+\end{align}
+
+The angular momentum matrix elements that occur in Eq. \eqref{chap3-eq47} are given by
+\begin{align}
+  \langle l_f \tfrac{1}{2} j_f || (Y_l ({\boldmath \hat{r}}) \times \sigma_n)_\lambda || l_i \tfrac{1}{2} j_i
+  & = \begin{bmatrix} l_i & l & l_f\\ \tfrac{1}{2} & n & \tfrac{1}{2}\\ j_i & \lambda & j_f \end{bmatrix}
+  \langle l_f || Y_l || l_i \rangle \langle\tfrac{1}{2} || \sigma_n || \tfrac{1}{2} \rangle, \label{chap3-eq48}\\
+  \langle l_f || Y_l || l_i \rangle & = \frac{[l_i][l]}{\sqrt{4 \pi}[l_f]} \begin{bmatrix} l_i &l & l_f\\ 0 & 0 & 0 \end{bmatrix}, \label{chap3-eq49}\\
+  \langle \tfrac{1}{2} || \sigma_n || \tfrac{1}{2} \rangle & = [n]. \label{chap3-eq50}
+\end{align}
+
+In Eq. \eqref{chap3-eq47}, the only quantities that depend on $m_\lambda$ can be pulled out and summation over $m_\lambda$ performed.
+\begin{align}
+  S & = \sum_{m_\lambda} (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda^{-m_\lambda}
+  \left\{ (Y_{l'} ({\boldmath \hat{q}}) \times {\boldmath K}_{n'})_\lambda^{-m_\lambda}\right\}^\ast \notag \\
+  & = (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda \cdot (Y_{l'}({\boldmath \hat{q}}) \times {\boldmath K}_n^\ast)_\lambda \notag\\
+  & = (-1)^\lambda [\lambda] [(Y_l ({\boldmath \hat{q}}) \times  {\boldmath K}_n)_\lambda \times (Y_{l'}({\boldmath \hat{q}}) \times {\boldmath K}_{n'}^{\ast})_\lambda ]_0^0 \label{chap3-eq51}
+\end{align}
+The scalar product $S$ is expressed as a tensor product in Eq. \eqref{chap3-eq51} to facilitate the use of recoupling coefficients defined in (G. 6).
+\begin{equation}
+  S= (-1)^\lambda [\lambda] \sum_{N} \begin{bmatrix} l & n & \lambda \\ l' & n' & \lambda\\ N & N & 0\end{bmatrix}
+    [(Y_l ({\boldmath \hat{q}}) \times Y_{l'}({\boldmath \hat{q}}))_N \times ({\boldmath K}_n \times {\boldmath K}_{n'}^\ast)_N]_0^0. \label{chap3-eq52}
+\end{equation}
+Eq. \eqref{chap3-eq52} is obtained using the concept of recoupling coefficient (LS-jj coupling co-efficient) for the tensor products of spherical tensors and making use of the relation (G.6). The tensor product of spherical harmonics in Eq. \eqref{chap3-eq52} can be further simplified.
+\begin{equation}
+  [Y_l({\boldmath \hat{q}}) \times Y_{l'}({\boldmath \hat{q}})]_N = \frac{[l][l']}{\sqrt{4\pi}[N]}
+  \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix} Y_N ({\boldmath q}). \label{chap3-eq53}
+\end{equation}
+Substituting \eqref{chap3-eq53} in Eq. \eqref{chap3-eq52}, we get
+\begin{align}
+  S & = (-1)^\lambda [\lambda] \sum_{N} \begin{bmatrix} l & n & \lambda\\ l' & n' & \lambda\\ N & N & 0  \end{bmatrix}
+  \frac{[l][l']}{\sqrt{4 \pi}[N]} \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix}\notag \\
+       & \qquad \qquad \qquad [(Y_N ({\boldmath \hat{q}}) \times ({\boldmath K}_n \times {\boldmath K_{n'}^\ast})_N)]_0^0\notag \\
+  & = (-1)^\lambda [\lambda] \sum_{N} (-1)^N  \frac{[l][l']}{\sqrt{4 \pi}[N]^2}
+  \begin{bmatrix} l & n & \lambda\\ l' & n' & \lambda\\ N & N & 0  \end{bmatrix}
+  \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix} \notag \\
+  & \qquad \qquad \qquad \times (Y_N ({\boldmath \hat{q}}) \cdot  ({\boldmath K}_n \times {\boldmath K_{n'}^\ast})_N)_0^0\label{chap3-eq54}
+\end{align}
+With the help of Eqs. \eqref{chap3-eq54} and \eqref{chap3-eq48} - \eqref{chap3-eq50}, the transition probability $T_{fi}$ given by Eq. \eqref{chap3-eq47} can be calculated.
+
+\subsection{Distrorted waves for emitted pion} \label{chap3-sec5.2}
+
+The transition operator for photo-pion production from nuclei from an initial nuclear state to a final nuclear state can be written as
+\begin{equation}
+t_{\text{op}} = \phi^\ast ({\boldmath \mu, r}) \left( \sum_{n=0, 1} \sigma_n \cdot {\boldmath K}_n\right) \exp (i \nu \cdot {\boldmath r}), \label{chap3-eq55}
+\end{equation}
+where $\phi (\mu, {\boldmath r})$ is the distorted wave function of the outgoing pion of momentum $\mu$, taking into account the final state interaction of the pion with the nucleus. The incoming photon of momentum $\nu$ is represented by a plane wave which is a reasonable approximation. The quantities $K_0$ and ${\boldmath K}_1$ denote respectively the spin-independent and spin-dependent parts of the elementary photo-pion production amplitude and the operators $\sigma_0$ and $\sigma_1$ denote respectively the unit operator and the Pauli spin operator.
+
+If the nuclear distrotion effect on the emitted pion is neglected, then the transition operator reduces to the one which we have considered earlier.
+\begin{equation}
+t_{\text{op}} = \sum_{i=0, 1} \sigma_n \cdot {\boldmath K}_n \exp i {\boldmath q \cdot r}, \label{chap3-eq56}
+\end{equation}
+where $q= \nu -\mu$ denotes the momentum transfer. If we include the nuclear distortion effects on the emitted pion, then the pion wave function and the photon wave function have to be expanded separately into partial waves, as shown below:
+\begin{align}
+  \phi (\mu , {\boldmath r}) & = 4 \pi \sum_{l_{\mu}} (i)^{l_\mu} g_{l_\mu}(\mu r)\sum_{m_\mu} (-1)^\mu Y_{l_\mu}^{-m _\mu} ({\boldmath \hat{\mu}}) Y_{l_\mu}^{m_\mu} ({\boldmath \hat{r}}) \label{chap3=eq57}\\
+  \exp (i \nu \cdot {\boldmath r}) & = 4 \pi \sum_{l_\nu} (i)^{l_\nu} j_{l_\nu} (\nu r) \sum_{m_\nu} (-1)^\nu Y_{l_\nu}^{-m_\nu} ({\boldmath \hat{\nu}}) Y_{l_\nu}^{m_\nu} ({\boldmath \hat{r}}) \label{chap3-eq58}
+\end{align}
+In Eqn. \eqref{chap3-eq57}, $g_{l_\mu} (\mu r)$ denotes the radial wave function of the pion which is obtained by solving the Klein-Gordon equation with the pion-nucleus optical potential. If the pion-nucleus optical potential vanishes, the radial function $g_{l_\mu}(\mu r)$ goes over into the spherical Bessel function j $j_{l_\mu}(\mu r)$. Substituting \eqref{chap3-eq57} and \eqref{chap3-eq58} into Eq: \eqref{chap3-eq55} and grouping together separately the angular momentum operators depending on ${\boldmath \hat{r}}$ and those depending on ${\boldmath \hat{\mu}}$ and ${\boldmath \hat{\nu}}$, we obtain
+\begin{align}
+  t_{\text{op}} & = 16\pi^2 \sum_{l_\mu l_\nu L_n} \sum_{\lambda m_\lambda} (i)^{l_\nu - l_\mu} (-1)^{l_\mu + l_\nu - L} g_{l_\mu}^\ast (\mu r)j_{l_\nu} (\nu r) (-1)^{L+N-\lambda} \frac{[l_\mu][l_\nu]}{(4 \pi)^{1/2 [L]}}\notag\\
+  & \qquad \begin{bmatrix} l_\mu & l_\nu & L\\ 0 & 0 & 0   \end{bmatrix} [(Y_{l_\mu}(\hat{\mu}) \times Y_{l_\nu} (\hat{\nu}))_L \times {\boldmath K}_n]_\lambda^{-m_\lambda} [Y_L ({\boldmath \hat{r}}) \times \sigma_n]_{\lambda}^{m_\lambda}, \label{chap3-eq59}
+\end{align}
+where $[l] = (2l+1)^{1/2}$. In Eq. \eqref{chap3-eq59}, $[Y_L ({\boldmath \hat{r}}) \times \sigma_n]_\lambda^{m_\lambda}$ is the angular momentum λ operator that induces the single nucleon transition from the initial to the final nuclear state. One can find the transition probability, using the procedure described in Sec.\ref{chap3-sec3}. In addition to the nuclear matrix element, the transition probability will involve the following scalar product of two tensors that dictate the dynamics of photopion production.
+\begin{equation}
+  S= \sum_{m_\lambda} \left\{ (Y_{l_\mu} (\hat{\mu}) \times Y_{l_\nu} (\hat{\nu}))_L \times {\boldmath K}_n\right\}_\lambda^{m_\lambda} \left\{(Y_{l'_\mu} (\hat{\mu}) \times Y_{l_\nu'}(\hat{\nu}))_L \times {\boldmath K}_{n'} \right\}_{\lambda}^{m_\lambda\ast} \label{chap3-eq60}
+\end{equation}
+The quantity $S$ can be evaluated, choosing the direction of incident photon as the $z$ axis.
+$$
+Y_{l_\nu}^{m_\nu} (0, 0) = \frac{[l_\nu]}{\sqrt{4\pi}}\delta_{m_\nu, 0}.
+$$
+This choice does not result in any loss in generality. For further details, the reader is referred to references \cite{key20, key21}.
+
+It is found that the distortion effects on the emitted pion and the nuclear structure play a sominant role \cite{key21} in the photopion production cross section from nuclei.
+
+\section{Other nuclear reactions}\label{chap3-sec6}
+
+Besides the photopions from nuclei, the author has studied other nuclear reactions such as electroproduction of pions from nuclei, electron scattering, pion scattering and muon capture. For all these, the general formalism outlined in Sec.\ref{chap3-sec3} is applicable. Only the relevant spherical tensor operators need to be found.
+
+\medskip
+\noindent \textbf{\large Acknowledgements}
+\medskip
+
+This article is dedicated to the memory of Prof. G. Ramachandran, with whom I learnt the Elements of Nuclear Physics in late nineteen fifties and early nineteen sixties and I acknowledge with thanks that they served as the basis for my later contributions to the subject.
 
 
 \begin{thebibliography}{99}
