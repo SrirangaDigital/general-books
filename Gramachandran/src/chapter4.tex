@@ -142,21 +142,21 @@ Here the correspondence with the instantaneous energy in the $k$th iterated Hami
 
 The second term in \eqref{chap4-eq12} is expanded as  
 \begin{align}
--\oint dy^i\int_0^s{\bigtriangleup}^B_{iC} p_B\frac{dz^C}{ds}ds= &-\oint dy^i\left( \int_0^s {\bigtriangleup}^B_{it}
-p_B dt+\int_0^s{\bigtriangleup}^B_{ij}p_B dy^j\right), \nonumber \\
-= &-\oint dy^i\left(\int_0^s{\bigtriangleup}^j_{it}p_j dt+\int_0^s{\bigtriangleup}^t_{ij}p_t dy^j \right. \nonumber \\
-& \qquad \qquad \qquad \quad \left.+\int_0^s {\bigtriangleup}^{\ell}_{ij}p_{\ell} dy^j\right),\label{chap4-eq17}
+	-\oint dy^i\int_0^s{\bigtriangleup}^B_{iC} p_B\frac{dz^C}{ds}ds= &-\oint dy^i\left( \int_0^s {\bigtriangleup}^B_{it}
+	p_B dt+\int_0^s{\bigtriangleup}^B_{ij}p_B dy^j\right), \nonumber \\
+	= &-\oint dy^i\left(\int_0^s{\bigtriangleup}^j_{it}p_j dt+\int_0^s{\bigtriangleup}^t_{ij}p_t dy^j \right. \nonumber \\
+	& \qquad \qquad \qquad \quad \left.+\int_0^s {\bigtriangleup}^{\ell}_{ij}p_{\ell} dy^j\right),\label{chap4-eq17}
 \end{align}
 since ${\bigtriangleup}^t_{it}=0$. Substituting ${\bigtriangleup}^j_{it}, {\bigtriangleup}^t_{ij},{\bigtriangleup}^{\ell}
 _{ij}$ from \eqref{chap4-eq10} and using \eqref{chap4-eq11}, we find 
 \begin{align}
--\oint dy^i & \int_0^s{\bigtriangleup}^B_{iC} p_B\frac{dz^C}{ds}ds\nonumber \\
-= &-\oint dy^i \left[ \frac{m}{2}\int_0^s \sum_{r=0}^k\frac{dh^{(r)}}{dt}\ e^{h^{(r)}(t)}g^{(r)}_{ij}\frac{dy^j}{ds} dt -\frac{m}{2}\int_0^s\right.\nonumber\\ 
- & \qquad \qquad  \left.\sum_{r=0}^k e^{h^{(r)}(t)}\frac{dh^{(r)}}{dt}g^{(r)}_{ij} dy^j\frac{dt}{ds} + \int_0^s\sum_{r=0}^k{\Gamma}^{(r) \ell}_{ij}p_{\ell}^{(r)} dy^j \right], \nonumber \\
-= &-\oint dy^i\int_0^s\sum_{r=0}^k {\Gamma}^{(r)\ell}_{ij}p^{(r)}_{\ell}\frac{dy^j}{ds} ds
-\ =\ -\oint dy^i\sum_{r=0}^k \bar{\delta} p_i^{(r)}, \label{chap4-eq18}
+	-\oint dy^i & \int_0^s{\bigtriangleup}^B_{iC} p_B\frac{dz^C}{ds}ds\nonumber \\
+	= &-\oint dy^i \left[ \frac{m}{2}\int_0^s \sum_{r=0}^k\frac{dh^{(r)}}{dt}\ e^{h^{(r)}(t)}g^{(r)}_{ij}\frac{dy^j}{ds} dt -\frac{m}{2}\int_0^s\right.\nonumber\\ 
+	& \qquad \qquad  \left.\sum_{r=0}^k e^{h^{(r)}(t)}\frac{dh^{(r)}}{dt}g^{(r)}_{ij} dy^j\frac{dt}{ds} + \int_0^s\sum_{r=0}^k{\Gamma}^{(r) \ell}_{ij}p_{\ell}^{(r)} dy^j \right], \nonumber \\
+	= &-\oint dy^i\int_0^s\sum_{r=0}^k {\Gamma}^{(r)\ell}_{ij}p^{(r)}_{\ell}\frac{dy^j}{ds} ds
+	= -\oint dy^i\sum_{r=0}^k \bar{\delta} p_i^{(r)}, \label{chap4-eq18}
 \end{align}
-where the $h^{(r)}(t)$ terms cancel each other (this is important so as to preserve the sum over $r$ from $0$ to $k$ for  the last step) and in the last step, $\bar{\delta}p_i$ is  obtained with parallel transport corresponding to $g^{(r)}_{ij}$ only with the sum over $r$ from $0$ to $k$.   Compared with the second term in \eqref{chap4-eq7},  {\it{now}}, it gets two contributions \eqref{chap4-eq16} and \eqref{chap4-eq18} (with sum over $r$ in \eqref{chap4-eq18} only)   due to the warped metric in \eqref{chap4-eq9} which relaxes the adiabatic approximation.
+where the $h^{(r)}(t)$ terms cancel each other (this is important so as to preserve the sum over $r$ from $0$ to $k$ for  the last step) and in the last step, $\bar{\delta}p_i$ is  obtained with parallel transport corresponding to $g^{(r)}_{ij}$ only with the sum over $r$ from $0$ to $k$.  Compared with the second term in \eqref{chap4-eq7},  {\it{now}}, it gets two contributions \eqref{chap4-eq16} and \eqref{chap4-eq18} (with sum over $r$ in \eqref{chap4-eq18} only)   due to the warped metric in \eqref{chap4-eq9} which relaxes the adiabatic approximation.
 
 Replacing $\bar{\delta}p_i$ in \eqref{chap4-eq18} by its expectation value (as done in \eqref{chap4-eq8}) and including the first term in \eqref{chap4-eq7}, we  find the total phase acquired is 
 \begin{equation}
@@ -168,7 +168,7 @@ with
 \end{equation}
 thereby agreeing with \eqref{chap4-eq3} formally.    
 
-The formalism given in \cite{key6}, \cite{key7} and adopted here is crucially dependent on the geometry of the parameter space. We have  not made explicit use of Schr\"{o}dinger equation. By replacing the momentum by its expectation value which is pertinent  for a quantum mechanical state, we are able to obtain Berry phase result. Though \eqref{chap4-eq19} agrees formally with \eqref{chap4-eq3}, they are  not the same. The reason is that while here a specific Hamiltonian (and the Schr\"{o}dinger equation) is not used, in \cite{key5}, a  Hamiltonian is used so that the $k$th approximation made in \cite{key5} is different from the one here. The difference is that in  finding ${\gamma}_j(n)$ in \cite{key5}, the off-diagonal terms are not neglected upto the $k$th iteration and these are  neglected in $H_{k+1}$. This gave the $k$th approximant \eqref{chap4-eq3} of \cite{key5}. In our case, as no Hamiltonian is explicitly used,  the phases ${\gamma}_j(n)$ involve diagonal element with $|n\rangle$. The origin of the sum over $r$ comes from the  sum over the warp factors and the $k$th approximation here corresponds to truncating the sum over $r$ to $k$. In other  words, we realize a finite sum of Berry phases in relaxing the adiabatic approximation, instead of a single Berry  phase in the adiabatic limit.   Nevertheless, the formal similarity between \eqref{chap4-eq3} and \eqref{chap4-eq19} is striking. The result here  that the geometric phase is essentially emerging from the parallel transport of momentum vector in the product space  and does not require a Hamiltonian or its associated Schr\"{o}dinger equation, has been emphasized by Mukunda and  Simon \cite{key8}.   
+The formalism given in \cite{key6, key7} and adopted here is crucially dependent on the geometry of the parameter space. We have  not made explicit use of Schr\"{o}dinger equation. By replacing the momentum by its expectation value which is pertinent  for a quantum mechanical state, we are able to obtain Berry phase result. Though \eqref{chap4-eq19} agrees formally with \eqref{chap4-eq3}, they are  not the same. The reason is that while here a specific Hamiltonian (and the Schr\"{o}dinger equation) is not used, in \cite{key5}, a  Hamiltonian is used so that the $k$th approximation made in \cite{key5} is different from the one here. The difference is that in  finding ${\gamma}_j(n)$ in \cite{key5}, the off-diagonal terms are not neglected upto the $k$th iteration and these are  neglected in $H_{k+1}$. This gave the $k$th approximant \eqref{chap4-eq3} of \cite{key5}. In our case, as no Hamiltonian is explicitly used,  the phases ${\gamma}_j(n)$ involve diagonal element with $|n\rangle$. The origin of the sum over $r$ comes from the  sum over the warp factors and the $k$th approximation here corresponds to truncating the sum over $r$ to $k$. In other  words, we realize a finite sum of Berry phases in relaxing the adiabatic approximation, instead of a single Berry  phase in the adiabatic limit.   Nevertheless, the formal similarity between \eqref{chap4-eq3} and \eqref{chap4-eq19} is striking. The result here  that the geometric phase is essentially emerging from the parallel transport of momentum vector in the product space  and does not require a Hamiltonian or its associated Schr\"{o}dinger equation, has been emphasized by Mukunda and  Simon \cite{key8}.   
 
 \vspace{0.5cm}
 {\noindent{\bf{Acknowlegements}}}
