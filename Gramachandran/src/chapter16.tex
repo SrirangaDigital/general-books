@@ -1,0 +1,69 @@
+\chapter[Quantum de Finetti Theorem and Mixed Symmetric Separable States]{Quantum de Finetti Theorem and Mixed Symmetric Separable States}\label{chap16}
+
+\Authorline{SP Suma$^1$ and Swarnamala Sirsi$^2$}
+
+\begin{center}
+$^1$\textit{BASE PU College, Mysuru},\\
+$^2$\textit{Yuvaraja's College, University of Mysore, Mysuru}.
+\end{center}
+
+
+\section*{Abstract}
+
+In this work, we identify the mixed symmetric separable states with exchangeable states. We also identify the probability distribution function characterizing the mixed symmetric separable states in the context of tomography with a unique probability distribution function, namely the $P$ function, with the aid of quantum de Finetti theorem. In the end, we explicitly calculate the Informationally complete Positive Operator Valued Measure(POVM) elements for spin-$\frac{1}{2}$ systems which might be of potential use in the laboratory.
+
+\section{Introduction}\label{chap16-sec1}
+
+In physics, nature of a system is understood based on the measurement results of a small number of systems belonging to an ensemble rather than making measurements on all the systems of the ensemble. For example, in order to understand the random nature of radioactivity, one need not observe every radioactive nucleus. In other words, a limited number of local measurements is used to derive the general physical law. But how can such an idea be justified ? What are the underlying facts and assumptions ? To answer these questions Renner\cite{chap16-key1} considers the following \textbf{tomography problem} : Let $S_{1},\cdots,S_{N}$ be $N$ subsystems of a large composite system and assume that individual experiments are performed on $k$ of the subsystems, $S_{1},\cdots,S_{k}$, for $k<<N$. The goal is to infer the physical state of the remaining $N-k$ subsystems, based on this experimental data. Further Renner\cite{chap16-key1} concludes that the \textbf{tomography problem} can be solved under the sole assumption that the overall system is symmetric under the permutations of the $N$ subsystems. Italian mathematician Bruno de Finetti was the first to study the above mentioned problem for the classical probabilistic systems assuming the permutation symmetry among the subsystems of the classical state\cite{chap16-key2},\cite{chap16-key3}. Later the idea of de Finetti was extended to quantum systems\cite{chap16-key4}-\cite{chap16-key7}.
+
+We take up the study of permutationally symmetric states, in the light of quantum de Finetti theorem. Caves\cite{chap16-key8} et.al., have given the proof of quantum de Finetti representation theorem from the point of view of information based formulation of the quantum state tomography which we follow to analyze the mixed symmetric separable states. 
+
+Here, for the sake of completeness, a brief discussion of classical and quantum de Finetti representation theorem is elucidated followed by quantum Bayes rule. The relationship between the mixed symmetric separable states and the quantum de Finetti theorem is discussed and found that the probability distribution characterizing the mixed symmetric separable states is unique and is none other than Glauber's $P$ function. An explicit calculation of the minimal informationally complete POVM elements for spin-$\frac{1}{2}$ system is given which can be used to find the updated probability distribution through quantum de Finetti theorem.
+
+\section{Classical de Finetti Theorem}\label{chap16-sec2}
+
+Before understanding the quantum version of the de Finetti theorem, it is better to go through the classical version of the theorem as a starting point. In this section, the maxim of the late E.T. Jaynes\cite{chap16-key9} and hence of Carlton M. Caves et.al.\cite{chap16-key8} is followed.
+
+According to Jaynes, the difference of opinion between the information point of view and objectivist point of view is not new in quantum mechanics. Similarly, in classical probability theory, the difference of opinion is between subjective(Bayesian) and objective interpretation. In subjective or Bayesian interpretation, probabilities are considered to be measure of one's belief reflecting one's state of knowledge.
+
+Following Caves et.al\cite{chap16-key8}, let us take up an example to clear the above said concept. Consider a dice with face values $1 \cdots 6$. For a player who is an objectivist, the probability of getting each face value from $1 \cdots 6$ is $\frac{1}{6}$. For a player who is a subjectivist, in the sense that he possibly possesses some prior information about the dice or the experiment so that he can predict the outcome, probability will be peaked around some set of numbers. Newtonian mechanics allows a Bayesian interpreter to calculate the probabilities with certainty.
+
+Now, to get an idea about quantum state tomography problem, consider an experiment of tossing a dice $N$ times. Each time, let the expected outcome is random from the set $\alpha_{n} \in 1, 2 \cdots k$, where $n = 1 \cdots N$. That means there are $N$ random variables each of which can have a value from $1 \cdots k$.
+
+From the objectivist point of view, the probability of the above described multitrial experiment is given by an independent, identically distributed (i.i.d) distribution,
+
+$$
+p(\alpha_{1} \cdots \alpha_{N}) = p_{\alpha_{1}} \cdots p_{\alpha_{N}} = p_{1}^{n_{1}} p_{2}^{n_{2}} \cdots p_{k}^{n_{k}}
+$$ 
+
+where $n_{j}$ and $p_{j} (j= 1 \cdots k)$ represents the number of times the outcome $j$ has occured and probability of getting $j$ value respectively. Whereas a  subjectivist/Bayesian interpreter, starts with a distribution, not generally an i.i.d and then tries to update the distribution with the help of measurement outcomes. But the choice of initial distribution function itself is a difficult task. It is believed that one or more features of experiment/problem often stand out and useful in choosing the distribution function. In this experiment, stand out feature is that all the trials are equivalent. In other words, trials are permutationally invariant. That gives the hint to choose a distribution function which represents the permutational symmetry of the trials. de Finetti called this property of permutational symmetry as `exchangeability'.
+
+Mathematically, exchangeability can be defined in two steps :
+
+A probability distribution $p(\alpha_{1}, \alpha_{2} \cdots \alpha_{N} )$ is symmetric if it is invariant under permutation of its arguments, i.e., 
+
+$$ 
+p(\alpha_{\pi(1)}, \alpha_{\pi(2)}, \cdots \alpha_{\pi(N)}) = p (\alpha_{1}, \alpha_{2}, \cdots \alpha_{N})
+$$ 
+
+for any permutation $\pi$ of the set $1, \cdots ,N$.
+
+The probability distribution $p(\alpha_{1}, \alpha_{2} \cdots \alpha_{N})$ is called exchangeable (infinitely exchangeable) if it is symmetric and if for any integer $S > 0$, there is a symmetric distribution $p_{N+S} (\alpha_{1}, \alpha_{2} \cdots \alpha_{N+S})$ such that
+ 
+$$ 
+p(\alpha_{1}, \alpha_{2}, \cdots \alpha_{N}) = \sum_{\alpha_{N+1},\cdots \alpha_{N+S}} p_{N+S} (\alpha_{1}, \alpha_{2} \cdots \alpha_{N+S}).
+$$
+
+Now, According to Caves et.al\cite{chap16-key8}, the Classical de Finetti theorem for random variables can be stated as,
+
+If a probability distribution $p(\alpha_{1}, \alpha_{2}, \cdots \alpha_{N})$ is exchangeable, then it can be uniquely written in the form
+
+$$
+p(\alpha_{1}, \alpha_{2}, \cdots \alpha_{N}) = \int P(\textbf{p}) p_{\alpha_{1}} p_{\alpha_{2}} \cdots p_{\alpha_{N}}  dp = \int P(\textbf{p}) p_{1}^{n_{1}} p_{2}^{n_{2}} \cdots p_{k}^{n_{k}} dp
+$$ 
+
+where $\textbf{p} = (p_{1}, p_{2}, \cdots, p_{k} )$ and $\int P(\textbf{p}) d\textbf{p} = 1$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
