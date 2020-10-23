@@ -1,0 +1,243 @@
+\chapter{The Ensemble Nature of the Schr\"{o}dinger Equation and its Wavefunction, and a New Universal Action Mechanics}\label{chap27}
+
+%\Authorline{N.G.Deshpande// Professor of Physics, University of Oregon}
+
+\begin{center}
+\textbf{C. S. Unnikrishnan}\\
+\textbf{\textit{Tata Institute of Fundamental Research, Homi Bhabha Road, Mumbai 400005}}
+\end{center}
+
+\begin{center}
+(Date textdate)\\
+
+\medskip
+
+Abstract
+\end{center}
+
+
+All researchers of quantum mechanics assume that the Schr\"{o}dinger equation is the equation for
+dynamics, akin to Newton's equation of motion or the Hamilton-Jacobi equation for the evolution
+of action. The wavefunction $\psi(x)$ is assumed to be some way associated with a single particle,
+or a single quantum history. Hence, Born's ad hoc interpretation is necessary to connect the psi-function to the statistical results of an ensemble of observations. Here I show that the Schr\"{o}dinger
+equation is not the equation for dynamics, but it is in fact the equation for the evolution of
+the ensemble probability density $\rho(x)$, written in terms of the single valued square root χ(x)
+of the probability density, \textit{with the constraint that $\rho(x)$ is that of a dynamical system}. It then
+follows that the Born's rule is an exact relation $\chi \chi^{\ast} \equiv \rho$, by definition. This implies that a
+matter-wave is absent in quantum mechanics; $\psi(x)$ is not the matter-wave. Neither is it the
+representative of a single quantum history. The psi-function is an ensemble averaged quantity.
+The true dynamical equation is a modified Hamilton's equation for the action-wave $\zeta(S)$. This
+completes the Hamiltonian dynamics to a universal dynamics, with the encompassing uncertainty
+relation $\Delta S \geq \hbar$. These findings define the kernel of quantum dynamics without any of the
+foundational problems of interpretation or ontology, while retaining all the statistical results of
+quantum mechanics.
+
+\section{Introduction}
+
+``\textbf{It will be impossible to answer any one question completely without at the
+same time answering them all}", P. A. M. Dirac, Proc. Roy. Soc. Lond. A, Vol. 114,
+243 (1927).
+
+The Schr\"{o}dinger equation marked a decisive milestone of modern quantum mechanics
+(QM), after two decades of isolated results of importance in atomic physics. The equation
+was also considered as the completion of non-relativistic QM, apart from the addition of the
+Born's rule. Its more detailed structure, compared to Heisenberg's earlier breakthrough of
+finding the `rule of quantization', made it the basis of most discussions and the calculations
+of the theory. Schr\"{o}dinger arrived at the first order equation for the time evolution of
+`something like a wave' after many steps, spread over four papers in 1926, starting with a
+second order wave equation that resembled conventional second order wave equations [1].
+The differential equation was written for the time evolution of the ``wavefunction", which was
+notionally related to, and inspired by, de Broglie's matter-wave. The Schr\"{o}dinger equation
+is
+\begin{equation*}
+i \hbar \frac{\partial \psi (x)}{\partial t} = \hat{H} \psi (x) \tag{1}
+\end{equation*}
+where $\hat{H}$ is a differential operator corresponding to the Hamiltonian of the system. However,
+as well known, the wavefunction or the `psi-function' $\psi (x)$ cannot be interpreted as a physical
+entity is real space, though it is a function of the $3N$ coordinates of the $N$ particles in the
+quantum system. It does not directly represent the material particle or a wave corresponding
+to the particle, evolving in real space. Thus, the complex valued psi-function remains as
+much of a mystery now as it was about a century ago. The only additional interpretational
+insight was M. Born's proposal that the absolute square of the $\psi$-function, $\psi(x) \psi^{\ast}(x)$, is to
+be equated to the probability density $\rho(x)$ for evaluating the statistical results of all possible
+observations of the system.
+
+Subsequent formal developments clarified the mathematical structure of QM and clearly
+delineated how to use the theory for the precise calculations of ensemble averaged quantities
+of interest. The generalization to the Pauli equation for the two-component `spinor' psi-
+function and the further generalization to the relativistic case with the invention of the Dirac
+equation completed the quantum theory of particles. The comparison with experimental
+observations, and the excellent empirical agreement in every known case, suggest that the
+present QM is the correct statistical description of physical effects in the microscopic atomic
+world, to the tiniest scales.
+
+I intend to take a close look at the Schr\"{o}dinger equation, to reveal its true structure
+and meaning, including the real nature of the elusive `psi-function'. I will show that \textit{the
+Schr\"{o}dinger equation is not the equation for dynamics}. Rather, it is the equation for the
+time evolution of a probability density, written in terms of its single valued square root, with
+the constraint that the probability density corresponds to the dynamics of an ensemble of
+particles. In other words, the Schr\"{o}dinger equation is an ensemble equation, and not the
+equation for the single particle or single quantum history. This drastically changes the basis
+for the entire understanding of quantum mechanics, hitherto followed in all approaches
+to the interpretation of the theory. Then the question arises immediately, what then is
+the core equation of quantum dynamics?! The correct equation for dynamics is found by
+modifying and completing Hamilton's equation for the evolution of the action S, to a new
+equation for the true ``wavefunction of action" $\zeta(S)$, which describes the universal dynamics
+of particles at all scales and all velocities \cite{chap27-key2}. The new dynamics reveals the reason for the
+intrinsic uncertainty, with the new general relation $\Delta S \geq \hbar$. It is argued, from empirical
+considerations, that there is no matter-wave, and that matter itself does not have any wave
+property. The sole `wave' in quantum mechanics, and indeed in all mechanics, is the `action-
+wave'. It is shown, with explicit demonstrations and calculations, that the new mechanics
+solves the vexing problems of the collapse of the quantum state and quantum measurement,
+as well as the alleged problem of nonlocality in multi-particle correlations. In addition, the
+new mechanics is free of the divergence of zero-point energy in the vacuum wave modes.
+With these clarifications and features, quantum mechanics seems completed, both in its
+structure and in its physical interpretation, a century after its formulation. Now, we can
+not only calculate with quantum mechanics, but also understand the dynamics consistently
+and causally, without conceptual clashes or ambiguities.
+
+\section{The Schr\"{o}dinger Equation}
+
+Schr\"{o}dinger started his exploration of a wave equation, for the matter wave conjectured
+by de Broglie, with the familiar differential equation for waves,
+\begin{equation*}
+\nabla^2 \psi (x,t) - \frac{\partial^2 \psi (x,t)}{u^2 \partial t^2} = 0 \tag{2}
+\end{equation*}
+where the velocity $u = E/ [2m(E - V )]^{1/2}$. With the time dependence of the $\psi$-function
+that obeys the relation $E = h\nu$ limited to $\psi(t) \infty \exp \pm i2\pi \nu t$, one gets $\ddot{\psi} (t) = -4 \pi^2 E^2 \psi /h^2$.
+The resulting equation with the Coulomb potential in the Hydrogen atom $V (r) = e^2 /r$,
+\begin{equation*}
+\nabla^2 \psi + \frac{8 \pi^2 m}{h^2} (E + e^2 / r) \psi = 0 \tag{3}
+\end{equation*}
+\textit{did provide the Bohr spectrum of Hydrogen atom} \cite{chap27-key1}. Since the interpretation of $\psi$ as the
+matter wave of the single electron around the nucleus sort of fitted what the equation was
+suggesting, the initial interpretation of the Schr\"{o}dinger equation as a wave equation repre-
+senting dynamics, and its wavefunction as the matter wave in space, was widely influential.
+This general identification of matter as a dual entity, \textit{as both a particle and a wave}, determined the rest of the history of the physical interpretation of QM. However, it may be noted that there was no compulsion from experiments to equate the particles with a wave,
+both propagating in space; what was empirically required was the association of only the
+dynamics (motion) of the particle, and the material particle itself, with an unobservable
+wave-like entity, with the periodicity $\hbar$ in the action $S$.
+
+What was Schr\"{o}dinger's route from the equation
+\begin{equation*}
+\nabla^2 \psi(x,t) + \frac{2m}{\hbar^2} (E-V) \psi = 0 \tag{4}
+\end{equation*}
+to the final Schr\"{o}dinger equation? Stated concisely, he eliminated the quantity $E$ in the
+equation by writing the time derivative $\psi(t) = 2\pi i E \psi /h$. Then we get
+\begin{equation*}
+\nabla^2 \psi (x,t)  + \frac{2m}{\hbar^2} [-i \hbar \dot{\psi} (t)] - \frac{2m}{\hbar^2} V_{\psi} = 0 \tag{5}
+\end{equation*}
+which is the Schr\"{o}dinger equation
+\begin{equation*}
+i \hbar \frac{\partial \psi (x,t)}{\partial t} = - \frac{\hbar^2}{2m} \nabla^2 \psi (x,t) + V \psi  \tag{6}
+\end{equation*}
+
+Clearly, the logical path followed was not one that guaranteed, or even suggested, an
+equation of dynamics. Note that there was no relation made between the combination
+$(\nabla^2 + V )$ and an operator corresponding to the Hamiltonian of the system. The total energy
+was in fact represented by the time derivative because that was obtained by replacing $E$
+with $\dot{\psi}$, after assuming harmonic solutions. Also, one just assumed its general validity for
+time-dependent potentials as well. Schr\"{o}dinger invoked `success' as the justification for the
+procedure. However, the price paid for the success was that he had to hesitantly abandon
+any acceptable physical interpretation of the psi-function and the wave equation. The first
+order time derivative may remind us of the first order derivative in the celebrated Hamilton's
+equation (called the Hamilton-Jacobi equation) of the action,
+\begin{equation*}
+\frac{\partial S (x,p,t)}{\partial t} = - H \tag{7}
+\end{equation*}
+
+But this is misleading, because there is no obvious relation between the function ψ and the
+action S. The reason I retraced Schr\"{o}dinger's path to the final equation was to remind
+that there is no direct correspondence between the action $S(x, p, t)$ and the wavefunction
+$\psi(x, t)$ in spite of the fact that Schr\"{o}dinger derived much of the motivation and guidance
+from Hamilton's work while formulating a wave equation for quantum dynamics. However,
+the superficial resemblance, especially the first order time derivative, has been serving as a
+misdirecting factor.
+
+During his struggle to find a physical interpretation, Schr\"{o}dinger realized that only the
+product $\psi(x) \psi^{\ast}(x)$ had any clear physical meaning; he saw $e|\psi|^2$ as representing the effective
+charge density of a `fuzzy' electron. Even that was beyond an interpretation consistent
+with the conventional notion of localized matter. It was only after Born's interpretation of
+$\psi(x)\psi^{\ast} (x)$ as a probability density, rather than a real density of any physical quantity in
+space, that one could claim a satisfactory structure in the theory of QM. Then, one got the
+option to keep the particle as `point' matter, and $|\psi|^2$ as referring to the (statistical) ensemble
+of particles. However, it also marks a missed opportunity for a complete understanding of
+the new mechanics. If $\psi(x) \psi^{\ast} (x)$ is indeed the probability density, an evolution equation
+for $\psi(x)$ should most naturally be related to the time evolution of the probability density,
+rather than to the dynamics of a particle! And it is known that the time evolution of the
+probability density of a closed ensemble is given by a first order partial differential equation
+in time, called the equation of continuity or conservation,
+\begin{equation*}
+\frac{\partial \rho (x,t)}{\partial t} = - \nabla \cdot (\rho \upsilon) \tag{8}
+\end{equation*}
+
+This equation does not appear to be related to either the Hamilton's equation or the
+Schr\"{o}dinger equation, especially with its first order spatial derivative. However, there are
+two ways in which the second spatial derivatives are implicit in the continuity equation. One
+is because the dynamical velocity $\upsilon$ is related to the action $S$ in the Hamilton's equation
+by the relation $p = m \upsilon =\nabla S$. Another is when the statistical ensemble has a diffusion-
+like behaviour, in which case the probability current is proportional to the gradient of the
+probability density, $\rho \upsilon = - D \nabla \rho$. Then
+\begin{equation*}
+\upsilon = - \frac{1}{\rho} D \nabla \rho  = - D \nabla (l n \rho) \tag{9}
+\end{equation*}
+
+
+Thus, the evolution equation for the probability density in the general case is
+\begin{equation*}
+\frac{\partial \rho (x,t)}{\partial t} = - \nabla \cdot (\rho \upsilon) = - \nabla \cdot \left(\frac{\rho \nabla S}{m} - D \nabla \rho \right) = - \frac{\rho}{m} \nabla^2 S - \frac{1}{m} \nabla \rho \cdot \nabla S + D \nabla^2 \rho \tag{10} 
+\end{equation*}
+
+This has second spatial derivatives on the right. But it is not an equation for dynamics. It
+is explicitly an equation for the statistical ensemble and the quantity $\rho (x, t)$ characterizes
+the ensemble. In fact, the structure of the Schr\"{o}dinger equation is of this kind, rather than
+of the Hamilton's equation, because the time evolution of quantity is related to the spatial
+derivatives of the same quantity. If indeed this is the case, then the psi-function in the
+Schr\"{o}dinger equation is definitely not be the matter wave of de Broglie! When all these
+aspects are evident, why do we still associate $\psi$ with a matter wave and such a wave with a
+particle? We shouldn't, as the rest of the discussion will prove.
+
+The probability density $\rho$ in the equation 8 is of course a positive quantity. Therefore,
+$\rho = \psi \psi^{\ast}$ where $\psi = Ae^{i\phi}$ is complex and single valued, with $A$ positive. Then, $+\sqrt{\rho} = A$.
+We call $A$ the probability amplitude. The equation 8 is equivalent to
+\begin{equation*}
+\frac{\partial A}{\partial t} = \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon \tag{11}
+\end{equation*}
+
+A diffusive term $D \nabla^2 A$ can be added to this as well, keeping the linear nature of the equation,
+but its justification for the ensemble of single particle dynamics comes from another quarter,
+to be explained later.
+
+But
+\begin{equation*}
+\frac{\partial A}{\partial t} = \frac{\partial \psi e^{-i \phi}}{\partial t} = e^{-i \phi} \frac{\partial \psi}{\partial t} -  i \psi e^{-i \phi} \frac{\partial \phi}{\partial t}  \tag{12}
+\end{equation*}
+
+Therefore, the time evolution equation for either $A$ or $\psi$, both representing the probability
+density, also contains the time derivative of the dummy phase $\phi$. However, irrespective
+of this fact, $\psi$ here is the (complex) square root of the ensemble probability density and
+$\partial \psi /\partial t$ is its time evolution, given by the continuity equation. Its association with a single
+particle is only in the sense of a probability density (the physical quantities associated with
+the particle are associated with this probability density). Anticipating the result that this
+$\psi (x, t) = Ae^{i \phi}$ is indeed the wavefunction of the Schr\"{o}dinger equation, we establish the first
+rigorous relation on our journey, straight from the definition.
+\begin{equation*}
+\psi (x, t) \psi (x, t)^{\ast} = \rho(x, t) \tag{13}
+\end{equation*}
+
+So, Born's rule connecting the wavefunction and the probability density is exact. It does
+not depend on what the dummy phase physically is.
+
+As the next step, I show that, just as $A(x, t) = + \sqrt{\rho}$, \textit{the function $\psi (x, t)$ obeys the
+continuity equation for the probability density, when the system is a dynamical system}, i.e.,
+when the ensemble obeys the equation of dynamics. I emphasize that the function $\psi(x, t)$
+does not represent a single particle or single dynamical history. Note than $A$ and $\psi$ are
+dimensionless, as $\rho$ is. Writing $\phi = S/\varepsilon$,
+\begin{align*}
+\frac{\partial \psi}{\partial t} & = e^{i S/\varepsilon} \frac{\partial A}{\partial t} + \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} \\
+\frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t}() & = e^{i S  / \varepsilon} \left(- \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon + D \nabla^2 A \right) \tag{14}
+\end{align*}
+
+The spatial derivatives of $\psi$ are
+
+%%%%%%%% 
