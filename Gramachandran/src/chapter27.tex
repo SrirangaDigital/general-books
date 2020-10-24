@@ -235,9 +235,305 @@ does not represent a single particle or single dynamical history. Note than $A$ 
 dimensionless, as $\rho$ is. Writing $\phi = S/\varepsilon$,
 \begin{align*}
 \frac{\partial \psi}{\partial t} & = e^{i S/\varepsilon} \frac{\partial A}{\partial t} + \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} \\
-\frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t}() & = e^{i S  / \varepsilon} \left(- \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon + D \nabla^2 A \right) \tag{14}
+\frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} & = e^{i S  / \varepsilon} \left(- \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon + D \nabla^2 A \right) \tag{14}
 \end{align*}
 
 The spatial derivatives of $\psi$ are
+\begin{align*}
+\nabla \psi & = \frac{i}{\varepsilon} Ae^{iS/\varepsilon} \nabla S + e^{iS/\varepsilon} \nabla A\\
+\nabla^2 \psi & = \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} \nabla^2 S + \frac{i}{\varepsilon} \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} (\nabla S)^2 + \frac{i}{\varepsilon} e^{eS/\varepsilon} \nabla S \cdot \nabla A + e^{i S /\varepsilon} \nabla^2 A + \frac{i}{\varepsilon} e^{iS/\varepsilon } \nabla S \cdot \nabla A \\
+& = \frac{i}{\varepsilon} Ae^{is/\varepsilon} \nabla^2 S + \frac{2i}{\varepsilon} e^{iS/\varepsilon} \nabla S \cdot \nabla A + e^{i S/\varepsilon} \nabla^2 A - \frac{1}{\varepsilon^2} A e^{iS/\varepsilon} (\nabla S)^2 \tag{15}
+\end{align*}
 
-%%%%%%%% 
+Now, multiplying by $i\varepsilon /2m$ gives
+\begin{equation*}
+\frac{i\varepsilon}{2m} \nabla^2 \psi + \frac{i}{\varepsilon} A e^{iS/\varepsilon} \frac{(\nabla S)^2}{2m} = e^{iS/\varepsilon} \left(\frac{-A}{2m} \nabla^2 S - \frac{1}{m} \nabla A \cdot \nabla S + \frac{i\varepsilon}{2m} \nabla^2 A \right) \tag{16}
+\end{equation*}
+
+Since, $\upsilon = \nabla S/m$, the expressions on the R.H.S in the equations 14 and 16 are equal,
+which is the time evolution of the square root of the probability density, $e^{iS/ \varepsilon} \dfrac{\partial A}{\partial t}$. Therefore,
+\begin{equation*}
+\frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} = \frac{i\varepsilon}{2m} \nabla^2 \psi + \frac{i}{\varepsilon} \frac{(\nabla S)^2}{2m} \tag{17}
+\end{equation*}
+
+We can already see that for a free particle, the second terms on both sides cancel, because
+the dynamics obeys the Hamilton's equation
+\begin{equation*}
+\frac{\partial S}{\partial t} = -H = -p^2 / 2m \tag{18}
+\end{equation*}
+and $\nabla S = p$. Thus, if the probability density is that of the dynamics of free particles, then
+the Hamilton's equation is a constraint for the time evolution of the probability density.
+Then,
+\begin{equation*}
+\frac{\partial\psi}{\partial t} = \frac{i\varepsilon}{2m} \nabla^2 \psi \tag{19}
+\end{equation*}
+
+Considering an arbitrary potential $V (x, t)$,
+\begin{equation*}
+\frac{\partial \psi}{\partial t} + \frac{i}{\varepsilon} \psi V (x,t) - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} = \frac{i\varepsilon}{2m} \nabla^2 \psi + \frac{i}{\varepsilon} \psi \left( \frac{(\nabla S)^2}{2m} + V (x,t)\right)  \tag{20}
+\end{equation*}
+
+The last terms are again eliminated on both sides, by adding the scaled V to the expressions.
+
+The surviving part is
+\begin{equation*}
+\frac{\partial \psi}{\partial t} + \frac{i}{\varepsilon} \psi V (x,t) = \frac{i \varepsilon}{2m} \nabla^2 \psi \tag{21}
+\end{equation*}
+
+
+This evolution equation for the square root of the probability density of the dynamics of
+particles, $\psi = Ae^{i\phi}$, where $\phi$ is the scaled action $S/\varepsilon$ of a dynamical system, is indeed the
+Schr\"{o}dinger equation. This can be rearranged to the standard form,
+\begin{equation*}
+i \varepsilon \frac{\partial \psi}{\partial t} = - \frac{\varepsilon^2}{2m} \nabla^2 \psi + V \psi \tag{22}
+\end{equation*}
+
+Clearly $\psi$ has nothing to do with a ``matter wave", nor does it represent the single dynamical
+history \cite{chap27-key2}. It pertains to a statistical ensemble of single dynamical histories. So, clearly the
+Schr\"{o}dinger equation is not a single particle dynamical equation, in contrast to an equation
+like $dp/dt = F$. What we have accomplished is the derivation of the Schr\"{o}dinger equation
+from first principles, clarifying its ensemble nature and completely revealing the physical
+nature of the function $\psi (x, t) = \sqrt{\rho}e^{i\phi}$. The scale relevant for particle dynamics is obtained
+from experiments, as $\varepsilon = \hbar$.
+
+\section{The $\psi$-Function in the Schr\"{o}dinger Equation}%% III
+
+From the point of view of physics, it is very important to realize that the Schr\"{o}dinger
+quantum mechanics does not concern a matter-wave, or even a single piece of matter in
+dynamics. Obviously, the general impression created by the historical development towards
+this equation, that the $\psi$-function is directly associated with single quantum history and
+the matter wave speculated by de Broglie, are misplaced, as shown by the discussion and
+derivation above. It is also clear why all the subsequent attempts at a palatable interpre-
+tation of the $\psi$-function and the equation failed. If an ensemble equation for probability
+density is mistaken for a dynamical equation of a single particle, the gap is too large to be
+bridged by any interpretation. The only voice that came close to pointing to the correct path
+was of Einstein, when he repeatedly suggested that the problems of interpretation could be
+avoided if the $\psi$-function represented the ensemble \cite{chap27-key3}, \cite{chap27-key4}. However, that was not enough, as
+the derivation here shows. The necessary constraint that the probability density pertains to
+dynamics is implemented through the hybrid nature of the $\psi$-function, containing $\sqrt{\rho}$ and
+the common scaled action $S/\hbar$, in the phase factor. This factor is common to all members
+of the ensemble, if it is a pure state. Otherwise, this also will be averaged as $(S/\hbar)$, and
+may even be zero, as in an incoherent mixture.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{src/images/chap27/1.eps}
+\caption{FIG. 1: Proof against a matter-wave in real space: A) While the fact of detection as a particle is
+unambiguous, any proposal of matter-wave in both paths, with each branch possesing the entire
+mass, charge etc. violates all conservation laws. B) However, there is clear empirical evidence for
+a physical entity, which is not a matter-wave, that is present in both paths in space, for every
+particle. The evidence is in the fact that the observable state at the output port depends on what
+physical element or interaction is present in both paths, for every single particle.}
+\end{figure}
+
+
+Having made the seemingly incredible assertion that there are no matter-waves in real
+physical situations of quantum mechanics, one is obliged to give some empirical support to
+the claim, apart from the demonstration in the derivation of the Schrödinger equation. This
+is in fact easy. Consider the configuration of a Mach-Zehnder interferometer for atoms with
+widely separated paths. The $\psi$-function of quantum mechanics gives the correct results for
+all observable features, whether it is in the individual paths or in the interference zone, after
+the beam-combiner. The $\psi$-function splits at the beam splitter, to be divided in the two
+paths. But, what is clear is that the particle cannot be in both paths without violating
+all fundamental conservation laws! Associated with each branch of the $\psi$-function, there is
+the intrinsic properties of the particle in full (mass, electric charge, spin etc.), not divided
+or smeared out. Therefore, a virtual copy in each branch would violate the conservation
+laws, and a division of any sort would not be consistent with the general empirical results.
+Therefore, it should be obvious that the $\psi$-function is not the matter wave, even in this
+simple single particle situation. But, the $\psi$-function is all what is required to reproduce
+all observable results. Hence, we can conclude that no matter-wave is involved in quantum
+mechanics \cite{chap27-key2}. Instead, what is present as the $\psi$-function is an ensemble entity. Therefore,
+we need to find a missing element; it is operative in each dynamical history, but it is not
+the nonexistent matter-wave or the ensemble $\psi$-function!
+
+In fact, the exact context in which the wave character is apparent in dynamics was
+mentioned by Einstein, in his article `Physics and Reality' [3]: ``Experiments on interference
+made with particle rays have given a brilliant proof that \textit{the wave character of phenomena of
+motion} as assumed by the theory does, really, correspond to the facts." I have italicized the
+crucial phrase; the wave character is not of the matter, but of the `phenomenon of motion'.
+
+In the same article, Einstein stated another crucial insight about the $\psi$-function, which I
+proved now from the analysis of the Schrödinger equation. Einstein wrote, “The $\psi$-function
+does not in any way describe a condition which could be that of a single system; it relates
+rather to many systems, to `an ensemble of systems' in the sense of statistical mechanics.
+If, except for certain special cases, the $\psi$-function furnishes only statistical data concerning
+measurable magnitudes, the reason lies not only in the fact that the operation of measuring
+introduces unknown elements, which can be grasped only statistically, but also because of
+the very fact that the $\psi$-function does not, in any sense, describe the condition of one single
+system. The Schr\"{o}dinger equation determines the time variations which are experienced
+by the ensemble of systems which may exist with or without external action on the single
+system." It cannot be stated more transparently.
+
+It is now clear why quantum mechanics has only statistical predictions; the simple reason
+is that its fundamental equation is an equation for the evolution of the probability density.
+But, we have not yet touched the cardinal feature of quantum mechanics, the phenomenon
+of interference of dynamical possibilities. Why is the probability density structured with
+interference? How can it happen without a `wave'? What is the reason for the intrinsic
+irreducible uncertainty? We will discuss and answer these questions now.
+
+\section{Then, What is the Equation of Dynamics?}%% 4
+
+Having shown that the Schrödinger equation is not the dynamical equation, we have
+the new task of finding the equation that governs the single particle dynamics. Of course
+we know empirically that it cannot be very far from Newton’s equation, which may also
+be expressed in its Lagrangian form or the Hamiltonian form. Since, we found that the
+hybrid character of the $\psi$-function involves the action, we now focus on its physical role
+and proceed. Here, we need to go all the way back to W. R. Hamilton's insightful paper
+in 1832 that introduced the principle of stationary action, generalizing from Fermat’s least
+action principle for optics \cite{chap27-key5}. In that paper, he developed a universal and ``general method
+for expressing the paths of light, and of the planets". Hamilton also discussed the rationale
+involved in the principle, through Huygens’ theory of wave optics. In the subsequent papers
+\cite{chap27-key6} that described the method for mechanics based on the `characteristic function', or the
+action function $S(x, t)$, he wrote the general equation for dynamics as
+\begin{equation*}
+\frac{\partial S}{\partial t} = -H, \quad H = T + V  \tag{23}
+\end{equation*}
+
+The momentum is derived from the action as $\partial S/ \partial x = p$. The equation was called the
+Hamiltonian equation by C. G. J. Jacobi, who developed it further mathematically \cite{chap27-key7}.
+However, this equation does not explicitly acknowledge the original physical feature of action
+that was the core reason for its property of being `stationary' or, extremal! The central
+property that enables interference, which results in the dynamics along the path of stationary
+action, is precisely \textit{the physical manifestation of action as a wave-like entity}. Otherwise, there
+is no way the dynamical possibilities can cancel each other. The principle is operative because
+the action is physically manifest in a wave property where the phase of the wave is the scaled
+action. With this insight, the entire path is clear. As it stands, the Hamilton's equation
+is not complete. Instead of an equation for the action, the correct and complete equation
+that incorporates the Huygen's principle should have been for an oscillatory function of the
+action. Hence, I complete Hamilton's action mechanics by modifying the equation to a new
+universal form \cite{chap27-key2}
+\begin{equation*}
+\frac{\partial \zeta(S)}{\partial t} = - \frac{i}{\epsilon} H \zeta \tag{24}
+\end{equation*}
+where the function $\zeta(x, t) = \exp(iS(x, t)/\varepsilon)$. I call this function the `action-wave', since it
+has a direct physical presence. This equation is the key step in the correct description of a
+single particle, of a single dynamical history, in the reconstructed universal dynamics. The
+parameter $\varepsilon$ is the fundamental scale of action that is to be determined empirically. This
+equation contains Hamilton's equation $\partial S/\partial t = -H$.
+
+The form of this single particle equation, without an ensemble `probability amplitude'
+$A = + \sqrt{\rho}$ in it, shows why there was the prevalent confusion about the Schr\"{o}dinger equation
+as a dynamical equation. The similarity is only partial though. This equation for the
+time evolution of action does not involve the average over the ensemble. The Schr\"{o}dinger
+equation is for the time evolution of a different entity, $\psi = \sqrt{\rho} \exp(iS/\varepsilon)$, represeting the
+whole ensemble.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{src/images/chap27/2.eps}
+\caption{FIG. 2: The difference between the path in the conventional Hamiltonian dynamics (A) and in
+the new universal mechanics (B). In both schemes, the path has the stationary action $\delta S = 0$.
+But factually, as indicated in the panel (B), the path has the intrinsic uncertainty $\Delta S \geq \hbar$ and a
+nonzero concentration of action $\nabla^2 S$, which drives the diffusion (dephasing) of the action.}
+\end{figure}
+
+\textit{The first feature I note is that the action-wave is necessarily complex valued}. For, the relation between the first order time evolution and the Hamiltonian involves second order spatial
+derivatives. Therefore, the dynamical equation cannot be built on a real periodic function
+like cos($S/\varepsilon$) or on a real linear combination of sinusoidal functions; the action wave needs
+both quadratures as a complex valued function, $cos(S/\varepsilon) + i \sin(S/\varepsilon)$. This is easily seen for
+a constant potential, $H = V$. If $\zeta(S) \sim \cos (S/\varepsilon)$, then $\partial \zeta/\partial t \sim \sin (S/\varepsilon) \partial S/\partial t$, whereas
+the right side is just $iV \cos (S/\varepsilon)$, which does not make sense. Therefore, the fundamental
+equation for dynamics involves complex numbers because complex valued action waves are
+the basis of dynamics at all scales. This feature is then \textit{inherited} by quantum mechanics.
+The action-wave has unit amplitude, dictated by the dynamical equations $\partial S/\partial t = -H$ and
+$\partial S/\partial x = p$.
+
+We note the immediate main result that the new Hamiltonian action-wave equation
+predicts intrinsic indeterminism in dynamics at all scales. The fact that the action is
+involved in dynamics in the form $\exp(iS/\varepsilon)$ implies that the action is specified only up to
+the scale $\varepsilon$. This does not mean that the action cannot be smaller than $\varepsilon$ or that it cannot be
+arranged to be of a precise value in some dynamical arrangement. What I mean is that the
+action $S$ is uncertain to $\varepsilon$ when no specific arrangement is made to define it precisely. This
+will be explained quantitatively, with an example, later. Then, the equation itself contains
+the stochastic element. With $H = (p^2 /2m) + V$, and $p = \partial S/\partial x$ we get,
+\begin{align*}
+i \varepsilon \frac{\partial \zeta (S)}{\partial t} & = \left(-\zeta \frac{\partial S}{\partial t} \right) = \left(-\frac{\varepsilon^2}{2m} \nabla^2 + V \right) \zeta = \zeta \left(\frac{p^2}{2m}  + V\right) - \zeta \frac{i\varepsilon}{2m} \nabla^2 S \tag{25}\\
+\frac{\partial S}{\partial t} & = - H + \frac{i \varepsilon}{2m} \nabla^2 S\tag{26} 
+\end{align*}
+
+In addition to the familiar Hamiltonian mechanics in the first term, there is an additional
+term proportional to $\varepsilon$ and to the \textit{concentration of the action in space}, $\nabla^2 S$. The equation
+is the single particle, single dynamical history equation. Hence, this term points to the
+variations in an ensemble of action-waves, for the dynamics of a single particle. \textit{When $\varepsilon$ is
+tiny, this term is negligible. But it will become significant for microscopic dynamics}. To see
+this clearly, consider the situation when $p \simeq 0$, and no potential. Then, we get
+\begin{equation*}
+\frac{\partial S}{\partial t} = \frac{i\varepsilon}{2m} \nabla^2 S \tag{27}
+\end{equation*}
+
+Though this resembles the diffusion equation, there is only one particle here and there is no
+real diffusion possible. Also, the diffusing variable is not a density of particles here! What
+is diffusing is the action itself. (Note that this is not the Schr\"{o}dinger equation, though it
+resembles it. This is an equation for action when the Hamiltonian is zero). Now we see what
+is the source of the small term diffusion-like time evolution of the probability amplitude,
+$D \nabla^2 A$, with the imaginary diffusion constant $D = i \hbar /2m$. The dephasing of the action
+waves in the equation 27 is the reason for that term.
+
+The physical picture of new dynamics is then the following. The particle is indivisible,
+and always localized. It has a dynamics determined by the action, with $\nabla S = p$, where
+the action evolves according to the modified Hamilton's equation. The action is manifest in
+dynamics as an entity with a periodicity defined by the scale $\hbar$. The action of the particle
+(system) is defined with the intrinsic uncertainty of $\hbar$. The true and accurate statement of
+the uncertainty principle, applicable to all scales of dynamics, is then $\Delta S  \geq \hbar$. The division
+of $\Delta S$ into $\Delta p \Delta x$, $\Delta E \Delta t$ etc. are less precise statements of the fundamental uncertainty.
+Since the action is the product of a dynamical quantity and the corresponding coordinate,
+the division is justified, but it is not rigorous. The correct statement of the uncertainty
+principle is just that the action is uncertain to $\hbar$ or larger.
+
+The new equation of dynamics suggests that the wave in dynamics is then the wave
+of action, represented by the function $\zeta (S) = \exp(iS/\varepsilon)$. Since we know from experiments
+that there is some physical entity which encodes the physical characteristics of the particle
+in the multiple paths (possibilities), it can only be the action wave. This is consistent will
+all empirical facts and it has none of the vexing interpretational issues that people have
+faced and are unable to deal with. Now let us see how every foundational physical issue of
+quantum mechanics has dissolved away.
+
+\section{Quantum Mechanics Without Collapse}%%% 5
+
+The problem of the collapse of the $\psi$-function arose because the $\psi$-function was always
+interpreted as representing a single dynamical history. Therefore, a state that is a superposition of two states like
+\begin{equation*}
+|\psi \rangle = a |S1 \rangle + b |S2 \rangle \tag{28}
+\end{equation*}
+was interpreted to become, or \textit{collapse to $|\psi' \rangle = |S1 \rangle$  or $|S2 \rangle$, in each realization of the
+dynamics}. Then, the dynamics has to restart with a new $\psi$-function, causing discontinuity
+in the Schr\"{o}dinger evolution. Also, when interpreted as a matter-wave, or anything related to a real presence in space, this reduction implies the instantaneous disappearance of such an entity from every other possibility, including different paths and locations in space. 
+Therefore, the need for such collapse, in standard QM, is a severe unresolved problem.
+
+However, I have shown now that the $\psi$-function pertains to the ensemble. Then, it is
+clear that there is no `superposition' of the \textit{states of the particle}, nor is any reduction of
+the function during each observation; a probability density of the ensemble does not change
+during each realization of its possible stochastic results! The superposition is only for the
+action waves, and not for the physical state of the particle. This single physical feature
+of the new mechanics is the only central fact to be understood for the solution of any
+foundational issue. The particle is either in the state $|S1 \rangle$ or in the state $|S2\rangle$, and never
+in a superposition, in each dynamical history, and that is what we observe. I reiterate that
+a superposition of particle (matter) states blatantly violates all conservation laws, because
+a general superposition would then include formally (mathematically) the situation of the
+particle being in two spatially separated paths. The particle is already in the path where
+it is observed, with an uncertainty of its action amounting to $\hbar$, and only that much. The
+detection of the particle interrupts only the action wave in that particular path. It does not
+cause any change in the propagation of the action waves in any other possibility. Since the
+action waves carry only action, and no energy or momentum, none of the physical quantities
+needs the reassigning, as it is necessary in standard quantum mechanics with the device of
+the `collapse of the wavefunction'. We have solved the core difficulty of standard quantum
+mechanics and have removed its fundamental arbitrariness and discontinuity. Now we need
+to verify that the core property of interference happens because of the overlap of the action
+waves in the two paths. This is the step that was missing from Einstein’s advocacy of the
+interpretation of the $\psi$-function as pertaining to the ensemble.
+
+The coefficients in the $\psi$-function are $a = + \sqrt{\rho_1}$ and $b = + \sqrt{\rho_2}$ (the sign from any phase
+belongs to the action waves and not to the real amplitudes, which are ensemble quantities).
+Here the (discrete) probabilities $\rho_1$ and $\rho_2$ that determine the division of the particles in the
+two possibilities depend on the experimental configuration, like the width of the slits etc.
+The same configuration determines the division of the action as well, into $ae^{iS/\hbar}$ and $be^{iS/\hbar}$.
+After the dynamical evolution, the action waves combine as
+\begin{equation*}
+\zeta(S) = ae^{iS(a)/\hbar} + be^{iS (b)/\hbar} \tag{29}
+\end{equation*}
+
+The intensity is
+\begin{align*}
+\zeta (S) \zeta (S)^{\ast} & = a^2 + b^2 + abe^{-iS (a) /\hbar + iS (b)/\hbar} + abe^{+ S (a)/\hbar - iS (b)/\hbar}  \\
+& = a^2 + b^2 + ab \left[e^{\frac{i}{\hbar} (S(b) - S(a))} + e^{\frac{i}{\hbar}(S(b) - S (a))} \right] \tag{30}\\
+& = \rho_1 + \rho_2 + 2 \sqrt{\rho_1 \rho_2} \cos  (S (b)) / \hbar - S (a) / \hbar
+\end{align*}
+
