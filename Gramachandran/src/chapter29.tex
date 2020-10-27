@@ -125,7 +125,7 @@ Consider the addition of two angular momenta:
 \makeatother
 \begin{equation}
 \vec{j_1} + \vec{j_2} = \vec{J}, \label{chap29-eq1} 
-\end{equation*}
+\end{equation}
 whose orthonormal basis vectors are written in the Dirac bra-ket notation as:
 \begin{equation} 
 |j_1,m_1\rangle , |j_2,m_2\rangle, |J,M\rangle. \label{chap29-eq2}
@@ -170,29 +170,43 @@ where
 
 The introduction of a multiplicative numerical factor and a phase factor enabled 
 Wigner to simplify the symmetries of the 3-$j$ coefficient to:
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(i)  invariance to column permutations of the 3-$j$ coefficient.\\ \\
-(ii) for odd permutations of the columns acquire a phase factor $(-1)^J$, with\\
-\indent $J=j_1+j_2+j_3$, and \\ \\
-(iii) For $m_i \rightarrow -m_i, i=1,2,3$,  also acquires the phase factor $(-1)^J$.\\ \\
+\begin{itemize}
+\item invariance to column permutations of the 3-$j$ coefficient.
+\item for odd permutations of the columns acquire a phase factor $(-1)^J$, with $J=j_1+j_2+j_3$, and 
+\item For $m_i \rightarrow -m_i, i=1,2,3$,  also acquires the phase factor $(-1)^J$.
+\end{itemize}
+
 Thus, there are (up to a phase factor) 3! column permutations and to each one of these a 
-$$m_i \rightarrow -m_i \qquad \qquad {\rm mirror\ symmetry}.\label{chap29-eq}9)$$ 
+\begin{equation}
+m_i \rightarrow -m_i \qquad \qquad {\rm mirror\ symmetry}.\label{chap29-eq9}
+\end{equation}
+
 These are the 12 classical symmetries of the 3-$j$ coefficient. 
 In the year 1958, T. Regge discovered and added dramatically six additional
 symmetries and these are known as the Regge symmetries of the Wigner 3-$j$ coefficient.
 This was by observing that the nine integer parameters for the three angular momenta and
 their corresponding projections, referred to by Rach (1942):
-$$ -j_1+j_2+j_3, \quad  j_1-j_2+j_3, \quad j_1+j_2-j_3, $$
-$$ j_1-m_1,\quad j_2-m_2,\quad j_3-m_3,\quad j_1+m_1,\quad j_2+m_2,\quad j_3+m_3,\label{chap29-eq}10)$$
+\begin{equation}
+-j_1+j_2+j_3, \quad  j_1-j_2+j_3, \quad j_1+j_2-j_3,\\
+j_1-m_1,\quad j_2-m_2,\quad j_3-m_3,\quad j_1+m_1,\quad j_2+m_2,\quad j_3+m_3,\label{chap29-eq10}
+\end{equation}
 into a $3\times 3$ square symbol and represented the same as:
-$$\left( \begin{tabular}{ccc}
-$j_1\ j_2\ j_3$ \\ $m_1\ m_2\ m_3$ \\ 
-\end{tabular} \right) =\left\| \begin{tabular}{ccc}
-$-j_1+j_2+j_3$ &  $j_1-j_2+j_3$ &  $j_1+j_2-j_3$\\
-$j_1-m_1$ & $j_2-m_2$ & $j_3-m_3$ \\
+\begin{equation}
+\left(
+\begin{tabular}{ccc}
+$j_1\ j_2\ j_3$\\ 
+$m_1\ m_2\ m_3$\\ 
+\end{tabular} 
+\right) 
+= \left\| 
+\begin{tabular}{ccc}
+$-j_1+j_2+j_3$ & $j_1-j_2+j_3$ &  $j_1+j_2-j_3$\\
+$j_1-m_1$ & $j_2-m_2$ & $j_3-m_3$\\
 $j_1+m_1$ & $j_2+m_2$ & $j_3+m_3$\\
-\end{tabular} \right\|$$
-$$ =\|R_{ik}\| \label{chap29-eq}11)$$
+\end{tabular} 
+\right\|
+=\|R_{ik}\| \label{chap29-eq11}
+\end{equation}
 and noted that all sums of columns and tows add to $J$, a property of Magic Squares. 
 Therefore, Regge noted that there are in all 72 symmetries for the 3-$j$ coefficient
 and asserted that the 3-$j$ coefficient is invariant to 3! column permutations and to
@@ -202,10 +216,12 @@ discovered by him ``cannot justify these symmetries using physical arguments", a
 also did not write them down explicitly. This provided the present author (1978) 
 with an opportunity to write down these six Regge symmetries of the 3-$j$ coefficient 
 explicitly, using the property satisfied by the nine elements of $\|R_{ik}\|$:
-$$ R_{\ell p} + R_{mp}\ =\ R_{nq} + R_{nr},\label{chap29-eq}12)$$ 
+\begin{equation}
+R_{\ell p} + R_{mp}\ =\ R_{nq} + R_{nr},\label{chap29-eq12}
+\end{equation}
 for cyclic permutations of $(\ell mn)=(123)$ and $(pqr)=(123)$. 
-\\ \\
- M.E.Rose(1955) in an Appendix to his book on \textit{Mutipole Fields}, wrote
+
+M.E.Rose(1955) in an Appendix to his book on \textit{Mutipole Fields}, wrote
 that the series representation can be expressed in terms of a generalized hypergeometric 
 function of unit argument ${}_3F_2(A, B, C; D, E; 1)$,  the author showed (1978) that
 while the $_3F_2(1)$ manifestly exhibits only 12 symmetries and these are not the 
@@ -213,185 +229,301 @@ classical symmetries, but Regge symmetries on which the classical are
 superposed. Therefore, it was argued and proved that there exist a set of six $_3F_2(1)$s 
 and these can be expressed in a single formula using the elements of 
 the Regge symbol (11) and this set is:
-$$ \left( \begin{tabular}{ccc}
+\begin{equation}
+\begin{split}
+\left(
+\begin{tabular}{ccc}
 $j_1$&  $j_2$& $j_3$ \\ $m_1$& $m_2$& $m_3$ \\ 
-\end{tabular} \right) =  \delta_{m_1+m_2+m_3,0} \prod_{i,k=1}^3 [R_{ik}!/(J+1)!]^{1/2} $$
-$$ \times \ (-1)^{\sigma(pqr)} [\Gamma(1-A, 1-B, 1-C, D, E)]^{-1}$$
-$$ \times \ {}_3F_2(A, B, C; D, E; 1)\hfill \label{chap29-eq}13)$$
+\end{tabular}
+\right) 
+=  \delta_{m_1+m_2+m_3,0} \prod_{i,k=1}^3 [R_{ik}!/(J+1)!]^{1/2}\\
+\times \ (-1)^{\sigma(pqr)} [\Gamma(1-A, 1-B, 1-C, D, E)]^{-1}\\
+\times \ {}_3F_2(A, B, C; D, E; 1)\hfill \label{chap29-eq13}
+\end{split}
+\end{equation}
 where
-$$ A=-R_{2p},\quad B=-R_{3q},\quad C=-R_{1r},$$ 
-$$ D=1+R_{3r}-R_{2p},\quad E=1+R_{2r}-R_{3q} \label{chap29-eq}14)$$
+\begin{equation}
+\begin{split}
+A & =-R_{2p},\quad B=-R_{3q},\quad C=-R_{1r},\\
+D & =1+R_{3r}-R_{2p},\quad E=1+R_{2r}-R_{3q} \label{chap29-eq14}
+\end{split}
+\end{equation}
 and 
-$$ \Gamma(x,y,\ldots)=\Gamma(x)\Gamma(y)\ldots \label{chap29-eq}15)$$
+\begin{equation}
+\Gamma(x,y,\ldots)=\Gamma(x)\Gamma(y)\ldots \label{chap29-eq15}
+\end{equation}
 for all permutations of \ $(pqr)=(123)$. In addition to this Vander Waerden form,
 also known in literature till then, were three other fundamental forms:
-$$ {\rm Wigner\ form:}\quad {}_3F_2\left(\begin{tabular}{lc}
+\begin{equation}
+{\rm Wigner\ form:}\quad {}_3F_2
+\left(
+\begin{tabular}{lc}
 &$j_1-m_1+1,\ -j_3-m_3,\ j_1-j_2-j_3;\ 1$\\
-&$-j_2-j_3-m_1,\ j_1-j_2-m_3+1$\\ \end{tabular} \right) \label{chap29-eq}16)$$  
-$${\rm Racah\ form:}\qquad {}_3F_2\left( \begin{tabular}{c}
+&$-j_2-j_3-m_1,\ j_1-j_2-m_3+1$\\ 
+\end{tabular} 
+\right) \label{chap29-eq16}
+\end{equation}
+\begin{equation}
+{\rm Racah\ form:}\qquad {}_3F_2
+\left(
+\begin{tabular}{c}
 $j_1+m_1+1,\ -j_3+m_3,\ j_1+m_1; 1$\\
-$-j_2-j_3+m_1,\ j_2-j_3-m_3+1$\\ \end{tabular} \right) \label{chap29-eq}17)$$
-$$ 	{\rm Majumdar\ form:}\ {}_3F_2\left( \begin{tabular}{c}
+$-j_2-j_3+m_1,\ j_2-j_3-m_3+1$\\ 
+\end{tabular} 
+\right) \label{chap29-eq17}
+\end{equation}
+\begin{equation}
+{\rm Majumdar\ form:}\ {}_3F_2
+\left(
+\begin{tabular}{c}
 $j_1+j_2-j_3+1,\ -j_3-m_3,\ j_1-j_2-j_3;$ \ 1\\
 $-2j_3,\ j_1-j_3-m_2+1$  \\ 
-\end{tabular} \right) \label{chap29-eq}18)$$
+\end{tabular} 
+\right) \label{chap29-eq18}
+\end{equation}
 As in the case of the Van der Waerden set of s ix $_3F_2(1)$s, the author obtained
 sets six Wigner, Racah and Majumdar forms. It was also shown that the more symmetric
 set of six $_3F_2(1)$s are \textit{necessary and sufficient} to account for the 72 
-symmetries of the 3-$j$ coefficient.\\  \\ 
- The author has shown that using the Weber-Erdelyi (WE) transformation formula
+symmetries of the 3-$j$ coefficient.
+
+The author has shown that using the Weber-Erdelyi (WE) transformation formula
 for the terminating $_3F_2(1)$, explicitly:
-$$ _3F_2(-n,\alpha,\beta ;\ \gamma,\delta;\ 1)\ = \ \frac{\Gamma(\gamma, \gamma +n-\alpha )}
-{\Gamma(\gamma +n, \gamma -\alpha )}$$
-$$\times _3F_2(-n,\alpha,\delta -\beta;\ 1+\alpha -\gamma -n;\ 1), \label{chap29-eq}19)$$ 
+\begin{equation}
+\begin{split}
+_3F_2(-n,\alpha,\beta ;\ \gamma,\delta;\ 1)\ & = \ \frac{\Gamma(\gamma, \gamma +n-\alpha )} {\Gamma(\gamma +n, \gamma -\alpha )}\\
+& \times _3F_2(-n,\alpha,\delta -\beta;\ 1+\alpha -\gamma -n;\ 1), \label{chap29-eq19}
+\end{split}
+\end{equation}
 where $n$ is an integer which determines the termination of the series, from 
 the Vander Werden form of the 3-$j$ coefficient, the three other forms due to 
-Wigner, Racah and Majumdar were derived by the author.\\ \\
- Besides the sets of $_3F_2(1)$s, inter-relationship between the Vander Waerden,
+Wigner, Racah and Majumdar were derived by the author.
+
+Besides the sets of $_3F_2(1)$s, inter-relationship between the Vander Waerden,
 Wigner, Racah and Majumdar sets of $3F_2(1)$s,  $q$-analogues of the 3-$j$ coefficients
 and the corresponding sets of basic generalized hypergeometric functions, $_3\Phi_2(q)$s
-have been studied by the author.\\ \\
- {\bf 6-$j$ coefficient}\\ \\
- Consider the addition of three angular momenta:
-$$ \vec{j_1} + \vec{j_2} + \vec{j_3} \ =\ \vec{J}, \label{chap29-eq}20)$$
+have been studied by the author.
+
+\section*{\bf 6-$j$ coefficient}
+
+Consider the addition of three angular momenta:
+\begin{equation}
+\vec{j_1} + \vec{j_2} + \vec{j_3} \ =\ \vec{J}, \label{chap29-eq20}
+\end{equation}
 which can be coupled two at a time to get an intermediate angular momentum which can
 be then added to the third, to get the final angular momentum. Let two possible coupling 
 schemes be:
-$$  \vec{j_1} + \vec{j_2}\ =\ \vec{j_{12}}, \quad  \vec{j_{12}} + \vec{j_3} \ =\ \vec{J}, 
-\label{chap29-eq}21)$$
+\begin{equation}
+\vec{j_1} + \vec{j_2}\ =\ \vec{j_{12}}, \quad  \vec{j_{12}} + \vec{j_3} \ =\ \vec{J}, \label{chap29-eq21}
+\end{equation}
 and 
-$$  \vec{j_2} + \vec{j_3}\ =\ \vec{j_{23}}, \quad  \vec{j_1} + \vec{j_{23}} \ =\ \vec{J}. 
-\label{chap29-eq}22)$$
+\begin{equation}
+\vec{j_2} + \vec{j_3}\ =\ \vec{j_{23}}, \quad  \vec{j_1} + \vec{j_{23}} \ =\ \vec{J}. \label{chap29-eq22}
+\end{equation}
+
 The complete set of commuting generators corresponding to these two coupling schemes are:
-$$ j_1^2, j_2^2,j_3^2,j_{12}^2,J^2,J_z\quad {\rm and}\quad 
-j_1^2, j_2^2,j_3^2,j_{23}^2,J^2,J_z. \label{chap29-eq}23)$$
+\begin{equation}
+j_1^2, j_2^2,j_3^2,j_{12}^2,J^2,J_z\quad {\rm and}\quad j_1^2, j_2^2,j_3^2,j_{23}^2,J^2,J_z. \label{chap29-eq23}
+\end{equation}
+
 These then provide the labels for the orthogonal basis states which can be represented by 
-$$|(j_1,j_2)j_{12}, j_3, J, M\rangle  \quad {\rm and} \quad  
-|j_1,(j_2,j_3)j_{23}, J, M\rangle. \label{chap29-eq}24)$$ 
-The two orthonormal basis states (23) and (24) are then related to each other by an
-orthogonal transformation:
-$$|(j_1,j_2)j_{12}, j_3, J, M\rangle \ =\ \sum_{j_{23}} \ U(j_1,j_2,J,j_3; j_{12}j_{23})\ 
-|j_1,(j_2,j_3)j_{23}, J, M\rangle, \label{chap29-eq}25)$$
-where $ U(j_1,j_2,J,j_3; j_{12}j_{23})$ is called a recoupling coefficient, which 
+\begin{equation}
+|(j_1,j_2)j_{12}, j_3, J, M\rangle  \quad {\rm and} \quad |j_1,(j_2,j_3)j_{23}, J, M\rangle. \label{chap29-eq24}
+\end{equation}
+
+The two orthonormal basis states (\eqref{chap29-eq23}) and (\eqref{chap29-eq24}) are then related to each other by an orthogonal transformation:
+\begin{equation}
+|(j_1,j_2)j_{12}, j_3, J, M\rangle \ =\ \sum_{j_{23}} \ U(j_1,j_2,J,j_3; j_{12}j_{23})\ |j_1,(j_2,j_3)j_{23}, J, M\rangle, \label{chap29-eq25}
+\end{equation}
+where $U(j_1,j_2,J,j_3; j_{12}j_{23})$ is called a recoupling coefficient, which 
 when written explicitly will be the product of four Clebsch-Gordan coefficients summed
-over two (of the six possible) independent projection quantum numbers. \\ \\
- Racah (1942) in a series of classic papers, on complex atomic spectra, showed 
+over two (of the six possible) independent projection quantum numbers.
+
+Racah (1942) in a series of classic papers, on complex atomic spectra, showed 
 that the recoupling coefficient can be written as a single sum series independent of 
 the projection quantum numbers:
-$$ W(a\ b\ c\ d;\ e\ f) =  U(a\ b\ c\ d;\ e\ f) / \sqrt{(2e+1)(2f+1)}, eqno(24)$$  
+\begin{equation*}
+W(a\ b\ c\ d;\ e\ f) =  U(a\ b\ c\ d;\ e\ f) / \sqrt{(2e+1)(2f+1)}, eqno(24)
+\end{equation*}
 and
-$$ W(abcd;ef)\ =\ (-1)^{a+b+c+d} \Delta(abe)\Delta(cde)\Delta(acf)\Delta(bdf) $$
-$$\indent \qquad \times\sum_P(-1)P (P+1)!\left[ \prod_{i=1}^4 (P-\alpha_i)! \prod_{j=1}^3
-(\beta_j-P)! \right]^{-1} \label{chap29-eq}25) $$
-with  
-$$ \alpha_1=a+b+e,\quad \alpha_2=c+d+e, \quad \alpha_3=a+c+f,\quad \alpha_4=b+d+f,$$
-$$ \beta_1=a+b+c+d,\quad \beta_2=a+d+e+f, \quad \beta_3=b+c++e+f, \label{chap29-eq}26) $$ 
+\begin{equation*}
+\begin{split}
+W(abcd;ef)\ & =\ (-1)^{a+b+c+d} \Delta(abe)\Delta(cde)\Delta(acf)\Delta(bdf) \\
+ & \times\sum_P(-1)P (P+1)!\left[ \prod_{i=1}^4 (P-\alpha_i)! \prod_{j=1}^3 (\beta_j-P)! \right]^{-1} \label{chap29-eq25a}
+\end{split}
+\end{equation*}
+with
+\begin{equation}
+\begin{split}
+\alpha_1 & = a+b+e,\quad \alpha_2 = c+d+e, \quad \alpha_3 = a+c+f,\quad \alpha_4 = b+d+f,\\
+\beta_1 & = a+b+c+d,\quad \beta_2 = a+d+e+f, \quad \beta_3 = b+c++e+f, \label{chap29-eq26}
+\end{split}
+\end{equation}
 and 
-$$ \max(\alpha_1,\alpha_2,\alpha_3,\alpha_4)\leq P\leq \min\beta_1,\beta_2,\beta_3).
-\label{chap29-eq}27)$$
-The symmetries of the Racah coefficient are interpreted in terms of the 6-$j$ coefficient
- which is defined as:
-$$\left\{ \begin{tabular} {c} 
-a\ b\ c\\ d\ e\ f \\ \end{tabular} \right\} \ =\ (-1)^{a+b+c+d}\ W(abcd;ef) \label{chap29-eq}28)$$
-and they are:\\ \\
-(i) the 3! column permutations,\\ \\
-(ii) the interchange of any two elements in the first row with the corresponding elements 
-of the second row of this symbol, also referred to as `row' permutations.\\ \\ 
- These 24 symmetries are called as the \textit{classical tetrahedral symmetries} of the
-6-$j$ coefficient. \\ \\
- This highly symmetric form for the 6-$j$ coefficient, not as a product of four 
+\begin{equation}
+\max(\alpha_1,\alpha_2,\alpha_3,\alpha_4)\leq P\leq \min\beta_1,\beta_2,\beta_3). \label{chap29-eq27}
+\end{equation}
+
+The symmetries of the Racah coefficient are interpreted in terms of the 6-$j$ coefficient which is defined as:
+\begin{equation}
+\left\{\begin{tabular} {c} 
+a\ b\ c\\ 
+d\ e\ f \\ 
+\end{tabular} \right\} 
+\ =\ (-1)^{a+b+c+d}\ W(abcd;ef) \label{chap29-eq28}
+\end{equation}
+and they are:
+\begin{enumerate}
+\item the 3! column permutations,
+\item the interchange of any two elements in the first row with the corresponding elements of the second row of this symbol, also referred to as `row' permutations.
+\end{enumerate}
+
+These 24 symmetries are called as the \textit{classical tetrahedral symmetries} of the 6-$j$ coefficient.
+
+This highly symmetric form for the 6-$j$ coefficient, not as a product of four 
 3-$j$ coefficients but as a single sum series, independent of the projection quantum
 numbers can be found in the crisp, short paper of Regge (1959), and it follows that
 the 6-$j$ coefficient has 144 symmetries since the series is invariant to the 4! 
 permutations of the $\alpha$s and the 3! permutations of the $\beta$s. Regge 
 dramatically discovered these six additional symmetries on each of which the 24 
 calssical tetrahedral symmetries are superposed and explicitly wrote down the 
-six Regge symmetries of the 6-$j$ coefficient. \\ \\
- In 1975, the author (with senior colleague T.S.Santhanam and Ph.D. student 
+six Regge symmetries of the 6-$j$ coefficient.
+
+In 1975, the author (with senior colleague T. S. Santhanam and Ph.D. student 
 K. Venkatesh), as in the case of the 3-$j$ coefficient, replacing the factorials by 
-the gamma functions, $n!=\Gamma(n+1)$ and using the reflection formula for the gamma 
+the gamma functions, $n! = \Gamma(n+1)$ and using the reflection formula for the gamma 
 functions:
-$$ \Gamma(z)\Gamma(1-z) = \pi \csc \pi z \Rightarrow \Gamma(1-z-n)=(-1)^n
-\frac{\Gamma(z, 1-z)}{\Gamma(z+n)}, \label{chap29-eq}29)$$
-showed that, by setting, in (25), $s=\beta_k-P, k=1,2,3$, in succession, we get a 
+\begin{equation}
+\Gamma(z)\Gamma(1-z) = \pi \csc \pi z \Rightarrow \Gamma(1-z-n)=(-1)^n \frac{\Gamma(z, 1-z)}{\Gamma(z+n)}, \label{chap29-eq29}
+\end{equation}
+showed that, by setting, in (\eqref{chap29-eq25}), $s=\beta_k-P, k=1,2,3$, in succession, we get a 
 set of three series representations which can be rearranged to get a set of three 
 hypergeometric functions, as:
-$$\left\{ \begin{tabular} {c} 
-a\ b\ c\\ d\ e\ f \\ \end{tabular} \right\} \ =\ (-1)^{E+1}\ N\ \Gamma(1-E)$$
-$$\times [\Gamma(1-A, 1-B, 1-C, 1-D, F, G)]^{-1}$$
-$$\times {}_4F_3(A\ B\ C\ D;\ E\ F\ G;\ 1), \label{chap29-eq}30)$$      
+\begin{equation}
+\begin{split}
+\left\{ 
+\begin{tabular} {c} 
+a\ b\ c\\ d\ e\ f \\ \end{tabular} 
+\right\} 
+& =\ (-1)^{E+1}\ N\ \Gamma(1-E)\\
+& \times [\Gamma(1-A, 1-B, 1-C, 1-D, F, G)]^{-1}\\
+& \times {}_4F_3(A\ B\ C\ D;\ E\ F\ G;\ 1), \label{chap29-eq30}
+\end{split}
+\end{equation}
 where
-$$ N\ =\ \Delta(abe)\ \Delta(cde)\ \Delta(acf)\ \Delta(bdf), \label{chap29-eq}31)$$
-$$ \Delta(xyz)\ =\  \left[ \frac{(-x+y+z)!\ (x-y+z)!\ (x+y-z)!}{(x+y+z+1)!} 
-\right]^{1/2}; \label{chap29-eq}32)$$
-and (32) implies the triangle inequalities to be satisfied by $(xyz)$, explicitly,\\
-$|x-y| \leq x \leq x+y$; 
-$$A=e-a-b, \quad B=e-c-d, \quad C=f-a-c, \quad D=f-b-d, $$
-$$ E=-a-b-c-d-1, \quad F=e+f-b-c+1, \quad G=e+f-a-d+1;\label{chap29-eq}33)$$
+\begin{equation}
+N\ =\ \Delta(abe)\ \Delta(cde)\ \Delta(acf)\ \Delta(bdf), \label{chap29-eq31}
+\end{equation}
+\begin{equation}
+\Delta(xyz)\ =\  \left[ \frac{(-x+y+z)!\ (x-y+z)!\ (x+y-z)!}{(x+y+z+1)!} \right]^{1/2}; \label{chap29-eq32}
+\end{equation}
+and (\eqref{chap29-eq32}) implies the triangle inequalities to be satisfied by $(xyz)$, explicitly, $|x-y| \leq x \leq x+y$; 
+\begin{equation}
+\begin{split}
+A & = e-a-b, \quad B=e-c-d, \quad C=f-a-c, \quad D=f-b-d,\\
+E & = -a-b-c-d-1, \quad F=e+f-b-c+1, \quad G=e+f-a-d+1;\label{chap29-eq33}
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+A & = a-b-e, \quad B=d-c-e, \quad C=a-c-f, \quad D=b-d-f,\\
+E & = -b-c-e-f-1, \quad F=a+d-b-c+1, \quad G=a+d-e-f+1; \label{chap29-eq34}
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+A & = b-a-e, \quad B=c-d-e, \quad C=c-a-f, \quad D=b-d-f,\\
+E & = -a-d-e-f-1, \quad F=b+c-a-d+1, \quad G=b+c-e-f+1. \label{chap29-eq35}
+\end{split}
+\end{equation}
 
-$$A=a-b-e, \quad B=d-c-e, \quad C=a-c-f, \quad D=b-d-f, $$
-$$ E=-b-c-e-f-1, \quad F=a+d-b-c+1, \quad G=a+d-e-f+1; \label{chap29-eq}34)$$
-
-$$ A=b-a-e, \quad B=c-d-e, \quad C=c-a-f, \quad D=b-d-f, $$
-$$ E=-a-d-e-f-1, \quad F=b+c-a-d+1, \quad G=b+c-e-f+1. \label{chap29-eq}35) $$
-
- These three ${}_4F_3(1)$s are referred to as the Set I of three ${}_4F_3(1)$s 
+These three ${}_4F_3(1)$s are referred to as the Set I of three ${}_4F_3(1)$s 
 which is \textit{necessary and sufficient} to account for the 144 symmetries of the 
 6-$j$ coefficient, if one wants to write the 6-$j$ coefficient in terms of the 
 generalized hypoergeometric function of unit argument. These ${}_4F_3(1)$s are 
-called as Saalsch\"{u}tzian, since the numerator and denominator parameters 
+called as Saalschützian, since the numerator and denominator parameters 
 satisfy the condition:
-$$ A+B+C+D+1 = E+F+G, \label{chap29-eq}36)$$
+\begin{equation}
+A+B+C+D+1 = E+F+G, \label{chap29-eq36}
+\end{equation}
 or, in words, the difference between the sum of the denominator parameters and 
-the sum of the numerator parameters is equal to 1.\\ \\
- In a sequel, the author and his student K. Venkatesh\footnote{K. Venkatesh 
+the sum of the numerator parameters is equal to 1.
+
+In a sequel, the author and his student K. Venkatesh\footnote{K. Venkatesh 
 was a student of the author at IMSc, for about two years, but due to circumstances 
 beyond his control, Venkatesh discontinued his studies at Chennai, to return to 
 his hometown Mysore. There, thanks to GR, who was willing to take him as his 
 student, Venkatesh competed his Ph.D as a student of GR at the Mysore university, 
-by 1980.}, set $s=P-\alpha_\ell,\linebreak[4] \ell=1,2,3,4$,
+by 1980.}, set $s = P-\alpha_\ell$, $\ell=1,2,3,4$,
 in succession, to obtain (Srinivasa Rao and Venkatesh, 1977) the following set II 
 of four of $_4F_3(1)$s, from the corresponding set of four series representations:
-$$\left\{ \begin{tabular} {c} 
-a\ b\ c\\ d\ e\ f \\ \end{tabular} \right\} \ =\ (-1)^{A'-2}\ N\ \Gamma(1-E)$$
-$$\times [\Gamma(1-B', 1-C', 1-D', E', F', G')]^{-1}$$
-$$\times {}_4F_3(A'\ B'\ C'\ D';\ E'\ F'\ G';\ 1), \label{chap29-eq}37)$$      
+\begin{equation}
+\begin{split}
+\left\{
+\begin{tabular} {c} 
+a\ b\ c\\ 
+d\ e\ f \\ 
+\end{tabular} 
+\right\}
+& = \ (-1)^{A'-2}\ N\ \Gamma(1-E)\\
+& \times [\Gamma(1-B', 1-C', 1-D', E', F', G')]^{-1}\\
+& \times {}_4F_3(A'\ B'\ C'\ D';\ E'\ F'\ G';\ 1), \label{chap29-eq37}
+\end{split}
+\end{equation}
 where
-$$ A'= a+b+e+2, \quad B'=a-c-f, \quad C'=b-d-f, \quad D'=e-c-d, $$
-$$ E'=a+b-c-d+1, \quad F'=a+e-d-f+1, \quad G'=b+d-c-f+1;\label{chap29-eq}38)$$
+\begin{equation}
+\begin{split}
+A' & = a+b+e+2, \quad B'=a-c-f, \quad C'=b-d-f, \quad D'=e-c-d,\\
+E' & = a+b-c-d+1, \quad F'=a+e-d-f+1, \quad G'=b+d-c-f+1;\label{chap29-eq38}
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+A' & = c+d+e+2, \quad B'=c-a-f, \quad C'=d-b-f, \quad D'=e-a-b,\\
+E' & = c+d-a-b+1, \quad F'=c+e-b-f+1, \quad G'=d+e-a-f+1;\label{chap29-eq39}
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+A' & = a+c+f+2, \quad B'=c-d-e, \quad C'=a-b-e, \quad D'=f-b-d,\\
+E' & = a+c-b-d+1, \quad F'=a+f-d-e+1, \quad G'=c+f-b-c+1; \label{chap29-eq40}
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+A' & = b+d+f+2, \quad B'=b-a-e, \quad C'=d-c-e, \quad D'=f-a-c,\\
+E' & = b+d-a-c+1, \quad F'=b+f-c-e+1, \quad G'=d+f-a-e+1. \label{chap29-eq41}
+\end{split}
+\end{equation}
 
-$$ A'= c+d+e+2, \quad B'=c-a-f, \quad C'=d-b-f, \quad D'=e-a-b, $$
-$$ E'=c+d-a-b+1, \quad F'=c+e-b-f+1, \quad G'=d+e-a-f+1;\label{chap29-eq}39)$$
+Simply stated, the set of parameters of the four $_4F_3(1)$s is obtained by
+superposing the `row' permutations of the $\left\{ \begin{tabular} {c} a\ b\ c\\ d\ e\ f \\ \end{tabular} \right\}$ on the parameters of (\eqref{chap29-eq37}).
 
-$$A'=a+c+f+2, \quad B'=c-d-e, \quad C'=a-b-e, \quad D'=f-b-d, $$
-$$ E'=a+c-b-d+1, \quad F'=a+f-d-e+1, \quad G'=c+f-b-c+1; \label{chap29-eq}40)$$
-
-$$ A'=b+d+f+2, \quad B'=b-a-e, \quad C'=d-c-e, \quad D'=f-a-c, $$
-$$ E'=b+d-a-c+1, \quad F'=b+f-c-e+1, \quad G'=d+f-a-e+1. \label{chap29-eq}41) $$
-
- Simply stated, the set of parameters of the four $_4F_3(1)$s is obtained by
-superposing the `row' permutations of the $\left\{ \begin{tabular} {c} 
-	a\ b\ c\\ d\ e\ f \\ \end{tabular} \right\}$ on the parameters of (37).
 Note however that superposing the column permutations of the 6-$j$ coefficient
 on the parameters of a given $_4F_3(1)$ belonging to this set results only in a
-permutation of the numerator and denominator parameters amongst themselves.\\ \\
- The author and Rajeswari (1985), observed that these two sets, set I and set II,
+permutation of the numerator and denominator parameters amongst themselves.
+
+The author and Rajeswari (1985), observed that these two sets, set I and set II,
 of $_4F_3(1)$s are necessary and sufficient since each one of the three $_4F_3(1)$
 belonging to set I accounts for only 48 of the distinctly different symmetries of 
 the 6-$j$ coefficient and so, together the set of three will account for the 
-$48\times 3=144$ symmetries of the 6-$j$ coefficient. Similarly, since each one of 
-the four  $_4F_3(1)$ belonging to set II accounts for only 36 of the distinctly 
+$48\times 3 = 144$ symmetries of the 6-$j$ coefficient. Similarly, since each one of 
+the four $_4F_3(1)$ belonging to set II accounts for only 36 of the distinctly 
 different symmetries of the 6-$j$ coefficient, this set of four will account for 
-the $4\times 36=144$ symmetries of the 6-$j$ coefficient.\\ \\
- Srinivasa Rao and Rajeswari (1985) addressed the question as to whether these 
+the $4\times 36 = 144$ symmetries of the 6-$j$ coefficient.
+
+Srinivasa Rao and Rajeswari (1985) addressed the question as to whether these 
 two equivalent sets of $_4F_3(1)$s are related to each other, by first generalizing 
 the property of \textit{reversal} sof series given by Bailey (1935) for the case of a
-$_3F_2(1)$, to the case of a Saalsch\"{u}tzian $_4F_3(1)$ to  obtain the identity:
-$$ {}_4F_3(ABCD;\ EFG;\ 1)\ =\ (-1)^D\ \Gamma(1-A,1-B,1-C,F,G,D-E+1) $$
-$$ \times [\Gamma(D-A+1, D-B+1, D-C+1, F-D, G-D, 1-E)]^{-1}$$
-$$ \times {}_4F_3(A',B',C',D';\ E',F',G';\ 1), \label{chap29-eq}42)$$
-where $D(=D')$ is the minimum of the  negative numerator parameters which determines 
-the number of terms in the series and using (42), showing that from a $_4F_3(1)$ 
+$_3F_2(1)$, to the case of a Saalschützian $_4F_3(1)$ to obtain the identity:
+\begin{equation}
+\begin{split}
+{}_4F_3(ABCD;\ EFG;\ 1)\ & =\ (-1)^D\ \Gamma(1-A,1-B,1-C,F,G,D-E+1)\\
+& \times [\Gamma(D-A+1, D-B+1, D-C+1, F-D, G-D, 1-E)]^{-1}\\
+& \times {}_4F_3(A',B',C',D';\ E',F',G';\ 1), \label{chap29-eq42}
+\end{split}
+\end{equation}
+where $D(=D')$ is the minimum of the negative numerator parameters which determines 
+the number of terms in the series and using (\eqref{chap29-eq42}), showing that from a $_4F_3(1)$ 
 belonging to set II, except for a trivial permutation amongst the numerator or 
 denominator parameters of the generalized hypergeometric function, one can obtain 
 all the three $_4F_3(1)$ belonging to set I, by a judicious use of the reversal 
@@ -402,123 +534,215 @@ the triangle inequalities which are sacrosanct and the realization that the perm
 of a positive parameter with a negative parameter (either in the numerator or the 
 denominator) will result in a symmetry which is not physically meaningful symmetry, 
 such as the Minton symmetry (1970) and at best an unphysical symmetry which is 
-manifestly present in the theory of angular momentum, viz. the 
-$$ j\rightarrow -j-1 \qquad ({\rm Yutsis\ or\ `mirror'\ symmetry}) \label{chap29-eq}43)$$
+manifestly present in the theory of angular momentum, viz. the
+\begin{equation} 
+j\rightarrow -j-1 \qquad ({\rm Yutsis\ or\ `mirror'\ symmetry}) \label{chap29-eq43}
+\end{equation}
 which reflects the invariance of the eigen value $j(j+1)$ of the Casimir operator 
 for angular momentum $J^2$. The interested reader, may refer to the research monograph 
-of the author with his student Dr. V. Rajeswari entitled \textit{Quantum Theory of Angular 
-	Momentum: Selected Topics} (Springer-Verlag / Narosa, 1993.).\\ \\
-\newpage
- {\bf 9-$j$ coefficient}\\ \\
- Consider the addition of four angular momenta -- viz. the orbital and spin 
+of the author with his student Dr. V. Rajeswari entitled \textit{Quantum Theory of Angular Momentum: Selected Topics} (Springer-Verlag / Narosa, 1993.).
+
+
+\section*{9-$j$ coefficient}
+
+Consider the addition of four angular momenta -- viz. the orbital and spin 
 angular momenta of two particles, $\ell_1, s_1; \ell_2, s_2$, say. There are two 
 physically meaningful ways of coupling these four angular momenta to get the final 
 angular momentum $J$. These are:
-$$ \vec{\ell_1}+\vec{\ell_2} = \vec{L},\quad \vec{s_1}+\vec{s_2} = \vec{S},\quad
-\vec{L}+\vec{S} = \vec{J},\label{chap29-eq}44)$$
+\begin{equation}
+\vec{\ell_1}+\vec{\ell_2} = \vec{L},\quad \vec{s_1}+\vec{s_2} = \vec{S},\quad \vec{L}+\vec{S} = \vec{J},\label{chap29-eq44}
+\end{equation}
 and 
-$$ \vec{\ell_1}+\vec{s_1} = \vec{j_1},\quad \vec{\ell_2}+\vec{s_2} = \vec{j_2},\quad
-\vec{j_1}+\vec{j_2} = \vec{J},\label{chap29-eq}45)$$
+\begin{equation}
+\vec{\ell_1}+\vec{s_1} = \vec{j_1},\quad \vec{\ell_2}+\vec{s_2} = \vec{j_2},\quad \vec{j_1}+\vec{j_2} = \vec{J},\label{chap29-eq45}
+\end{equation}
 The complete set of commuting generators required to represent these schemes are:
-$$ \ell_1^2, \ell_2^2, L^2, s_1^2, s_2^2, S^2, J^2, J_z \label{chap29-eq}46)$$
+\begin{equation}
+\ell_1^2, \ell_2^2, L^2, s_1^2, s_2^2, S^2, J^2, J_z \label{chap29-eq46}
+\end{equation}
 and
-$$ \ell_1^2, s_1^2, j_1^2, \ell_2^2, s_2^2, j_2^2, J^2, J_z. \label{chap29-eq}47)$$
+\begin{equation}
+\ell_1^2, s_1^2, j_1^2, \ell_2^2, s_2^2, j_2^2, J^2, J_z. \label{chap29-eq47}
+\end{equation}
+
 These provide the labels for the orthonormal basis vectors for the $LS$ and $jj$ 
 coupling schemes, which can be denoted by:
-$$  |(\ell_1, \ell_2) L, (s_1, s_2) S, J, M\rangle \quad {\rm and} \quad 
- |(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle ,\label{chap29-eq}48)$$
+\begin{equation}
+|(\ell_1, \ell_2) L, (s_1, s_2) S, J, M\rangle \quad {\rm and} \quad |(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle ,\label{chap29-eq48}
+\end{equation}
 respectively. Decoupling  of the $LS$-coupled state
-$$|(\ell_1 \ell_2) L\ (s_1 s_2) S\ J\ M \rangle \label{chap29-eq}48a)$$ 
-using (4), requires three Clebsch-Gordan coefficients multiplied by the four 
-angular momentum states
-$$ |\ell_1 \mu_1 \rangle \quad |\ell_2 \mu_2 \rangle \quad |s_1 \nu_1 \rangle 
-\quad  |s_2 \nu_2 \rangle \label{chap29-eq}49)$$
-Then using (3), these four states are recoupled to get the $jj$-coupled state  
-$$ |(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle.\label{chap29-eq}48b) $$
-These two orthonormal $LS$-coupled and $jj$-coupled basis states are related 
-through an orthogonal transformation:
-$$  |(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle \ =\ 
-\sum_{L,S} \left( \begin{tabular}{c}
-$\ell_1 \ s_1 \ j_1$\\   $\ell_2 \ s_2 \ j_2$\\ $L \ S \ J$\\ \end{tabular} \right)
-|(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle  \label{chap29-eq}50)$$ 
- This $LS-jj$ transformation coefficient introduced by Wigner (1940), is related to 
+\begin{equation*}
+|(\ell_1 \ell_2) L\ (s_1 s_2) S\ J\ M \rangle \label{chap29-eq48a}
+\end{equation*}
+using (\eqref{chap29-eq4}), requires three Clebsch-Gordan coefficients multiplied by the four angular momentum states
+\begin{equation}
+|\ell_1 \mu_1 \rangle \quad |\ell_2 \mu_2 \rangle \quad |s_1 \nu_1 \rangle \quad  |s_2 \nu_2 \rangle \label{chap29-eq49}
+\end{equation}
+Then using (\eqref{chap29-eq3}), these four states are recoupled to get the $jj$-coupled state  
+\begin{equation*}
+|(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle.\label{chap29-eq48b}
+\end{equation*}
+
+These two orthonormal $LS$-coupled and $jj$-coupled basis states are related through an orthogonal transformation:
+\begin{equation}
+|(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle \ =\ 
+\sum_{L,S} 
+\left(
+\begin{tabular}{c}
+$\ell_1 \ s_1 \ j_1$\\   
+$\ell_2 \ s_2 \ j_2$\\ 
+$L \ S \ J$\\ 
+\end{tabular}
+\right)
+|(\ell_1, s_1) j_1, (\ell_2, s_2) j_2, J, M\rangle  \label{chap29-eq50}
+\end{equation}
+
+This $LS-jj$ transformation coefficient introduced by Wigner (1940), is related to 
 the more symmetric 9-$j$ coefficient as
-$$\left\{ \begin{tabular}{c}
-$\ell_1 \ s_1 \ j_1$\\   $\ell_2 \ s_2 \ j_2$\\ $L \ S \ J$\\ \end{tabular} \right\} \
-=\ \{ [j_1]\ [j_2]\ [L]\ [S] \}^{-1}\ 
-\left( \begin{tabular}{c}
-$\ell_1 \ s_1 \ j_1$\\   $\ell_2 \ s_2 \ j_2$\\ $L \ S \ J$\\ \end{tabular} \right)
-\label{chap29-eq}51)$$
+\begin{equation}
+\left\{
+\begin{tabular}{c}
+$\ell_1 \ s_1 \ j_1$\\   
+$\ell_2 \ s_2 \ j_2$\\ 
+$L \ S \ J$\\ 
+\end{tabular}
+\right\} \ =\ \{ [j_1]\ [j_2]\ [L]\ [S] \}^{-1}\
+\left(
+\begin{tabular}{c}
+$\ell_1 \ s_1 \ j_1$\\   
+$\ell_2 \ s_2 \ j_2$\\ 
+$L \ S \ J$\\ 
+\end{tabular} 
+\right) \label{chap29-eq51}
+\end{equation}
+
 The explicit expression for the 9-$j$ coefficient is therefore a sum (over all 
 projection quantum numbers) of six 3-$j$ coefficients. Wigner also showed that it can
 be expressed as a single sum over a product of three 6-$j$ coefficients, as
-$$ \left\{ \begin{tabular}{c}
-$\ell_1 \ s_1 \ j_1$\\   $\ell_2 \ s_2 \ j_2$\\ $L \ S \ J$\\ \end{tabular} \right\} \
-=\ \sum_x (-1)^{2x} (2x+1) \left\{ \begin{tabular}{c}
-$j_1\ \ j_3\ \ j_{13}$\\ $j_{24}\ \ J\ \ x$ \\ \end{tabular} \right\}$$
-$$ \qquad \qquad \qquad \qquad \times \left\{ \begin{tabular}{c}
-$j_2\ \ j_4\ \ j_{24}$\\ $j_{3}\ \ x\ \ j_{34}$ \\ \end{tabular} \right\} \
-\left\{ \begin{tabular}{c} 
-$j_{12}\ \ j_{34}\ \ J$\\ $x\ \ j_1\ \ j_2$ \\ \end{tabular} \right\} \label{chap29-eq}52)$$
+\begin{equation}
+\begin{split}
+\left\{
+\begin{tabular}{c}
+$\ell_1 \ s_1 \ j_1$\\   
+$\ell_2 \ s_2 \ j_2$\\ 
+$L \ S \ J$\\ \end{tabular} 
+\right\} \
+& =\ \sum_x (-1)^{2x} (2x+1) 
+\left\{ 
+\begin{tabular}{c}
+$j_1\ \ j_3\ \ j_{13}$\\ 
+$j_{24}\ \ J\ \ x$ \\ 
+\end{tabular} 
+\right\}\\
+& \times \left\{
+\begin{tabular}{c}
+$j_2\ \ j_4\ \ j_{24}$\\ 
+$j_{3}\ \ x\ \ j_{34}$ \\ 
+\end{tabular} 
+\right\} \
+\left\{ 
+\begin{tabular}{c} 
+$j_{12}\ \ j_{34}\ \ J$\\ 
+$x\ \ j_1\ \ j_2$ \\ 
+\end{tabular} 
+\right\} \label{chap29-eq52}
+\end{split}
+\end{equation}
 with 
-$$ X_{min} \ \leq x \ \leq X_{max},$$
-$$ X_{min} \ =\ max \ (|j_1-J|,\ |j_3-j_{24}|,\ |j_2-j_{34}|) \label{chap29-eq}53)$$
-$$ X_{max} \ =\ max \ (j_1+J,\ j_3+j_{24},\ |j_2+j_{34})$$
+\begin{equation}
+\begin{split}
+& X_{min} \ \leq x \ \leq X_{max},\\
+X_{min} \ & =\ max \ (|j_1-J|,\ |j_3-j_{24}|,\ |j_2-j_{34}|)\\
+X_{max} \ & =\ max \ (j_1+J,\ j_3+j_{24},\ |j_2+j_{34})\label{chap29-eq53}
+\end{split}
+\end{equation}
 which follows from the fundamental theorem of recoupling theory (Biedenharn and Louck, 
 1981) according to which every recoupling coefficient (3$n$-$j$, $n=3,4,\ldots$) is 
-expressible as a summation over a product of 6-$j$ coefficients.\\ \\
- The symmetries of the 9-$j$ coefficient are:\\ \\
-(i) the 9-$j$ coefficient is invariant under even column or even row permutations.\\ \\
-(ii) an odd permuatation of the columns / rows of the 9-$j$ cofficient results in odd column
+expressible as a summation over a product of 6-$j$ coefficients.
+
+The symmetries of the 9-$j$ coefficient are:
+\begin{enumerate}
+\item the 9-$j$ coefficient is invariant under even column or even row permutations.
+\item an odd permuatation of the columns / rows of the 9-$j$ cofficient results in odd column
 permutations of three of the six 3-$j$ coefficients, which contribute to an overall phase
-factor of $(-1)^\sigma $, where $\sigma = j_1+j_2+j_{12}+j_3+j_4+j_{34}+j_{12}+j_{34}+J $.\\ \\
-(iii) invariance under transposition.\\ \\
+factor of $(-1)^\sigma $, where $\sigma = j_1+j_2+j_{12}+j_3+j_4+j_{34}+j_{12}+j_{34}+J$.
+\item invariance under transposition.
+\end{enumerate}
+
 Thus, the symmetry group of the 9-$j$ coefficient has 72 elements, it being the product of 
 the permutation group of three (columns), three (rows) amd two (transpositions) objects, viz.
-$S_3\times  S_3\times S_2$.\\ \\
- The simplest known form for the 9-$j$ coefficient due to Jucys and Bandzaitis (1977) is 
-the triple-sum series
-$$ \left\{ \begin{tabular}{c}
-$a \ b \ c$\\   $d \ e\ f$\\ $g \ h \ i$\\ \end{tabular} \right\} \
-=\ \frac{(dag)(beh)(igh)}{(def)(bac)(icf)}$$
-$$\times \sum_{x,y,z} \frac{(-1)^{x+y+z}}{x!\ y!\ z!} \frac{(x1-x)!\ (x2+x)!\ (x3+x)!}
-{(x4-x)!\ (x5-x)!}$$
-$$\times\frac{(y1+y)!\ (y2+y)!}{(y3+y)!\ (y4-y)!\ (y5-y)!} 
-\ \frac{(z1-z)!\ (z2+z)!}{(z3-z)!\ (z4-z)!\ (z5-z)!}$$ 
-$$\times \frac{(p1-y-z)!}{(p2+x+y)!\ (p3+x+z)!} \label{chap29-eq}54)$$
-where
-$$ 0 \leq x \leq {\rm min} (-d+e+f,\ c+f-i)\ =\ XF $$
-$$ 0 \leq y \leq {\rm min} ( g-h+i,\ b+e-h)\ =\ YF \label{chap29-eq}55) $$
-$$ 0 \leq z \leq {\rm min} ( a-b+c,\ a+d-g)\ =\ ZF $$
+$S_3 \times  S_3 \times S_2$.
 
+The simplest known form for the 9-$j$ coefficient due to Jucys and Bandzaitis (1977) is 
+the triple-sum series
+\begin{equation}
+\begin{split}
+& \left\{
+\begin{tabular}{c}
+$a \ b \ c$\\   
+$d \ e\ f$\\ 
+$g \ h \ i$\\ 
+\end{tabular} 
+\right\} \
+=\ \frac{(dag)(beh)(igh)}{(def)(bac)(icf)}\\
+& \times \sum_{x,y,z} \frac{(-1)^{x+y+z}}{x!\ y!\ z!} \frac{(x1-x)!\ (x2+x)!\ (x3+x)!}
+{(x4-x)!\ (x5-x)!}\\
+& \times\frac{(y1+y)!\ (y2+y)!}{(y3+y)!\ (y4-y)!\ (y5-y)!} \ \frac{(z1-z)!\ (z2+z)!}{(z3-z)!\ (z4-z)!\ (z5-z)!}\\
+& \times \frac{(p1-y-z)!}{(p2+x+y)!\ (p3+x+z)!} \label{chap29-eq54}
+\end{split}
+\end{equation}
+where
+\begin{equation}
+\begin{split}
+& 0 \leq x \leq {\rm min} (-d+e+f,\ c+f-i)\ =\ XF \\
+& 0 \leq y \leq {\rm min} ( g-h+i,\ b+e-h)\ =\ YF \\
+& 0 \leq z \leq {\rm min} ( a-b+c,\ a+d-g)\ =\ ZF \label{chap29-eq55}
+\end{split}
+\end{equation}
+\begin{equation}
 \begin{tabular}{lll}
 $x1=2f$ &\ $y1=-b+e+h$ &\ $z1=2a$ \\
 $x2=d+e-f$ &\ $y2=g+h-i$ &\ $z2=-a+b+c$ \\
-$x3=c-f+i$ &\ $y3=2h+1$ &\ $z3=a+d+g+1$\qquad   (56)\\
+$x3=c-f+i$ &\ $y3=2h+1$ &\ $z3=a+d+g+1$\\
 $x4=-d+e+f$ &\ $y4=b+e-h$ &\ $z4=a+d-g$ \\
 $x5=c+f-i$ &\ $y5=g-h+i$ &\ $z5=a-b+c$ \\
-$p1=a+d-h+i$ &\ $p2=-b+d-f+h$ &\ $p3=-a+b-f+i$\\
-& & \\
+$p1=a+d-h+i$ &\ $p2=-b+d-f+h$ &\ $p3=-a+b-f+i$\label{chap29-eq56}
 \end{tabular}
+\end{equation}
 and 
-$$ (abc)\ =\ \Delta(abc)\ \frac{(a+b+c+1)!}{(-a+b+ c)!}\label{chap29-eq}57)$$
-with $\Delta(xyz)$ given by (32).\\ \\
- If $c=0$, in (54), the triangle inequalities to be satisfied will require \ $f=i$
+\begin{equation}
+(abc)\ =\ \Delta(abc)\ \frac{(a+b+c+1)!}{(-a+b+ c)!}\label{chap29-eq57}
+\end{equation}
+with $\Delta(xyz)$ given by (32).
+
+If $c=0$, in (54), the triangle inequalities to be satisfied will require \ $f=i$
 \ and \ $a=b$, so that the triple sum series reduces to a single sum series which 
 corresponds to the 6-$j$ coefficient:
-$$ \left\{ \begin{tabular}{c}
-$f \ f \ 0$\\   $d \ c\ e$\\ $b \ a \ e$\\ \end{tabular} \right\} \
-=\ \frac{(-1)^{b+c+e+f}}{[e]\ [f]}\left\{ \begin{tabular} {c} 
-a\ b\ e\\ d\ c\ f \\ \end{tabular} \right\} \label{chap29-eq}58)$$
- It is to be noted that due to the total lack of symmetry of the Jucys-Bandzaitis 
-form for the 9-$j$ coefficient (54), even though (58) is a consequence of the symmetries 
-of the coefficient, it is not possible to show that setting any one of the nine 
+\begin{equation}
+\left\{
+\begin{tabular}{c}
+$f \ f \ 0$\\  
+$d \ c\ e$\\ 
+$b \ a \ e$\\ 
+\end{tabular} 
+\right\} \
+=\ \frac{(-1)^{b+c+e+f}}{[e]\ [f]}
+\left\{
+\begin{tabular} {c} 
+a\ b\ e\\ 
+d\ c\ f \\ 
+\end{tabular} 
+\right\} \label{chap29-eq58}
+\end{equation}
+It is to be noted that due to the total lack of symmetry of the Jucys-Bandzaitis 
+form for the 9-$j$ coefficient (\eqref{chap29-54}), even though (\eqref{chap29-58}) is a consequence of the symmetries of the coefficient, it is not possible to show that setting any one of the nine 
 parameters in the 9-$j$ coefficient equal to zero (except $c=0$), simply reduces the 
-triple sum to a single sum series. The interested may refer to QTAM.\\ \\
- Ever since I read at the end of a paper of A.C.T.Wu (1972, 1973), the negative statement
+triple sum to a single sum series. The interested may refer to QTAM.
+
+Ever since I read at the end of a paper of A.C.T.Wu (1972, 1973), the negative statement
 that while the 3-$j$ coefficient is a $_3F_2(1)$ and the 6-$j$ coefficient is a $_4F_3(1)$,
 the 9-$j$ coefficient was \u{not} a $_7F_6(1)$, I was intrigued and tried to relate
-the 9-$j$ coefficient to a sum of the product of three $_4F_3(1)$s because of (52) and
+the 9-$j$ coefficient to a sum of the product of three $_4F_3(1)$s because of (\eqref{chap29-52}) and
 the relation of the 6-$j$ coefficient to the $_4F_3(1)$ but this was hampered by our 
 finding that no single $_4F_3(1)$ was adequate to account for the 6-$j$ coefficients 144 
 symmetries and each of the $_4F_3(1)$ defined a sub-domain of the whole domain of definition
@@ -526,31 +750,49 @@ of the  9-$j$ coefficient. So, I noted that the best that can be said is that th
 is a sum of the folded product of three $_4F_3(1)$s or a sum of the folded product of six 
 $_3F_2(1)$s. Wu derived a new explicit expression as a six-fold sum. Wu (1973) examined his 
 earlier paper and found the six-fold sum does not satisfy the criterion of being the analog
-of Racah's formula for the Racah coefficient.  The new generalized triple hypergeometric function
+of Racah's formula for the Racah coefficient. The new generalized triple hypergeometric function
 (in three vairables, but unit argument) of Jucys-Bandzaitis is a special case of the general triple
-hypergeometric series studied by Laucricella, Saran and Srivastava (Srivastava, 1985).\\ \\
- {\bf Numerical computation of 3$n$-$j$ coefficients}\\ \\
- The need for the 3$n$-$j$ coefficients was already emphasized in the preamble section of this 
+hypergeometric series studied by Laucricella, Saran and Srivastava (Srivastava, 1985).
+
+\section*{Numerical computation of 3$n$-$j$ coefficients}
+
+The need for the 3$n$-$j$ coefficients was already emphasized in the preamble section of this 
 article. The author realized though a set of six $_3F_2(1)$s for the 3-$j$ coefficients and two 
 equivalent sets of three and four $_4F_3(1)$s were established as necessary and sufficient to 
 account for the 72 symmetries of the 3-$j$ and the 144 symmetries of the 6-$j$ coefficient, the 
 Avant Garde observation of the author (with graduate student K. Venkatesh, in 1978) that a generalized
 hypergeometric function can be computed in the nested form
-$$ {}_pF_q\left( \begin{tabular}{lr} $\alpha_1,\cdots \alpha_p\ ;$ & z\\
-$\beta_1,\cdots, \beta_q $& \\ \end{tabular} \right) \ =\ \sum_{n=0}^\infty 
+\begin{equation}
+\begin{split}
+{}_pF_q
+\left( 
+\begin{tabular}{lr} 
+$\alpha_1,\cdots \alpha_p\ ;$ & z\\
+$\beta_1,\cdots, \beta_q $& \\ 
+\end{tabular} 
+\right) & \ =\ \sum_{n=0}^\infty 
 \frac{(\alpha_1)_n (\alpha_2)_n \cdots (\alpha_p)_n}{(\beta_1)_n (\beta_2)_n \cdots (\beta_q)_n}
-\frac{z^n}{n!}$$
-$$ \times \left[ 1 + \frac{x_0}{y_0}\left(z + \frac{x_1}{y_1}\left( z + \frac{x_2}{y_2}\left(z + \cdots 
-\right) \right) \right) \right], \label{chap29-eq}59)$$
+\frac{z^n}{n!}\\
+& \times \left[ 1 + \frac{x_0}{y_0}\left(z + \frac{x_1}{y_1}\left( z + \frac{x_2}{y_2}\left(z + \cdots 
+\right) \right) \right) \right], \label{chap29-eq59}
+\end{split}
+\end{equation}
 where
-$$ x_i=\prod_{j=1}^p (\alpha_j + i)\quad {\rm and}\quad  
-y_i= (i+1)\prod_{k=1}^q (\beta_k + i).\label{chap29-eq}60)$$
+\begin{equation}
+x_i=\prod_{j=1}^p (\alpha_j + i)\quad {\rm and}\quad y_i= (i+1)\prod_{k=1}^q (\beta_k + i).\label{chap29-eq60}
+\end{equation}
+
 This nested form is in conformity with the standard procedure for polynomial evaluation 
 developed by Horner, in 1819, which we may call as the Horner scheme (and the author 
 came across this in the book of John A.N. Lee, 1966):
-$$ f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 $$
-$$ \quad = ((\cdots (((a_nx+ a_{n-1})x + a_{n-2})x + a_{n-3})x + $$
-$$ \qquad \cdots + a_1) + a_0), \label{chap29-eq}61)$$
+\begin{equation}
+\begin{split}
+& f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \\
+& \quad = ((\cdots (((a_nx+ a_{n-1})x + a_{n-2})x + a_{n-3})x + \qquad \cdots + a_1) + a_0), \label{chap29-eq61}
+\end{split}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 so that a minimum number of multiplications and temporary storage locations alone 
 are required. Wills (1971) pointed out that the straightforward method of Tamura (1970) 
 for programming the Clebsch-Gordan and Racah coefficients. The works of Wills (1971) and 
