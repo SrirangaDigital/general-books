@@ -108,27 +108,27 @@
   evenpage,
   contents={\usebox\topeven}
 ]{top.even}
-%~ \DeclareNewLayer[
-  %~ height=1.25cm,	
-  %~ foreground,
-  %~ bottommargin,
-  %~ evenpage,
-  %~ area={0pt}{760pt}{\paperwidth}{1.25cm},
-  %~ contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
-%~ \hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | September 2019}\hfill}%
-%~ }}
-%~ ]{bottom.even}
+\DeclareNewLayer[
+  height=1.25cm,	
+  foreground,
+  bottommargin,
+  evenpage,
+  area={0pt}{760pt}{\paperwidth}{1.25cm},
+  contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
+\hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | September 2020}\hfill}%
+}}
+]{bottom.even}
 
-%~ \DeclareNewLayer[
-  %~ height=1.25cm,
-  %~ foreground,
-  %~ bottommargin,
-  %~ oddpage,
-  %~ area={0pt}{760pt}{\paperwidth}{1.25cm},
-  %~ contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
-%~ \hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | September 2019}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
-%~ }}
-%~ ]{bottom.odd}
+\DeclareNewLayer[
+  height=1.25cm,
+  foreground,
+  bottommargin,
+  oddpage,
+  area={0pt}{760pt}{\paperwidth}{1.25cm},
+  contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
+\hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | September 2020}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
+}}
+]{bottom.odd}
 \AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
 \AddLayersToPageStyle{plain.scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
 
