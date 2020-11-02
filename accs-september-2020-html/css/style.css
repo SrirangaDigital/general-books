@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  src: url('Lora-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  src: url('Lora-Italic.ttf');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: bold;
+  src: url('Lora-Bold.ttf');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: bold;
+  src: url('Lora-BoldItalic.ttf');
+}
+
+body {
+	font-family: "Lora", sans-serif; 	
+	font-size: 1em;
+	box-sizing: border-box;
+	line-height: 1.4;
+}
+
+.maintext{
+	width: 965px;
+	min-height: 240px;
+	border: 1px solid #C0C0C0;
+	margin: auto;
+	-moz-box-shadow: 0px 0px 30px #EBC19D;
+    -webkit-box-shadow: 0px 0px 20px #EBC19D;
+    box-shadow: 0px 0px 20px #C0C0C0;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.maintext h1{
+	text-align: center;
+}
+
+.maintext h1 .subtitle{
+	font-weight: normal !important;
+	font-size: 0.8em !important;
+	font-style: italic;
+}
+
+
+.maintext small.affiliation{
+	text-transform: capitalize;
+}
+.maintext p.authors{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.maintext .titleimage, .maintext figure, maintext table{
+	text-align: center;
+}
+.maintext .titleimage img{
+	width: 50%;
+}
+
+.maintext figure img{
+
+	width: 50%;
+
+}
+.maintext figure .fignum, .maintext table .tabnum{
+	font-weight: bold;
+}
+
+.maintext table.ruled{
+	margin-bottom: 2em;
+	border-collapse: collapse;
+	page-break-inside: avoid;
+	display:block;
+	text-align: center;
+}
+.maintext table.ruled tr td, .maintext table.ruled tr th{	
+	border: 1px solid #CCC;
+	text-align: center;
+	padding: 4px;
+	line-height: 2em;
+}
+
+.maintext figure figcaption{
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.maintext span.num{
+	padding-right: 0.6em;
+}
+
+.maintext .footnote-head{	
+	font-size: 1.5em;
+    font-weight: bold;
+}
+
+.maintext a.url{
+	font-size: 0.8em;
+}
+
+.maintext ul.bibliography {
+	list-style-type: none;
+	margin-left: 1.5em;
+	padding-left: 0.75em;
+	text-indent: -1.5em;
+}
+.maintext ul.bibliography li {
+	margin-bottom: 0.4em;
+}

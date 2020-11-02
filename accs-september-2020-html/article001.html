@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:epub="http://www.idpf.org/2007/ops"> 
+<head>        
+	<title>Experiential Learning of Networking Technologies: Evolution of Socket Programming – Part I</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+	<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>  
+	<script type="text/javascript" async src="https://srirangadigital.com/accs-html/js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script><link rel="stylesheet" type="text/css" href="css/style.css"/> 
+</head>
+<body class="maintext">
+
+<h2 style="color:#0488b9";>Authors</h2><br/>  
+<h3><a href="#">RAM P. RUSTAGI</a></h3>
+<p class="authors"><br /><small class="affiliation">(Department of CSE, KSIT Bangalore)</small></p>
+
+
+<p>In the previous article <span class="cite">[<a href="art1-key01">1</a>]</span>, we have studied assignment of IP address <span class="cite">[<a href="art1-key02">2</a>]</span> to a host, and its role in connecting to internet and communicating with other devices. We explored concept of a network number which is determined using IP address and subnet mask. When network number of two hosts is same, then these two hosts belong to same network else these hosts belong to different networks. Hosts within the same network communicate directly with each other whereas hosts belonging to different network communicate using one or more intermediate routers. A router connects two networks, and its main job is to receive packets from one network and forward it to another network so as to enable the packet delivery towards its final destination. When two hosts are connected by many intermediate networks, communication between these two hosts requires that each of the intermediate routers in the path forward the packet on to the network which is closer to the destination and router in the last leg of this path will deliver the packet to destination host. In this article, we will explore this concept of packet forwarding and the mechanisms used to achieve this packet forwarding.</p> 
+ <p>Consider the connectivity of two networks, say Network-1 and Network-2, as shown in Figure~\ref{chap2-fig01}. Each of these two networks consists of many connected systems (though as a representation only 2 are shown). Hosts ${\rm H}_1$ and ${\rm H}_2$ are part of Network-1, and hosts ${\rm H}_3$ and ${\rm H}_4$ are part of Network-2. These two networks are connected via many intermediate routers, which we can consider as representing the internet. Hosts ${\rm H}_1$ and ${\rm H}_2$ belongs to same network 10.x.x.0/24, and hence can communicate directly without requiring any intermediate router. Similarly, host ${\rm H}_3$ communicates directly with ${\rm H}_4$ as both belong to same network 10.y.y.0/24. However, when ${\rm H}_1$ needs to communicate with ${\rm H}_3$, the packets have to go through all the intermediate routers. When ${\rm H}_1$ wants to send a packet to ${\rm H}_3$, it will forward the packet to router ${\rm R}_1$, which in turn will forward the packet to next router ${\rm R}_2$, and so on, and finally Router ${\rm R}_{\rm n}$ will deliver the packet to host ${\rm H}_3$. Thus, communication between two hosts involves routing of packets and primary focus of this article is to explore the mechanism used in forwarding these packets.</p>
+
