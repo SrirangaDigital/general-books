@@ -4,7 +4,9 @@
 	<title>Experiential Learning of Networking Technologies: Evolution of Socket Programming – Part I</title> 
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
 	<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>  
-	<script type="text/javascript" async src="https://srirangadigital.com/accs-html/js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script><link rel="stylesheet" type="text/css" href="css/style.css"/> 
+	<script type="text/javascript" async src="https://srirangadigital.com/accs-html/js/MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/> 
+	<link rel="stylesheet" type="text/css" href="overrides/style.css" />
 </head>
 <body class="maintext">
 
@@ -14,5 +16,157 @@
 
 
 <p>In the previous article <span class="cite">[<a href="art1-key01">1</a>]</span>, we have studied assignment of IP address <span class="cite">[<a href="art1-key02">2</a>]</span> to a host, and its role in connecting to internet and communicating with other devices. We explored concept of a network number which is determined using IP address and subnet mask. When network number of two hosts is same, then these two hosts belong to same network else these hosts belong to different networks. Hosts within the same network communicate directly with each other whereas hosts belonging to different network communicate using one or more intermediate routers. A router connects two networks, and its main job is to receive packets from one network and forward it to another network so as to enable the packet delivery towards its final destination. When two hosts are connected by many intermediate networks, communication between these two hosts requires that each of the intermediate routers in the path forward the packet on to the network which is closer to the destination and router in the last leg of this path will deliver the packet to destination host. In this article, we will explore this concept of packet forwarding and the mechanisms used to achieve this packet forwarding.</p> 
- <p>Consider the connectivity of two networks, say Network-1 and Network-2, as shown in Figure~\ref{chap2-fig01}. Each of these two networks consists of many connected systems (though as a representation only 2 are shown). Hosts ${\rm H}_1$ and ${\rm H}_2$ are part of Network-1, and hosts ${\rm H}_3$ and ${\rm H}_4$ are part of Network-2. These two networks are connected via many intermediate routers, which we can consider as representing the internet. Hosts ${\rm H}_1$ and ${\rm H}_2$ belongs to same network 10.x.x.0/24, and hence can communicate directly without requiring any intermediate router. Similarly, host ${\rm H}_3$ communicates directly with ${\rm H}_4$ as both belong to same network 10.y.y.0/24. However, when ${\rm H}_1$ needs to communicate with ${\rm H}_3$, the packets have to go through all the intermediate routers. When ${\rm H}_1$ wants to send a packet to ${\rm H}_3$, it will forward the packet to router ${\rm R}_1$, which in turn will forward the packet to next router ${\rm R}_2$, and so on, and finally Router ${\rm R}_{\rm n}$ will deliver the packet to host ${\rm H}_3$. Thus, communication between two hosts involves routing of packets and primary focus of this article is to explore the mechanism used in forwarding these packets.</p>
+ <p>Consider the connectivity of two networks, say Network-1 and Network-2, as shown in Figure&#x00A0;<a href="art1-fig01">1</a>. Each of these two networks consists of many connected systems (though as a representation only 2 are shown). Hosts H<sub>1</sub> and H<sub>2</sub> are part of Network-1, and hosts H<sub>3</sub> and H<sub>4</sub> are part of Network-2. These two networks are connected via many intermediate routers, which we can consider as representing the internet. Hosts H<sub>1</sub> and H<sub>2</sub> belongs to same network 10.x.x.0/24, and hence can communicate directly without requiring any intermediate router. Similarly, host H<sub>3</sub> communicates directly with H<sub>4</sub> as both belong to same network 10.y.y.0/24. However, when H<sub>1</sub> needs to communicate with H<sub>3</sub>, the packets have to go through all the intermediate routers. When H<sub>1</sub> wants to send a packet to H<sub>3</sub>, it will forward the packet to router R<sub>1</sub>, which in turn will forward the packet to next router R<sub>2</sub>, and so on, and finally Router R<sub>n</sub> will deliver the packet to host H<sub>3</sub>. Thus, communication between two hosts involves routing of packets and primary focus of this article is to explore the mechanism used in forwarding these packets.</p>
+<figure id="art1-fig01" style="text-align: center;">
+<img src="images/chapter1/fig01.jpg" alt="PIC" style="max-width:100%;" />             
+<figcaption><span class="fignum">Figure&#x00A0;1:</span> Connectivity of two Networks, each network having many systems in it</figcaption>
+</figure>
+<p>Whenever, a host needs to send a packet to other hosts, it must know the IP address of destination host. For example, when we use browser to search at google.com, the machine where browser is running, finds the IP address of google.com and then sets up TCP connection using IP address of google.com. When sending a packet, a host consults its routing table (also called as forwarding table) and determine the next hop in the path to destination host. Entries in the routing table play a crucial role in how a host makes a packet forwarding decision. The routing decision using the routing table is always required irrespective of whether the destination host is in the same network or a different network.</p>
+<h2 id="chap1-sec-1"><span class="num">1.</span>&#x00A0;&#x00A0;Routing Table Structure</h2>
+<p>The main purpose of routing table is to help a host in determining the next hop where packet should be forwarded. The next hop could even be the next intermediate router or the final destination host itself. At its core, routing table has following four column fields, though in many implementations it may have some more information fields, such as cost metric etc., which we will not consider for our discussion.</p>
+<ol type = "i">
+<li>Destination Network.</li>
+<li>Subnet mask (for destination network).</li>
+<li>Network interface.</li>
+<li>Next hop or gateway router&#8217;s IP address.</li>
+</ol>
+<p>A routing table would have number of row entries, with each row corresponding to a destination network. First two fields together identify a network, and are used to check if destination IP address of packet belongs to this network. If this entry matches, then packet is forwarded on the associated interface (3<sup>rd</sup> field) to the next hop (4<sup>th</sup> field). Next hop entry field is applicable when destination host is not connected to local network and identifies the IP address of next router in the forward path. A typical set of entries for router R<sub>1</sub> in Figure.&#x00A0;<a href="#art1-fig01">1</a> is given below in Table&#x00A0;<a href="#chap1-table-1">1</a>, and routing entries for host H<sub>1</sub> is given in Table&#x00A0;<a href="#chap1-table-2">2</a></p>
 
+<table class="table-style-one" style="width:100%" id="chap1-table-1">
+<tr>
+<th>S.N</th>
+<th>Destination Network</th>
+<th>Netmask</th>
+<th>Interface</th>
+<th>Next Hop</th>
+</tr>
+<tr>
+<td>1</td>
+<td>10.x.x.0</td>
+<td>/24</td>
+<td>e<sub>1</sub></td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>a.b.c.d</td>
+<td>/n<sub>1</sub></td>
+<td>e<sub>2</sub></td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>	
+<td>&#8230;</td>	
+<td>&#8230;</td>	
+<td>&#8230;</td>	
+<td>&#8230;</td>	
+</tr>
+<tr>
+<td>4</td>	
+<td>p.q.r.s</td>	
+<td>/n<sup>n-1</sup></td>	
+<td>e<sub>2</sub></td>	
+<td>IP address of R<sub>2</sub></td>	
+</tr>
+<tr>
+<td>5</td>	
+<td>10.y.y.0</td>	
+<td>/24</td>	
+<td>e<sub>2</sub></td>	
+<td>IP address of R<sub>2</sub></td>	
+</tr>
+<tr>
+<td>6</td>	
+<td>0.0.0.0</td>	
+<td>/0</td>	
+<td>e<sub>2</sub></td>	
+<td>IP address of R<sub>2</sub></td>	
+</tr>
+<caption style="text-align:center"><strong>Table 1:</strong> Routing entries for R<sub>1</sub></caption>
+</table>
+
+<table class="table-style-one" style="width:100%" id="chap1-table-2">
+<tr>
+<th>S.N</th>
+<th>Destination Network</th>
+<th>Netmask</th>
+<th>Interface</th>
+<th>Next Hop</th>
+</tr>
+<tr>
+<td>1</td>
+<td>10.x.x.0</td>
+<td>/24</td>
+<td>Ethernet</td>
+<td>-</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.0.0.0</td>
+<td>/0</td>
+<td>Ethernet</td>
+<td>10.x.x.1</td>
+</tr>
+<caption style="text-align:center"><strong>Table 2:</strong> Routing entries for Host H<sub>1</sub></caption>
+</table>
+<p>First two entries in Table&#x00A0;<a href="#chap1-table-1">1</a> correspond to two networks to which router R<sub>1</sub> is directly connected and hence there is no next hop address. These will be followed by number of entries corresponding to network numbers that exist in the network. The entries in 4<sup>th</sup> and 5<sup>th</sup> rows correspond to two networks connected with the router R<sub>n</sub>. Lastly, there is an entry corresponding to 0.0.0.0/0 which is also referred to as default route entry. Use of this default entry is explained ahead. For any host which is typically connected to a single network, there are generally two entries, as shown in Table&#x00A0;<a href="#chap1-table-2">2</a> for host H<sub>1</sub>. One entry corresponds to local network and other entry corresponds to default network i.e. 0.0.0.0/0. These entries are sorted in the decreasing order of number of bits in netmask. For example, entry for netmask /27 will come before entries of netmask /26 or /25 etc.</p>
+
+<h2 id="chap1-sec-2"><span class="num">2.</span>&#x00A0;&#x00A0;Using Routing Table to Forward Packets</h2>
+<p>When a host needs to send a packet to destination host or an intermediate router needs to forward a received packet, then both the host and the router use a routing algorithm to determine how to send the packet to next hop or directly reachable destination host. An outline of such a routing algorithm is given in Table&#x00A0;<a href="#chap1-table-3">3</a>.</p>
+
+<table class="table" style=" width:65%" id="chap1-table-3">
+<tr>
+<td>01:</td>
+<td>&#35;Algorithm For forwarding the packet</td>
+</tr>
+<tr>
+<td>02:</td>
+<td>Extract the destination address from the packet</td>
+</tr>
+<tr>
+<td>03:</td>
+<td>Repeat the following for each entry in routing table</td>
+</tr>
+<tr>
+<td>04:</td>
+<td>Apply the netmask (2<sup>nd</sup> field) and compute network number</td>
+</tr>
+<tr>
+<td>05:</td>
+<td>Compare it with destination network (1<sup>st</sup> field)</td>
+</tr>
+<tr>
+<td>06:</td>
+<td>If matche</td>
+</tr>
+<tr>
+<td>07:</td>
+<td>Forward packet to next-hop on listed interface (3<sup>rd</sup> field)</td>
+</tr>
+<tr>
+<td>08:</td>
+<td></td>
+</tr>
+<tr>
+<td>09</td>
+<td>Exit//routing is over</td>
+</tr>
+<tr>
+<td>10:</td>
+<td>Continue to next entry</td>
+</tr>
+<tr>
+<td>11:</td>
+<td>When no match found (entry 0.0.0.0/0 not defined)</td>
+</tr>
+<tr>
+<td>12:</td>
+<td>Drop the packet</td>
+</tr>
+<tr>
+<td>13:</td>
+<td>Inform the sender (ICMP error message)</td>
+</tr>
+</table>
+
+<p>Consider the network given in Figure~\ref{chap2-fig01}, and that host ${\rm H}_{1}$ (belonging to Network-1) needs to send a packet to host ${\rm H}_{3}$ (belonging to Network-3). Thus the source and destination addresses of this packet would correspond to 10.x.x.11 and 10.y.y.131. Routing algorithm makes use of only the destination address and does not consider the source address, and works as follows. Routing table of host ${\rm H}_{1}$ (Table~\ref{chap2-table-2}) has just two entries. Using the destination address 10.y.y.131 (as extracted from the IP packet in line 02 of Table~\ref{chap2-table-3}), the lines 03 to 10 of routing algorithm will be applied to this destination address. Applying the netmask /24 of first entry in the routing table (Table~\ref{chap2-table-2}) to destination address 10.y.y.131 (line 04), network number is computed as 10.y.y.0. For a detailed discussion on computation of network number, reader can review the article by as given in \cite{art2-key01}. Comparison (line 05) of computed network number with destination network 10.x.x.0 for first entry fails and hence routing process repeats as per line 09-10 for the next entry. For the $2^{\rm nd}$ entry (Table~\ref{chap2-table-2}), netmask is /0, and applying this netmask to 10.y.y.131 gives the network number as 0.0.0.0. This computed network number matches with destination network in $2^{\rm nd}$ entry of routing table of ${\rm H}_{1}$, and thus packet is forwarded to router ${\rm R}_{1}$ on Ethernet interface of host ${\rm H}_{1}$. Applying netmask /0 with any IP address will always compute the network number as 0.0.0.0 and thus it will always match the destination network and therefore this is called the default route entry i.e. when no other routing entry matches, this entry will always match. The default route entry in a routing table always appears as the last entry.</p>
