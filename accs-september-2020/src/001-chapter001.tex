@@ -415,15 +415,25 @@ So far, we have used static (manual) approach to create routing entries in routi
 
 In larger size networks, routers use routing protocols to create the routing tables automatically. Routers exchange information about connected and reachable networks with other routers, and build their routing table. Any change in network topology e.g. a link going down or coming back up, a new router being added into the network or some working router going down is detected by neighbouring routers of the affected link/router. This topology change results in immediate exchange of routing information by neighbouring routers to other routers and eventually percolated to all routers in the network. Thus, in a short time (known as convergence time), all routers of network get the routing update about the changes in network topology and update their routing table. These routing protocols are classified into two categories  \cite{art2-key10}, a) Link State Routing, and b) Distance Vector Routing. Open Shortest Path First (OSPF)\cite{art2-key04} is a link state routing protocol which is widely implemented by many network administrators. Routing Information Protocol (RIP) \cite{art2-key05}\cite{art2-key06} implements distance vector routing approach and was the routing protocol which was first implemented and distributed as part of BSD Unix (Berkeley System Division Unix) distribution. It is practically infeasible to build a real live network to explore dynamic routing protocols using experiential learning as it would involve setting up of fairly sufficient number of systems and routers, to which reader of this article may not have access. Interested readers are requested to explore these by going through references and text books on networks and understand working of dynamic routing protocols.
 
+\vspace{-.5cm}
+
 \section{Summary}\label{chap2-sec8}
+
+\vspace{-.25cm}
 
 We have discussed need of IP routing to deliver packets from one system to another, when these are connected either directly on the same network or via a number of intermediate routers. Each router as well as a host in the network maintains a routing table, and uses routing algorithm to forward packets.  A typical routing table needs minimum of 4 entries, namely a) destination network, b) netmask (or prefix), c) network interface, and d) IP address of next hop router. Routing table needs to have one entry for each of the network numbers present in the network setup. Generally, a routing table also has a default entry as 0.0.0.0/0 so that it matches all destinations. We have also explored the need of ARP protocol to map an IP address to MAC address as latter is needed by link layer adaptor to receive and process the frame and pass the extracted network packet to higher layer network stack in the system for further processing. When a packet is forwarded by one intermediate router to next, it does not change source and destination IP address as provided originally by the sender host. The delivery to next hop is achieved by adding the destination MAC address of next hop router by the previous router/host in the path from source to destination. As internet consists of a large number of networks, technique of route summarization (also called as route aggregation) is used to summarize multiple routing entries in a single route to minimize the number of routing entries to improve the routing performance. We have also discussed use of longest prefix match to correctly route the packets when some networks that were part of route aggregation, move to a different router.
 
+\vspace{-.5cm}
+
 \section{Experiential Exercises}\label{chap2-sec9}
+
+\vspace{-.25cm}
 
 To understand and learn IP routing experientially, an experimental setup similar to the one shown in Figure~\ref{chap2-fig02} is used for hands-on exercises. One can either use 3 independent systems, or using a single system, create two Ubuntu VMs (Virtual Machine) using virtualization software \cite{art2-key07}\cite{art2-key08}\cite{art2-key09} to create such a network. The host OS (that runs virtualization application) can be Windows, Macbook or Linux. In the exercises described below, the network number used by VMs is shown as 10.211.55.0/24 and this may vary depending upon the setup creation. So, the IP address belonging to this network should be appropriately modified as per the VM setup (for example, it may have 192.168.x.0/24 network number for some x, 0<=x<=255) that a learner would create. Similarly, network interface names may have to appropriately replace as per the network interface names in the setup created by the learner. The new networks used in experiential learning of IP routing can either be used as shown in Figure~\ref{chap2-fig02}, that is, 10.1.y.0 (2<=y<=5) or modify it as desired. In the exercises described below, the IP addresses and network interface names of host OS (MacOS), VM1(Ubuntu 16)/enp0s5 and VM2(Ubuntu 18)/enp0s5 are correspondingly used as (vnic0)10.211.55.2/24, (enp0s5)10.211.55.10/24 and (enp0s5)10.211.55.11/24. The IP address of gateway router that will connect to internet using the host OS is 10.211.55.1/24.
 
 To understand the working of IP routing and ARP protocol, run wireshark on both ${\rm H}_{1}$ and ${\rm H}_{2}$ and capture packets for IP addresses of source and destination addresses used for communication.
+
+\vspace{-.5cm}
 
 \setcounter{section}{0}
 \section*{Exercise \thnum{1}\label{chap2-exe1}}
@@ -520,7 +530,11 @@ To understand the working of IP routing and ARP protocol, run wireshark on both 
 \item[k.] Using wireshark, verify the ARP broadcast request from ${\rm H}_{1}$ (10.211.55.10) to know who is 10.211.55.11 and ARP unicast reply from ${\rm H}_{2}$ (10.211.55.11) to ${\rm H}_{1}$.
 \end{itemize}
 
+\vspace{-.5cm}
+
 \textbf{Learning:} Working of ARP protocol for delivering packets in locally connected network.
+
+\vspace{-.5cm}
 
 \section*{Exercise \thnum{2}\label{chap2-exe2}}
 
@@ -577,11 +591,17 @@ ${\rm H}_{2}$ > \textbf{sudo ip route del 10.1.2.0/24 via 10.211.55.10 dev enp0s
 
 \end{itemize}
 
+\vspace{-.5cm}
+
 \textbf{Learning:} Use of routing table in forwarding the packets.
+
+\vspace{-.5cm}
 
 \section*{Exercise \thnum{3}\label{chap2-exe3}}
 
 \textbf{Topic: Use of route summarization}
+
+\vspace{-.5cm}
 
 \begin{itemize}
 \item[a.] Create a new network 10.1.3.0/24 (that can be route summarized with 10.1.2.0/24) and assign 10.1.3.1/24 in this network to loopback interface lo (or alternately to the ethernet interface enp0s5).
@@ -621,11 +641,17 @@ ${\rm H}_{2}$ > \textbf{sudo ip route del 10.1.2.0/23 via 10.211.55.10 dev enp0s
 \item[i.] Resend the ping packets ($5^{\rm th}$ and $6^{\rm th}$ step). These pings should be unsuccessful. From ${\rm H}_{1}$, packets will reach ${\rm H}_{2}$ (verify in wireshark capture) but ${\rm H}_{2}$ does not have routing entries for reply packets.  Similarly, ${\rm H}_{2}$ will not send Ping request packets to ${\rm H}_{1}$ because of no routing entries. A close analysis in wireshark will show that both these packets follow the default route i.e. these will go to gateway 10.211.55.1 which will be discarded, since these can’t be delivered.
 \end{itemize}
 
+\vspace{-.5cm}
+
 \textbf{Learning:} Use of route summarization to reduce the number of routing entries.
+
+\vspace{-.5cm}
 
 \section*{Exercise \thnum{4}\label{chap2-exe4}}
 
 \textbf{Topic: Use of Longest Prefix Match}
+
+\vspace{-.5cm}
 
 \begin{itemize}
 \item[a.] Repeat the \textbf{steps a. to f.} from  Exercise~\ref{chap2-exe2} i.e. assign IP address 10.1.2.1/24 to network interface enp0s5 of ${\rm H}_{1}$, and IP address 10.1.4.1 to network interface enp0s5 of ${\rm H}_{2}$, create corresponding routing table and check reachability.
@@ -709,6 +735,11 @@ last accessed September 2020.
 
 \end{multicols}
 
+~\\[-1.5cm]
+
+\centerline{\includegraphics[scale=0.4]{src/Figures/experiential_learning-QR.png}}
+
+\centerline{{\sf Access this article on the Web}}
 
 \noindent
 \begin{tabular}{V{2.5}cp{14.2cm}V{2.5}}
