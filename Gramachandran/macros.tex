@@ -23,6 +23,9 @@
 
 \numberwithin{equation}{section}
 
+
+
+
 \allowdisplaybreaks
 
 \floatstyle{plain}
@@ -58,7 +61,7 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 %%redefining macros
 \makeatletter
 
-\renewcommand\chaptermark[1]{\markboth{\thechapter. #1}{}}
+%\renewcommand\chaptermark[1]{\markboth{\thechapter. #1}{}}
 \renewcommand\sectionmark[1]{\markright{\thesection~ #1}}
 
 \renewcommand\frontmatter{%
@@ -122,3 +125,37 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 %  \gdef\thechapter{\@arabic\c@chapter}% make chapter numbers arabic
 %}
 %\makeatother
+
+\usepackage{bm}
+
+\def\tns#1{\bm{\mathcal{#1}}}
+\def\bsymb#1{\bm{#1}}
+\def\dt{..}
+\def\mbb#1{\mathbb{#1}}
+\def\bmsf#1{\mathbf{#1}}
+\def\veca#1{\overrightarrow{#1}}
+\def\wt#1{\widetilde{#1}}
+\def\dd{\mathrm{d}}
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\section*{\bibname}%
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+\makeatother
