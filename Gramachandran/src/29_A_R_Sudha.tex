@@ -1,165 +1,87 @@
-\documentclass[pra,preprint,a4paper,superscriptaddress]{revtex4}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{graphicx}
-\usepackage{longtable}
-\newcommand{\be}{\begin{equation}}
-\newcommand{\ee}{\end{equation}}
-\newcommand{\wt}{\widetilde}
-\newcommand{\ba}[1]{\left(\begin{array}{#1}}
-\newcommand{\ea}{\end{array}\right)}
-\begin{document}
+\chapter{Majorana geometric representation of permutation symmetric pure multiqubit states} 
 
-\title{Majorana geometric representation of permutation symmetric pure multiqubit states} 
-\author{Sudha}
-\email{arss@rediffmail.com}
-\affiliation{Department of Physics, Kuvempu University, 
-	Shankaraghatta-577 451, India.}
-\affiliation{Inspire Institute Inc., Alexandria, Virginia 22303, USA.}
-\author{A. R. Usha Devi}
-\email{arutth@rediffmail.com}
-\affiliation{Department of Physics, Bangalore University, 
-	Bangalore-560 056, India.} 
-\affiliation{Inspire Institute Inc., Alexandria, Virginia 22303, USA.}
-\author{A. K. Rajagopal} 
-\email{attipat.rajagopal@gmail.com}
-\affiliation{Inspire Institute Inc., Alexandria, Virginia 22303, USA.}
-%\date{\today}
-\begin{abstract} 
-This article presents an overview of the Majorana geometric representation of permutation symmetric  pure multiqubit states 
-and its significance in quantum information processing. 
-As early as 1932, Majorana had proposed that a pure permutation symmetric state of $N$ spin-$\frac{1}{2}$ particles can be represented by
-$N$ spinors, which correspond geometrically to $N$ points on the Bloch sphere. A novel use of the Majorana geometric representation leads  to the classification of entanglement families of permutation symmetric qubits -- based on the number of distinct  spinors  and their arrangement in constituting the multiqubit state. The Majorana classification offers an elegant approach to investigate how correlation information of the {\em whole}  pure symmetric state gets imprinted in its {\em parts}. As an example, we show that the correlation information of pure symmetric three-qubit states with two distinct Majorana spinors is completely determined by their two-qubit marginals. We explicitly determine the {\emph {three}} distinct spinors characterizing the three-qubit GHZ state and the superposition of W, and its obverse state $\bar W$. While the GHZ state cannot be determined by its parts, we illustrate that the W$\bar W$ superposition possesses genuine three-qubit entanglement, which is robust under the loss of a qubit and is imprinted uniquely in its two-party reduced states. This example clearly brings out the contrasting correlation features of states within the same entanglement family, discerned through the celebrated Majorana goemetric representation.  
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{center}
+\textbf{Sudha,$^{1,2,}$\footnote{arss@rediffmail.com} A. R. Usha Devi,$^{3,2,}$\footnote{arutth@rediffmail.com} and A. K. Rajagopal$^{2,}$\footnote{attipat.rajagopal@gmail.com}}
 
-\vskip 1.1in
-\begin{center} 
-	{\bf \large In memory of Professor G. Ramachandran}
+\textit{$^{1}$Department of Physics, Kuvempu University, Shankaraghatta-577 451, India.}
+
+\textit{$^{2}$Inspire Institute Inc., Alexandria, Virginia 22303, USA.}
+
+\textit{$^{3}$Department of Physics, Bangalore University, Bangalore-560 056, India.} 
 \end{center}
- \end{abstract}
+
+\medskip
+\begin{center}
+\textbf{Abstract}
+\end{center}
+\medskip
+
+\begin{longtable}{p{8cm}}
+This article presents an overview of the Majorana geometric representation of permutation symmetric  pure multiqubit states and its significance in quantum information processing. As early as 1932, Majorana had proposed that a pure permutation symmetric state of $N$ spin-$\frac{1}{2}$ particles can be represented by $N$ spinors, which correspond geometrically to $N$ points on the Bloch sphere. A novel use of the Majorana geometric representation leads  to the classification of entanglement families of permutation symmetric qubits -- based on the number of distinct  spinors  and their arrangement in constituting the multiqubit state. The Majorana classification offers an elegant approach to investigate how correlation information of the {\em whole}  pure symmetric state gets imprinted in its {\em parts}. As an example, we show that the correlation information of pure symmetric three-qubit states with two distinct Majorana spinors is completely determined by their two-qubit marginals. We explicitly determine the {\emph {three}} distinct spinors characterizing the three-qubit GHZ state and the superposition of W, and its obverse state $\bar W$. While the GHZ state cannot be determined by its parts, we illustrate that the W$\bar W$ superposition possesses genuine three-qubit entanglement, which is robust under the loss of a qubit and is imprinted uniquely in its two-party reduced states. This example clearly brings out the contrasting correlation features of states within the same entanglement family, discerned through the celebrated Majorana goemetric representation.  
+\end{longtable}
 
 
+\begin{center}
+\textbf{\Large In memory of Professor G. Ramachandran}
+\end{center}
 
-\maketitle
-\section{Introduction}
-\label{intro}
-Multiqubit states that are invariant under exchange of any pair of particles form an important class among quantum states due to their experimental significance and mathematical elegance~\cite{sym1,sym1a,sym1b,sym2,sym3}. The class of symmetric states comprises of the well-known Greenberger-Horne-Zeilinger(GHZ)~\cite{ghz}, W, and Dicke states~\cite{dicke} etc. Mathematical simplicity in addressing 
-$N$-qubit  states obeying permutation symmetry results because the states are confined to the $N+1$ dimensional subspace of the $2^N$ dimensional Hilbert space. The $N+1$ dimensional subspace is spanned by the Dicke states, $\{\vert N/2, N/2-l\rangle,  l=0,1,2,\ldots,N\}$, which are the simultaneous eigenstates of the squared collective angular momentum operator $J^2$ and its $z$-component $J_z$. An elegant geometrical representation for  multiqubit symmetric states in terms of $N$-points on the Bloch sphere $S^2$ was proposed by Majorana~\cite{majorana} as early as 1932. The goemetric representation of multiqubit states based on their characteristic $N$-qubits (spinors), the so-called {\em Majorana goemetric representation} for symmetric states~\cite{majorana,1945,makela} has been  immensely useful in diverse branches of physics~\cite{1945,jpa4,arxiv4,jpa5,ejtp6} in general and in quantum information science~\cite{solano, mixed, usa, usa1,usa2,markham1,markham2,gebastin,markham3} in particular.  The significance of Majorana goemetric representation in characterizing entanglement in multiqubit symmetric states has been realized in several fields and the avenues appear to be expanding. While the SLOCC classification of symmetric states in terms of the distinct spinors characterizing the state has been accomplished using the Majorana goemetric representation~\cite{solano, mixed}, it is shown that the reducibility/irreducibility features of multiparty correlations in several important classes of states can also be captured~\cite{usa1,usa2,usa}. 
+\section{Introduction}\label{chap26-sec1}
 
+Multiqubit states that are invariant under exchange of any pair of particles form an important class among quantum states due to their experimental significance and mathematical elegance \cite{sym1,sym1a,sym1b,sym2,sym3}. The class of symmetric states comprises of the well-known Greenberger-Horne-Zeilinger(GHZ) \cite{ghz}, W, and Dicke states \cite{dicke} etc. Mathematical simplicity in addressing $N$-qubit  states obeying permutation symmetry results because the states are confined to the $N+1$ dimensional subspace of the $2^N$ dimensional Hilbert space. The $N+1$ dimensional subspace is spanned by the Dicke states, $\{\vert N/2, N/2-l\rangle,  l=0,1,2,\ldots,N\}$, which are the simultaneous eigenstates of the squared collective angular momentum operator $J^2$ and its $z$-component $J_z$. An elegant geometrical representation for  multiqubit symmetric states in terms of $N$-points on the Bloch sphere $S^2$ was proposed by Majorana \cite{majorana} as early as 1932. The goemetric representation of multiqubit states based on their characteristic $N$-qubits (spinors), the so-called {\em Majorana goemetric representation} for symmetric states \cite{majorana,1945,makela} has been  immensely useful in diverse branches of physics \cite{1945,jpa4,arxiv4,jpa5,ejtp6} in general and in quantum information science \cite{solano, mixed, usa, usa1,usa2,markham1,markham2,gebastin,markham3} in particular.  The significance of Majorana goemetric representation in characterizing entanglement in multiqubit symmetric states has been realized in several fields and the avenues appear to be expanding. While the SLOCC classification of symmetric states in terms of the distinct spinors characterizing the state has been accomplished using the Majorana goemetric representation \cite{solano, mixed}, it is shown that the reducibility/irreducibility features of multiparty correlations in several important classes of states can also be captured \cite{usa1,usa2,usa}. 
 
-Understanding different kinds of correlations exhibited by multiparticle quantum systems is one of the 
-central issues of importance in quantum information science~\cite{Niel}. Two $N$-party {\em pure}  
-states $\vert\phi\rangle$, $\vert \psi\rangle$  can be obtained from one another by means of stochastic local 
-operations and classical communications (SLOCC)  if and only if there exists an invertible local operation 
-(ILO)~\cite{Dur} $A_1\otimes A_2\otimes \ldots \otimes A_N$ such that $\vert \phi\rangle=\left(A_1\otimes A_2\otimes 
-\ldots \otimes A_N\right)\vert\psi\rangle.$ General classification of distinct kinds of entanglement that are 
-inequivalent under SLOCC has gained considerable attention~\cite{Dur,Ver,Lamata}.  
-It is convenient to address this issue by restricting to special classes of states exhibiting some 
-particular symmetry, in order to tackle the algebraic complexity associated with exponentially increasing size 
-of the Hilbert space. In the important case of  $N$-qubits obeying permutation symmetry,  it is sufficient 
-to search for identical ILOs of the form $A\otimes A\otimes\ldots \otimes A$ to verify the SLOCC equivalence of 
-two pure states~\cite{solano,bastin}.  The significance of such considerations is catching up and  innovative 
-experimental schemes to generate a large variety of multiqubit states has been proposed~\cite{newexpt1,newexpt2}. The goemetric representation proposed by Majorana~\cite{majorana} offers a 
-deeper understanding on how different entanglement families emerge, depending on the number and arrangement of 
-the independent spinors (qubits) constituting the {\em pure} symmetric state~\cite{solano}. 
+Understanding different kinds of correlations exhibited by multiparticle quantum systems is one of the  central issues of importance in quantum information science \cite{Niel}. Two $N$-party {\em pure} states $\vert\phi\rangle$, $\vert \psi\rangle$  can be obtained from one another by means of stochastic local operations and classical communications (SLOCC)  if and only if there exists an invertible local operation (ILO) \cite{Dur} $A_1\otimes A_2\otimes \ldots \otimes A_N$ such that $\vert \phi\rangle=\left(A_1\otimes A_2\otimes \ldots \otimes A_N\right)\vert\psi\rangle$. General classification of distinct kinds of entanglement that are inequivalent under SLOCC has gained considerable attention \cite{Dur,Ver,Lamata}. It is convenient to address this issue by restricting to special classes of states exhibiting some particular symmetry, in order to tackle the algebraic complexity associated with exponentially increasing size of the Hilbert space. In the important case of  $N$-qubits obeying permutation symmetry, it is sufficient to search for identical ILOs of the form $A\otimes A\otimes\ldots \otimes A$ to verify the SLOCC equivalence of two pure states \cite{solano,bastin}. The significance of such considerations is catching up and  innovative experimental schemes to generate a large variety of multiqubit states has been proposed \cite{newexpt1,newexpt2}. The goemetric representation proposed by Majorana \cite{majorana} offers a deeper understanding on how different entanglement families emerge, depending on the number and arrangement of the independent spinors (qubits) constituting the {\em pure} symmetric state \cite{solano}. 
 
-Determining if higher order correlations follow entirely from lower order ones is also a question 
-of fundamental interest both from the modern perspective of quantum information science~\cite{SP1,SP2,SP2b} as well as in 
-many body physics~\cite{Coleman}. Linden, Popescu and Wootters~\cite{SP1,SP2,SP2b} proved that 
-the correlation content of {\em almost all} pure states, shared by $N$ parties, is already contained in 
-their reduced states i.e., the higher order correlations are uniquely determined by lower order ones~\cite{SP1,SP2,SP2b}.  
-In this article, we discuss the ``whole and its parts" issue for three-qubit pure symmetric states belonging to two SLOCC inequivalent families, the class of states with two distinct Majorana spinors and the ones with three distinct spinors. More specifically, we address the question ``{\emph{Is there any intrinsic connection between SLOCC classification of 
-pure states with their determinability in terms of reduced subsystems?}". We show that not all states that are interconvertible into one another through SLOCC operations exhibit the same reducibility/irreducibility of correlations. This has been accomplished by considering three-qubit GHZ state and superposition of W and its obverse state $\bar{W}$, both belonging to the same SLOCC family containing three distinct spinors.   We also demonstrate that two-qubit reduced density matrices uniquely determine the family of three-qubit  pure symmetric states comprised of two distinct Majorana spinors, the so-called {\emph {Dicke class of states}}. 
- 
-\section{Majorana goemetric representation of permutation symmetric multiqubit pure states} 
+Determining if higher order correlations follow entirely from lower order ones is also a question of fundamental interest both from the modern perspective of quantum information science \cite{SP1,SP2,SP2b} as well as in many body physics \cite{Coleman}. Linden, Popescu and Wootters \cite{SP1,SP2,SP2b} proved that the correlation content of {\em almost all} pure states, shared by $N$ parties, is already contained in their reduced states i.e., the higher order correlations are uniquely determined by lower order ones \cite{SP1,SP2,SP2b}. In this article, we discuss the ``whole and its parts" issue for three-qubit pure symmetric states belonging to two SLOCC inequivalent families, the class of states with two distinct Majorana spinors and the ones with three distinct spinors. More specifically, we address the question ``{\emph{Is there any intrinsic connection between SLOCC classification of pure states with their determinability in terms of reduced subsystems?}". We show that not all states that are interconvertible into one another through SLOCC operations exhibit the same reducibility/irreducibility of correlations. This has been accomplished by considering three-qubit GHZ state and superposition of W and its obverse state $\bar{W}$, both belonging to the same SLOCC family containing three distinct spinors.   We also demonstrate that two-qubit reduced density matrices uniquely determine the family of three-qubit  pure symmetric states comprised of two distinct Majorana spinors, the so-called {\emph {Dicke class of states}}.
 
-In his 1932 paper~\cite{majorana} %(which had not received much attention at that time) 
-Majorana proposed that a pure spin $j=\frac{N}{2}$ quantum state can essentially be represented as a {\em symmetrized} combination of $N$ constituent spinors as follows:  
+\section{Majorana goemetric representation of permutation symmetric multiqubit pure states}\label{chap29-secII} 
+
+In his 1932 paper \cite{majorana} Majorana proposed that a pure spin $j=\frac{N}{2}$ quantum state can essentially be represented as a {\em symmetrized} combination of $N$ constituent spinors as follows:  
 \begin{equation}
-\label{Maj}
-\vert \Psi^{(N)}_{\rm sym}\rangle={\cal N}_N\, \sum_{P}\, \hat{P}\, \{\vert \epsilon_1, \epsilon_2, 
-\ldots  \epsilon_N \rangle\}, 
+\vert \Psi^{(N)}_{\rm sym}\rangle={\cal N}_N\, \sum_{P}\, \hat{P}\, \{\vert \epsilon_1, \epsilon_2, \ldots  \epsilon_N \rangle\}, \label{Maj}
 \end{equation} 
 where 
 \begin{equation}
-\label{spinor}
-\vert\epsilon_l\rangle= 
-\cos(\beta_l/2)\, e^{-i\alpha_l/2}\, \vert 0\rangle +
-\sin(\beta_l/2)\, e^{i\alpha_l/2} \, \vert 1\rangle,\ \ l=0,1,2,\ldots, N,
+\vert\epsilon_l\rangle= \cos(\beta_l/2)\, e^{-i\alpha_l/2}\, \vert 0\rangle +\sin(\beta_l/2)\, e^{i\alpha_l/2} \, \vert 1\rangle,\ \ l=0,1,2,\ldots, N,\label{spinor}
 \end{equation}
-denote the spinors constituting the symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$;
- $\hat{P}$ corresponds to the set of all $N!$ 
-permutations of the spinors (qubits) and ${\cal N}_N$ corresponds to an overall normalization factor. For example, two and three-qubit symmetric pure states have the following representations in terms of 
-the Majorana spinors:
-\begin{eqnarray*}
-&&\vert \Psi^{(2)}_{\rm sym}\rangle={\cal N}_2\,  \left(\vert \epsilon_1, 
+denote the spinors constituting the symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$; $\hat{P}$ corresponds to the set of all $N!$ permutations of the spinors (qubits) and ${\cal N}_N$ corresponds to an overall normalization factor. For example, two and three-qubit symmetric pure states have the following representations in terms of the Majorana spinors:
+\begin{align*}
+\vert \Psi^{(2)}_{\rm sym}\rangle &={\cal N}_2\,  \left(\vert \epsilon_1, 
  \epsilon_2\rangle+  \vert \epsilon_2,\epsilon_1\rangle\right)\\
-&&\vert \Psi^{(3)}_{\rm sym}\rangle={\cal N}_3\,\left(  \vert \epsilon_1,
+\vert \Psi^{(3)}_{\rm sym}\rangle &={\cal N}_3\,\left(  \vert \epsilon_1,
  \epsilon_2, \epsilon_3\rangle+  \vert \epsilon_3,\epsilon_1, \epsilon_2\rangle  + \vert \epsilon_2, 
  \epsilon_3, \epsilon_1\rangle +\vert \epsilon_2,\epsilon_1,\epsilon_3\rangle+
  \vert \epsilon_3,\epsilon_2,\epsilon_1\rangle+ 
  \vert \epsilon_1, \epsilon_3, \epsilon_2\rangle \right).
-\end{eqnarray*}
-Eq.(\ref{Maj}) corresponds to the {\em Majorana geometric representation} of an arbitrary symmetric state 
-$\vert \Psi^{(N)}_{\rm sym}\rangle$ of $N$ qubits in terms of the constituent spinors $\vert \epsilon_l \rangle,\  l=1,2,\ldots N$. These spinors (qubits) correspond geometrically to $N$ points on the  Bloch sphere $S^2$~\cite{makela,jpa4,markham1,markham2,gebastin, markham3} -- with the pair of angles $(\alpha_l,\beta_l)$ determining the orientation of each point on $S^2$.
+\end{align*}
+Eq. \eqref{Maj} corresponds to the {\em Majorana geometric representation} of an arbitrary symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$ of $N$ qubits in terms of the constituent spinors $\vert \epsilon_l \rangle,\  l=1,2,\ldots N$. These spinors (qubits) correspond geometrically to $N$ points on the  Bloch sphere $S^2$ \cite{makela,jpa4,markham1,markham2,gebastin, markham3} -- with the pair of angles $(\alpha_l,\beta_l)$ determining the orientation of each point on $S^2$.
 
-On the other hand, states of $N$-qubits obeying exchange symmetry get restricted to 
-a $(N+1)$ dimensional Hilbert space spanned by the collective basis vectors $\left\{\left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle, l=0,1,2,
-\ldots N \right\}$ where,    
+On the other hand, states of $N$-qubits obeying exchange symmetry get restricted to a $(N+1)$ dimensional Hilbert space spanned by the collective basis vectors $\left\{\left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle, l=0,1,2,\ldots N \right\}$ where,
 \begin{equation}
-\label{Dicke} 
 \left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle =\frac{1}{\sqrt{^N C_l}}\,[\vert \underbrace{0, 0, \ldots}_{l}, 
-\underbrace{1, 1, \ldots}_{N-l}\rangle +\ {\rm Permutations}\ ] 
+\underbrace{1, 1, \ldots}_{N-l}\rangle +\ {\rm Permutations}\ ] \label{Dicke} 
 \end{equation}
-are the $N+1$ Dicke  states -- expressed in the standard qubit basis $\vert 0\rangle,\ \vert 1\rangle$ and  
- $^N C_l=\frac{N!}{l!\,(N-l)!}$ denotes the binomial coefficient.
-An arbitrary pure symmetric state of $N$ qubits obeying exchange symmetry may thus be expressed as,    
+are the $N+1$ Dicke  states -- expressed in the standard qubit basis $\vert 0\rangle,\ \vert 1\rangle$ and $^N C_l=\frac{N!}{l!\,(N-l)!}$ denotes the binomial coefficient. An arbitrary pure symmetric state of $N$ qubits obeying exchange symmetry may thus be expressed as,    
 \begin{equation}
-\label{sympure1} 
-\vert \Psi^{(N)}_{\rm sym}\rangle =\sum_{l=0}^{N}\, c_l\, \left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle,
+\vert \Psi^{(N)}_{\rm sym}\rangle =\sum_{l=0}^{N}\, c_l\, \left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle,\label{sympure1}
 \end{equation}
-and is completely specified by the $(N+1)$ complex coefficients $c_l.$  Eliminating an overall phase and normalizing  the 
-state  implies that $N$ complex parameters are required to 
-completely characterize a pure symmetric state (\ref{sympure1}) of $N$ qubits. While (\ref{sympure1}) offers a suitable parametrization of the symmetric multiqubit system in terms of the collective parameters $c_l$, the Majorana goemetric representation (\ref{Maj}) leads to an intrinsic geometric picture of the  system in terms of $N$-points on the Bloch sphere $S^2$.  
+and is completely specified by the $(N+1)$ complex coefficients $c_l$.  Eliminating an overall phase and normalizing  the state  implies that $N$ complex parameters are required to completely characterize a pure symmetric state \eqref{sympure1} of $N$ qubits. While \eqref{sympure1} offers a suitable parametrization of the symmetric multiqubit system in terms of the collective parameters $c_l$, the Majorana goemetric representation \eqref{Maj} leads to an intrinsic geometric picture of the  system in terms of $N$-points on the Bloch sphere $S^2$.  
 
-The equivalence between the parameters $c_l$ of the collective representation (\ref{sympure1}) and that of  the Majorana goemetric representation (\ref{Maj}) can be established in an elegant manner~\cite{usa1,usa2,usa} as detailed in the following. 
+The equivalence between the parameters $c_l$ of the collective representation \eqref{sympure1} and that of  the Majorana goemetric representation \eqref{Maj} can be established in an elegant manner \cite{usa1,usa2,usa} as detailed in the following. 
 \begin{enumerate}
-%\item Let us first note that the $2N$ orientation angles $(\alpha_l,\beta_l)$, $l=1,2,\ldots,N$, specifying the spinors (\ref{spinor}) of (\ref{Maj}) %may be conveniently  parametrized  in terms of the  $N$ complex parameters $z_l$ as,  
-%\begin{equation}
-%\label{z}
-%z_l=\tan\frac{\beta_l}{2}e^{i\alpha_l},\ \ l=1,2,\ldots,N
-%\end{equation}  
-%and   the spinors $\vert\epsilon_l\rangle$ of (\ref{spinor}) may thus be expressed as 
-%\begin{equation}
-%\label{spinor2}
-%\vert \epsilon_l\rangle=A_l\, \left[\vert 0 \rangle + z_l\,\vert 1 \rangle\right], \ \ A_l=e^{-i\alpha_l}\,\cos(\beta_l/2).
-%\end{equation} 
+\item A symmetric pure state is transformed into another symmetric pure state under identical rotations $R\otimes R\otimes \ldots \otimes R$ on all the spinors of \eqref{Maj} (which corresponds  to an equivalent collective rotation ${\cal R}$ on the state \eqref{sympure1} in the $(N+1)$ dimensional symmetric sub-space). 
 
-
-\item A symmetric pure state is transformed into another symmetric pure state under identical rotations 
-$R\otimes R\otimes \ldots \otimes R$ on all the spinors of (\ref{Maj}) (which corresponds  to an equivalent collective rotation  
-${\cal R}$ on the state (\ref{sympure1}) in the $(N+1)$ dimensional symmetric sub-space). 
-\item Under identical rotation through $R^{-1}(\alpha_s,\beta_s,0)\otimes R^{-1}(\alpha_s,\beta_s,0)\otimes 
-\ldots  $, where $\alpha_s, \beta_s$ correspond to the orientation of any one of the spinors in (\ref{Maj}), it may 
-be identified that 
+\item Under identical rotation through $R^{-1}(\alpha_s,\beta_s,0)\otimes R^{-1}(\alpha_s,\beta_s,0)\otimes \ldots  $, where $\alpha_s, \beta_s$ correspond to the orientation of any one of the spinors in \eqref{Maj}, it may be identified that 
 \begin{equation}
-\label{rl}
 \langle 1,1\ldots , 1\vert R^{-1}(\alpha_s,\beta_s,0)\otimes R^{-1}(\alpha_s,\beta_s,0)\otimes 
-\ldots   \vert \Psi^{(N)}_{\rm sym}\rangle\equiv 0.
+\ldots   \vert \Psi^{(N)}_{\rm sym}\rangle\equiv 0.\label{rl}
 \end{equation}
-This is because the rotation $R_s^{-1}\otimes R_s^{-1}\ldots \otimes R_s^{-1}$ takes one of the spinors $\vert \epsilon_s\rangle$ with orientation angles $(\alpha_s, \beta_s)$ to $\vert 0\rangle$ i.e., it aligns the spinor $\vert \epsilon_s\rangle$ in the positive $z$-direction. 
-Then, every   term in the  superposition (\ref{Maj}) of the rotated state has atleast one 
-$\vert 0\rangle$ and so, the projection $~\langle 1,1,~\ldots,~ 1~\vert~ 
-R_s^{-1}\otimes R_s^{-1}\otimes 
-\ldots R_s^{-1}\vert \Psi^{(N)}_{\rm Sym}\rangle$ of the rotated state in the `all-down' direction
- vanishes. 
-\item Eq.~(\ref{rl}) holds good for  collective rotations ${\cal R}_s^{-1}=R^{-1}_s\otimes 
-R^{-1}_s\otimes\ldots\otimes 
-R^{-1}_s,\ \ s=1,2,\ldots, N,$ which orient {\em any} one of the constituent  
-spinors $\vert\epsilon_s\rangle$ in the positive $z$-direction. In other words, there exist $N$ rotations 
-$R^{-1}_s=R^{-1}(\alpha_s,\beta_s,0), s=1,2,\ldots , N$ -- in general -- which lead to the same result  (\ref{rl}). 
-  
-\item In terms of the alternate representation (\ref{sympure1}) of the symmetric state 
-$\vert \Psi^{(N)}_{\rm sym}\rangle$, (\ref{rl}) leads to 
+This is because the rotation $R_s^{-1}\otimes R_s^{-1}\ldots \otimes R_s^{-1}$ takes one of the spinors $\vert \epsilon_s\rangle$ with orientation angles $(\alpha_s, \beta_s)$ to $\vert 0\rangle$ i.e., it aligns the spinor $\vert \epsilon_s\rangle$ in the positive $z$-direction. Then, every   term in the  superposition \eqref{Maj} of the rotated state has atleast one $\vert 0\rangle$ and so, the projection $\langle 1,1,\ldots, 1\vert R_s^{-1}\otimes R_s^{-1}\otimes \ldots R_s^{-1}\vert \Psi^{(N)}_{\rm Sym}\rangle$ of the rotated state in the `all-down' direction vanishes. 
+
+\item Eq. \eqref{rl} holds good for  collective rotations ${\cal R}_s^{-1}=R^{-1}_s\otimes R^{-1}_s\otimes\ldots\otimes R^{-1}_s,\ \ s=1,2,\ldots, N,$ which orient {\em any} one of the constituent spinors $\vert\epsilon_s\rangle$ in the positive $z$-direction. In other words, there exist $N$ rotations $R^{-1}_s=R^{-1}(\alpha_s,\beta_s,0), s=1,2,\ldots , N$ -- in general -- which lead to the same result  \eqref{rl}.
+
+%raghu, 5  
+\item In terms of the alternate representation \eqref{sympure1} of the symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$, \eqref{rl} leads to 
 \begin{eqnarray}
 \label{prelim}
 \left\langle \frac{N}{2},-\frac{N}{2}\left\vert 
@@ -174,8 +96,8 @@ $R^{-1}(\alpha_s,\beta_s,0)\otimes R^{-1}(\alpha_s,\beta_s,0)\otimes
 $$D^{N/2\dag}_{-N/2,\, l-N/2}=\langle N/2,-N/2\vert{\cal R}^{-1}_l 
  \vert N/2,l-N/2\rangle,$$
   represents the collective rotation   
- in the Wigner-$D$ representation~\cite{Rose}. 
-Substituting the explicit form of the $D$-matrix~\cite{Rose}, i.e.,
+ in the Wigner-$D$ representation \cite{Rose}. 
+Substituting the explicit form of the $D$-matrix \cite{Rose}, i.e.,
 \begin{eqnarray}
 \label{dmatrix}
 \left[D^{\frac{N}{2}\dag}(\alpha,\beta,0)\right]_{-\frac{N}{2},l-\frac{N}{2}}&=&D^{\frac{N}{2}*}_{l-\frac{N}{2},-\frac{N}{2}}(\alpha,\beta,0) \nonumber\\ 
@@ -310,13 +232,13 @@ z_{1}=0,z_2^{-1}=z_3^{-1}=0,   \beta_{1}=0, \beta_{2,3}=\pi \\ \alpha_{1,2,3}={\
 
 \section{SLOCC classification of multiqubit symmetric states} 
 \label{classification}
-Multiparticle entanglement  can be of different kinds~\cite{Dur}. Two multiparty states have the same kind of entanglement if they
-can be obtained from each other other via SLOCC with nonzero probability. It is well-known that three-qubit GHZ and W states are inequivalent under SLOCC and are representatives of inequivalent three-party entanglement. Understanding  inequivalent classes of multiparticle entanglement, which are not interconvertible into each other under SLOCC operations is of fundamental importance~\cite{Dur,Ver,Lamata,solano}. In the following, we outline~\cite{solano} the SLOCC classification of pure symmetric multiqubit\normalfont states based on Majorana goemetric representation.
+Multiparticle entanglement  can be of different kinds \cite{Dur}. Two multiparty states have the same kind of entanglement if they
+can be obtained from each other other via SLOCC with nonzero probability. It is well-known that three-qubit GHZ and W states are inequivalent under SLOCC and are representatives of inequivalent three-party entanglement. Understanding  inequivalent classes of multiparticle entanglement, which are not interconvertible into each other under SLOCC operations is of fundamental importance \cite{Dur,Ver,Lamata,solano}. In the following, we outline \cite{solano} the SLOCC classification of pure symmetric multiqubit\normalfont states based on Majorana goemetric representation.
 
  As we have noted in Sec.~II,  the roots of the Majorana polynomial (\ref{Mp}) (and (\ref{Mp2})) could be degenerate  and hence not all the  $N$ constituent spinors of a pure symmetric $N$ qubit state are distinct. Let $\vert \epsilon_1\rangle, \vert \epsilon_2\rangle,\ldots, \vert \epsilon_d\rangle,\ d\leq N$ be the number of distinct spinors, in a $N$ qubit pure symmetric state (\ref{Maj}).  Then, the list of numbers $$\left\{n_1,\,n_2,\ldots ,n_d;\ \ n_1\geq n_2\geq\ldots \geq n_d; \ \ \  n_1+n_2+\ldots+n_d=N\right\}$$ 
  corresponds respectively to the number of times the independent spinors $\vert\epsilon_i\rangle$, ($i=1,2,\ldots d\leq N$) appear in the symmetric state (\ref{Maj}) under consideration. The number $d\leq N$, called the {\em diversity degree} and the list of numbers $\left\{n_1,\,n_2,\ldots ,n_d;\  n_1\geq 
 n_2\geq \ldots n_d,\  \sum_{i=1}^{d} 
-n_i=N\right\}$, called the {\em degeneracy configuration}, form the key elements in the classification of  pure symmetric states~\cite{solano}. The different classes  (based on the number of distinct spinors and their arrangement in a given $N$-qubit symmetric state)  are denoted by $\{{\cal D}_{n_1,n_2,\ldots n_d}\}$. 
+n_i=N\right\}$, called the {\em degeneracy configuration}, form the key elements in the classification of  pure symmetric states \cite{solano}. The different classes  (based on the number of distinct spinors and their arrangement in a given $N$-qubit symmetric state)  are denoted by $\{{\cal D}_{n_1,n_2,\ldots n_d}\}$. 
  An identical ILO $A^{\otimes N}$ transforms a symmetric state belonging to the class $\{ {\cal D}_{n_1,\,n_2,\ldots, n_d}\}$
   to another state of the {\em same} class. More explicitly, we have 
 \begin{eqnarray}
@@ -325,7 +247,7 @@ n_i=N\right\}$, called the {\em degeneracy configuration}, form the key elements
 \end{eqnarray}  
 with the constituent spinors transforming as 
 $\vert\epsilon'_i\rangle~=~A\, \vert\epsilon_i\rangle$, $i=1,2,\ldots d$. This forms the main basis of the SLOCC classification of symmetric pure 
-states~\cite{solano}. 
+states \cite{solano}. 
 
 \begin{enumerate}
 \item $\{{\cal D}_N\}$: When all the $N$ solutions of the Majorana polynomial are identically equal, the corresponding class of  symmetric states is given by 
@@ -351,15 +273,15 @@ are all inequivalent under  SLOCC (as the degeneracy classification  is differen
 the pure symmetric states constitute  the class $\{ {\cal D}_{1,1,1,\ldots, 1}\}$ with diversity degree  $d=N$. Clearly, the $N$ qubit GHZ state is a representative of this entanglement class. 
 \end{enumerate}
 \noindent The number of SLOCC classes  grows  with the increase in the number of qubits: For $N=2$, there are only $2$ entanglement families given by 
-$D_{2}$ (the separable class) and $D_{1,\,1}$; for $N=3$ there are $3$ SLOCC classes given by $D_{3}$, $D_{2,\,1}$ and $D_{1,\,1,\,1} $ etc.  In general, the number of entanglement families for a symmetric $N$-qubit state grows~\cite{solano}, based entirely on the partition of the number $N$ in the arrangement $\left\{n_1,\,n_2,\ldots ,n_d;\ n_1\geq n_2\geq\ldots\geq n_d;\   \sum_{i=1}^{d} 
-n_i=N\right\}$. However, the Majorana classes  with diversity degree $d\geq 4$ contain a continuous range of SLOCC classes, depending on a continuous  parameter and the states with different value of this continuous  parameter  are not SLOCC convertible into each other~\cite{solano}. 
+$D_{2}$ (the separable class) and $D_{1,\,1}$; for $N=3$ there are $3$ SLOCC classes given by $D_{3}$, $D_{2,\,1}$ and $D_{1,\,1,\,1} $ etc.  In general, the number of entanglement families for a symmetric $N$-qubit state grows \cite{solano}, based entirely on the partition of the number $N$ in the arrangement $\left\{n_1,\,n_2,\ldots ,n_d;\ n_1\geq n_2\geq\ldots\geq n_d;\   \sum_{i=1}^{d} 
+n_i=N\right\}$. However, the Majorana classes  with diversity degree $d\geq 4$ contain a continuous range of SLOCC classes, depending on a continuous  parameter and the states with different value of this continuous  parameter  are not SLOCC convertible into each other \cite{solano}. 
    
 \section{Determining the Whole pure state from its parts} 
 
 While the equivalence of quantum states under SLOCC is known to indicate that states belonging to the same equivalence class can be used to implement 
-similar quantum information tasks~\cite{Dur}, we address the question    
+similar quantum information tasks \cite{Dur}, we address the question    
 "{\emph{Do the {\rm SLOCC} interconvertible symmetric pure states possess similar irreducibility features?}}" by considering specific examples of three-qubit symmetric states belonging to the same SLOCC class 
-$\{{\cal D}_{1,1,1}\}$.  With the help of this example, we demonstrate explicitly that the states of the same Majorana class could exhibit contrasting irreducibility features. In fact, we show that three-qubit GHZ state and its local unitary equivalent states are the only ones of the Majorana class $\{{\cal D}_{1,1,1}\}$,  which are undetermined by their two-qubit reduced systems~\cite{SP1,Walck,Walck2}. 
+$\{{\cal D}_{1,1,1}\}$.  With the help of this example, we demonstrate explicitly that the states of the same Majorana class could exhibit contrasting irreducibility features. In fact, we show that three-qubit GHZ state and its local unitary equivalent states are the only ones of the Majorana class $\{{\cal D}_{1,1,1}\}$,  which are undetermined by their two-qubit reduced systems \cite{SP1,Walck,Walck2}. 
 
 
 \subsection{Irreducibility features of three-qubit symmetric states of the class $\{{\cal D}_{1,1,1} \}$:}
@@ -376,10 +298,10 @@ which are cube roots of unity $\omega$, $\omega^2$, $\omega^3=1$ and the corresp
 \be
 \vert \epsilon_1\rangle =\frac{1}{\sqrt{2}}[\vert 0\rangle+\omega\, \vert 1\rangle],\ \  \vert \epsilon_2\rangle =\frac{1}{\sqrt{2}}[\vert 0\rangle+\omega^2\, \vert 1\rangle], \ \ \vert \epsilon_3\rangle =\frac{1}{\sqrt{2}}[\vert 0\rangle+ \vert 1\rangle].
 \ee 
-GHZ state is fragile under the loss of a qubit, with vanishing pairwise concurrence~\cite{Wot,Wot2} for any pairs of 
-two-qubit reduced density matrices; but it exhibits genuine three-party entanglement~\cite{Dur,RaRe} with the 
-maximum tangle  $\tau=1$~\cite{Kun}.  The state exhibits irreducible three-party correlations which can not be  
-determined by its reduced states~\cite{SP1,Walck,Walck2}. 
+GHZ state is fragile under the loss of a qubit, with vanishing pairwise concurrence \cite{Wot,Wot2} for any pairs of 
+two-qubit reduced density matrices; but it exhibits genuine three-party entanglement \cite{Dur,RaRe} with the 
+maximum tangle  $\tau=1$ \cite{Kun}.  The state exhibits irreducible three-party correlations which can not be  
+determined by its reduced states \cite{SP1,Walck,Walck2}. 
 
 We  consider another three-qubit state which belong to the same SLOCC class $\{{\cal D}_{1,1,1}\}$ of three distinct Majorana spinors: 
 \begin{equation}
@@ -410,7 +332,7 @@ up to an overall factor:
 $A\, \vert\epsilon_1'\rangle=\sqrt{2}\omega\, \vert\epsilon_1\rangle,$   
 $A\, \vert\epsilon_2'\rangle=-\omega^2\, \vert\epsilon_2\rangle,$ 
 and $A\, \vert\epsilon_3'\rangle=   \sqrt{2}\,  \vert\epsilon_3\rangle$.  
-We now exhibit how the higher order correlation in  the W$\bar W$ superposition state $\vert \eta\rangle$ is imprinted in its two-qubit reduced states~\cite{SP1,usa,usa1,usa2}. 
+We now exhibit how the higher order correlation in  the W$\bar W$ superposition state $\vert \eta\rangle$ is imprinted in its two-qubit reduced states \cite{SP1,usa,usa1,usa2}. 
 
 Let us suppose that a mixed  three-qubit state $\hat\gamma$ too has the same two-qubit reduced system $\varrho_{12}$, 
 as that of the W$\bar W$ superposition state $\vert \eta\rangle.$ Denoting the pure state $\vert \Gamma\rangle$ to be  
@@ -488,10 +410,10 @@ $\vert \Gamma\rangle\equiv \vert \eta\rangle \, \vert e_{00}\rangle.$
 In other words,  the three-qubit pure state $\vert \eta\rangle$  is uniquely determined by its two-qubit reduced %%@
 systems and is therefore, reducible. 
 
-This illustrative example of three qubits supports the already existing general result~\cite{Walck,Walck2} that only the $N$ qubit GHZ state and its local unitarily equivalents remain undetermined by their reduced density matrices. Moreover, this clearly projects out the contrasting  irreducibility features of two SLOCC interconvertible states (\ref{GHZ}) and (\ref{Wsup}) of the {\em same}  
+This illustrative example of three qubits supports the already existing general result \cite{Walck,Walck2} that only the $N$ qubit GHZ state and its local unitarily equivalents remain undetermined by their reduced density matrices. Moreover, this clearly projects out the contrasting  irreducibility features of two SLOCC interconvertible states (\ref{GHZ}) and (\ref{Wsup}) of the {\em same}  
 entanglement family $\{{\cal D}_{1,1,1}\}$.   
 
-Shruti et al.,~\cite{arvind} experimentally reconstructed the W$\bar W$ three-qubit state on an NMR quantum
+Shruti et al., \cite{arvind} experimentally reconstructed the W$\bar W$ three-qubit state on an NMR quantum
 information processor od three qubits,  establishing that the correlation content of the state is indeed imprinted in 
  its two-party reduced density matrices. Furthermore, using an explicit measurement-based scheme (based on the local invertible transformation given in (\ref{GHZ&eta}))  they filtered out the  three-qubit GHZ state from the W$\bar W$ state experimentally. This indeed has important implications that  entangled states with different correlation properties -- but  belonging to the same SLOCC class -- perform equally well in a given quantum computational task.  
  
@@ -646,7 +568,7 @@ employed only two  of the reduced states $\hat{\rho}_{12}$, $\hat{\rho}_{13}$ to
 
 \section{Conclusion}
 This work is an elucidation of the Majorana goemetric representation of symmetric states and its significance in quantum information theory. In particular, we have outlined the SLOCC classification of permutation invariant states, the connection between SLOCC equivalence of pure states with the 
-irreducibility~\cite{SP1,SP2,SP2b} of their correlations. We have established, through an example, that SLOCC equivalence need not necessarily imply 
+irreducibility \cite{SP1,SP2,SP2b} of their correlations. We have established, through an example, that SLOCC equivalence need not necessarily imply 
 the reducibility (irreducibility) of all the states belonging to the same family. The  mathematical beauty inherent in the Majorana goemetric representation leading to the physically important tasks is a feature that we have emphasised in this article. 
 
  
