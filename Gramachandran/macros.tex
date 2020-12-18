@@ -63,8 +63,11 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 %%redefining macros
 \makeatletter
 
-%\renewcommand\chaptermark[1]{\markboth{\thechapter. #1}{}}
-\renewcommand\sectionmark[1]{\markright{\thesection~ #1}}
+\renewcommand\chaptermark[1]{\markboth{\thechapter. #1}{}}
+\renewcommand\sectionmark[1]{}
+
+\rhead[\small Pursuit of Excellence]{\small\thepage}
+\lhead[\small\thepage]{\small\leftmark}
 
 \renewcommand\frontmatter{%
     \cleardoublepage
@@ -78,15 +81,8 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedleft \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-        \huge\bfseries \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 20\p@
-      \fi
-    \fi
     \interlinepenalty\@M
-    \huge\bfseries #1\par\nobreak
+    \huge\bfseries\thechapter.\ #1\par\nobreak
     \vskip 20\p@
   }}
 
