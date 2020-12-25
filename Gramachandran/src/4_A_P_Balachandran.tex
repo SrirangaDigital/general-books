@@ -45,7 +45,7 @@ Then, there are the sectors with ``in'' state vectors \cite{key4}
 & e^{q_{n}\int d^{3}x[A^{-}_{i}(x)\omega^{+}_{i}(x)-A^{+}_{i}(x)\omega^{-}_{i}(x)]}|n,P,\cdot\rangle := |n,P,\omega,\cdot\rangle,\label{chap1-eq2.2}\\
 & |n,P,0,\cdot\rangle \equiv |n,P,\cdot\rangle,\qquad q_{n}\neq 0\label{chap1-eq2.3}
 \end{align}
-created by the infrared photons. Here $A^{\pi}_{i}$ are the positive and negative frequency parts of the electromagnetic potential in the Coulomb gauge, and the functions $\omega^{+}_{i}$, $\omega^{-}_{i}=\overline{\omega}^{+}_{i}$ are transverse:
+created by the infrared photons. Here $A^{+, -}_{i}$ are the positive and negative frequency parts of the electromagnetic potential in the Coulomb gauge, and the functions $\omega^{+}_{i}$, $\omega^{-}_{i}=\overline{\omega}^{+}_{i}$ are transverse:
 \begin{equation}
 \partial_{i}\omega^{\pi}_{i}(x)=0,\label{chap1-eq2.4}
 \end{equation}
@@ -57,11 +57,11 @@ Also they do not vanish fast as we approach infinity:
 
 One such typical $\omega^{+}_{i}$ has the Fourier transform
 \begin{equation}
-\hat{\omega}_{i}^{+}(k)=\int d^{3}xe^{i\overrightarrow{k}\cdot \overrightarrow{x}}\omega^{+}_{i}(x)=\frac{1}{P\cdot k_{i}+i_{\epsilon}}(P_{i}-\overrightarrow{P}\cdot \widehat{k}\widehat{k}_{i})\label{chap1-eq2.6}
+\hat{\omega}_{i}^{+}(k)=\int d^{3}xe^{i\overrightarrow{k}\cdot \overrightarrow{x}}\omega^{+}_{i}(x)=\frac{1}{P\cdot k_{i}+i{\epsilon}}(P_{i}-\overrightarrow{P}\cdot \widehat{k}\widehat{k}_{i})\label{chap1-eq2.6}
 \end{equation}
 (with $\epsilon$ decreasing to zero as usual). The momentum $P_{\mu}$ is the total momentum of the charged system. (We have not shown the individual momenta and charges of which $P$ and $q_{n}$ are composed as they are not importatnt for our considerations.) The important point here is that $\widehat{\omega}^{+}_{i}$ is not square-integrable:
 \begin{equation}
-\langle \omega,\omega\rangle := \lim\limits_{|\overrightarrow{k}|\to 0}\int^{\infty}_{|\overrightarrow{k}|}\frac{d^{3}k}{2|\overrightarrow{k}|}|\widehat{\omega}_{i}(k)|^{2}=\infty.\label{chap1-eq2.7}
+\langle \omega_{i}^{+},\omega_{i}^{+}\rangle := \lim\limits_{|\overrightarrow{k}|\to 0}\int^{\infty}_{|\overrightarrow{k}|}\frac{d^{3}k}{2|\overrightarrow{k}|}|\widehat{\omega}_{i}^{+}(k)|^{2}=\infty.\label{chap1-eq2.7}
 \end{equation}
 It is then a theorem \cite{key6} that the representation of $\mathcal{A}$ built on \eqref{chap1-eq2.2} is superselected: it is not the Fock space representation.
 
@@ -81,15 +81,15 @@ Now \eqref{chap1-eq2.8} generates the additional interaction
 \begin{equation}
 \int d^{3}xA_{\mu}(x)J^{\mu}(x).\label{chap1-eq2.10}
 \end{equation}
-It changes the ``in'' state to $|n,\omega\ldots\rangle$ as in shown in the appendix.
+It changes the ``in'' state to $|n,\omega\ldots\rangle$ as is shown in the appendix.
 
 The following is a further important point. If the Lorentz boost
 \begin{equation}
 K_{i}=\int d^{3}xx_{i}[\overrightarrow{E}^{2}(x)+\overrightarrow{B}^{2}(x)]+\text{matter part}\label{chap1-eq2.11}
 \end{equation}
-is well-defined in $|n, 0;\cdot\rangle$, then it diverges in the sector $|n,\omega;\cdot \rangle$, $\omega\neq 0$ : Lorentz invariance is broken in the latter. We can see this as follows:
+is well-defined on $|n, 0;\cdot\rangle$, then it diverges in the sector $|n,\omega;\cdot \rangle$, $\omega\neq 0$ : Lorentz invariance is broken in the latter. We can see this as follows:
 \begin{align}
-& \rangle n,\omega;\cdot | \int d^{3}xx_{i}[\overrightarrow{E}^{2}(x)+\overrightarrow{B}^{2}(x)]|n,\omega;\cdot\rangle\notag\\
+& \langle n,\omega;\cdot | \int d^{3}xx_{i}[\overrightarrow{E}^{2}(x)+\overrightarrow{B}^{2}(x)]|n,\omega;\cdot\rangle\notag\\
 & =\langle n,0;\cdot |\int d^{3}xx_{i}[(\overrightarrow{E}-i\overrightarrow{\omega})^{2}(x)+\overrightarrow{B}^{2}(x)]|n,0;\cdot\rangle,\notag\\
 &\omega_{i} := \omega^{+}_{i}+\omega^{-}_{i}\label{chap1-eq2.12}
 \end{align}
@@ -159,7 +159,7 @@ since $f$ is a test function and hence compactly supported. In this case,
 \end{equation}
 but $W (\Iim \xi)|0 \rangle$ is not in the fock space. So the representation of $\mathcal{W}$ built on $W (\Iim \xi)|0 \rangle$ is not unitarily equivalent to the Fock representation.
 
-Thise considerations can be adapted to QED. Let $\alpha_\mu$ be the test function for the potential in the Lorentz gauge $\partial^\mu \alpha_\mu =0$. If
+These considerations can be adapted to QED. Let $\alpha_\mu$ be the test function for the potential in the Lorentz gauge $\partial^\mu \alpha_\mu =0$. If
 \begin{equation}
 f_{\mu \nu} (\alpha) = \partial_{\mu} \alpha_{\nu}- \partial_\nu \alpha_\mu, \label{chap1-eq-2.27}
 \end{equation}
@@ -176,7 +176,7 @@ With
   &\tilde{\alpha_\mu} (k) = \int d^4 x \alpha_\mu (x)e^{ik\cdot x}, \qquad k_0 = |\overrightarrow{k}|,\label{chap1-eq2.30}\\
   &\Longrightarrow k^{\mu} \tilde{\alpha_\mu} (k)=0,\label{chap1-eq2.31}
 \end{align}
-We introduce the scalar product
+We can introduce the scalar product
 \begin{equation}
 (\alpha_1, \alpha_2)= \frac{1}{(2\pi)^3} \int \frac{d^3 k}{2|\overrightarrow{k}|} \sum^3_{i=1} \left(\overline{\tilde{\alpha}}_{1, i} -  \frac{k_i}{k_0} \overline{\tilde{\alpha}}_{1, 0}\right) (\tilde{\alpha}_{2, i}- \frac{k_i}{k_0} \tilde{\alpha}_{2, 0})(k) \label{chap1-eq2.32}
 \end{equation}
@@ -200,13 +200,13 @@ By the axioms of QFT \cite{key9}, observables are local. They generate the algeb
 
 The group $SU(3)$ of QCD commutes with all elements of $\mathcal{A}$, just as the $U(1)$ of charge commutes with all elements of  $\mathcal{A}$. But $SU(3)$ unlike $U(1)$ is non-abelian. For this reason, we argued \cite{key1, key4} that $SU(3)$ is spontaneously broken.
 
-Our arguments were as follows. If $\mathbb{C}SU(3)$ is the group algebra of $SU(3)$, $\mathbb{C}SU(3)$ also commutes with $\mathcal{A}$. A maximal abelian subalgebra of $\mathbb{C}SU(3)$ is spanned by the complete commuting set (CCS) $c_2, c_3, \hat{\lambda}_3 \hat{\lambda}_8$ where $c_2, c_3$ are the quadratic and cubic Casimir operators and $\hat{\lambda}_3 \hat{\lambda}_8$ are the operators which represent the $\hat{\lambda}_3 \hat{\lambda}_8$ of the Gell-Mann matrices on the Hilbert space. In any IRR of $\mathcal{A}$, we can diagonalise the CCS. The basis vectors in this IRR can be written as
+Our arguments were as follows. If $\mathbb{C}$\textit{SU(3)} is the group algebra of \textit{SU(3)}, $\mathbb{C}$\textit{SU(3)} also commutes with $\mathcal{A}$. A maximal abelian subalgebra of $\mathbb{C}$\textit{SU(3)} is spanned by the complete commuting set (CCS) $c_2, c_3, I^{2}, \hat{\lambda}_3 \hat{\lambda}_8$ where $c_2, c_3$ are the quadratic and cubic, $I^{2}$ is the Casimir operators of the \textit{SU(2)} commuting with $\hat{\lambda}$ and $3 \hat{\lambda}_8$ are the operators which represent the ${\lambda}_3 {\lambda}_8$ of the Gell-Mann matrices on the Hilbert space. In any IRR of $\mathcal{A}$, we can diagonalise the CCS. The basis vectors in this IRR can be written as
 \begin{equation}
-  |c_2, c_3, i_3, y;\cdot \rangle,\label{chap1-eq3.1}
+  |c_2, c_3, i, i_3, y;\cdot \rangle,\label{chap1-eq3.1}
 \end{equation}
-where $c_2, c_3, i_3, y$ are the eigenvalues of $c_2, c_3, \hat{\lambda}_3 \hat{\lambda}_8$. No observable can affect them. They label a superselection sector.
+where $c_2, c_3, i_3, y$ are the eigenvalues of $c_2, c_3, i, \hat{\lambda}_3 \hat{\lambda}_8$. No observable can affect them. They label a superselection sector.
 
-But in a coloured representation $(c_2, c_3 ~\text{or both}~\neq 0)$, a generic $SU(3)$ transformation will change $i_3, y$. That is, it will change the superselection sector. Hence, such an $SU(3)$ transformation is spontaneously broken.
+But in a coloured representation $(c_2, c_3 ~\text{or both}~\neq 0)$, a generic \textit{SU(3)} transformation will change $i_3, y$. That is, it will change the superselection sector. Hence, such an \textit{SU(3)} transformation is spontaneously broken.
 
 We have analysed a similar situation which occurs for the ethylene molecule \cite{key10}. The gauge group there is $D^\ast_8$, the binary dihedrall group isomorphic to the group
 \begin{equation}
@@ -220,21 +220,21 @@ is diagonal in an IRR of the molecule: no observable changes the eigenvalues of 
 
 A consequence of the above observation is that coloured states, such as
 \begin{equation}
-|c_2, c_3, i_3, y; \cdot \rangle ~ \langle c_2, c_3, i_3, y; \cdot | \label{chap1-eq3.4}
+|c_2, c_3, i, i_3, y; \cdot \rangle ~ \langle c_2, c_3, i, i_3, y; \cdot | \label{chap1-eq3.4}
 \end{equation}
 for $c_2, c_3$ or both $\neq 0$, are \textit{mixed} \cite{key4}. That has consequence for colour confinement \cite{key4}.
 
-In what follows, we give another argument to show that the $SU(3)$ of colour is spontaneously broken. It uses the infrared cloud in QCD which dresses the coloured particle. An extra result we find is that Lorentz invariance is broken in QCD too.
+In what follows, we give another argument to show that the \textit{SU(3)} of colour is spontaneously broken. It uses the infrared cloud in QCD which dresses the coloured particle. An extra result we find is that Lorentz invariance is broken in QCD too.
 
-We approach this problem as in the QED case. The charged particle in QED gets dressed by the infrared radiation and becomes the in and out state. The latter is not in the Fock space and breaks Lorentz invariance.
+We approach this problem as in the QED case. The charged particle in QED gets dressed by the infrared radiation and becomes the out state. The latter is not in the Fock space and breaks Lorentz invariance.
 
 In a similar manner, we can expect novel physical consequences from the gluon radiation of Yang-Mills particles such as quarks.
 
-The dynamics of Yang-Mills gluous is non-linear. Hence, gluous can also radiate gluons. We do not treat this radiation. Perhaps by using a null four vector for $dz_\mu (\tau)/\tau$ in what follows we can get an adequate description of infra-gluon radiation buy gluons.
+The dynamics of Yang-Mills gluous is non-linear. Hence, gluous can also radiate gluons. We do not treat this radiation. Perhaps by using a null four vector for $dz_\mu (\tau)/\tau d$ in what follows we can get an adequate description of infra-gluon radiation buy gluons.
 
 Nor do we treat effects of confinement.
 
-The electric charge $e$ is replaced by an ``internal'' vector of operators $\hat{\lambda}= (\hat{\lambda}_\alpha, \alpha = 1, 2, \ldots , 8)$ for a Yang-Mills or Wong \cite{key11} particle. (We absorb the Yand-Mills coupling constant in the gluon field.) The operators $\hat{\lambda}$ are $SU(3)$ Lie algebra valued with the standard commutators
+The electric charge $e$ is replaced by an ``internal'' vector of operators $\hat{\lambda}= (\hat{\lambda}_\alpha, \alpha = 1, 2, \ldots , 8)$ for a Yang-Mills or Wong \cite{key11} particle. (We absorb the Yand-Mills coupling constant in the gluon field.) The operators $\hat{\lambda}_{\alpha}$ are \textit{SU(3)} Lie algebra valued with the standard commutators
 \begin{equation}
 \left[ \hat{\lambda}_\alpha \hat{\lambda}_\beta \right] = if_{\alpha \beta} {}^\gamma \hat{\lambda}_\gamma. \label{chap1-eq3.5}
 \end{equation}
@@ -271,21 +271,21 @@ then
 \begin{equation}
 \hat{\lambda} (\tau) = g (\tau) \hat{\lambda} (0) g (\tau)^{-1}. \label{chap1-eq3.13}
 \end{equation}
-This equation determines the evolution of $\hat{\lambda}$ with $\tau$. Since $g(\tau) \in SU(3)$, this is by a gauge transformation.
+This equation determines the evolution of $\hat{\lambda}$ with $\tau$. Since $g(\tau) \in$ \textit{SU(3)}, this is by a gauge transformation.
 
-Because of \eqref{chap1-eq3.13}, the $\tau$-evolution of $J$ does not mix different IRR's of $\hat{\lambda}$ and commutes with the Casimir invariants. We therefore assume that $\hat{\lambda}$ belongs to a fixed IRR of \underline{$SU(3)$} (the underline denoting Lie algebra).
+Because of \eqref{chap1-eq3.13}, the $\tau$-evolution of $J$ does not mix different IRR's of $\hat{\lambda}$ and commutes with the Casimir invariants. We therefore assume that $\hat{\lambda}$ belongs to a fixed IRR of \underline{\textit{SU(3)}} (the underline denoting Lie algebra).
 
 The Wong equations have a Lagrangian description found by us long ago \cite{key12}.
 
 \subsection{The Gauge Choice}\label{chap1-sec3.1}
 
-Let $K$ be a fixed element of \underline{$SU(3)$} which is in the orbit of $\hat{\lambda}(0)$. Then we can find $h (\tau) \in SU(3)$ such that
+Let $K$ be a fixed element of \underline{\textit{SU(3)}} which is in the orbit of $\hat{\lambda}(0)$. Then we can find $h (\tau) \in SU(3)$ such that
 \begin{equation}
   K= h (\tau) \hat{\lambda} (\tau) h(\tau)^{-1}.\label{chap1-eq3.14}
 \end{equation}
 That is because the $\tau$-evolution \eqref{chap1-eq3.13} is by gauge transformation.
 
-Let us assume that $K$ is a ``generic'' element of \underline{$SU(3)$}, so that its stability group $[U(1) \times U (1)]$ is abelian. (We comment on-abelian stability groups below.) In that case,
+Let us assume that $K$ is a ``generic'' element of \underline{\textit{SU(3)}}, so that its stability group $[U(1) \times U (1)]$ is abelian. (We comment on non-abelian stability groups below.) In that case,
 \begin{equation}
 A_\tau [z(\tau)]: = \frac{dz^\mu(\tau)}{d\tau} A_\mu [z(\tau)] \in \underline{U(1) \times U(1)}.\label{chap1-eq3.15}
 \end{equation}
@@ -306,7 +306,7 @@ where $Tr (KL)=0, K, L$ are the basis of the two \underline{$U(1)$}'s and commut
 \end{equation}
 whereas $b$ has no source.
 
-This equation for $a$ can be treated exactly in QCD. the particle state vectors have eigenvalues $k_i$ of $K$. so the radiation is $k_i \omega_\mu$ for a fixed $k_j$ and its dressed in state is
+This equation for $a$ can be treated exactly as before in QCD. the particle state vectors have eigenvalues $k_i$ of $K$. so the radiation is $k_j \omega_\mu$ for a fixed $k_j$ and its dressed in state is
 \begin{equation}
 |\text{in}, \omega, \ldots \rangle = e^{kj \int d^3 x (Tr\lambda_K[A_i^- (x) \omega_i^+ (x)- a_i^+ (x) \omega_i^-(x)])} | P; k_j \rangle |0\rangle_\gamma, \label{chap1-eq3.19} 
 \end{equation}
@@ -322,7 +322,7 @@ Just as in QED, Lorentz invariance is spontaneously broken in QCD. The proof fol
 
 The considerations leading to the gauge choice $K$ imply that the test functions $\alpha$ are proportional to $K: \alpha = K \beta$, where $\beta$ are real-valued. The linear functional $F$ in \eqref{chap1-eq2.34} now involves a trace over the Lie algebra elements. Correspondingly, there is now a trace in \eqref{chap1-eq2.34}. Also, the electric charge $q_n$ is replaced by $k_j$.
 
-Now $K$ has in general manuy eigenvalues and we can transform one eigenvalue $k_j$ to another, $k_l$, by conjugating $K$ by a suitable $SU(3)$ element. Consider the case where $k_j \neq k_l$. The change in $F(\alpha)$ is then by
+Now $K$ has in general manuy eigenvalues and we can transform one eigenvalue $k_j$ to another, $k_l$, by conjugating $K$ by a suitable \textit{SU(3)} element. Consider the case where $k_j \neq k_l$. The change in $F(\alpha)$ is then by
 \begin{equation}
 (\zeta, \alpha) \label{chap1-eq4.1}
 \end{equation}
@@ -338,12 +338,12 @@ The change from $k_j$ to $k_l \neq k_j$ is very much like changing the charge in
 
 \subsection{The Case where $K$ is Non-Generic}\label{chap1-sec4.1}
 
-In this case, $K$ is parallel to $\hat{\lambda}_8$ and its stability group is non-abelian, being $s(U(2) \times U(1))$, which is isomorphic to $U(2)$. Its Lie algebra is the direct sum of those of $SU(2)$ and $U(1)$, where the latter has $\lambda_8$ as a basis. Also, \underline{$U(1)$} commutes with \underline{$SU(2)$}. The generators of \underline{$SU(2)$} and \underline{$U(1)$} are trace orthogonal while the current $J_\mu$ has only the \underline{$U(1)$} or $\lambda_8$ component. Thus the current is non-zero only for the abelian component $\lambda_8$ of $A_\tau(z (\tau))$. The \underline{$SU(1)$} part of $A_\tau (z(\tau))$ decouples from this \underline{$U(1)$} part. So the \underline{$U(1)$} part can be treated as before, with similar conclusions.
+In this case, $K$ is parallel to $\hat{\lambda}_8$ and its stability group is non-abelian, being $S(U(2) \times U(1))$, which is isomorphic to $U(2)$. Its Lie algebra is the direct sum of those of $SU(2)$ and $U(1)$, where the latter has $\lambda_8$ as a basis. Also, \underline{\textit{U(1)}} commutes with \underline{\textit{SU(2)}}. The generators of \underline{\textit{SU(2)}} and \underline{\textit{U(1)}} are trace orthogonal while the current $J_\mu$ has only the \underline{\textit{U(1)}} or $\lambda_8$ component. Thus the current is non-zero only for the abelian component $\lambda_8$ of $A_\tau(z (\tau))$. The \underline{\textit{SU(1)}} part of $A_\tau (z(\tau))$ decouples from this \underline{\textit{U(1)}} part. So the \underline{\textit{U(1)}} part can be treated as before, with similar conclusions.
 
 \noindent \textbf{\large Acknowledgements}
 \medskip
 
-The original claim that non-abelian superselection rules are spontaneously broken is contained in the paper with Vaidya \cite{key1}. In papers with Queiroz and Baidya \cite{key10, key13}, The related result was shown that coloured states are mixed and hence cannot be produced from colour singlets. The work on Lorentz symmetry breaking was done with K\"urk\c{c}\"{u}o\u{g}lu, Queiroz and Vaidya \cite{key4}. I am grateful to all these colleagues and to Kumar Gupta for valuable inputs. I bery much appreciate the invaluable help I received from Nirmalendu Acharyya and Ver\'onica Errasti D\'iez in preparing the paper. Vero was especially helpful, carefully reading the paper and suggesting improvements. I also thank Andr\'es Reyes at the Universidad de Los Andes for hosting me as the Sanford Professor and for warm hospitality while this work was being completed.
+The original claim that non-abelian superselection rules are spontaneously broken is contained in the paper with Vaidya \cite{key1}. In papers with Queiroz and Vaidya \cite{key10, key13}, the related result was shown that coloured states are mixed and hence cannot be produced from colour singlets. The work on Lorentz symmetry breaking was done with K\"urk\c{c}\"{u}o\u{g}lu, Queiroz and Vaidya \cite{key4}. I am grateful to all these colleagues and to Kumar Gupta for valuable inputs. I very much appreciate the invaluable help I received from Nirmalendu Acharyya and Ver\'onica Errasti D\'iez in preparing the paper. Vero was especially helpful, carefully reading the paper and suggesting improvements. I also thank Andr\'es Reyes-Lega at the Universidad de Los Andes for hosting me as the Sanford Professor and for warm hospitality while this work was being completed.
 
 \medskip
 \noindent \textbf{\large A Apprndix: Derivation of \eqref{chap1-eq2.2}}
@@ -359,12 +359,12 @@ We start with non-interacting charges and photons, the latter being in their vac
 \end{align*}
 Here $|0 \rangle_\gamma$ is the photon vacuum and $n$ as before denotes charge $q_n$. Let $H_0$ be the Hamiltonian associated with \eqref{chap1-eqA.1}
 
-The current $j^\mu$ of the charged particle can be approximated by that of a particle moving with charge $q_n$ and constant velocity $\dfrac{P^\mu}{(P\cdot P)^{\frac{1}{2}}}: = \dfrac{P^\mu}{M}$. It radiates photons of various momenta, but since we are interested in the infrared limit where they approach zero, we van assume that $\dfrac{P^\mu}{M}$ is constant.
+The current $j^\mu$ of the charged particle can be approximated by that of a particle moving with charge $q_n$ and constant velocity $\dfrac{P^\mu}{(P\cdot P)^{\frac{1}{2}}}: = \dfrac{P^\mu}{M}$. It radiates photons of various momenta, but since we are interested in the infrared limit where they approach zero, we can assume that $\dfrac{P^\mu}{M}$ is constant.
 
 The current $J^\mu$ is thus
 \begin{align*}
   J^\mu (x) & = q_n \int^\infty_{-\infty} d \tau \delta^4 (x- z (\tau)) \frac{dz^\mu(\tau)}{d\tau}\\
-  & = \infty^\infty_{-\infty} d \tau \delta^4 \left(x- \tau \frac{P}{M}\right) \frac{P^\mu}{M}\label{chap1-eqA.2}\tag{A.2}
+  & = \int^\infty_{-\infty} d \tau \delta^4 \left(x- \tau \frac{P}{M}\right) \frac{P^\mu}{M}\label{chap1-eqA.2}\tag{A.2}
 \end{align*}
 where for the charged particle tragectory $z(\tau)$, we assume that
 \begin{equation*}
@@ -374,7 +374,7 @@ z^\mu (\tau) = \tau \frac{P^\mu}{M}. \label{chap1-eqA.3}\tag{A.3}
 The interaction of $A_\mu$ with $J^\mu$ is described by the interaction Hamiltonian
 \begin{align*}
   H_I(t) & = q_n \int d^3 x a_\mu (x) \int d \tau \frac{P^\mu}{M} \delta^4 \left( x- \tau \frac{P}{M} \right) \label{chap1-eqA.4}\tag{A.4}\\
-  & = q_n \left( \frac{P^\mu}{P_0}\right) A_\mu \left( x_0 \frac{P}{P^0}\right), \quad t= x_0 \label{chap1-eqA.5}\tag{A.5}
+  & = q_n \left( \frac{P^\mu}{P_0}\right) A_\mu \left( x_0 \frac{P}{P^0}\right), \quad t= x_0. \label{chap1-eqA.5}\tag{A.5}
 \end{align*}
 
 The in-state associated with \eqref{chap1-eqA.1} is obtained by applying the M\o{}ller operator
@@ -405,7 +405,7 @@ U(t) = T \exp \left[-i \int^0_t dz^\mu (x_0) A_\mu  \left( x_0 \frac{P}{M}\right
 
 Since
 \begin{equation*}
-  [[\hat{H}_I (t), \hat{H}_I(t')], \hat{H}_I (t'')]=0 \label{chap1-eqA.11}\tag{A.11}
+  [[\hat{H}_I (t), \hat{H}_I(t')], \hat{H}_I (t'')]=0, \label{chap1-eqA.11}\tag{A.11}
 \end{equation*}
 it is known that \cite{key14}
 \begin{equation*}
@@ -414,7 +414,7 @@ U(t) = \exp \left[ -i \int^0_t dt' \hat{H}_I (t')\right] \times u(t) \label{chap
 where $u(t)$ is a (time- and $P$-dependent) phase commuting with all operators of the electromagnetic field. It does not affect us. Hence we can drop it form $\Omega$ and write
 \begin{align*}
   \Omega & = \exp \left[-i \int^0_{-\infty} dt' \hat{H}_I (t') \right] \label{chap1-eqA.13}\tag{A.13}\\
-  & = \exp \left[ -iq_n \int^0_{-\infty} dz^\mu (x_0) a_\mu \left( x_0 \frac{P}{M}\right)\right] \label{chap1-eqA.14}\tag{A.14}
+  & = \exp \left[ -iq_n \int^0_{-\infty} dz^\mu (x_0) a_\mu \left( x_0 \frac{P}{M}\right)\right]. \label{chap1-eqA.14}\tag{A.14}
 \end{align*}
 
 Let
@@ -439,11 +439,11 @@ Thus we get
 \Omega = \exp - \left\{ \int \frac{d^3 k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} \left[a_\mu^+ (k) \tilde{\omega}^{\mu -} (k) - a_\mu^- (k) \tilde{\omega}^{\mu + (k)} \right]\right\}. \label{chap1-eqA.19}\tag{A.19}
 \end{equation*}
 
-The gauge choice in \eqref{chap1-eqA.19} is Lorentz: $k^\mu a_\mu^+ (k) =0$. so we can replace $a_\mu^{\pm} (k)$ by
+The gauge choice in \eqref{chap1-eqA.19} is Lorentz : $k^\mu a_\mu^{+ -} (k) =0$. So we can replace $a_\mu^{\pm} (k)$ by
 \begin{equation*}
 {a_\mu^{\pm}}' (k) = a_\mu^{\pm} (k) - \frac{k_\mu}{k_0} a_0^\pm (k) \label{chap1-eqA.20}\tag{A.20}
 \end{equation*}
-which is in the Coulomb gauge:
+which is in the Coulomb gauge :
 \begin{equation*}
   {a_0^{+}}' (k) =0, \qquad k_i {a_i^\pm} ' (k) =0. \label{chap1-eqA.21}\tag{A.21}
 \end{equation*}
@@ -454,10 +454,10 @@ a_\mu^{\mp} (k) \tilde{\omega}^{\mu \pm} \to {a_i^{\mp}}' (k) \tilde{\omega}^{i 
 \end{equation*}
 Since ${a_i^{\pm}}'$ are transverse by \eqref{chap1-eqA.21}, we can now change $\tilde{\omega}^{i \pm }$ to
 \begin{equation*}
-\hat{\omega}^{i \pm} (k) = \tilde{\omega}^{i \pm} (k) - k^i \hat{k}^i \cdot \tilde{\omega}^{i \pm}(k). \label{chap1-eqA.23}\tag{A.23}
+\hat{\omega}^{i \pm} (k) = \tilde{\omega}^{i \pm} (k) - k^i \hat{k}^i \cdot \tilde{\omega}^{j \pm}(k). \label{chap1-eqA.23}\tag{A.23}
 \end{equation*}
 
-On fourier transforming
+On Fourier transforming
 \begin{equation*}
 \int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} \left[ {a_\mu^-}' (k) \hat{\omega}^{\mu +} (k) - {a_\mu^+}' (k) \hat{\omega}^{\mu -} (k)\right]' (k) e^{ik \cdot x} \label{chap1-eqA.24}\tag{A.24}
 \end{equation*}
@@ -496,7 +496,7 @@ A. M. Polyakov, Zh. Eksp. Teor. Fiz. Pis'ma. Red. \textbf{20}, 430 (1974) [JETP 
 \begin{tabular}{V{2.5}cp{6.66cm}V{2.5}}
 \clineB{1-2}{2.5}
  &\\
-\raisebox{-3.2cm}{\includegraphics[scale=.6]{figures/authors/A._P._Balachandran.eps}} & 
+\raisebox{-3.2cm}{\includegraphics[scale=.6]{figures/authors/A._P._Balachandran.jpg}} & 
 
 \centerline{\large\bf A. P. Balachandran}
 
