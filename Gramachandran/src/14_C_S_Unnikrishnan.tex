@@ -32,6 +32,8 @@ relation $\Delta S \geq \hbar$. These findings define the kernel of quantum dyna
 foundational problems of interpretation or ontology, while retaining all the statistical results of
 quantum mechanics.
 
+\vspace{-.3cm}
+
 \section{Introduction}
 
 ``\textbf{It will be impossible to answer any one question completely without at the
@@ -64,8 +66,7 @@ observations of the system.
 
 Subsequent formal developments clarified the mathematical structure of QM and clearly
 delineated how to use the theory for the precise calculations of ensemble averaged quantities
-of interest. The generalization to the Pauli equation for the two-component `spinor' psi-
-function and the further generalization to the relativistic case with the invention of the Dirac
+of interest. The generalization to the Pauli equation for the two-component `spinor' psi-function and the further generalization to the relativistic case with the invention of the Dirac
 equation completed the quantum theory of particles. The comparison with experimental
 observations, and the excellent empirical agreement in every known case, suggest that the
 present QM is the correct statistical description of physical effects in the microscopic atomic
@@ -84,7 +85,7 @@ the core equation of quantum dynamics?! The correct equation for dynamics is fou
 modifying and completing Hamilton's equation for the evolution of the action S, to a new
 equation for the true ``wavefunction of action" $\zeta(S)$, which describes the universal dynamics
 of particles at all scales and all velocities \cite{chap27-key2}. The new dynamics reveals the reason for the
-intrinsic uncertainty, with the new general relation $\Delta S \geq \hbar$. It is argued, from empirical
+intrinsic uncertainty, with the new general relation $\Delta S\geq\hbar$. It is argued, from empirical
 considerations, that there is no matter-wave, and that matter itself does not have any wave
 property. The sole `wave' in quantum mechanics, and indeed in all mechanics, is the `action-
 wave'. It is shown, with explicit demonstrations and calculations, that the new mechanics
@@ -109,7 +110,7 @@ The resulting equation with the Coulomb potential in the Hydrogen atom $V (r) = 
 \begin{equation*}
 \nabla^2 \psi + \frac{8 \pi^2 m}{h^2} (E + e^2 / r) \psi = 0 \tag{3}
 \end{equation*}
-\textit{did provide the Bohr spectrum of Hydrogen atom} \cite{chap27-key1}. Since the interpretation of $\psi$ as the
+\textit{did provide the Bohr spectrum of Hydrogen atom} \cite{chap27-key1}. Since the inter-\break pretation of $\psi$ as the
 `matter-wave' of the single electron around the nucleus sort of fitted what the equation was
 suggesting, the initial interpretation of the Schr\"{o}dinger equation as a wave equation repre-
 senting dynamics, and its wavefunction as the `matter-wave' in space, was widely influential.
@@ -133,7 +134,7 @@ i \hbar \frac{\partial \psi (x,t)}{\partial t} = - \frac{\hbar^2}{2m} \nabla^2 \
 \end{equation*}
 
 Clearly, the logical path followed was not one that guaranteed, or even suggested, an
-equation of dynamics. Note that there was no relation made between the combination
+equation of dynamics.~Note that there was no relation made between the combination
 $(\nabla^2 + V )$ and an operator corresponding to the Hamiltonian of the system. The total energy
 was in fact represented by the time derivative because that was obtained by replacing $E$
 with $\dot{\psi}$, after assuming harmonic solutions. Also, one just assumed its general validity for
@@ -143,8 +144,10 @@ any acceptable physical interpretation of the psi-function and the wave equation
 order time derivative may remind us of the first order derivative in the celebrated Hamilton's
 equation (called the Hamilton-Jacobi equation) of the action,
 \begin{equation*}
-\frac{\partial S (x,p,t)}{\partial t} = - H \tag{7}
+\frac{\partial S (x,p,t)}{\partial t} = - H \tag{7}%\\[-1.5\baselineskip]
 \end{equation*}
+
+\medskip
 
 But this is misleading, because there is no obvious relation between the function $\psi$ and the
 action S. The reason I retraced Schr\"{o}dinger's path to the final equation was to remind
@@ -153,6 +156,8 @@ $\psi(x, t)$ in spite of the fact that Schr\"{o}dinger derived much of the motiv
 from Hamilton's work while formulating a wave equation for quantum dynamics. However,
 the superficial resemblance, especially the first order time derivative, has been serving as a
 misdirecting factor.
+
+\medskip
 
 During his struggle to find a physical interpretation, Schr\"{o}dinger realized that only the
 product $\psi(x) \psi^{\ast}(x)$ had any clear physical meaning; he saw $e|\psi|^2$ as representing the effective
@@ -184,9 +189,9 @@ probability density, $\rho \upsilon = - D \nabla \rho$. Then
 
 
 Thus, the evolution equation for the probability density in the general case is
-\begin{equation*}
+{\fontsize{9}{9}\selectfont\begin{equation*}
 \frac{\partial \rho (x,t)}{\partial t} = - \nabla \cdot (\rho \upsilon) = - \nabla \cdot \left(\frac{\rho \nabla S}{m} - D \nabla \rho \right) = - \frac{\rho}{m} \nabla^2 S - \frac{1}{m} \nabla \rho \cdot \nabla S + D \nabla^2 \rho \tag{10} 
-\end{equation*}
+\end{equation*}}
 
 This has second spatial derivatives on the right. But it is not an equation for dynamics. It
 is explicitly an equation for the statistical ensemble and the quantity $\rho (x, t)$ characterizes
@@ -203,6 +208,8 @@ We call $A$ the probability amplitude. The equation 8 is equivalent to
 \begin{equation*}
 \frac{\partial A}{\partial t} = \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon \tag{11}
 \end{equation*}
+
+\newpage
 
 A diffusive term $D \nabla^2 A$ can be added to this as well, keeping the linear nature of the equation,
 but its justification for the ensemble of single particle dynamics comes from another quarter,
@@ -233,17 +240,18 @@ continuity equation for the probability density, when the system is a dynamical 
 when the ensemble obeys the equation of dynamics. I emphasize that the function $\psi(x, t)$
 does not represent a single particle or single dynamical history. Note than $A$ and $\psi$ are
 dimensionless, as $\rho$ is. Writing $\phi = S/\varepsilon$,
-\begin{align*}
+{\fontsize{9}{9}\selectfont\begin{align*}
 \frac{\partial \psi}{\partial t} & = e^{i S/\varepsilon} \frac{\partial A}{\partial t} + \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} \\
 \frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} & = e^{i S  / \varepsilon} \left(- \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon + D \nabla^2 A \right) \tag{14}
-\end{align*}
+\end{align*}}
 
 The spatial derivatives of $\psi$ are
-\begin{align*}
+{\fontsize{9}{9}\selectfont\begin{align*}
 \nabla \psi & = \frac{i}{\varepsilon} Ae^{iS/\varepsilon} \nabla S + e^{iS/\varepsilon} \nabla A\\
-\nabla^2 \psi & = \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} \nabla^2 S + \frac{i}{\varepsilon} \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} (\nabla S)^2 + \frac{i}{\varepsilon} e^{eS/\varepsilon} \nabla S \cdot \nabla A + e^{i S /\varepsilon} \nabla^2 A + \frac{i}{\varepsilon} e^{iS/\varepsilon } \nabla S \cdot \nabla A \\
+\nabla^2 \psi & = \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} \nabla^2 S + \frac{i}{\varepsilon} \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} (\nabla S)^2 + \frac{i}{\varepsilon} e^{eS/\varepsilon} \nabla S \cdot \nabla A + e^{i S /\varepsilon} \nabla^2 A\\ 
+&\qquad\qquad\qquad\qquad\qquad\qquad+ \frac{i}{\varepsilon} e^{iS/\varepsilon } \nabla S \cdot \nabla A \\
 & = \frac{i}{\varepsilon} Ae^{is/\varepsilon} \nabla^2 S + \frac{2i}{\varepsilon} e^{iS/\varepsilon} \nabla S \cdot \nabla A + e^{i S/\varepsilon} \nabla^2 A - \frac{1}{\varepsilon^2} A e^{iS/\varepsilon} (\nabla S)^2 \tag{15}
-\end{align*}
+\end{align*}}
 
 Now, multiplying by $i\varepsilon /2m$ gives
 \begin{equation*}
@@ -296,7 +304,7 @@ from first principles, clarifying its ensemble nature and completely revealing t
 nature of the function $\psi (x, t) = \sqrt{\rho}e^{i\phi}$. The scale relevant for particle dynamics is obtained
 from experiments, as $\varepsilon = \hbar$.
 
-\section{The $\psi$-Function in the Schr\"{o}dinger Equation}%% III
+\section{The $\psi$-Function in the Schr\"{o}dinger\\ Equation}%% III
 
 From the point of view of physics, it is very important to realize that the Schr\"{o}dinger
 quantum mechanics does not concern a matter-wave, or even a single piece of matter in
@@ -314,18 +322,22 @@ dynamics is implemented through the hybrid nature of the $\psi$-function, contai
 the common scaled action $S/\hbar$, in the phase factor. This factor is common to all members
 of the ensemble, if it is a pure state. Otherwise, this also will be averaged as $(S/\hbar)$, and
 may even be zero, as in an incoherent mixture.
+
+\newpage
+
 \begin{figure}[H]
 \captionsetup{singlelinecheck = false, format= hang, justification=raggedright, font=footnotesize, labelsep=space}
 \centering
 \includegraphics[scale=0.75]{src/images/chap27/1.jpg}
-\caption*{Figure 1: Proof against a matter-wave in real space: A) While the fact of detection as a\break particle is
-unambiguous, any proposal of matter-wave in both paths, with each branch\break possesing the entire
-mass, charge etc. violates all conservation laws. B) However, there is clear empirical evidence for
-a physical entity, which is not a matter-wave, that is present in both paths in space, for every
-particle. The evidence is in the fact that the observable state at the output port depends on what
+\caption*{Figure 1:~~ Proof against a matter-wave in real space: A) While the fact of detection as a\break particle is
+unambiguous, any proposal of matter-wave in both~ paths, with~ each~ branch possesing the entire
+mass, charge etc. violates all conservation laws.~~ B) However, there is clear empirical evidence for
+a physical entity, which is not a matter-wave, that is pres-\break ent in both paths in space, for every
+particle. The evidence is in the fact that the observa-\break ble state at the output port depends on what
 physical element or interaction is present in both paths, for every single particle.}
 \end{figure}
 
+\vspace{-.3cm}
 
 Having made the seemingly incredible assertion that there are no matter-waves in real
 physical situations of quantum mechanics, one is obliged to give some empirical support to
@@ -371,7 +383,11 @@ of interference of dynamical possibilities. Why is the probability density struc
 interference? How can it happen without a `wave'? What is the reason for the intrinsic
 irreducible uncertainty? We will discuss and answer these questions now.
 
+\vspace{-.3cm}
+
 \section{Then, What is the Equation of Dynamics?}%% 4
+
+\vspace{-.2cm}
 
 Having shown that the Schrödinger equation is not the dynamical equation, we have
 the new task of finding the equation that governs the single particle dynamics. Of course
@@ -417,14 +433,15 @@ as a dynamical equation. The similarity is only partial though. This equation fo
 time evolution of action does not involve the average over the ensemble. The Schr\"{o}dinger
 equation is for the time evolution of a different entity, $\psi = \sqrt{\rho} \exp(iS/\varepsilon)$, represeting the
 whole ensemble.
+\hspace{-0.5cm}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{src/images/chap27/2.jpg}
 \captionsetup{singlelinecheck = false, format= hang, justification=raggedright, font=footnotesize, labelsep=space}
 \caption*{Figure 2: The difference between the path in the conventional Hamiltonian dynamics (A) and in
-the new universal mechanics (B). In both schemes, the path has the stationary action $\delta S = 0$.
-But factually, as indicated in the panel (B), the path has the intrinsic uncertainty $\Delta S \geq \hbar$ and a
-nonzero concentration of action $\nabla^2 S$, which drives the diffusion (dephasing) of the action.}
+the new universal mechanics (B). In both schemes, the path has the stationary ac-\break tion $\delta S = 0$.
+But factually, as indicated in the panel (B), the path has the intrinsic uncer-\break tainty $\Delta S \geq \hbar$ and a
+nonzero concentration of action $\nabla^2 S$, which drives the diffusion (de-\break phasing) of the action.}
 \end{figure}
 
 \textit{The first feature I note is that the action-wave is necessarily complex valued}. For, the relation between the first order time evolution and the Hamiltonian involves second order spatial
@@ -438,6 +455,8 @@ the basis of dynamics at all scales. This feature is then \textit{inherited} by 
 The action-wave has unit amplitude, dictated by the dynamical equations $\partial S/\partial t = -H$ and
 $\partial S/\partial x = p$.
 
+\medskip
+
 We note the immediate main result that the new Hamiltonian action-wave equation
 predicts intrinsic indeterminism in dynamics at all scales. The fact that the action is
 involved in dynamics in the form $\exp(iS/\varepsilon)$ implies that the action is specified only up to
@@ -446,10 +465,11 @@ arranged to be of a precise value in some dynamical arrangement. What I mean is 
 action $S$ is uncertain to $\varepsilon$ when no specific arrangement is made to define it precisely. This
 will be explained quantitatively, with an example, later. Then, the equation itself contains
 the stochastic element. With $H = (p^2 /2m) + V$, and $p = \partial S/\partial x$ we get,
-\begin{align*}
+
+{\fontsize{9}{9}\selectfont\begin{align*}
 i \varepsilon \frac{\partial \zeta (S)}{\partial t} & = \left(-\zeta \frac{\partial S}{\partial t} \right) = \left(-\frac{\varepsilon^2}{2m} \nabla^2 + V \right) \zeta = \zeta \left(\frac{p^2}{2m}  + V\right) - \zeta \frac{i\varepsilon}{2m} \nabla^2 S \tag{25}\\
 \frac{\partial S}{\partial t} & = - H + \frac{i \varepsilon}{2m} \nabla^2 S\tag{26} 
-\end{align*}
+\end{align*}}
 
 In addition to the familiar Hamiltonian mechanics in the first term, there is an additional
 term proportional to $\varepsilon$ and to the \textit{concentration of the action in space}, $\nabla^2 S$. The equation
@@ -487,6 +507,8 @@ in the multiple paths (possibilities), it can only be the action wave. This is c
 all empirical facts and it has none of the vexing interpretational issues that people have
 faced and are unable to deal with. Now let us see how every foundational physical issue of
 quantum mechanics has dissolved away.
+
+\vspace{-.3cm}
 
 \section{Quantum Mechanics Without Collapse}%%% 5
 
@@ -548,8 +570,11 @@ I have solved explicitly what Feynman stated as the ``only mystery" of QM; the o
  particles is as a single whole, localized, and yet the interference phenomena happen
 by the accumulation of the single quantum histories that depends on all the dynamic possibilities available to every particle, taken one by one.
 
+\vspace{-.3cm}
 
-\section{Quantum Mechanics Without the Measurement Problem}%% VI
+\section{Quantum Mechanics Without the\\ Measurement Problem}%% VI
+
+\vspace{-.2cm}
 
 The solution of the problem of collapse solves also the most discussed `quantum measurement problem' \cite{chap27-key8} as well, because that physical problem in QM concerns the collapse of the joint $\psi$-function of a particle and another physical system, called the `apparatus', which is
 formally identical to the $\psi$-function of a `two-particle' system. The solution is very easy to
@@ -574,7 +599,13 @@ an interaction. The hard open problem of spatial nonlocality is in fact the most
 foundational issue, ever since the publication of the Einstein-Podolsky-Rosen (EPR) paper
 \cite{chap27-key9}. We take up the quantum interference phenomena of two-particle states in QM next.
 
+%~ \newpage
+
+\vspace{-.5cm}
+
 \section{The Two-Particle Correlation}%% 7
+
+\vspace{-.2cm}
 
 It is very instructive to consider the $\psi$-function of two particles. The realization that the
 $\psi$-function of QM pertains to the ensemble, and not to a single dynamical history of two
@@ -596,13 +627,18 @@ correlation correctly?
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.55]{src/images/chap27/3.jpg}
+
+\vspace{-.2cm}
+
 \captionsetup{singlelinecheck = false, format= hang, justification=raggedright, font=footnotesize, labelsep=space}
 \caption*{Figure 3: Two-particle correlation from the strictly local interference of the correlated action waves at
-locations $x1$ and $x2$. The source obeys a dynamical constraint, represented by $P = P_0$ here, which
+locations $x1$ and $x2$. The source obeys a dynamical constraint, represe-\break nted by $P = P_0$ here, which
 reflects in the action $S_{1a}, ~S_{2b}$ etc. The particle dynamics is definite and completely separable in
 each pairwise event. The property of entanglement is an apparition created due to misinterpreting
 the ensemble entity $\psi$ as a representation of single quantum history.}
 \end{figure}
+
+\vspace{-.3cm}
 
 I am aware how unbelievable it would be to most if the two-particle correlations emerged
 correctly from strictly local interference phenomena in mechanics. This is because there is a
@@ -629,11 +665,13 @@ first particle as
 \zeta_1 = \frac{1}{\sqrt{2}} e^{iS_{1a}/ \hbar}  + \frac{1}{\sqrt{2}} e^{iS_{1b} /\hbar} \tag{36}
 \end{equation*}
 with intensity, $\zeta_1 \zeta_1^{\ast}$,
-\begin{align*}
+{\fontsize{9}{9}\selectfont\begin{align*}
 \zeta_1 \zeta^{\ast}_1 & = \frac{1}{2} \left(1+1+e^{-iS_{1a}/ \hbar} e^{iS_{1b} / \hbar} + e^{iS_{1a} / \hbar} e^{-iS_{1a}/\hbar} \right)\\
 & = \frac{1}{2} \left( 1+1+e^{i(S_{1b} - S_{1a})/\hbar} + e^{-i(S_{1b} - S_{1a}/\hbar)} \right) = 1 + \cos (S_{1b} - S_{1a})/\hbar \tag{37}\\
 & = 1 + \cos (p_{1b} (x-x_s) - p_{1a} (x-x_s)) / \hbar = 1 + \cos \Delta p (x-x_s) /\hbar \tag{38}
-\end{align*}
+\end{align*}}
+
+\vspace{-.3cm}
 
 Though this expression resembles the familiar interference formula, there is no stable interference because of the presence of the source coordinate $x_s$, with an uncertainty $\hbar/ \Delta p$ corresponding to the uncertainty $\hbar$ in the action of the individual particle. Therefore, I can
 now predict that \textit{the maximally correlated state does not show any single particle interference}. This is why the measurements at each location gives random results for any fixed setting `$x$' of the apparatus.
@@ -642,12 +680,17 @@ What is the result for the correlated observation on both the particles? This is
 central problem of `quantum correlations'. The crucial physical point in the joint measurements is the correlated nature of the action waves corresponding to the two particles, with a constraint on the total quantity of a dynamical variable. While there are four joint possibilities for the physical processes (two each for each particle), only two can manifest in the correlation-constrained case, with $p_1 = -p_2$. Then the only two action wave combinations
 are $e^{iS_{1a} /\hbar}  e^{iS_{2b} /\hbar}$ and $e^{iS_{1b}/ \hbar} ~e^{iS_{2a}/\hbar}$. The other two possibilities cannot occur due to the
 constraint (conservation laws). The joint presence of these action waves then interfere, but strictly locally, at location 1 and 2 separately.
+
+\newpage
+
 \begin{align*}
 \zeta_1 \zeta_2 & = \frac{1}{\sqrt{2}} e^{ip_{1a} (x_1- x_s) /\hbar} e^{ip_{2b} (x_2 -x_s) /\hbar} + \frac{1}{\sqrt{2}} e^{ip_{1b} (x_1 - x_s) /\hbar} e^{ip_{2a} (x_2 - x_s) /\hbar}  \tag{39} \\
 & = \frac{1}{\sqrt{2}}  \left(e^{ip_{1a} (x_1- x_s) /\hbar} e^{-ip_{1a} (x_2 -x_s) /\hbar} + e^{ip_{1b} (x_1 - x_s) /\hbar} e^{-ip_{1b} (x_2 - x_s) /\hbar} \right) \tag{40}\\
 & = \frac{1}{\sqrt{2}} \left[ e^{ip_{1a} (x_1- x_2) / \hbar} e^{ip_{1b} (x_1 -x_2) /\hbar}  \right]
  \tag{41}\\
 \end{align*}
+
+\vspace{-.3cm}
 
 \textit{The correlation in the action waves from the common source eliminates any dependence on
 the source coordinate}, and thereby the initial uncertainty and randomness of the action! The
@@ -686,8 +729,11 @@ the single quantum history, which is what is shown to be incorrect in this paper
 himself had showed a gross unphysical feature of Bohm's theory, even for a single particle
 situation of a macroscopic particle in a box \cite{chap27-key11}.
 
+\vspace{-.3cm}
+
 \section{Summary of the main Results}%% 8
 
+\vspace{-.2cm}
 
 I have completed the presentation of the main results of the new universal mechanics,
 applicable to all scales, without any distinction of microscopic and macroscopic, or relativistic and nonrelativistic dynamics. The classical-quantum division was entirely artificial, as hoped by many, but never demonstrated earlier. With the completion of the Hamilton's action mechanics, with the equation of dynamics written for a wave function of action rather than for the action, the inconsistent proposal of the matter-wave is eliminated from mechanics. Both causality and locality are restored in microscopic dynamics, and the tiny intrinsic indeterminism is traced to the scale of the action wave. A summary of the main results is in order.
@@ -741,7 +787,12 @@ the correlations of the `entangled' states.
 
 This last result goes counter to the widely held conviction that telepathic nonlocal influences are a fact of the quantum world. Therefore, it remains to show that this is a wrongly held belief about the two-particle correlations in the conventionally entangled states. Since I have already provided explicit and transparent proofs that Einstein locality is strictly respected by the two-particle correlation, there is the urgent duty to show clearly the exact reasons for the unfounded beliefs. I aim complete clarity and no room for ambiguity in this task, which I will now take up, in a brief discussion.
 
+\vspace{-.3cm}
+
+
 \section{Some Comments on Nonlocality and Bell's Hidden Variables}%%9
+
+\vspace{-.2cm}
 
 Many people think, and express their conviction, that the correlation of spin projections
 seen in the case of certain two-particle states, like the spin-singlet, is nonlocal, in the sense
@@ -751,7 +802,6 @@ theory that correctly reproduces the result is also nonlocal, allowing such infl
 structure of the theory. The reason given by the people who believe in this is the Bell's
 theorem and the Bell's inequality. If the reader is a believer, then a very careful and calm
 reading is prescribed, after which the belief will not stay.
-
 
 Bell's inequality \cite{chap27-key12} was derived in the context of the local hidden variable theories
 (LHVT), which have nothing to do with quantum mechanics. They are a class of `classical'
@@ -771,16 +821,22 @@ by an arbitrary fringe theory, in which the assumption of locality was used! How
 people concluded that the assumption used in an alternate theory is violated in nature. In
 other words, it was implied that the LHVT would be the correct kind of theory, if only its
 assumption of locality is removed. That is entangled logic indeed.
+
+\vspace{-.3cm}
+
 \begin{figure}[H]
 \centering
 \captionsetup{singlelinecheck = false, format= hang, justification=raggedright, font=footnotesize, labelsep=space}
 \includegraphics[scale=0.55]{src/images/chap27/4.jpg}
-\caption*{Figure 4: The measurement of a spin component after a Stern-Gerlach interferometer. The input spin
+\vspace{-.2cm}
+\caption*{Figure 4: ~ The measurement of a spin component after a Stern-Gerlach interferometer. The input spin
 is polarized along $+x$. In the hidden variable scheme, each particle, with all its spin components,
-is either in the upper path or in the lower path, with equal probability. Therefore, the spin rotator
+is either in the upper path or in the lower path, with equal proba-\break bility. Therefore, the spin rotator
 $B_r$ affects only half the particles. In contrast, the phase factor in the lower path affects all the
 particles according to QM. Bell's hidden variable scheme fails here.}
 \end{figure}
+
+\vspace{-.3cm}
 
 If there is any lingering doubt, let me establish two facts that are devastating for what
 has been done in the context of the LHVT, both in the theory and experimental tests: a)
@@ -876,6 +932,7 @@ without an adequate logical and empirical judgement. Our discussion laid out the
 and results with absolute clarity, and then showed how irrelevant the failure of the physically
 faulty LHVT is for any discussion on the problems and peculiarities of quantum mechanics.
 
+\vspace{-.3cm}
 
 \section{Concluding Remarks}%%%10
 
@@ -923,15 +980,18 @@ calculational details that he would have appreciated, I believe.
 
 \end{thebibliography}
 
-\begin{tabular}{V{2.5}cp{6cm}V{2.5}}
+\newpage
+
+\noindent
+\begin{tabular}{V{2.5}cp{9cm}V{2.5}}
 \clineB{1-2}{2.5}
  &\\
-\raisebox{-3.3cm}{\includegraphics[scale=.5]{figures/authors/C_S_Unnikrishnan.png}} & 
+& \centerline{\large\bf C. S. Unnikrishnan} \bigskip \centerline{{\includegraphics[scale=.5]{figures/authors/C_S_Unnikrishnan.png}}} 
 
-\centerline{\large\bf C. S. Unnikrishnan}
 
 \bigskip
-Dr.~C.~S.~Unnikrishnan joined TIFR, Mumbai, in 1984 immediately after obtaining M.Sc. from IIT Madras. Subsequently he got the Ph.D. degree from TIFR and joined there as a faculty member. He was a member of the Group, headed by Prof.Cohen Tannoudji and Prof.Michele Leduc, which demonstrated Bose-Einstein Condensation of Helium during 1997-2001. He has been a leading researcher in India in the domains of Bose Einstein Condensation and Gravitational Wave Physics. He is the Chair of the Program Management Committee of the LIGO-India project. Currently he is a senior Professor at TIFR, Mumbai.\\
+C.~S.~Unnikrishnan is a Professor at the Tata Institute of Fundamental Research, Mumbai. His research interests are experimental and theoretical studies of foundational aspects of gravity and quantum mechanics. Apart from conducting precision measurements using torsion balances to study gravitation and feeble forces, he was involved in the Bose-Einstein condensation of metastable Helium (…cole Normale SupÈrieure, Paris), and led the Örst BEC experiment in India, at TIFR. Major theoretical contributions are the completion of Hamiltonís action mechanics, clarifying Schrˆdinger quantum mechanics, and a new theory of relativity based on the gravity of the matter in the universe, called Cosmic Relativity. He is a proposer-member of the LIGO-India project for an advanced LIGO detector in India and a member of the global LIGO ScientiÖc Collaboration.\\
 &\\ 
 \clineB{1-2}{2.5}
 \end{tabular}
+
