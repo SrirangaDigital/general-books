@@ -1,0 +1,11 @@
+
+\begin{theindex}
+
+	\label{begin:index}
+
+	\providecommand*\lettergroupDefault[1]{}
+	\providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+\label{bookend}\end{theindex}
