@@ -4,18 +4,17 @@
 
 \Authorline{A. R. Usha Devi ${}^{2, 3}$, \footnote{arutth@rediffmail.com}}
 
-${}^1$\textit{Indian Statistical Institute, Theoretical Statistics and Mathematics Unit,Delhi Centre, 7 S. J. S. Sansanwal Marg, New Delhi 110 016, India} 
+\authinfo{${}^1$Indian Statistical Institute, Theoretical Statistics and Mathematics Unit,Delhi Centre, 7 S. J. S. Sansanwal Marg, New Delhi 110 016, India\\
+${}^{2}$Department of Physics, Bangalore University, Bangalore-560 056, India\\
+${}^{3}$Inspire Institute Inc., Alexandria, Virginia, 22303, USA.}
 
-${}^{2}$\textit{Department of Physics, Bangalore University, Bangalore-560 056, India}
-
-${}^{3}$\textit{Inspire Institute Inc., Alexandria, Virginia, 22303, USA.}
-
-\section*{Abstract}
-
+\begin{abstract}
 This is an expositary article narrating  the derivation of a non-linear stochastic Schr{\"o}dinger equation describing a classical diffusion of pure quantum states of a system $S$,  driven by the Brownian motion $\mathbf{B}$, starting from the quantum stochastic differential equations of Hudson and Parthasarathy (HP) (Comm. Math. Phys. {\bf 93}, 301 (1984)). An appropriate Girsanov transformation is identified to result in the Gisin-Percival state diffusion equation (J. Phys. A {\bf 167}, 315 (1992)). This approach yields an explicit solution of the Gisin-Percival equation, in terms of the Hudson-Parthasarathy unitary process and a radomized Weyl displacement process. The well-known Gorini-Kossakowski-Sudarshan-Lindblad (GKSL) master equation is unraveled after coarse-graining over the Gisin-Percival pure state trajectories. The diffusion equation for  mixed state trajectories of a quantum system  $S$ is then obtained  from the Gisin-Percival diffusion equation describing an entangled pure bipartite system with $S$ being one of its subsystems. The scalar-valued moment processes  ${\rm Tr}[\rho_t^m( \mathbf{B})], \,\,\, m=2,3,\ldots$  of the diffused mixed state  $\rho_t(\mathbf{B})$ for  $t\geq 0$,  where $\mathbf{B}$ is the underlying  complex $n$-dimensional vector-valued Brownian motion process,   are shown to admit a Doob-Meyer decomposition as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$ for each $m=2,\, 3,\, \ldots$. This establishes the existence of the  moment processes {\em almost surely} with respect to the Wiener probability measure $\mu$  of the Brownian motion $\mathbf{B}$. In particular, the spectrum and therefore the entropy of $\rho_t (\mathbf{B})$ of a finite level quantum system converge {\em almost surely} to a limiting value asymptotically as $t\rightarrow \infty$. A technical proof indicating the {\em almost sure} convergence of the spectrum for countably infinite level systems is also given.   
+\end{abstract}
+\bigskip
 
 \begin{center}
-	{\large\bf In memory of Professor G.~Ramachandran}
+	{\Large\bf In memory of Professor G.~Ramachandran}
 \end{center}
 
 \section{Introduction}\label{chap5-sec1}
@@ -42,7 +41,7 @@ In this article we establish a rigorous connection between the two approaches me
 
 A pure state remains pure under the Gisin-Percival quantum state diffusion at all times $t\geq 0$. Based on the Gisin-Percival diffusion equation for an entangled pure bipartite state, with $S$ being one of its subsystems, we arrive at the corresponding stochastic differential equation for mixed state trajectories of $S$. Massen and K{\"u}mmerer~\cite{key36} had  investigated  stability features of a discrete time mixed state trajectory, associated with a random chain of quantum states resulting from repeated measurements on a system. As a natural extension of this  we study the stability behaviour of the {\em spectrum} of a continuous time Gisin-Percival quantum diffusion trajectory of mixed quantum states~\cite{key37}. Using It{\^o} calculus~\cite{key38}, along with an induction procedure, we obtain the classical stochastic differential  equation for the scalar-valued moment processes  ${\rm Tr}[\rho_t^m( \mathbf{B})], \,\,\, m=2,3,\ldots$  of the diffused mixed state  $\rho_t(\mathbf{B}), \  t\geq 0$. They are shown to admit a Doob-Meyer decomposition~\cite{key39,key40} as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$ for each $m=2,\, 3,\, \ldots$. This ensures the existence of  $\underset{t\rightarrow\infty}{\lim}\, {\rm Tr}[\rho_t^m( \mathbf{B})]$ {\em almost surely} with respect to the Wiener probability measure $\mu$ of the Brownian motion $\mathbf{B}$, for each $m=2,\, 3,\, \ldots$. In particular when  $S$ is a finite level quantum system, the spectrum and therefore the entropy of $\rho_t (\mathbf{B})$ converge {\em almost surely} to a limit asymptotically i.e., as $t\rightarrow \infty$. Using a probabilistic approach~\cite{key41,key42} we then derive a technical result implying the {\em almost sure} convergence of the spectrum for countably infinite level quantum systems. 
 
-We begin with a description of discrete time irreversible dynamics of a finite $d$-level quantum system $S$ in Sec. \ref{chap5-sec2}. This  prepares a necessary groundwork for its natural adaptation to  continuous time noisy evolution, as formulated by HP~\cite{key7,key8}. A brief account of HP quantum stochastic calculus is presented in Sec. \ref{chap5-sec3}. A description of  {\it noisy Schr{\"o}dinger unitary evolutions} in terms of quantum stochastic differential equations is outlined here. We describe,  how a   unitary operator-valued process $\{U(t), t\geq 0\}$ obeying a quantum stochastic differerntial equation  in $\mathcal{H}_S\otimes \mathcal{H}_R$, leads to  the quantum dynamical semigroup $\{T_t, t\geq 0\}$, with GKSL generator $\mathcal{L}$.  Invariance  properties of the GKSL generator $\mathcal{L}$ under  unitary Weyl displacement process and second quantized  unitary operator-valued process is discussed  in Sec. \ref{chap5-sec4}. The basic notions of the Wiener-It{\^o}-Segal isomorphism between the reservoir space $\mathcal{H}_R$ and the Hilbert space $L^2(\mu)$ of norm square integrable functions with respect to the Wiener probability measure $\mu$ of a vector-valued Brownian motion are presented in Sec. \ref{chap5-sec5}. Starting from an HP quantum stochastic differential equation,  Gisin-Percival~\cite{Gisin} quantum state diffusion equation is derived in Sec. \ref{chap5-sec6}.  Stochastic equation describing continuous time diffusion of mixed state of a quantum system $S$, starting from the Gisin-Percival diffusion equation for an entangled pure bipartite state, with $S$ being one of its subsystems, is derived in Sec. \ref{chap5-sec7}. The diffusion equation for  the non-negative bounded scalar-valued  moment processes  $0\leq {\rm Tr}[\, \rho_t^m(\mathbf{B})]\leq 1,\ \  m=2,3,\ldots$ of the quantum trajectory $\{\rho_t(\mathbf{B}),\, t\geq 0\}$ is presented in Sec.~8. Each of the processes $\{{\rm Tr}[\rho_t^m( \mathbf{B})], t\geq 0\}$ is shown to admit a Doob-Meyer decomposition,  as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$. In Sec. \ref{chap5-sec9} we proceed to prove the {\em almost sure} convergence of the spectrum for countably infinite level systems using a probabilistic approach.   
+We begin with a description of discrete time irreversible dynamics of a finite $d$-level quantum system $S$ in Sec. \ref{chap5-sec2}. This  prepares a necessary groundwork for its natural adaptation to  continuous time noisy evolution, as formulated by HP~\cite{key7,key8}. A brief account of HP quantum stochastic calculus is presented in Sec. \ref{chap5-sec3}. A description of  {\it noisy Schr{\"o}dinger unitary evolutions} in terms of quantum stochastic differential equations is outlined here. We describe,  how a   unitary operator-valued process $\{U(t), t\geq 0\}$ obeying a quantum stochastic differerntial equation  in $\mathcal{H}_S\otimes \mathcal{H}_R$, leads to  the quantum dynamical semigroup $\{T_t, t\geq 0\}$, with GKSL generator $\mathcal{L}$.  Invariance  properties of the GKSL generator $\mathcal{L}$ under  unitary Weyl displacement process and second quantized  unitary operator-valued process is discussed  in Sec. \ref{chap5-sec4}. The basic notions of the Wiener-It{\^o}-Segal isomorphism between the reservoir space $\mathcal{H}_R$ and the Hilbert space $L^2(\mu)$ of norm square integrable functions with respect to the Wiener probability measure $\mu$ of a vector-valued Brownian motion are presented in Sec. \ref{chap5-sec5}. Starting from an HP quantum stochastic differential equation,  Gisin-Percival~\cite{key9} quantum state diffusion equation is derived in Sec. \ref{chap5-sec6}.  Stochastic equation describing continuous time diffusion of mixed state of a quantum system $S$, starting from the Gisin-Percival diffusion equation for an entangled pure bipartite state, with $S$ being one of its subsystems, is derived in Sec. \ref{chap5-sec7}. The diffusion equation for  the non-negative bounded scalar-valued  moment processes  $0\leq {\rm Tr}[\, \rho_t^m(\mathbf{B})]\leq 1,\ \  m=2,3,\ldots$ of the quantum trajectory $\{\rho_t(\mathbf{B}),\, t\geq 0\}$ is presented in Sec.~8. Each of the processes $\{{\rm Tr}[\rho_t^m( \mathbf{B})], t\geq 0\}$ is shown to admit a Doob-Meyer decomposition,  as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$. In Sec. \ref{chap5-sec9} we proceed to prove the {\em almost sure} convergence of the spectrum for countably infinite level systems using a probabilistic approach.   
 
 \section{ Irreversible discrete time dynamics of a finite quantum system}\label{chap5-sec2}
 
@@ -104,8 +103,7 @@ We now look at the evolution of the initial state
 in $\mathcal{H}$ under $\{U_n\}$ by explicitly expressing
 \begin{align} 
 \vert\psi_n\rangle &= U_n\, \vert \phi_0\otimes \Omega_0\rangle \nonumber \\ 
-&= \sum_{y_1,y_2,\cdots , y_n}\ \left( L_{y_n\, 0}\, L_{y_{n-1}\, 0}\, \cdots L_{y_1\, 0}\, \vert\,\phi_0\rangle\right)\notag \\
-& \qquad \qquad \qquad \otimes \vert y_1, y_2,\cdots ,y_n\rangle \otimes \vert 0, 0, \cdots \rangle. \label{chap5-eq2.9}
+&= \sum_{y_1,y_2,\cdots , y_n}\ \left( L_{y_n\, 0}\, L_{y_{n-1}\, 0}\, \cdots L_{y_1\, 0}\, \vert\,\phi_0\rangle\right) \otimes \vert y_1, y_2,\cdots ,y_n\rangle \otimes \vert 0, 0, \cdots \rangle. \label{chap5-eq2.9}
 \end{align} 
 Now, let us consider a measurement on the reservoir, when the global state in $\mathcal{H}$ is  
 given by $\vert\psi_n\rangle$ of \ref{chap5-eq2.9}. If we get a classical output $(y_1,y_2,\cdots, y_n)\in \mathbb{X}^n$ as a result of the measurement, the post-measured  state is  
@@ -119,9 +117,9 @@ $$
 $$ 
 What we have described above is succinctly illustrated  in Fig.~1 in the form of a quantum circuit. 
 \begin{figure}[H]
-\centering{
-	\includegraphics{figures/chap5-fig1.eps}}
-	\caption{Evolution of the initial state $\vert\phi_0\otimes \Omega_0\rangle$  in $\mathcal{H}=\mathcal{H}_S\otimes \mathcal{H}_R$, induced by a unitary operator $U_n$ (see \eqref{chap5-eq2.5}), followed by a measurement on the reservoir yielding a classical output $(y_1,y_2,\cdots, y_n)$ and a post measured state $\vert \Psi_n(y_1,y_2,\cdots y_n)\rangle_S$ of the system.} 
+\centering
+\includegraphics{figures/chap5-fig1.eps}
+\caption{Evolution of the initial state $\vert\phi_0\otimes \Omega_0\rangle$  in $\mathcal{H}=\mathcal{H}_S\otimes \mathcal{H}_R$, induced by a unitary operator $U_n$ (see \eqref{chap5-eq2.5}), followed by a measurement on the reservoir yielding a classical output $(y_1,y_2,\cdots, y_n)$ and a post measured state $\vert \Psi_n(y_1,y_2,\cdots y_n)\rangle_S$ of the system.} 
 \end{figure}
 
 Alternatively, allowing a 1-step evolution by $U_{01}$ on the initial state $\vert \phi_0\otimes 0\rangle$ and making a measurement, we  get a classical output $y_1$ and a collapsed state $\vert\Psi_1(y_1)\rangle_S$ of the system $S$ given by 
@@ -168,7 +166,7 @@ we obtain the likelihood ratio  martingale sequence $\{Z_n\}$ in the probability
 \end{align*}
 where  $\nu_\infty(d\mathbf{y})$ gets replaced by $Z_n(\mathbf{y})\, \mu(d \mathbf{y})$ for all $n=1,2,\cdots.$ 
 
-This summarizes the way the discrete time irreversible dynamics  is determined by the discrete time state-valued Markov chain $\{\vert\Psi_n(\cdot)\rangle\}$ starting from $\vert\phi_0 \otimes \Omega_0\rangle$.  Furthermore, this suggests a natural route for an extension to the continuous time irreversible dynamics described by a quantum dynamical semigroup $\{T_t, t\geq 0\}$ with GKSL generator $\mathcal{L}$. We can replace the discrete Schr{\"o}dinger evolution $\{U_n, n=0,1,2,\cdots\}$ by the HP unitary dilation $\{U(t), t\geq 0\}$ of $\{T_t, t\geq 0\}$ in the tensor product of $\mathcal{H}_S$ with an appropriate Boson Fock space $\mathcal{H}_R$, and transfer it to $\mathcal{H}_S\otimes L^2(\mu)$ with $\mu$ as the Wiener probability measure of a suitable multidimensional Brownian motion $\{\mathbf{B}(t),\, t\geq 0\}$, using the Wiener-It{\^o}-Segal isomorphism. Putting $\vert\psi_t\rangle=U(t)\, \vert \phi_0\otimes \Omega_0\rangle$, with $\vert\phi_0\rangle\in \mathcal{H}_S$, $\vert\Omega_0\rangle$ being the constant function in $L^2(\mu)$, identically equal to unity, and  normalizing $\vert\psi_t\rangle$ in $\mathcal{H}_S$, we shall arrive at a state diffusion process $\{\vert \Psi_t(\mathbf{B})\rangle, t\geq 0\},$ which is a perfect continuous time analogue of the Markov chain $\{\vert \Psi_n(\cdot )\rangle\}$ given by \eqref{chap5-eq2.11}-\eqref{chap5-eq2.13}.
+This summarizes the way the discrete time irreversible dynamics  is determined by the discrete time state-valued Markov chain $\{\vert\Psi_n(\cdot)\rangle\}$ starting from $\vert\phi_0 \otimes \Omega_0\rangle$.  Furthermore, this suggests a natural route for an extension to the continuous time irreversible dynamics described by a quantum dynamical semigroup $\{T_t, t\geq 0\}$ with GKSL generator $\mathcal{L}$. We can replace the discrete Schr{\"o}dinger evolution $\{U_n, n=0,1,2,\cdots\}$ by the HP unitary dilation $\{U(t), t\geq 0\}$ of $\{T_t, t\geq 0\}$ in the tensor product of $\mathcal{H}_S$ with an appropriate Boson Fock space $\mathcal{H}_R$, and transfer it to $\mathcal{H}_S\otimes L^2(\mu)$ with $\mu$ as the Wiener probability measure of a suitable multidimensional Brownian motion $\{\mathbf{B}(t),\, t\geq 0\}$, using the Wiener-It{\^o}-Segal isomorphism. Putting $\vert\psi_t\rangle=U(t)\, \vert \phi_0\otimes \Omega_0\rangle$, with $\vert\phi_0\rangle\in \mathcal{H}_S$, $\vert\Omega_0\rangle$ being the constant function in $L^2(\mu)$, identically equal to unity, and  normalizing $\vert\psi_t\rangle$ in $\mathcal{H}_S$, we shall arrive at a state diffusion process $\{\vert \Psi_t(\mathbf{B})\rangle, t\geq 0\},$ which is a perfect continuous time analogue of the Markov chain $\{\vert \Psi_n(\cdot )\rangle\}$ given by \eqref{chap5-eq2.11}--\eqref{chap5-eq2.13}.
 
 \section{Boson Fock space and quantum stochastic evolutions}\label{chap5-sec3}
 
@@ -1207,65 +1205,62 @@ We have derived a non-linear stochastic Schr{\"o}dinger equation \eqref{chap5-eq
 Exploiting the purification of a mixed state via its Schmidt decomposition, we derived the quantum state diffusion equation for the mixed state of one of the subsystems $S$ of the entangled bipartite system. We then arrived at the stochastic differential equation for the scalar-valued moment process ${\rm Tr}[\rho_t^m( \mathbf{B})], \,\,\, m=2,3,\ldots$ of the diffused mixed state $\rho_t(\mathbf{B})$  at time $t$,  for each $t\geq 0$, in terms of $d\,\mathbf{B}$ and $d\,t$. This resulted in the realization that each of the scalar moment processes $\{{\rm Tr}[\rho_t^m( \mathbf{B})], t\geq 0\}$ admits a Doob-Meyer decomposition as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$. This ensures  the existence of $\underset{t\rightarrow\infty}{\lim}\, {\rm Tr}[\rho_t^m( \mathbf{B})]$ almost surely  with respect to the Wiener probability measure $\mu$ of the Brownian motion $\mathbf{B}$, for each $m=2,\, 3,\, \ldots$. This result implies that the spectrum and therefore the entropy of $\rho_t (\mathbf{B})$ converge {\em almost surely} to a  limit asymptotically as $t\rightarrow \infty$ when $S$ is a finite level system, Such {\em almost sure} convergence of the spectrum of countably infinite level quantum systems is also established. 
 
 \begin{thebibliography}{99}
-	\bibitem{key1} V. Gorini, A. Kossakowski, and E. C. G. Sudarshan, {\em Completely positive dynamical semigroups of $N$‐level systems},  J. Math. Phys. {\bf 17}, 821 (1976).
-	\bibitem{key2} G. Lindblad, {\em On the generators of quantum dynamical semigroups}, Commun. Math. Phys. {\bf 48}, 119  (1976).
+\itemsep=2pt
+	\bibitem{key1} V. Gorini, A. Kossakowski, and E. C. G. Sudarshan, {\em Completely positive dynamical semigroups of $N$‐level systems},  J.\ Math.\ Phys.\ {\bf 17}, 821 (1976).
+	\bibitem{key2} G. Lindblad, {\em On the generators of quantum dynamical semigroups}, Commun. Math.\ Phys.\ {\bf 48}, 119  (1976).
 	\bibitem{key3} F. Fagnola, {\em On quantum stochastic differential equations with unbounded coefficients}, Probab.
-	Th. and Rel. Fields, {\bf 86}, 501 (1990).
-	\bibitem{key4} F. Fagnola, and S.J. Wills, {\em Solving quantum stochastic differential equations with unbounded coefficients},  J. Funct. Anal.
+	Th.\ and Rel.\ Fields, {\bf 86}, 501 (1990).
+	\bibitem{key4} F. Fagnola, and S. J. Wills, {\em Solving quantum stochastic differential equations with unbounded coefficients},  J.\ Funct.\ Anal.\ 
 	{\bf 198}, 279 (2003).
-	\bibitem{key5} F. Fagnola, and C.M. Mora, {\em Stochastic Schrödinger equations and applications to Ehrenfest-type theorems}, ALEA, Lat. Am. J. Probab. Math. Stat. {\bf 10}, 191 (2013).
-	\bibitem{key6} K. R. Parthasarathy, {\em Quantum stochastic calculus and quantum Gaussian processes}, Indian J. Pure \& Appl. Math., {\bf 46}, 781 (2015).
-	\bibitem{key7} R. L. Hudson, and K. R. Parthasarathy, {\em Quantum  It\^{o}'s  formula  and  stochastic  evolutions},  Commun. Math. Phys. {\bf 93}, 301 (1984).
+	\bibitem{key5} F. Fagnola, and C. M. Mora, {\em Stochastic Schrödinger equations and applications to Ehrenfest-type theorems}, ALEA, Lat.\ Am.\ J.\ Probab.\ Math.\ Stat.\ {\bf 10}, 191 (2013).
+	\bibitem{key6} K. R. Parthasarathy, {\em Quantum stochastic calculus and quantum Gaussian processes}, Indian J.\ Pure \& Appl.\ Math., {\bf 46}, 781 (2015).
+	\bibitem{key7} R. L. Hudson, and K. R. Parthasarathy, {\em Quantum  It\^{o}'s  formula  and  stochastic  evolutions},  Commun.\ Math.\ Phys.\ {\bf 93}, 301 (1984).
 	\bibitem{key8}  K. R. Parthasarathy, {\em An Introduction to Quantum Stochastic Calculus}, (Birkhauser, Basel, 1992). 
-	\bibitem{key9} N. Gisin, and J. Percival,  J. Phys. A {\bf 167}, 315 (1992).
-	\bibitem{key10} A. Barchielli, L. Lanz, and  G.M. Prosperi, {\em A Model for Macroscopic Description and Continual Observations in Quantum Mechanics},  Nuovo Cimento B {\bf 72}, 79 (1982). 
-	\bibitem{key11} A. Barchielli, A.M. Paganoni, {\em Detection theory in quantum optics: Stochastic representation}, Quantum Semiclass. Opt. {\bf 8}, 133 (1996). 
-	\bibitem{key12} A. Barchielli, A. M. Paganoni and F. Zucca, 	Stochastic Process. Appl. {\bf 73} 69 (1998). 
+	\bibitem{key9} N. Gisin, and J. Percival,  J.\ Phys.\ A {\bf 167}, 315 (1992).
+	\bibitem{key10} A. Barchielli, L. Lanz, and  G. M. Prosperi, {\em A Model for Macroscopic Description and Continual Observations in Quantum Mechanics},  Nuovo Cimento B {\bf 72}, 79 (1982). 
+	\bibitem{key11} A. Barchielli, A. M. Paganoni, {\em Detection theory in quantum optics: Stochastic representation}, Quantum Semiclass. Opt.\ {\bf 8}, 133 (1996). 
+	\bibitem{key12} A. Barchielli, A. M. Paganoni and F. Zucca, 	Stochastic Process.\ Appl.\ {\bf 73} 69 (1998). 
 	\bibitem{key13} A. Barchielli, M. Gregoratti, {\em Quantum continuous measurements: The stochastic Schr{\"o}dinger equations and the spectrum of the output, Quantum Measurements and Quantum Metrology}, {\bf 1} 34 (2013).  
-	\bibitem{key14} G.C. Ghirardi, A. Rimini, and  T. Weber, {\em Unified dynamics for microscopic and macroscopic systems}, Phys. Rev. A. {\bf 34}, 470 (1986). 
-	\bibitem{key15} L. Diosi, {\em Continuous quantum measurement and It\^o formalism}, Phys. Lett. A {\bf 129}, 419 (1988). 
-	\bibitem{key16} V.P. Belavkin, and  P. Staszewski, Phys. Lett. A. {\bf 140}, 359 (1989).
-	\bibitem{key17} G.C. Ghirardi, P. Pearle, and  A. Rimini, {\em Markov processes in Hilbert space and continuous spontaneous localization of systems of identical particles}, Phys. Rev. A. {\bf 42}, 78 (1990). 
-	\bibitem{key18} D. Gatarek, and N. Gisin, {\em Continuous quantum jumps and infinite-dimensional stochastic equations}, J. Math. Phys. {\bf 32}, 2152(1991). 
-	\bibitem{key19} V.P. Belavkin, and P. Staszewski, {\em Nondemolition observation of a free quantum particle}, Phys. Rev. A. {\bf 45}, 1347  (1992). 
-	\bibitem{key20} A. Barchielli, and A. S. Holevo, {\em Stochastic Processes and their applications} Stochastic Process. Appl. {\bf 58}, 293 (1995).
-	\bibitem{key21} N. Gisin, and M. Rigo, {\em Relevant and irrelevant nonlinear Schrodinger equations}, J. Phys. A : Math. Gen. {\bf 28}, 7375 (1995)
-	\bibitem{key22} S. L. Adler, and L. P. Horwitz, {\em Efficient simulation of quantum state reduction}, J. Math. Phys. {\bf 41}, 2485 (2000).   
-	\bibitem{key23} H. M. Wiseman, and  L. Di{\'o}si, {\em Complete parameterization, and invariance, of diffusive quantum trajectories for Markovian open systems}, Chem. Phys. {\bf 268}, 91 (2001). 
-	\bibitem{key24} S. L. Adler, D. C. Brody, T. A. Brun, and L. P. Hughston, {\em Martingale models for quantum state reduction},  J. Phys. A: Math. Gen. {\bf 34}, 8795 (2001). 
-	\bibitem{key25} J. E. Gough, and A. Sobolev, Open Syst. Inf. Dyn. {\em Stochastic Schrödinger equations as limit of discrete filtering}, {\bf 11}, 235 (2004).
-	\bibitem{key26} L. Bouten, M. Gu{\c t}{\u a} and  H. Massen, {\em Stochastic Schrödinger equations}, J. Phys. A: Math. Gene. {\bf 37}, 3189 (2004). 
-	\bibitem{key27} A. Bassi, D. D{\"u}rr, and  G. Hinrichs, {\em Uniqueness of the equation for quantum state vector collapse}, Phys. Rev. Lett. {\bf 111}, 210401 (2013) and references therein.  
-	\bibitem{key28} L. Diosi, {\em New results on non-CP dynamics unearthed from urtexts of quantum state diffusion}, J.Phys. A: Math. Theor. {\bf 50}, 16LT01(2017). 
+	\bibitem{key14} G. C. Ghirardi, A. Rimini, and  T. Weber, {\em Unified dynamics for microscopic and macroscopic systems}, Phys.\ Rev.\ A.\ {\bf 34}, 470 (1986). 
+	\bibitem{key15} L. Diosi, {\em Continuous quantum measurement and It\^o formalism}, Phys.\ Lett.\ A {\bf 129}, 419 (1988). 
+	\bibitem{key16} V. P. Belavkin, and  P. Staszewski, Phys.\ Lett.\ A. {\bf 140}, 359 (1989).
+	\bibitem{key17} G. C. Ghirardi, P. Pearle, and  A. Rimini, {\em Markov processes in Hilbert space and continuous spontaneous localization of systems of identical particles}, Phys.\ Rev.\ A.\ {\bf 42}, 78 (1990). 
+	\bibitem{key18} D. Gatarek, and N. Gisin, {\em Continuous quantum jumps and infinite-dimensional stochastic equations}, J.\ Math.\ Phys.\ {\bf 32}, 2152(1991). 
+	\bibitem{key19} V. P. Belavkin, and P. Staszewski, {\em Nondemolition observation of a free quantum particle}, Phys.\ Rev.\ A.\ {\bf 45}, 1347  (1992). 
+	\bibitem{key20} A. Barchielli, and A. S. Holevo, {\em Stochastic Processes and their applications} Stochastic Process.\ Appl.\ {\bf 58}, 293 (1995).
+	\bibitem{key21} N. Gisin, and M. Rigo, {\em Relevant and irrelevant nonlinear Schrodinger equations}, J.\ Phys.\ A : Math.\ Gen.\ {\bf 28}, 7375 (1995)
+	\bibitem{key22} S. L. Adler, and L. P. Horwitz, {\em Efficient simulation of quantum state reduction}, J.\ Math.\ Phys.\ {\bf 41}, 2485 (2000).   
+	\bibitem{key23} H. M. Wiseman, and  L. Di{\'o}si, {\em Complete parameterization, and invariance, of diffusive quantum trajectories for Markovian open systems}, Chem.\ Phys.\ {\bf 268}, 91 (2001). 
+	\bibitem{key24} S. L. Adler, D. C. Brody, T. A. Brun, and L. P. Hughston, {\em Martingale models for quantum state reduction},  J.\ Phys.\ A: Math.\ Gen.\ {\bf 34}, 8795 (2001). 
+	\bibitem{key25} J. E. Gough, and A. Sobolev, Open Syst.\ Inf.\ Dyn.\ {\em Stochastic Schrödinger equations as limit of discrete filtering}, {\bf 11}, 235 (2004).
+	\bibitem{key26} L. Bouten, M. Gu{\c t}{\u a} and  H. Massen, {\em Stochastic Schrödinger equations}, J.\ Phys.\ A: Math.\ Gene.\ {\bf 37}, 3189 (2004). 
+	\bibitem{key27} A. Bassi, D. D{\"u}rr, and  G. Hinrichs, {\em Uniqueness of the equation for quantum state vector collapse}, Phys.\ Rev.\ Lett.\ {\bf 111}, 210401 (2013) and references therein.  
+	\bibitem{key28} L. Diosi, {\em New results on non-CP dynamics unearthed from urtexts of quantum state diffusion}, J.\ Phys.\ A: Math.\ Theor.\ {\bf 50}, 16LT01(2017). 
 	\bibitem{key29} H. Carmichael, {\it An Open System Approach to Quantum Optics}, (Berlin, Springer, 1993). 
-	\bibitem{key30} J. Dalibard, Y. Castin, and K. M{\o}lmer,  {\em Wave-function approach to dissipative processes in quantum optics}, Phys. Rev. Lett. {\bf 68}, 580 (1992). 
-	\bibitem{key31} K. M{\o}lmer, Y. Castin, and J. Dalibard, {\em Monte Carlo wave-function method in quantum optics}, Opt. Soc. Am. B {\bf 10}, 524 (1993).   
-	\bibitem{key32} N. Wiener, {\em The Homogeneous Chaos}, Amer. J. Math. {\bf 60}, 897 (1930).   
-	\bibitem{key33} K. It\^{o}, Proc.  Imp. Acad. Tokyo,{\em Stochastic integral} {\bf 20}, 519 (1944); {\em On a formula concerning stochastic differentials}, Nagoya Math. J., {\bf 3}, 55 (1951).
-	\bibitem{key34} I. E. Segal, Trans. Am. Math. Soc. {\bf 81}, 106 (1956). 
-	\bibitem{key35} K. R. Parthasarathy, A. R.  Usha Devi, {\em From quantum stochastic differential equations to Gisin-Percival state diffusion}, J. Math. Phys. {\bf 58},  082204-1 - 082204-18   (2017).      
+	\bibitem{key30} J. Dalibard, Y. Castin, and K. M{\o}lmer,  {\em Wave-function approach to dissipative processes in quantum optics}, Phys.\ Rev.\ Lett.\ {\bf 68}, 580 (1992). 
+	\bibitem{key31} K. M{\o}lmer, Y. Castin, and J. Dalibard, {\em Monte Carlo wave-function method in quantum optics}, Opt.\ Soc.\ Am.\ B {\bf 10}, 524 (1993).   
+	\bibitem{key32} N. Wiener, {\em The Homogeneous Chaos}, Amer. J.\ Math.\ {\bf 60}, 897 (1930).   
+	\bibitem{key33} K. It\^{o}, Proc.\ Imp.\ Acad.\ Tokyo,{\em Stochastic integral} {\bf 20}, 519 (1944); {\em On a formula concerning stochastic differentials}, Nagoya Math.\ J., {\bf 3}, 55 (1951).
+	\bibitem{key34} I. E. Segal, Trans.\ Am.\ Math.\ Soc.\ {\bf 81}, 106 (1956). 
+	\bibitem{key35} K. R. Parthasarathy, A. R.  Usha Devi, {\em From quantum stochastic differential equations to Gisin-Percival state diffusion}, J.\ Math.\ Phys.\ {\bf 58},  082204-1 - 082204-18   (2017).      
 	\bibitem{key36} H. Maassen and B. K{\"u}mmerer, {\em Purification of quantum trajectories}, IMS Lecture Notes-Monograph Series, {\bf 48}, 252 (2006). 
 	\bibitem{key37} K. R. Parthasarathy, A. R.  Usha Devi, {\em Asymptotic spectral stability of the Gisin-Percival state diffusion},  arXiv:1707.08157 [quant-ph] (2017)
 	\bibitem{key38} H. P. McKean, {\em Stochastic Integrals}, (Academic Press, 1969).
-	\bibitem{key39} Doob, J.L.:  Stochastic processes . John Wiley $\&$ Sons, New York (1953)
+	\bibitem{key39} Doob, J.L.:  Stochastic processes.\ John Wiley $\&$ Sons, New York (1953)
 	\bibitem{key40}  D. Williams,  {\em Probability with martingales},  (Cambridge University Press, New York, 1991). 
 	\bibitem{key41} P. Billingsley, {\em  Probability and Measure}, (John Wiley $\&$ Sons, New Jersey, 2011) 
 	\bibitem{key42} K. R. Parthasarathy {\em  Introduction to Probability and Measure}, (Hindustan Book Agency, New Delhi, 2005).  
-	\bibitem{key43} I. V. Girsanov, {\em On Transforming a Certain Class of Stochastic processes by absolutely continuous substitution of measures}, Theory of Probab. Appl., {\bf 5}, 285 (1960). 
+	\bibitem{key43} I. V. Girsanov, {\em On Transforming a Certain Class of Stochastic processes by absolutely continuous substitution of measures}, Theory of Probab.\ Appl., {\bf 5}, 285 (1960). 
 	\bibitem{key44}  T. Kato, {\em  Perturbation theory for linear operators}, Chapter I,  (Springer, Berlin, 1995).
-	\bibitem{key45} D. Key and J. Wherl, {\em Poisson stochastic master equation unravelings and the measurement problem: A quantum stochastic calculus perspective}, J. Math. Phys. {\bf 61}, 032101 (2020). 
+	\bibitem{key45} D. Key and J. Wherl, {\em Poisson stochastic master equation unravelings and the measurement problem: A quantum stochastic calculus perspective}, J.\ Math.\ Phys.\ {\bf 61}, 032101 (2020). 
 \end{thebibliography}
-
-
-\begin{tabular}{V{2.5}cp{6.3cm}V{2.5}}
-\clineB{1-2}{2.5}
- &\\
-\raisebox{-4cm}{\includegraphics{figures/authors/Prof_K_R_Parthasarathy.eps}} & 
-
-\centerline{\large\bf Prof. K. R. Parthasarathy}
-
 \bigskip
-Dr. Kalyanapuram Rangachari Parthasarathy completed his Ph.D under Dr.C.R.Rao in 1962 from Indian Statistical Institute, Kolkata. He received the S.S.Bhatnagar award in 1977. He served for brief periods at Bombay University and IIT Delhi. He joined ISI, Delhi, in 1976 and retired from there in 1996. Prof.Parthasarathy is a pioneer in the field of Quantum Stochastic Calculus. He is currently Professor Emeritus at ISI Delhi.\\
-&\\ 
-\clineB{1-2}{2.5}
-\end{tabular}
+
+\centerline{\includegraphics[scale=1.4]{figures/authors/Prof_K_R_Parthasarathy.eps}}
+\smallskip
+
+\authbio{Prof.\ K. R. Parthasarathy}
+\bigskip
+
+\noindent
+\textbf{Dr.\ Kalyanapuram Rangachari Parthasarathy} completed his Ph.D. under Dr.\ C. R. Rao in 1962 from Indian Statistical Institute, Kolkata. He received the S. S. Bhatnagar award in 1977. He served for brief periods at Bombay University and IIT Delhi. He joined ISI, Delhi, in 1976 and retired from there in 1996. Prof.\ Parthasarathy is a pioneer in the field of Quantum Stochastic Calculus. He is currently Professor Emeritus at ISI Delhi.

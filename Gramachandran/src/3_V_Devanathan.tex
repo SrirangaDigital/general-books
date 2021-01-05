@@ -2,50 +2,47 @@
 
 \Authorline{V. Devanathan\footnote{Email: \url{vdevanathan@hotmail.com}}}
 
-\begin{center}
+\authinfo{
 The Academy of Sciences, Chennai\\
 Department of Nuclear Physics\\
 University of Madras, Guindy Campus\\
-Chennai - 600 025
-\end{center}
+Chennai - 600 025}
 
-\section*{Abstract}
-
-\begin{quote}
+\begin{abstract}
 The study of Nuclear Physics can be broadly classified into two parts; the static part and the dynamic part. The static part consists of the study of nuclear energy levels, their binding energies, the magnetic dipole moments and the electric quadrupole moments. The dynamic part deals with the transition of nuclei from one energy level to another due to interactions with external agencies including elementary particles. The former involves the evaluation of matrix elements with spherical tensor operators and the latter the calculation of transition probability from one nuclear state to another. This article briefly outlines how the transition probability can be calculated and how the method can be applied to the study of photoproduction of pions from nuclei. This was an emerging field, about sixty years ago, and this article presents some initial attempts made by G. Ramachandram and I to study this problem.
-\end{quote}
+\end{abstract}
 
 \section{Introduction}\label{chap3-sec1}
  
- It was with Professor G. Ramachandran that I started to lern the elements of Nuclear Physics in he late Nineteen fifties when we commenced our research career \cite{key1,key2,key3,key4,key5,key6,key7,key8} under the guidance of Prof. Alladi Ramakrishnan, in the University of Madras. Earlier, Prof. Alladi had done remarkable work in the field of Stochastic Processes using the concept of Product Densities, known now as Ramakrishnan Product Densities. In the year 1958, he spent a year at the Institute for Advanced Studies at Princeton which had an exhilarating influence on him and his interest shifted from Stochastic Processes to Elementary Particles and Nuclear Physics. It had also brought about a great change in his vision and motivated him to create such a centre in India. On his return to India, he started one-year M.Sc. Course in Theoretical Physics which attracted a large number of brilliant students to join the course. Soon, he was promoted as Professor and posted to the newly started extension centre at Madurai but permitted to run the M.Sc. Program, already started, in Madras. It was a nebulous situation. Since Prof. Alladi had a palatial ancestral home - Ekamra Nivas, he conducted most of the classes in the spacious hall on the first floor of his house. Since Elementary particles and Nuclear Physics were new areas of study, everyone was encouraged to give lectures on different topics. The learning process may truly be called a boot-strap mechanism.
+It was with Professor G. Ramachandran that I started to lern the elements of Nuclear Physics in he late Nineteen fifties when we commenced our research career \cite{key1,key2,key3,key4,key5,key6,key7,key8} under the guidance of Prof.\ Alladi Ramakrishnan, in the University of Madras. Earlier, Prof.\ Alladi had done remarkable work in the field of Stochastic Processes using the concept of Product Densities, known now as Ramakrishnan Product Densities. In the year 1958, he spent a year at the Institute for Advanced Studies at Princeton which had an exhilarating influence on him and his interest shifted from Stochastic Processes to Elementary Particles and Nuclear Physics. It had also brought about a great change in his vision and motivated him to create such a centre in India. On his return to India, he started one-year M.Sc.\ Course in Theoretical Physics which attracted a large number of brilliant students to join the course. Soon, he was promoted as Professor and posted to the newly started extension centre at Madurai but permitted to run the M.Sc.\ Program, already started, in Madras. It was a nebulous situation. Since Prof.\ Alladi had a palatial ancestral home - Ekamra Nivas, he conducted most of the classes in the spacious hall on the first floor of his house. Since Elementary particles and Nuclear Physics were new areas of study, everyone was encouraged to give lectures on different topics. The learning process may truly be called a boot-strap mechanism.
 
-The informal group was given the name “Theoretical Physics Seminar” and we started inviting the visiting scientists from abroad to give talks at the Seminar. Visit to Mahabalipuram and dinner at New Woodlands were the usual way of extending the hospitality to the visiting scientists. A.M. Lane, Abdus Salam, Donald Glaser, S. Chandrasekhar were some of the distinguished scientists who gave talks at the Seminar. A few of them stayed as in-house guests of Prof. Alladi. They are scientists of high calibre. Donald Glaser already received the Nobel Prize for his invention of Bubble Chamber and Abdus Salam and S. Chandrasekhar received the Nobel Prizes subsequently. Abdus Salam was responsible for setting up the International Centre for Theoretical Physics at Trieste, which offered the opportunity for young scientists from developing countries to participate in its research activities as visiting scientists. Photographs of the Theoretical Physics Seminar Group taken with Abdus Salam, Donald Glaser and S. Chandrasekhar are attached herewith.
+The informal group was given the name “Theoretical Physics Seminar” and we started inviting the visiting scientists from abroad to give talks at the Seminar. Visit to Mahabalipuram and dinner at New Woodlands were the usual way of extending the hospitality to the visiting scientists. A.M. Lane, Abdus Salam, Donald Glaser, S. Chandrasekhar were some of the distinguished scientists who gave talks at the Seminar. A few of them stayed as in-house guests of Prof.\ Alladi. They are scientists of high calibre. Donald Glaser already received the Nobel Prize for his invention of Bubble Chamber and Abdus Salam and S. Chandrasekhar received the Nobel Prizes subsequently. Abdus Salam was responsible for setting up the International Centre for Theoretical Physics at Trieste, which offered the opportunity for young scientists from developing countries to participate in its research activities as visiting scientists. Photographs of the Theoretical Physics Seminar Group taken with Abdus Salam, Donald Glaser and S. Chandrasekhar are attached herewith.
 \eject
 
 \begin{figure}[H]
-\centering{
-\includegraphics[scale=.75]{figures/chap3-fig1.eps}\\
-Sitting: Dr. S.K. Srinivasan, Dr. Abdus Salam, Dr. A. Ramakrishnan, Mrs. Ramakrishnan, R. Thunga, T. K. Radha\\
+\centering
+\includegraphics[scale=.33]{src/images/chap3/chap3-fig1.eps}\\
+\caption{Sitting: Dr.\ S.K. Srinivasan, Dr.\ Abdus Salam, Dr.\ A. Ramakrishnan, Mrs.\ Ramakrishnan, R. Thunga, T. K. Radha
 Standing: xxxxxxxxxxx V. Devanathan, G. Ramachandran}
 \end{figure}
 
 \begin{figure}[H]
-\centering{
-\includegraphics[scale=.75]{figures/chap3-fig2.eps}\\
-Front Row: R. Thunga, T. K. Radha, Dr. Donald Glaser (N.L.), Dr. A. Ramakrishnan, S. Indhumathi, G. Bhamathi\\
+\centering
+\includegraphics[scale=.33]{src/images/chap3/chap3-fig2.eps}\\
+\caption{Front Row: R. Thunga, T. K. Radha, Dr.\ Donald Glaser (N.L.), Dr.\ A. Ramakrishnan, S. Indhumathi, G. Bhamathi
 Second Row: A.P. Balachandran, K. Ananthanarayanan, K. Venkatesan, x, M.Deshpande, K. Raman, V. Devanathan, G. Ramachandran, Nambi Iyengar}
 \end{figure}
 
 \begin{figure}[H]
-\centering{
-\includegraphics[scale=.75]{figures/chap3-fig3.eps}\\
-Front Row: S. Indhumathi, G. Bhamathi, Mrs. Ramakrishnan, Dr. A. Ramakrishnan, Dr. S. Chandrasekhar, T. K. Radha, R. Thunga;\\
-Second Row: K. Raman, V. Devanathan, Dr. S. K. Srinivasan, K. Venkatesan, A. P. Balachandran, G. Ramachandran, x, Nambi Iyengar}
+\centering
+\includegraphics[scale=.35]{src/images/chap3/chap3-fig3.eps}\\
+\caption{Front Row: S. Indhumathi, G. Bhamathi, Mrs.\ Ramakrishnan, Dr.\ A. Ramakrishnan, Dr.\ S. Chandrasekhar, T. K. Radha, R. Thunga;
+Second Row: K. Raman, V. Devanathan, Dr.\ S. K. Srinivasan, K. Venkatesan, A. P. Balachandran, G. Ramachandran, x, Nambi Iyengar}
 \end{figure}
 
 It was a fortunate coincidence that both Niels Bohr and Abdus Salam visited Madras in January 1960, after attending the Indian Science Congress held at Bombay and the Theoretical Physics Seminar hosted a dinner in honour of both in New Woodlands. Niels Bohr was very much impressed by the efforts of Alladi in gathering a small enthusiastic group of young theoretical physicists and communicated the same to the then Prime Minister of India, Jawaharlal Nehru, which ultimately resulted in the establishment of the Institute of Mathematical Sciences at Madras 	on January 3, 1962 on the pattern of Institute for Advanced Studies at Princeton \cite{key9}.
 
-At the Theoretical Physics Seminar, which was the forerunner of Institute of Mathematical Sciences, G. Ramachandran and I gave several lectures on different topics in Nuclear Physics. Prof. Manoj Banerji from Calcutta University was invited by the Seminar and he gave a series of lectures on Angular Momentum. G. Ramachandran and I found those lectures very useful since the study of Nuclear physics involves a lot of angular momentum algebra. The investigation of static properties of nuclei such as magnetic dipole moment, electric quadrupole moment and the various energy levels of nuclei involve the calculation of matrix elements between nuclear states using the spherical tensor operators. The study of the dynamical properties of nuclei due to nuclear transition from one state to another as a result of interaction with external field is more involved since it requires the calculation of transition probability of nucleus from one state to another besides the evaluation of matrix elements. If the magnetic sub-states of the initial and final nuclei are not observed, we need to sum over the final magnetic sub-states and average over the initial magnetic sub-states. When we started our research, the study of elementary particle reactions with nuclei was an emerging field and it involved a knowledge of both elementary particle interactions and nuclear structure. Since angular momentum is a conserved quantity in any reaction, a sound knowledge of angular momentum algebra is a pre-requisite for such a study. This has motivated G. Ramachandran to publish the Matscience Report on Angular Momentum \cite{key10} and V. Devanathan, at a later date, to write Text Books, one on Angular Momentum \cite{key11} and another on Nuclear Physics \cite{key12}.
+At the Theoretical Physics Seminar, which was the forerunner of Institute of Mathematical Sciences, G. Ramachandran and I gave several lectures on different topics in Nuclear Physics. Prof.\ Manoj Banerji from Calcutta University was invited by the Seminar and he gave a series of lectures on Angular Momentum. G. Ramachandran and I found those lectures very useful since the study of Nuclear physics involves a lot of angular momentum algebra. The investigation of static properties of nuclei such as magnetic dipole moment, electric quadrupole moment and the various energy levels of nuclei involve the calculation of matrix elements between nuclear states using the spherical tensor operators. The study of the dynamical properties of nuclei due to nuclear transition from one state to another as a result of interaction with external field is more involved since it requires the calculation of transition probability of nucleus from one state to another besides the evaluation of matrix elements. If the magnetic sub-states of the initial and final nuclei are not observed, we need to sum over the final magnetic sub-states and average over the initial magnetic sub-states. When we started our research, the study of elementary particle reactions with nuclei was an emerging field and it involved a knowledge of both elementary particle interactions and nuclear structure. Since angular momentum is a conserved quantity in any reaction, a sound knowledge of angular momentum algebra is a pre-requisite for such a study. This has motivated G. Ramachandran to publish the Matscience Report on Angular Momentum \cite{key10} and V. Devanathan, at a later date, to write Text Books, one on Angular Momentum \cite{key11} and another on Nuclear Physics \cite{key12}.
 
 In the year 1957, Chew et al (hereafter referred to as CGLN) \cite{key13} has obtained a general amplitude for photoproduction of pions from nucleons using dispersion relations. Around the same time, Hughes and March \cite{key14} attempted to study experimentally the nuclear transitions to individual final nuclear states by observing the radioactivity of the final nuclear state. He studied the reaction ${}^{11} B(\gamma, \pi^-)^{11} C$. This was followed by other activity measurements by Dyal and Hummel \cite{key15} on ${}^{11} B$, by March and Walker \cite{key16} on ${}^{60} N i$, by Meyer et al \cite{key17} on ${}^{16} O$ and ${}^{27} Al$ and by Nydall and Forkman \cite{key18} on ${}^{11} B$, ${}^{27} Al$ and ${}^{51} V$.
 
@@ -65,7 +62,7 @@ Although our initial effort is to obtain an analytical expression for the photop
 
 In this article, we do not follow the chronological order in the presentation but follow the logical sequence by discussing the coupling rule for spherical tensor operators, the evaluation of nuclear matrix elements and nuclear transition probability under the influence of spherical tensor operators \cite{key12}. The photo-pion production from nuclei is presented here for illustrative purpose only.
 
-Both the static and dynamic properties of nuclei are studied by calculating nuclear matrix elements using spherical tensor operators. The coupling rules for spherical tensor operators are presented in Sec. 2 as a prelude to the study of transition probability of nucleus from one state to another which is outlined in Sec. 3. In Sec. 4, we study the elementary photopion production reaction on nucleons. The study is extended to photopion production from nuclei in Sec. 5.1 using impulse approximation for the reaction process and plane waves for the incident photon and the emitted pion. The plane wave approximation for the incident photon is justifiable but not for the outgoing pion. How to include the distortion effects on the emitted pion is discussed in Sec. 5.2.
+Both the static and dynamic properties of nuclei are studied by calculating nuclear matrix elements using spherical tensor operators. The coupling rules for spherical tensor operators are presented in Sec.\ \ref{chap3-sec2} as a prelude to the study of transition probability of nucleus from one state to another which is outlined in Sec.\ \ref{chap3-sec3}. In Sec.\ \ref{chap3-sec4}, we study the elementary photopion production reaction on nucleons. The study is extended to photopion production from nuclei in Sec.\ \ref{chap3-sec5.1} using impulse approximation for the reaction process and plane waves for the incident photon and the emitted pion. The plane wave approximation for the incident photon is justifiable but not for the outgoing pion. How to include the distortion effects on the emitted pion is discussed in Sec.\ \ref{chap3-sec5.2}.
 
 \section{Coupling rules for Spherical Tensor Operators} \label{chap3-sec2}
 
@@ -180,7 +177,7 @@ One can go from one coupling scheme to the other by using the unitary transforma
 \begin{equation}
 \langle j_1 j_2' j' || B_k (2) || j_1 j_2 j \rangle = U (j_1 j_2 j' k, j j_2') \langle j_2' || B_k (2) || j_2 \label{chap3-eq17}
 \end{equation}
-Substituting \eqref{chap3-eq17} into Eq. \eqref{chap3-eq16}, we obtain
+Substituting \eqref{chap3-eq17} into Eq.\ \eqref{chap3-eq16}, we obtain
 \begin{equation}
 Q_2 = \begin{bmatrix}j & k & j'\\m & \mu & m'\end{bmatrix}
 U (j_1 j_2 j' k, j j_2') \langle j_2' || B_k (2) || j_2 \label{chap3-eq18}
@@ -206,7 +203,7 @@ Q_1 & = (-1)^{j_1 + j_2 -j} (-1)^{j_1' + j_2 -j' }
 \begin{bmatrix}j_2 & j_1 & j\\m_2 & m_1 & m\end{bmatrix} | j_1 m_1 \rangle | j_2 m_2 \rangle \notag \\
 & = (-1)^{j_1+j_2-j} | j_2 j_1 jm \rangle. \label{chap3-eq21}
 \end{align}
-The last step is obtained using Eq. \eqref{chap3-eq17}. Only the subscripts 1 and 2 are interchanged. 
+The last step is obtained using Eq.\ \eqref{chap3-eq17}. Only the subscripts 1 and 2 are interchanged. 
 
 We shall now evaluate $Q_3$. Applying the Wigner-Eckart theorem,
 \begin{equation}
@@ -236,7 +233,7 @@ where a sum over the final spin states and an average over the initial spin stat
 \begin{equation}
   H_I = \sum_{\lambda_{m_\lambda}} (A_\lambda^{m_\lambda})^\ast U_\lambda^{m_\lambda}, \label{chap3-eq25}
 \end{equation}
-where $U_\lambda^{m_\lambda}$ is the spherical tensor operator in nuclear coordinates inducing nuclear transition and $A_\lambda^{m_\lambda}$ is the spherical tensor component of the external field. Substituting \eqref{chap3-eq25} into Eq. \eqref{chap3-eq24}, we obtain
+where $U_\lambda^{m_\lambda}$ is the spherical tensor operator in nuclear coordinates inducing nuclear transition and $A_\lambda^{m_\lambda}$ is the spherical tensor component of the external field. Substituting \eqref{chap3-eq25} into Eq.\ \eqref{chap3-eq24}, we obtain
 \begin{align}
   T_{fi} & = \frac{1}{2j_i +1} \sum_{m_im_f} \left| \sum_{\lambda_{m_\lambda}} (A_\lambda^{m_\lambda})^\ast \langle j_f m_f | U_\lambda^{m_\lambda}| j_i m_i \rangle \right|^2 \notag \\
   & = \frac{1}{2j_i +1} \sum_{m_i m_f} \sum_{\lambda \lambda' m_{\lambda} m_{\lambda}'} \notag \\
@@ -269,12 +266,12 @@ using the notation
 $$
 [\lambda] = \sqrt{2 \lambda +1}.
 $$
-Substituting \eqref{chap3-eq29} into Eq. \eqref{chap3-eq28} and summing over $\lambda'$ and $m_\lambda'$, we obtain (summation over $m_f$ is redundant)
+Substituting \eqref{chap3-eq29} into Eq.\ \eqref{chap3-eq28} and summing over $\lambda'$ and $m_\lambda'$, we obtain (summation over $m_f$ is redundant)
 \begin{align}
   T_{f_i} & = \frac{1}{2j_i +1} \sum_{\lambda m_\lambda} \frac{[j_f]^2}{[\lambda]^2} (A_\lambda^{m_\lambda})^\ast A_\lambda^{m_\lambda} \langle j_f || U_\lambda || j_i \rangle \langle j_f || U_\lambda || j_i \rangle^\ast \notag \\
   & = \frac{2j_f+1}{2j_i+1} \sum_{\lambda} \frac{1}{[\lambda]^2} (A_\lambda^\ast \cdot A_\lambda)| \langle j_f || U_\lambda || j_i \rangle |^2. \label{chap3-eq30}
 \end{align}
-Eq. \eqref{chap3-eq30} gives the nuclear transition probability in any reaction. Let us apply this formalism to the study of photopion reaction for illustrative purpose.
+Eq.\ \eqref{chap3-eq30} gives the nuclear transition probability in any reaction. Let us apply this formalism to the study of photopion reaction for illustrative purpose.
 
 \section{Elementary photopion production cross section}\label{chap3-sec4}
 
@@ -302,7 +299,7 @@ This is the transition amplitude and the transition probability $T_{fi}$ is give
   + L^\ast)\}\notag \\
   & = {\boldmath  K \cdot K^\ast} + LL^\ast \label{chap3-eq33}
 \end{align}
-In deducing Eq. \eqref{chap3-eq33}, we have used the Hermitian property of the $2 \times 2$ Pauli matrices $\sigma_x, \sigma_y, \sigma_z$ with trace zero.
+In deducing Eq.\ \eqref{chap3-eq33}, we have used the Hermitian property of the $2 \times 2$ Pauli matrices $\sigma_x, \sigma_y, \sigma_z$ with trace zero.
 $$
 \sigma^\dagger = \sigma; \quad \text{Tr}~ \sigma_x = \text{Tr}~ \sigma_y = \text{Tr}~ \sigma_z =0.
 $$
@@ -313,7 +310,7 @@ In addition,
   & \text{Tr}~ {\boldmath  K \cdot K}^\ast = 2 {\boldmath  K \cdot K}^\ast; & &\text{Tr}~LL^\ast = e LL^\ast.
 \end{alignat*}
 
-The transition probability $T_{fi}$ given by Eq. \eqref{chap3-eq33} is energy-dependent and one can obtain the transition probability per unit time $Q_{fi}$ for photo-pion prosuvtion, using Fermi's Golden rule \cite{key23}.
+The transition probability $T_{fi}$ given by Eq.\ \eqref{chap3-eq33} is energy-dependent and one can obtain the transition probability per unit time $Q_{fi}$ for photo-pion prosuvtion, using Fermi's Golden rule \cite{key23}.
 \begin{equation}
   Q_{fi}= \frac{2 \pi}{\hbar} T_{fi} \rho f, \label{chap3-eq34}
 \end{equation}
@@ -348,7 +345,7 @@ where $\mu$ denotes the outgoing pion momentum and $\mu_0$, its relativistic ene
   \frac{d \sigma}{d \Omega} & = (2 \pi)^{-2} \mu \mu_0 T_{fi}\notag \\
   & = (2 \pi)^{-2} \mu \mu_0 ({\boldmath  K^\ast \cdot K} + L^\ast L) \label{chap3-eq36}
 \end{align}
-Eq. \eqref{chap3-eq36} represents the differential cross section for the elementary process of photoproduction of pions from nucleons.
+Eq.\ \eqref{chap3-eq36} represents the differential cross section for the elementary process of photoproduction of pions from nucleons.
 
 \section{Photoproduction of pions from nuclei}\label{chap3-sec5}
 
@@ -382,7 +379,7 @@ Separating the nuclear operators from the rest and forming tensor products in pa
   \begin{bmatrix}    l & n & \lambda'\\ m & \mu & m_\lambda  \end{bmatrix}
   (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_{\lambda'}^{-m_\lambda}. \label{chap3-eq42}
 \end{align}
-Substituting \eqref{chap3-eq41} and \eqref{chap3-eq42} into Eq. \eqref{chap3-eq40} and summing over the projection quantum number $m$, the orthonormality of C.G. coefficients yields $\delta_{\lambda \lambda'}$. Replacing the summation over $\mu$ by $m_{\lambda}$, the transition operator \eqref{chap3-eq40} becomes
+Substituting \eqref{chap3-eq41} and \eqref{chap3-eq42} into Eq.\ \eqref{chap3-eq40} and summing over the projection quantum number $m$, the orthonormality of C.G. coefficients yields $\delta_{\lambda \lambda'}$. Replacing the summation over $\mu$ by $m_{\lambda}$, the transition operator \eqref{chap3-eq40} becomes
 \begin{align}
   t_{op} & = 4 \pi \sum_{ln \lambda m_\lambda} (i)^l jl (qr) (-1)^{l + n - \lambda} (-1)^{m_\lambda} (Y_l({\boldmath \hat{r}}) \times \sigma_n)_\lambda^{m_\lambda} (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda^{-m_\lambda} \notag \\
   & = 4 \pi \sum_{ln \lambda m_\lambda} (i)^l jl (qr) (-1)^{l+n-\lambda} (Y_l ({\boldmath \hat{r}}) \times \sigma_{n})_\lambda \cdot (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda. \label{chap3-eq43}
@@ -401,7 +398,7 @@ where
 $$
 \langle j_i (qr)\rangle_{fi} = \int R_f (r)^\ast jl (qr) R_i (r) r^2 dr
 $$
-is the radial integral. The C.G. coefficient in Eq. \eqref{chap3-eq44} is obtained by the application of Wigner-Eckart theorem.
+is the radial integral. The C.G. coefficient in Eq.\ \eqref{chap3-eq44} is obtained by the application of Wigner-Eckart theorem.
 
 The matrix element is a linear sum of several terms and so its square will include cross terms also. Hence
 \begin{align}
@@ -416,14 +413,14 @@ Summing over the final spin states and averaging over the initial spin states, w
 \begin{equation}
   T_{fi} = \frac{1}{2j_i +1} \sum_{m_i m_f} |M_{fi}|^2. \label{chap3-eq46}
 \end{equation}
-Summing over $m_i$ and using the orthonormality of C.G. coefficients as shown in \eqref{chap3-eq29}, we obtain the relations $\lambda = \lambda'$ and $m_\lambda= m_\lambda'$. Of the summations $m_f$ and $m_\lambda$, one is redundant since $m_f= m_i+ m_\lambda$. Substituting the results \eqref{chap3-eq29} and \eqref{chap3-eq45} into Eq. \eqref{chap3-eq46}, we obtain the transition probalility $T_{fi}$.
+Summing over $m_i$ and using the orthonormality of C.G. coefficients as shown in \eqref{chap3-eq29}, we obtain the relations $\lambda = \lambda'$ and $m_\lambda= m_\lambda'$. Of the summations $m_f$ and $m_\lambda$, one is redundant since $m_f= m_i+ m_\lambda$. Substituting the results \eqref{chap3-eq29} and \eqref{chap3-eq45} into Eq.\ \eqref{chap3-eq46}, we obtain the transition probalility $T_{fi}$.
 \begin{align}
   T_{fi} & = 16\pi^2 \frac{2j_f +1}{2j_i+1} \sum{lnl'n'} \sum_{\lambda m_\lambda} \frac{1}{[\lambda]^2} (i)^{l-l'} (-1)^{l+ n - \lambda} (-1)^{l' + n'-\lambda}\notag \\
   &  \times (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)^{-m\lambda}_\lambda \left\{ (Y_{l'}({\boldmath \hat{q}}) \times {\boldmath K}_{n'})_\lambda^{-m_\lambda}\right\}^\ast \langle j_l (qr)\rangle_{f_i} \langle j_{l'}(qr)\rangle_{f_i}^\ast \notag \\
   &  \times \langle l_f \tfrac{1}{2} j_f || (Y_l (({\boldmath \hat{r}}) \times \sigma_n)_\lambda || l_i \tfrac{1}{2}j_i \rangle \langle l_f \tfrac{1}{2} j_f  || (Y_{l'} ({\boldmath \hat{r}}) \times \sigma_{n'})_\lambda || l_i \tfrac{1}{2} j_i \rangle^\ast. \label{chap3-eq47}
 \end{align}
 
-The angular momentum matrix elements that occur in Eq. \eqref{chap3-eq47} are given by
+The angular momentum matrix elements that occur in Eq.\ \eqref{chap3-eq47} are given by
 \begin{align}
   \langle l_f \tfrac{1}{2} j_f || (Y_l ({\boldmath \hat{r}}) \times \sigma_n)_\lambda || l_i \tfrac{1}{2} j_i
   & = \begin{bmatrix} l_i & l & l_f\\ \tfrac{1}{2} & n & \tfrac{1}{2}\\ j_i & \lambda & j_f \end{bmatrix}
@@ -432,24 +429,24 @@ The angular momentum matrix elements that occur in Eq. \eqref{chap3-eq47} are gi
   \langle \tfrac{1}{2} || \sigma_n || \tfrac{1}{2} \rangle & = [n]. \label{chap3-eq50}
 \end{align}
 
-In Eq. \eqref{chap3-eq47}, the only quantities that depend on $m_\lambda$ can be pulled out and summation over $m_\lambda$ performed.
+In Eq.\ \eqref{chap3-eq47}, the only quantities that depend on $m_\lambda$ can be pulled out and summation over $m_\lambda$ performed.
 \begin{align}
   S & = \sum_{m_\lambda} (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda^{-m_\lambda}
   \left\{ (Y_{l'} ({\boldmath \hat{q}}) \times {\boldmath K}_{n'})_\lambda^{-m_\lambda}\right\}^\ast \notag \\
   & = (Y_l ({\boldmath \hat{q}}) \times {\boldmath K}_n)_\lambda \cdot (Y_{l'}({\boldmath \hat{q}}) \times {\boldmath K}_n^\ast)_\lambda \notag\\
   & = (-1)^\lambda [\lambda] [(Y_l ({\boldmath \hat{q}}) \times  {\boldmath K}_n)_\lambda \times (Y_{l'}({\boldmath \hat{q}}) \times {\boldmath K}_{n'}^{\ast})_\lambda ]_0^0 \label{chap3-eq51}
 \end{align}
-The scalar product $S$ is expressed as a tensor product in Eq. \eqref{chap3-eq51} to facilitate the use of recoupling coefficients defined in (G. 6).
+The scalar product $S$ is expressed as a tensor product in Eq.\ \eqref{chap3-eq51} to facilitate the use of recoupling coefficients defined in (G. 6).
 \begin{equation}
   S= (-1)^\lambda [\lambda] \sum_{N} \begin{bmatrix} l & n & \lambda \\ l' & n' & \lambda\\ N & N & 0\end{bmatrix}
     [(Y_l ({\boldmath \hat{q}}) \times Y_{l'}({\boldmath \hat{q}}))_N \times ({\boldmath K}_n \times {\boldmath K}_{n'}^\ast)_N]_0^0. \label{chap3-eq52}
 \end{equation}
-Eq. \eqref{chap3-eq52} is obtained using the concept of recoupling coefficient (LS-jj coupling co-efficient) for the tensor products of spherical tensors and making use of the relation (G.6). The tensor product of spherical harmonics in Eq. \eqref{chap3-eq52} can be further simplified.
+Eq.\ \eqref{chap3-eq52} is obtained using the concept of recoupling coefficient (LS-jj coupling co-efficient) for the tensor products of spherical tensors and making use of the relation (G.6). The tensor product of spherical harmonics in Eq.\ \eqref{chap3-eq52} can be further simplified.
 \begin{equation}
   [Y_l({\boldmath \hat{q}}) \times Y_{l'}({\boldmath \hat{q}})]_N = \frac{[l][l']}{\sqrt{4\pi}[N]}
   \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix} Y_N ({\boldmath q}). \label{chap3-eq53}
 \end{equation}
-Substituting \eqref{chap3-eq53} in Eq. \eqref{chap3-eq52}, we get
+Substituting \eqref{chap3-eq53} in Eq.\ \eqref{chap3-eq52}, we get
 \begin{align}
   S & = (-1)^\lambda [\lambda] \sum_{N} \begin{bmatrix} l & n & \lambda\\ l' & n' & \lambda\\ N & N & 0  \end{bmatrix}
   \frac{[l][l']}{\sqrt{4 \pi}[N]} \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix}\notag \\
@@ -459,7 +456,7 @@ Substituting \eqref{chap3-eq53} in Eq. \eqref{chap3-eq52}, we get
   \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix} \notag \\
   & \qquad \qquad \qquad \times (Y_N ({\boldmath \hat{q}}) \cdot  ({\boldmath K}_n \times {\boldmath K_{n'}^\ast})_N)_0^0\label{chap3-eq54}
 \end{align}
-With the help of Eqs. \eqref{chap3-eq54} and \eqref{chap3-eq48} - \eqref{chap3-eq50}, the transition probability $T_{fi}$ given by Eq. \eqref{chap3-eq47} can be calculated.
+With the help of Eqs. \eqref{chap3-eq54} and \eqref{chap3-eq48} - \eqref{chap3-eq50}, the transition probability $T_{fi}$ given by Eq.\ \eqref{chap3-eq47} can be calculated.
 
 \subsection{Distrorted waves for emitted pion} \label{chap3-sec5.2}
 
@@ -483,7 +480,7 @@ In Eqn. \eqref{chap3-eq57}, $g_{l_\mu} (\mu r)$ denotes the radial wave function
   t_{\text{op}} & = 16\pi^2 \sum_{l_\mu l_\nu L_n} \sum_{\lambda m_\lambda} (i)^{l_\nu - l_\mu} (-1)^{l_\mu + l_\nu - L} g_{l_\mu}^\ast (\mu r)j_{l_\nu} (\nu r) (-1)^{L+N-\lambda} \frac{[l_\mu][l_\nu]}{(4 \pi)^{1/2 [L]}}\notag\\
   & \qquad \begin{bmatrix} l_\mu & l_\nu & L\\ 0 & 0 & 0   \end{bmatrix} [(Y_{l_\mu}(\hat{\mu}) \times Y_{l_\nu} (\hat{\nu}))_L \times {\boldmath K}_n]_\lambda^{-m_\lambda} [Y_L ({\boldmath \hat{r}}) \times \sigma_n]_{\lambda}^{m_\lambda}, \label{chap3-eq59}
 \end{align}
-where $[l] = (2l+1)^{1/2}$. In Eq. \eqref{chap3-eq59}, $[Y_L ({\boldmath \hat{r}}) \times \sigma_n]_\lambda^{m_\lambda}$ is the angular momentum $\lambda$ operator that induces the single nucleon transition from the initial to the final nuclear state. One can find the transition probability, using the procedure described in Sec.\ref{chap3-sec3}. In addition to the nuclear matrix element, the transition probability will involve the following scalar product of two tensors that dictate the dynamics of photopion production.
+where $[l] = (2l+1)^{1/2}$. In Eq.\ \eqref{chap3-eq59}, $[Y_L ({\boldmath \hat{r}}) \times \sigma_n]_\lambda^{m_\lambda}$ is the angular momentum $\lambda$ operator that induces the single nucleon transition from the initial to the final nuclear state. One can find the transition probability, using the procedure described in Sec.\ref{chap3-sec3}. In addition to the nuclear matrix element, the transition probability will involve the following scalar product of two tensors that dictate the dynamics of photopion production.
 \begin{equation}
   S= \sum_{m_\lambda} \left\{ (Y_{l_\mu} (\hat{\mu}) \times Y_{l_\nu} (\hat{\nu}))_L \times {\boldmath K}_n\right\}_\lambda^{m_\lambda} \left\{(Y_{l'_\mu} (\hat{\mu}) \times Y_{l_\nu'}(\hat{\nu}))_L \times {\boldmath K}_{n'} \right\}_{\lambda}^{m_\lambda\ast} \label{chap3-eq60}
 \end{equation}
@@ -503,7 +500,7 @@ Besides the photopions from nuclei, the author has studied other nuclear reactio
 \noindent \textbf{\large Acknowledgements}
 \medskip
 
-This article is dedicated to the memory of Prof. G. Ramachandran, with whom I learnt the Elements of Nuclear Physics in late nineteen fifties and early nineteen sixties and I acknowledge with thanks that they served as the basis for my later contributions to the subject.
+This article is dedicated to the memory of Prof.\ G. Ramachandran, with whom I learnt the Elements of Nuclear Physics in late nineteen fifties and early nineteen sixties and I acknowledge with thanks that they served as the basis for my later contributions to the subject.
 
 
 \begin{thebibliography}{99}
@@ -519,30 +516,25 @@ This article is dedicated to the memory of Prof. G. Ramachandran, with whom I le
 \bibitem{key10} G. Ramachandran, \textit{Matscience Report on Angular Momentum}, The Institute of Mathematical Sciences, Madras (1962)
 \bibitem{key11} V. Devanathan, \textit{Angular Momentum Techniques in Quantum Mechanics}, Kluwer Academic Publishers, The Netherlands (1999)
 \bibitem{key12} V. Devanathan, \textit{Nuclear Physics, 2nd Ed.,} Narosa Publishing House, New Delhi (2011).
-\bibitem{key13} G. F. Chew, M. L. Goldberger, F. E. Low and Y. Nambu, Phys. Rev. \textbf{106}, 1345 (1957).
-\bibitem{key14} I. S. Hughes and P. V. March, Proc. Phys. Soc. (London), \textbf{72}, 259 (1958)
-\bibitem{key15} P. Dyal and J. P. Hummel, Phys. Rev. \textbf{127}, 2217 (1962)
-\bibitem{key16} P. V. March and J. G. Walker, Proc. Phys. Soc. (London), \textbf{77}m 293 (1960)
-\bibitem{key17} R. A. Meyer, W. B. Walters and J. P. Hummel, Phys. Rev. \textbf{B138}, 1421 (1965)
-\bibitem{key18} G. Nydahl and B. Forkman, Nucl. Phys. \textbf{B7}, 97(1968)
-\bibitem{key19} V. Devanathan, M. Rho, K. Srinivasa Rao and S.C.K. Nair, Nucl. Phys. \textbf{B2}, 329 (1967)
-\bibitem{key20} V. Devanathan, in "Symposia in Theoretical Physics and Mathematics” (A. Ramakrishnan, Ed.), Vol. 10, p. 123, Plenum Press, New York (1970)
+\bibitem{key13} G. F. Chew, M. L. Goldberger, F. E. Low and Y. Nambu, Phys.\ Rev.\ \textbf{106}, 1345 (1957).
+\bibitem{key14} I. S. Hughes and P. V. March, Proc.\ Phys.\ Soc.\ (London), \textbf{72}, 259 (1958)
+\bibitem{key15} P. Dyal and J. P. Hummel, Phys.\ Rev.\ \textbf{127}, 2217 (1962)
+\bibitem{key16} P. V. March and J. G. Walker, Proc.\ Phys.\ Soc.\ (London), \textbf{77}m 293 (1960)
+\bibitem{key17} R. A. Meyer, W. B. Walters and J. P. Hummel, Phys.\ Rev.\ \textbf{B138}, 1421 (1965)
+\bibitem{key18} G. Nydahl and B. Forkman, Nucl.\ Phys.\ \textbf{B7}, 97(1968)
+\bibitem{key19} V. Devanathan, M. Rho, K. Srinivasa Rao and S.C.K. Nair, Nucl.\ Phys.\ \textbf{B2}, 329 (1967)
+\bibitem{key20} V. Devanathan, in "Symposia in Theoretical Physics and Mathematics” (A. Ramakrishnan, Ed.), Vol.\ 10, p.\ 123, Plenum Press, New York (1970)
 \bibitem{key21} V. Devanathan, V. Girija and G.N. Sivarama Prasad, Canadian Journal of Physics, \textbf{58}, 1151 (1980)
 \bibitem{key22} A. Nagl, V. Devanathan, H. Überall, \textit{Nuclear Pion Photoproduction}, Springer-Verlag (1991)
 \bibitem{key23} V. Devanathan, \textit{Quantum Mechanics, 2nd Ed.,} Narosa Publishing House, New Delhi (2011)
-\bibitem{key24} V. Devanathan, \textit{The concept of phase-space in Quantum Mechanics}, Journal of Chennai Academy of Sciences, \textbf{2}, 26-42 (2020)
+\bibitem{key24} V. Devanathan, \textit{The concept of phase-space in Quantum Mechanics}, Journal of Chennai Academy of Sciences, \textbf{2}, 26--42 (2020)
 \end{thebibliography}
+\newpage
 
+\centerline{\includegraphics{figures/authors/V_Devanathan.eps}}
+\smallskip
 
-\begin{tabular}{V{2.5}cp{6.68cm}V{2.5}}
-\clineB{1-2}{2.5}
- &\\
-\raisebox{-3.5cm}{\includegraphics{figures/authors/V_Devanathan.eps}} & 
+\authbio{Dr.\ V. Devanathan}
 
-\centerline{\large\bf Dr. V. Devanathan}
-
-\bigskip
-Dr. V. Devanathan was Professor and Head of the Department of Nuclear Physics, University of Madras, until his retirement in 1990. He received Ph.D. from University of Madras under the guidance of Prof. Alladi Ramakrishnan. He is a founder member of the Theoretical Physics Seminar Group, which eventually became the Institute of Mathematical Sciences, Chennai. He is currently Professor Emeritus at the Department of Nuclear Physics, University of Madras.\\
-&\\ 
-\clineB{1-2}{2.5}
-\end{tabular}
+\noindent
+\textbf{Dr.\ V. Devanathan} was Professor and Head of the Department of Nuclear Physics, University of Madras, until his retirement in 1990. He received Ph.D. from University of Madras under the guidance of Prof.\ Alladi Ramakrishnan. He is a founder member of the Theoretical Physics Seminar Group, which eventually became the Institute of Mathematical Sciences, Chennai. He is currently Professor Emeritus at the Department of Nuclear Physics, University of Madras.
