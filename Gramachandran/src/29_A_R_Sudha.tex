@@ -1,47 +1,30 @@
-\chapter[Majorana geometric representation of permutation...]{Majorana geometric representation of permutation symmetric pure multiqubit states} 
+\chapter[Majorana geometric representation of permutation...]{Majorana geometric representation of permutation symmetric pure multiqubit states}\label{chap29} 
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\begin{center}
-\textbf{Sudha,$^{1,2,}$\footnote{arss@rediffmail.com} A. R. Usha Devi,$^{3,2,}$\footnote{arutth@rediffmail.com} and A. K. Rajagopal$^{2,}$\footnote{attipat.rajagopal@gmail.com}}
 
-\textit{$^{1}$Department of Physics, Kuvempu University, Shankaraghatta-577 451, India.}
+\Authorline{Sudha,$^{1,2,}$\footnote{arss@rediffmail.com} A. R. Usha Devi,$^{3,2,}$\footnote{arutth@rediffmail.com} and A. K. Rajagopal$^{2,}$\footnote{attipat.rajagopal@gmail.com}}
 
-\textit{$^{2}$Inspire Institute Inc., Alexandria, Virginia 22303, USA.}
+\authinfo{$^{1}$Department of Physics, Kuvempu University, Shankaraghatta-577 451, India.\\
+$^{2}$Inspire Institute Inc., Alexandria, Virginia 22303, USA.\\
+$^{3}$Department of Physics, Bangalore University, Bangalore-560 056, India.} 
 
-\textit{$^{3}$Department of Physics, Bangalore University, Bangalore-560 056, India.} 
-\end{center}
-
-\vspace{-.4cm}
-
-\begin{center}
-\textbf{Abstract}
-\end{center}
-
-\vspace{-.5cm}
-
-\begin{longtable}{p{8cm}}
-{\parfillskip=0pt This article presents an overview of the Majorana geometric representation of permutation symmetric  pure multiqubit states and its significance in quantum information processing. As early as 1932, Majorana had proposed that a pure permutation symmetric state of $N$ spin-$\frac{1}{2}$ particles can be represented by $N$ spinors, which correspond geometrically to $N$ points on the Bloch sphere. A novel use of the Majorana geometric\par}\\
-\end{longtable}
-
-\newpage
-
-\begin{longtable}{p{8cm}}
+\begin{abstract}
+This article presents an overview of the Majorana geometric representation of permutation symmetric  pure multiqubit states and its significance in quantum information processing. As early as 1932, Majorana had proposed that a pure permutation symmetric state of $N$ spin-$\frac{1}{2}$ particles can be represented by $N$ spinors, which correspond geometrically to $N$ points on the Bloch sphere. A novel use of the Majorana geometric
 representation leads  to the classification of entanglement families of permutation symmetric qubits -- based on the number of distinct  spinors  and their arrangement in constituting the multiqubit state. The Majorana classification offers an elegant approach to investigate how correlation information of the {\em whole}  pure symmetric state gets imprinted in its {\em parts}. As an example, we show that the correlation information of pure symmetric three-qubit states with two distinct Majorana spinors is completely determined by their two-qubit marginals. We explicitly determine the {\emph {three}} distinct spinors characterizing the three-qubit GHZ state and the superposition of W, and its obverse state $\bar W$. While the GHZ state cannot be determined by its parts, we illustrate that the W$\bar W$ superposition possesses genuine three-qubit entanglement, which is robust under the loss of a qubit and is imprinted uniquely in its two-party reduced states. This example clearly brings out the contrasting correlation features of states within the same entanglement family, discerned through the celebrated Majorana goemetric representation.  
-\end{longtable}
-
+\end{abstract}
 
 \begin{center}
 \textbf{\Large In memory of Professor G. Ramachandran}
 \end{center}
 
 \renewcommand{\thesection}{\Roman{section}}
-\section{Introduction}\label{chap26-sec1}
+\section{Introduction}\label{chap29-sec1}
 
 Multiqubit states that are invariant under exchange of any pair of particles form an important class among quantum states due to their experimental significance and mathematical elegance \cite{sym1,sym1a,sym1b,sym2,sym3}. The class of symmetric states comprises of the well-known Greenberger-Horne-Zeilinger(GHZ) \cite{ghz}, W, and Dicke states \cite{dicke} etc. Mathematical simplicity in addressing $N$-qubit  states obeying permutation symmetry results because the states are confined to the $N+1$ dimensional subspace of the $2^N$ dimensional Hilbert space. The $N+1$ dimensional subspace is spanned by the Dicke states, $\{\vert N/2, N/2-l\rangle,  l=0,1,2,\ldots,N\}$, which are the simultaneous eigenstates of the squared collective angular momentum operator $J^2$ and its $z$-component $J_z$. An elegant geometrical representation for  multiqubit symmetric states in terms of $N$-points on the Bloch sphere $S^2$ was proposed by Majorana \cite{majorana} as early as 1932. The goemetric representation of multiqubit states based on their characteristic $N$-qubits (spinors), the so-called {\em Majorana goemetric representation} for symmetric states \cite{majorana,1945,makela} has been  immensely useful in diverse branches of physics \cite{1945,jpa4,arxiv4,jpa5,ejtp6} in general and in quantum information science \cite{solano, mixed, usa, usa1,usa2,markham1,markham2,gebastin,markham3} in particular.  The significance of Majorana goemetric representation in characterizing entanglement in multiqubit symmetric states has been realized in several fields and the avenues appear to be expanding. While the SLOCC classification of symmetric states in terms of the distinct spinors characterizing the state has been accomplished using the Majorana goemetric representation \cite{solano, mixed}, it is shown that the reducibility/irreducibility features of multiparty correlations in several important classes of states can also be captured \cite{usa1,usa2,usa}. 
 
 Understanding different kinds of correlations exhibited by multiparticle quantum systems is one of the  central issues of importance in quantum information science \cite{Niel}. Two $N$-party {\em pure} states $\vert\phi\rangle$, $\vert \psi\rangle$  can be obtained from one another by means of stochastic local operations and classical communications (SLOCC)  if and only if there exists an invertible local operation (ILO) \cite{Dur} $A_1\otimes A_2\otimes \ldots \otimes A_N$ such that $\vert \phi\rangle=\left(A_1\otimes A_2\otimes \ldots \otimes A_N\right)\vert\psi\rangle$. General classification of distinct kinds of entanglement that are inequivalent under SLOCC has gained considerable attention \cite{Dur,Ver,Lamata}. It is convenient to address this issue by restricting to special classes of states exhibiting some particular symmetry, in order to tackle the algebraic complexity associated with exponentially increasing size of the Hilbert space. In the important case of  $N$-qubits obeying permutation symmetry, it is sufficient to search for identical ILOs of the form $A\otimes A\otimes\ldots \otimes A$ to verify the SLOCC equivalence of two pure states \cite{solano,bastin}. The significance of such considerations is catching up and  innovative experimental schemes to generate a large variety of multiqubit states has been proposed \cite{newexpt1,newexpt2}. The goemetric representation proposed by Majorana \cite{majorana} offers a deeper understanding on how different entanglement families emerge, depending on the number and arrangement of the independent spinors (qubits) constituting the {\em pure} symmetric state \cite{solano}. 
 
-Determining if higher order correlations follow entirely from lower order ones is also a question of fundamental interest both from the modern perspective of quantum information science \cite{SP1,SP2,SP2b} as well as in many body physics \cite{Coleman}. Linden, Popescu and Wootters \cite{SP1,SP2,SP2b} proved that the correlation content of {\em almost all} pure states, shared by $N$ parties, is already contained in their reduced states i.e., the higher order correlations are uniquely determined by lower order ones \cite{SP1,SP2,SP2b}. In this article, we discuss the ``whole and its parts" issue for three-qubit pure symmetric states belonging to two SLOCC inequivalent families, the class of states with two distinct Majorana spinors and the ones with three distinct spinors. More specifically, we address the question ``{\emph{Is there any intrinsic connection between SLOCC classification of pure states with their determinability in terms of reduced subsystems?}". We show that not all states that are interconvertible into one another through SLOCC operations exhibit the same reducibility/irreducibility of correlations. This has been accomplished by considering three-qubit GHZ state and superposition of W and its obverse state $\bar{W}$, both belonging to the same SLOCC family containing three distinct spinors.   We also demonstrate that two-qubit reduced density matrices uniquely determine the family of three-qubit  pure symmetric states comprised of two distinct Majorana spinors, the so-called {\emph {Dicke class of states}}.
+Determining if higher order correlations follow entirely from lower order ones is also a question of fundamental interest both from the modern perspective of quantum information science \cite{SP1,SP2,SP2b} as well as in many body physics \cite{Coleman}. Linden, Popescu and Wootters \cite{SP1,SP2,SP2b} proved that the correlation content of {\em almost all} pure states, shared by $N$ parties, is already contained in their reduced states i.e., the higher order correlations are uniquely determined by lower order ones \cite{SP1,SP2,SP2b}. In this article, we discuss the ``whole and its parts" issue for three-qubit pure symmetric states belonging to two SLOCC inequivalent families, the class of states with two distinct Majorana spinors and the ones with three distinct spinors. More specifically, we address the question ``{\em Is there any intrinsic connection between SLOCC classification of pure states with their determinability in terms of reduced subsystems?}". We show that not all states that are interconvertible into one another through SLOCC operations exhibit the same reducibility/irreducibility of correlations. This has been accomplished by considering three-qubit GHZ state and superposition of W and its obverse state $\bar{W}$, both belonging to the same SLOCC family containing three distinct spinors.   We also demonstrate that two-qubit reduced density matrices uniquely determine the family of three-qubit  pure symmetric states comprised of two distinct Majorana spinors, the so-called {\emph {Dicke class of states}}.
 
 \section{Majorana goemetric representation of permutation symmetric multiqubit pure states}\label{chap29-secII} 
 
@@ -370,141 +353,76 @@ This work is an elucidation of the Majorana goemetric representation of symmetri
 
 \renewcommand{\bibname}{References}
 \begin{thebibliography}{99}
-%1
-\bibitem{sym1} C. A. Sackett {\it{et.al}}., {\em Experimental entanglement of four particles},  Nature (London) {\bf{404}}, 256 (2000).
-%2
-\bibitem{sym2} A. Sorensen, L.-M. Duan, J. I. Cirac, P. Zoller, {\em Many-particle entanglement with
-Bose-Einstein condensates}, Nature (London) {\bf{409}}, 63 (2001).
-%3
-\bibitem{sym1a}
-C.F. Roos  {\it{et.al}}.,{\em Control and measurement of three-qubit entangled states} Science, {\bf{304}}, 1478 (2004).
-%4
-\bibitem{sym1b} D. Leibfried  {\it{et.al}}.,: Creation of a six-atom `Schrodinger Cat' state, Nature (London) {\bf{438}}, 639 (2005).
-%5
+\bibitem{sym1} C. A. Sackett \textit{et.\ al}., {\em Experimental entanglement of four particles},  Nature (London) {\bf 404}, 256 (2000).
+\bibitem{sym2} A. Sorensen, L.-M. Duan, J. I. Cirac, P. Zoller, {\em Many-particle entanglement with Bose-Einstein condensates}, Nature (London) {\bf 409}, 63 (2001).
+\bibitem{sym1a} C. F. Roos  \textit{et.\ al}., {\em Control and measurement of three-qubit entangled states} Science, {\bf 304}, 1478 (2004).
+\bibitem{sym1b} D. Leibfried  \textit{et.\ al}.,: Creation of a six-atom `Schrodinger Cat' state, Nature (London) {\bf{438}}, 639 (2005).
 \bibitem{sym3} A. R. Usha Devi, R. Prabhu,  A. K. Rajagopal, {\em Characterizing multiparticle entanglement in symmetric $N$-qubit states
-via negativity of covariance matrices}, Phys. Rev. Lett. {\bf{98}}, 060501 (2007).  
-%6
-\bibitem{ghz} D. M. Greenberger, M. A. Horne, A. Shimony, A. Zeilinger, {\em Bell's theorem without inequalities}, Am. J. Phys. {\bf 58}, 1131 (1990).
-%7
-\bibitem{dicke} R. H. Dicke,  {\em Coherence in spontaneous radiation processes}, Phys. Rev. {\bf 93}, 99 (1954).
-%8
+via negativity of covariance matrices}, Phys.\ Rev.\ Lett.\ {\bf 98}, 060501 (2007).  
+\bibitem{ghz} D. M. Greenberger, M. A. Horne, A. Shimony, A. Zeilinger, {\em Bell's theorem without inequalities}, Am.\ J.\ Phys.\ {\bf 58}, 1131 (1990).
+\bibitem{dicke} R. H. Dicke,  {\em Coherence in spontaneous radiation processes}, Phys.\ Rev.\ {\bf 93}, 99 (1954).
 \bibitem{majorana} E. Majorana, {\em Atomi orientati in campo magnetico variabile}, Nuovo Cimento {\bf 9}, 43  (1932). 
-%9
-\bibitem{1945} F. Bloch, I. L. Rabi, {\em  Atoms in variable magnetic fields}, Rev. Mod. Phys. {\bf 17}, 237 (1945).
-%10
-\bibitem{makela}  H. M{\"a}kel{\"a},A.  Messina, {\em  $N$-qubit states as points on the
-Bloch sphere}, Physica Scripta {\bf T140}, 014054 (2010). 
-%11
-\bibitem{jpa4} M. R. Dennis, {\em  Canonical representation of spherical functions:
-Sylvester theorem, Maxwell multipoles and Majorana sphere}, J. Phys. A: Math.Gen. {\bf 37}, 9487 (2004).
-%12
-\bibitem{arxiv4} J. Swain, {\em The Majorana representation of spins and the relation between
-SU($\infty$) and SDiff($S^2$)}, hep-th/arxiv:0405004.  
-%13
-\bibitem{jpa5}  M. R. Dennis, {\em Correlations between Maxwell multipoles for
-Gaussian random functions on the sphere}, J. Phys. A: Math.Gen. {\bf 38}, 1653 (2005).
-%14
-\bibitem{ejtp6} J. Zimba, {\em `Anticoherent' spin states via the
-Majorana representation},  EJTP {\bf 3}, 143 (2006).
-%15
-\bibitem{solano}  T. Bastin, S. Krins, P. Mathonet, M. Godefroid, L. Lamata, E.Solano, {\em Operational families of entanglement classes for symmetric $N$-qubit states}, Phys. Rev. Lett. {\bf 103},  070503 (2009).
-%16
-\bibitem{markham2} M. Aulbach, D.Markham,  M. Murao, {\em The maximally entangled symmetric state in terms of
-the geometric measure}, New J. Phys. {\bf 12}, 073025 (2010).
-%17
-\bibitem{gebastin} J. Martin,O. Giraud, P. A. Braun, D. Braun, T. Bastin, {\em Multiqubit symmetric states with high geometric entanglement}, Phys. Rev. A {\bf 81}, 062347 (2010).
-%18
-\bibitem{markham1} D. Markham, {\em Entanglement and symmetry in permutation symmetric states}, Phys. Rev. A 
-{\bf 83}, 042332 (2011).
-%19
-\bibitem{markham3} M. Aulbach,  D. Markham, M. Murao,{\em Geometric entanglement of symmetric states and the Majorana representation}, W. van Dam, V. M. Kendon, S. Severini (eds), {\em Theory of Quantum Computation, Communication, and Cryptography}, TQC 2010, Lecture Notes in Computer Science, {\bf 6519}, (Springer, Berlin, Heidelberg, 2011); quant-ph/arxiv: 1010.4777.
-%20
+\bibitem{1945} F. Bloch, I. L. Rabi, {\em  Atoms in variable magnetic fields}, Rev.\ Mod.\ Phys.\ {\bf 17}, 237 (1945).
+\bibitem{makela}  H. M{\"a}kel{\"a}, A.  Messina, {\em  $N$-qubit states as points on the Bloch sphere}, Physica Scripta {\bf T140}, 014054 (2010). 
+\bibitem{jpa4} M. R. Dennis, {\em  Canonical representation of spherical functions: Sylvester theorem, Maxwell multipoles and Majorana sphere}, J.\ Phys.\ A: Math.\ Gen.\ {\bf 37}, 9487 (2004).
+\bibitem{arxiv4} J. Swain, {\em The Majorana representation of spins and the relation between SU($\infty$) and SDiff($S^2$)}, hep-th/arxiv:0405004.  
+\bibitem{jpa5}  M. R. Dennis, {\em Correlations between Maxwell multipoles for Gaussian random functions on the sphere}, J. Phys.\ A: Math.\ Gen.\ {\bf 38}, 1653 (2005).
+\bibitem{ejtp6} J. Zimba, {\em `Anticoherent' spin states via the Majorana representation},  EJTP {\bf 3}, 143 (2006).
+\bibitem{solano}  T. Bastin, S. Krins, P. Mathonet, M. Godefroid, L. Lamata, E. Solano, {\em Operational families of entanglement classes for symmetric $N$-qubit states}, Phys.\ Rev.\ Lett.\ {\bf 103},  070503 (2009).
+\bibitem{markham2} M. Aulbach, D. Markham,  M. Murao, {\em The maximally entangled symmetric state in terms of the geometric measure}, New J. Phys.\ {\bf 12}, 073025 (2010).
+\bibitem{gebastin} J. Martin, O. Giraud, P. A. Braun, D. Braun, T. Bastin, {\em Multiqubit symmetric states with high geometric entanglement}, Phys.\ Rev.\ A {\bf 81}, 062347 (2010).
+\bibitem{markham1} D. Markham, {\em Entanglement and symmetry in permutation symmetric states}, Phys.\ Rev.\ A  {\bf 83}, 042332 (2011).
+\bibitem{markham3} M. Aulbach,  D. Markham, M. Murao, {\em Geometric entanglement of symmetric states and the Majorana representation}, W. van Dam, V. M. Kendon, S. Severini (eds), {\em Theory of Quantum Computation, Communication, and Cryptography}, TQC 2010, Lecture Notes in Computer Science, {\bf 6519}, (Springer, Berlin, Heidelberg, 2011); quant-ph/arxiv: 1010.4777.
 \bibitem{usa} A. R. Usha Devi,  Sudha, A. K. Rajagopal, {\em Determining the whole pure symmetric N-qubit state from its parts},  quant-ph/arXiv:1003.2450.
-%21
 \bibitem{usa1} A. R. Usha Devi,  Sudha, A. K. Rajagopal, {\em Interconvertibility and irreducibility of permutation symmetric three qubit pure states},
 quant-ph/arXiv:1002.2820. 
-%22
 \bibitem{usa2} A. R. Usha Devi,  Sudha, A. K. Rajagopal, {\em  Majorana representation of symmetric multiqubit states}, Quantum Inf Process. {\bf 11}, 685 (2012).
-%23
 \bibitem{usa3} K. S. Akhilesh, B. G. Divyamani, Sudha, A. R. Usha Devi and K. S. Mallesh, {\em Spin squeezing in symmetric multiqubit states with two non-orthogonal Majorana spinors}, Quantum Inf Process. {\bf 18}, 144 (2019).  
-%24
-\bibitem{mixed} T. Bastinm, P. Mathonet, E. Solano, {\em Operational entanglement families of symmetric mixed $N$-qubit states}, Phys. Rev. A {\bf 91}, 022310 (2015).   
-%25
-\bibitem{Niel} M. Nielsen and I. Chuang, {\em Quantum Computation and Quantum Information} (Cambridge University Press,
-Cambridge, UK, 2000)
-%26
-\bibitem{Dur} W. D{\"u}r,  G. Vidal, J. I. Cirac, {Three qubits can be entangled in two inequivalent ways}, Phys. Rev. A {\bf 62}, 062314 2000.
-%27
-\bibitem{Ver} F. Verstraete, J.  Dehaene, B. De Moor, H. Verschelde, {\em Four qubits can be entangled in nine different ways}, Phys. Rev. A  {\bf 65}, 052112  (2002).
-%28
-\bibitem{Lamata} L. Lamata, J. Le{\'o}n, D. Salgado, E. Solano, {\em Inductive entanglement classification of four qubits under stochastic local operations and classical communication}, Phys. Rev. A {\bf 75}, 022318 (2007)
-%29
-\bibitem{bastin} P. Mathonet, S. Krins, M. Godefroid, L. Lamata,E. Solano,  T. Bastin, {\em Entanglement equivalence of N-qubit symmetric states},  Phys. Rev. A {\bf 81}, 052315  (2010).
-%30
-\bibitem{newexpt1}  A. A. Maser, R. Wiegner, U. Schilling, C. Thiel, J. von Zanthier, {\em A versatile source of polarization-entangled photons},  Phys. Rev. A {\bf 81}, 
-053842 (2010).
-%31
-\bibitem{newexpt2} N. Kiesel, W. Wieczorek,  S. Krins,  T. Bastin,  H. Weinfurter,  E. Solano, {\em Operational multipartite entanglement classes for symmetric photonic qubit states}, Phys. Rev. A {\bf 81}, 032316 (2010).
-%32
-\bibitem{SP1}  N. Linden, S. Popescu, W. K. Wootters, {\em Almost every pure state of three qubits is completely determined by its two-particle reduced density matrices}, Phys. Rev. Lett.  {\bf 89}, 207901 (2002).
-%33
-\bibitem{SP2} N. Linden, W. K.  Wootters, {\em The parts determine the whole in a generic pure quantum state}, Phys. Rev. Lett. {\bf 89}, 277906 (2002).
-%34
-\bibitem{SP2b} N. S. Jones, N. Linden, {\em Parts of quantum states}, Phys. Rev. A {\bf 71}, 012324 (2005).
-%35
-\bibitem{Coleman} A. J. Coleman, {\em Structure of Fermion density matrices}, Rev. Mod. Phys. {\bf 35}, 668 (1963). 
-%36
+\bibitem{mixed} T. Bastinm, P. Mathonet, E. Solano, {\em Operational entanglement families of symmetric mixed $N$-qubit states}, Phys.\ Rev.\ A {\bf 91}, 022310 (2015).
+\bibitem{Niel} M. Nielsen and I. Chuang, {\em Quantum Computation and Quantum Information} (Cambridge University Press, Cambridge, UK, 2000)
+\bibitem{Dur} W. D{\"u}r,  G. Vidal, J. I. Cirac, {\em Three qubits can be entangled in two inequivalent ways}, Phys.\ Rev.\ A {\bf 62}, 062314 2000.
+\bibitem{Ver} F. Verstraete, J.  Dehaene, B. De Moor, H. Verschelde, {\em Four qubits can be entangled in nine different ways}, Phys.\ Rev.\ A  {\bf 65}, 052112  (2002).
+\bibitem{Lamata} L. Lamata, J. Le{\'o}n, D. Salgado, E. Solano, {\em Inductive entanglement classification of four qubits under stochastic local operations and classical communication}, Phys.\ Rev.\ A {\bf 75}, 022318 (2007)
+\bibitem{bastin} P. Mathonet, S. Krins, M. Godefroid, L. Lamata, E. Solano, T. Bastin, {\em Entanglement equivalence of N-qubit symmetric states},  Phys.\  Rev.\ A {\bf 81}, 052315  (2010).
+\bibitem{newexpt1}  A. A. Maser, R. Wiegner, U. Schilling, C. Thiel, J. von Zanthier, {\em A versatile source of polarization-entangled photons},  Phys.\ Rev.\ A {\bf 81}, 053842 (2010).
+\bibitem{newexpt2} N. Kiesel, W. Wieczorek, S. Krins, T. Bastin, H. Weinfurter,  E. Solano, {\em Operational multipartite entanglement classes for symmetric photonic qubit states}, Phys.\ Rev.\ A {\bf 81}, 032316 (2010).
+\bibitem{SP1}  N. Linden, S. Popescu, W. K. Wootters, {\em Almost every pure state of three qubits is completely determined by its two-particle reduced density matrices}, Phys.\ Rev.\ Lett.\  {\bf 89}, 207901 (2002).
+\bibitem{SP2} N. Linden, W. K.  Wootters, {\em The parts determine the whole in a generic pure quantum state}, Phys.\ Rev.\ Lett.\ {\bf 89}, 277906 (2002).
+\bibitem{SP2b} N. S. Jones, N. Linden, {\em Parts of quantum states}, Phys.\ Rev.\ A {\bf 71}, 012324 (2005).
+\bibitem{Coleman} A. J. Coleman, {\em Structure of Fermion density matrices}, Rev.\ Mod.\ Phys.\ {\bf 35}, 668 (1963). 
 \bibitem{Rose} M. E. Rose, {\em Elementary theory of angular momentum}, (New York, Wiley, 1957).  
-%37
-\bibitem{Walck} S. N. Walck, D. W. Lyons, {\em  Only n-Qubit Greenberger-Horne-Zeilinger states are undetermined
-	by their reduced density matrices}, Phys. Rev. Lett. {\bf 100}, 050501 (2008).
-%38 
-\bibitem{Walck2} S. N. Walck, D.W. Lyons, {\em  Only $n$-qubit Greenberger-Horne-Zeilinger states contain $n$-partite information}, Phys. Rev. A {\bf 79}, 032326 (2009). 
-%39
-\bibitem{Wot}  Wootters, W.K.: Entanglement of formation of an arbitrary state of two qubits, Phys. Rev. Lett. {\bf 80},  2245 (1998); 
-%40
-\bibitem{Wot2} S. Hill, W. K. Wootters,  {\em Entanglement of a pair of quantum bits}, Phys. Rev. Lett.  {\bf 78},  5022 (1997).
-%41
-\bibitem{RaRe}  A. K. Rajagopal, R. Rendell, {\rm  Robust and fragile entanglement of three qubits: Relation to permutation symmetry}, Phys. Rev. A {\bf 65}, 032328 (2002). 
-%42
-\bibitem{Kun} V. Coffman, J. Kundu, W. K. Wootters, {\em Distributed entanglement}, Phys. Rev. A {\bf  61}, 052306 (2000).  
-%43
-\bibitem{arvind} D. Shruti, D. Kavita and Arvind, {\em Experimental construction of a W superposition state and its equivalence to the Greenberger-Horne-Zeilinger state under local filtration}, Phys. Rev. A {\bf 92}, 022307 (2015).  
+\bibitem{Walck} S. N. Walck, D. W. Lyons, {\em  Only n-Qubit Greenberger-Horne-Zeilinger states are undetermined by their reduced density matrices}, Phys.\  Rev.\ Lett.\ {\bf 100}, 050501 (2008).
+\bibitem{Walck2} S. N. Walck, D.W. Lyons, {\em  Only $n$-qubit Greenberger-Horne-Zeilinger states contain $n$-partite information}, Phys.\ Rev.\ A {\bf 79}, 032326 (2009). 
+\bibitem{Wot}  Wootters, W. K.: Entanglement of formation of an arbitrary state of two qubits, Phys.\ Rev.\ Lett.\ {\bf 80}, 2245 (1998); 
+\bibitem{Wot2} S. Hill, W. K. Wootters,  {\em Entanglement of a pair of quantum bits}, Phys.\ Rev.\ Lett.\ {\bf 78},  5022 (1997).
+\bibitem{RaRe}  A. K. Rajagopal, R. Rendell, {\rm  Robust and fragile entanglement of three qubits: Relation to permutation symmetry}, Phys.\ Rev.\ A {\bf 65}, 032328 (2002). 
+\bibitem{Kun} V. Coffman, J. Kundu, W. K. Wootters, {\em Distributed entanglement}, Phys.\ Rev.\ A {\bf 61}, 052306 (2000).  
+\bibitem{arvind} D. Shruti, D. Kavita and Arvind, {\em Experimental construction of a W superposition state and its equivalence to the Greenberger-Horne-Zeilinger state under local filtration}, Phys.\ Rev.\ A {\bf 92}, 022307 (2015).  
 \end{thebibliography}
 \renewcommand{\thesection}{\arabic{section}}
+\vskip 1cm
 
+\centerline{\includegraphics[scale=1.2]{authorsphotos/Prof_A_R_Sudha.eps}}
+\smallskip
 
-\newpage
+\authbio{Sudha}
+\bigskip
+
+\textbf{Dr.\ Sudha} obtained the M.Sc.\ degree in 1990 and Ph.D. in 1999 from Mysore University. She joined the Physics Department, Kuvempu University, Shimoga, in 2006, where she is currently Associate Professor.
+\bigskip
+
+\centerline{\includegraphics[scale=.65]{authorsphotos/Prof_A_R_Usha_Devi.eps}}
+\smallskip 
+
+\authbio{A. R. Usha Devi}
+\bigskip
+
 \noindent
-\begin{tabular}{V{2.5}cp{6.2cm}V{2.5}}
-\clineB{1-2}{2.5}
- &\\
-\raisebox{-2.4cm}{\includegraphics[scale=1.2]{figures/authors/Prof_A_R_Sudha.eps}} & 
-
-\centerline{\large\bf Sudha}
-
+\textbf{Dr.\ A. R. Usha Devi} obtained the M.Sc.\ degree in 1990 and Ph.D. in 1998 from Mysore University. She worked for Ph.D. under the guidance of Prof.\ G. 
+Ramachandran. Currently she is a Professor of Physics at Bangalore University.
 \bigskip
-Dr. Sudha obtained the M.Sc. degree in 1990 and Ph.D. in 1999 from Mysore University. She joined the Physics Department, Kuvempu University, Shimoga, in 2006, where she is currently Associate Professor.\\
-&\\ 
-\clineB{1-2}{2.5}
 
- &\\
-\raisebox{-3.1cm}{\includegraphics[scale=.65]{figures/authors/Prof_A_R_Usha_Devi.eps}} & 
+\centerline{\includegraphics[scale=.1]{authorsphotos/A_K_RajaGopal.eps}}
+\smallskip
 
-\centerline{\large\bf A. R. Usha Devi}
-
-\bigskip
-Dr.~A.~R.~Usha Devi obtained the M.Sc. degree in 1990 and Ph.D. in 1998 from Mysore University. She worked for Ph.D. under the guidance of Prof.G.Ramachandran. Currently she is a Professor of Physics at Bangalore University.\\
-&\\ 
-\clineB{1-2}{2.5}
-
- &\\
-\raisebox{-3.1cm}{\includegraphics[scale=.1]{figures/authors/A_K_RajaGopal.eps}} & 
-
-\centerline{\large\bf A. K. Rajagopal}
-
-\bigskip
-Authors Details not Avialable\\
-&\\ 
-\clineB{1-2}{2.5}
-\end{tabular}
+\authbio{A. K. Rajagopal}
