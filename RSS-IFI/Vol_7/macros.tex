@@ -26,6 +26,11 @@
 \usepackage[shortlabels]{enumitem}
 
 
+\makeatletter
+\newcommand{\thnum}[1]{#1\renewcommand{\@currentlabel}{#1}}
+\makeatother
+
+
 \allowdisplaybreaks
 
 \floatstyle{plain}
@@ -220,7 +225,7 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 
 \newcommand\blfootnote[1]{%
   \begingroup
-  \renewcommand\thefootnote{}\footnote{#1}%
+   \renewcommand\thefootnote{}\footnote{#1}%
   \addtocounter{footnote}{-1}%
   \endgroup
 }
