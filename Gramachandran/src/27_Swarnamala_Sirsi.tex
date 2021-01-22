@@ -113,7 +113,7 @@ The mixed symmetric separable state is chosen because it is exchangeable.
 
 Then, 
 \begin{align*}
-P(\alpha|\rho) & = (\sum_{i} \lambda_{i} \rho_{i} \otimes \rho_{i} \cdots \otimes \rho_{i} (E_{\alpha_{1}} \otimes E_{\alpha_{2}} \otimes \cdots \otimes E_{\alpha_{N}})) \\
+P(\alpha|\rho) & = \left(\sum_{i} \lambda_{i} \rho_{i} \otimes \rho_{i} \cdots \otimes \rho_{i} (E_{\alpha_{1}} \otimes E_{\alpha_{2}} \otimes \cdots \otimes E_{\alpha_{N}})\right) \\
 P(\alpha|\rho) & = \sum_{i} \lambda_{i} (\rho_{i} E_{\alpha}(1)) (\rho_{i} E_{\alpha}(2)) \cdots (\rho_{i} E_{\alpha}(N)).
 \end{align*}
 
@@ -223,27 +223,31 @@ G^{-1} & = \frac{2}{7}
 
 Hence POVM elements are given by
 \begin{align*}
-E_{1} & = \frac{1}{\sqrt{G}}\pi_{1}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{(7+4\sqrt{\frac{7}{2})^{2}}}
+E_{1} & = \frac{1}{\sqrt{G}}\pi_{1}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{\left(7+4\sqrt{\frac{7}{2}}\right)^2}
 \begin{bmatrix}
-(2+\sqrt{\frac{7}{2}})^{2} & \frac{-(2+\sqrt{\frac{7}{2})}e^{-i\frac{\pi}{4}}}{\sqrt{2}}  \\ 
-\frac{-(2+\sqrt{\frac{7}{2})}e^{i\frac{\pi}{4}}}{\sqrt{2}} & \frac{1}{2}\\ 
+\left(2+\sqrt{\frac{7}{2}}\right)^2 & \frac{-\left(2+\sqrt{\frac{7}{2}}\right)e^{-i\frac{\pi}{4}}}{\sqrt{2}}  \\ 
+\frac{-\left(2+\sqrt{\frac{7}{2}}\right)e^{i\frac{\pi}{4}}}{\sqrt{2}} & \frac{1}{2}\\ 
 \end{bmatrix}\\
-E_{2} & = \frac{1}{\sqrt{G}}\pi_{2}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{(7+4\sqrt{\frac{7}{2})^{2}}}
+E_{2} & = \frac{1}{\sqrt{G}}\pi_{2}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{\left(7+4\sqrt{\frac{7}{2}}\right)^2}
 \begin{bmatrix}
-\frac{1}{2} & \frac{-(2+\sqrt{\frac{7}{2})}e^{-i\frac{\pi}{4}}}{\sqrt{2}}\\ 
-\frac{-(2+\sqrt{\frac{7}{2})}e^{i\frac{\pi}{4}}}{\sqrt{2}} & (2+\sqrt{\frac{7}{2}})^{2}\\ 
-\end{bmatrix}\\
-E_{3} & = \frac{1}{\sqrt{G}}\pi_{3}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{(7+4\sqrt{\frac{7}{2})^{2}}}*\frac{1}{2}\\
-&\begin{bmatrix}
-(2+\sqrt{\frac{7}{2}})^{2}-(2+\sqrt{\frac{7}{2}})+\frac{1}{2} & -\sqrt{2}(2+\sqrt{\frac{7}{2}})e^{\frac{-i\pi}{4}}+(2+\sqrt{\frac{7}{2}})^{2}+\frac{e^{\frac{-i\pi}{2}}}{2} \\
--\sqrt{2}(2+\sqrt{\frac{7}{2}})e^{\frac{i\pi}{4}}+(2+\sqrt{\frac{7}{2}})^{2}+\frac{e^{\frac{i\pi}{2}}}{2} & (2+\sqrt{\frac{7}{2}})^{2}-(2+\sqrt{\frac{7}{2}})+\frac{1}{2}\\
-\end{bmatrix}\\
-E_{4} & = \frac{1}{\sqrt{G}}\pi_{4}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{(7+4\sqrt{\frac{7}{2})^{2}}}*\frac{1}{2}\\
-&\begin{bmatrix}
-(2+\sqrt{\frac{7}{2}})^{2}-(2+\sqrt{\frac{7}{2}})+\frac{1}{2} & -\sqrt{2}(2+\sqrt{\frac{7}{2}})e^{\frac{-i\pi}{4}}-i(2+\sqrt{\frac{7}{2}})^{2}+\frac{ie^{\frac{-i\pi}{2}}}{2} \\ 
--\sqrt{2}(2+\sqrt{\frac{7}{2}})e^{\frac{i\pi}{4}}+i(2+\sqrt{\frac{7}{2}})^{2}-\frac{ie^{\frac{-i\pi}{2}}}{2} & (2+\sqrt{\frac{7}{2}})^{2}-(2+\sqrt{\frac{7}{2}})+\frac{1}{2}\\
-\end{bmatrix},
+\frac{1}{2} & \frac{-\left(2+\sqrt{\frac{7}{2}}\right)e^{-i\frac{\pi}{4}}}{\sqrt{2}}\\ 
+\frac{-\left(2+\sqrt{\frac{7}{2}}\right)e^{i\frac{\pi}{4}}}{\sqrt{2}} & \left(2+\sqrt{\frac{7}{2}}\right)^2\\ 
+\end{bmatrix}
 \end{align*}
+{\fontsize{7.9pt}{10pt}\selectfont
+\begin{align*}
+E_{3} & = \frac{1}{\sqrt{G}}\pi_{3}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{\left(7+4\sqrt{\frac{7}{2}}\right)^2}*\frac{1}{2}\\
+&\begin{bmatrix}
+\left(2+\sqrt{\frac{7}{2}}\right)^2-\left(2+\sqrt{\frac{7}{2}}\right)+\frac{1}{2} & -\sqrt{2}\left(2+\sqrt{\frac{7}{2}}\right)e^{\frac{-i\pi}{4}}+\left(2+\sqrt{\frac{7}{2}}\right)^2+\frac{e^{\frac{-i\pi}{2}}}{2} \\
+-\sqrt{2}\left(2+\sqrt{\frac{7}{2}}\right)e^{\frac{i\pi}{4}}+\left(2+\sqrt{\frac{7}{2}}\right)^{2}+\frac{e^{\frac{i\pi}{2}}}{2} & \left(2+\sqrt{\frac{7}{2}}\right)^2-\left(2+\sqrt{\frac{7}{2}}\right)+\frac{1}{2}\\
+\end{bmatrix}\\
+E_{4} & = \frac{1}{\sqrt{G}}\pi_{4}\frac{1}{\sqrt{G}} = \frac{4+2\sqrt{\frac{7}{2}}}{\left(7+4\sqrt{\frac{7}{2}}\right)^2}*\frac{1}{2}\\
+&\begin{bmatrix}
+\left(2+\sqrt{\frac{7}{2}}\right)^2-\left(2+\sqrt{\frac{7}{2}}\right)+\frac{1}{2} & -\sqrt{2}\left(2+\sqrt{\frac{7}{2}}\right)e^{\frac{-i\pi}{4}}-i\left(2+\sqrt{\frac{7}{2}}\right)^2+\frac{ie^{\frac{-i\pi}{2}}}{2} \\ 
+-\sqrt{2}\left(2+\sqrt{\frac{7}{2}}\right)e^{\frac{i\pi}{4}}+i\left(2+\sqrt{\frac{7}{2}}\right)^2-\frac{ie^{\frac{-i\pi}{2}}}{2} & \left(2+\sqrt{\frac{7}{2}}\right)^2-\left(2+\sqrt{\frac{7}{2}}\right)+\frac{1}{2}\\
+\end{bmatrix},
+\end{align*}}\relax
+\newpage
 satisfying $\sum_{\alpha=1}^{4} E_{\alpha}= I$.
 
 \section*{A Tribute to my Guru}
@@ -325,8 +329,8 @@ lectures in the Mathematics and Statistics departments. After the lectures, G.R.
 brimming with joy and enthusiasm and told us - “Now I know how to view the spin
 density matrix in terms of a statistical distribution!”. That was the beginning of our
 sojourn in the field of quasi-probability distributions of spin systems, which eventually
-led to my PhD thesis `Theoretical Study of Spin Distributions in external electric and
-magnetic fields'. My PhD journey would not have been the fantastic experience that it
+led to my Ph.D. thesis `Theoretical Study of Spin Distributions in external electric and
+magnetic fields'. My Ph.D. journey would not have been the fantastic experience that it
 was, without him. Those intense and stimulating discussions with Professor G.R. and
 Ushadevi are truly unforgettable and later, paved the way for the publication of half a
 dozen papers.
@@ -357,8 +361,6 @@ Most people go through their lives without having a ‘Guru’ - I am proud and 
 honour, till the end of time. Thank you, Professor G.R.
 
 
-
-
 \begin{thebibliography}{99}
 \bibitem{chap27-key1} R. Renner \textit{Nature Physics}, vol.\ 3, p.\ 645, 2007.
 \bibitem{chap27-key2} B. de Finetti \textit{Ann.\ Inst.\ H. Poincare}, vol.\ 7, pp.\ 1--68, 1937.
@@ -373,12 +375,8 @@ honour, till the end of time. Thank you, Professor G.R.
 \bibitem{chap27-key11} S. SP, S. Sirsi, S. Hegde, and K. Bharath \textit{Phys.\ Rev}. A, vol.\ 96, p.\ 022328, 2017.
 \bibitem{chap27-key12} R. J. Glauber Phys.\ \textit{Rev.\ Lett.,} vol.\ 10, p.\ 84, 1963.
 \end{thebibliography}
-\vskip 1cm
 
 \centerline{\includegraphics[scale=.25]{authorsphotos/Swarnamala.eps}}
-\smallskip
-
-\authbio{Swarnamala Sirsi}
 \bigskip
 
 \noindent

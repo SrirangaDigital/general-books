@@ -19,7 +19,7 @@
 \usepackage{epsfig}
 \usepackage{soul}
 \usepackage{mathtools, nccmath}%this is reduce the equation space
-
+\usepackage{wrapfig}
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
 \usepackage{boldline}
@@ -62,12 +62,6 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 %\lhead[\small\thepage\quad #1]{}}
 %\def\authoraffiliation#1{{~\hfill\fontsize{11}{13}\selectfont #1}}
 
-
-
-%%general settings
-\pretolerance=9000
-%\parindent=0pt
-%\setlength{\parskip}{5pt}
 
 %%redefining macros
 \makeatletter
@@ -147,6 +141,21 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 \def\dd{\mathrm{d}}
 
 \makeatletter
+\newsavebox\curwrapfig
+\long\def\wrapfiguresafe#1#2#3{%
+  \sbox\curwrapfig{#3}%
+  \par\penalty-100%
+  \begingroup % preserve \dimen@
+    \dimen@\pagegoal \advance\dimen@-\pagetotal % space left
+    \advance\dimen@-\baselineskip % allow an extra line
+    \ifdim \ht\curwrapfig>\dimen@ % not enough space left
+      \break%
+    \fi%
+  \endgroup%
+  \begin{wrapfigure}{#1}{#2}%
+    \usebox\curwrapfig%
+  \end{wrapfigure}%
+}
 
 \newenvironment{abstract}{%
 	\small
@@ -178,3 +187,5 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 
 \@addtoreset{equation}{chapter}
 \makeatother
+\renewcommand{\floatpagefraction}{0.75}
+\setlength\intextsep{0pt}
