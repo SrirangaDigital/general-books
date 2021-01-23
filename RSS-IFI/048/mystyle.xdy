@@ -20,3 +20,6 @@
 (markup-locref-list :sep ", ")
 (markup-locref   :attr  "pageff"     :open "\pageff{" :close "}")
 (markup-locref   :attr  "passim"     :open "\passim{" :close "}")
+
+(define-attributes (("gobble")))
+(markup-locref  :open "\mygobble{" :close "}" :attr "gobble")
