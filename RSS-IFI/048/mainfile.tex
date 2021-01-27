@@ -32,25 +32,23 @@
 \input src/trans_scheme
 \newpage
 
-\centerline{{\small\textsl{This page left blank intentionally}}}
-\thispagestyle{empty}
+%~ \centerline{{\small\textsl{This page left blank intentionally}}}
+%~ \thispagestyle{empty}
 
 %\newpage
 
-\makeatletter
-%%aligning heading to the left
-\def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright
-    \normalfont
-    \interlinepenalty\@M
-    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
-    \vskip 40\p@
-  }}
-\makeatother
+%~ \makeatletter
+%~ %%aligning heading to the left
+%~ \def\@makeschapterhead#1{%
+  %~ \vspace*{50\p@}%
+  %~ {\parindent \z@ \raggedright
+    %~ \normalfont
+    %~ \interlinepenalty\@M
+    %~ \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    %~ \vskip 40\p@
+  %~ }}
+%~ \makeatother
 
-\input src/000d-about
-\newpage
 
 \makeatletter
 %%aligning heading to the right
@@ -64,13 +62,28 @@
   }}
 \makeatother
 
-\input src/000e-key-partners
+\input src/000d-about
+\newpage
 
 \makeatletter
 %%aligning heading to the left
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+\input src/000e-key-partners
+
+\makeatletter
+%%aligning heading to the right
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
     \normalfont
     \interlinepenalty\@M
     \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
@@ -96,6 +109,9 @@
   }}
 \makeatother
 
+ \newpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
 \newpage
 \lhead[\small\thepage\quad ]{}
 \rhead[]{\small\thechapter. \leftmark\quad\small\thepage}
@@ -115,8 +131,8 @@
 %\input src/01-chapter1
 \clearpage
 
-\centerline{{\small\textsl{This page left blank intentionally}}}
-\thispagestyle{empty}
+%~ \centerline{{\small\textsl{This page left blank intentionally}}}
+%~ \thispagestyle{empty}
 
 %\newpage
 \rhead[]{\small\thechapter. The Non-translatables of (South) Indian Music\quad\small\thepage}
