@@ -37,14 +37,64 @@
 
 %\newpage
 
+\makeatletter
+%%aligning heading to the left
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \input src/000d-about
 \newpage
 
+\makeatletter
+%%aligning heading to the right
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \input src/000e-key-partners
+
+\makeatletter
+%%aligning heading to the left
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \input src/000f-acknowledgements
 %~ \newpage
 %~ \centerline{{\small\textsl{This page left blank intentionally}}}
 %~ \thispagestyle{empty}
+
+
+\makeatletter
+%%alignment of heading restored to original
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
 
 \newpage
 \lhead[\small\thepage\quad ]{}
