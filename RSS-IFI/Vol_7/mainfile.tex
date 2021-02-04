@@ -36,7 +36,34 @@
 %\newpage
 
 \input src/000d-about
+
+\makeatletter
+%%aligning heading to the left
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \input src/000e-key-partners
+
+
+\makeatletter
+%%aligning heading to the left
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
 \input src/000f-acknowledgements
 \newpage
 \centerline{\small\textsl{This page left blank intentionally}}
@@ -62,7 +89,7 @@
 
 
 \newpage
-\rhead[]{\small\thechapter. \textit{Pūrva-pakṣa} of Neo-Orientalist Chronology\quad\small\thepage}
+\rhead[]{\small\thechapter. \textit{Pūrva-pakṣa} of Sheldon Pollock's Use of Chronology\quad\small\thepage}
 %\lhead[{\small\thepage}\quad\small Manogna Sastry and Megh Kalyanasundaram]{} 
 \input src/001-chapter-01 %from .xhtml file
 \newpage
