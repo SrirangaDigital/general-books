@@ -91,7 +91,6 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
   }}
 
 
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 \renewcommand\thesection{\@arabic\c@section}
 \renewcommand\thesubsubsection{\@arabic\c@subsubsection}
@@ -101,6 +100,11 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 \thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \renewcommand*\seealso[2]{(\emph{\alsoname} #1)}
+
+\def\@xfootnote[#1]{%
+  \protected@xdef\@thefnmark{#1}%
+  \@footnotemark\@footnotetext}
+
 \makeatother
 
 \setcounter{secnumdepth}{4}
