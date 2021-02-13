@@ -190,6 +190,15 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
       \endlist}
 
 \@addtoreset{equation}{chapter}
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 20\p@
+  }}
 \makeatother
 \renewcommand{\floatpagefraction}{0.75}
 \setlength\intextsep{0pt}
