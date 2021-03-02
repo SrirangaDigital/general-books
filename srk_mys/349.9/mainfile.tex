@@ -1,0 +1,108 @@
+\documentclass[11pt,twoside,openany]{book}
+
+\input macros
+
+\begin{document}
+
+\fontsize{13pt}{14.75pt}\selectfont 
+
+\frontmatter
+
+\mainmatter
+
+\input src/000a-title
+\newpage
+
+\input src/000b-copyright
+
+
+\tableofcontents
+
+\input src/001-chapter001
+
+%ಭಾಷಣಗಳು ಮತ್ತು ಪ್ರವಚನಗಳು
+
+%\input src/100-part001
+\input src/101-chapter001
+\input src/102-chapter002
+\input src/103-chapter003
+\input src/104-chapter004
+\input src/105-chapter005
+
+
+%\input src/200-part001
+\input src/201-chapter001
+\input src/202-chapter002
+\input src/203-chapter003
+\input src/204-chapter004
+\input src/205-chapter005
+\input src/206-chapter006
+\input src/207-chapter007
+\input src/208-chapter008
+\input src/209-chapter009
+
+
+%\input src/300-part001
+\input src/301-chapter001
+\input src/302-chapter002
+\input src/303-chapter003
+\input src/304-chapter004
+\input src/305-chapter005
+\input src/306-chapter006
+
+
+%\input src/400-part001
+\input src/401-chapter001
+
+
+%\input src/500-part001
+\input src/501-chapter001
+\input src/502-chapter002
+\input src/503-chapter003
+\input src/504-chapter004
+\input src/505-chapter005
+\input src/506-chapter006
+\input src/507-chapter007
+\input src/508-chapter008
+\input src/509-chapter009
+\input src/510-chapter010
+\input src/511-chapter011
+\input src/512-chapter012
+
+
+%\input src/600-part001
+\input src/601-chapter001
+
+%\input src/700-part001
+\input src/701-chapter001
+\input src/702-chapter002
+\input src/703-chapter003
+
+\end{document}
+
+%~\thispagestyle{empty}
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{-60\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \centering \Huge \bfseries ಶಬ್ದಸೂಚಿ\par\nobreak
+    
+    \vskip 2\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+\lhead[\small\arabictokannada{\thepage}\quad ಪದ ಸೂಚಿ]{}
+\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\arabictokannada{\thepage}}
+\label{index}
+\printindex
+
+%\end{document}
+
