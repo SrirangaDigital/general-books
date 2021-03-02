@@ -10,8 +10,6 @@
 \usepackage{longtable}
 \usepackage{url}
 
-\allowdisplaybreaks
-
 \floatstyle{plain}
 \floatplacement{Figure}{H}
 
@@ -98,6 +96,79 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
 
+\renewcommand*\l@part[2]{%
+  \ifnum \c@tocdepth >-2\relax
+    \addpenalty{-\@highpenalty}%
+    \addvspace{2.25em \@plus\p@}%
+    \setlength\@tempdima{3em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      {\leavevmode
+       \large \bfseries #1\hfil
+       \hb@xt@\@pnumwidth{\hss #2%
+                          \kern-\p@\kern\p@}}\par
+       \nobreak
+         \global\@nobreaktrue
+         \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+  \fi}
+
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 0.25em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil
+      \nobreak\hb@xt@\@pnumwidth{\hss #2%
+                                 \kern-\p@\kern\p@}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         \addcontentsline{toc}{chapter}%
+                                   {#1}%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %~ \huge\bfseries \@chapapp\space \thechapter
+        %~ \par\nobreak
+        %~ \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    \vskip 10\p@
+  }}
+
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
                                    {1ex \@plus.2ex}%
@@ -128,3 +199,5 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 
 \makeatother
 
+\def\moolashloka{\smallbreak\ignorespaces\begin{sanskrit}\large\bf\centering}
+\def\endmoolashloka{\par\end{sanskrit}\smallskip}
