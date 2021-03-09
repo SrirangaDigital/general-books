@@ -23,3 +23,4 @@
 
 (define-attributes (("gobble")))
 (markup-locref  :open "\mygobble{" :close "}" :attr "gobble")
+(markup-locref-list :sep "" :attr "gobble")
