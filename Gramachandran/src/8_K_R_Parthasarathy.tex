@@ -9,21 +9,21 @@ ${}^{2}$Department of Physics, Bangalore University, Bangalore-560 056, India\\
 ${}^{3}$Inspire Institute Inc., Alexandria, Virginia, 22303, USA.}
 
 \begin{abstract}
-This is an expositary article narrating  the derivation of a non-linear stochastic Schr{\"o}dinger equation describing a classical diffusion of pure quantum states of a system $S$,  driven by the Brownian motion $\mathbf{B}$, starting from the quantum stochastic differential equations of Hudson and Parthasarathy (HP) (Comm. Math. Phys. {\bf 93}, 301 (1984)). An appropriate Girsanov transformation is identified to result in the Gisin-Percival state diffusion equation (J. Phys. A {\bf 167}, 315 (1992)). This approach yields an explicit solution of the Gisin-Percival equation, in terms of the Hudson-Parthasarathy unitary process and a radomized Weyl displacement process. The well-known Gorini-Kossakowski-Sudarshan-Lindblad (GKSL) master equation is unraveled after\break coarse-graining over the Gisin-Percival pure state trajectories. The diffusion equation for  mixed state trajectories of a quantum system  $S$ is then obtained  from the Gisin-Percival diffusion equation describing an entangled pure bipartite system with $S$ being one of its subsystems. The scalar-valued moment processes  ${\rm Tr}[\rho_t^m( \mathbf{B})], \,\,\, m=2,3,\ldots$  of the diffused mixed state  $\rho_t(\mathbf{B})$ for  $t\geq 0$,  where $\mathbf{B}$ is the underlying  complex $n$-dimensional vector-valued Brownian motion process,   are shown to admit a Doob-Meyer decomposition as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$ for each $m=2,\, 3,\, \ldots$. This establishes the existence of the  moment processes {\em almost surely} with respect to the Wiener probability measure $\mu$  of the Brownian motion $\mathbf{B}$. In particular, the spectrum and therefore the entropy of $\rho_t (\mathbf{B})$ of a finite level quantum system converge {\em almost surely} to a limiting value asymptotically as $t\rightarrow \infty$. A technical proof indicating the {\em almost sure} convergence of the spectrum for countably infinite level systems is also given.   
+This is an expositary article narrating  the derivation of a non-linear stochastic Schr{\"o}dinger equation describing a classical diffusion of pure quantum states of a system $S$,  driven by the Brownian motion $\mathbf{B}$, starting from the quantum stochastic differential equations of Hudson and Parthasarathy (HP) (Comm.\ Math.\ Phys.\ {\bf 93}, 301 (1984)). An appropriate Girsanov transformation is identified to result in the Gisin-Percival state diffusion equation (J. Phys.\ A {\bf 167}, 315 (1992)). This approach yields an explicit solution of the Gisin-Percival equation, in terms of the Hudson-Parthasarathy unitary process and a radomized Weyl displacement process. The well-known Gorini-Kossakowski-Sudarshan-Lindblad (GKSL) master equation is unraveled after\break coarse-graining over the Gisin-Percival pure state trajectories. The diffusion equation for  mixed state trajectories of a quantum system  $S$ is then obtained  from the Gisin-Percival diffusion equation describing an entangled pure bipartite system with $S$ being one of its subsystems. The scalar-valued moment processes  ${\rm Tr}[\rho_t^m( \mathbf{B})], \,\,\, m=2,3,\ldots$  of the diffused mixed state  $\rho_t(\mathbf{B})$ for  $t\geq 0$,  where $\mathbf{B}$ is the underlying  complex $n$-dimensional vector-valued Brownian motion process,   are shown to admit a Doob-Meyer decomposition as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$ for each $m=2,\, 3,\, \ldots$. This establishes the existence of the  moment processes {\em almost surely} with respect to the Wiener probability measure $\mu$  of the Brownian motion $\mathbf{B}$. In particular, the spectrum and therefore the entropy of $\rho_t (\mathbf{B})$ of a finite level quantum system converge {\em almost surely} to a limiting value asymptotically as $t\rightarrow \infty$. A technical proof indicating the {\em almost sure} convergence of the spectrum for countably infinite level systems is also given.   
 \end{abstract}
-\smallskip
+\medskip
 
-\begin{center}
-	{\Large\bf In memory of Professor G.~Ramachandran}
-\end{center}
+\centerline{{\Large\bf In memory of Professor G.~Ramachandran}}
+\vskip -3pt
 
 \section{Introduction}\label{chap8-sec1}
+\vskip -2pt
 
 Irreversible dynamics of states and observables of a quantum system $S$ is usually described by a one parameter semigroup 
 $\{T_t,t\geq 0\}$ of unital completely positive maps on the algebra $\mathcal{B}(\mathcal{H}_S)$ of all bounded operators on the associated system Hilbert space $\mathcal{H}_S$. Such a semigroup is called a {\it quantum dynamical semigroup}. When this semigroup is uniformly continuous, its infinitesimal generator was completely described by Gorini, Kossakowski and Sudarshan~\cite{chap8-key1} when $\mathcal{H}_S$ is finite dimensional and by Lindblad~\cite{chap8-key2} in the general case. We call it the GKSL generator, usually denoted by $\mathcal{L}$. The form of this generator $\mathcal{L}$ becomes meaningful even when the operators entering the description of $\mathcal{L}$ may be unbounded \cite{chap8-key3,chap8-key4,chap8-key5,chap8-key6} and can give rise to dynamical semigroups, which are not necessarily uniformly continuous. Since the discovery of the form of the generator $\mathcal{L}$, there have been attempts to understand the stochastic processes leading to the generator $\mathcal{L}$. This has mainly given rise to two different approaches. 
 
 \begin{itemize}
-\item Quantum stochastic calculus for operator-valued processes in $\mathcal{H}_S\otimes\mathcal{H}_R$, where $\mathcal{H}_R$ is an appropriate Boson Fock space associated with a reservoir $R$ (also called {\it bath} or {\it noise}) was investigated in the 1984 paper~\cite{chap8-key7} of Hudson and Parthasarathy (HP). Such a stochastic calculus is equipped with a {\it quantum It{\^o} formula}~\cite{chap8-key7,chap8-key8} leading to a theory of {\it quantum stochastic differential equations}. This enables, in particular, the construction of {\it unitary operator-valued processes} $\{U(t), t\geq 0\}$ satisfying a quantum stochastic differential equation in $\mathcal{H}_S\otimes\mathcal{H}_R$. It turns out that for a given GKSL generator $\mathcal{L}$, there exists a canonical unitary operator-valued process in $\mathcal{H}_S\otimes\mathcal{H}_R$ obeying a quantum stochastic differential equation of the exponential type and satisfying the identity 
+\item Quantum stochastic calculus for operator-valued processes in\break $\mathcal{H}_S\otimes\mathcal{H}_R$, where $\mathcal{H}_R$ is an appropriate Boson Fock space associated with a reservoir $R$ (also called {\it bath} or {\it noise}) was investigated in the 1984 paper~\cite{chap8-key7} of Hudson and Parthasarathy (HP). Such a stochastic calculus is equipped with a {\it quantum It{\^o} formula}~\cite{chap8-key7,chap8-key8} leading to a theory of {\it quantum stochastic differential equations}. This enables, in particular, the construction of {\it unitary operator-valued processes} $\{U(t), t\geq 0\}$ satisfying a quantum stochastic differential equation in $\mathcal{H}_S\otimes\mathcal{H}_R$. It turns out that for a given GKSL generator $\mathcal{L}$, there exists a canonical unitary operator-valued process in $\mathcal{H}_S\otimes\mathcal{H}_R$ obeying a quantum stochastic differential equation of the exponential type and satisfying the identity 
 $$
 \langle \phi\vert T_t(X)\vert \chi \rangle=\langle \phi\otimes \Omega_0\vert U(t)^\dag\, (X\otimes I_R)\, U(t)\,\vert \chi\otimes \Omega_0 \rangle
 $$ 
@@ -41,7 +41,7 @@ In this article we establish a rigorous connection between the two approaches me
 
 A pure state remains pure under the Gisin-Percival quantum state diffusion at all times $t\geq 0$. Based on the Gisin-Percival diffusion equation for an entangled pure bipartite state, with $S$ being one of its subsystems, we arrive at the corresponding stochastic differential equation for mixed state trajectories of $S$. Massen and K{\"u}mmerer~\cite{chap8-key36} had  investigated  stability features of a discrete time mixed state trajectory, associated with a random chain of quantum states resulting from repeated measurements on a system. As a natural extension of this  we study the stability behaviour of the {\em spectrum} of a continuous time Gisin-Percival quantum diffusion trajectory of mixed quantum states~\cite{chap8-key37}. Using It{\^o} calculus~\cite{chap8-key38}, along with an induction procedure, we obtain the classical stochastic differential  equation for the scalar-valued moment processes  ${\rm Tr}[\rho_t^m( \mathbf{B})], \,\,\, m=2,3,\ldots$  of the diffused mixed state  $\rho_t(\mathbf{B}), \  t\geq 0$. They are shown to admit a Doob-Meyer decomposition~\cite{chap8-key39,chap8-key40} as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$ for each $m=2,\, 3,\, \ldots$. This ensures the existence of  $\underset{t\rightarrow\infty}{\lim}\, {\rm Tr}[\rho_t^m( \mathbf{B})]$ {\em almost surely} with respect to the Wiener probability measure $\mu$ of the Brownian motion $\mathbf{B}$, for each $m=2,\, 3,\, \ldots$. In particular when  $S$ is a finite level quantum system, the spectrum and therefore the entropy of $\rho_t (\mathbf{B})$ converge {\em almost surely} to a limit asymptotically i.e., as $t\rightarrow \infty$. Using a probabilistic approach~\cite{chap8-key41,chap8-key42} we then derive a technical result implying the {\em almost sure} convergence of the spectrum for countably infinite level quantum systems. 
 
-We begin with a description of discrete time irreversible dynamics of a finite $d$-level quantum system $S$ in Sec. \ref{chap8-sec2}. This  prepares a necessary groundwork for its natural adaptation to  continuous time noisy evolution, as formulated by HP~\cite{chap8-key7,chap8-key8}. A brief account of HP quantum stochastic calculus is presented in Sec. \ref{chap8-sec3}. A description of  {\it noisy Schr{\"o}dinger unitary evolutions} in terms of quantum stochastic differential equations is outlined here. We describe,  how a   unitary operator-valued process $\{U(t), t\geq 0\}$ obeying a quantum stochastic differerntial equation  in $\mathcal{H}_S\otimes \mathcal{H}_R$, leads to  the quantum dynamical semigroup $\{T_t, t\geq 0\}$, with GKSL generator $\mathcal{L}$.  Invariance  properties of the GKSL generator $\mathcal{L}$ under  unitary Weyl displacement process and second quantized  unitary operator-valued process is discussed  in Sec. \ref{chap8-sec4}. The basic notions of the Wiener-It{\^o}-Segal isomorphism between the reservoir space $\mathcal{H}_R$ and the Hilbert space $L^2(\mu)$ of norm square integrable functions with respect to the Wiener probability measure $\mu$ of a vector-valued Brownian motion are presented in Sec. \ref{chap8-sec5}. Starting from an HP quantum stochastic differential equation,  Gisin-Percival~\cite{chap8-key9} quantum state diffusion equation is derived in Sec. \ref{chap8-sec6}.  Stochastic equation describing continuous time diffusion of mixed state of a quantum system $S$, starting from the Gisin-Percival diffusion equation for an entangled pure bipartite state, with $S$ being one of its subsystems, is derived in Sec. \ref{chap8-sec7}. The diffusion equation for  the non-negative bounded scalar-valued  moment processes  $0\leq {\rm Tr}[\, \rho_t^m(\mathbf{B})]\leq 1,\ \  m=2,3,\ldots$ of the quantum trajectory $\{\rho_t(\mathbf{B}),\, t\geq 0\}$ is presented in Sec.~8. Each of the processes $\{{\rm Tr}[\rho_t^m( \mathbf{B})], t\geq 0\}$ is shown to admit a Doob-Meyer decomposition,  as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$. In Sec. \ref{chap8-sec9} we proceed to prove the {\em almost sure} convergence of the spectrum for countably infinite level systems using a probabilistic approach.   
+We begin with a description of discrete time irreversible dynamics of a finite $d$-level quantum system $S$ in Sec.\ \ref{chap8-sec2}. This  prepares a necessary groundwork for its natural adaptation to  continuous time noisy evolution, as formulated by HP~\cite{chap8-key7,chap8-key8}. A brief account of HP quantum stochastic calculus is presented in Sec.\ \ref{chap8-sec3}. A description of  {\it noisy Schr{\"o}dinger unitary evolutions} in terms of quantum stochastic differential equations is outlined here. We describe,  how a   unitary operator-valued process $\{U(t), t\geq 0\}$ obeying a quantum stochastic differerntial equation  in $\mathcal{H}_S\otimes \mathcal{H}_R$, leads to  the quantum dynamical semigroup $\{T_t, t\geq 0\}$, with GKSL generator $\mathcal{L}$.  Invariance  properties of the GKSL generator $\mathcal{L}$ under  unitary Weyl displacement process and second quantized  unitary operator-valued process is discussed  in Sec.\ \ref{chap8-sec4}. The basic notions of the Wiener-It{\^o}-Segal isomorphism between the reservoir space $\mathcal{H}_R$ and the Hilbert space $L^2(\mu)$ of norm square integrable functions with respect to the Wiener probability measure $\mu$ of a vector-valued Brownian motion are presented in Sec.\ \ref{chap8-sec5}. Starting from an HP quantum stochastic differential equation,  Gisin-Percival~\cite{chap8-key9} quantum state diffusion equation is derived in Sec.\ \ref{chap8-sec6}.  Stochastic equation describing continuous time diffusion of mixed state of a quantum system $S$, starting from the Gisin-Percival diffusion equation for an entangled pure bipartite state, with $S$ being one of its subsystems, is derived in Sec.\ \ref{chap8-sec7}. The diffusion equation for  the non-negative bounded scalar-valued  moment processes  $0\leq {\rm Tr}[\, \rho_t^m(\mathbf{B})]\leq 1,\ \  m=2,3,\ldots$ of the quantum trajectory $\{\rho_t(\mathbf{B}),\, t\geq 0\}$ is presented in Sec.~8. Each of the processes $\{{\rm Tr}[\rho_t^m( \mathbf{B})], t\geq 0\}$ is shown to admit a Doob-Meyer decomposition,  as the sum of a martingale $M^{(m)}_t(\mathbf{B})$ and a non-negative increasing process $S^{(m)}_t(\mathbf{B})$. In Sec.\ \ref{chap8-sec9} we proceed to prove the {\em almost sure} convergence of the spectrum for countably infinite level systems using a probabilistic approach.   
 
 \section[Irreversible discrete time dynamics of a finite quantum system]{Irreversible discrete time dynamics of a\break finite quantum system}\label{chap8-sec2}
 
@@ -278,7 +278,7 @@ Let $\{L(t)\}$ be such a {\it simple adapted process} and $\{M(t)\}$ be any one 
 \end{eqnarray}
 It is clear that the operators $L_{t_j}$ and  $M (t_{j+1} \wedge t)- M (t_{j} \wedge t)$ commute with each other i.e., $ L(s)\, d\, M(s)$ can be written as $d\, M(s)\, L(s).$ 
 
-As shown in Ref.~\cite{chap8-key7}, the notion of such integrals can be extended by a completion procedure to a wide class of adapted processes, which are not necessarily simple. Such an integration is a linear operation in the space of adapted processes.  For details see Sec. \ref{chap8-sec4} of Ref.~\cite{chap8-key7}. 
+As shown in Ref.~\cite{chap8-key7}, the notion of such integrals can be extended by a completion procedure to a wide class of adapted processes, which are not necessarily simple. Such an integration is a linear operation in the space of adapted processes.  For details see Sec.\ \ref{chap8-sec4} of Ref.~\cite{chap8-key7}. 
 
 We consider adapted processes of the form  
 \begin{eqnarray}
@@ -402,7 +402,7 @@ Then, the vacuum conditional expectation value (see \eqref{chap8-eq3.28} and \eq
 \end{eqnarray} 
 for all $t\geq 0$ and $X$ in $\mathcal{B}(\mathcal{H}_S)$. Thus, conjugation by the unitary adapted processes $\{U(t)\}$ and $\{V(t)\}$ yield the reduced dynamics of the quantum system with  the same GKSL generator $\mathcal{L}$. 
 In the following, we discuss two important examples of $\{V(t), t\geq 0\}$, which specialize to {\em the  translation  and the rotation invariance} of the GKSL generator $\mathcal{L}$. 
-\bigskip
+\eject
 
 \noindent \textbf{\large{Example 1:  The translation invariance property of $\mathcal{L}$}} 
 \bigskip
@@ -520,7 +520,7 @@ Now, consider the correspondence
 $$
 \Theta :\ e(\mathbf{u}) \rightarrow \widetilde{e}(\mathbf{u}),
 $$
-where $e(\mathbf{u})$ is the exponential vector  defined in Sec. \ref{chap8-sec3} (see \eqref{chap8-eq3.2}). The map $\Theta$ is scalar product preserving and so, it extends uniquely to a Hilbert space isomorphism from the Boson Fock space $\Gamma(L^2(\mathbb{R}_+)\otimes\mathbb{C}^n)$ to  $L^2(\mu)$. This is called the Wiener-It\^{o}-Segal isomorphism~\cite{chap8-key32,chap8-key33,chap8-key34}. 
+where $e(\mathbf{u})$ is the exponential vector  defined in Sec.\ \ref{chap8-sec3} (see \eqref{chap8-eq3.2}). The map $\Theta$ is scalar product preserving and so, it extends uniquely to a Hilbert space isomorphism from the Boson Fock space $\Gamma(L^2(\mathbb{R}_+)\otimes\mathbb{C}^n)$ to  $L^2(\mu)$. This is called the Wiener-It\^{o}-Segal isomorphism~\cite{chap8-key32,chap8-key33,chap8-key34}. 
 
 For any vector $\phi$ in $\mathcal{H}_R=\Gamma(L^2(\mathbb{R}_+)\otimes\mathbb{C}^n)$ or in 
 $\mathcal{H}=\mathcal{H}_S\otimes\mathcal{H}_R$, we write 
@@ -596,7 +596,7 @@ Simple application of classical It{\^o} calculus~\cite{chap8-key38} leads to
 thus establishing the proposition.
 \end{proof}
 
-We shall now explain how the Weyl displacement process $\{W(\mathbf{f})(t), t\geq 0\}$, discussed in Sec. \ref{chap8-sec4}, looks like in $L^2(\mu)$. Under the $\Theta$ isomorphism $W(\mathbf{f})(t)$ satisfies the relation   
+We shall now explain how the Weyl displacement process $\{W(\mathbf{f})(t),\break t\geq 0\}$, discussed in Sec.\ \ref{chap8-sec4}, looks like in $L^2(\mu)$. Under the $\Theta$ isomorphism $W(\mathbf{f})(t)$ satisfies the relation   
 \begin{align}
 \widetilde{W}(\mathbf{f})(t)\widetilde{e}(\mathbf{u})(\mathbf{B}) &= \widetilde{e}(\mathbf{u}+1_{[0,t]}\, \mathbf{f})(\mathbf{B}) \, \,\nonumber \\ 
 & \qquad \times {\exp}\left[-\frac{1}{2}\, \int_0^t\, \vert \mathbf{f}(s)\vert^2\, ds -\int_0^t\, \mathbf{f}^\dag\mathbf{u}(s)\, ds\right] \nonumber \\
@@ -608,7 +608,7 @@ where $\gamma_{\mathbf{u}}(t,\mathbf{B})$ is a non-anticipating Brownian functio
 d\gamma_{\mathbf{u}}=  (\mathbf{f}+\mathbf{u})^T\, d\mathbf{B}-\frac{1}{2}\,\left[ \mathbf{f}^\dag\mathbf{f}\, +
 (\mathbf{f}+\mathbf{u})^T(\mathbf{f}+\mathbf{u})+2\,\mathbf{f}^\dag\mathbf{u} \right]\, dt. \label{chap8-eq5.13}
 \end{equation}
-This suggests the possibility of introducing a {\it randomized} Weyl displacement operator $\widetilde{\mathbb{W}}(\mathbf{f})(t)$ by replacing $\mathbf{f}(t)$ by a {\it non-anticipating} Brownian functional $\mathbf{f}(t,\mathbf{B})$ in \eqref{chap8-eq5.12} and  \eqref{chap8-eq5.13}. To this end, we consider the class  
+This suggests the possibility of introducing a {\it randomized} Weyl displacement operator $\widetilde{\mathbb{W}}(\mathbf{f})(t)$ by replacing $\mathbf{f}(t)$ by a {\it non-anticipating}\break Brownian functional $\mathbf{f}(t,\mathbf{B})$ in \eqref{chap8-eq5.12} and  \eqref{chap8-eq5.13}. To this end, we consider the class  
 $$
 \mathcal{F}_2 = \{\mathbf{f}: \mathbf{f}=\mathbf{f}(t,\mathbf{B}), \int_{0}^{t}\, \vert \mathbf{f}(s,\mathbf{B})\vert^2\, ds <\infty \ \forall\ t\geq 0\}
 $$  
@@ -625,6 +625,7 @@ $\{\widetilde{\mathbb{W}}(\mathbf{f})(t), t\geq 0\}$ is  a unitary operator-valu
 \end{thm}
 \begin{proof}
 Substituting \eqref{chap8-eq5.14} we get,  
+\eject
 \begin{align}
 \langle \widetilde{\mathbb{W}}(\mathbf{f})(t)\, \widetilde{e}(\mathbf{u})\ & vert \widetilde{\mathbb{W}}
 (\mathbf{f})(t)\, \widetilde{e}(\mathbf{v})\rangle\notag\\ 
@@ -695,7 +696,7 @@ d\,\vert\psi_t\rangle =\sum_{k=1}^{n}\, \left[L_k\,  dQ_{1,k}(t)\, \vert\psi_t\r
 + i\,L_k\,  dQ_{2,k}(t)\, \vert\psi_t\rangle\right]\\  
 -\left[i\, H+\sum_{k=1}^{n}L^\dag_k L_k \right] \, \vert\psi_t\rangle\, dt.\label{chap8-eq6.5}
 \end{multline}  
-Under the Wiener-It{\^o}-Segal isomorphism  $Q_{\alpha\,k}(t)\rightarrow \Theta\, Q_{\alpha\,k}(t)\Theta^{-1}=\widetilde{Q}_{\alpha,k}(t)$ is multiplication by  $B_{\alpha,k}(t),\ \forall \ \ \,\, t\in\mathbb{R}_+$ in  $L^2(\mu)$ (see proposition of Sec. 5). We replace  the $2n$ dimensional Brownian path $\{B_{\alpha,k}, \alpha=1,2;\, k=1,2,\ldots, n\}$  by the corresponding $n$-dimensional complex Brownian path $\mathbf{B}=\{B_{1,k}+i\,B_{2,k},k=1,2,\ldots , n\}.$ The map defined by  $t\rightarrow \vert\widetilde{\psi}_t(\mathbf{B})\rangle= \Theta U(t)\, \vert\phi_0\otimes \Omega_0\rangle$ is a non-anticipating $\mathcal{H}_S$-valued Brownian functional in $L^2(\mu, \mathcal{H}_S)$, with $\mu$ denoting the Wiener probability measure of $n$-dimensional complex Brownian motion $\mathbf{B}$. Hereafter, all our discussions will take place in $L^2(\mu, \mathcal{H}_S)$ and we shall omit the symbol `${}_{\sim}$' over vectors as well as operators.  
+Under the Wiener-It{\^o}-Segal isomorphism  $Q_{\alpha\,k}(t)\rightarrow \Theta\, Q_{\alpha\,k}(t)\Theta^{-1}=\widetilde{Q}_{\alpha,k}(t)$ is multiplication by  $B_{\alpha,k}(t),\ \forall \ \ \,\, t\in\mathbb{R}_+$ in  $L^2(\mu)$ (see proposition of Sec.\ 5). We replace  the $2n$ dimensional Brownian path $\{B_{\alpha,k}, \alpha=1,2;\, k=1,2,\ldots, n\}$  by the corresponding $n$-dimensional complex\break Brownian path $\mathbf{B}=\{B_{1,k}+i\,B_{2,k},k=1,2,\ldots , n\}.$ The map defined by  $t\rightarrow \vert\widetilde{\psi}_t(\mathbf{B})\rangle= \Theta U(t)\, \vert\phi_0\otimes \Omega_0\rangle$ is a non-anticipating $\mathcal{H}_S$-valued Brownian functional in $L^2(\mu, \mathcal{H}_S)$, with $\mu$ denoting the Wiener probability measure of $n$-dimensional complex Brownian motion $\mathbf{B}$. Hereafter, all our discussions will take place in $L^2(\mu, \mathcal{H}_S)$ and we shall omit the symbol `${}_{\sim}$' over vectors as well as operators.  
 
 The functional $\vert\psi_t(\mathbf{B})\rangle$ obeys a {\em linear} classical stochastic differential equation 
 \begin{equation}
@@ -706,7 +707,7 @@ The system density operator
 \rho_t=\mathbb{E}_\mathbf{B}\,[\,\vert\psi_t\rangle\langle \psi_t\vert\,]=\int\, 
 \vert\psi_t(\mathbf{B})\rangle\langle\psi_t(\mathbf{B})\vert\, \mu(d\mathbf{B}), \label{chap8-eq6.7}
 \end{equation}
-obtained after {\em coarse graining} over the Brownian paths,  obeys the  GKSL master equation 
+obtained after {\em coarse graining} over the Brownian paths,  obeys the\break  GKSL master equation 
 \begin{eqnarray}
 \frac{d \rho_t}{dt} =\mathcal{L}(\rho_t)= -i [H,\, \rho_t]- \sum_{k=1}^{n}\left(L^\dag_k\, L_k\, \rho_t + \rho\, L^\dag_k\, L_k - 2\, L_k\, \rho_t\, L^\dag_k\right). \label{chap8-eq6.8}
 \end{eqnarray}
@@ -732,7 +733,7 @@ Define
 		\langle \psi_0\vert\, L_k\,\vert\psi_0\rangle_S, &  {\rm otherwise,}
 		\end{cases}\label{chap8-eq6.11}
 \end{eqnarray}
-for $k=1,2,\ldots , n$.  Then, $\vert  \ell_{k,\,\psi_t} \vert \leq \vert\vert L_k\,\vert\vert$ and hence, $\ell_{k,\, \psi_t}$ is a non-anticipating Brownian functional in  $\mathcal{F}_2$ . Thus,    
+for $k=1,2,\ldots , n$.  Then, $\vert  \ell_{k,\,\psi_t} \vert \leq \vert\vert L_k\,\vert\vert$ and hence, $\ell_{k,\, \psi_t}$ is a\break non-anticipating Brownian functional in  $\mathcal{F}_2$ . Thus,    
 \begin{eqnarray} 
 d\, \langle \psi_t\vert \psi_t\rangle_S= 2\, {\rm Re}\, \left[\sum_{k=1}^{n}\, \ell_{k\, \psi_t} 
 dB_k(t)\right]\, \langle \psi_t\vert \psi_t\rangle_S.  \label{chap8-eq6.12}
@@ -759,7 +760,7 @@ Such a process obeys the following classical stochastic differential equation
 \begin{equation}
 d\alpha(\mathbf{f}\oplus i\mathbf{f})=  \left\{\sum_{k=1}^{n}\,\left[ f_k\, dB_k-\vert\, f_k\,\vert^2 dt\right]\right\}\, \alpha(\mathbf{f}\oplus i\mathbf{f}).\label{chap8-eq6.15}
 \end{equation}
-From \eqref{chap8-eq6.14} and \eqref{chap8-eq6.15} it may be noted that $\alpha(\mathbf{f}\oplus i\mathbf{f})(t,\mathbf{B})$ is a  non-anticipating Brownian functional. We consider a related process 
+From \eqref{chap8-eq6.14} and \eqref{chap8-eq6.15} it may be noted that $\alpha(\mathbf{f}\oplus i\mathbf{f})(t,\mathbf{B})$ is a\break  non-anticipating Brownian functional. We consider a related process 
 $$\left\{\Phi_t(\mathbf{f}) = {\exp}\left[\int_0^t\, 2\,\vert\,\mathbf{f}(s)\,\vert^2 ds\right]\, \alpha(\mathbf{f}\oplus i \mathbf{f})(t,\mathbf{B}), t\geq 0\right\}$$ 
 which satisfies 
 \begin{equation}
@@ -817,7 +818,7 @@ for every finite time interval $[0,t].$
 This is immediate from the Girsanov's theorem~\cite{chap8-key43}. 
 \end{proof}
 \begin{remark}
-Note that the factor $\langle \psi_t\vert \psi_t\rangle_S$ in \eqref{chap8-eq6.23} appearing under Girsanov measure transformation from $\mu(d\mathbf{B})$ to  $\mu_G(d\mathbf{B})$,  is a continuous time analogue of the discrete time martingale sequence $\{Z_n\}$ of Sec. \ref{chap8-sec2}.
+Note that the factor $\langle \psi_t\vert \psi_t\rangle_S$ in \eqref{chap8-eq6.23} appearing under Girsanov measure transformation from $\mu(d\mathbf{B})$ to  $\mu_G(d\mathbf{B})$,  is a continuous time analogue of the discrete time martingale sequence $\{Z_n\}$ of Sec.\ \ref{chap8-sec2}.
 \end{remark} 
 
 It is interesting to note that $\{\vert\Psi_t\rangle, t\geq 0\}$ of \eqref{chap8-eq6.19} is, indeed, an explicit solution of Gisin-Percival state diffusion equation \eqref{chap8-eq6.21}. The system density operator $\rho_t, t\geq 0$ is obtained by coarse-graining over the $\mathcal{H}_S$ state-valued trajectories $\{\vert\Psi_t(\mathbf{B}')\rangle$ i.e.,   
@@ -827,7 +828,7 @@ It is interesting to note that $\{\vert\Psi_t\rangle, t\geq 0\}$ of \eqref{chap8
 		\mu(d\mathbf{B}) \nonumber \\ 
 		&=& \mathbb{E}_{\mathbf{B}}[\vert\psi_t\rangle\langle\psi_t\vert] \label{chap8-eq6.24}
 \end{eqnarray}
-Evidently, the GKSL master equation \eqref{chap8-eq6.8} obeyed by  $\rho_t$ follows as a consequence of this unraveling. In fact, one may realize different forms for state diffusion processes associated with a GKSL master equation \eqref{chap8-eq6.8}, when the opertor parameters $(\mathbf{L}, H)$ are replaced by $(\mathbf{L}', H')$ corresponding to symmetry transformations discussed in Sec. \ref{chap8-sec4}. In other words, a single noisy unitary Schrodinger evolution driven by a quantum stochastic differential equation \eqref{chap8-eq6.2} of the HP type results in various forms of Gisin-Percival state diffusion processes associated with a GKSL generator $\mathcal{L}$ of the one parameter quantum dynamical semigroup  $\{T_t, t\geq 0\}$ describing the irreversible dynamics of the  quantum system.  
+Evidently, the GKSL master equation \eqref{chap8-eq6.8} obeyed by  $\rho_t$ follows as a consequence of this unraveling. In fact, one may realize different forms for state diffusion processes associated with a GKSL master equation \eqref{chap8-eq6.8}, when the opertor parameters $(\mathbf{L}, H)$ are replaced by $(\mathbf{L}', H')$ corresponding to symmetry transformations discussed in Sec.\ \ref{chap8-sec4}. In other words, a single noisy unitary Schrodinger evolution driven by a quantum stochastic differential equation \eqref{chap8-eq6.2} of the HP type results in various forms of Gisin-Percival state diffusion processes associated with a GKSL generator $\mathcal{L}$ of the one parameter quantum dynamical semigroup  $\{T_t, t\geq 0\}$ describing the irreversible dynamics of the  quantum system.  
 
 Starting from  HP unitary evolution, including  conservation noise process in the Boson Fock space, and using a scalar product preserving Hilbert space isomorphism from  $\mathcal{H}_S\otimes\Gamma(L^2(\mathbb{R}_+)$ to a space  of square-integrable functionals of the Poisson process $L^2(N(t),\mathcal{H}_S)$ a non-linear stochastic Schr{\"o}dinger equation driven by Poisson process has been derived recently~\cite{chap8-key45}. This offers Poisson-driven stochastic unraveling of the GKSL master equation.         
 
@@ -899,14 +900,14 @@ Consider the Gisin-Percival state diffusion equation \eqref{chap8-eq7.1} in\brea
 \begin{align}
 		d\, & (\vert\Psi_t\rangle  \langle\, \Psi_t\vert)= \left( d\, \vert\Psi_t\rangle\right)\, \langle\,\Psi_t\vert+ \vert\Psi_t\rangle\, \left(d\langle\, \Psi_t\vert\right) + \left( d\, \vert\Psi_t\rangle\right)\,  \left(d\langle\, \Psi_t\vert\right) \notag\\
 		&= \sum_{k=1}^{n}\,\left[\widetilde{L}_{k,t}\otimes I_{S'}\,\, \vert\Psi_t\rangle\langle\, \Psi_t\vert\, dB^*_{k}\, + \, \vert\Psi_t\rangle\langle \Psi_t\vert\,\,\widetilde{L}^\dag_{k,t}\otimes I_{S'}\,  dB_{k}\,\right]  \notag\\ 
-		&+ \left\{\,  \left[\,\vert\Psi_t\rangle\langle\, \Psi_t\vert, i\, \widetilde{H}_{t}\otimes I_{S'}\, \right]  - \sum_{k=1}^{n}\, \left( \vert\Psi_t\rangle\langle\, \Psi_t\vert\, \widetilde{L}^\dag_{k,t} \widetilde{L}_{k,t}\otimes I_{S'} \right. \right. \notag\\ 
-		&\left. \left. +\widetilde{L}^{\dag}_{k,t} \widetilde{L}_{k,t}\otimes I_{S'}\, \vert\Psi_t\rangle\langle\, \Psi_t\vert - 2\, \widetilde{L}_{k,t}\otimes I_{S'}\, \vert\Psi_t\rangle\langle\, \Psi_t\vert\, \widetilde{L}^\dag_{k,t}\otimes I_{S'}\,\right)\right\}\, dt. \label{chap8-eq7.9}
+		&\quad\; + \left\{\,  \left[\,\vert\Psi_t\rangle\langle\, \Psi_t\vert, i\, \widetilde{H}_{t}\otimes I_{S'}\, \right]  - \sum_{k=1}^{n}\, \left( \vert\Psi_t\rangle\langle\, \Psi_t\vert\, \widetilde{L}^\dag_{k,t} \widetilde{L}_{k,t}\otimes I_{S'} \right. \right. \notag\\ 
+		&\quad\left. \left. {}+\widetilde{L}^{\dag}_{k,t} \widetilde{L}_{k,t}\otimes I_{S'}\, \vert\Psi_t\rangle\langle\, \Psi_t\vert - 2\, \widetilde{L}_{k,t}\otimes I_{S'}\, \vert\Psi_t\rangle\langle\, \Psi_t\vert\, \widetilde{L}^\dag_{k,t}\otimes I_{S'}\,\right)\right\}\, dt. \label{chap8-eq7.9}
 \end{align}
 Taking partial trace  over $S'$ in \eqref{chap8-eq7.9} results in \eqref{chap8-eq7.8}.
 \end{proof}
 
 \begin{remark}
-Since $\widetilde{L}_{k,t}$, $\widetilde{H}_t$ are related to $L_k$, $H$ (see \eqref{chap8-eq7.6} by {\em translation}  via scalar quantities the stochastic differential equation \eqref{chap8-eq7.8} can be rewritten as  (see Sec. \ref{chap8-sec4}  for a discussion on the {\em translational invariance} of the GKSL generator $\mathcal{L}$),
+Since $\widetilde{L}_{k,t}$, $\widetilde{H}_t$ are related to $L_k$, $H$ (see \eqref{chap8-eq7.6} by {\em translation}  via scalar quantities the stochastic differential equation \eqref{chap8-eq7.8} can be rewritten as  (see Sec.\ \ref{chap8-sec4}  for a discussion on the {\em translational invariance} of the GKSL generator $\mathcal{L}$),
 \begin{eqnarray}
 d\rho_t &=& \sum_{k=1}^{n}\,\left( \widetilde{L}_{k,t}\,\, \rho_t\, dB_{k}\, + \, \rho_t\,\widetilde{L}^\dag_{k,t}\, dB^*{k}\,\right) + \mathcal{L}(\rho_t)\, dt \label{chap8-eq7.10}
 \end{eqnarray}
@@ -923,8 +924,8 @@ Based on the Gisin-Percival diffusion equation \eqref{chap8-eq7.8}  we now prese
 The  processes $\{\rho_t^m(\mathbf{B}), t\geq 0\}, m=2,3,\ldots$ satisfy the stochastic differential equations   
 \begin{align} 
 d\, \rho_t^m &= 2\, \sum_{k=1}^{n}\,  {\rm Re}\, \left( \sum_{r=0}^{m-1}\, \rho_t^r\, \widetilde{L}_{k,t}\, \rho^{m-r}_t\ dB_{k}\right)    \nonumber \\
-& +\left\{  \widetilde{\mathcal{L}}(\rho_t^m) + 2\, \sum_{k=1}^n\, \left(\mathop{\sum_{m_1+m_3, m_2\neq 0,}^{}}_{m_1+m_2+m_3=m}\,    \rho_t^{m_1}\, \widetilde{L}_{k,t}\, \rho_t^{m_2}\, \widetilde{L}_{k,t}^\dag\, \rho_t^{m_3} \right. \right. \nonumber \\ 
-&\left.\left.    +   \, \mathop{\sum_{m_1,\, m_2\neq 0}^{}}_{m_1+m_2+m_3=m}\,  \rho_t^{m_1}\, \widetilde{L}^\dag_{k,t}\, \rho_t^{m_2}\, \widetilde{L}_{k,t}\, \rho_t^{m_3}\, \right) \right\} dt  \label{chap8-eq8.1}
+&\quad\; +\left\{  \widetilde{\mathcal{L}}(\rho_t^m) + 2\, \sum_{k=1}^n\, \left(\mathop{\sum_{m_1+m_3, m_2\neq 0,}^{}}_{m_1+m_2+m_3=m}\,    \rho_t^{m_1}\, \widetilde{L}_{k,t}\, \rho_t^{m_2}\, \widetilde{L}_{k,t}^\dag\, \rho_t^{m_3} \right. \right. \nonumber \\ 
+&\quad\left.\left.    +   \, \mathop{\sum_{m_1,\, m_2\neq 0}^{}}_{m_1+m_2+m_3=m}\,  \rho_t^{m_1}\, \widetilde{L}^\dag_{k,t}\, \rho_t^{m_2}\, \widetilde{L}_{k,t}\, \rho_t^{m_3}\, \right) \right\} dt  \label{chap8-eq8.1}
 \end{align}
 where  
 \begin{equation}
@@ -935,10 +936,11 @@ The summation in the second and third lines of \eqref{chap8-eq8.1} involves posi
 
 \begin{proof}
 We derive the stochastic differential equation satisfied by $\rho_t^2(\mathbf{B})$  using \eqref{chap8-eq7.8} and by simple application of It\^o's classical stochastic calculus~\cite{chap8-key38}: 
+\eject
 \begin{align}
 d\, \rho_t^2 & = (d\, \rho_t)\, \rho_t +\, \rho_t\, (d\, \rho_t)+ (d\, \rho_t)^2\nonumber \\ 
 &= 2\, \sum_{k=1}^{n}\,  {\rm Re}\, \left[\left(\widetilde{L}_{k,t}\, \rho^{2}_t + \rho_t\, \widetilde{L}_{k,t}\, \rho_t\,\right)\, d\, B_{k}\, \right] \nonumber \\
-& + \left\{ \widetilde{\mathcal{L}}(\rho_t^2) + 2\, \sum_{k=1}^{n}\,\left(\, \rho_t \widetilde{L}_{k,t}\, \rho_t\, \widetilde{L}^\dag_{k,t} + \,   \widetilde{L}_{k,t}\,\rho_t \widetilde{L}^\dag_{k,t}\, \rho_t  \, \right) \, \right\}\  dt,  \label{chap8-eq8.3} 
+&\quad + \left\{ \widetilde{\mathcal{L}}(\rho_t^2) + 2\, \sum_{k=1}^{n}\,\left(\, \rho_t \widetilde{L}_{k,t}\, \rho_t\, \widetilde{L}^\dag_{k,t} + \,   \widetilde{L}_{k,t}\,\rho_t \widetilde{L}^\dag_{k,t}\, \rho_t  \, \right) \, \right\}\  dt,  \label{chap8-eq8.3} 
 \end{align}
 which is in agreement with \eqref{chap8-eq8.1} for $m=2$. Then, it immediately follows by mathematical induction that if \eqref{chap8-eq8.1} holds for some positive integer $m$, it also holds for $m+1$. 
 \end{proof}
@@ -1000,7 +1002,7 @@ From Corollary 1 it follows that $\{{\rm Tr}\,[\rho_t^m(\mathbf{B})]\}$ is a non
 \begin{coro} %% coro3
 Equations \eqref{chap8-eq8.4} can be expressed in terms of the resolvent~\cite{chap8-key44} $\left(1-x\, \rho_t\right)^{-1}$ of $\rho_t$, where $-1 < x < 1$, as follows: 
 \begin{multline}
-d\, {\rm Tr}\,[\left(1-x\, \rho_t\right)^{-1}]= 2\, \sum_{k=1}^{n}\, {\rm Re}\left(\frac{d}{d\,x}\left\{{\rm Tr}\left[\left(1-x\, \rho_t\right)^{-1}\, \rho_t\, L_{k,t}\right]\, d\, B_{k}\right\}\right) \\ 
+d\, {\rm Tr}\,\left[\left(1-x\, \rho_t\right)^{-1}\right]= 2\, \sum_{k=1}^{n}\, {\rm Re}\left(\frac{d}{d\,x}\left\{{\rm Tr}\left[\left(1-x\, \rho_t\right)^{-1}\, \rho_t\, L_{k,t}\right]\, d\, B_{k}\right\}\right) \\ 
 +2\, \sum_{k=1}^{n}\, \frac{d}{d\,x}\left\{{\rm Tr}\left[ \rho_t\, L_{k,t}\left(1-x\, \rho_t\right)^{-1}\, L_{k,t}^\dag\, \left(1-x\, \rho_t\right)^{-1}  \right]\, \right\}\, dt. \label{chap8-eq8.9}
 \end{multline}
 \end{coro}
@@ -1023,7 +1025,7 @@ This is immediate from Corollary 2, Theorem \ref{chap8-thm4}.
 Corollary 4 implies that, when $S$ is a finite level quantum system, the Gisin-Percival state diffusion trajectory for any mixed initial state $\rho_0$ in $\mathcal{H}_S$ has an asymptotically stable spectrum  almost surely. 
 \end{remark}
 
-In Sec. \ref{chap8-sec9} we prove the almost sure convergence of the spectrum for countably infinite level systems using a probabilistic approach. However, in the infinite dimensional case, the sum of the limits of all eigenvalues ${\displaystyle\sum_{\alpha}}\ \ \left(\underset{t\rightarrow\infty}{\lim}\,  p_{\alpha,t}\right)$ can be strictly less than unity with a positive probability. In other words, the trajectory of the state diffusion in the infinite dimensional case can get knocked out of the set of  those described by  density operators. 
+In Sec.\ \ref{chap8-sec9} we prove the almost sure convergence of the spectrum for countably infinite level systems using a probabilistic approach. However, in the infinite dimensional case, the sum of the limits of all eigenvalues ${\displaystyle\sum_{\alpha}}\ \ \left(\underset{t\rightarrow\infty}{\lim}\,  p_{\alpha,t}\right)$ can be strictly less than unity with a positive probability. In other words, the trajectory of the state diffusion in the infinite dimensional case can get knocked out of the set of  those described by  density operators. 
 
 \section{Convergence of the spectrum for countably infinite level systems}\label{chap8-sec9}
 
