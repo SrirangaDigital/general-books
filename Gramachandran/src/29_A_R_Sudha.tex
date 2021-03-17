@@ -51,7 +51,7 @@ denote the spinors constituting the symmetric state $\vert \Psi^{(N)}_{\rm sym}\
  \epsilon_3, \epsilon_1\rangle +\vert \epsilon_2,\epsilon_1,\epsilon_3\rangle\right.\\
 &\quad\left. + \vert \epsilon_3,\epsilon_2,\epsilon_1\rangle+ \vert \epsilon_1, \epsilon_3, \epsilon_2\rangle \right).
 \end{align*}
-Eq. \eqref{Maj} corresponds to the {\em Majorana geometric representation} of an arbitrary symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$ of $N$ qubits in terms of the constituent spinors $\vert \epsilon_l \rangle,\  l=1,2,\ldots N$. These spinors (qubits) correspond geometrically to $N$ points on the  Bloch sphere $S^2$ \cite{makela,jpa4,markham1,markham2,gebastin, markham3} -- with the pair of angles $(\alpha_l,\beta_l)$ determining the orientation of each point on $S^2$.
+Eq.\ \eqref{Maj} corresponds to the {\em Majorana geometric representation} of an arbitrary symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$ of $N$ qubits in terms of the constituent spinors $\vert \epsilon_l \rangle,\  l=1,2,\ldots N$. These spinors (qubits) correspond geometrically to $N$ points on the  Bloch sphere $S^2$ \cite{makela,jpa4,markham1,markham2,gebastin, markham3} -- with the pair of angles $(\alpha_l,\beta_l)$ determining the orientation of each point on $S^2$.
 
 On the other hand, states of $N$-qubits obeying exchange symmetry get restricted to a $(N+1)$ dimensional Hilbert space spanned by the collective basis vectors $\left\{\left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle, l=0,1,2,\ldots N \right\}$ where,
 \begin{equation}
@@ -191,6 +191,7 @@ z_{1}=0,z_2^{-1}=z_3^{-1}=0,\\   \beta_{1}=0, \beta_{2,3}=\pi \\ \alpha_{1,2,3}=
  & $\begin{array}{@{\,}l@{\,}}\frac{1}{\sqrt{3}}\, [\vert 0,1,1\rangle+\vert 1,1,0\rangle\\ +\vert 1,0,1\rangle]\end{array}$\\
  \hline        
 \end{longtable}}
+\bigskip
 
 \section{SLOCC classification of multiqubit symmetric states}\label{classification}
 
@@ -354,7 +355,7 @@ Thus, the state $\vert \Omega\rangle$ can be expressed explicitly as,
 &\quad +b\vert e_{11}\rangle]+ b\,  \vert 0_1,1_2,0_3\rangle\,\vert e_{00}\rangle  \ +b\,  \vert 0_1,1_2,1_3\rangle\,\vert e_{01}\rangle\nonumber \\ 
 &\quad + b\,  \vert 1_1,0_2,0_3\rangle\,\vert e_{00}\rangle + b\,  \vert 1_1,0_2,1_3\rangle\,\vert e_{01}\rangle\label{omega}
 \end{align}
-Demanding that the reduced system $\hat{\rho}_{13}$ of $\vert D_{2,1}'\rangle$  too is shared by $\vert \Omega\rangle$ imposes further restrictions. In order to determine these constraints, we first consider the matrix element $\langle 1_1,1_3\vert\hat{\rho}_{13}\vert 1_1,1_3\rangle$, evaluated from both $\vert\Omega\rangle$ (see \eqref{omega}) and $\vert D_{2,1}'\rangle$  (see \eqref{Wfin}): We get $\langle 1_1,1_3\vert{\rm Tr}_{2,E}\, [\vert\Omega\rangle\langle\Omega\vert]\, \vert 1_1,1_3\rangle=\vert b\vert ^2\, \langle e_{01}\vert e_{01}\rangle$. But  from \eqref{Wfin} we obtain  the value zero for this matrix element. Hence, $\vert e_{01}\rangle\equiv 0$. Futher, from the orthonormality relations \eqref{wp3} we obtain $\langle e_{00}\vert e_{00}\rangle=1$, and $\langle e_{00}\vert e_{10}\rangle=0$. 
+Demanding that the reduced system $\hat{\rho}_{13}$ of $\vert D_{2,1}'\rangle$  too is shared by $\vert \Omega\rangle$ imposes further restrictions. In order to determine these constraints, we first consider the matrix element $\langle 1_1,1_3\vert\hat{\rho}_{13}\vert 1_1,1_3\rangle$, evaluated from both $\vert\Omega\rangle$ (see \eqref{omega}) and $\vert D_{2,1}'\rangle$  (see \eqref{Wfin}): We get $\langle 1_1,1_3\vert{\rm Tr}_{2,E}\, [\vert\Omega\rangle\langle\Omega\vert]\,\break \vert 1_1, 1_3\rangle=\vert b\vert ^2\, \langle e_{01}\vert e_{01}\rangle$. But  from \eqref{Wfin} we obtain  the value zero for this matrix element. Hence, $\vert e_{01}\rangle\equiv 0$. Futher, from the orthonormality relations \eqref{wp3} we obtain $\langle e_{00}\vert e_{00}\rangle=1$, and $\langle e_{00}\vert e_{10}\rangle=0$. 
 
 Similarly, we get $\langle 0_1,1_3\vert{\rm Tr}_{2,E}\, [\vert\Omega\rangle\langle\Omega\vert]\, \vert 1_1,0_3\rangle=\vert b\vert^2\, \langle e_{11}\vert e_{00}\rangle$,\break  whereas  \eqref{Wfin} leads to the value $\vert b\vert^2$, implying that $\vert e_{11}\rangle\equiv \vert e_{00}\rangle$. 
  

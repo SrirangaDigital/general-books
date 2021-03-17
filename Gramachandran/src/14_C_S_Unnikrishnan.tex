@@ -93,7 +93,7 @@ by de Broglie, with the familiar differential equation for waves,
 \nabla^2 \psi (x,t) - \frac{\partial^2 \psi (x,t)}{u^2 \partial t^2} = 0 \tag{2}\label{c14-eq2}
 \end{equation*}
 where the velocity $u = E/ [2m(E - V )]^{1/2}$. With the time dependence of the $\psi$-function
-that obeys the relation $E = h\nu$ limited to $\psi(t) \infty \exp \pm i2\pi \nu t$, one gets $\ddot{\psi} (t) = -4 \pi^2 E^2 \psi /h^2$.
+that obeys the relation $E = h\nu$ limited to $\psi(t) \infty \exp\break \pm i2\pi \nu t$, one gets $\ddot{\psi} (t) = -4 \pi^2 E^2 \psi /h^2$.
 The resulting equation with the Coulomb potential in the Hydrogen atom $V (r) = e^2 /r$,
 \begin{equation*}
 \nabla^2 \psi + \frac{8 \pi^2 m}{h^2} (E + e^2 / r) \psi = 0 \tag{3}\label{c14-eq3}
@@ -193,9 +193,9 @@ but its justification for the ensemble of single particle dynamics comes from an
 to be explained later.
 
 But
-\begin{equation*}
+{\fontsize{9}{9}\selectfont\begin{equation*}
 \frac{\partial A}{\partial t} = \frac{\partial \psi e^{-i \phi}}{\partial t} = e^{-i \phi} \frac{\partial \psi}{\partial t} -  i \psi e^{-i \phi} \frac{\partial \phi}{\partial t}  \tag{12}\label{c14-eq12}
-\end{equation*}
+\end{equation*}}
 Therefore, the time evolution equation for either $A$ or $\psi$, both representing the probability
 density, also contains the time derivative of the dummy phase $\phi$. However, irrespective
 of this fact, $\psi$ here is the (complex) square root of the ensemble probability density and
@@ -204,9 +204,10 @@ particle is only in the sense of a probability density (the physical quantities 
 the particle are associated with this probability density). Anticipating the result that this
 $\psi (x, t) = Ae^{i \phi}$ is indeed the wavefunction of the Schr\"{o}dinger equation, we establish the first
 rigorous relation on our journey, straight from the definition.
-\begin{equation*}
+
+{\fontsize{9}{9}\selectfont\begin{equation*}
 \psi (x, t) \psi (x, t)^{\ast} = \rho(x, t) \tag{13}\label{c14-eq13}
-\end{equation*}
+\end{equation*}}
 So, Born's rule connecting the wavefunction and the probability density is exact. It does
 not depend on what the dummy phase physically is.
 
@@ -215,19 +216,20 @@ continuity equation for the probability density, when the system is a dynamical 
 when the ensemble obeys the equation of dynamics. I emphasize that the function $\psi(x, t)$
 does not represent a single particle or single dynamical history. Note than $A$ and $\psi$ are
 dimensionless, as $\rho$ is. Writing $\phi = S/\varepsilon$,
-{\fontsize{9}{9}\selectfont\begin{align*}
+
+{\fontsize{8}{9}\selectfont\begin{align*}
 \frac{\partial \psi}{\partial t} & = e^{i S/\varepsilon} \frac{\partial A}{\partial t} + \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} \\
 \frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} & = e^{i S  / \varepsilon} \left(- \frac{A}{2} \nabla \cdot \upsilon - \nabla A \cdot \upsilon + D \nabla^2 A \right) \tag{14}\label{c14-eq14}
 \end{align*}}
 
 The spatial derivatives of $\psi$ are
-{\fontsize{9}{9}\selectfont\begin{align*}
+{\fontsize{8}{9}\selectfont\begin{align*}
 \nabla \psi & = \frac{i}{\varepsilon} Ae^{iS/\varepsilon} \nabla S + e^{iS/\varepsilon} \nabla A\\
 \nabla^2 \psi & = \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} \nabla^2 S + \frac{i}{\varepsilon} \frac{i}{\varepsilon} Ae^{iS/ \varepsilon} (\nabla S)^2 + \frac{i}{\varepsilon} e^{eS/\varepsilon} \nabla S \cdot \nabla A + e^{i S /\varepsilon} \nabla^2 A\\ 
 &\qquad\qquad\qquad\qquad\qquad\qquad+ \frac{i}{\varepsilon} e^{iS/\varepsilon } \nabla S \cdot \nabla A \\
 & = \frac{i}{\varepsilon} Ae^{is/\varepsilon} \nabla^2 S + \frac{2i}{\varepsilon} e^{iS/\varepsilon} \nabla S \cdot \nabla A + e^{i S/\varepsilon} \nabla^2 A - \frac{1}{\varepsilon^2} A e^{iS/\varepsilon} (\nabla S)^2 \tag{15}\label{c14-eq15}
 \end{align*}}
-
+\eject
 Now, multiplying by $i\varepsilon /2m$ gives
 \begin{equation*}
 \frac{i\varepsilon}{2m} \nabla^2 \psi + \frac{i}{\varepsilon} A e^{iS/\varepsilon} \frac{(\nabla S)^2}{2m} = e^{iS/\varepsilon} \left(\frac{-A}{2m} \nabla^2 S - \frac{1}{m} \nabla A \cdot \nabla S + \frac{i\varepsilon}{2m} \nabla^2 A \right) \tag{16}\label{c14-eq16}
@@ -555,7 +557,7 @@ or the particle and the apparatus) can be spatially separated, at two different 
 an interaction. The hard open problem of spatial nonlocality is in fact the most discussed
 foundational issue, ever since the publication of the Einstein-Podolsky-Rosen (EPR) paper
 \cite{chap14-key9}. We take up the quantum interference phenomena of two-particle states in QM next.
-
+\newpage
 
 \section{The Two-Particle Correlation}\label{c14-sec7}
 
@@ -568,7 +570,7 @@ is convenient. The spin-singlet state is
 \end{equation*}
 
 As we just discussed, this ensemble description corresponds to two classes of joint states
-happening randomly, with equal probability, $|u \rangle_1 |d \rangle_2$ and $|d \rangle_1 |u \rangle_2$. These are the factual
+happening randomly, with equal probability,\break $|u \rangle_1 |d \rangle_2$ and $|d \rangle_1 |u \rangle_2$. These are the factual
 states, and exactly one of them represents each occurrence of a dynamical history. As far
 as the particle states are concerned, there is no superposition. In fact, that is why there
 is no quantum measurement problem. However, the action waves corresponding to the two
@@ -576,6 +578,8 @@ distinct joint states can of course superpose and interfere, resepecting strictl
 action wave at one location cannot interfere with an action wave at another location. Hence,
 strict locality is obeyed by the action waves as well as the particles. Do I get the two-particle
 correlation correctly?
+\medskip
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{src/images/chap27/3.jpg}
@@ -585,6 +589,7 @@ reflects in the action $S_{1a}, ~S_{2b}$ etc. The particle dynamics is definite 
 each pairwise event. The property of entanglement is an apparition created due to misinterpreting
 the ensemble entity $\psi$ as a representation of single quantum history.}\label{ch14-fig3}
 \end{figure}
+\bigskip
 
 I am aware how unbelievable it would be to most if the two-particle correlations emerged
 correctly from strictly local interference phenomena in mechanics. This is because there is a
@@ -718,7 +723,7 @@ particle states. The pair of particles is in definite correlated states in each 
 the action waves corresponding to the multiple possibilities are in correlated superpositions.
 
 Finally, I took up the hard problem of two-particle interference and correlations. A simple
-calculation then demonstrated that the two-particle correlations are correctly reproduced by
+calculation then demonstrated that the\break two-particle correlations are correctly reproduced by
 the strictly local interference of the action waves. Thus, there is no alleged nonlocality in
 the correlations of the `entangled' states.
 
@@ -761,17 +766,18 @@ measurements of a single quantum spin is faulty and fails miserably, discreditin
 LHVT enterprise. b) the LHVT considered by Bell and tested as a viable theory by many
 are in fact unphysical theories because they grossly violate fundamental conservation laws
 \cite{chap14-key14}, \cite{chap14-key15}!
+\bigskip
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{src/images/chap27/4.jpg}
+\includegraphics[scale=0.65]{src/images/chap27/4.jpg}
 \caption{The measurement of a spin component after a Stern-Gerlach interferometer. The input spin
 is polarized along $+x$. In the hidden variable scheme, each particle, with all its spin components,
 is either in the upper path or in the lower path, with equal probability. Therefore, the spin rotator
 $B_r$ affects only half the particles. In contrast, the phase factor in the lower path affects all the
 particles according to QM. Bell's hidden variable scheme fails here.}\label{ch14-fig4}
 \end{figure}
-
+\bigskip
 
 
 In an argument countering J. von Neumann's proof that the hidden variable theories can-
@@ -914,5 +920,5 @@ calculational details that he would have appreciated, I believe.
 \bigskip
 
 \noindent
-\textbf{C. S. Unnikrishnan} is a Professor at the Tata Institute of Fundamental Research, Mumbai. His research interests are experimental and theoretical studies of foundational aspects of gravity and quantum mechanics. Apart from conducting precision measurements using torsion balances to study gravitation and feeble forces, he was involved in the Bose-Einstein condensation of metastable Helium (…cole Normale Sup\`Erieure, Paris), and led the \"{O}rst BEC experiment in India, at TIFR. Major theoretical contributions are the completion of Hamiltonís action mechanics, clarifying Schr\"{o}dinger quantum mechanics, and a new theory of relativity based on the gravity of the matter in the universe, called Cosmic Relativity. He is a proposer-member of the LIGO-India project for an advanced LIGO detector in India and a member of the global LIGO Scientific Collaboration.
+\textbf{C. S. Unnikrishnan} is a Professor at the Tata Institute of Fundamental Research, Mumbai. His research interests are experimental and theoretical studies of foundational aspects of gravity and quantum mechanics. Apart from conducting precision measurements using torsion balances to study gravitation and feeble forces, he was involved in the Bose-Einstein condensation of metastable Helium (…cole Normale\break Sup\`Erieure, Paris), and led the \"{O}rst BEC experiment in India, at TIFR. Major theoretical contributions are the completion of Hamiltonís action mechanics, clarifying Schr\"{o}dinger quantum mechanics, and a new theory of relativity based on the gravity of the matter in the universe, called Cosmic Relativity. He is a proposer-member of the LIGO-India project for an advanced LIGO detector in India and a member of the global LIGO Scientific Collaboration.
 
