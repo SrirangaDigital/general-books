@@ -43,7 +43,7 @@ Before presenting the derivational details, the notion of metric in the paramete
 
 \section{Metric in the parameter space $B^n$}\label{chap11-sec2}
 
-In adapting the formalism developed in \cite{chap11-key6} to calculate Berry phase, the appropriate product manifold is $R^1  \times B^n$ where $R^1$ represents $t$ and $B^n$ is the space of $n$ parameters. The parameters are taken to be  slowly varying with time $t$ and {\it{the very act of treating $R^1$ and $B^n$ as disjoint, implements the  adiabatic approximation}}. Now we introduce a metric (classical) $g_{ij}(R)$ for $B^n$. The parameter space has  the property here $R^i(0)=R^i(T); i=1,2,\cdots n$, so that the Hamiltonian $H(R^i(t))$ returns to its initial value  after $T$ seconds. With $R^i(0)=R^i(T)$, the coordinates in the parameter space form non-Euclidean space and hence  an associated metric $g_{ij}(R)$. This is the usual classical metric in a non-Euclidean space. The specific form  of this metric is not needed here, as will be seen later.  Next, in the formalism in \cite{chap11-key6}, the parallel displacement of the momentum vector played crucial role.  
+In adapting the formalism developed in \cite{chap11-key6} to calculate Berry phase, the appropriate product manifold is $R^1  \times B^n$ where $R^1$ represents $t$ and $B^n$ is the space of $n$ parameters. The parameters are taken to be  slowly varying with time $t$ and {\it{the very act of treating $R^1$ and $B^n$ as disjoint, implements the  adiabatic approximation}}. Now we introduce a metric (classical) $g_{ij}(R)$ for $B^n$. The parameter space has  the property here $R^i(0)=R^i(T); i=1,2,\ldots n$, so that the Hamiltonian $H(R^i(t))$ returns to its initial value  after $T$ seconds. With $R^i(0)=R^i(T)$, the coordinates in the parameter space form non-Euclidean space and hence  an associated metric $g_{ij}(R)$. This is the usual classical metric in a non-Euclidean space. The specific form  of this metric is not needed here, as will be seen later.  Next, in the formalism in \cite{chap11-key6}, the parallel displacement of the momentum vector played crucial role.  
  
 We are using the notion of parallel transport of the momentum vector in the following manner. The change in the  momentum vector $p_i$ along a curve, is given by 
 \setcounter{equation}{3}
@@ -85,18 +85,18 @@ In obtaining \eqref{chap11-eq7}, we have considered the total space as $R^1\time
 \end{equation}
 where the 'warp factors' $h^{(r)}(t)$ are taken to be slowly varying with time $t$. The above choice still describes the  non-Euclidean geometry of $B^n$ space since the sum or weighted sum of metrics is also a metric. The real function $h^{(r)}(t)$  is arbitrary at this stage and will be chosen later. The non-vanishing connection coefficients for the above warped product  space, denoted by $\bigtriangleup$, are given by 
 \begin{align}
-{\bigtriangleup}^{(r) t}_{ij}= &-\frac{1}{2}\ e^{h^{(r)}(t)}\ \frac{dh^{(r)}(t)}{dt}\ g_{ij}^{(r)}, \nonumber \\
-{\bigtriangleup}^{(r) i}_{tj}= &\frac{1}{2}\ \frac{dh^{(r)}(t)}{dt}\ {\delta}^i_j, \nonumber \\
-{\bigtriangleup}^{(r) i}_{j\ell}= &{\Gamma}^{(r) i}_{j\ell},\label{chap11-eq10}
+{\bigtriangleup}^{(r) t}_{ij}&= -\frac{1}{2}\ e^{h^{(r)}(t)}\ \frac{dh^{(r)}(t)}{dt}\ g_{ij}^{(r)}, \nonumber \\
+{\bigtriangleup}^{(r) i}_{tj}&= \frac{1}{2}\ \frac{dh^{(r)}(t)}{dt}\ {\delta}^i_j, \nonumber \\
+{\bigtriangleup}^{(r) i}_{j\ell}&= {\Gamma}^{(r) i}_{j\ell},\label{chap11-eq10}
 \end{align}
 where ${\Gamma}^{(r) i}_{j\ell}=\frac{1}{2}g^{(r)\ell m}\ \{{\partial}_jg^{(r)}_{\ell m}+{\partial}_{\ell}g^{(r)}_{jm} 
 -{\partial}_mg^{(r)}_{j\ell}\}$, the connections for $g_{ij}^{(r)}$. 
 
 The 'momentum' of the particle under consideration in this warped product space is 
 \begin{align}
-p_A= &mg_{AB}\ \frac{dz^B}{ds}\ ;\ z^A\ =\ (t,y^i), \nonumber \\
-p_t= &m\ \frac{dt}{ds}, \nonumber \\
-p_i= &m\sum_{r=0}^k\ e^{h^{(r)}(t)}g_{ij}^{(r)}\frac{dy^j}{ds}=\sum_{r=0}^k p_i^{(r)}; p_i^{(r)}=me^{h^{(r)}(t)}
+p_A &= mg_{AB}\ \frac{dz^B}{ds}\ ;\ z^A\ =\ (t,y^i), \nonumber \\
+p_t &= m\ \frac{dt}{ds}, \nonumber \\
+p_i &= m\sum_{r=0}^k\ e^{h^{(r)}(t)}g_{ij}^{(r)}\frac{dy^j}{ds}=\sum_{r=0}^k p_i^{(r)}; p_i^{(r)}=me^{h^{(r)}(t)}
 g_{ij}^{(r)}\frac{dy^j}{ds}.\label{chap11-eq11}
 \end{align}
 
@@ -131,7 +131,7 @@ h^{(r)}(t)= \frac{2}{m}\int^t E_r(n,t') dt'.\label{chap11-eq15}
 \end{equation}
 For the $k$th instantaneous energy state, the sum over $r$ in \eqref{chap11-eq14} picks out the $k$th energy eigenvalue by  introducing ${\delta}_{rk}$, so that following \cite{chap11-key2}, we find 
 \begin{equation}
--\oint dt \int_0^s {\bigtriangleup}^B_{tC}p_B\ dz^C\simeq -\int_0^T\ E_k(n,\frac{s}{T}) ds. \label{chap11-eq16}
+-\oint dt \int_0^s {\bigtriangleup}^B_{tC}p_B\ dz^C\simeq -\int_0^T\ E_k\left(n,\frac{s}{T}\right) ds. \label{chap11-eq16}
 \end{equation}
 Here the correspondence with the instantaneous energy in the $k$th iterated Hamiltonian used by Berry \cite{chap11-key5} is made. However, they are not the same as we do not use explicitly a Hamiltonian here.
 

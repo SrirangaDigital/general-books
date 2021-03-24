@@ -12,14 +12,17 @@
 \renewcommand{\headrulewidth}{0pt}
 \cfoot[]{}
 
+\lhead[\small\thepage]{\small Foreword}
 \input src/1_P_Venkataramaiah.tex
+\clearpage
 
+\lhead[\small\thepage]{\small Contents}
 \tableofcontents
 \mainmatter
 
 
 
-
+\lhead[\small\thepage]{\small\leftmark}
 \input src/2_G_Ramachandran.tex
 \counterwithout{equation}{chapter}
 \input src/3_V_Devanathan.tex

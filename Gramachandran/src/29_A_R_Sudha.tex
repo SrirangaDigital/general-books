@@ -32,7 +32,7 @@ Determining if higher order correlations follow entirely from lower order ones i
 
 In his 1932 paper \cite{majorana} Majorana proposed that a pure spin $j=\frac{N}{2}$ quantum state can essentially be represented as a {\em symmetrized} combination of $N$ constituent spinors as follows:  
 \begin{equation}
-\vert \Psi^{(N)}_{\rm sym}\rangle={\cal N}_N\, \sum_{P}\, \hat{P}\, \{\vert \epsilon_1, \epsilon_2, \ldots  \epsilon_N \rangle\}, \label{Maj}
+\vert \Psi^{(N)}_{\rm sym}\rangle={\cal N}_N\, \sum_{P}\, \hat{P}\, \Bigl\{\vert \epsilon_1, \epsilon_2, \ldots  \epsilon_N \rangle\Bigr\}, \label{Maj}
 \end{equation} 
 
 \vskip -.5cm
@@ -49,14 +49,14 @@ denote the spinors constituting the symmetric state $\vert \Psi^{(N)}_{\rm sym}\
 \vert \Psi^{(3)}_{\rm sym}\rangle &={\cal N}_3\,\left(  \vert \epsilon_1,
  \epsilon_2, \epsilon_3\rangle+  \vert \epsilon_3,\epsilon_1, \epsilon_2\rangle  + \vert \epsilon_2, 
  \epsilon_3, \epsilon_1\rangle +\vert \epsilon_2,\epsilon_1,\epsilon_3\rangle\right.\\
-&\quad\left. + \vert \epsilon_3,\epsilon_2,\epsilon_1\rangle+ \vert \epsilon_1, \epsilon_3, \epsilon_2\rangle \right).
+&\quad\left. {}+ \vert \epsilon_3,\epsilon_2,\epsilon_1\rangle+ \vert \epsilon_1, \epsilon_3, \epsilon_2\rangle \right).
 \end{align*}
 Eq.\ \eqref{Maj} corresponds to the {\em Majorana geometric representation} of an arbitrary symmetric state $\vert \Psi^{(N)}_{\rm sym}\rangle$ of $N$ qubits in terms of the constituent spinors $\vert \epsilon_l \rangle,\  l=1,2,\ldots N$. These spinors (qubits) correspond geometrically to $N$ points on the  Bloch sphere $S^2$ \cite{makela,jpa4,markham1,markham2,gebastin, markham3} -- with the pair of angles $(\alpha_l,\beta_l)$ determining the orientation of each point on $S^2$.
 
 On the other hand, states of $N$-qubits obeying exchange symmetry get restricted to a $(N+1)$ dimensional Hilbert space spanned by the collective basis vectors $\left\{\left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle, l=0,1,2,\ldots N \right\}$ where,
 \begin{equation}
-\left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle =\frac{1}{\sqrt{^N C_l}}\,[\vert \underbrace{0, 0, \ldots}_{l}, 
-\underbrace{1, 1, \ldots}_{N-l}\rangle +\ {\rm Permutations}\ ] \label{Dicke} 
+\left\vert \frac{N}{2}, l-\frac{N}{2}\right\rangle =\frac{1}{\sqrt{^N C_l}}\,\left[\vert \underbrace{0, 0, \ldots}_{l}, 
+\underbrace{1, 1, \ldots}_{N-l}\rangle +\ {\rm Permutations}\ \right] \label{Dicke} 
 \end{equation}
 are the $N+1$ Dicke  states -- expressed in the standard qubit basis $\vert 0\rangle,\ \vert 1\rangle$ and $^N C_l=\frac{N!}{l!\,(N-l)!}$ denotes the binomial coefficient. An arbitrary pure symmetric state of $N$ qubits obeying exchange symmetry may thus be expressed as,    
 \begin{equation}
@@ -130,6 +130,7 @@ We list some examples of   symmetric states of two and three qubits and the corr
 \counterwithout{table}{chapter}
 {\tabcolsep=0pt
 \setcounter{table}{0}
+\renewcommand{\arraystretch}{1.2}
 \scriptsize\begin{longtable}{@{}|c@{\hspace{-.2cm}}c|@{\,}c@{\,}|@{\,}c@{\,}|@{\;}c@{\,}|@{}}
 \caption{Majorana spinors for some two and three-qubit symmetric states}\label{chap29-tab1}\\
 \hline
@@ -191,7 +192,6 @@ z_{1}=0,z_2^{-1}=z_3^{-1}=0,\\   \beta_{1}=0, \beta_{2,3}=\pi \\ \alpha_{1,2,3}=
  & $\begin{array}{@{\,}l@{\,}}\frac{1}{\sqrt{3}}\, [\vert 0,1,1\rangle+\vert 1,1,0\rangle\\ +\vert 1,0,1\rangle]\end{array}$\\
  \hline        
 \end{longtable}}
-\bigskip
 
 \section{SLOCC classification of multiqubit symmetric states}\label{classification}
 
@@ -199,7 +199,7 @@ Multiparticle entanglement  can be of different kinds \cite{Dur}. Two multiparty
 
 As we have noted in Sec.~II,  the roots of the Majorana polynomial (\ref{Mp}) (and (\ref{Mp2})) could be degenerate  and hence not all the  $N$ constituent spinors of a pure symmetric $N$ qubit state are distinct. Let $\vert \epsilon_1\rangle, \vert \epsilon_2\rangle,\ldots, \vert \epsilon_d\rangle,\ d\leq N$ be the number of distinct spinors, in a $N$ qubit pure symmetric state (\ref{Maj}).  Then, the list of numbers 
 $$
-\left\{n_1,\,n_2,\ldots ,n_d;\ \ n_1\geq n_2\geq\cdots \geq n_d; \ \  n_1+n_2+\cdots+n_d=N\right\}
+\Bigl\{n_1,\,n_2,\ldots ,n_d;\ \ n_1\geq n_2\geq\cdots \geq n_d; \ \  n_1+n_2+\cdots+n_d=N\Bigr\}
 $$ 
 corresponds respectively to the number of times the independent spinors $\vert\epsilon_i\rangle$, ($i=1,2,\ldots d\leq N$) appear in the symmetric state (\ref{Maj}) under consideration. The number $d\leq N$, called the {\em diversity degree} and the list of numbers $\left\{n_1,\,n_2,\ldots ,n_d;\  n_1\geq n_2\geq \cdots n_d,\  \sum_{i=1}^{d} n_i=N\right\}$, called the {\em degeneracy configuration}, form the key elements in the classification of  pure symmetric states \cite{solano}. The different classes  (based on the number of distinct spinors and their arrangement in a given $N$-qubit symmetric state)  are denoted by $\{{\cal D}_{n_1,n_2,\ldots n_d}\}$. An identical ILO $A^{\otimes N}$ transforms a symmetric state belonging to the class $\{ {\cal D}_{n_1,\,n_2,\ldots, n_d}\}$ to another state of the {\em same} class. More explicitly, we have 
 \begin{equation}
@@ -217,7 +217,7 @@ where the diversity degree  $d=1$; the states belonging to this family of separa
 
 \item $\{{\cal D}_{n_1,n_2};\ n_1=N-k,\ n_2=k=1,2,\ldots, [N/2]\}$: The  states with two distinct spinors have the form, 
 \begin{equation}
-\vert D_{N-k,k}\rangle={\cal N}\,[\vert \underbrace{\epsilon_1, \epsilon_1,\ldots \epsilon_1}_{N-k}, \underbrace{\epsilon_2, \epsilon_2,\ldots \epsilon_2}_{k}\rangle+{\rm  Permutations}]\label{n1n2}
+\vert D_{N-k,k}\rangle={\cal N}\,\left[\vert \underbrace{\epsilon_1, \epsilon_1,\ldots \epsilon_1}_{N-k}, \underbrace{\epsilon_2, \epsilon_2,\ldots \epsilon_2}_{k}\rangle+{\rm  Permutations}\right]\label{n1n2}
 \end{equation} 
 where $k=1,2, \ldots [N/2]$.  
 
