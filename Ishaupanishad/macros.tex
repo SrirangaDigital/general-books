@@ -208,5 +208,6 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 
 \makeatother
 
-\def\moolashloka{\smallbreak\ignorespaces\begin{sanskrit}\large\bf\centering}
+\def\moolashloka{\smallbreak\ignorespaces\begin{sanskrit}\leftskip=50pt\large\bf}
 \def\endmoolashloka{\par\end{sanskrit}\smallskip}
+\newenvironment{shloka}{\smallbreak\bgroup\leftskip=50pt\bf\noindent\ignorespaces}{\par\egroup}
