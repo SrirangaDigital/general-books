@@ -8,7 +8,7 @@
 \usepackage{rotating}
 \usepackage{float}
 \usepackage{longtable}
-\usepackage{url}
+\usepackage{xurl}
 
 \floatstyle{plain}
 \floatplacement{Figure}{H}
@@ -51,7 +51,7 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
 \def\gplus#1{{\gentiumplus #1}}
-\def\dev#1{{\devanagarifont\textsanskrit{#1}}}
+\def\dev#1{{\fontsize{13pt}{15pt}\devanagarifont\selectfont\textsanskrit{#1}}}
 \def\devnag#1{{\dev{#1}}}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
 
@@ -208,6 +208,6 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 
 \makeatother
 
-\def\moolashloka{\smallbreak\ignorespaces\begin{sanskrit}\leftskip=50pt\large\bf}
+\def\moolashloka{\smallbreak\ignorespaces\begin{sanskrit}\leftskip=20pt\large\bf}
 \def\endmoolashloka{\par\end{sanskrit}\smallskip}
 \newenvironment{shloka}{\smallbreak\bgroup\leftskip=50pt\bf\noindent\ignorespaces}{\par\egroup}
