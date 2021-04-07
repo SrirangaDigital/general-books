@@ -1,0 +1,108 @@
+\chapter{GALA: A Gamified Approach to Learning Algorithms}
+
+%~ \centerline{{\LARGE\sl Exploring Basics of Algorithmic Approach}}
+\vskip -12pt
+
+\centerline{{\LARGE Exploring Basics of Algorithmic Approach}}
+
+\vskip 0.8cm
+
+\begin{center}
+{\large\uppercase{$\text{Ram P. Rustagi}$}} 
+
+\vskip -6pt
+
+Department of CSE, KSIT Bengaluru
+
+\end{center}
+
+\vskip 1cm
+
+\begin{center}
+{\large\uppercase{$\text{Viraj Kumar}$}} 
+
+\vskip -6pt
+
+Divecha Centre for Climate Change, IISc Bengaluru
+
+\end{center}
+
+
+
+\vfill
+
+
+
+
+\newpage
+
+\begin{multicols}{2}
+
+\section*{Abstract}
+
+In a typical Computer Science undergraduate programme, students take a two-course sequence in \textit{Data Structures and Algorithms} (DSA). These courses build on an introductory programming course which usually offers only a light introduction to these topics (e.g., the \textit{list} data structure implemented as an array, and simple algorithms such as \textit{linear search} and \textit{Bubble Sort}). Hence, the two-course DSA sequence is critical to help students to develop the skills necessary to create efficient algorithmic solutions to real-world problems. These skills are highly valued in industry, and the technical rounds in most job interviews evaluate these skills immediately after assessing the candidate's basic programming proficiency. Many students, particularly in institutions outside the top tier, fail to clear these hurdles because they have not been given enough opportunity to hone these skills. In this series of articles, we describe a new approach to address these shortcomings - a Gamified Approach to Learning Algorithms (GALA). We describe our approach in the context of the Algorithms course (typically the second in the 2-course DSA sequence). Student feedback (drawn from an institution outside the top tier) confirms that this approach enables students to grasp key concepts, and to develop a better understanding of how and why the algorithm works. Following the introduction of GALA, we are also starting to see improved student performance on job interviews.
+
+\section{Introduction}\label{section-1}
+
+A recent report by Aspiring Minds \cite{art3-key01} estimates that more than 90\% of graduating engineers ``do not have the desired programming and algorithm skills required to work in IT product companies". Such companies expect graduates to have the ability to create an algorithmic solution to a real-world problem (and then implement this solution in code). The former task involves at least three key skills: \textit{modeling} the concrete problem in abstract terms, \textit{recognizing} opportunities (if any) to reduce this problem to one for which an efficient algorithm (using appropriate data structures) already exists, and (when necessary) \textit{developing} an algorithm to solve this problem as efficiently as possible. Note that each of the three action verbs associated with these tasks (\textit{modeling, recognizing}, and \textit{developing}) are at the higher levels of Bloom's Taxonomy. However, in many of the Data Structures and Algorithms (DSA) courses we have reviewed at institutions outside the top-tier, the emphasis is on tasks at the two lowest level of Bloom's Taxonomy: Remembering (e.g., \textit{memorizing} an algorithm or the detailed implementation of a particular data structure) and Understanding (e.g., \textit{tracing} an algorithm's behaviour on a given input, or tracing the evolution of a data structure on a given sequence of operations). As the Aspiring Minds report \cite{art3-key01} indicates, such courses do not prepare graduates adequately for industry needs.
+
+This series of articles describes a pedagogical approach to teaching an \textit{Algorithms} course that meets two simultaneous objectives:
+\begin{itemize}  
+\item[$\bullet$] Objective 1: It hones the three key skills noted above.
+\item[$\bullet$] Objective 2: It is workable in institutions outside the top-tier.
+\end{itemize}
+  
+Institutions outside the top-tier lack many of the advantages that top-tier institutions possess. For instance, many of their students have limited language proficiency, analytical reasoning, and mathematical maturity. Further, almost no course prior to their \textit{Algorithms} course hones their higher-order thinking abilities. (Even the introductory programming course tends to be syntax-heavy, and focused on skills at the two lowest levels of Bloom’s Taxonomy.) As an illustration, consider the \textit{Algorithms} course taught by the first author. In the preceding introductory programming course, almost all students were able to correctly reproduce the \textit{Bubble Sort} algorithm when asked. The first author reminded students of the \textit{Bubble Sort} algorithm, and then asked them to use it to sort the university roll numbers of 10 students. About 80\% of the class was unable to apply this algorithm to the given data (a task that is no higher than level 3 of Bloom’s Taxonomy). In the same institution, when the first author asked senior students to analyze the time complexity of the algorithm(s) implemented in their final-year project, the vast majority of students were unable to apply these skills to the given task. Such a context requires an approach that students find initially \textit{accessible} yet sufficiently \textit{engaging} that they are motivated to spend enough time grappling with the problem. (Tasks associated with higher levels of Bloom's Taxonomy require students to spend time evaluating multiple possible ways of tackling them.)  
+ 
+\section{GALA: Accessible and Engaging}\label{section-2}  
+  
+Our Gamified Approach to Learning Algorithms (GALA) is designed to be both accessible and engaging. We assume a lecture of between 40 and 60 minutes, and we split this into two approximately equal parts. In Part 1 (20 to 30 minutes), students play a game that, by its design, requires interactive engagement to develop an algorithm. We ensure accessibility in two ways. First, the rules are specified using language that is as simple and unambiguous as possible. Second, wherever possible, students play the game with physical artefacts. As we shall explain, these can be created easily and inexpensively. In Part 2 (the remaining 20 to 30 minutes), the instructor explains one or more efficient algorithm to solve the problem, leveraging the students’ familiarity with and interest in the problem developed in Part 1. In many cases, the games themselves are well-known. Our contribution lies in weaving these games into a pedagogy to support desired learning outcomes in the \textit{Algorithms} course.  
+  
+In-class observations confirm that students find the games accessible and deeply engaging. Further, the feedback collected from our students confirms that GALA enables students to grasp key concepts, and to develop a better understanding of how and why certain algorithms work. Following the introduction of GALA, we are also starting to see improved student performance on job interviews. In the next three sections, we illustrate GALA through examples.
+
+\section{Game 1: Decimal to Binary}\label{section-3}  
+
+The purpose of this game is to help students understand the classical algorithm for converting positive integers from decimal to binary representation (Table~\ref{chapter3-table-1})  at a deeper level than a mere sequence of steps. One way to achieve this is through a formal (inductive) proof of correctness.
+  
+As we have noted above, we cannot assume that students will have the requisite mathematical maturity to fully understand (let alone develop) such a proof. Hence, the game aims to help students understand the ``core" of such a proof, without using the language of induction. More importantly, the game gives students an opportunity to hone their skills in \textit{developing} algorithms. 
+
+figuress???
+ 
+There are several versions of this game, and we first describe the rules of the simplest version (Version 1). All versions of this game are played with two players: $P_{1}$ and $P_{2}$. Player $P_{1}$ has a set of 7 cards numbered $C_{1}, C_{2},..., C_{7}$, each with 64 numbers (Table~\ref{chapter-3-table-2}). Player $P_{2}$ begins the game by guessing a number $N$ between 1 and 127 (both inclusive) without revealing it to $P_{1}$. Next, for each card $C_{1}, C_{2}, ..., C_{7}$, $P_{1}$ asks $P_{2}$ whether $N$ appears on this card. For each question, $P_{1}$ notes $P_{2}$'s response (yes/no). Note that $P_{2}$ must never lie! (If $P_{2}$ lies, at the end of game, $P_{1}$ can easily prove that $P_{2}$ lied). At the end, $P_{1}$ must correctly identify the number that $P_{2}$ had guessed based on the set of yes/no response for each card $C_{i}$. 
+  
+While a ``brute force" approach is possible by carefully ruling out all numbers except one, this is clearly a tedious process. Students quickly realize that they need to come up with some clever ``formula" (i.e., an algorithm!) to combine the yes/no answers into a single number that $P_{2}$ has guessed.  
+
+figuress???? 
+
+We split the class into groups of 4, and we give each group a full set of 7 cards. (An entire set can be printed on a single A4 sheet of paper and easily cut out.) Each member of the group is asked to take turns playing the role of $P_{2}$, while the rest of the group plays the role of $P_{1}$. Before proceeding further, we encourage you to pause and try the game! For example, if we play the role of $P_{2}$ and tell you that our number appears only on cards $C_{1}, C_{2}, C_{6}$ and $C_{7}$, can you identify our number?
+
+
+When students in a class of about 60 students (15 groups) were allowed to play this game for 15-20 minutes, only two groups were able to correctly identify an algorithm to compute the guessed number. However, neither of these groups was able to explain \textit{why} their algorithm worked. Even with this limited success, each group had their ``Aha!" moments. Finally, when the logic and the underlying theory was explained (in Part 2), almost the entire class was thrilled. We will now discuss the concepts involved and why the logic works.
+
+To compute the guessed number, we should sum up the values $2^{i-1}$ for each card $C_{i}$ for which $P_{2}$ answers yes. For our example above (yes to $C_{1}, C_{2}, C_{6}$ and $C_{7}$), the sum is $2^{0} + 2^{1} + 2^{5} + 2^{6} = 99$. You can confirm that 99 is the only number that appears on precisely this set of four cards. 
+ 
+To understand why the logic works, we should refresh the theory of number representation using the underlying number base and place value of digits. For example, the decimal number 4763 corresponds to $4\times10^{3}+7\times10^{2}+6\times10^{1}+3\times10^{0}$. The position of the digit in the number has its corresponding place value, determined by respective power of 10 (decimal base value). Thus, in a 4-digit decimal number, place values are defined corresponding to unit place, tenth place, hundredth place and thousandth place value. The digit in each position is to be multiplied with its position-based place value and when all the values are summed, we get the number.  When the number is represented in binary, the base value is taken as 2. When a number is represented using 7 binary digits, the value $N$ is computed as $N=x_{7}2^{6}+x_{6}2^{5}+x_{5}2^{4}+x_{4}2^{3} + x_{3}2^{2}+x_{2}2^{1} + x_{1}2^{0}$, where $x_{i}$ corresponds to the $i^{\rm th}$ binary digit. The decimal number 99 in binary is written as 1100011. In this binary representation, digits $x_{1},  x_{2}, x_{6}$ and $4x_{7}$ are 1, and remaining 3 binary digits $x_{3}, x_{4}$ and $x_{5}$ are zero. Thus, the value would be computed as $1\times2^{6} + 1\times 2^{5} + 0\times 2^{4} + 0\times 2^{3}+0\times 2^{2}+1\times 2^{1} +1\times 2^{0} = 2^{6} + 2^{5} + 2^{1} + 2^{0} = 64 + 32 + 2 + 1 = 99$. 
+
+A closer analysis of card Ci reveals that the first number is precisely 2i-1. More interestingly, every number on card Ci contains 2i-1 in its binary expansion. Thus, whenever player P2 responds to a card Ci, player P1 learns the ith bit of N (yes means 1, no means 0). While this is clearly not a formal proof of correctness, understanding this key point helps students better understand why the algorithm in Table 1 works: each iteration i of the loop is evaluating the ith bit of N. Of course, we can present this as a dry fact to students, and they could certainly reproduce this fact on an exam. Instead, GALA provides a much deeper learning experience: students quickly realize that there is some pattern to the numbers, and they immediately engage with trying to discover this pattern. The ability of a student to recognize patterns (or more abstractly, “properties”) is critical to their ability to develop algorithms, since algorithms exploit these patterns/properties.
+ 
+To further hone this skill, a variant of the same game can be played (Version 2) using a different set of cards C’1, C’2, …, C’7 (Table 3). In this variant, the logic is reversed: a “yes” to card C’i means that the ith bit of N is 0 (“no” means the bit is 1). Several other variations of the game can be played by mixing cards from these two sets – care must be taken to map yes/no answers for the two types of cards (Ci and C’i) to 1/0 bits. Cards can be printed in different colours (blue vs. orange), or students can recognize that all cards of type C’i start with the number 0. Another variant could be to use a set of 5, 6 (or N) cards instead of 7, in which case count of numbers appearing on each card would change accordingly. For example, for a set of 5 cards, each card would have 16 numbers and so on. 
+ 
+\end{multicols}
+
+%~ \noindent
+%~ \begin{tabular}{V{2.5}cp{15.2cm}V{2.5}}
+%~ \clineB{1-2}{2.5}
+ %~ &\\
+%~ \raisebox{-4.2cm}{\includegraphics[scale=.057]{src/Figures/dr-s-ramani.png}} & 
+
+%~ \centerline{\large\bf Srinivasan Ramani}
+
+%~ \bigskip
+%~ Dr.~Ramani was Research Director, HP Labs India, located in Bangalore. He founded the National Centre for Software Technology (NCST) in 1985, and had directed it during 1985-2000. His work at NCST covered R \& D in the areas of computer networks and knowledge based computer systems. He made significant contributions to the creation and development of the Indian academic network, ERNET, which brought Internet connectivity to India in 1988, and the Bombay Library Network, Bonet. He has served as Editor, Journal of Information Technology for Development, for a number of years.\\[-0.85cm]
+%~ &\smallskip
+%~ He was President, International Council for Computer Communication, and Chairman of the Governing Board of the Information Library Network (INFLIBNET). He was also a member of the High Level Panel of Advisors to the UN on Information and Communication Technologies.\\
+%~ &\\ 
+%~ \clineB{1-2}{2.5}
+%~ \end{tabular}
+
+
