@@ -199,7 +199,12 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
     \Huge \bfseries  #1\par\nobreak
     \vskip 20\p@
   }}
+\c@secnumdepth=1
+
+\renewcommand\@dotsep{200}
 \makeatother
 \renewcommand{\floatpagefraction}{0.75}
 \setlength\intextsep{0pt}
 \hfuzz=2pt
+
+%~ \setcounter{secnumdepth}{-1}
