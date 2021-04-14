@@ -34,7 +34,10 @@
 
 \renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
 
-
+\newfontfamily\greekfont[Script=Greek,
+    Mapping=tex-text,
+    Scale=MatchUppercase]
+{Gentium Plus}
 
 \makeatletter
 \renewcommand\section{\@startsection {section}{1}{\z@}%
@@ -66,6 +69,7 @@
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
+
 \makeatother
 
 \renewcommand\bibname{References}
