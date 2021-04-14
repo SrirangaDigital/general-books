@@ -172,8 +172,9 @@ P(\underline{X} = n) = \frac{f[N+1-n]}{\displaystyle{\sum_{k =1}^N f[k]}} = p_{_
  
 \section{The Main Theorems on the Limiting Properties}\label{section-4} 
 
-We prove the following limiting properties.\\
-Analogous to eq.(\ref{??}), we have,\\
+We prove the following limiting properties.
+
+Analogous to eq.(\ref{??}), we have,
 
 \begin{thm}
  \label{thm-1}
@@ -204,35 +205,402 @@ In the case of $\underline{X} $, both $E(\underline{X})$ and $Var(\underline{X})
 We, then, easily observe using these properties that when $a = b = 1$, the limits of eq.(\ref{MeanNX}), eq.(\ref{MeanNY}) and eq.(\ref{VarianceNY}) reduce to the limits, eq.(\ref{MeanX}), eq.(\ref{MeanY}), eq.(\ref{VarianceY}), obtained for the Fibonacci sequence, by Neal \cite{art2-key01}, described in section \ref{FibonacciSequence}. Using eq.(\ref{opt1}) and eq.(\ref{opt2}), we can prove the following optimality properties of the Fibonacci sequence:
 \begin{thm}
  \label{thm-5}
-\begin{equation*}
+\begin{eqnarray*}
 \label{MeanMax}
-\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N \right)} = \lim_{N \rightarrow \infty}\left(E(\underline{X}):a=b=1\right)\\
- = \varphi + 1
-\end{equation*}
+\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N \right)} &=& \lim_{N \rightarrow \infty}\left(E(\underline{X}):a=b=1\right)\\
+ &=& \varphi + 1
+\end{eqnarray*}
 \end{thm}
 \begin{thm}
 \label{thm-6}
-\begin{eqnarray*}
+{\fontsize{7.4}{8.4}\selectfont\begin{eqnarray*}
 \label{VarianceMax}
-\max{\left (\lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)} =\max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\\
-= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a=b=1\right)= 2\varphi + 1
-\end{eqnarray*}
- \end{thm}
+\max{\left (\lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)} &=&\max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\\
+&=& \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a=b=1\right)= 2\varphi + 1
+\end{eqnarray*}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \end{thm}
 
 We now proceed to prove these theorems.
 
-\section{Some notations used in the following sections}
+\section{Some notations used in the following sections}\label{section-5}
 In order to prove the aforesaid theorems, we make use of certain finite sums, presented in \textbf{Appendix.\ref{Prelims}} and \textbf{Appendix.\ref{FiniteSums}}. We list here, some of the notations used in the subsequent sections.
-\begin{center}
+%~ \begin{center}
 \begin{tabular}{cccc}
-  Increasing sequence & ~ &~& Decreasing Sequence\\
+  Increasing sequence & ~ &~& Decreasing Sequence\\[.2cm]
  $\bar{S} = \displaystyle{\sum_{n=1}^{N}}f[n]$& ~ &~& $\underline{S} = \displaystyle{\sum_{n=1}^{N}}f[N+1-n]$ \\
  $\bar{S}_1 = \displaystyle{\sum_{n=1}^{N}}n f[n]$ & ~ &~& $\underline{S}_1 = \displaystyle{\sum_{n=1}^{N}}n f[N+1-n]$ \\
  $\bar{S}_2 = \displaystyle{\sum_{n=1}^{N}}n^2 f[n]$ &~& ~&$\underline{S}_2 = \displaystyle{\sum_{n=1}^{N}}n^2 f[N+1-n]$ 
 \end{tabular}
-\end{center}
+%~ \end{center}
+
+\section{Proofs of Theorems related to distributions induced by increasing sequences}\label{section-6}
+
+We look at the mean and variance of the random variable $\bar{X}$, defined as in section \ref{FibonacciSequence}.
+
+\textsc{Theorem {\ref{th:MeanLinear}}:}
+\begin{eqnarray*}
+\displaystyle{\lim_{N \rightarrow \infty}} E(\bar{X}) = \infty  
+ \end{eqnarray*}
+\begin{proof}
+We have,
+\begin{equation}
+E(\bar{X}) = \frac{\bar{S}_1}{\bar{S}}\label{eq-6.1}
+\end{equation}
+Using eq.(\ref{nfn1}) and eq.(\ref{SumIncrease}), we get
+\begin{eqnarray}
+E(\bar{X})&\sim& \frac{(NR^{N+2}-(N+1)R^{N+1}+R)(R-1)}{(R-1)^2 R^{N+1}}\nonumber\\
+&\sim& \frac{NR-N-1}{R-1}\nonumber\\
+\Rightarrow E(\bar{X}) &\sim& N - \frac{1}{R-1}\\\label{eq-6.2}
+\nonumber E(\bar{X}) &\sim& \mathcal{O}(N)
+\end{eqnarray}
+\end{proof}
+
+Theorem \ref{th:MeanLinear}, now follows from eq.(\ref{expx}).
+
+We also observe the following: 
+
+ If we now define $\bar Y$ = $(N+1)- \bar{X}$, so that $\bar{Y}$ is also a random variable taking value 1, 2, 3, $\ldots$, $N$ and $\bar{X}$ has been in a sense centralized, then by eq.(\ref{expx}),
+ \begin{equation*}
+ E(\bar{Y}) \sim 1 + \frac{1}{R-1} = \frac{R}{R-1}
+ \end{equation*}
+Hence 
+\begin{equation*}
+\displaystyle{\lim_{N \rightarrow \infty}} E(\bar{Y}) = \frac{R}{R-1} 
+\end{equation*}
+This $\bar{Y}$ corresponds to $\underline{X}$, which we describe in sec. \ref{Decreasing}.
+
+\textsc{Theorem {\ref{th:VarianceConstantX}}:}
+
+\begin{eqnarray*}
+\lim_{N \rightarrow \infty} Var(\bar{X}) = \frac{R}{(R -1)^2}
+\end{eqnarray*}
+
+\begin{proof}\renewcommand{\qedsymbol}{}
+We have,
+\begin{equation}
+E(\bar{X}^2) = \frac{\bar{S}_2}{\bar{S}}\label{eq-6.3}
+\end{equation}
+
+Using eq.(\ref{s2}) and eq.(\ref{SumIncrease}), we get
+\begin{equation}
+E(\bar{X}^2) \sim \frac{N^2(R-1)^2 - 2N(R-1) + R+1}{(R-1)^2}\label{eq-6.4}
+\end{equation}
+
+Using eq.(\ref{expx}) and eq.(\ref{ex2}), we get
+
+{\fontsize{6.8}{7.8}\selectfont\begin{eqnarray}
+Var(\bar{X})&=& E(\bar{X}^2)-E(\bar{X})^2\nonumber \\
+&\sim &\frac{N^2(R-1)^2 - 2N(R-1) + R+1}{(R-1)^2}-\left(N - \frac{1}{R-1}\right)^2\nonumber\\
+\Rightarrow \lim_{N \rightarrow \infty}Var(\bar{X})& = & \frac{(R+1)-1}{(R-1)^2}\nonumber
+\end{eqnarray}}
+
+Thus, we get the limit of the variance as,
+\begin{equation}
+\lim_{N \rightarrow \infty}Var(\bar{X}) = \frac{R}{(R-1)^2}\label{eq-6.5}
+\end{equation}
+\end{proof}
+
+It is interesting to note from eq.(\ref{expx}) and eq.(\ref{varx}) that, even though the mean increases linearly as the length of the sequence, the variance converges, to a function of $R$.
+
+\section{Proofs of Theorems related to distributions induced by decreasing sequences}\label{section-7}
+
+In this section, we look at the probability distribution generated by reversing the sequence values. We recall that the probability of the random variable $\underline{X}$ taking a value $n$ was defined as, 
+\begin{equation}
+P(\underline{X} = n) =\frac{f[N+1-n]}{\displaystyle{\sum_{k=1}^{N}f[N+1-k]}} = p_{_{\underline{N}}}(n)\label{eq-7.1}
+\end{equation}
+
+\textsc{Theorem {\ref{th:MeanConst}}:}
+\begin{eqnarray*}
+\displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) = 1 + \displaystyle{\frac{1}{R-1}} =  \displaystyle{\frac{R}{R-1}}
+\end{eqnarray*}
+
+\begin{proof}\renewcommand{\qedsymbol}{}
+We have,
+\begin{equation}
+E(\underline{X}) = \frac{\underline{S}_1}{\underline{S}}
+\end{equation}
+From eq.(\ref{nfnd}), we get
+\begin{eqnarray}
+E(\underline{X}) &=& \frac{(N+1)\bar{S} - \bar{S}_1}{\bar{S}}\nonumber\\
+&=& (N+1) - \frac{\bar{S}_1}{\bar{S}}\nonumber\\
+&\sim& (N+1) - (N - \frac{1}{R-1}) \hspace{0.1in}\textup{by eq.(\ref{expx}})\nonumber\\
+\label{meand}\Rightarrow  \lim_{N\rightarrow \infty}E(\underline{X}) &=& 1 + \displaystyle{\frac{1}{R-1}} = \displaystyle{\frac{R}{R-1}}
+\end{eqnarray}
+\end{proof}
+
+\textsc{Theorem {\ref{th:VarianceConstantY}}:}
+\begin{eqnarray*}
+\displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}
+\end{eqnarray*}
+\begin{proof}\renewcommand{\qedsymbol}{}
+\begin{equation}
+Var(\underline{X}) = E(\underline{X}^2) - E(\underline{X})^2\label{eq-7.4}
+\end{equation}
+Using eq.(\ref{n2fnd}) we first obtain $E(\underline{X}^2)$.
+{\fontsize{6}{7}\selectfont
+\begin{eqnarray}
+E(\underline{X}^2) &=& \frac{\bar{S}_2}{\underline{S}} \nonumber\\
+&\sim& \frac{(N+1)^2\bar{S}}{\bar{S}} - \frac{2(N+1)\bar{S}_1}{\bar{S}} + \frac{\bar{S}_2}{\bar{S}}\nonumber\\
+&\sim& (N+1)^2 - 2(N+1)E(\bar{X}) +E(\bar{X}^2)\nonumber\\
+&\sim& (N+1)^2 - 2(N+1)\left(N-\frac{1}{R-1}\right) + \left(\frac{N^2(R-1)^2 - 2N(R-1)+(R+1)}{(R-1)^2}\right)\nonumber\\
+&\sim& \frac{(R-1)^2 +3R -1}{(R-1)^2}\nonumber
+\end{eqnarray}}
+\normalsize
+\begin{equation}
+\Rightarrow \lim_{N \rightarrow \infty}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}\label{eq-7.5}
+\end{equation} 
+From eq.(\ref{ey2}) and eq.(\ref{meand}), we get 
+\begin{eqnarray}
+Var(\underline{X}) &=& E(\underline{X}^2) - E(\underline{X})^2\nonumber\\
+&\rightarrow& 1 + \frac{3R-1}{(R-1)^2} - \frac{R^2}{(R-1)^2}\nonumber\\ 
+\Rightarrow \lim_{N \rightarrow \infty}Var(\underline{X}) &=& \frac{R}{(R-1)^2}\label{eq-7.6}
+\end{eqnarray}
+\end{proof}
+
+Thus, we find that, the limit of the variance of the probability distribution with probability defined by eq.(\ref{prob}) to be a simple function $R$, the limit of the ratio of successive elements.
+
+\section{Mean and Variance of discrete probability distributions induced by Fibonacci Sequence}\label{section-8}
+
+Now, we look at the probability distribution induced by the standard Fibonacci sequence. For such a distribution, we obtain the value of mean and variance,using eq.(\ref{expx}) and eq.(\ref{ey2}) respectively, by using $a = 1 $, $b = 1$, and $R = \varphi$.
+
+\subsection{Distributions induced by Increasing Sequence}\label{subsection-8.1}
+
+By eq.(\ref{expx}) and eq.(\ref{varx}), we have 
+$$
+\nonumber E(\bar{X})  \sim \mathcal{O}(N)
+$$
+and 
+\begin{eqnarray}
+\lim_{N \rightarrow \infty}Var(\bar{X}) &=& \frac{R}{(R-1)^2} = \frac{\varphi}{(\varphi-1)^2}\nonumber\\
+\Rightarrow \lim_{N \rightarrow \infty}Var(\bar{X}) &=& 2\varphi+1\label{eq-8.1}
+\end{eqnarray}
+
+Neal \cite{art2-key01} looks at the mean and variance of a Fibonacci distribution. It may be pointed out that the fact that the variance converges in this case was not observed by Neal. The above derivations show that, in this case, though the mean increases linearly as the length of the sequence, the variance converges to a simple function of the golden ratio $\varphi$.
+
+\subsection{Distributions induced by Decreasing Sequence}\label{subsection-8.2}
+By eq.(\ref{meand}), we have
+\begin{equation}
+\nonumber \displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) =  \displaystyle{\frac{R}{R-1}} = \varphi + 1
+ \end{equation}
+
+From eq.(\ref{VarY}), we have
+\begin{eqnarray}
+\displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &=& \frac{R}{(R-1)^2} =\frac{\varphi}{(\varphi-1)^2} \nonumber \\
+\Rightarrow \displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &=& 2\varphi + 1\label{eq-8.2}
+\end{eqnarray}
+Comparing eq.(\ref{varf}) and eq.(\ref{varyd}), we find that, in the case of the classical Fibonacci sequence, the variance of the distribution converges to the same value, irrespective of whether the probability values are increasing or decreasing.
+
+In the following sections, we make a few observations and remarks related to the classical Fibonacci sequence.
+
+\section{Ratio of Variance to Mean}\label{section-9}
+We observe the curious fact that, from eq.(\ref{MeanNY}) and eq.(\ref{VarianceNY}),
+\begin{equation}
+\lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{R-1}\label{eq-9.1}
+\end{equation}
+In the case $a = b = 1$, that is, in the case of the distribution induced by the Fibonacci sequence, since $R = \varphi$
+\begin{equation}
+\lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{\varphi-1} = \varphi\label{eq-9.2}
+\end{equation}
+Thus the ratio of the variance of $\underline{X}$ to the expectation of $\underline{X}$ also converges to the Golden Ratio, $\varphi$.
+
+\section{Optimality Probabilistic limit properties of the Fibonacci Sequence}\label{section-10}
+In this section, we establish certain optimal probabilistic limit properties of the classical Fibonacci sequence. 
+
+\subsection{Mean}\label{subsection-10.1}
+\textsc{Theorem {\ref{th:MeanGoldenRatio}}:}
+\begin{eqnarray*}
+\label{MeanMax1}
+\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N\right)} = \lim_{N \rightarrow \infty}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1
+\end{eqnarray*}
+\begin{proof}\renewcommand{\qedsymbol}{} 
+ We know that 
+\begin{eqnarray}
+ R &\geq& \varphi\nonumber\\
+ \Rightarrow R-1 &\geq& \varphi -1 \nonumber\\
+\Rightarrow \frac{1}{R-1} &\leq& \frac{1}{\varphi-1}\label{eq-10.1}
+ \end{eqnarray}
+ But $\varphi$ = $\displaystyle{\frac{1}{\varphi-1}}$. \\Hence, from eq.(\ref{compare}), we get
+{\fontsize{8}{9}\selectfont\begin{eqnarray}
+\frac{1}{R-1} \leq \varphi\nonumber\\
+\Rightarrow 1 + \frac{1}{R-1} &\leq& 1+\varphi\\\label{eq-10.2}
+\displaystyle{\frac{R}{R-1}} &\leq& \varphi + 1 \nonumber\\
+\Rightarrow \lim_{N\rightarrow \infty}\left(E(\underline{X}):a,b\in \mathbb N\right) &\leq& \lim_{N\rightarrow \infty}\left(E(\underline{X}): a = b = 1\right)\label{eq-10.3}
+\end{eqnarray}}
+Thus, \\
+$\max{\left(\displaystyle{\lim_{N\rightarrow \infty}} E(\underline{X}): a, b \in \mathbb N\right)} = \displaystyle{\lim_{N \rightarrow \infty}}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1$
+\end{proof}
+
+\subsection{Variance}\label{subsection-10.2}
+
+Among the family of distributions, induced by second order linear recurrence relations with positive integer coefficients, $a$ and $b$, the Fibonacci sequence gives the maximum limit for $Var(\underline{X})$, i.e.\\
+\textsc{Theorem {\ref{th:VarianceGoldenRatio}}:}
+{\fontsize{6}{7}\selectfont\begin{eqnarray}
+\max{\left(\lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)}&=& \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\\\label{eq-10.4}
+ &=& \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a,b=1\right) = 2\varphi + 1\label{eq-10.5}
+\end{eqnarray}}
+
+We prove this as follows:
+\begin{proof}\renewcommand{\qedsymbol}{} 
+\begin{eqnarray}
+ R &\ge& \varphi\nonumber\\
+ \Rightarrow \frac{1}{R} &\le& \frac{1}{\varphi}\nonumber\\
+\Rightarrow -\frac{1}{R} &\ge& - \frac{1}{\varphi}\nonumber\\
+\Rightarrow 1-\frac{1}{R} &\ge& 1 - \frac{1}{\varphi}\nonumber\\
+\Rightarrow R\left(1-\frac{1}{R}\right)^2 &\ge& \varphi\left(1 - \frac{1}{\varphi}\right)^2\nonumber\\
+\Rightarrow \frac{1}{R\left(1-\frac{1}{R}\right)^2} &\le& \frac{1}{\varphi\left(1 - \frac{1}{\varphi}\right)^2}\label{eq-10.6}
+\end{eqnarray}
+From eq.(\ref{vareq}), we get 
+{\fontsize{7}{8}\selectfont\begin{eqnarray}
+\frac{R}{(R-1)^2} \le \frac{\varphi}{(\varphi-1)^2} = 2\varphi + 1\nonumber\\
+\Rightarrow \frac{R}{(R-1)^2} &\le& 2\varphi + 1\\\label{eq-10.7}
+\Rightarrow \label{varmaxi1}\lim_{N\rightarrow \infty} \left(Var(\underline{X}):a,b\in \mathbb N\right) &\leq& \lim_{N\rightarrow \infty}\left(Var(\underline{X}): a = b = 1\right)\label{eq-10.8}
+\end{eqnarray}}
+\end{proof}
+From eq.(\ref{varmaxi1}), we conclude that the limit variance of discrete probability distributions, induced by decreasing sequence and generated using second order linear recurrence, is maximum for the one generated using Fibonacci sequence.
+
+In the next section, we consider the probability distributions generated by higher order recurrence relation with positive integer coefficients.
+
+\section{Higher order Recurrence relation with positive integer coefficients}\label{section-11}
+From Section.\ref{Increasing} and Section.\ref{Decreasing}, one can observe that the mean and variance of the probability distributions, induced by general second order linear recurrence relation with positive integer coefficients, depend only on the largest positive real root, $R$, of the associated ``characteristic equation''. It turns out that, even in the case of any other higher order recurrence relation with positive integer coefficients, it is the largest positive real root that determines the mean and variance. We now proceed to prove the same.
+Let 
+\begin{equation}
+ f[n] = a_{n-1}f[n-1] + \ldots + a_{n-k}f[n-k] \hspace{0.3in} \forall a_i \in \mathbb{N}\label{eq-11.1}
+\end{equation}
+be a $k^{th}$ order recurrence relation. The characteristic equation of this recurrence relation is given by,
+ \begin{equation}
+    f(x) = x^k - a_{n-1}x^{k-1}- \ldots - a_{n-k}\label{eq-11.2}
+ \end{equation}
+\begin{lem}\label{lemma-1}
+Eq.(\ref{higherordgenrec}), has atleast one real positive root and if $\alpha$ is the largest positive real root, then all the other roots (real and complex) lie within the disc $|z| < \alpha$.
+\end{lem}
+
+Using Lemma \ref{LemCharEq}, it is easy to infer the following:\\
+With $R = \alpha$,
+\begin{itemize}
+\item The same asymptotic relations as in eq.(\ref{meand})and eq.(\ref{VarY}) hold. 
+\item The same limiting properties as in eq.(\ref{MeanY}) and eq.(\ref{VarianceY}) hold.
+\item The optimality properties of the Fibonacci sequence as in Theorem \ref{th:MeanGoldenRatio} and in Theorem \ref{th:VarianceGoldenRatio} hold good. The reason is that, the largest positive real root, $\alpha > \varphi$, the golden ratio.
+\end{itemize}
+Thus, Theorem \ref{th:MeanGoldenRatio} can be generalized as 
+\begin{eqnarray*}
+\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a_i, i \in \mathbb N \right)} = \lim_{N \rightarrow \infty}\left(E(\underline{X}):a_1 = a_2 = 1, a_{i}=0, \forall i> 2\right) = \varphi + 1
+\end{eqnarray*}
+and Theorem \ref{th:VarianceGoldenRatio} can be further generalized as 
+\begin{eqnarray*}
+\max{\left(\lim_{N\rightarrow \infty}Var(\bar{X}): a_i, i \in \mathbb N\right)}&=& \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a_i, i \in \mathbb N\right)}\\
+\nonumber &=& \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a_1=a_2=1, a_{i}=0,\forall i > 2\right) = 2\varphi + 1
+\end{eqnarray*}
+
+Now, we proceed to prove Lemma \ref{LemCharEq}.
+\begin{proof}\renewcommand{\qedsymbol}{} 
+By Descartes rule of signs, there exists a positive root. Since, \\ 
+ \begin{center}
+ $ f(0) < 0$, $f(\infty) > 0$ \\
+ \end{center}
+Let $\alpha$ be the largest positive root. \\
+
+\subsection{\texorpdfstring{$\alpha$ is simple root}}\label{subsection-11.1}
+
+Claim: The root is simple. \\
+Let $f(x)$ be as in eq.(\ref{higherordgenrec}). Since $\alpha$ is a root, we have
+ \begin{equation}
+\alpha^k - a_{n-1}\alpha^{k-1} + \ldots + a_{n-k} = 0\label{eq-11.3}
+ \end{equation}
+Suppose, if $\alpha$ is a multiple root, then we must have
+\begin{equation}
+ f'(\alpha) = 0 \label{eq-11.4}
+\end{equation}
+\begin{equation}
+\Rightarrow k\alpha^{k-1}-(k-1)a_{n-1}\alpha^{k-2} + \ldots + a_{n-k+1} = 0 \label{eq-11.5}
+\end{equation}
+Multiplying by $\alpha$, we get
+\begin{eqnarray}
+ k\alpha^{k} - (k-1)a_{n-1}\alpha^{k-1} + \ldots + a_{n-k+1}\alpha = 0\nonumber\\
+ \Rightarrow  k\alpha^{k} &=& (k-1)a_{n-1}\alpha^{k-1} + \ldots + a_{n-k+1}\alpha\nonumber\\
+ \Rightarrow   &<& k\left( a_{n-1}\alpha^{k-1} + \ldots +a_{n-k+1}\alpha \right)\nonumber\\
+ \Rightarrow     &<& k\left( a_{n-1}\alpha^{k-1} + \ldots +a_{n-k+1}\alpha + a_{n-k}\right)\nonumber\\
+ \Rightarrow \alpha^{k} &<&  a_{n-1}\alpha^{k-1} + \ldots + a_{n-k+1}\alpha + a_{n-k}\nonumber\\
+ \Rightarrow\alpha^{n} &<& \alpha^{n} \nonumber
+\end{eqnarray}
+This contradicts eq.(\ref{alpharoot}). Hence $\alpha$ must be a simple root.
+
+%~ \subsection{All roots lie within circle of radius $\alpha$}
+
+Now, we prove that all other roots of eq.(\ref{higherordgenrec}) lie within the circle of radius $\alpha$. Consider eq.(\ref{higherordgenrec}), the characteristic equation of the corresponding $k^{th}$ order recurrence relation with positive integer coefficients. Since $\alpha$ is a root, 
+   \begin{equation}\nonumber
+     f(\alpha) = 0
+   \end{equation}
+Also, we have
+ \begin{eqnarray}
+  \displaystyle{\lim_{x\rightarrow \infty}} f(x) &=& \infty \nonumber\\
+  \Rightarrow  \label{functionroots} f(x) &\ge& 0, \hspace{0.3in} \forall x \ge \alpha \\
+  \textup{and}\label{functiongreaterroots}\hspace{0.1in} f(x) &>& 0  \hspace{0.3in} \forall x > \alpha           
+ \end{eqnarray}
+Let $\beta$ be any root (real or complex) of eq.(\ref{higherordgenrec}). Clearly, $\beta$ cannot be zero, because,
+ \begin{equation}\nonumber
+ f(0) = -a_{n-k} < 0
+  \end{equation}
+Let $b$ = $|\beta|$.\\
+Claim: $b$ $\le$ $\alpha$\\
+Reason: Suppose $b$ $>$ $\alpha$.\\
+ Since $\beta$ is a root, we have
+ \begin{eqnarray}
+ f(\beta) = 0 \Rightarrow \beta^{k}  &=&  a_{n-1}\beta^{k-1} + \ldots + a_{n-k}\beta^{n-k} \nonumber\\
+              \Rightarrow |\beta|^{k}  &=&  |a_{n-1}\beta^{k-1} + \ldots + a_{n-k}\beta^{n-k}|\nonumber\\
+             \Rightarrow \beta^{k}  &\leq&  a_{n-1}|\beta|^{k-1} + \ldots + a_{n-k}|\beta|^{n-k}\nonumber\\
+              \Rightarrow \beta^{k}-a_{n-1}|\beta|^{k-1} - \ldots - a_{n-k}|\beta|^{n-k} &\leq& 0 \nonumber\\
+              \Rightarrow b^{k}-a_{n-1}b^{k-1} - \ldots - a_{n-k}b^{n-k} &\leq& 0 \nonumber\\
+  \label{functionlessthanzero} \Rightarrow f(b) &\leq& 0
+ \end{eqnarray}
+However, since $b$ $>$ $\alpha$, by eq.(\ref{functiongreaterroots}), $f(b)$ $>$ 0. Thus, we get a contradiction and hence $b$ $\le$ $\alpha$.
+
+Claim: $b$ = $\alpha$ \\
+Since $\beta$ is a root, we have,
+\begin{eqnarray}
+\beta^k = a_{n-1}\beta^{k-1} + \ldots + a_{n-k}\beta^{n-k}\nonumber\\
+\Rightarrow |\beta|^k &=& |a_{n-1}\beta^{k-1} + \ldots + a_{n-k}\beta^{n-k}|\nonumber
+\end{eqnarray}
+Since we have assumed that $|\beta|$=$b$=$a$, 
+\begin{eqnarray}
+\alpha^k = |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}\beta^{n-k}|\nonumber\\
+a_{n-1}\alpha^{k-1}+ \ldots + a_{n-k} &=&  |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}| \hspace{0.2in}\textup{by \hspace{0.1in} eq.(\ref{alpharoot})} \\
+a_{n-1}|\beta|^{k-1}+ \ldots + a_{n-k} &=&  |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}|
+\end{eqnarray}
+$\Rightarrow a_n-1\beta^{k-1}, \ldots, a_{n-k}$ are all complex numbers in the same direction. \\
+$\Rightarrow a_{n-k}, a_{n-k+1} \beta$ are real positive\\
+$\Rightarrow \beta$ is real positive\\
+$\Rightarrow \beta = \alpha$.\\
+
+Thus, based on the above claims, we find that 
+\begin{itemize}
+\item the only root on the circle $|z|$ = $\alpha$ is $z$ = $\alpha$ and there is no root outside this circle
+\item all roots not equal to $\alpha$ are inside the circle $|z|$ = $\alpha$.
+\end{itemize}
+
+%~ \subsection{$\alpha$ is strictly greater than the golden ratio $\varphi$}
+We prove that the largest positive real root of the characteristic equation, corresponding to higher order linear recurrence relation with integer coefficients, is greater than the golden ratio $\varphi$.
+\begin{eqnarray}
+\alpha^{k} &=&  a_{n-1}\alpha^{k-1} + \ldots + a_{n-k}\alpha^{n-k} \nonumber\\
+\textup{Since all terms on the RHS are greater than 0} \nonumber\\
+\Rightarrow \alpha^{k} &>&  a_{n-1}\alpha^{k-1} + a_{n-2}\alpha^{k-2}\nonumber \\
+\Rightarrow \alpha^{2} &>&  a_{n-1}\alpha + a_{n-2}\nonumber
+\end{eqnarray}
+As $a_{n-1}$, $a_{n-2}$ are positive integers, we see that,
+\begin{eqnarray}
+\Rightarrow \alpha^{2} &>&  \alpha + 1\nonumber\\
+\label{alphaphicompare}\Rightarrow \alpha^{2} -  \alpha - 1\ &>& 0
+\end{eqnarray}
+From the fact that, $\varphi$, the golden ratio, is the largest positive root of $x^2-x-1 = 0$ and that $x^2-x-1 > 0$ for $x > \varphi$, it follows that
+$\alpha$ is always greater than $\varphi$.
+\end{proof}
+
+
+
+
+
+
+
 
 
 
