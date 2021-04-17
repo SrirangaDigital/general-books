@@ -61,7 +61,7 @@ In particular, if $f[n]$ are all positive integers, then we can generate such pr
 
 While exploring integer sequences from the point of view of generating window functions in the context of designing digital filters for signal processing applications \cite{art1-key02}, we found some generalizations of Neal's limiting properties for a class of integer sequences and an optimal property of the Fibonacci sequence in this class. In this paper, we present these results.
 
-\section{Probability Distributions induced by Fibonacci Sequence}\label{section-2}
+\section{Probability Distributions Induced by Fibonacci Sequence}\label{section-2}
 
 The classical Fibonacci sequence \cite{art1-key03}, \cite{art1-key04}, is the positive integer sequence $f[n]$ defined by the second order recurrence relation
 
@@ -120,7 +120,7 @@ Similarly, let $\underline{X}$ be a random variable in $\{1,2, \ldots, N\}$, whe
 P(\underline{X} = n) = \frac{f[N+1-n]}{\displaystyle{\sum_{k =1}^N f[k]}} = p_{_{\underline{N}}}(n) \hspace{0.2in} ; \hspace{0.2in} 1 \leq n\leq N.\label{eq-2.6}
  \end{equation}
 
-For such a random variable, $\underline{X}$, Neal \cite{neal} observed the following limiting properties:
+For such a random variable, $\underline{X}$, Neal \cite{art1-key01} observed the following limiting properties:
 \begin{equation}
 \lim_{N\rightarrow \infty} E(\underline{X}) = \varphi + 1\label{eq-2.7}
 \end{equation}
@@ -167,8 +167,8 @@ We note that,
 \vspace{-.6cm}
 
 \begin{align}
-R(a,b) &\geq \varphi \hspace{0.1in} \textup{for all positive integers} \hspace{0.1in} a, b\\\label{eq-3.3}
-R(a,b) &= \varphi   \hspace{0.1in}\textup{when}\hspace{0.1in} a = b = 1\\\label{eq-3.4}
+R(a,b) &\geq \varphi \hspace{0.1in} \textup{for all positive integers} \hspace{0.1in} a, b\label{eq-3.3}\\
+R(a,b) &= \varphi   \hspace{0.1in}\textup{when}\hspace{0.1in} a = b = 1\label{eq-3.4}\\
        & \quad\quad \textup{(classical Fibonacci sequence)}\nonumber
 \end{align}
 
@@ -182,7 +182,7 @@ We further observe that the ratio of successive terms of this sequence converges
 \begin{equation}
 \lim_{k \rightarrow \infty} \frac{f[k+1]}{f[k]} = R(a,b)\label{eq-3.5}
 \end{equation}
-As in section \ref{???}, for any positive integer $N$, consider the above sequence, of length $N$, i.e.,
+As in section \ref{section-2}, for any positive integer $N$, consider the above sequence, of length $N$, i.e.,
 \begin{center}
 $f[1],f[2], \ldots, f[N]$
 \end{center} 
@@ -213,17 +213,16 @@ P(\underline{X} = n) = \frac{f[N+1-n]}{\displaystyle{\sum_{k =1}^N f[k]}} = p_{_
 
 We prove the following limiting properties.
 
-Analogous to eq.(\ref{??}), we have,
+Analogous to eq.~(\ref{eq-2.5}), we have,
 
-\begin{thm}
- \label{thm-1}
+%~ \setcounter{section}{0}
+\begin{thm} \label{thm-4.1}
 \begin{equation*}
 \lim_{N \rightarrow \infty} E(\bar{X}) = \infty
 \end{equation*}
 \end{thm}
 Even though $E(\bar{X})$ grows as $N$ increases, its variance still converges. In fact, we have,\\ 
- \begin{thm}
- \label{thm-2}
+ \begin{thm}\label{thm-4.2}
 \begin{equation*}
 \lim_{N \rightarrow \infty} Var(\bar{X}) = \frac{R}{(R-1)^2}
 \end{equation*}
@@ -231,15 +230,14 @@ Even though $E(\bar{X})$ grows as $N$ increases, its variance still converges. I
 
 \vspace{-.2cm} 
  
-In the case of $\underline{X} $, both $E(\underline{X})$ and $Var(\underline{X})$ converge as $N \rightarrow \infty$ and the limit of $Var(\underline{X})$ is the same as that of $Var(\bar{X})$. We have, analogous to eq.(\ref{MeanY}) and eq.(\ref{VarianceY}), the following limits.
+In the case of $\underline{X} $, both $E(\underline{X})$ and $Var(\underline{X})$ converge as $N \rightarrow \infty$ and the limit of $Var(\underline{X})$ is the same as that of $Var(\bar{X})$. We have, analogous to eq.~(\ref{eq-2.7}) and eq.~(\ref{eq-2.8}), the following limits.
 \begin{thm}
- \label{thm-3}
+ \label{thm-4.3}
 \begin{equation}\nonumber
 \lim_{N \rightarrow \infty} E(\underline{X}) = \frac{R}{(R-1)}
 \end{equation}
  \end{thm}
- \begin{thm}
- \label{thm-4}
+ \begin{thm}\label{thm-4.4}
 \begin{equation}\nonumber
 \lim_{N \rightarrow \infty} Var(\underline{X}) = \frac{R}{(R-1)^2}
 \end{equation}
@@ -247,16 +245,16 @@ In the case of $\underline{X} $, both $E(\underline{X})$ and $Var(\underline{X})
  
  \vspace{-.3cm}
  
-We, then, easily observe using these properties that when $a = b = 1$, the limits of eq.(\ref{MeanNX}), eq.(\ref{MeanNY}) and eq.(\ref{VarianceNY}) reduce to the limits, eq.(\ref{MeanX}), eq.(\ref{MeanY}), eq.(\ref{VarianceY}), obtained for the Fibonacci sequence, by Neal \cite{art1-key01}, described in section \ref{FibonacciSequence}. Using eq.(\ref{opt1}) and eq.(\ref{opt2}), we can prove the following optimality properties of the Fibonacci sequence:
+We, then, easily observe using these properties that when $a = b = 1$, the limits of eq.(\ref{eq-4.1}), eq.(\ref{eq-4.1}) and eq.(\ref{eq-4.1}) reduce to the limits, eq.~(\ref{eq-2.5}), eq.~(\ref{eq-2.7}), eq.~(\ref{eq-2.8}), obtained for the Fibonacci sequence, by Neal \cite{art1-key01}, described in section~\ref{section-2}. Using eq.~(\ref{eq-3.3}) and eq.~(\ref{eq-3.4}), we can prove the following optimality properties of the Fibonacci sequence:
 \begin{thm}
- \label{thm-5}
+ \label{thm-4.5}
 \begin{align*}
 \max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N \right)} &= \lim_{N \rightarrow \infty}\left(E(\underline{X}):a=b=1\right)\\
  &= \varphi + 1
 \end{align*}
 \end{thm}
 \begin{thm}
-\label{thm-6}
+\label{thm-4.6}
 {\fontsize{7.3}{8.3}\selectfont\begin{align*}
 \max{\left (\lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)} &=\max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\\
 &= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a=b=1\right)= 2\varphi + 1
@@ -269,8 +267,8 @@ We now proceed to prove these theorems.
 
 \vspace{-.5cm}
 
-\section{Some Notations Used in The\\ Following Sections}\label{section-5}
-In order to prove the aforesaid theorems, we make use of certain finite sums, presented in \textbf{Appendix.\ref{prelimus}}\break and \textbf{Appendix.\ref{FiniteSums}}. We list here, some of the notations used in the subsequent sections.
+\section{Some Notations Used in the\\ Following Sections}\label{section-5}
+In order to prove the aforesaid theorems, we make use of certain finite sums, presented in \textbf{Appendix.~\ref{section-app-a}}\break and \textbf{Appendix.~\ref{section-app-b}}. We list here, some of the notations used in the subsequent sections.
 
 \begin{tabular}{cccc}
   Increasing sequence & ~ &~& Decreasing Sequence\\[.2cm]
@@ -285,33 +283,34 @@ In order to prove the aforesaid theorems, we make use of certain finite sums, pr
 
 \vspace{-.2cm}
 
-We look at the mean and variance of the random variable $\bar{X}$, defined as in section \ref{FibonacciSequence}.
-
-\textsc{Theorem {\ref{th:MeanLinear}}:}
+We look at the mean and variance of the random variable $\bar{X}$, defined as in section \ref{section-2}. \textsc{THEOREM {\ref{thm-4.1}}:}
 \begin{equation*}
 \displaystyle{\lim_{N \rightarrow \infty}} E(\bar{X}) = \infty  
  \end{equation*}
-\begin{proof}\renewcommand{\qedsymbol}{} 
+
+\noindent
+{\it Proof~:}
+
 We have,
 \begin{equation}
 E(\bar{X}) = \frac{\bar{S}_1}{\bar{S}}\label{eq-6.1}
 \end{equation}
-Using eq.(\ref{nfn1}) and eq.(\ref{SumIncrease}), we get
+Using eq.~(\ref{B.8}) and eq.~(\ref{B.6}), we get
 \begin{align}
 E(\bar{X})&\sim \frac{(NR^{N+2}-(N+1)R^{N+1}+R)(R-1)}{(R-1)^2 R^{N+1}}\nonumber\\
 &\sim \frac{NR-N-1}{R-1}\nonumber\\
-\Rightarrow E(\bar{X}) &\sim N - \frac{1}{R-1}\\\label{eq-6.2}
+\Rightarrow E(\bar{X}) &\sim N - \frac{1}{R-1}\label{eq-6.2}\\
 \nonumber E(\bar{X}) &\sim \mathcal{O}(N)
-\end{align}
-\end{proof}
+\end{align}\hfill{$\square$\\}
+
 
 \vspace{-.7cm}
 
-Theorem \ref{th:MeanLinear}, now follows from eq.(\ref{expx}).
+Theorem~\ref{thm-4.1}, now follows from eq.~(\ref{eq-6.2}).
 
 We also observe the following: 
 
- If we now define $\bar Y$ = $(N+1)- \bar{X}$, so that $\bar{Y}$ is also a random variable taking value 1, 2, 3, $\ldots$, $N$ and $\bar{X}$ has been in a sense centralized, then by eq.(\ref{expx}),
+ If we now define $\bar Y$ = $(N+1)- \bar{X}$, so that $\bar{Y}$ is also a random variable taking value 1, 2, 3, $\ldots$, $N$ and $\bar{X}$ has been in a sense centralized, then by eq.~(\ref{eq-6.2}),
  \begin{equation*}
  E(\bar{Y}) \sim 1 + \frac{1}{R-1} = \frac{R}{R-1}
  \end{equation*}
@@ -319,9 +318,8 @@ Hence
 \begin{equation*}
 \displaystyle{\lim_{N \rightarrow \infty}} E(\bar{Y}) = \frac{R}{R-1} 
 \end{equation*}
-This $\bar{Y}$ corresponds to $\underline{X}$, which we describe in sec. \ref{Decreasing}.
-
-\textsc{Theorem {\ref{th:VarianceConstantX}}:}
+This $\bar{Y}$ corresponds to $\underline{X}$, which we describe in sec.~\ref{section-7}.\\
+\textsc{THEOREM~{\ref{thm-4.2}}:}
 
 \vspace{-.7cm}
 
@@ -331,7 +329,8 @@ This $\bar{Y}$ corresponds to $\underline{X}$, which we describe in sec. \ref{De
 
 \vspace{-.4cm}
 
-\begin{proof}\renewcommand{\qedsymbol}{}
+\noindent
+{\it Proof~:}
 
 We have,
 \begin{equation}
@@ -340,14 +339,14 @@ E(\bar{X}^2) = \frac{\bar{S}_2}{\bar{S}}\label{eq-6.3}
 
 \vspace{-.2cm}
 
-Using eq.(\ref{s2}) and eq.(\ref{SumIncrease}), we get
+Using eq.(\ref{B.10}) and eq.(\ref{B.6}), we get
 \begin{equation}
 E(\bar{X}^2) \sim \frac{N^2(R-1)^2 - 2N(R-1) + R+1}{(R-1)^2}\label{eq-6.4}
 \end{equation}
 
 \vspace{-.3cm}
 
-Using eq.(\ref{expx}) and eq.(\ref{ex2}), we get
+Using eq.~(\ref{eq-6.2}) and eq.~(\ref{eq-6.4}), we get
 
 \vspace{-.3cm}
 
@@ -363,15 +362,15 @@ Thus, we get the limit of the variance as,
 \begin{equation}
 \lim_{N \rightarrow \infty}Var(\bar{X}) = \frac{R}{(R-1)^2}\label{eq-6.5}
 \end{equation}
-\end{proof}
+\hfill{$\square$\\}
 
 \vspace{-1cm}
 
-It is interesting to note from eq.(\ref{expx}) and eq.(\ref{varx}) that, even though the mean increases linearly as the length of the sequence, the variance converges, to a function of $R$.
+It is interesting to note from eq.~(\ref{eq-6.2}) and eq.~(\ref{eq-6.5}) that, even though the mean increases linearly as the length of the sequence, the variance converges, to a function of $R$.
 
 \newpage
 
-\section{Proofs of Theorems related to\\ distributions induced by\\ decreasing sequences}\label{section-7}
+\section{Proofs of Theorems Related to\\ Distributions Induced by\\ Decreasing Sequences}\label{section-7}
 
 In this section, we look at the probability distribution generated by reversing the sequence values. We recall that the probability of the random variable $\underline{X}$ taking a value $n$ was defined as, 
 \begin{equation}
@@ -380,42 +379,44 @@ P(\underline{X} = n) =\frac{f[N+1-n]}{\displaystyle{\sum_{k=1}^{N}f[N+1-k]}} = p
 
 \vspace{-.6cm}
 
-\textsc{Theorem {\ref{th:MeanConst}}:}
+\textsc{THEOREM~{\ref{thm-4.3}}:}
 \begin{eqnarray*}
 \displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) = 1 + \displaystyle{\frac{1}{R-1}} =  \displaystyle{\frac{R}{R-1}}
 \end{eqnarray*}
 
 \vspace{-.5cm}
 
-\begin{proof}\renewcommand{\qedsymbol}{}
+{\it Proof~:}
+
 We have,
 \begin{equation}
 E(\underline{X}) = \frac{\underline{S}_1}{\underline{S}}
 \end{equation}
-From eq.(\ref{nfnd}), we get
+From eq.~(\ref{B.13}), we get
 \begin{align}
 E(\underline{X}) &= \frac{(N+1)\bar{S} - \bar{S}_1}{\bar{S}}\nonumber\\
 &= (N+1) - \frac{\bar{S}_1}{\bar{S}}\nonumber\\
-&\sim (N+1) - (N - \frac{1}{R-1}) \hspace{0.1in}\textup{by eq.(\ref{expx}})\nonumber\\
+&\sim (N+1) - (N - \frac{1}{R-1}) \hspace{0.1in}\textup{by eq.~(\ref{eq-6.2}})\nonumber\\
 \Rightarrow  \lim_{N\rightarrow \infty}E(\underline{X}) &= 1 + \displaystyle{\frac{1}{R-1}} = \displaystyle{\frac{R}{R-1}}\label{eq-7.3}
 \end{align}
-\end{proof}
+\hfill{$\square$}\\
 
 \vspace{-.8cm}
 
-\textsc{Theorem {\ref{th:VarianceConstantY}}:}
+\textsc{THEOREM~{\ref{thm-4.4}}:}
 \begin{eqnarray*}
 \displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}
 \end{eqnarray*}
 
 \vspace{-.6cm}
 
-\begin{proof}\renewcommand{\qedsymbol}{}
+{\it Proof:}
+
 \begin{equation}
 Var(\underline{X}) = E(\underline{X}^2) - E(\underline{X})^2\label{eq-7.4}
 \end{equation}
 
-Using eq.(\ref{n2fnd}) we first obtain $E(\underline{X}^2)$.
+Using eq.~(\ref{B.14}) we first obtain $E(\underline{X}^2)$.
 
 \vspace{-.5cm}
 
@@ -434,25 +435,27 @@ E(\underline{X}^2) &= \frac{\bar{S}_2}{\underline{S}} \nonumber\\
 \Rightarrow \lim_{N \rightarrow \infty}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}\label{eq-7.5}
 \end{equation} 
 
-From eq.(\ref{ey2}) and eq.(\ref{meand}), we get 
+From eq.~(\ref{eq-7.5}) and eq.~(\ref{eq-7.6}), we get 
 \begin{align}
 Var(\underline{X}) &=& E(\underline{X}^2) - E(\underline{X})^2\nonumber\\
 &\rightarrow& 1 + \frac{3R-1}{(R-1)^2} - \frac{R^2}{(R-1)^2}\nonumber\\ 
 \Rightarrow \lim_{N \rightarrow \infty}Var(\underline{X}) &=& \frac{R}{(R-1)^2}\label{eq-7.6}
 \end{align}
-\end{proof}
+\hfill{$\square$}\\
 
-\vspace{-1cm}
+\vspace{-.8cm}
 
-Thus, we find that, the limit of the variance of the probability distribution with probability defined by eq.(\ref{prob}) to be a simple function $R$, the limit of the ratio of successive elements.
+Thus, we find that, the limit of the variance of the probability distribution with probability defined by eq.~(\ref{eq-7.1}) to be a simple function $R$, the limit of the ratio of successive elements.
 
-\section{Mean and Variance of discrete probability distributions induced by Fibonacci Sequence}\label{section-8}
+\vspace{-.2cm}
 
-Now, we look at the probability distribution induced by the standard Fibonacci sequence. For such a distribution, we obtain the value of mean and variance,using eq.(\ref{expx}) and eq.(\ref{ey2}) respectively, by using $a = 1 $, $b = 1$, and $R = \varphi$.
+\section{Mean and Variance of Discrete Probability Distributions Induced by Fibonacci Sequence}\label{section-8}
 
-\subsection{Distributions induced by Increasing\\ Sequence}\label{subsection-8.1}
+Now, we look at the probability distribution induced by the standard Fibonacci sequence. For such a distribution, we obtain the value of mean and variance,using eq.~(\ref{eq-6.2}) and eq.~(\ref{eq-7.5}) respectively, by using $a = 1 $, $b = 1$, and $R = \varphi$.
 
-By eq.(\ref{expx}) and eq.(\ref{varx}), we have 
+\subsection{Distributions Induced by Increasing\\ Sequence}\label{subsection-8.1}
+
+By eq.~(\ref{eq-6.2}) and eq.~(\ref{eq-6.5}), we have 
 $$
 \nonumber E(\bar{X})  \sim \mathcal{O}(N)
 $$
@@ -466,25 +469,27 @@ and
 
 Neal \cite{art1-key01} looks at the mean and variance of a Fibonacci distribution. It may be pointed out that the fact that the variance converges in this case was not observed by Neal. The above derivations show that, in this case, though the mean increases linearly as the length of the sequence, the variance converges to a simple function of the golden ratio $\varphi$.
 
-\subsection{Distributions induced by Decreasing\\ Sequence}\label{subsection-8.2}
-By eq.(\ref{meand}), we have
+\vspace{-.5cm}
+
+\subsection{Distributions Induced by Decreasing\\ Sequence}\label{subsection-8.2}
+By eq.~(\ref{eq-7.3}), we have
 \begin{equation}
 \nonumber \displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) =  \displaystyle{\frac{R}{R-1}} = \varphi + 1
  \end{equation}
 
-From eq.(\ref{VarY}), we have
+From eq.~(\ref{eq-7.6}), we have
 \begin{align}
 \displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &= \frac{R}{(R-1)^2} =\frac{\varphi}{(\varphi-1)^2} \nonumber \\
 \Rightarrow \displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &= 2\varphi + 1\label{eq-8.2}
 \end{align}
-Comparing eq.(\ref{varf}) and eq.(\ref{varyd}), we find that, in the case of the classical Fibonacci sequence, the variance of the distribution converges to the same value, irrespective of whether the probability values are increasing or decreasing.
+Comparing eq.~(\ref{eq-8.1}) and eq.~(\ref{eq-8.2}), we find that, in the case of the classical Fibonacci sequence, the variance of the distribution converges to the same value, irrespective of whether the probability values are increasing or decreasing.
 
 In the following sections, we make a few observations and remarks related to the classical Fibonacci sequence.
 
 \vspace{-.3cm}
 
 \section{Ratio of Variance to Mean}\label{section-9}
-We observe the curious fact that, from eq.(\ref{MeanNY}) and eq.(\ref{VarianceNY}),
+We observe the curious fact that, from eq.~(\ref{thm-4.1}) and eq.~(\ref{thm-4.1}),
 \begin{equation}
 \lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{R-1}\label{eq-9.1}
 \end{equation}
@@ -494,25 +499,26 @@ In the case $a = b = 1$, that is, in the case of the distribution induced by the
 \end{equation}
 Thus the ratio of the variance of $\underline{X}$ to the expectation of $\underline{X}$ also converges to the Golden Ratio, $\varphi$.
 
-\section{Optimality Probabilistic limit\\ properties of the Fibonacci\\ Sequence}\label{section-10}
+\section{Optimality Probabilistic Limit\\ Properties of the Fibonacci\\ Sequence}\label{section-10}
 In this section, we establish certain optimal probabilistic limit properties of the classical Fibonacci sequence. 
 
 \subsection{Mean}\label{subsection-10.1}
-\textsc{Theorem {\ref{th:MeanGoldenRatio}}:}
+\textsc{THEOREM~{\ref{thm-4.5}}:}
 {\fontsize{8}{9}\selectfont\begin{equation*}
 \max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N\right)} = \lim_{N \rightarrow \infty}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1
 \end{equation*}}
 
 \vspace{-1cm}
 
-\begin{proof}\renewcommand{\qedsymbol}{} 
- We know that 
+{\it Proof~:}
+
+We know that 
 \begin{align}
  R &\geq \varphi\nonumber\\
  \Rightarrow R-1 &\geq \varphi -1 \nonumber\\
 \Rightarrow \frac{1}{R-1} &\leq \frac{1}{\varphi-1}\label{eq-10.1}
  \end{align}
- But $\varphi$ = $\displaystyle{\frac{1}{\varphi-1}}$. \\Hence, from eq.(\ref{compare}), we get
+ But $\varphi$ = $\displaystyle{\frac{1}{\varphi-1}}$. \\Hence, from eq.~(\ref{eq-10.1}), we get
 {\fontsize{8}{9}\selectfont\begin{align}
 \frac{1}{R-1} \leq \varphi\nonumber\\
 \Rightarrow 1 + \frac{1}{R-1} &\leq 1+\varphi\label{eq-10.2}\\
@@ -521,14 +527,19 @@ In this section, we establish certain optimal probabilistic limit properties of 
 \end{align}}
 Thus, \\
 $\max{\left(\displaystyle{\lim_{N\rightarrow \infty}} E(\underline{X}): a, b \in \mathbb N\right)} = \displaystyle{\lim_{N \rightarrow \infty}}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1$
-\end{proof}
+
+\vspace{-.3cm}
+
+\hfill{$\square$}
+
+\vspace{-.3cm}
 
 \subsection{Variance}\label{subsection-10.2}
 
 Among the family of distributions, induced by second order linear recurrence relations with positive integer coefficients, $a$ and $b$, the Fibonacci sequence gives the maximum limit for $Var(\underline{X})$, i.e.\\
-\textsc{Theorem {\ref{th:VarianceGoldenRatio}}:}
+\textsc{THEOREM~{\ref{thm-4.6}}:}
 {\fontsize{7}{8}\selectfont\begin{align}
-\max{\left(\lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)}&= \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\label{eq-10.4}\\
+\max{\left(\lim_{N\rightarrow \infty} Var(\bar{X}): a,b \in \mathbb N\right)}&= \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\label{eq-10.4}\\
  &= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a,b=1\right) = 2\varphi + 1\label{eq-10.5}
 \end{align}}
 
@@ -536,33 +547,33 @@ Among the family of distributions, induced by second order linear recurrence rel
 
 We prove this as follows:
 
-\vspace{-.5cm}
+\vspace{-.3cm}
 
-\begin{proof}\renewcommand{\qedsymbol}{} 
+{\it Proof~:}
 \begin{align}
- R &\ge& \varphi\nonumber\\
+ R &\ge \varphi\nonumber\\
  \Rightarrow \frac{1}{R} &\le \frac{1}{\varphi}\nonumber\\
 \Rightarrow -\frac{1}{R} &\ge - \frac{1}{\varphi}\nonumber\\
 \Rightarrow 1-\frac{1}{R} &\ge 1 - \frac{1}{\varphi}\nonumber\\
 \Rightarrow R\left(1-\frac{1}{R}\right)^2 &\ge \varphi\left(1 - \frac{1}{\varphi}\right)^2\nonumber\\
 \Rightarrow \frac{1}{R\left(1-\frac{1}{R}\right)^2} &\le \frac{1}{\varphi\left(1 - \frac{1}{\varphi}\right)^2}\label{eq-10.6}
 \end{align}
-From eq.(\ref{vareq}), we get 
+From eq.~(\ref{eq-10.6}), we get 
 {\fontsize{8}{9}\selectfont\begin{align}
 \frac{R}{(R-1)^2} \le \frac{\varphi}{(\varphi-1)^2} = 2\varphi + 1\nonumber\\
 \Rightarrow \frac{R}{(R-1)^2} &\le 2\varphi + 1\label{eq-10.7}\\
 \Rightarrow \lim_{N\rightarrow \infty} \left(Var(\underline{X}):a,b\in \mathbb N\right) &\leq \lim_{N\rightarrow \infty}\left(Var(\underline{X}): a = b = 1\right)\label{eq-10.8}
 \end{align}}
-\end{proof}
+\hfill{$\square$}
 
-\vspace{-.7cm}
+\vspace{-.4cm}
 
-From eq.(\ref{varmaxi1}), we conclude that the limit variance of discrete probability distributions, induced by decreasing sequence and generated using second order linear recurrence, is maximum for the one generated using Fibonacci sequence.
+From eq.~(\ref{eq-10.8}), we conclude that the limit variance of discrete probability distributions, induced by decreasing sequence and generated using second order linear recurrence, is maximum for the one generated using Fibonacci sequence.
 
 In the next section, we consider the probability distributions generated by higher order recurrence relation with positive integer coefficients.
 
-\section{Higher order Recurrence relation with positive integer coefficients}\label{section-11}
-From Section.\ref{Increasing} and Section.\ref{Decreasing}, one can observe that the mean and variance of the probability distributions, induced by general second order linear recurrence relation with positive integer coefficients, depend only on the largest positive real root, $R$, of the associated ``characteristic equation''. It turns out that, even in the case of any other higher order recurrence relation with positive integer coefficients, it is the largest positive real root that determines the mean and variance. We now proceed to prove the same.
+\section{Higher Order Recurrence\\ Relation With Positive Integer\\ Coefficients}\label{section-11}
+From Section.~\ref{section-6} and Section.~\ref{section-7}, one can observe that the mean and variance of the probability distributions, induced by general second order linear recurrence relation with positive integer coefficients, depend only on the largest positive real root, $R$, of the associated ``characteristic equation''. It turns out that, even in the case of any other higher order recurrence relation with positive integer coefficients, it is the largest positive real root that determines the mean and variance. We now proceed to prove the same.
 Let 
 \begin{equation}
  f[n] = a_{n-1}f[n-1] + \ldots + a_{n-k}f[n-k] \hspace{0.3in} \forall a_i \in \mathbb{N}\label{eq-11.1}
@@ -572,32 +583,34 @@ be a $k^{th}$ order recurrence relation. The characteristic equation of this rec
     f(x) = x^k - a_{n-1}x^{k-1}- \ldots - a_{n-k}\label{eq-11.2}
  \end{equation}
  \setcounter{thm}{0}
-\begin{lem}\label{lemma-1}
-Eq.(\ref{higherordgenrec}), has atleast one real positive root and if $\alpha$ is the largest positive real root, then all the other roots (real and complex) lie within the disc $|z| < \alpha$.
+\begin{lem}\label{lemma-11.1}
+Eq.~(\ref{eq-11.2}), has atleast one real positive root and if $\alpha$ is the largest positive real root, then all the other roots (real and complex) lie within the disc $|z| < \alpha$.
 \end{lem}
 
-Using Lemma \ref{LemCharEq}, it is easy to infer the following:\\
+Using Lemma~\ref{lemma-11.1}, it is easy to infer the following:\\
 With $R = \alpha$,
 \begin{itemize}
-\item The same asymptotic relations as in eq.(\ref{meand})and eq.(\ref{VarY}) hold. 
-\item The same limiting properties as in eq.(\ref{MeanY}) and eq.(\ref{VarianceY}) hold.
-\item The optimality properties of the Fibonacci sequence as in Theorem \ref{th:MeanGoldenRatio} and in Theorem \ref{th:VarianceGoldenRatio} hold good. The reason is that, the largest positive real root, $\alpha > \varphi$, the golden ratio.
+\item The same asymptotic relations as in eq.~(\ref{eq-7.3}) and eq.~(\ref{eq-7.6}) hold. 
+\item The same limiting properties as in eq.~(\ref{eq-2.7}) and eq.~(\ref{eq-2.8}) hold.
+\item The optimality properties of the Fibonacci sequence as in Theorem~\ref{thm-4.5} and in Theorem~\ref{thm-4.6} hold good. The reason is that, the largest positive real root, $\alpha > \varphi$, the golden ratio.
 \end{itemize}
-Thus, Theorem \ref{th:MeanGoldenRatio} can be generalized as 
+Thus, Theorem ~\ref{thm-4.5} can be generalized as 
 \begin{align*}
 &\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a_i, i \in \mathbb N \right)}\\
  &= \lim_{N \rightarrow \infty}\left(E(\underline{X}):a_1 = a_2 = 1, a_{i}=0, \forall i> 2\right)\\
    &= \varphi + 1
 \end{align*}
-and Theorem \ref{th:VarianceGoldenRatio} can be further generalized as 
+and Theorem~\ref{thm-4.6} can be further generalized as 
 \begin{align*}
 &\max{\left(\lim_{N\rightarrow \infty}Var(\bar{X}): a_i, i \in \mathbb N\right)}\\
 &= \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a_i, i \in \mathbb N\right)}\\
 \nonumber &= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a_1=a_2=1, a_{i}=0,\forall i > 2\right) = 2\varphi + 1
 \end{align*}
 
-Now, we proceed to prove Lemma \ref{LemCharEq}.
-\begin{proof}\renewcommand{\qedsymbol}{} 
+Now, we proceed to prove Lemma~\ref{lemma-11.1}.
+
+{\it Proof~:}
+
 By Descartes rule of signs, there exists a positive root. Since, 
 
 \vspace{-.7cm}
@@ -611,12 +624,12 @@ Let $\alpha$ be the largest positive root.
 
 \vspace{-.3cm}
 
-\subsection{{\greekfont α} is simple root}\label{subsection-11.1}
+\subsection{\hspace{-.3cm}{\greekfont α} Is Simple Root}\label{subsection-11.1}
 
 \vspace{-.2cm}
 
 Claim: The root is simple. \\
-Let $f(x)$ be as in eq.(\ref{higherordgenrec}). Since $\alpha$ is a root, we have
+Let $f(x)$ be as in eq.~(\ref{eq-11.2}). Since $\alpha$ is a root, we have
  \begin{equation}
 \alpha^k - a_{n-1}\alpha^{k-1} + \ldots + a_{n-k} = 0\label{eq-11.3}
  \end{equation}
@@ -636,11 +649,11 @@ Multiplying by $\alpha$, we get
  &\Rightarrow \alpha^{k} <  a_{n-1}\alpha^{k-1} + \ldots + a_{n-k+1}\alpha + a_{n-k}\nonumber\\
  &\Rightarrow\alpha^{n} < \alpha^{n} \nonumber
 \end{align}
-This contradicts eq.(\ref{alpharoot}). Hence $\alpha$ must be a simple root.
+This contradicts eq.~(\ref{eq-11.3}). Hence $\alpha$ must be a simple root.
 
-\subsection{All roots lie within circle of radius |{\greekfont α}|}\label{subsection-11.2}
+\subsection{All Roots Lie Within Circle of Radius |{\greekfont α}|}\label{subsection-11.2}
 
-Now, we prove that all other roots of eq.(\ref{higherordgenrec}) lie within the circle of radius $\alpha$. Consider eq.(\ref{higherordgenrec}), the characteristic equation of the corresponding $k^{th}$ order recurrence relation with positive integer coefficients. Since $\alpha$ is a root, 
+Now, we prove that all other roots of eq.~(\ref{eq-11.2}) lie within the circle of radius $\alpha$. Consider eq.~(\ref{eq-11.2}), the characteristic equation of the corresponding $k^{th}$ order recurrence relation with positive integer coefficients. Since $\alpha$ is a root, 
    \begin{equation*}
      f(\alpha) = 0
    \end{equation*}
@@ -650,7 +663,7 @@ Also, we have
   \Rightarrow   f(x) &\ge 0, \hspace{0.3in} \forall x \ge \alpha \label{eq-11.6}\\
   \textup{and}\hspace{0.1in} f(x) &> 0  \hspace{0.3in} \forall x > \alpha \label{eq-11.7}          
  \end{align}
-Let $\beta$ be any root (real or complex) of eq.(\ref{higherordgenrec}). Clearly, $\beta$ cannot be zero, because,
+Let $\beta$ be any root (real or complex) of eq.~(\ref{eq-11.2}). Clearly, $\beta$ cannot be zero, because,
  \begin{equation}\nonumber
  f(0) = -a_{n-k} < 0
   \end{equation}
@@ -671,7 +684,7 @@ Reason: Suppose $b$ $>$ $\alpha$.\\
               \Rightarrow b^{k}-a_{n-1}b^{k-1} - \ldots - a_{n-k}b^{n-k} &\leq 0 \nonumber\\
   \Rightarrow f(b) &\leq 0\label{eq-11.8} 
  \end{align}
-However, since $b$ $>$ $\alpha$, by eq.(\ref{functiongreaterroots}), $f(b)$ $>$ 0. Thus, we get a contradiction and hence $b$ $\le$ $\alpha$.
+However, since $b$ $>$ $\alpha$, by eq.~(\ref{eq-11.7}), $f(b)$ $>$ 0. Thus, we get a contradiction and hence $b$ $\le$ $\alpha$.
 
 Claim: $b$ = $\alpha$ \\
 Since $\beta$ is a root, we have,
@@ -684,7 +697,7 @@ Since we have assumed that $|\beta|$=$b$=$a$,
 \alpha^k &= |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}\beta^{n-k}|
 \end{align*}
 {\fontsize{8}{9}\selectfont\begin{align}
-a_{n-1}\alpha^{k-1}+ \ldots + a_{n-k} &=  |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}| \hspace{0.1cm}\textup{by \hspace{0.1cm} eq.(\ref{alpharoot})} \label{eq-11.9}\\
+a_{n-1}\alpha^{k-1}+ \ldots + a_{n-k} &=  |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}| \hspace{0.1cm}\textup{by \hspace{0.1cm} eq.~(\ref{eq-11.3})} \label{eq-11.9}\\
 a_{n-1}|\beta|^{k-1}+ \ldots + a_{n-k} &=  |a_{n-1}\beta^{k-1}+ \ldots + a_{n-k}|\label{eq-11.10}
 \end{align}}
 $\Rightarrow a_n-1\beta^{k-1}, \ldots, a_{n-k}$ are all complex numbers in the same direction. \\
@@ -700,7 +713,7 @@ Thus, based on the above claims, we find that
 \item all roots not equal to $\alpha$ are inside the circle $|z|$ = $\alpha$.
 \end{itemize}
 
-\subsection{{\greekfont α} is strictly greater than the golden\\ ratio  {\it {\greekfont φ}}}\label{subsection-11.3}
+\subsection{\hspace{-.3cm}{\greekfont α} is Strictly Greater Than the Golden\\ Ratio  {\it {\greekfont φ}}}\label{subsection-11.3}
 We prove that the largest positive real root of the characteristic equation, corresponding to higher order linear recurrence relation with integer coefficients, is greater than the golden ratio $\varphi$.
 $$
 \alpha^{k} =  a_{n-1}\alpha^{k-1} + \ldots + a_{n-k}\alpha^{n-k}
@@ -718,7 +731,7 @@ As $a_{n-1}$, $a_{n-2}$ are positive integers, we see that,
 \end{align}
 From the fact that, $\varphi$, the golden ratio, is the largest positive root of $x^2-x-1 = 0$ and that $x^2-x-1 > 0$ for $x > \varphi$, it follows that
 $\alpha$ is always greater than $\varphi$.
-\end{proof}
+\hfill{$\square$}
 
 \section{Convergence in Distribution}\label{section-12}
 It must be noted that the distribution  $\{p_{_{\underline{N}}}(n)\}, 1 \leq n \leq N$, converges to a geometric distribution on $\mathbb N = \{1,2,3, \ldots\}$. More precisely, we have the following:\\
@@ -771,7 +784,7 @@ Since $\displaystyle{\lim_{N \rightarrow \infty}}\rho^N = 0$ as $\rho = \display
 \begin{equation}
 \displaystyle{\lim_{N \rightarrow \infty}}p_{_{\underline{N}}}(n) = \rho^{n}\left(\displaystyle{\frac{1-\rho}{\rho}}\right)\label{eq-12.5}
 \end{equation}
-From eq.(\ref{pn}) and eq.(\ref{ProbConverge}) we see that
+From eq.~(\ref{eq-12.1}) and eq.~(\ref{eq-12.5}) we see that
 \begin{equation}
 \displaystyle{\lim_{N \rightarrow \infty}}p_{_{\underline{N}}}(n) = p(n) \hspace{0.2in} \forall n \in \mathbb N\label{eq-12.6}
 \end{equation}
@@ -785,7 +798,9 @@ In the previous subsection, we observed that the distributions generated by seco
 \item $E(\underline{X}^2)$ converges to $E(Y^2)$ (and hence $Var(\underline{X})$ converges to $Var(Y)$).
 \end{itemize}
 Now, we prove that all the moments of $\underline{X}$ converge to the corresponding moment of $Y$, as $N \rightarrow \infty$.
-\begin{proof}\renewcommand{\qedsymbol}{} 
+
+{\it Proof~:}
+
 For any positive integer $k$, we have,
 \begin{equation}
 E(\underline{X}^k)  \sim  \displaystyle{\frac{\displaystyle{\sum_{n=1}^{N}}n^k R^{N+1-n}}{\displaystyle{\sum_{n=1}^{N}}R^{N+1-n}}}\label{eq-13.1}
@@ -798,7 +813,7 @@ Also,
 \begin{equation}
 \displaystyle{\sum_{n=1}^{N}}n^kR^{N+1-n} = R^{N+1}\displaystyle{\sum_{n=1}^{N}n^kR^{-n}}\label{eq-13.3}
 \end{equation}
-Substituting eq.(\ref{sumR1}) and eq.(\ref{nsumR1}) in eq.(\ref{Moments}), we get
+Substituting eq.~(\ref{eq-13.2}) and eq.~(\ref{eq-13.3}) in eq.~(\ref{eq-13.1}), we get
 \begin{eqnarray}
 E(\underline{X}^k) &\sim& \left(\displaystyle{\frac{R^{N+1}\displaystyle{\sum_{n=1}^{N}n^kR^{-n}}}{R^{N+1}-R}}\right)(R-1)\nonumber\\
 &=& \left(\displaystyle{\frac{R^{N+1}\displaystyle{\sum_{n=1}^{N}n^kR^{-n}}}{R^{N+1}(1-R^{-N})}}\right)(R-1)\nonumber\\
@@ -814,11 +829,13 @@ Thus, we have for every non-negative integer $k$,
  $E(\underline{X}^k) \longrightarrow E(Y^k),$ 
 \end{center}
 showing that all the moments of $\underline{X}$ converge to the corresponding moments of $Y$. 
-\end{proof}
+\hfill{$\square$}
 
-\subsection{Limits of Moments in  the case of\\ classical Fibonacci sequence}\label{subsection-13.1}
+\subsection{Limits of Moments in the Case of\\ Classical Fibonacci Sequence}\label{subsection-13.1}
 The moments of the probability distribution induced by classical Fibonacci sequence converge to a linear function of the Golden ratio, $\varphi$.
-\begin{proof}\renewcommand{\qedsymbol}{} 
+
+{\it Proof~:}
+
 We have,
 \begin{equation}\nonumber
 \displaystyle{\sum_{n=1}^{\infty}}x^n = \displaystyle{\frac{x}{1-x}} \hspace{0.3in} \textup{for} \hspace{0.2in} |x| < 1.
@@ -827,7 +844,7 @@ which on differentiation gives
 \begin{equation}
 \displaystyle{\sum_{n=1}^{\infty}}nx^{n-1} = \displaystyle{\frac{1}{(1-x)^2}}\label{eq-13.4}
 \end{equation}
-From eq.(\ref{ndiff1}), we get
+From eq.~(\ref{eq-13.4}), we get
 \begin{equation}
 \displaystyle{\sum_{n=1}^{\infty}}nx^{n} = \displaystyle{\frac{x}{(1-x)^2}}\label{eq-13.5}
 \end{equation}
@@ -835,7 +852,7 @@ Then,
 \begin{equation}
 \displaystyle{\sum_{n=1}^{\infty}}nx^{n}\left(\displaystyle{\frac{1-x}{x}}\right) = \displaystyle{\frac{1}{(1-x)}}\label{eq-13.6}
 \end{equation}
-Similarly, differentiating eq.(\ref{ndiff2}), we get
+Similarly, differentiating eq.~(\ref{eq-13.5}), we get
 \begin{eqnarray}
 \displaystyle{\sum_{n=1}^{\infty}}n^2x^{n-1} &=& \displaystyle{\frac{(1-x)^2 + 2x(1-x)}{(1-x)^4}}\nonumber\\
 = \displaystyle{\frac{(1-x)+2x}{(1-x)^3}}&=& \displaystyle{\frac{1+x}{(1-x)^3}}\label{eq-13.7}
@@ -853,7 +870,7 @@ We shall now show, by induction, that in general, for any positive integer $k$,
 \displaystyle{\sum_{n=1}^{\infty}}n^k x^n \left(\frac{1-x}{x}\right) = \displaystyle{\frac{P_{_{k-1}}(x)}{(1-x)^k}}\label{eq-13.9}
 \end{equation}
 where $P_{_{k-1}}(x)$ is a polynomial in $x$ of degree $k-1$.
-We have from eq.(\ref{ndiff3}) and eq.(\ref{ndiff4}), that the result eq.(\ref{genind}) is true for $k = 1$ and $k = 2$. Thus, it is enough to show that if eq.(\ref{genind}) is true for some $k = r$, then it is also true for $k = r+1$. Suppose eq.(\ref{genind}) is true for $k = r$, then
+We have from eq.~(\ref{eq-13.6}) and eq.~(\ref{eq-13.7}), that the result eq.~(\ref{eq-13.9}) is true for $k = 1$ and $k = 2$. Thus, it is enough to show that if eq.~(\ref{eq-13.9}) is true for some $k = r$, then it is also true for $k = r+1$. Suppose eq.~(\ref{eq-13.9}) is true for $k = r$, then
 \begin{equation}\nonumber
 \displaystyle{\sum_{n=1}^{\infty}}n^r x^n \left(\frac{1-x}{x}\right) = \displaystyle{\frac{P_{_{r-1}}(x)}{(1-x)^r}}
 \end{equation}
@@ -861,7 +878,7 @@ Hence, we get,
 \begin{equation}
 \displaystyle{\sum_{n=1}^{\infty}}n^r x^n = \frac{xP_{_{r-1}}(x)}{(1-x)^r}\label{eq-13.10}
 \end{equation}
-On differentiating eq.(\ref{ndiff6}), we get,
+On differentiating eq.~(\ref{eq-13.10}), we get,
 {\fontsize{8}{9}\selectfont\begin{align}
 \displaystyle{\sum_{n=1}^{\infty}}n^{r+1}x^{n-1} &= \frac{(1-x)^{r+1}\{P_{_{r-1}}(x)+P_{_{r-1}}'(x)\}+ xP_{_{r-1}}(x)r(1-x)^r}{(1-x)^{2r+2}}\nonumber\\
 &= \frac{(1-x)\{P_{_{r-1}}(x) + xP_{_{r-1}}'(x)\}+ xP_{_{r-1}}(x)r}{(1-x)^{r+2}}\nonumber\\
@@ -871,7 +888,7 @@ where
 \begin{equation}
 P_{_r}(x) = (1-x)\{P_{_{r-1}}(x) + xP_{_{r-1}}'(x)\} + xP_{_{r-1}}(x)r\label{eq-13.12}
 \end{equation}
-is a polynomial of degree $r$. From eq.(\ref{ndiff6sol}), we get,
+is a polynomial of degree $r$. From eq.~(\ref{eq-13.11}), we get,
 \begin{equation}\nonumber
 \displaystyle{\sum_{n=1}^{\infty}}n^{r+1}x^n = \frac{xP_{_r}(x)}{(1-x)^{r+2}}
 \end{equation}
@@ -879,8 +896,8 @@ and hence,
 \begin{equation}\nonumber
 \displaystyle{\sum_{n=1}^{\infty}}n^{r+1}x^n\left(\frac{1-x}{x}\right) = \frac{P_{_r}(x)}{(1-x)^{r+1}}
 \end{equation}
-and thus proving that if eq.(\ref{genind}) is true for $k = r$, then it is also true for $k = r+1$. Thus by induction, we get eq.(\ref{genind}) is true for all $k$.
-From eq.(\ref{genind}), we get
+and thus proving that if eq.~(\ref{eq-13.9}) is true for $k = r$, then it is also true for $k = r+1$. Thus by induction, we get eq.~(\ref{eq-13.9}) is true for all $k$.
+From eq.~(\ref{eq-13.9}), we get
 
 \vspace{-1cm}
 
@@ -897,7 +914,9 @@ and hence
 \displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}^k) = E(Y^k) = \displaystyle{\frac{P_{_{k-1}}(\rho)}{(1-\rho)^k}}
 \end{equation}
 
-eq.(\ref{ndiff8}) is a rational function of $\rho$ and hence a rational function of $R$. In particular, for the classical Fibonacci sequence, we have
+\vspace{-.3cm}
+
+eq.~(\ref{eq-13.13}) is a rational function of $\rho$ and hence a rational function of $R$. In particular, for the classical Fibonacci sequence, we have
 
 \vspace{-.6cm}
 
@@ -919,18 +938,23 @@ Since $\displaystyle{\frac{1}{\varphi}} = \varphi-1$, we get
 \vspace{-.6cm}
 
 But, since $\varphi^2 = \varphi + 1$, all powers $\varphi^j$ for $j\ge2$ can be expressed as linear polynomials in $\varphi$ and hence we get any polynomial in $\varphi$ can be rewritten as a linear polynomial in $\varphi$. Thus,
+
+\vspace{-.9cm}
+
 \begin{align}
  \displaystyle{\lim_{N \rightarrow \infty}} E(\underline{X}^k) &= E(Y)\label{eq-13.15}\\
          &= A_k\varphi + B_k\label{eq-13.16}
 \end{align}
 
-\end{proof}
+\vspace{-.6cm}
 
-\vspace{-1.3cm}
+\hfill{$\square$}
+
+\vspace{-.5cm}
 
 We now provide a detailed analysis about the location of the maximum in the sequence resulting from self linear convolution of linear recurrence relations with positive integer sequences.
 
-\section{Linear Convolution of linear\\ recurrence relations with\\ themselves}\label{section-14}
+\section{Linear Convolution of Linear\\ Recurrence Relations With\\ Themselves}\label{section-14}
 In the previous sections, we proved certain optimal properties of the classical Fibonacci sequence among the general $k$-th order recurrence relations with positive integer coefficients, with respect to the discrete probability distributions that they induced. In this section we bring out another fascinating property of the classical Fibonacci sequence. Let $x_{_n}$ be a finite length integer sequence, of length $N$, generated by a $k$-th order recurrence relation with positive integer coefficients. The location of maxima in the sequence, $y_{_n}$ resulting from the linear convolution of $x_{_n}$ with itself, can be only one of the following:
 \begin{itemize}
 \item 2$N$-1, when the largest positive real root of the ``\textit{characteristic equation}'' is less than 2 
@@ -941,7 +965,7 @@ In the previous sections, we proved certain optimal properties of the classical 
 We prove the above in the following sections. 
 
 \section{Some Notations and Definitions}\label{section-15}
-As mentioned earlier, while investigating the use of integer sequences for window functions in digital filtering \cite{arul}, we observed that most of the integer integer sequences generated by $k$-th order recurrence relations, with positive integer coefficients, are non-decreasing. However, conventional classical window functions are symmetric, bounded and smooth. Though, integer sequences, mentioned as above, are bounded for finite length, they are not symmetric. Hence to be used as window functions, integer sequences are symmetrized. However, this does not guarantee a smooth profile for most of the integer sequences. In order to get a smooth profile, we do one of the following:
+As mentioned earlier, while investigating the use of integer sequences for window functions in digital filtering \cite{art1-key02}, we observed that most of the integer integer sequences generated by $k$-th order recurrence relations, with positive integer coefficients, are non-decreasing. However, conventional classical window functions are symmetric, bounded and smooth. Though, integer sequences, mentioned as above, are bounded for finite length, they are not symmetric. Hence to be used as window functions, integer sequences are symmetrized. However, this does not guarantee a smooth profile for most of the integer sequences. In order to get a smooth profile, we do one of the following:
 \begin{itemize}
 \item Perform linear convolution after symmetrizing the integer sequence about, say, $N/2$.
 \item Perform linear convolution of the non-decreasing integer sequence and then symmetrically extend the resulting sequence about its maximum.
@@ -979,15 +1003,15 @@ y_{_n} - y_{_{n-1}} &= \displaystyle{\sum_{k=1}^{n-1}}x_{_k}x_{_{n-k}} -  \displ
 \Rightarrow y_{_n} &> y_{_{n-1}} \hspace{0.2in} 1\leq n \leq N\label{eq-15.10}
 \end{align}
 
-From eq.(\ref{FornlessthanN}), we observe that the convolution sum is an increasing sequence for $1\leq n\leq N$.\\
-Now we look at the eq.\ref{Fromnto2N}, for $j\geq 1$. 
+From eq.~(\ref{eq-15.10}), we observe that the convolution sum is an increasing sequence for $1\leq n\leq N$.\\
+Now we look at the eq.~\ref{eq-15.7}, for $j\geq 1$. 
 \begin{equation}
 y_{_{N+j}} - y_{_{N+j-1}} = \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\label{eq-15.11}
 \end{equation}
 
 \vspace{-.3cm}
 
-At this juncture, we revisit the general second order recurrence relation with positive integer coefficients, given in eq.(\ref{GenSecOrd}). We evaluate eq.(\ref{GenSecOrd}) for different possible values of $a$ and $b$ and hence compute the difference as in eq.(\ref{yNDifference}).
+At this juncture, we revisit the general second order recurrence relation with positive integer coefficients, given in eq.~(\ref{eq-15.3}). We evaluate eq.~(\ref{eq-15.3}) for different possible values of $a$ and $b$ and hence compute the difference as in eq.~(\ref{eq-15.11}).
 
 \vspace{-.3cm}
 
@@ -1002,12 +1026,12 @@ At this juncture, we revisit the general second order recurrence relation with p
 \end{itemize}
 
 \section{\underline{$a=1, b =1$}:}\label{section-16}
-We look at case(\ref{b1}) that corresponds to $a = b = 1$. Eq.(\ref{GenSecOrd}), in this case, generates the elements of classical Fibonacci sequence. Eq.(\ref{GenSecOrd}) can be rewritten as
+We look at case~(\ref{1a}) that corresponds to $a = b = 1$. Eq.~(\ref{eq-15.3}), in this case, generates the elements of classical Fibonacci sequence. Eq.~(\ref{eq-15.3}) can be rewritten as
 \begin{equation}
 x_{_n} = x_{_{n-1}} + x_{_{n-2}}\label{eq-16.1}
 \end{equation}
 $R$, the largest positive real root in the case of classical Fibonacci sequence corresponds to the golden ratio, $\varphi = \displaystyle{\left(\frac{1+\sqrt5}{2}\right)}$,
-With the above conditions, eq.\ref{yNDifference} gives
+With the above conditions, eq.~\ref{eq-15.11} gives
 
 \begin{align}
 y_{_{N+j}} - y_{_{N+j-1}} &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\label{eq-16.2}\\
@@ -1027,7 +1051,7 @@ We find that the term on the right hand side, in the above equation is greater t
 \begin{equation}
 y_{_{N+j}} - y_{_{N+j-1}} > 0\label{eq-16.3}
 \end{equation}
-From eq.(\ref{jLessThan2Nminus1}), we find the sequence $y_{_n}$ to be increasing for $1 \leq j \leq N-1$. The only pair of elements of $y_{_n}$ that needs to be compared are $y_{_{2N}}$ and $y_{_{2N-1}}$. From eq.(\ref{FirstDiff}), we get
+From eq.~(\ref{eq-16.3}), we find the sequence $y_{_n}$ to be increasing for $1 \leq j \leq N-1$. The only pair of elements of $y_{_n}$ that needs to be compared are $y_{_{2N}}$ and $y_{_{2N-1}}$. From eq.~(\ref{eq-16.2}), we get
 For\hspace{0.1in} $N-1 \leq j \leq N$,\hspace{0.1in} the above corresponds to
 \begin{align}
 y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-16.4}\\
@@ -1038,18 +1062,19 @@ We know that \hspace{0.1in} $x_{{n}} < x_{_{n+1}}$, \hspace{0.1in} and hence, fr
 \begin{equation}
 \Rightarrow y_{_{2N}} - y_{_{2N-1}}< 0 \label{eq-16.5}
 \end{equation}
-From eq.(\ref{y2NDifference}), we find that $y_{_{2N}} < y_{_{2N-1}}$. Thus, in the sequence resulting from the linear convolution of finite length classical Fibonacci sequence with itself, the maximum is located at $2N-1$, where $N$ is the length of the sequence $x_{_n}$.
+From eq.~(\ref{eq-16.5}), we find that $y_{_{2N}} < y_{_{2N-1}}$. Thus, in the sequence resulting from the linear convolution of finite length classical Fibonacci sequence with itself, the maximum is located at $2N-1$, where $N$ is the length of the sequence $x_{_n}$.
 
 \section{\underline{$a=1, b = 2$}:}\label{section-17}
-Now, we explore what happens when $a=1, b=2$ in eq.(\ref{GenSecOrd}), as mentioned in case(\ref{b2}). The corresponding second order recurrence relation is as below:
+Now, we explore what happens when $a=1, b=2$ in eq.~(\ref{eq-15.3}), as mentioned in case(\ref{b2}). The corresponding second order recurrence relation is as below:
 \begin{equation}
 x_{_n} =  x_{_{n-1}} + 2x_{{n-2}}\label{eq-17.1}
 \end{equation}
-In this case, the ``$characteristic$'' equation is $x^2 - x - 2 = 0$ and the largest positive root, $R$, is 2. To obtain the location of the maximum in the linear convolution of eq.\ref{a1b2Recurrence} with itself, we adopt the same procedure as classical Fibonacci sequence.
+In this case, the ``$characteristic$'' equation is $x^2 - x - 2 = 0$ and the largest positive root, $R$, is 2. To obtain the location of the maximum in the linear convolution of eq.~\ref{eq-17.1} with itself, we adopt the same procedure as classical Fibonacci sequence.
 {\fontsize{9}{9}\selectfont\begin{align}
 y_{_{N+j}} - y_{_{N+j-1}} &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
 &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}(x_{_{N+j-1-k}}+2x_{_{N+j-2-k}}) -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
-&= \displaystyle{\sum_{k=j}^{N}}2x_{_{k}}x_{_{N+j-2-k}} \hspace{0.1in}- x_{_{j-1}}x_{_N}\label{eq-17.2}
+&= \displaystyle{\sum_{k=j}^{N}}2x_{_{k}}x_{_{N+j-2-k}} \hspace{0.1in}- x_{_{j-1}}x_{_N}\label{eq-17.2}\\
+&=\label{eq-17.3}\\
 \end{align}}
 Suppose, $j \leq N-1$,
 \begin{align}
@@ -1061,14 +1086,14 @@ y_{_{N+j}} - y_{_{N+j-1}}&\geq 2x_{_{N-1}}x_{_{j-1}} + x_{_N}x_{_{j-2}} - x_{_{j
 Rearranging the terms, we get,
 \begin{align}
 &= 2x_{_{N-1}}(x_{_{j-2}} - 2x_{_{j-3}}) + 4x_{_{j-3}}(x_{_{N-1}} - x_{_{N-2}})\nonumber\\
-y_{_{N+j}} - y_{_{N+j-1}}&> 0\label{eq-17.3}
+y_{_{N+j}} - y_{_{N+j-1}}&> 0\label{eq-17.4}
 \end{align}
-From eq.(\ref{a1b2jLessThan2Nminus1}), we find the sequence $y_{_n}$ to be an increasing one for $1 \leq j \leq N-1$. The only elements of $y_{_n}$ that need to be compared are $y_{_{2N}}$ and $y_{_{2N-1}}$.
+From eq.~(\ref{eq-17.4}), we find the sequence $y_{_n}$ to be an increasing one for $1 \leq j \leq N-1$. The only elements of $y_{_n}$ that need to be compared are $y_{_{2N}}$ and $y_{_{2N-1}}$.
 
 For\hspace{0.1in} $N-1 \leq j \leq N$,\hspace{0.1in} the above corresponds to
 \begin{align}
-y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-17.4}\\
-&= x_{_N}(x_{_N} - 2x_{_{N-1}})\label{eq-17.5}
+y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-17.5}\\
+&= x_{_N}(x_{_N} - 2x_{_{N-1}})\label{eq-17.6}
 \end{align} 
 
 \vspace{-.6cm}
@@ -1081,59 +1106,62 @@ y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-17.4}\\
 
 \vspace{-.3cm}
 
- This can be easily proved by mathematical induction.
-\begin{proof}\renewcommand{\qedsymbol}{}
+This can be easily proved by mathematical induction.
+ 
+{\it Proof~:}
+
 Let $k$ = 2. With standard initial conditions 1, 1 one can observe that $f_2 < \frac{1}{2}f_3$ and $f_2 < 2f_1$.\\
 Let $k$ = 4. The sequence elements with initial conditions 1, 1 turn out to be 1, 1, 3, 5. We observe that $f_4 < \frac{1}{2}f_5$ and $f_4 < 2f_3$. \\
 For any $k$, we prove the following by induction. 
 \begin{equation}
-f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}\label{eq-17.6}
+f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}\label{eq-17.7}
 \end{equation}
-Let eq.(\ref{induction}) be true for $k$-1. So, we have
+Let eq.~(\ref{eq-17.7}) be true for $k$-1. So, we have
 \begin{equation}
-f_{_{2k-2}} < \min\{2f_{_{2k-3}}, \frac{1}{2}f_{_{2k-1}}\}\label{eq-17.7}
+f_{_{2k-2}} < \min\{2f_{_{2k-3}}, \frac{1}{2}f_{_{2k-1}}\}\label{eq-17.8}
 \end{equation}
-We now prove that eq.(\ref{induction}) is true for $k$ i.e.,
+We now prove that eq.~(\ref{eq-17.7}) is true for $k$ i.e.,
 \begin{equation}\nonumber
 f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}
 \end{equation}
 \begin{equation}
-f_{_{2k}} = f_{_{2k-1}} + 2f_{_{2k-2}}\label{eq-17.8}
+f_{_{2k}} = f_{_{2k-1}} + 2f_{_{2k-2}}\label{eq-17.9}
 \end{equation}
 
-\textup{We~know~that~from~eq.(\ref{inductionkminus1})},\quad $f_{_{2k-2}} < \frac{1}{2}f_{_{2k-1}}$ 
+\textup{We~know~that~from~eq.~(\ref{eq-17.8})},\quad $f_{_{2k-2}} < \frac{1}{2}f_{_{2k-1}}$ 
 
 \vspace{-.6cm}
 
 \begin{align}
 \textup{Hence}\quad f_{_{2k}} &< f_{_{2k-1}} + f_{_{2k-1}}\nonumber\\
-\Rightarrow  f_{_{2k}} &< 2f_{_{2k-1}}\label{eq-17.9}
+\Rightarrow  f_{_{2k}} &< 2f_{_{2k-1}}\label{eq-17.10}
 \end{align}
 Similarly,
 \begin{equation}
-f_{_{2k+1}} = f_{_{2k}} + 2f_{_{2k-1}}\label{eq-17.10}
+f_{_{2k+1}} = f_{_{2k}} + 2f_{_{2k-1}}\label{eq-17.11}
 \end{equation}
 
-\textup{From~eq.(\ref{f2klessthan2f2kminus1})},\quad $f_{_{2k}} < 2f_{_{2k-1}}$
+\textup{From~eq.(\ref{eq-17.10})},\quad $f_{_{2k}} < 2f_{_{2k-1}}$
 
 \vspace{-.6cm}
 
 \begin{align}
 \textup{Hence}\quad f_{_{2k}} &< f_{_{2k+1}} - f_{_{2k}} \nonumber\\
-\Rightarrow 2f_{_{2k}} &< f_{_{2k+1}} \label{eq-17.11}\\
+\Rightarrow 2f_{_{2k}} &< f_{_{2k+1}}\nonumber\\
 \Rightarrow f_{_{2k}} &< \frac{1}{2}f_{_{2k+1}}\label{eq-17.12}
 \end{align}
 Thus we find that, $f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}$. From this one can see that $y_{_n}$ has its maximum either at 2$N$-1 or 2$N$ depending on whether the sequence length is odd or even.
-\end{proof}
+
+\hfill{$\square$}
 
 \vspace{-.6cm}
 
 \section{\underline{$a=1, b > 2$}:}\label{section-18}
-With $a=1, b > 2$ in eq.(\ref{GenSecOrd}), we look at case(\ref{bg2}). The corresponding second order recurrence relation is as below:
+With $a=1, b > 2$ in eq.~(\ref{eq-15.3}), we look at case(\ref{bg2}). The corresponding second order recurrence relation is as below:
 \begin{equation}
 x_{_n} =  x_{_{n-1}} + bx_{{n-2}}\label{eq-18.1}
 \end{equation}
-In this case, the ``$characteristic$'' equation is $x^2 - x - b = 0$ and the largest positive root, $R$, greater than 2. We now proceed to obtain the location of the maximum in the linear convolution of eq.(\ref{a1bg2Recurrence}) with itself.
+In this case, the ``$characteristic$'' equation is $x^2 - x - b = 0$ and the largest positive root, $R$, greater than 2. We now proceed to obtain the location of the maximum in the linear convolution of eq.~(\ref{eq-18.1}) with itself.
 {\fontsize{9}{10}\selectfont\begin{align}
 y_{_{N+j}} - y_{_{N+j-1}} &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
 &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}(x_{_{N+j-1-k}}+b x_{_{N+j-2-k}}) -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
@@ -1151,14 +1179,14 @@ Rearranging the terms, we get,
 &= bx_{_{N-1}}(x_{_{j-2}} - x_{_{j-3}}) + b^2x_{_{j-3}}(x_{_{N-1}} - x_{_{N-2}})\label{eq-18.3}\\
 y_{_{N+j}} - y_{_{N+j-1}}&> 0\label{eq-18.4}
 \end{align}
-From eq.(\ref{a1bg2jLessThan2Nminus1}), we find the sequence $y_{_n}$ to be an increasing one for $1 \leq j \leq N-1$. The only elements of $y_{_n}$ that need to be compared are $y_{_{2N}}$ and $y_{_{2N-1}}$.
+From eq.~(\ref{eq-18.4}), we find the sequence $y_{_n}$ to be an increasing one for $1 \leq j \leq N-1$. The only elements of $y_{_n}$ that need to be compared are $y_{_{2N}}$ and $y_{_{2N-1}}$.
 For\hspace{0.1in} $N-1 \leq j \leq N$,\hspace{0.1in} the above corresponds to
 \begin{align}
 y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-18.5}\\
 &= x_{_N}(x_{_N} - 2x_{_{N-1}})\label{eq-18.6}\\
 &= x_{_N}(x_{_{N-1}}+ b x_{_{N-2}}- 2x_{_{N-1}})\label{eq-18.7}
 \end{align} 
-Let us consider the sequence generated by eq.(\ref{a1bg2Recurrence}), with $b=3$. The elements of the sequence, with initial values being 1, 1, are
+Let us consider the sequence generated by eq.~(\ref{eq-18.1}), with $b=3$. The elements of the sequence, with initial values being 1, 1, are
 
 \vspace{-.7cm}
 
@@ -1168,28 +1196,28 @@ Let us consider the sequence generated by eq.(\ref{a1bg2Recurrence}), with $b=3$
 
 \vspace{-.7cm}
 
-From the above, we find that $b x_{_{n-2}}$ is always greater than $x_{_{n-1}}$. Thus eq.\ref{a1bg2testequation} is always positive. Hence, we find that $y_{_{2N}} > y_{_{2N-1}}$. Thus, the maximum is located at 2$N$ and not at 2$N-1$. A formal proof by induction can be obtained along the same lines of mathematical induction, as found in section. \ref{aequals1bequals2}.
+From the above, we find that $b x_{_{n-2}}$ is always greater than $x_{_{n-1}}$. Thus eq.~\ref{eq-18.7} is always positive. Hence, we find that $y_{_{2N}} > y_{_{2N-1}}$. Thus, the maximum is located at 2$N$ and not at 2$N-1$. A formal proof by induction can be obtained along the same lines of mathematical induction, as found in section.~\ref{section-17}.
 
 \vspace{-.5cm}
 
 \section*{\underline{{$a>1$}}:}
-We now present the case when $a > 1$ and $b \in \mathbb N$, in eq.(\ref{GenSecOrd}).
+We now present the case when $a > 1$ and $b \in \mathbb N$, in eq.~(\ref{eq-15.3}).
 {\fontsize{8}{9}\selectfont\begin{align}
 y_{_{N+j}} - y_{_{N+j-1}} &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
-&=\displaystyle{\sum_{k=j}^{N}}x_{_{k}}(a x_{_{N+j-1-k}}+b x_{_{N+j-2-k}}) -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
-&= \displaystyle{\sum_{k=j}^{N}}(a-1)x_{_{k}}x_{_{N+j-1-k}} + \displaystyle{\sum_{k=j}^{N}}bx_{_{k}}x_{_{N+j-2-k}} \hspace{0.1in}- x_{_{j-1}}x_{_N}\label{eq-18.8}
+&=\displaystyle{\sum_{k=j}^{N}}x_{_{k}}(a x_{_{N+j-1-k}}+b x_{_{N+j-2-k}}) -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\label{eq-18.8}\\
+&= \displaystyle{\sum_{k=j}^{N}}(a-1)x_{_{k}}x_{_{N+j-1-k}} + \displaystyle{\sum_{k=j}^{N}}bx_{_{k}}x_{_{N+j-2-k}} \hspace{0.1in}- x_{_{j-1}}x_{_N}\label{eq-18.9}
 \end{align}}
 When $a >1$, the term $x_{_{j-1}}x_{_N}$ gets accounted for by $\displaystyle{\sum_{k=j}^{N}}(a-1)x_{_{k}}x_{_{N+j-1-k}}$, with $k=N$. The remaining terms are all positive. Hence $y_{_n}$ increases till $2N-1$. Now, we compare $y_{_{2N-1}}$ and $y_{_{2N}}$.
 For\hspace{0.1in} $N-1 \leq j \leq N$,\hspace{0.1in} the above corresponds to
 \begin{align}
-y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-18.9}\\
-&= x_{_N}(x_{_N} - 2x_{_{N-1}})\label{eq-18.10}\\[.5cm]
-&= x_{_N}(a x_{_{N-1}}+ b x_{_{N-2}}- 2x_{_{N-1}})\label{eq-18.11}\\
-&= x_{_N}((a-2) x_{_{N-1}}+ b x_{_{N-2}})\label{eq-18.12}
+y_{_{2N}} - y_{_{2N-1}} &= x_{_N}^2 - 2x_{_N}x_{_{N-1}}\label{eq-18.10}\\
+&= x_{_N}(x_{_N} - 2x_{_{N-1}})\label{eq-18.11}\\[.5cm]
+&= x_{_N}(a x_{_{N-1}}+ b x_{_{N-2}}- 2x_{_{N-1}})\label{eq-18.12}\\
+&= x_{_N}((a-2) x_{_{N-1}}+ b x_{_{N-2}})\label{eq-18.13}
 \end{align} 
-With $a > 1$ and $b \in \mathbb N$, eq.(\ref{ag1btestequation}) is always positive. Hence $y(n)$ has its maximum at $y_{_{2N}}$.
+With $a > 1$ and $b \in \mathbb N$, eq.~(\ref{eq-18.13}) is always positive. Hence $y(n)$ has its maximum at $y_{_{2N}}$.
 
-\section{Self linear convolution of higher order linear recurrence relations with integer coefficients}\label{section-19}
+\section{Self Linear Convolution of Higher\\ Order Linear Recurrence\\ Relations With Integer\\ Coefficients}\label{section-19}
 
 In the previous section, we found that the sequence resulting from the self linear convolution of second order linear recurrence (with positive integer coefficients) has its maximum located at either 2$N$-1 or 2$N$ is determined by the
 
@@ -1237,13 +1265,13 @@ In this work, on the one hand, we have explored and proved certain optimal proba
 
 Besides proving certain optimal probabilistic limit properties, we also analyzed the second order linear recurrence relation with positive integer coefficients, from the point of view of self linear convolution. We established that the sequence resulting from the self linear convolution of any higher order linear recurrence relation with integer coefficients, can have its maximum either at 2$N$ or 2$N$-1. A more interesting observation in this regard is that when the largest positive real root of such recurrence relations is 2, the location of maximum depends on whether the sequence length of $x_{_n}$ is odd or even.
 
-\section*{Appendix A.\label{section-app-a}}
+\section*{Appendix \thnum{A}.\label{section-app-a}}
 %~ \appendix
 \section*{Some Preliminaries.}\label{app-1}
 
 We list some of the identities used in this paper in the following sections.
 \begin{equation*}
-G(x) = \displaystyle{\sum_{n=1}^{N}}x^n = x+x^2+\ldots+x^N = \displaystyle{\frac{x^{N+1}-x}{x-1}}\tag{A.1}\label{eq-A.1}
+G(x) = \displaystyle{\sum_{n=1}^{N}}x^n = x+x^2+\ldots+x^N = \displaystyle{\frac{x^{N+1}-x}{x-1}}\tag{A.1}\label{A.1}
 \end{equation*}
 Let $G'(x)$ be the derivative of $G(x)$. We have,
 
@@ -1256,13 +1284,13 @@ G'(x) = 1+2x+\ldots+Nx^{N-1} &= \displaystyle{\frac{(x-1)\{(N+1)x^{N}-1\}- (x^{N
 Hence, we get,
 \begin{align*}
 xG'(x) = \displaystyle{\sum_{n=1}^{N}}nx^n &= x+2x^2+\ldots+ Nx^N \nonumber\\
-&=\displaystyle{\frac{Nx^{N+2}-(N+1)x^{N+1}+x}{(x-1)^2}}\tag{A.2}\label{eq-A.2}
+&=\displaystyle{\frac{Nx^{N+2}-(N+1)x^{N+1}+x}{(x-1)^2}}\tag{A.2}\label{A.2}
 \end{align*}
 From this we get,
 \begin{equation*}
 (xG'(x))' = 1+2^2x+\ldots+N^2x^{N-1}\tag{A.3}\label{eq-A.3}
 \end{equation*}
-which by eq.~(\ref{eq-A.4}) is 
+which by eq.~(\ref{A.2}) is 
 {\fontsize{6}{7}\selectfont
 \begin{align*}
 &\nonumber(xG'(x))' \\
@@ -1280,99 +1308,99 @@ and hence,
 {\fontsize{6}{7}\selectfont\begin{align*}
 &\nonumber x(xG'(x))'\\
  &= \displaystyle{\sum_{n=1}^{N}}n^2x^n \\
-&= \displaystyle{\frac{N^2\{x^{N+3}-2x^{N+2}+x^{N+1}\}+ N\{-2x^{N+2}+2x^{N+1}\}+\{x^{N+2}+x^{N+1}+x^2+x\}}{(x-1)^3}}\tag{A.4}\label{eq-A.4}
+&= \displaystyle{\frac{N^2\{x^{N+3}-2x^{N+2}+x^{N+1}\}+ N\{-2x^{N+2}+2x^{N+1}\}+\{x^{N+2}+x^{N+1}+x^2+x\}}{(x-1)^3}}\tag{A.4}\label{A.4}
 \end{align*}}
 
 \vspace{-.8cm}
 
-\section*{Appendix B.}\label{app-b}
-\section*{Useful Finite Sums.}
+\section*{Appendix \thnum{B}.\label{section-app-b}}
+\section*{Useful Finite Sums.}\label{app-b}
 In this section, we obtain the expressions for some of the finite sums relevant to the work presented in this paper. 
-\subsection*{B.1.$\displaystyle{\sum_{n=1}^Nf[n]}$}\label{sub-app-B-1}
+\subsection*{\thnum{B.1.} $\displaystyle{\sum_{n=1}^Nf[n]}$ \label{sub-app-B-1}}
 Let $\bar{S}$ be the sum of the sequence $f[n]$ defined as
-\begin{equation*}
-\bar{S} =\displaystyle{\sum_{n=1}^N f[n]} = \displaystyle{\sum_{n=1}^N \frac{1}{\sqrt{a^2 + 4b}}(R^n - R_S^n)}\tag{B.1}\label{eq-B.1}
-\end{equation*}
-From eq.(\ref{SumxN}), we get
-\begin{equation*}
-G(R) = R + R^2 + R^3 + \ldots + R^N =\displaystyle{ \sum_{n=1}^N R^n = \frac{R^{N+1}- R}{R-1}}\tag{B.2}\label{eq-B.2}
-\end{equation*}
-\begin{equation*}
-G(R_S) = R_S + R_S^2 + R_S^3 + \ldots + R_S^N = \displaystyle{\sum_{n=1}^N R_S^n = \frac{R_S^{N+1}- R_S}{R_S-1}}\tag{B.3}\label{eq-B.3}
-\end{equation*}
-Substituting eq.(\ref{sumGR}) and eq.(\ref{sumGR1}) eq.(\ref{fsum}), we get,
-\begin{align*}
+\begin{equation}
+\bar{S} =\displaystyle{\sum_{n=1}^N f[n]} = \displaystyle{\sum_{n=1}^N \frac{1}{\sqrt{a^2 + 4b}}(R^n - R_S^n)}\tag{B.1}\label{B.1}
+\end{equation}
+From eq.~(\ref{A.1}), we get
+\begin{equation}
+G(R) = R + R^2 + R^3 + \ldots + R^N =\displaystyle{ \sum_{n=1}^N R^n = \frac{R^{N+1}- R}{R-1}}\tag{B.2}\label{B.2}
+\end{equation}
+\begin{equation}
+G(R_S) = R_S + R_S^2 + R_S^3 + \ldots + R_S^N = \displaystyle{\sum_{n=1}^N R_S^n = \frac{R_S^{N+1}- R_S}{R_S-1}}\tag{B.3}\label{B.3}
+\end{equation}
+Substituting eq.~(\ref{B.2}) and eq.~(\ref{B.3}) eq.~(\ref{B.1}), we get,
+\begin{align}
 \bar{S} =& \displaystyle{\frac{1}{\sqrt{a^2 + 4b}}}\displaystyle{\sum_{n=1}^N{(G(R) -  G(R_S))}}\nonumber\\
-  = & \displaystyle{\frac{1}{\sqrt{a^2 + 4b}}} \left(\displaystyle{\frac{R^{N+1}- R}{R-1}} - \displaystyle{\frac{R_S^{N+1}- R_S}{R_S-1}}\right)\tag{B.4}\label{eq-B.4}
-\end{align*}
+  = & \displaystyle{\frac{1}{\sqrt{a^2 + 4b}}} \left(\displaystyle{\frac{R^{N+1}- R}{R-1}} - \displaystyle{\frac{R_S^{N+1}- R_S}{R_S-1}}\right)\tag{B.4}\label{B.4}
+\end{align}
 We have,
-\begin{align*}
+\begin{align}
 \nonumber R^2 &= \displaystyle{\frac{2a^2+4b+2a\sqrt{a^2+4b}}{4}}\\ 
 \nonumber \Rightarrow R^2 &> b\\
-\Rightarrow |\frac{R_S}{R}| &= \frac{b}{R^2} < 1  \tag{B.5}\label{eq-B.5}
-\end{align*}
-Hence, taking $R^{N+1}$ common from eq.(\ref{ratio}), we see that,
-\begin{equation*}
- \bar{S} \sim \displaystyle{\frac{1}{\sqrt{a^2 + 4b}}}\left( \frac{R^{N+1}}{R-1}\right)\tag{B.6}\label{eq-B.6}
-\end{equation*}
+\Rightarrow |\frac{R_S}{R}| &= \frac{b}{R^2} < 1\tag{B.5}\label{B.5}
+\end{align}
+Hence, taking $R^{N+1}$ common from eq.~(\ref{B.4}), we see that,
+\begin{equation}
+ \bar{S} \sim \displaystyle{\frac{1}{\sqrt{a^2 + 4b}}}\left( \frac{R^{N+1}}{R-1}\right)\tag{B.6}\label{B.6}
+\end{equation}
 
 \subsection*{B.2.\quad $\displaystyle{\sum_{n=1}^{N}n f[n]}$}\label{app-B-B.2}
 Let $\bar{S}_1$ be defined as 
-\begin{equation*}
-\bar{S}_1 = \displaystyle{\sum_{n=1}^N nf[n]}\tag{B.7}\label{eq-B.7}
-\end{equation*}
-\begin{align*}
+\begin{equation}
+\bar{S}_1 = \displaystyle{\sum_{n=1}^N nf[n]}\tag{B.7}\label{B.7}
+\end{equation}
+\begin{align}
 \bar{S}_1 &= \displaystyle{\sum_{n=1}^N nf[n]} \nonumber\\
 &= \frac{1}{\sqrt{a^2 + 4b}} \displaystyle{\sum_{n=1}^N{(n R^n -  n(R_S)^n)}}\nonumber
-\end{align*}
-By eq.(\ref{SumNxN}), we get
-\begin{equation*}
-\displaystyle{\sum_{n=1}^N }nR^n = \frac{NR^{N+2}-(N+1)R^{N+1}+R}{(R-1)^2}\tag{B.8}\label{eq-B.8}
-\end{equation*}
+\end{align}
+By eq.~(\ref{A.2}), we get
+\begin{equation}
+\displaystyle{\sum_{n=1}^N }nR^n = \frac{NR^{N+2}-(N+1)R^{N+1}+R}{(R-1)^2}\tag{B.8}\label{B.8}
+\end{equation}
 We can get a similar expression involving the other root $R_S$. Using the fact that the absolute value of the ratio of $R_S$ and $R$ is less than 1, we obtain 
-\begin{equation*}
-\bar{S}_1 \sim \frac{1}{\sqrt{a^2 + 4b}}\left(\frac{NR^{N+2}-(N+1)R^{N+1}+R}{(R-1)^2}\right)\tag{B.9}\label{eq-B.9}
-\end{equation*}
+\begin{equation}
+\bar{S}_1 \sim \frac{1}{\sqrt{a^2 + 4b}}\left(\frac{NR^{N+2}-(N+1)R^{N+1}+R}{(R-1)^2}\right)\tag{B.9}\label{B.9}
+\end{equation}
 
 \subsection*{B.3.\quad $\displaystyle{\sum_{n=1}^{N}n^2 f[n]}$.}
 Let $\bar{S}_2$ be defined as
- \begin{equation*}
- \bar{S}_2 = \displaystyle{\sum_{n=1}^{N}n^2 f[n]}\tag{B.10}\label{eq-B.10}
- \end{equation*}
- Using eq.(\ref{SumN2xN}) we get 
+ \begin{equation}
+ \bar{S}_2 = \displaystyle{\sum_{n=1}^{N}n^2 f[n]}\tag{B.10}\label{B.10}
+ \end{equation}
+ Using eq.~(\ref{A.4}) we get 
  {\fontsize{5}{6}\selectfont\begin{equation*}
- \bar{S}_2 \sim \frac{N^2\{R^{N+3}-2R^{N+2}+R^{N+1}\}+N\{-2R^{N+2}+2R^{N+1}\}+ \{R^{N+2}+R^{N+1}+R^2+R\}}{(R-1)^3}\tag{B.11}\label{eq-B.11}
+ \bar{S}_2 \sim \frac{N^2\{R^{N+3}-2R^{N+2}+R^{N+1}\}+N\{-2R^{N+2}+2R^{N+1}\}+ \{R^{N+2}+R^{N+1}+R^2+R\}}{(R-1)^3}\tag{B.11}\label{B.11}
 \end{equation*}}
 
 \vspace{-.5cm}
 
 \subsection*{B.4.~$\displaystyle{\sum_{n=1}^{N}f[N+1-n]}$.}
 Let $\underline{S}$ be defined as
-\begin{align*}
-\underline{S} &= \displaystyle{\sum_{n=1}^{N}f[N+1-n]}\tag{B.12}\label{eq-B.12}\\
-\textup{Clearly,} \hspace{0.3in} \bar{S} = \displaystyle{\sum_{n=1}^{N}f[n]} &= \displaystyle{\sum_{n=1}^{N}f[N+1-n]} = \underline{S}\tag{B.13}\label{eq-B.13}
-\end{align*}
-Thus the sum $\underline{S}$ = $\bar{S}$ , where $\bar{S}$ is as in eq.(\ref{SumIncrease}).
+\begin{align}
+\underline{S} &= \displaystyle{\sum_{n=1}^{N}f[N+1-n]}\tag{B.12}\label{B.12}\\
+\textup{Clearly,} \hspace{0.3in} \bar{S} = \displaystyle{\sum_{n=1}^{N}f[n]} &= \displaystyle{\sum_{n=1}^{N}f[N+1-n]} = \underline{S}\tag{B.13}\label{B.13}
+\end{align}
+Thus the sum $\underline{S}$ = $\bar{S}$ , where $\bar{S}$ is as in eq.~(\ref{B.6}).
 
 \subsection*{B.5.~$\displaystyle{\sum_{n=1}^{N}nf[N+1-n]}$.}
 Let $\underline{S}_1$ denote $\displaystyle{\sum_{n=1}^{N}nf[N+1-n]}$
-\begin{align*}
+\begin{align}
 &\underline{S}_1 = \displaystyle{\sum_{n=1}^{N}nf[N+1-n]}\nonumber\\
 &= -\displaystyle{\sum_{n=1}^{N}(-n)f[N+1-n]}\nonumber\\
 &= - \displaystyle{\sum_{n=1}^{N}(N+1-n)f[N+1-n]} + (N+1)\displaystyle{\sum_{n=1}^{N}f[N+1-n]}\nonumber\\
 &= - \displaystyle{\sum_{k=1}^{N}kf[k] + (N+1)\bar{S}}\nonumber\\
-&\Rightarrow  \underline{S}_1 = (N+1)\bar{S} - \bar{S}_1\tag{B.14}\label{eq-B.14}
-\end{align*}
+&\Rightarrow  \underline{S}_1 = (N+1)\bar{S} - \bar{S}_1\tag{B.14}\label{B.14}
+\end{align}
 
 \subsection*{B.6.~$\displaystyle{\sum_{n=1}^{N}n^2f[N+1-n]}$.}
 Let $\underline{S}_2$ be defined as
-\begin{align*}
+\begin{align}
 &\underline{S}_2  = \displaystyle{\sum_{n=1}^{N}n^2f[N+1-n]}\nonumber\\
 &= \displaystyle{\sum_{n=1}^{N}(N+1-n)^2f[n]}\nonumber\\
 &= (N+1)^2 \displaystyle{\sum_{n=1}^Nf[n]} - 2(N+1)\displaystyle{\sum_{n=1}^N nf[n]} + \displaystyle{\sum_{n=1}^N n^2f[n]}\nonumber\\
-&\Rightarrow \underline{S}_2 = (N+1)^2\bar{S} -2(N+1)\bar{S}_1 + \bar{S}_2\tag{B.15}\label{eq-B.15}
-\end{align*}
-where $\bar{S}_1$ and $\bar{S}_2$ are as in eq.(\ref{nfn}) and in eq.(\ref{n2fn}) respectively.
+&\Rightarrow \underline{S}_2 = (N+1)^2\bar{S} -2(N+1)\bar{S}_1 + \bar{S}_2\tag{B.15}\label{B.15}
+\end{align}
+where $\bar{S}_1$ and $\bar{S}_2$ are as in eq.~(\ref{B.7}) and in eq.~(\ref{B.9}) respectively.
 
 
 \section{Fibonacci Sequence}\label{section-21}
@@ -1411,9 +1439,25 @@ In this work, we unfold yet another interesting result related to Fibonacci sequ
 \bibitem{art1-key02} Arulalan Rajan, \textit{Some applications of Integer sequences in signal processing and their implications on performance and architecture}, PhD thesis, Indian Institute of Science, September 2011.
 
 \bibitem{art1-key03} N.~J.~A.~Sloane, \textit{The On-Line Encyclopedia of Integer Sequences}, Ed.2008, published electronically at 
+
 \url{http://oeis.org/A000045}
 
 \bibitem{art1-key04} S.~Vajda, \textit{{F}ibonacci and {L}ucas Numbers, and the Golden Section: Theory and Applications}, Dover, 2008.
+
+MSC2010: 11B37, 11B39, 60C05, 60C09, 60F99
+
+Centre for Electronics Design and Technology, Indian Institute of Science, Bangalore-560012, India
+
+{\it E-mail address:} \url{perarulalan@gmail.com}, {mrarul, rvrao}@cedt.iisc.ernet.in
+
+CONSULTANT, 165, 11TH MAIN, SARASWATHIPURAM, MYSORE, INDIA
+
+{\it E-mail address~:} ashokrao.mys@gmail.com
+
+CENTRE FOR ELECTRONICS DESIGN AND TECHNOLOGY, INDIAN INSTITUTE OF SCIENCE, BANGALORE - 560012, India
+
+{\it E-mail address~:} hsjam@cedt.iisc.ernet.in
+
 
 \end{thebibliography}
 
