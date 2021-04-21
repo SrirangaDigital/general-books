@@ -28,10 +28,15 @@ Divecha Centre for Climate Change, IISc Bengaluru
 \end{center}
 
 
+\vspace{2cm}
+
+\centerline{\url{https://doi.org/10.34048/2021.1.F2}}
 
 \vfill
 
-
+%~ \begin{textblock}{16}(0,9)
+%~ \noindent\centerimg[width=\paperwidth]{src/Figures/tcp.jpg}
+%~ \end{textblock}
 
 
 \newpage
@@ -174,11 +179,11 @@ It is useful to reflect for a few minutes on why this strategy is correct. There
 
 Finally, we describe a game that can hone student's abilities to abstractly model a simple real-life problem and also recognize the similarities between this problem and one already solved. We ask students to consider a vendor who sells milk from a large tanker. The vendor extracts milk using one of two jugs, one with capacity $m$ liters and \underline{another} with capacity $n$ liters, where $m$ and $n$ are distinct positive integers. (Attentive students and the reader might start seeing connections with the previous game already!) The jugs have no intermediate markings, so the only known volumes of milk the vendor can directly measure is by filling a jug to capacity ($m$ liters or $n$ liters). We ask students to design an algorithm to give a customer exactly $k$ liters of milk using the two jugs, or to report that this is impossible. Note that $k$ must also be a positive integer.
 
-As an example, see if you can find a solution when $m = 5, n = 7$, and $k = 1$. When we present this problem to students, some of them indicate that they have seen similar puzzles before, but usually with specific numbers only (not in the general form with numbers $m, n,$ and $k$). Although this is not a 2-player (or multi-player) game, we once again ask students to work in groups with about 4 members each. Most groups, especially those in which a student has seen this type of puzzle before, quickly realize that the vendor can measure some volumes (other than $m$ and $n$) by pouring milk from one jug to the other. Specifically, if the vendor fills the 7-liter jug to capacity from the tank, then pours the milk from this jug into the 5-liter jug until it reaches capacity, then the 7-liter jug now contains precisely 2 liters of milk. At this point, some groups recognize that the vendor has computed the difference (7 – 5 = 2) of the given numbers $m = 5$ and $n = 7$, and they sense there are similarities with Game 2.
+As an example, see if you can find a solution when\break $m = 5, n = 7$, and $k = 1$. When we present this problem to students, some of them indicate that they have seen similar puzzles before, but usually with specific numbers only (not in the general form with numbers $m, n,$ and $k$). Although this is not a 2-player (or multi-player) game, we once again ask students to work in groups with about 4 members each. Most groups, especially those in which a student has seen this type of puzzle before, quickly realize that the vendor can measure some volumes (other than $m$ and $n$) by pouring milk from one jug to the other. Specifically, if the vendor fills the 7-liter jug to capacity from the tank, then pours the milk from this jug into the 5-liter jug until it reaches capacity, then the 7-liter jug now contains precisely 2 liters of milk. At this point, some groups recognize that the vendor has computed the difference (7 – 5 = 2) of the given numbers $m = 5$ and $n = 7$, and they sense there are similarities with Game 2.
 
 Indeed, it is possible to precisely measure only those volumes k that are multiples of the GCD of $m$ and $n$. In the above example, the GCD of 5 and 7 is 1, and hence it is possible to measure out 1 liter. Algorithm to compute GCD of two numbers using repeated subtraction is given in Table~\ref{chapter-3-table-5} (Appendix) and its optimized version using remainder operation is given in Table~\ref{chapter-3-table-6}. To find a sequence of steps, students must create an appropriate \textit{abstract model} to represent the current volume of milk in the two jugs as they pour milk in and out of them. The simplest mathematical representation is a tuple \textit{(p, q)}, where \textit{p} represents the volume of milk in the jug with capacity $m$ $(0 \leq p \leq m)$, and $q$ represents the volume of milk in the jug with capacity $n$ $(0 \leq q \leq n)$. Students with weak mathematical maturity may not use such a concise notation, but we do observe many groups developing similar notation. We present the tuple notation when we discuss our approach in Part 2 of this exercise.
 
-In this notation, the vendor starts with the tuple (0, 0) representing the situation where both jugs are initially empty. We now describe a sequence of steps the vendor can perform to measure 1 liter of milk for the customer. The sequence starts with these four steps: (0, 0)$\rightarrow$(5, 0)$\rightarrow$(0, 5)$\rightarrow$(5, 5)$\rightarrow$(3, 7). Thus, starting with both jugs empty, we first fill the 5-liter jug to capacity (step 1), leading to the tuple (5, 0). Then, (step 2) we transfer this milk to the 7-liter jug (0, 5), then (step 3) we again fill the 5-liter jug to capacity (5, 5). Lastly (step 4), we transfer milk from the 5-liter jug to the 7-liter jug until it reaches capacity. At this point, 2 liters of milk have been transferred, leading to the tuple (3, 7). The remaining steps are: (3, 7) $\rightarrow$ (3, 0)  (0, 3) $\rightarrow$ (5, 3) $\rightarrow$ (1, 7). (Note that we go from (3, 7) to (3, 0) by emptying all the milk in the 7-liter jug back into the milk tanker!) At this point, the 5-liter jug contains precisely 1 liter of milk, as desired by the customer.
+In this notation, the vendor starts with the tuple\break (0, 0) representing the situation where both jugs are initially empty. We now describe a sequence of steps the vendor can perform to measure 1 liter of milk for the customer. The sequence starts with these four steps:\break (0, 0)$\rightarrow$(5, 0)$\rightarrow$(0, 5)$\rightarrow$(5, 5)$\rightarrow$(3, 7). Thus, starting with both jugs empty, we first fill the 5-liter jug to capacity (step 1), leading to the tuple (5, 0). Then, (step 2) we transfer this milk to the 7-liter jug (0, 5), then (step 3) we again fill the 5-liter jug to capacity (5, 5). Lastly (step 4), we transfer milk from the 5-liter jug to the 7-liter jug until it reaches capacity. At this point, 2 liters of milk have been transferred, leading to the tuple (3, 7). The remaining steps are: (3, 7) $\rightarrow$ (3, 0)  (0, 3) $\rightarrow$ (5, 3) $\rightarrow$ (1, 7). (Note that we go from (3, 7) to (3, 0) by emptying all the milk in the 7-liter jug back into the milk tanker!) At this point, the 5-liter jug contains precisely 1 liter of milk, as desired by the customer.
 
 By allowing students enough time (about 20 minutes) to experiment with several examples, a few groups realize that they can ``make progress" (i.e., measure new volumes of milk) using a systematic process which lies at the heart of the solution (i.e., the while-loop) shown in Table~\ref{chapter-3-table-4}. Note that we are assuming that $m < n$. We leave it as an exercise for you to see if the same algorithm also works when $n < m$.
 
@@ -203,7 +208,7 @@ When we discuss our approach, we work out several examples using the tuple notat
 
 We have found the GALA approach effective in maintaining student engagement in classes of more than 50 students, both during the initial game-play (Part 1) and during the subsequent explanations (Part 2). Student feedback on this approach is consistently positive, and students demonstrate greater confidence in attacking algorithmic design challenges.
 
-As an instructor, you may wonder whether this approach can be applied to ``all algorithms in the syllabus". We have found that GALA is useful for only a few algorithms, so it cannot be applied wholesale for all topics in a typical \textit{Algorithms} course. Nevertheless, as we will demonstrate over the next few articles, it can be used to enhance student learning for several interesting algorithms.\raisebox{-.1cm}{\includegraphics[scale=.9]{src/Figures/circledC.eps}}
+As an instructor, you may wonder whether this approach can be applied to ``all algorithms in the syllabus". We have found that GALA is useful for only a few algorithms, so it cannot be applied wholesale for all topics in a typical \textit{Algorithms} course. Nevertheless, as we will demonstrate over the next few articles, it can be used to enhance student learning for several interesting algorithms.
 
 \section{Appendix}
 
@@ -225,6 +230,10 @@ As an instructor, you may wonder whether this approach can be applied to ``all a
 \caption{Algorithm for computing GCD using remainder}\label{chapter-3-table-6}
 \includegraphics[scale=.65]{src/Figures/chap2/table6.jpg}
 \end{table}
+
+\hfill\raisebox{.3cm}{\includegraphics[scale=.9]{src/Figures/circledC.eps}}
+
+\vspace{-.3cm}
 
 
 \begin{thebibliography}{99}

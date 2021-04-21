@@ -8,7 +8,7 @@
 
 \vskip -6pt
 
-Department of Electronic Systems Engineering,\\ Indian Institute of Science,\\ Bengaluru - 560012, India 
+Department of Electronic Systems Engineering,\\ Indian Institute of Science,\\ Bengaluru 
 
 \end{center}
 
@@ -18,18 +18,23 @@ Department of Electronic Systems Engineering,\\ Indian Institute of Science,\\ B
 
 \vskip -6pt
 
-Consultant, 165, 11th main,\\ Saraswathipuram,\\ Mysore, India
+Consultant, 165, 11th main,\\ Saraswathipuram,\\ Mysuru
 
 \end{center}
 
-
+\centerline{\url{https://doi.org/10.34048/2021.1.F1}}
 
 \vfill
 
 
 
 
+
+
 \newpage
+
+
+%~ \newpage
 
 \begin{multicols}{2}
 
@@ -77,7 +82,7 @@ The classical Fibonacci sequence \cite{art1-key03}, \cite{art1-key04}, is the po
 with initial conditions $f[1] = 1$, $f[2] = 1$.
 The ratio of successive terms of the Fibonacci sequence converges to the well known golden ratio $\varphi$, i.e.,
 \begin{equation}
-\lim_{k \rightarrow \infty} \frac{f[k+1]}{f[k]} = \varphi = \displaystyle{\frac{1 + \sqrt5}{2}}\label{eq-2.2}
+\Lim_{k \rightarrow \infty} \frac{f[k+1]}{f[k]} = \varphi = \displaystyle{\frac{1 + \sqrt5}{2}}\label{eq-2.2}
 \end{equation}
 
 \vspace{-.2cm}
@@ -110,7 +115,7 @@ P(\bar{X} = n) = p_{_{\bar{N}}}(n); \hspace{0.3in} 1 \leq n\leq N.\label{eq-2.4}
  
 In his work, Neal \cite{art1-key01} showed that, $E(\bar{X})$, the mean or expectation of $\bar{X}$, grows linearly as $N$ increases and hence 
 \begin{equation}
-\lim_{N\rightarrow \infty} E(\bar{X}) = \infty\label{eq-2.5}
+\Lim_{N\rightarrow \infty} E(\bar{X}) = \infty\label{eq-2.5}
 \end{equation} 
 
 \vspace{-.4cm} 
@@ -122,10 +127,10 @@ P(\underline{X} = n) = \frac{f[N+1-n]}{\displaystyle{\sum_{k =1}^N f[k]}} = p_{_
 
 For such a random variable, $\underline{X}$, Neal \cite{art1-key01} observed the following limiting properties:
 \begin{equation}
-\lim_{N\rightarrow \infty} E(\underline{X}) = \varphi + 1\label{eq-2.7}
+\Lim_{N\rightarrow \infty} E(\underline{X}) = \varphi + 1\label{eq-2.7}
 \end{equation}
 \begin{equation}
-\lim_{N\rightarrow \infty} Var(\underline{X}) = 2\varphi + 1\label{eq-2.8}
+\Lim_{N\rightarrow \infty} Var(\underline{X}) = 2\varphi + 1\label{eq-2.8}
 \end{equation}
 where $E(\underline{X})$ denotes the mean or expectation of $\underline{X}$ and $Var(\underline{X})$ denotes the variance of $\underline{X}$.
 
@@ -180,9 +185,9 @@ We further observe that the ratio of successive terms of this sequence converges
 \vspace{-.3cm}
 
 \begin{equation}
-\lim_{k \rightarrow \infty} \frac{f[k+1]}{f[k]} = R(a,b)\label{eq-3.5}
+\Lim_{k \rightarrow \infty} \frac{f[k+1]}{f[k]} = R(a,b)\label{eq-3.5}
 \end{equation}
-As in section \ref{section-2}, for any positive integer $N$, consider the above sequence, of length $N$, i.e.,
+As in section~\ref{section-2}, for any positive integer $N$, consider the above sequence, of length $N$, i.e.,
 \begin{center}
 $f[1],f[2], \ldots, f[N]$
 \end{center} 
@@ -218,13 +223,13 @@ Analogous to eq.~(\ref{eq-2.5}), we have,
 %~ \setcounter{section}{0}
 \begin{thm} \label{thm-4.1}
 \begin{equation*}
-\lim_{N \rightarrow \infty} E(\bar{X}) = \infty
+\Lim_{N \rightarrow \infty} E(\bar{X}) = \infty
 \end{equation*}
 \end{thm}
 Even though $E(\bar{X})$ grows as $N$ increases, its variance still converges. In fact, we have,\\ 
  \begin{thm}\label{thm-4.2}
 \begin{equation*}
-\lim_{N \rightarrow \infty} Var(\bar{X}) = \frac{R}{(R-1)^2}
+\Lim_{N \rightarrow \infty} Var(\bar{X}) = \frac{R}{(R-1)^2}
 \end{equation*}
  \end{thm}
 
@@ -234,30 +239,30 @@ In the case of $\underline{X} $, both $E(\underline{X})$ and $Var(\underline{X})
 \begin{thm}
  \label{thm-4.3}
 \begin{equation}\nonumber
-\lim_{N \rightarrow \infty} E(\underline{X}) = \frac{R}{(R-1)}
+\Lim_{N \rightarrow \infty} E(\underline{X}) = \frac{R}{(R-1)}
 \end{equation}
  \end{thm}
  \begin{thm}\label{thm-4.4}
 \begin{equation}\nonumber
-\lim_{N \rightarrow \infty} Var(\underline{X}) = \frac{R}{(R-1)^2}
+\Lim_{N \rightarrow \infty} Var(\underline{X}) = \frac{R}{(R-1)^2}
 \end{equation}
  \end{thm}
  
  \vspace{-.3cm}
  
-We, then, easily observe using these properties that when $a = b = 1$, the limits of eq.(\ref{eq-4.1}), eq.(\ref{eq-4.1}) and eq.(\ref{eq-4.1}) reduce to the limits, eq.~(\ref{eq-2.5}), eq.~(\ref{eq-2.7}), eq.~(\ref{eq-2.8}), obtained for the Fibonacci sequence, by Neal \cite{art1-key01}, described in section~\ref{section-2}. Using eq.~(\ref{eq-3.3}) and eq.~(\ref{eq-3.4}), we can prove the following optimality properties of the Fibonacci sequence:
+We, then, easily observe using these properties that when $a = b = 1$, the limits of Theorem.~(\ref{thm-4.1}), Theorem.~(\ref{thm-4.2}) and Theorem.~(\ref{thm-4.3}) reduce to the limits, eq.~(\ref{eq-2.5}), eq.~(\ref{eq-2.7}), eq.~(\ref{eq-2.8}), obtained for the Fibonacci sequence, by Neal \cite{art1-key01}, described in section~\ref{section-2}. Using eq.~(\ref{eq-3.3}) and eq.~(\ref{eq-3.4}), we can prove the following optimality properties of the Fibonacci sequence:
 \begin{thm}
  \label{thm-4.5}
 \begin{align*}
-\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N \right)} &= \lim_{N \rightarrow \infty}\left(E(\underline{X}):a=b=1\right)\\
+\Max{\left(\Lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N \right)} &= \Lim_{N \rightarrow \infty}\left(E(\underline{X}):a=b=1\right)\\
  &= \varphi + 1
 \end{align*}
 \end{thm}
 \begin{thm}
 \label{thm-4.6}
 {\fontsize{7.3}{8.3}\selectfont\begin{align*}
-\max{\left (\lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)} &=\max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\\
-&= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a=b=1\right)= 2\varphi + 1
+\Max{\left (\Lim_{N\rightarrow \infty}Var(\bar{X}): a,b \in \mathbb N\right)} &=\Max{\left(\Lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\\
+&= \Lim_{N \rightarrow \infty}\left(Var(\underline{X}):a=b=1\right)= 2\varphi + 1
 \end{align*}}
  \end{thm}
 
@@ -283,9 +288,12 @@ In order to prove the aforesaid theorems, we make use of certain finite sums, pr
 
 \vspace{-.2cm}
 
-We look at the mean and variance of the random variable $\bar{X}$, defined as in section \ref{section-2}. \textsc{THEOREM {\ref{thm-4.1}}:}
+We look at the mean and variance of the random variable $\bar{X}$, defined as in section \ref{section-2}.
+
+\noindent
+ \textsc{THEOREM {\ref{thm-4.1}}:}
 \begin{equation*}
-\displaystyle{\lim_{N \rightarrow \infty}} E(\bar{X}) = \infty  
+\displaystyle{\Lim_{N \rightarrow \infty}} E(\bar{X}) = \infty  
  \end{equation*}
 
 \noindent
@@ -316,7 +324,7 @@ We also observe the following:
  \end{equation*}
 Hence 
 \begin{equation*}
-\displaystyle{\lim_{N \rightarrow \infty}} E(\bar{Y}) = \frac{R}{R-1} 
+\displaystyle{\Lim_{N \rightarrow \infty}} E(\bar{Y}) = \frac{R}{R-1} 
 \end{equation*}
 This $\bar{Y}$ corresponds to $\underline{X}$, which we describe in sec.~\ref{section-7}.\\
 \textsc{THEOREM~{\ref{thm-4.2}}:}
@@ -324,7 +332,7 @@ This $\bar{Y}$ corresponds to $\underline{X}$, which we describe in sec.~\ref{se
 \vspace{-.7cm}
 
 \begin{eqnarray*}
-\lim_{N \rightarrow \infty} Var(\bar{X}) = \frac{R}{(R -1)^2}
+\Lim_{N \rightarrow \infty} Var(\bar{X}) = \frac{R}{(R -1)^2}
 \end{eqnarray*}
 
 \vspace{-.4cm}
@@ -353,18 +361,21 @@ Using eq.~(\ref{eq-6.2}) and eq.~(\ref{eq-6.4}), we get
 {\fontsize{8}{9}\selectfont\begin{align*}
 Var(\bar{X})&= E(\bar{X}^2)-E(\bar{X})^2\nonumber \\
 &\sim \frac{N^2(R-1)^2 - 2N(R-1) + R+1}{(R-1)^2}-\left(N - \frac{1}{R-1}\right)^2\nonumber\\
-\Rightarrow \lim_{N \rightarrow \infty}Var(\bar{X})& =  \frac{(R+1)-1}{(R-1)^2}\nonumber
+\Rightarrow \Lim_{N \rightarrow \infty}Var(\bar{X})& =  \frac{(R+1)-1}{(R-1)^2}\nonumber
 \end{align*}}
 
-\vspace{-.3cm}
+\vspace{-.6cm}
 
 Thus, we get the limit of the variance as,
 \begin{equation}
-\lim_{N \rightarrow \infty}Var(\bar{X}) = \frac{R}{(R-1)^2}\label{eq-6.5}
+\Lim_{N \rightarrow \infty}Var(\bar{X}) = \frac{R}{(R-1)^2}\label{eq-6.5}
 \end{equation}
+
+\vspace{-.5cm}
+
 \hfill{$\square$\\}
 
-\vspace{-1cm}
+\vspace{-.7cm}
 
 It is interesting to note from eq.~(\ref{eq-6.2}) and eq.~(\ref{eq-6.5}) that, even though the mean increases linearly as the length of the sequence, the variance converges, to a function of $R$.
 
@@ -381,7 +392,7 @@ P(\underline{X} = n) =\frac{f[N+1-n]}{\displaystyle{\sum_{k=1}^{N}f[N+1-k]}} = p
 
 \textsc{THEOREM~{\ref{thm-4.3}}:}
 \begin{eqnarray*}
-\displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) = 1 + \displaystyle{\frac{1}{R-1}} =  \displaystyle{\frac{R}{R-1}}
+\displaystyle{\Lim_{N \rightarrow \infty}}E(\underline{X}) = 1 + \displaystyle{\frac{1}{R-1}} =  \displaystyle{\frac{R}{R-1}}
 \end{eqnarray*}
 
 \vspace{-.5cm}
@@ -397,7 +408,7 @@ From eq.~(\ref{B.13}), we get
 E(\underline{X}) &= \frac{(N+1)\bar{S} - \bar{S}_1}{\bar{S}}\nonumber\\
 &= (N+1) - \frac{\bar{S}_1}{\bar{S}}\nonumber\\
 &\sim (N+1) - (N - \frac{1}{R-1}) \hspace{0.1in}\textup{by eq.~(\ref{eq-6.2}})\nonumber\\
-\Rightarrow  \lim_{N\rightarrow \infty}E(\underline{X}) &= 1 + \displaystyle{\frac{1}{R-1}} = \displaystyle{\frac{R}{R-1}}\label{eq-7.3}
+\Rightarrow  \Lim_{N\rightarrow \infty}E(\underline{X}) &= 1 + \displaystyle{\frac{1}{R-1}} = \displaystyle{\frac{R}{R-1}}\label{eq-7.3}
 \end{align}
 \hfill{$\square$}\\
 
@@ -405,7 +416,7 @@ E(\underline{X}) &= \frac{(N+1)\bar{S} - \bar{S}_1}{\bar{S}}\nonumber\\
 
 \textsc{THEOREM~{\ref{thm-4.4}}:}
 \begin{eqnarray*}
-\displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}
+\displaystyle{\Lim_{N \rightarrow \infty}}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}
 \end{eqnarray*}
 
 \vspace{-.6cm}
@@ -432,14 +443,14 @@ E(\underline{X}^2) &= \frac{\bar{S}_2}{\underline{S}} \nonumber\\
 \vspace{-1cm}
 
 \begin{equation}
-\Rightarrow \lim_{N \rightarrow \infty}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}\label{eq-7.5}
+\Rightarrow \Lim_{N \rightarrow \infty}E(\underline{X}^2) = 1 + \displaystyle{\frac{3R-1}{(R-1)^2}}\label{eq-7.5}
 \end{equation} 
 
 From eq.~(\ref{eq-7.5}) and eq.~(\ref{eq-7.6}), we get 
 \begin{align}
 Var(\underline{X}) &=& E(\underline{X}^2) - E(\underline{X})^2\nonumber\\
 &\rightarrow& 1 + \frac{3R-1}{(R-1)^2} - \frac{R^2}{(R-1)^2}\nonumber\\ 
-\Rightarrow \lim_{N \rightarrow \infty}Var(\underline{X}) &=& \frac{R}{(R-1)^2}\label{eq-7.6}
+\Rightarrow \Lim_{N \rightarrow \infty}Var(\underline{X}) &=& \frac{R}{(R-1)^2}\label{eq-7.6}
 \end{align}
 \hfill{$\square$}\\
 
@@ -461,8 +472,8 @@ $$
 $$
 and 
 \begin{align}
-\lim_{N \rightarrow \infty}Var(\bar{X}) &= \frac{R}{(R-1)^2} = \frac{\varphi}{(\varphi-1)^2}\nonumber\\
-\Rightarrow \lim_{N \rightarrow \infty}Var(\bar{X}) &= 2\varphi+1\label{eq-8.1}
+\Lim_{N \rightarrow \infty}Var(\bar{X}) &= \frac{R}{(R-1)^2} = \frac{\varphi}{(\varphi-1)^2}\nonumber\\
+\Rightarrow \Lim_{N \rightarrow \infty}Var(\bar{X}) &= 2\varphi+1\label{eq-8.1}
 \end{align}
 
 \vspace{-.3cm}
@@ -474,13 +485,13 @@ Neal \cite{art1-key01} looks at the mean and variance of a Fibonacci distributio
 \subsection{Distributions Induced by Decreasing\\ Sequence}\label{subsection-8.2}
 By eq.~(\ref{eq-7.3}), we have
 \begin{equation}
-\nonumber \displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) =  \displaystyle{\frac{R}{R-1}} = \varphi + 1
+\nonumber \displaystyle{\Lim_{N \rightarrow \infty}}E(\underline{X}) =  \displaystyle{\frac{R}{R-1}} = \varphi + 1
  \end{equation}
 
 From eq.~(\ref{eq-7.6}), we have
 \begin{align}
-\displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &= \frac{R}{(R-1)^2} =\frac{\varphi}{(\varphi-1)^2} \nonumber \\
-\Rightarrow \displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &= 2\varphi + 1\label{eq-8.2}
+\displaystyle{\Lim_{N \rightarrow \infty}}Var(\underline{X}) &= \frac{R}{(R-1)^2} =\frac{\varphi}{(\varphi-1)^2} \nonumber \\
+\Rightarrow \displaystyle{\Lim_{N \rightarrow \infty}}Var(\underline{X}) &= 2\varphi + 1\label{eq-8.2}
 \end{align}
 Comparing eq.~(\ref{eq-8.1}) and eq.~(\ref{eq-8.2}), we find that, in the case of the classical Fibonacci sequence, the variance of the distribution converges to the same value, irrespective of whether the probability values are increasing or decreasing.
 
@@ -489,13 +500,13 @@ In the following sections, we make a few observations and remarks related to the
 \vspace{-.3cm}
 
 \section{Ratio of Variance to Mean}\label{section-9}
-We observe the curious fact that, from eq.~(\ref{thm-4.1}) and eq.~(\ref{thm-4.1}),
+We observe the curious fact that, from Theorem.~(\ref{thm-4.1}) and Theorem.~(\ref{thm-4.2}),
 \begin{equation}
-\lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{R-1}\label{eq-9.1}
+\Lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{R-1}\label{eq-9.1}
 \end{equation}
 In the case $a = b = 1$, that is, in the case of the distribution induced by the Fibonacci sequence, since $R = \varphi$
 \begin{equation}
-\lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{\varphi-1} = \varphi\label{eq-9.2}
+\Lim_{N\rightarrow \infty} \frac{Var(\underline{X})}{E(\underline{X})} = \frac{1}{\varphi-1} = \varphi\label{eq-9.2}
 \end{equation}
 Thus the ratio of the variance of $\underline{X}$ to the expectation of $\underline{X}$ also converges to the Golden Ratio, $\varphi$.
 
@@ -505,7 +516,7 @@ In this section, we establish certain optimal probabilistic limit properties of 
 \subsection{Mean}\label{subsection-10.1}
 \textsc{THEOREM~{\ref{thm-4.5}}:}
 {\fontsize{8}{9}\selectfont\begin{equation*}
-\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N\right)} = \lim_{N \rightarrow \infty}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1
+\Max{\left(\Lim_{N\rightarrow \infty} E(\underline{X}): a, b \in \mathbb N\right)} = \Lim_{N \rightarrow \infty}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1
 \end{equation*}}
 
 \vspace{-1cm}
@@ -523,10 +534,10 @@ We know that
 \frac{1}{R-1} \leq \varphi\nonumber\\
 \Rightarrow 1 + \frac{1}{R-1} &\leq 1+\varphi\label{eq-10.2}\\
 \displaystyle{\frac{R}{R-1}} &\leq \varphi + 1 \nonumber\\
-\Rightarrow \lim_{N\rightarrow \infty}\left(E(\underline{X}):a,b\in \mathbb N\right) &\leq \lim_{N\rightarrow \infty}\left(E(\underline{X}): a = b = 1\right)\label{eq-10.3}
+\Rightarrow \Lim_{N\rightarrow \infty}\left(E(\underline{X}):a,b\in \mathbb N\right) &\leq \Lim_{N\rightarrow \infty}\left(E(\underline{X}): a = b = 1\right)\label{eq-10.3}
 \end{align}}
 Thus, \\
-$\max{\left(\displaystyle{\lim_{N\rightarrow \infty}} E(\underline{X}): a, b \in \mathbb N\right)} = \displaystyle{\lim_{N \rightarrow \infty}}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1$
+$\Max{\left(\displaystyle{\Lim_{N\rightarrow \infty}} E(\underline{X}): a, b \in \mathbb N\right)} = \displaystyle{\Lim_{N \rightarrow \infty}}\left(E(\underline{X}) : a,b = 1\right) = \varphi + 1$
 
 \vspace{-.3cm}
 
@@ -539,8 +550,8 @@ $\max{\left(\displaystyle{\lim_{N\rightarrow \infty}} E(\underline{X}): a, b \in
 Among the family of distributions, induced by second order linear recurrence relations with positive integer coefficients, $a$ and $b$, the Fibonacci sequence gives the maximum limit for $Var(\underline{X})$, i.e.\\
 \textsc{THEOREM~{\ref{thm-4.6}}:}
 {\fontsize{7}{8}\selectfont\begin{align}
-\max{\left(\lim_{N\rightarrow \infty} Var(\bar{X}): a,b \in \mathbb N\right)}&= \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\label{eq-10.4}\\
- &= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a,b=1\right) = 2\varphi + 1\label{eq-10.5}
+\Max{\left(\Lim_{N\rightarrow \infty} Var(\bar{X}): a,b \in \mathbb N\right)}&= \Max{\left(\Lim_{N\rightarrow \infty}Var(\underline{X}): a,b \in \mathbb N\right)}\label{eq-10.4}\\
+ &= \Lim_{N \rightarrow \infty}\left(Var(\underline{X}):a,b=1\right) = 2\varphi + 1\label{eq-10.5}
 \end{align}}
 
 \vspace{-.7cm}
@@ -562,7 +573,7 @@ From eq.~(\ref{eq-10.6}), we get
 {\fontsize{8}{9}\selectfont\begin{align}
 \frac{R}{(R-1)^2} \le \frac{\varphi}{(\varphi-1)^2} = 2\varphi + 1\nonumber\\
 \Rightarrow \frac{R}{(R-1)^2} &\le 2\varphi + 1\label{eq-10.7}\\
-\Rightarrow \lim_{N\rightarrow \infty} \left(Var(\underline{X}):a,b\in \mathbb N\right) &\leq \lim_{N\rightarrow \infty}\left(Var(\underline{X}): a = b = 1\right)\label{eq-10.8}
+\Rightarrow \Lim_{N\rightarrow \infty} \left(Var(\underline{X}):a,b\in \mathbb N\right) &\leq \Lim_{N\rightarrow \infty}\left(Var(\underline{X}): a = b = 1\right)\label{eq-10.8}
 \end{align}}
 \hfill{$\square$}
 
@@ -596,15 +607,15 @@ With $R = \alpha$,
 \end{itemize}
 Thus, Theorem ~\ref{thm-4.5} can be generalized as 
 \begin{align*}
-&\max{\left(\lim_{N\rightarrow \infty} E(\underline{X}): a_i, i \in \mathbb N \right)}\\
- &= \lim_{N \rightarrow \infty}\left(E(\underline{X}):a_1 = a_2 = 1, a_{i}=0, \forall i> 2\right)\\
+&\Max{\left(\Lim_{N\rightarrow \infty} E(\underline{X}): a_i, i \in \mathbb N \right)}\\
+ &= \Lim_{N \rightarrow \infty}\left(E(\underline{X}):a_1 = a_2 = 1, a_{i}=0, \forall i> 2\right)\\
    &= \varphi + 1
 \end{align*}
 and Theorem~\ref{thm-4.6} can be further generalized as 
 \begin{align*}
-&\max{\left(\lim_{N\rightarrow \infty}Var(\bar{X}): a_i, i \in \mathbb N\right)}\\
-&= \max{\left(\lim_{N\rightarrow \infty}Var(\underline{X}): a_i, i \in \mathbb N\right)}\\
-\nonumber &= \lim_{N \rightarrow \infty}\left(Var(\underline{X}):a_1=a_2=1, a_{i}=0,\forall i > 2\right) = 2\varphi + 1
+&\Max{\left(\Lim_{N\rightarrow \infty}Var(\bar{X}): a_i, i \in \mathbb N\right)}\\
+&= \Max{\left(\Lim_{N\rightarrow \infty}Var(\underline{X}): a_i, i \in \mathbb N\right)}\\
+\nonumber &= \Lim_{N \rightarrow \infty}\left(Var(\underline{X}):a_1=a_2=1, a_{i}=0,\forall i > 2\right) = 2\varphi + 1
 \end{align*}
 
 Now, we proceed to prove Lemma~\ref{lemma-11.1}.
@@ -659,7 +670,7 @@ Now, we prove that all other roots of eq.~(\ref{eq-11.2}) lie within the circle 
    \end{equation*}
 Also, we have
  \begin{align}
-  \displaystyle{\lim_{x\rightarrow \infty}} f(x) &= \infty \nonumber\\
+  \displaystyle{\Lim_{x\rightarrow \infty}} f(x) &= \infty \nonumber\\
   \Rightarrow   f(x) &\ge 0, \hspace{0.3in} \forall x \ge \alpha \label{eq-11.6}\\
   \textup{and}\hspace{0.1in} f(x) &> 0  \hspace{0.3in} \forall x > \alpha \label{eq-11.7}          
  \end{align}
@@ -765,8 +776,8 @@ Var(Y^2) = \displaystyle{\frac{R}{(R-1)^2}}\label{eq-12.4}
 \end{equation}
 Thus, we see that,
 \begin{align}
-\displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}) &= E(Y)\nonumber\\
-\displaystyle{\lim_{N \rightarrow \infty}}Var(\underline{X}) &= Var(Y)\nonumber
+\displaystyle{\Lim_{N \rightarrow \infty}}E(\underline{X}) &= E(Y)\nonumber\\
+\displaystyle{\Lim_{N \rightarrow \infty}}Var(\underline{X}) &= Var(Y)\nonumber
 \end{align}
 We now show that the random variable $\underline{X}$ converges to the random variable $Y$ in distribution. \\
 We have for every $n \in \mathbb N$,
@@ -780,13 +791,13 @@ Thus,
 \begin{equation}\nonumber
 p_{_{\underline{N}}}(n) \sim \left(\displaystyle{\frac{\rho^{n}}{1-\rho^{N}}}\right)\left(\displaystyle{\frac{1-\rho}{\rho}}\right)
 \end{equation}
-Since $\displaystyle{\lim_{N \rightarrow \infty}}\rho^N = 0$ as $\rho = \displaystyle{\frac{1}{R}} < 1$, we have
+Since $\displaystyle{\Lim_{N \rightarrow \infty}}\rho^N = 0$ as $\rho = \displaystyle{\frac{1}{R}} < 1$, we have
 \begin{equation}
-\displaystyle{\lim_{N \rightarrow \infty}}p_{_{\underline{N}}}(n) = \rho^{n}\left(\displaystyle{\frac{1-\rho}{\rho}}\right)\label{eq-12.5}
+\displaystyle{\Lim_{N \rightarrow \infty}}p_{_{\underline{N}}}(n) = \rho^{n}\left(\displaystyle{\frac{1-\rho}{\rho}}\right)\label{eq-12.5}
 \end{equation}
 From eq.~(\ref{eq-12.1}) and eq.~(\ref{eq-12.5}) we see that
 \begin{equation}
-\displaystyle{\lim_{N \rightarrow \infty}}p_{_{\underline{N}}}(n) = p(n) \hspace{0.2in} \forall n \in \mathbb N\label{eq-12.6}
+\displaystyle{\Lim_{N \rightarrow \infty}}p_{_{\underline{N}}}(n) = p(n) \hspace{0.2in} \forall n \in \mathbb N\label{eq-12.6}
 \end{equation}
 and thus $\underline{X}$ converges to $Y$ in distribution.
 
@@ -911,7 +922,7 @@ E(Y^k) &= \displaystyle{\sum_{n=1}^{\infty}}n^k \rho^n \left(\frac{1-\rho}{\rho}
 and hence
 \begin{equation}
 \label{eq-13.13}
-\displaystyle{\lim_{N \rightarrow \infty}}E(\underline{X}^k) = E(Y^k) = \displaystyle{\frac{P_{_{k-1}}(\rho)}{(1-\rho)^k}}
+\displaystyle{\Lim_{N \rightarrow \infty}}E(\underline{X}^k) = E(Y^k) = \displaystyle{\frac{P_{_{k-1}}(\rho)}{(1-\rho)^k}}
 \end{equation}
 
 \vspace{-.3cm}
@@ -921,7 +932,7 @@ eq.~(\ref{eq-13.13}) is a rational function of $\rho$ and hence a rational funct
 \vspace{-.6cm}
 
 \begin{equation}\nonumber
-\displaystyle{\lim_{N \rightarrow \infty}} E(\underline{X}^k) = E(Y^k) = \frac{P_{_{k-1}}\left(\displaystyle{\frac{1}{\varphi}}\right)}{\left(1-\displaystyle{\frac{1}{\varphi}}\right)^k}
+\displaystyle{\Lim_{N \rightarrow \infty}} E(\underline{X}^k) = E(Y^k) = \frac{P_{_{k-1}}\left(\displaystyle{\frac{1}{\varphi}}\right)}{\left(1-\displaystyle{\frac{1}{\varphi}}\right)^k}
 \end{equation}
 
 \vspace{-.8cm}
@@ -930,7 +941,7 @@ Since $\displaystyle{\frac{1}{\varphi}} = \varphi-1$, we get
 
 \vspace{-.8cm}
 \begin{align}
-\displaystyle{\lim_{N \rightarrow \infty}} E(\underline{X}^k) = E(Y^k) &= \left(\frac{P_{_{k-1}}(\varphi-1)}{(\varphi-1)^k}\right)\varphi^k\nonumber\\
+\displaystyle{\Lim_{N \rightarrow \infty}} E(\underline{X}^k) = E(Y^k) &= \left(\frac{P_{_{k-1}}(\varphi-1)}{(\varphi-1)^k}\right)\varphi^k\nonumber\\
 &= \varphi^{2k} P_{_{k-1}}(\varphi-1)\nonumber\\
 &= Q(\varphi), \hspace{0.1in}\textup{a polynomial in}\hspace{0.1in} \varphi \label{eq-13.14}
 \end{align}
@@ -942,7 +953,7 @@ But, since $\varphi^2 = \varphi + 1$, all powers $\varphi^j$ for $j\ge2$ can be 
 \vspace{-.9cm}
 
 \begin{align}
- \displaystyle{\lim_{N \rightarrow \infty}} E(\underline{X}^k) &= E(Y)\label{eq-13.15}\\
+ \displaystyle{\Lim_{N \rightarrow \infty}} E(\underline{X}^k) &= E(Y)\label{eq-13.15}\\
          &= A_k\varphi + B_k\label{eq-13.16}
 \end{align}
 
@@ -1016,22 +1027,48 @@ At this juncture, we revisit the general second order recurrence relation with p
 \vspace{-.3cm}
 
 \begin{itemize}
-\item [(A.)] $a = 1$
+\item [\thnum(A.)] $a = 1$ \label{A1}
 	\begin{itemize}
-	\item [(i)]  $b = 1$
-	\item [(ii)] $b = 2$
-	\item [(iii)]$b > 2$
+	\item [\thnum(i)]  $b = 1$\label{Ai}
+	\item [\thnum(ii)] $b = 2$\label{Aii}
+	\item [\thnum(iii)]$b > 2$\label{Aiii}
 	\end{itemize}
-\item [(B.)] $a >1$
+\item [\thnum(B.)] $a >1$\label{ag2}
 \end{itemize}
 
+
+%~ \begin{enumerate}
+    %~ \item One
+    %~ \begin{enumerate}
+        %~ \item Two
+        %~ \item Three
+        %~ \item Four
+    %~ \end{enumerate}
+    %~ \item Five
+    %~ \item Six
+%~ \end{enumerate}
+
+
+%~ \begin{enumerate}[\hspace{0.5cm}(A.)\hspace{0.3cm}]
+%~ \item \label{a1} $a = 1$
+	%~ \begin{enumerate}[\hspace{0.1cm}(i)]
+	%~ \item \label{b1} $b = 1$
+	%~ \item \label{b2} $b = 2$
+	%~ \item \label{bg2}$b > 2$
+	%~ \end{enumerate}
+%~ \item \label{ag2} $a >1$
+%~ \end{enumerate}
+
+
 \section{\underline{$a=1, b =1$}:}\label{section-16}
-We look at case~(\ref{1a}) that corresponds to $a = b = 1$. Eq.~(\ref{eq-15.3}), in this case, generates the elements of classical Fibonacci sequence. Eq.~(\ref{eq-15.3}) can be rewritten as
+We look at case~(Ai) that corresponds to $a = b = 1$. Eq.~(\ref{eq-15.3}), in this case, generates the elements of classical Fibonacci sequence. Eq.~(\ref{eq-15.3}) can be rewritten as
 \begin{equation}
 x_{_n} = x_{_{n-1}} + x_{_{n-2}}\label{eq-16.1}
 \end{equation}
 $R$, the largest positive real root in the case of classical Fibonacci sequence corresponds to the golden ratio, $\varphi = \displaystyle{\left(\frac{1+\sqrt5}{2}\right)}$,
 With the above conditions, eq.~\ref{eq-15.11} gives
+
+\vspace{-.6cm}
 
 \begin{align}
 y_{_{N+j}} - y_{_{N+j-1}} &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\label{eq-16.2}\\
@@ -1065,16 +1102,15 @@ We know that \hspace{0.1in} $x_{{n}} < x_{_{n+1}}$, \hspace{0.1in} and hence, fr
 From eq.~(\ref{eq-16.5}), we find that $y_{_{2N}} < y_{_{2N-1}}$. Thus, in the sequence resulting from the linear convolution of finite length classical Fibonacci sequence with itself, the maximum is located at $2N-1$, where $N$ is the length of the sequence $x_{_n}$.
 
 \section{\underline{$a=1, b = 2$}:}\label{section-17}
-Now, we explore what happens when $a=1, b=2$ in eq.~(\ref{eq-15.3}), as mentioned in case(\ref{b2}). The corresponding second order recurrence relation is as below:
+Now, we explore what happens when $a=1, b=2$ in eq.~(\ref{eq-15.3}), as mentioned in case~(Aii). The corresponding second order recurrence relation is as below:
 \begin{equation}
 x_{_n} =  x_{_{n-1}} + 2x_{{n-2}}\label{eq-17.1}
 \end{equation}
 In this case, the ``$characteristic$'' equation is $x^2 - x - 2 = 0$ and the largest positive root, $R$, is 2. To obtain the location of the maximum in the linear convolution of eq.~\ref{eq-17.1} with itself, we adopt the same procedure as classical Fibonacci sequence.
 {\fontsize{9}{9}\selectfont\begin{align}
 y_{_{N+j}} - y_{_{N+j-1}} &= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}x_{_{N+j-k}} -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
-&= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}(x_{_{N+j-1-k}}+2x_{_{N+j-2-k}}) -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\nonumber\\
-&= \displaystyle{\sum_{k=j}^{N}}2x_{_{k}}x_{_{N+j-2-k}} \hspace{0.1in}- x_{_{j-1}}x_{_N}\label{eq-17.2}\\
-&=\label{eq-17.3}\\
+&= \displaystyle{\sum_{k=j}^{N}}x_{_{k}}(x_{_{N+j-1-k}}+2x_{_{N+j-2-k}}) -  \displaystyle{\sum_{k=j-1}^{N}}x_{_k}x_{_{N+j-1-k}}\label{eq-17.2}\\
+&= \displaystyle{\sum_{k=j}^{N}}2x_{_{k}}x_{_{N+j-2-k}} \hspace{0.1in}- x_{_{j-1}}x_{_N}\label{eq-17.3}
 \end{align}}
 Suppose, $j \leq N-1$,
 \begin{align}
@@ -1114,15 +1150,15 @@ Let $k$ = 2. With standard initial conditions 1, 1 one can observe that $f_2 < \
 Let $k$ = 4. The sequence elements with initial conditions 1, 1 turn out to be 1, 1, 3, 5. We observe that $f_4 < \frac{1}{2}f_5$ and $f_4 < 2f_3$. \\
 For any $k$, we prove the following by induction. 
 \begin{equation}
-f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}\label{eq-17.7}
+f_{_{2k}} < \Min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}\label{eq-17.7}
 \end{equation}
 Let eq.~(\ref{eq-17.7}) be true for $k$-1. So, we have
 \begin{equation}
-f_{_{2k-2}} < \min\{2f_{_{2k-3}}, \frac{1}{2}f_{_{2k-1}}\}\label{eq-17.8}
+f_{_{2k-2}} < \Min\{2f_{_{2k-3}}, \frac{1}{2}f_{_{2k-1}}\}\label{eq-17.8}
 \end{equation}
 We now prove that eq.~(\ref{eq-17.7}) is true for $k$ i.e.,
 \begin{equation}\nonumber
-f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}
+f_{_{2k}} < \Min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}
 \end{equation}
 \begin{equation}
 f_{_{2k}} = f_{_{2k-1}} + 2f_{_{2k-2}}\label{eq-17.9}
@@ -1150,14 +1186,14 @@ f_{_{2k+1}} = f_{_{2k}} + 2f_{_{2k-1}}\label{eq-17.11}
 \Rightarrow 2f_{_{2k}} &< f_{_{2k+1}}\nonumber\\
 \Rightarrow f_{_{2k}} &< \frac{1}{2}f_{_{2k+1}}\label{eq-17.12}
 \end{align}
-Thus we find that, $f_{_{2k}} < \min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}$. From this one can see that $y_{_n}$ has its maximum either at 2$N$-1 or 2$N$ depending on whether the sequence length is odd or even.
+Thus we find that, $f_{_{2k}} < \Min\{2f_{_{2k-1}}, \frac{1}{2}f_{_{2k+1}}\}$. From this one can see that $y_{_n}$ has its maximum either at 2$N$-1 or 2$N$ depending on whether the sequence length is odd or even.
 
 \hfill{$\square$}
 
 \vspace{-.6cm}
 
 \section{\underline{$a=1, b > 2$}:}\label{section-18}
-With $a=1, b > 2$ in eq.~(\ref{eq-15.3}), we look at case(\ref{bg2}). The corresponding second order recurrence relation is as below:
+With $a=1, b > 2$ in eq.~(\ref{eq-15.3}), we look at case~(Aiii). The corresponding second order recurrence relation is as below:
 \begin{equation}
 x_{_n} =  x_{_{n-1}} + bx_{{n-2}}\label{eq-18.1}
 \end{equation}
@@ -1196,7 +1232,7 @@ Let us consider the sequence generated by eq.~(\ref{eq-18.1}), with $b=3$. The e
 
 \vspace{-.7cm}
 
-From the above, we find that $b x_{_{n-2}}$ is always greater than $x_{_{n-1}}$. Thus eq.~\ref{eq-18.7} is always positive. Hence, we find that $y_{_{2N}} > y_{_{2N-1}}$. Thus, the maximum is located at 2$N$ and not at 2$N-1$. A formal proof by induction can be obtained along the same lines of mathematical induction, as found in section.~\ref{section-17}.
+From the above, we find that $bx_{{n-2}}$ is always greater than $x_{{n-1}}$. Thus eq.~\ref{eq-18.7} is always positive. Hence, we find that $y_{_{2N}} > y_{_{2N-1}}$. Thus, the maximum is located at 2$N$ and not at 2$N-1$. A formal proof by induction can be obtained along the same lines of mathematical induction, as found in section.~\ref{section-17}.
 
 \vspace{-.5cm}
 
@@ -1411,11 +1447,11 @@ The elements of the Fibonacci sequence are generated by the second order recurre
 $$
 f_{n}=f_{n-1}+f_{n-2}
 $$
-, with the condition that $f_{0} = 0, f_{1} = 1$. It is also interesting to note that for a number $x$. to be a Fibonacci number, either $5x^{2} + 4$ or $5x^{2}-4$ must be a a perfect square.
+with the condition that $f_{0} = 0, f_{1} = 1$. It is also interesting to note that for a number $x$. to be a Fibonacci number, either $5x^{2} + 4$ or $5x^{2}-4$ must be a a perfect square.
 
 The ratio
 $$
-{\rm \lim_{{\it n} \rightarrow \infty}} \dfrac{f_{n}+1}{f_{n}}
+{\rm \Lim_{{\it n} \rightarrow \infty}} \dfrac{f_{n}+1}{f_{n}}
 $$
 
 converges to the golden mean or the golden ratio\break $\varphi =\dfrac{1+\sqrt{5}}{2}$

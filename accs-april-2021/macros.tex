@@ -124,7 +124,7 @@
   evenpage,
   area={0pt}{760pt}{\paperwidth}{1.25cm},
   contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
-\hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | April 2021}\hfill}%
+\hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | March 2021}\hfill}%
 }}
 ]{bottom.even}
 
@@ -135,7 +135,7 @@
   oddpage,
   area={0pt}{760pt}{\paperwidth}{1.25cm},
   contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
-\hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | April 2021}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
+\hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | March 2021}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
 }}
 ]{bottom.odd}
 \AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
@@ -187,7 +187,7 @@
 \newtheorem{defn}{Definition}[section]
 \newtheorem{fact}{Fact}
 %~ \newtheorem{thm}{Theorem}[section]
-\newtheorem{thm}{Theorem}[section]
+\newtheorem{thm}{Theorem}
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{prop}{Proposition}
 \newtheorem{claim}{Claim}
@@ -261,6 +261,7 @@
   \makebox[\textwidth]{\adjustimg\includegraphics[#1]{#2}}%
 }
 
-
-
+\DeclareMathOperator*{\Lim}{\mathrm{lim}}
+\DeclareMathOperator*{\Min}{\mathrm{min}}
+\DeclareMathOperator*{\Max}{\mathrm{max}}
 
