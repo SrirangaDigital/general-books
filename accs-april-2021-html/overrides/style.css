@@ -62,3 +62,19 @@ border:1px solid black;
 	font-weight: normal;
 }
 
+.underline{ 
+  text-decoration: underline;
+}
+
+.fontsize{
+  font-size: 25px;
+}
+
+.fontsizes{
+  font-size: 20px;
+}
+.teaser-desc {
+    line-height: 2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+ }
