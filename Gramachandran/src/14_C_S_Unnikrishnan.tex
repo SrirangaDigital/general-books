@@ -221,9 +221,9 @@ complex conjugate,
 \psi\frac{\partial\psi^*}{\partial t} + \psi^*\frac{\partial\psi}{\partial t}=\frac{\partial(\psi\psi^*)}{\partial t}=
 \frac{i\hbar}{2m} \left(\psi^*\nabla^2\psi-\psi\nabla^2\psi^*\right)\tag{13}\label{c14-eq13}
 \end{equation*}
-Since $\psi=Ae^{iS/\hbar}$, and $\nabla S/m=v$, this is the same as the `classical' continuity equation
+Since $\psi=Ae^{iS/\hbar}$, and $\nabla S/m=\upsilon$, this is the same as the `classical' continuity equation
 \begin{equation*}
-\frac{\partial\rho}{\partial t} = \frac{\partial(\psi\psi^*)}{\partial t}=\frac{i\hbar}{2m} \nabla (\psi^*\nabla\psi-\psi\nabla\psi^*) = -\nabla\cdot(\rho v)\tag{14}\label{c14-eq14}
+\frac{\partial\rho}{\partial t} = \frac{\partial(\psi\psi^*)}{\partial t}=\frac{i\hbar}{2m} \nabla (\psi^*\nabla\psi-\psi\nabla\psi^*) = -\nabla\cdot(\rho\upsilon)\tag{14}\label{c14-eq14}
 \end{equation*}
 
 Next, I show in detail that \textit{the ensemble function $\psi(x, t)$ obeys the continuity equation
@@ -232,7 +232,7 @@ obeys the equation of dynamics. I emphasize that the function $\psi(x, t)$ does 
 single particle or a single dynamical history. Writing $\phi = S/\varepsilon$,
 \begin{align}
 \frac{\partial\psi}{\partial t} &= e^{iS/\varepsilon}\frac{\partial A}{\partial t} + \frac{i}{\varepsilon}\psi\frac{\partial S}{\partial t}\nonumber\\
-\frac{\partial\psi}{\partial t}-\frac{i}{\varepsilon}\psi\frac{\partial S}{\partial t}&=e^{iS/\varepsilon}\left(-\frac{A}{2}\nabla\cdot v-\nabla A\cdot v+D\nabla^2A\right)\tag{15}\label{c14-eq15}
+\frac{\partial\psi}{\partial t}-\frac{i}{\varepsilon}\psi\frac{\partial S}{\partial t}&=e^{iS/\varepsilon}\left(-\frac{A}{2}\nabla\cdot \upsilon-\nabla A\cdot \upsilon+D\nabla^2A\right)\tag{15}\label{c14-eq15}
 \end{align}
 The spatial derivatives of $\psi$ are
 \eject
@@ -246,7 +246,7 @@ Now, multiplying by $i\varepsilon /2m$ gives
 \frac{i\varepsilon}{2m} \nabla^2 \psi + \frac{i}{\varepsilon} A e^{iS/\varepsilon} \frac{(\nabla S)^2}{2m} = e^{iS/\varepsilon} \left(\frac{-A}{2m} \nabla^2 S - \frac{1}{m} \nabla A \cdot \nabla S + \frac{i\varepsilon}{2m} \nabla^2 A \right) \tag{17}\label{c14-eq17}
 \end{equation*}
 
-Since, $v = \nabla S/m$, the expressions on the R.H.S in the equations~\ref{c14-eq15} and \ref{c14-eq17} are equal,
+Since, $\upsilon = \nabla S/m$, the expressions on the R.H.S in the equations~\ref{c14-eq15} and \ref{c14-eq17} are equal,
 which is the time evolution of the square root of the probability density, $e^{iS/ \varepsilon} \dfrac{\partial A}{\partial t}$. Therefore,
 \begin{equation*}
 \frac{\partial \psi}{\partial t} - \frac{i}{\varepsilon} \psi \frac{\partial S}{\partial t} = \frac{i\varepsilon}{2m} \nabla^2 \psi + \frac{i}{\varepsilon} \psi\frac{(\nabla S)^2}{2m} \tag{18}\label{c14-eq18}
