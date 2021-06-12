@@ -3,11 +3,11 @@
 \Authorline{Rajaram Nityananda\footnote[*]{Email: \url{rajaram.nityananda@gmail.com}}}
 \addtocontents{toc}{\protect\contentsline{section}{{\sl Rajaram Nityananda}\smallskip}{}}
 
-\authinfo{Senior Professor, Azim Premji University, Bengaluru}
+\authinfo{Professor, Azim Premji University, Bengaluru}
 
 The physics of a plane, perfectly monochromatic wave is simply summarised
 in the electric field vector whose two orthogonal components are given by
-$E_1 = a_1 \cos(wt - \phi_1)$; $E_2 = a_2 \cos(wt - \phi_2)$ or using basis vectors $\hat{e}_1$ and $\hat{e}_2$
+$E_1 = a_1 \cos(\omega t - \phi_1)$; $E_2 = a_2 \cos(\omega t - \phi_2)$ or using basis vectors $\hat{e}_1$ and $\hat{e}_2$
 \begin{gather*}
 \overrightarrow{E} = Re (a_1 e^{i \phi_1 } \hat{e}_1 + a_2 e^{i\phi_2} \hat{e}_2 ) e^{-i\omega t} \\
 \equiv Re \overrightarrow{\varepsilon} e^{-i\omega t}
@@ -15,18 +15,18 @@ $E_1 = a_1 \cos(wt - \phi_1)$; $E_2 = a_2 \cos(wt - \phi_2)$ or using basis vect
 
 The coefficient of the harmonic time dependence $e^{-i \omega t}$ is the complex two dimensional vector
 $\overrightarrow{\varepsilon} = z_1 \hat{e}_1 + z_2 \hat{e}_2$ where $z_1$, $z_2$ encode the amplitude and the phase of each of
-the components $- z_1 = a_1 e^{i \phi_1}$, $z_2 = a_2 e^{i\phi_2}$. Mathematician's call such a space
-$\mathbb{C}^2$ (for two dimensional complex vector space). The operation which comes
+the components $z_1	 = a_1 e^{i \phi_1}$, $z_2 = a_2 e^{i\phi_2}$. Mathematician's call such a space
+$\mathbb{C}^2$ (for two dimensional complex vector space). The operations which come
 naturally with such a space also have natural physical counterparts.
 \begin{itemize}
 \item[a)] Superposition $\overrightarrow{\varepsilon}_1 + \overrightarrow{\varepsilon}_2$ is realised as interference e.g using a half silvered
-mirror as in the Michelson interferometer $\overrightarrow{\varepsilon}$ is proportional to $\overrightarrow{\varepsilon}_1 + \overrightarrow{\varepsilon}_2$ (ideally
+mirror as in the Michelson interferometer $\overrightarrow{\varepsilon}$ is proportional to $\overrightarrow{\varepsilon}_1 + \overrightarrow{\varepsilon}_2$ (ideally	
 $\frac{1}{\sqrt{2}} (\overrightarrow{\varepsilon}_1 + \overrightarrow{\varepsilon}_2)$)
 \bigskip
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.2]{src/images/chap26/1.jpg}
+\includegraphics[scale=0.2]{src/images/chap26/beamsplitter.jpg}
 \end{figure}
 
 \item[b)] Scalar multiplication $\overrightarrow{\varepsilon}' \to re^{i\theta} \overrightarrow{\varepsilon}$ for $r < 1$ this is the attenuator (dark
@@ -56,7 +56,7 @@ given to $\varepsilon'$ maximises the intensity, i.e, brings them `in phase', it
 think of $\phi_{\varepsilon \varepsilon'}$ in this way. We will return to this later!
 
 \item[e)] The definition fails in one case, when the inner product is zero. The simplest
-example would be $\varepsilon = \alpha \hat{e}_1$, $\varepsilon = \alpha' \hat{e}_2$. This is one of the ``Fresnel Argo laws" for
+example would be $\varepsilon = \alpha \hat{e}_1$, $\varepsilon = \alpha' \hat{e}_2$. This is one of the ``Fresnel Arago laws" for
 interference of polarized light - two linearly polarized beams in perpendicular
 directions do not interfere. More correctly, we should say that as we vary the
 relative phase, the intensity does not change. We can see that any two beams
@@ -66,17 +66,17 @@ orthogonal.
 \item[f)] So far, our vectors have been expressed in terms of $\hat{e}_1$ and $\hat{e}_2$, two unit intensity
 linearly polarized beams. A vector space like $\mathbb{C}^2$ comes with the freedom to
 change the basis. For example, define $\hat{e}_R = \frac{\hat{e}_1 + i \hat{e}_2}{\sqrt{2}} ~~\&~~ \hat{e}_L = \frac{\hat{e}_1 - i \hat{e}_2}{\sqrt{2}}$. It is easily
-checked that $\hat{e}^{\ast}_R  \cdot \hat{e}_R = \hat{e}^{\ast} \cdot \hat{e}_L = 1$ and $\hat{e}^{\ast}_R \cdot \hat{e}_L = 0$. Any vector can be rewritten
+checked that $\hat{e}^{\ast}_R  \cdot \hat{e}_R = \hat{e}_L \cdot \hat{e}_L = 1$ and $\hat{e}^{\ast}_R \cdot \hat{e}_L = 0$. Any vector can be rewritten
 in terms of $\hat{e}_R$ and $\hat{e}_L$ as follows - easily verified.
 \end{itemize}
-$\overrightarrow{\varepsilon} \equiv Z_1 + \hat{e}_1 + Z_2 \hat{e}_2  \equiv Z_R \hat{e}_R + Z_L \hat{e}_L$ where the amplitudes of the $R$ and $L$ beams are 
+$\overrightarrow{\varepsilon} \equiv Z_1 \hat{e}_1 + Z_2 \hat{e}_2  \equiv Z_R \hat{e}_R + Z_L \hat{e}_L$ where the amplitudes of the $R$ and $L$ beams are 
 $$
 Z_R  = \dfrac{Z_1 + iZ_2}{\sqrt{2}} ; ~~ Z_L = \dfrac{Z_1 - iZ_2}{\sqrt{2}}
 $$
 $\hat{e}_R$ and $\hat{e}_L$ are just one example of an orthonormal basis pair but have a simple
 physical meaning. $\hat{e}_R$ is an equal superposition of beams along $x$ and $y$, with
 $y$ retarded by a phase lag of $\pi/2$ (hence the i in front of $\hat{e}_2$). In such a beam,
-the tip of the electric vector describes a circle, ($E_x = a \cos wt$, $E_y = a \sin wt$)
+the tip of the electric vector describes a circle, ($E_x = a \cos\omega t$, $E_y = a \sin\omega t$)
 traversed counter clockwise when facing the source. This is called `right circularly polarized' or RCP light. Retarding it in phase moves the vector clockwise.
 LCP has the the opposite sense since $E_y$ leads $E_x$ by $\pi/2$. RCP carries angular
 momentum along the direction of propagation and LCP opposite to it (like off
@@ -96,7 +96,7 @@ their phases to be $\phi_R$ and $\phi_L$. The situation at $t = 0$ is as in the 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{src/images/chap26/3.jpg}
+\includegraphics[scale=0.32]{src/images/chap26/LR_superposition.jpg}
 \end{figure}
 \bigskip
 
@@ -106,7 +106,7 @@ $| z_R | + | z_L |$.
 
 Quarter of a period later $| z_L |$ will point oppositely to $| z_R |$ and the field
 will take its minimum value of $| z_R | - | z_L |$. The resulting path or orbit of the
-tip of the electric vector is thus an ellipse and the ratio of axis is $\frac{|z_R| - |z_L|}{|z_R| + |z_L|} = \frac{1-|\frac{z_L}{z_R}|}{1+|\frac{z_L}{z_R}|}$
+tip of the electric vector is an ellipse and the ratio of axes is $\frac{|z_R| - |z_L|}{|z_R| + |z_L|} = \frac{1-|\frac{z_L}{z_R}|}{1+|\frac{z_L}{z_R}|}$
 with major axis along $\frac{\phi_L -\phi_R}{2}$. This is called elliptically polarized light
 and with $|z_R | > |z_L |$, the the ellipse is traversed counterclockwise, hence right
 handed. If $|z_R | < |z_L |$, our formula for axial ratio goes negative and the ellipse
@@ -126,7 +126,7 @@ From $\mathbb{C}^2$ which is made up of pairs ($z_L , z_R$) we have retained onl
 amplitude and phase difference, by forming $\zeta = \frac{z_L}{z_R}$. Further, as $z_R \to 0$, $\zeta$
 goes to $\infty$ in a direction set by the phase of $Z_R$. But $Z_R = 0$ is a unique point,
 as far as polarization is concerned viz LCP. The mathematicians also felt the
-need for a single point at infinity in the complex plane of $\zeta$ and achieved it by
+need for a single point at infinity in the complex plane of $\zeta$ and achieved it by the 
 ``Riemann sphere" using  ``stereographic projection" - both terms are explained
 better by a figure.
 \medskip
@@ -182,11 +182,11 @@ to the world map in the atlases, would look like this.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.21]{src/images/chap26/6.jpg}
+\includegraphics[scale=0.18]{src/images/chap26/6.jpg}
 \end{figure}
 
-Like the world map, this represents a sphere as a rectangle, with understand-
-ing that the left and right edges are the same. Also, the north and south poles
+Like the world map, this represents a sphere as a rectangle, with 
+understanding that the left and right edges are the same. Also, the north and south poles
 are not lines but points, because latitude is irrelevant (what is the major axis of
 a circle?). This map should convince even a lay person that the sphere is the
 correct topology for the space of all states (orbits) of polarised light. Indeed,
@@ -268,7 +268,7 @@ This is a good way to understand quarter wave plates, half wave plates,
 etc - for those with geometric bent, (there are Jones and Muller matrices for
 those who prefer the left hemisphere). These generalize to unequal superpositions,
 and non-orthogonal states - a good reference, not easy to get nowadays, is a
-\textit{Handbook der Physik} article by \textit{Ramachandran and Ramaseshan}. But we set
+\textit{Handbuch der Physik} article by \textit{Ramachandran and Ramaseshan}. But we set
 these aside, to treat the central topic of these lectures, the Pancharatnam(P)
 phase. We have already mentioned his physically motivated definition of the
 phase difference between two beams, viz the phase of the inner product $\overrightarrow{\varepsilon}^{\ast} \cdot \overrightarrow{\varepsilon}'$. 
@@ -314,7 +314,7 @@ to phases allows us to calculate it on the Poincare sphere.
 In a short set of lectures - and notes - we will not take P’s route to the half
 solid angle formula. But those with taste of geometry could go to the original
 papers - I wrote a piece in current science; Aug 1994 on \textit{`Pancharatam's route
-to the geometry phase'} (accessible by typing the title in a google window )
+to the geometric phase'} (accessible by typing the title in a google window )
 which sketches the derivation and may be helpful. We will reach it from a
 more analytical viewpoint, by calculating the phase going around a quadrilateral
 $ABCD$, with
@@ -338,7 +338,7 @@ of the four inner products to be
 \phi_{BC} = \sin^2 \frac{(\theta + \Delta \theta)}{2} \cdot \Delta \phi,\\
 \phi_{CD} = 0,
 \end{gather*}
-$phi_{DA} = -\sin^2 \frac{\theta}{2} \Delta \phi$, working to the lowest order in $\Delta \phi$. 
+$\phi_{DA} = -\sin^2 \frac{\theta}{2} \Delta \phi$, working to the lowest order in $\Delta \phi$. 
 Now keeping only order $\Delta \theta$ as well, we get :
 \begin{align*}
 \phi_{ABCD} &= 2 \sin \frac{\theta}{2} \cos \frac{\theta}{2} \frac{\Delta \theta }{2} \Delta \phi\\
@@ -359,8 +359,8 @@ the phase on common legs cancels. e.g.
 Notice that if any two of the beams are in orthogonal polarisation states, the
 corresponding inner product vanishes and the phase is undefined. It so happens
 that in an absorbing crystal, iolite, the two modes are not orthogonal and when
-they are combined and viewed through an analyser, say a polaroid, the proper
-treatment of this experimental situation raised, atlest to a mind of sufficient
+they are combined and viewed through an analyser, say a polaroid, they can show  interference. 
+The proper treatment of this experimental situation raised, atlest to a mind of sufficient
 quality, the general question we have discussed, with hindsight.
 
 These matters rested from 1955 to 1984 when \textit{Berry} introduced his rightly
@@ -372,7 +372,7 @@ the phase around a closed circuit would be nonzero. Although we have been
 talking about classical light beams, the basic tool has been a cmplex vector
 space no different from that used in quantum mechanics. This `Berry phase'
 (which he calls `geometric phase') is now a standard part in QM courses and a
-subject in its own right. A later atricle by \textit{Berry} in \textit{Physics Today} documents
+subject in its own right. A later article by \textit{Berry} in \textit{Physics Today} documents
 three or four earlier pieces of work which could be called anticipations of the
 geometric phase and the \textit{Pancharatam} phase is one of them. We will now use
 it to illustrate another mathematical concept, developed by \textit{Clifford} in the late
@@ -414,25 +414,25 @@ of attaching the two disks there. With this hint we can now draw two balls,
 the ~ ``northern" say $y^{\phantom{2}}_{L}  \geq 0$  \quad $x^2_R + y^2_R + x^2_L = 1 - y^2_L \leq 1$
 \smallskip
 
-{} \hspace{1.6cm} ``sourthern" $y^{\phantom{2}}_{L} \leq  0$ \quad  $x^2_R + y^2_R + x^2_L = 1 - y^2_L \leq 1$
+{} \hspace{1.6cm} ``southern" $y^{\phantom{2}}_{L} \leq  0$ \quad  $x^2_R + y^2_R + x^2_L = 1 - y^2_L \leq 1$
 \bigskip
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.425]{src/images/chap26/15.jpg}
+\includegraphics[scale=0.425]{src/images/chap26/15.jpg}\label{diags3}
 \end{figure}
 \bigskip
 
-Only one torus say $\theta  = \pi/4$ is shown and is one circle on this torus GHHG.
-The remaining ircles on this torus can be obtained by rotation about the $x_L$ axis.
+Only one torus say $\theta  = \pi/4$ is shown and one circle on this torus GHHG.
+The remaining circles on this torus can be obtained by rotation about the $x_L$ axis.
 The family of linked non intersecting circles in $S^3$ is called the set of ``Clifford
 parallels" after their discoverer. They
 look different from each other because of our projection just as in geography,
 but they are really similar in size and shape. The last piece of mathematics
-we touch upon comes from $Hopf$. Since each circular orbit has fixed $\theta \phi$ and
+we touch upon comes from \textit{Hopf}. Since each circular orbit has fixed $\theta \phi$ and
 lets phase vary, one is justified in saying we have a map from $S^3 (\theta, \xi_1, \xi_2)$ to
 $S^2 (\theta, \phi)$ with $\phi = \xi_2 - \xi_1$. Going in the reverse direction, for each point ($\theta, \phi$) on
-`the Poincare' sphere, we have a circle ($\theta, \xi_1,~ \xi_2$ with fixed $\xi_2 - \xi_1$). Generating, $S^3$ is the `total space', it is full of $S^1$ ``fibres" (one through each point) and the family of fibres itself is an $S^2$ (the Poincare' sphere) which is called the base.
+`the Poincare' sphere, we have a circle ($\theta, \xi_1,~ \xi_2$ with fixed $\xi_2 - \xi_1$). Generalising, $S^3$ is the `total space', it is full of $S^1$ ``fibres" (one through each point) and the family of fibres itself is an $S^2$ (the Poincare' sphere) which is called the base.
 A much more familiar example from high school is the $x - y$ plane of analytic
 geometry which has $R^1$ fibres in which $y$ varies, labelled by another $R^1$ viz $x$.
 \bigskip
@@ -450,9 +450,10 @@ are products, consider the M\"{o}bius surface sketched below.
 \centering
 \includegraphics[scale=0.27]{src/images/chap26/17.jpg}
 \end{figure}
+\eject
 
-It is a family of straight line segments whose centres lie on a circle (dashed
-line). But if we try to introduce an $x$ co-ordinate on each segment foe each $\theta$,
+It is a family of straight line segments whose centres lie on a circle.  
+But if we try to introduce an $x$ co-ordinate on each segment for each $\theta$,
 say with the origin on the circle, we run into a discontinuity when we go around
 once - positive $x$'s sit right next to negative ones - no surprise since the surface
 was made by gluing after a $180^{\circ}$ twist. The moral is that a fibre bundle can
@@ -477,7 +478,7 @@ sketched below.
 \bigskip
 
 In fact, all such attempts fail. Stated as geometrical fact, it implies that
-in our diagram of $S^3$ on page --, it is immposible draw a smooth surface which
+in our diagram of $S^3$ on page~\pageref{diags3}, it is impossible draw a smooth surface which
 cuts each circle once and only once. An elementary proof (of a fact known
 from the time $Hopf$ introduced his fibration) can be found in a paper I wrote in
 \textit{Pramana} in March 1979 accessible by just typing `\textit{Impossibility of a continuous
@@ -504,19 +505,20 @@ wavefronts slowing down where the refractive index is higher.
 \end{figure}
 \bigskip
 
-Quantitatively the radius of curvature can eaisly\footnote{Just use the condition that the phase difference between two wavefronts is fixed, $n_1 \Delta \ell_1 = n_2 \Delta \ell_2$ in the sketch.} be calculated
+Quantitatively the radius of curvature can easily\footnote{Just use the condition that the phase difference between two wavefronts is fixed, $n_1 \Delta \ell_1 = n_2 \Delta \ell_2$ in the sketch.} be calculated
 $$
 \frac{1}{R} = \frac{\nabla \perp n (x,y,z)}{n}
 $$
 
-The gradient is to be taken perpendicular to the ray, and its direction gives
+The gradient is to be taken perpendicular to the ray, and its direction 
+along with the  tangent to the ray gives
 the plane of curvature. So long as the ray traverses a plane curve, the behaviour
 of the polarisation is fixed by symmetry. The component normal to the plane
 stays constant. The component lying in the plane stays in the plane, but
 turns in the same way as the ray so as to stay perpendicular to it. The question
 of how polarisation varies becomes more subtle when the curve does not lie in
 a plane which can happen as the vector $\nabla \perp n $ rotates in the plane perpendicular
-to ray. The basic result is due to \textit{Bertolotti} (1926) and \textit{Rytor} (1937) but was
+to the ray. The basic result is due to \textit{Bertolotti} (1926) and \textit{Rytov} (1937) but was
 given a nice geometric form by \textit{Vladimirskii} (1941). This is illustrated for a curve in
 the form of a helix.
 \bigskip
@@ -545,33 +547,35 @@ appealing notion of parallel displacement. Imagine a person sent on a long
 journey on the earth with two instructions. ``Here is long pole, carry it so that
 it remains parallel to the ground but do not otherwise turn it in any other way".
 the result is shown in the sketch below.
-\bigskip
+\medskip
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.34]{src/images/chap26/22.jpg}
+\includegraphics[scale=0.34]{src/images/chap26/journey.jpg}
 \end{figure}
-\bigskip
+\medskip
 
 At $B$ and $C$, the person turns but not the pole. Yet, on return to $A$, the pole
 has turned from its original direction by $\frac{\pi}{2}$ (and in general the solid angle made
 by $ABC$ at the centre). Vladimirskii's insight was that polarisation behaves
-exactly in this way - Today this is demonstrated nicely using optical fibres.
+exactly in this way - today this is demonstrated nicely using optical fibres.
 But a rotation of linear polarisation is a phase difference (of twice that angle)
 between $R$ and $L$! So now we have a geometric phase for change of direction.
 Combining it with the \textit{Pancharatam} phase is an exercise for the reader!
 
 My first overlap with Prof G. Ramachandran was attending a seminar he gave in the
 Department of physics of the Indian Institute of Science, which was unusually, on particle
-physics. Later, from my association with Pramana, I became familiar with the school he had
+physics. Later, from my association with the physics journal Pramana, I became familiar with the school he had
 established at Mysore working broadly on `spin physics'. During later visits to the
 department and the Academic Staff college, I got to know his students many of whom are
 themselves dedicated teachers and researchers and contributors to this volume. This kind
-of impact and legacy is quite rare in the university system and I am happy to contribute this
-article which commemorates such an outstanding academic. Appropriately, the lectures on
-which this article is based were delivered in physics department of the University of
+of impact and legacy is quite rare in the university system and I am privileged to contribute this
+article to a volume which commemorates such an outstanding academic. Appropriately, the lectures on
+which this article is based were delivered in the physics department of the University of
 Mysore, so this article also expresses my gratitude for the welcome I have always received in
-that community.
+that community. I thank the members  of  that community,  past  and present,  for the  opportunity to 
+deliver  these lectures,  and I thank Kanchan and Mayur for their  help with transforming  my handwritten   
+notes  into this  still imperfect,  but I hope useful form. 
 \vskip 1cm
 
 
@@ -579,4 +583,4 @@ that community.
 \bigskip
 
 \noindent
-\textbf{Dr.\ R. Nityananda} carried out his research at NAL, Bangalore, and obtained the Ph.D. degree from Bangalore University in 1977. He joined Raman Research Institute, Bangalore, in 1975 and worked there till the year 2000.  He was the Centre Director, NCRA-TIFR, Pune, during 2000 to 2010. Currently he is a Senior Professor at Azim Premji University, Bengaluru.
+\textbf{Dr.\ R. Nityananda} carried out his research at NAL, Bangalore, and obtained the Ph.D. degree from Bangalore University in 1977. He joined Raman Research Institute, Bangalore, in 1975 and worked there till the year 2000.  He was the Centre Director, NCRA-TIFR, Pune, during 2000 to 2010. Currently he is a Professor at Azim Premji University, Bengaluru.
