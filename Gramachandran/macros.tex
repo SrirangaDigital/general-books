@@ -97,7 +97,7 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\thispagestyle{empty}\hbox{\phantom{.}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \renewcommand*\seealso[2]{(\emph{\alsoname} #1)}
 
