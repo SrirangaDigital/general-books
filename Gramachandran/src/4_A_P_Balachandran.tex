@@ -39,7 +39,7 @@ Then, there are the sectors with ``in'' state vectors \cite{chap4-key4}
 & |n,P,0,\cdot\rangle \equiv |n,P,\cdot\rangle,\qquad q_{n}\neq 0\label{chap4-eq2.3}
 \end{align}
 
-created by the infrared photons. Here $A^{\pm \pi}_{i}$ are the positive and negative frequency parts of the electromagnetic potential in the Coulomb gauge, and the functions $\omega^{+}_{i}$, $\omega^{-}_{i}=\bar{\omega}^{+}_{i}$ are transverse:
+created by the infrared photons. Here $A_{i}$ are the positive and negative frequency parts of the electromagnetic potential in the Coulomb gauge, and the functions $\omega^{+}_{i}$, $\omega^{-}_{i}=\bar{\omega}^{+}_{i}$ are transverse:
 \begin{equation}
 \partial_{i}\omega^{\pm}_{i}(x)=0,\label{chap4-eq2.4}
 \end{equation}
@@ -49,7 +49,7 @@ Also they do not vanish fast as we approach infinity:
 \lim\limits_{r\to\infty}r^{2}\hat{x}_{i}\omega_{i}(x)^{\pm}\neq 0.\label{chap4-eq2.5}
 \end{equation}
 
-Further $\omega_{i} = \hat{\omega}_{i}^{+} + \hat{\omega}_{i}^{-}$.
+Further $\omega_{i} = \omega_{i}^{+} + \omega_{i}^{-}$.
 
 One such typical $\omega^{+}_{i}$ has the Fourier transform
 \begin{equation}
@@ -83,7 +83,7 @@ The following is a further important point. If the Lorentz boost
 \begin{equation}
 K_{i}=\int d^{3}xx_{i}[\overrightarrow{E}^{2}(x)+\overrightarrow{B}^{2}(x)]+\text{matter part}\label{chap4-eq2.11}
 \end{equation}
-is well-defined on $|n, 0;\cdot\rangle$, then it diverges in the sector $|n,\omega;\cdot \rangle$, $\omega\neq 0$ : Lorentz invariance is broken in the latter. We can see this as follows:
+is well-defined on $|n, 0;\cdot\rangle$, then it diverges in the sector $|n,\omega,\cdot \rangle$, $\omega\neq 0$ : Lorentz invariance is broken in the latter. We can see this as follows:
 \begin{align}
 & \langle n,\omega;\cdot | \int d^{3}xx_{i}[\overrightarrow{E}^{2}(x)+\overrightarrow{B}^{2}(x)]|n,\omega;\cdot\rangle\notag\\
 & =\langle n,0;\cdot |\int d^{3}xx_{i}[(\overrightarrow{E}-i\overrightarrow{\omega})^{2}(x)+\overrightarrow{B}^{2}(x)]|n,0;\cdot\rangle,\notag\\
@@ -205,11 +205,11 @@ Our arguments were as follows. If $\mathbb{C}$\textit{SU(3)} is the group algebr
 \begin{equation}
   |c_2, c_3, i, i_3, y;\cdot \rangle,\label{chap4-eq3.1}
 \end{equation}
-where $c_2, c_3, i, i_3, y$ are the eigenvalues of $c_2, c_3, i, \hat{\lambda}_3, \hat{\lambda}_8$. No observable can affect them. They label a superselection sector.
+where $c_2, c_3, i, i_3, y$ are the eigenvalues of $c_2, c_3, I^2, \hat{\lambda}_3, \hat{\lambda}_8$. No observable can affect them. They label a superselection sector.
 
 But in a coloured representation $(c_2, c_3 ~\text{or both}~\neq 0)$, a generic \textit{SU(3)} transformation will change $i_3, y$. That is, it will change the superselection sector. Hence, such an \textit{SU(3)} transformation is spontaneously broken.
 
-We have analysed a similar situation which occurs for the ethylene molecule \cite{chap4-key10}. The gauge group there is $D^\ast_8$, the binary dihedrall group isomorphic to the group
+We have analysed a similar situation which occurs for the ethylene molecule \cite{chap4-key10}. The gauge group there is $D^\ast_8$, the binary dihedral group isomorphic to the group
 \begin{equation}
 \left\{ \pm \mathbb{I}_{2 \times 2}, \pm i \tau_j :\quad j=1, 2, 3, \quad \tau_j = \text{Pauli matrices}\right\}.\label{chap4-eq3.2}
 \end{equation}
@@ -221,7 +221,7 @@ is diagonal in an IRR of the molecule: no observable changes the eigenvalues of 
 
 A consequence of the above observation is that coloured states, such as
 \begin{equation}
-|c_2, c_3, i, i_3, y; \cdot \rangle ~ \langle c_2, c_3, i, i_3, y; \cdot | \label{chap4-eq3.4}
+|c_2, c_3, i, i_3, y, \cdot \rangle ~ \langle c_2, c_3, i, i_3, y, \cdot | \label{chap4-eq3.4}
 \end{equation}
 for $c_2, c_3$ or both $\neq 0$, are \textit{mixed} \cite{chap4-key4}. That has consequences for colour confinement \cite{chap4-key4}.
 
@@ -231,7 +231,7 @@ We approach this problem as in the QED case. The charged particle in QED gets dr
 
 In a similar manner, we can expect novel physical consequences from the gluon radiation of Yang-Mills particles such as quarks.
 
-The dynamics of Yang-Mills gluous is non-linear. Hence, gluous can also radiate gluons. We do not treat this radiation. Perhaps by using a null four vector for $dz_\mu (\tau)/d \tau $ in what follows we can get an adequate description of infra-gluon radiation by gluons.
+The dynamics of Yang-Mills gluons is non-linear. Hence, gluons can also radiate gluons. We do not treat this radiation. Perhaps by using a null four vector for $dz_\mu (\tau)/d \tau $ in what follows, we can get an adequate description of infra-gluon radiation by gluons.
 
 Nor do we treat effects of confinement.
 
@@ -307,13 +307,13 @@ where $Tr (KL)=0, K, L$ are the basis of the two \ul{$U(1)$}'s and commute, and 
 \end{equation}
 whereas $b$ has no source.
 
-This equation for $a$ can be treated exactly as before in QCD. the particle state vectors have eigenvalues $k_i$ of $K$. So the radiation is $k_j \omega_\mu$ for a fixed $k_j$ and its dressed in state is
+This equation for $a$ can be treated exactly as before in QCD. The particle state vectors have eigenvalues $k_i$ of $K$. So the radiation is $k_j \omega_\mu$ for a fixed $k_j$ and its dressed in state is
 \begin{equation}
 |\text{in}, \omega, \ldots \rangle = e^{kj \int d^3 x (Tr\lambda_K[A_i^- (x) \omega_i^+ (x)- a_i^+ (x) \omega_i^-(x)])} | P; k_j \rangle |0\rangle_\gamma, \label{chap4-eq3.19} 
 \end{equation}
 where $\lambda_K = K / \sqrt{TrK^2}, |0\rangle_\gamma$ is the gluon Fock vacuum and $|P; k_j \rangle$ is the particle vacuum with eigenvalue $k_j$ for $K$.
 
-In \cite{chap4-key4}, we have shown how the twist of the in state vector in \eqref{chap4-eq3.19} can be absorbed as in instanton-like term in the action.
+In \cite{chap4-key4}, we have shown how the twist of the in state vector in \eqref{chap4-eq3.19} can be absorbed as in an instanton-like term in the action.
 
 \subsection{Lorentz Invariance}\label{chap4-sec3.2}
 
@@ -431,7 +431,7 @@ Then
 \begin{align*}
   q_n \int^0_{-\infty} dx_0 \frac{P^\mu}{P^0} A_\mu \left( \frac{P}{P^0}\right) & = -i \int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} a_\mu^+ (k) \tilde{\omega}^{\mu -} (k)\\
   & \qquad + i \int \frac{d^3k}{\sqrt{2k_0}} \frac{1}{(2 \pi)^3} a_\mu^- (k) \tilde{\omega}^{\mu +}(k), \label{chap4-eqA.17}\tag{A.17}\\
-  \tilde{\omega}^{\mu +} (k) & = \frac{q_n P^\mu}{k \cdot P + i\epsilon} = {\tilde{\omega}}^{\mu -} (k) \label{chap4-eqA.18}\tag{A.18}
+  \tilde{\omega}^{\mu +} (k) & = \frac{q_n P^\mu}{k \cdot P + i\epsilon} = {\bar{\tilde{\omega}}}^{\mu -} (k) \label{chap4-eqA.18}\tag{A.18}
 \end{align*}
 where $\epsilon$ as usual decreases to zero when all calculations are done.
 
