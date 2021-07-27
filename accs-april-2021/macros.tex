@@ -34,7 +34,15 @@
 
 \renewcommand{\quote}{\list{}{\rightmargin=\leftmargin\topsep=0pt}\item\relax}
 
+\newfontfamily\greekfont[Script=Greek,
+    Mapping=tex-text,
+    Scale=MatchUppercase]
+{Gentium Plus}
 
+\newfontfamily\greekfonts[Script=Greek,
+    Mapping=tex-text,
+    Scale=MatchLowercase]
+{Gentium Plus}
 
 \makeatletter
 \renewcommand\section{\@startsection {section}{1}{\z@}%
@@ -66,6 +74,7 @@
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
+
 \makeatother
 
 \renewcommand\bibname{References}
@@ -115,7 +124,7 @@
   evenpage,
   area={0pt}{760pt}{\paperwidth}{1.25cm},
   contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
-\hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | April 2021}\hfill}%
+\hbox to\paperwidth{\quad\raise14pt\hbox{\thepage}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{Advanced Computing and Communications | March 2021}\hfill}%
 }}
 ]{bottom.even}
 
@@ -126,7 +135,7 @@
   oddpage,
   area={0pt}{760pt}{\paperwidth}{1.25cm},
   contents={\vbox to1.25cm{\hbox to\paperwidth{\color{black}{\rule{\paperwidth}{0.8pt}}}\vskip -1pt
-\hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | April 2021}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
+\hbox to\paperwidth{\hfill\raise14pt\hbox{Advanced Computing and Communications | March 2021}\quad\rule{0.8pt}{1.25cm}\quad\raise14pt\hbox{\thepage}\quad}%
 }}
 ]{bottom.odd}
 \AddLayersToPageStyle{scrheadings}{top.odd,top.even,bottom.odd,bottom.even}
@@ -177,7 +186,8 @@
 
 \newtheorem{defn}{Definition}[section]
 \newtheorem{fact}{Fact}
-\newtheorem{thm}{Theorem}[section]
+%~ \newtheorem{thm}{Theorem}[section]
+\newtheorem{thm}{Theorem}
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{prop}{Proposition}
 \newtheorem{claim}{Claim}
@@ -188,6 +198,8 @@
 \newtheorem{proposition}[thm]{Proposition}
 \newtheorem{remark}{Remark}[section]
 \newtheorem{example}{Example}[section]
+
+
 
 \newcommand{\pvk}{\color{red} }
 \newcommand{\pvkred}{\color{red} }
@@ -248,3 +260,8 @@
 \newcommand{\centerimg}[2][width=\textwidth]{% Center an image
   \makebox[\textwidth]{\adjustimg\includegraphics[#1]{#2}}%
 }
+
+\DeclareMathOperator*{\Lim}{\mathrm{lim}}
+\DeclareMathOperator*{\Min}{\mathrm{min}}
+\DeclareMathOperator*{\Max}{\mathrm{max}}
+

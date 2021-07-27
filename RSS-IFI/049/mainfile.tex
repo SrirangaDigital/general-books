@@ -34,13 +34,27 @@
 %\newpage
 
 \input src/000d-about
+\newpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
 \input src/000e-key-partners
+
+\newpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
 \input src/000f-acknowledgements
 \newpage
 \centerline{{\small\textsl{This page left blank intentionally}}}
 \thispagestyle{empty}
 
 \newpage
+\input src/000g-series-editorial
+
+\newpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
 \lhead[\small\thepage\quad ]{}
 \rhead[]{\small\thechapter. \leftmark\quad\small\thepage}
 \chead[]{}
@@ -49,6 +63,8 @@
 \lhead[{\small\thepage}\quad\small K. S. Kannan]{} 
 \input src/000g-volume-editorial
 \newpage
+\rhead[]{\small\thechapter. \quad\small\thepage}
+\lhead[{\small\thepage}\quad\small T. M. Narendran]{} 
 \input src/000h-authors-words
 \mainmatter
 
@@ -64,7 +80,7 @@
 %\thispagestyle{empty}
 
 %\newpage
-\rhead[]{\small\thechapter. Uddeśa -- Three-dimensional Philology and Nyāya Śāstra\quad\small\thepage}
+\rhead[]{\small\thechapter. \textit{Uddeśa} -- Three-dimensional Philology and Nyāya Śāstra\quad\small\thepage}
 \input src/002-chapter-02
 %\input src/02-chapter2 %from .xhtml file
 \clearpage
@@ -78,12 +94,13 @@
 \input src/003-chapter-03
 \clearpage
 
-
-\rhead[]{\small\thechapter. A Pramāṇa-Parīkṣā of Three-Dimensional Philology\quad\small\thepage}
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+\rhead[]{\small\thechapter. A \textit{Pramāṇa-Parīkṣā} of Three-Dimensional Philology\quad\small\thepage}
 \input src/004-chapter-04
 \clearpage
-%\centerline{{\small\textsl{This page left blank intentionally}}}
-%\thispagestyle{empty}
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
 
 \rhead[]{\small\thechapter. Conclusion\quad\small\thepage}
 \setcounter{chapter}{04}
@@ -100,7 +117,7 @@
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
 %		\setcounter{endnote}{0}%
-        \huge\bfseries Anubandha\space \thechapter
+        \huge{\it \bfseries  Anubandha}\space \thechapter
         \par\nobreak
         \vskip 20\p@
       \fi
@@ -111,7 +128,7 @@
   }}
 \makeatother
 \setcounter{chapter}{0}
-\rhead[]{\small Anubandha 1\quad\small\thepage}
+\rhead[]{\small {\it Anubandha} 1\quad\small\thepage}
 \input src/006-chapter-06
 \clearpage
 
@@ -119,7 +136,7 @@
 \thispagestyle{empty}
 
 \newpage
-\rhead[]{\small Anubandha 2\quad\small\thepage}
+\rhead[]{\small {\it Anubandha} 2\quad\small\thepage}
 \input src/007-chapter-07
 \clearpage
 
@@ -164,7 +181,7 @@
 %~ \phantom{a}
 %~ \thispagestyle{empty}
 %\newpage
-\end{document}
+
 
 \makeatletter
 
@@ -189,3 +206,5 @@
 \label{index}
 \printindex
 
+
+\end{document}

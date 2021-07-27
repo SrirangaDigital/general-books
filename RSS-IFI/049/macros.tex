@@ -1,5 +1,6 @@
 %importing packages
 \usepackage[utf8]{inputenc}
+\usepackage{fontspec}
 \usepackage{polyglossia}
 \usepackage{fontspec}
 \usepackage{graphicx}
@@ -18,6 +19,14 @@
 \usepackage{longtable}
 \usepackage{enumerate}
 \usepackage{multirow}
+\usepackage[xindy]{glossaries}
+
+%~ \usepackage[greek]{babel}
+
+%~ \usepackage[Latin,Greek]{ucharclasses}
+%~ \newfontfamily{\gkfont}[]{Biolinum Regular}
+%~ \newcommand{\greek}[1]{\gkfont #1}
+
 
 \allowdisplaybreaks
 
@@ -41,6 +50,19 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 	ItalicFont=GentiumBasic-Italic,
 	BoldItalicFont=GentiumBasic-BoldItalic
 ]{GentiumBasic}
+
+\setmainfont[	
+	Script=Latin,
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic
+]{GentiumBasic}
+
+\newfontfamily\greekchars[
+	Script=Latin,
+	Path=$HOME/Desktop/fonts/linux_libertine/
+]{LinLibertine_R.ttf}
 
 
 \newfontfamily\englishfont[
