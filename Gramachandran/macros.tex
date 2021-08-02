@@ -1,5 +1,6 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{tfrupee}
 \usepackage{txfonts}
 \usepackage{rotating}
 \usepackage{xfrac}
@@ -72,21 +73,21 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm, cropmarks]{zwpagelayout}
 \rhead[\small Pursuit of Excellence]{\small\thepage}
 \lhead[\small\thepage]{\small\leftmark}
 
-\renewcommand\frontmatter{%
-    \cleardoublepage
-  \@mainmatterfalse
-  \pagenumbering{arabic}}
-\renewcommand\mainmatter{%
-    \cleardoublepage
-  \@mainmattertrue
-}
+%~ \renewcommand\frontmatter{%
+    %~ \cleardoublepage
+  %~ \@mainmatterfalse
+  %~ \pagenumbering{arabic}}
+%~ \renewcommand\mainmatter{%
+    %~ \cleardoublepage
+  %~ \@mainmattertrue
+%~ }
 
 \def\@makechapterhead#1{%
   \setcounter{equation}{0}
   \vspace*{50\p@}%
   {\parindent \z@ \centering \normalfont
     \interlinepenalty\@M
-    \huge\bfseries\thechapter.\ #1\par\nobreak
+    \huge\bfseries\if@mainmatter\thechapter.\ \fi #1\par\nobreak
     \vskip 20\p@
   }}
 
