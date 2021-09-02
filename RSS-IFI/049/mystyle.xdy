@@ -2,10 +2,10 @@
 	\label{begin:index}~n
 	\providecommand*\lettergroupDefault[1]{}
 	\providecommand*\lettergroup[1]{%
-      \par\textbf{#1}\par
+      \vskip 2pt\textbf{#1}\par
       \nopagebreak
   }"
-              :close "~n\label{bookend}\end{theindex}~n"
+              :close "~n\end{theindex}\label{bookend}~n"
               :tree)
 
 (define-attributes (( "pageff")) )                
@@ -20,3 +20,7 @@
 (markup-locref-list :sep ", ")
 (markup-locref   :attr  "pageff"     :open "\pageff{" :close "}")
 (markup-locref   :attr  "passim"     :open "\passim{" :close "}")
+
+(define-attributes (("gobble")))
+(markup-locref  :open "\mygobble{" :close "}" :attr "gobble")
+
