@@ -106,9 +106,9 @@ tensor product can be expressed as a scalar product with a factor as shown in \e
   \begin{bmatrix}    l & 0 & l\\    m & 0 & m  \end{bmatrix}  A_l^m B_l^{-m}\notag\\
   & = \frac{(-1)^l}{[l]} A_l \cdot B_l, \label{chap3-eq4}
 \end{align}
-using the notation $[l]=\sqrt{2l+1}$. One can write the inverse relation of \eqref{chap3-eq3}. Given any two spherical tensor operators $A_{l_1}^{m_1}$, $A_{l_2}^{m_2}$, they can be expressed as a linear sum of tensor products $(A_{l_1} \times B_{l_2})^M_L$, with $|l_1 -  l_2 | \leq L \leq l_1 + l_2$ 
+using the notation $[l]=\sqrt{2l+1}$. One can write the inverse relation of \eqref{chap3-eq3}. Given any two spherical tensor operators $A_{l_1}^{m_1}$, $B_{l_2}^{m_2}$, they can\break be expressed as a linear sum of tensor products $(A_{l_1} \times B_{l_2})^M_L$, with\break $|l_1 -  l_2 | \leq L \leq l_1 + l_2$ 
 \begin{equation}
-A_{l_1}^{m_1} A_{l_2}^{m_2} = \sum_{L} 
+A_{l_1}^{m_1} B_{l_2}^{m_2} = \sum_{L} 
 \begin{bmatrix}
 l_1 & l_2 &L\\
 m_1 & m_2 & M
@@ -121,9 +121,9 @@ If there are three tensor operators $A_{l_1}$, $B_{l_2}$, $C_{l_3}$ , then it is
 \end{equation}
 One can go from one coupling scheme to another by a unitary transformation,
 \begin{align}
-\left[ (A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}\right]^M_L  & = \sum_{l_{23}} U (l_1, l_2 L l_3, l_{12} l_{23})\notag \\ 
+\left[ (A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}\right]^M_L  & = \sum_{l_{23}} U (l_1 l_2 L l_3, l_{12} l_{23})\notag \\ 
 & \qquad \qquad \qquad \times \left[A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}} \right]^M_L. \label{chap3-eq7}\\ 
-\left[ A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}}\right]^M_L & = \sum_{l_{12}} U (l_1, l_2 L l_3, l_{12} l_{23}) \notag \\
+\left[ A_{l_1} \times (B_{l_2} \times C_{l_3})_{l_{23}}\right]^M_L & = \sum_{l_{12}} U (l_1 l_2 L l_3, l_{12} l_{23}) \notag \\
 & \qquad \qquad \qquad \times \left[(A_{l_1} \times B_{l_2})_{l_{12}} \times C_{l_3}) \right]^M_L. \label{chap3-eq8} 
 \end{align}
 The unitary transformation coefficients $U (l_1 l_2 L l_3, l_{12} l_{23})$ defined in Eqs. \eqref{chap3-eq7} and \eqref{chap3-eq8} are exactly the recoupling coefficients that occur in the addition of three angular momenta \cite{chap3-key11,chap3-key12}. The recoupling coefficient $U (l_1 l_2 Ll_3 , l_{12} l_{23})$ can be expressed in terms of Racah coefficient $W (l_1 l_2 Ll_3 , l_{12} l_{23})$ 
@@ -136,11 +136,11 @@ If there are four spherical tensor operators $A_{l_1}, B_{l_2}, C_{l_3}, D_{l_4}
 & [(A_{l_1} \times B_{l_2})_{l_{12}} \times (C_{l_3} \times D_{l_4})_{l_{34}}]^M_L \notag \\
 & \qquad = \sum_{l_{13} l_{24}}
 	\begin{bmatrix}l_1 & l_2 & l_{12}\\l_3 & l_4 & l_{34}\\l_{13} & l_{24} & L\end{bmatrix}
-	\times [(A_{l_1} \times C_{l_3})_{l_{13}} \times (B_{l_2} \times D_{l_4})_{l_{24}}]^M_L. \label{chap3-eq10}\\
+	 [(A_{l_1} \times C_{l_3})_{l_{13}} \times (B_{l_2} \times D_{l_4})_{l_{24}}]^M_L. \label{chap3-eq10}\\
 & [(A_{l_1} \times C_{l_3})_{l_{13}} \times (B_{l_2} \times D_{l_4})_{l_{24}}]^M_L  \notag \\
 & \qquad = \sum_{l_{12} l_{34}}
 	\begin{bmatrix}l_1 & l_2 & l_{12}\\l_3 & l_4 & l_{34}\\l_{13} & l_{24} & L\end{bmatrix} 
-	\times [(A_{l_1} \times B_{l_2})_{l_{12}} \times (C_{l_3} \times D_{l_4})_{l_{34}}]^M_L. \label{chap3-eq11}
+	 [(A_{l_1} \times B_{l_2})_{l_{12}} \times (C_{l_3} \times D_{l_4})_{l_{34}}]^M_L. \label{chap3-eq11}
 \end{align}
 The recoupling coefficient (denoted by wide square brackets) that occurs in the coupling of four spherical tensors can be expressed in terms of Wigner's 9-j symbol (denoted by wide curly brackets).
 \begin{equation}
@@ -233,7 +233,7 @@ The double-bar matrix element is independent of the coordinate system. It is a t
 \begin{align}
   \langle j_1' j_2' j' || & (a_{k_1}(1) \times B_{k_2}(2))_k ||  j_1 j_2 j \rangle \notag \\
   & =  \begin{bmatrix} j_1 & j_2 & j\\ k_1 & k_2 & k \\ j_1' & j_2' & j'  \end{bmatrix}
-  \langle j_1' || A_{k_1}(1)|| j_1 \rangle \times \langle j_2' || B_{k_2} (2)|| j_2 \rangle . \label{chap3-eq23}
+  \langle j_1' || A_{k_1}(1)|| j_1 \rangle  \langle j_2' || B_{k_2} (2)|| j_2 \rangle . \label{chap3-eq23}
 \end{align}
 
 \section{Nuclear Transition Probability}\label{chap3-sec3}
@@ -270,7 +270,7 @@ Applying the Wigner-Eckart theorem, we get
   \notag \\
  &  \begin{bmatrix} j_i & \lambda & j_f \\ m_i & m_\lambda & m_f\end{bmatrix}
     \begin{bmatrix} j_i & \lambda' & j_f \\ m_i & m_\lambda' & m_f\end{bmatrix}
-      \times \langle j_f || U_\lambda || j_i \rangle \langle j_f || U_{\lambda'} || j_i \rangle^\ast. \label{chap3-eq28}
+      \langle j_f || U_\lambda || j_i \rangle \langle j_f || U_{\lambda'} || j_i \rangle^\ast. \label{chap3-eq28}
 \end{align}
 Summing over $m_i$ and using the orthonormal properties of the C.G. coefficients, we get
 \begin{align}
@@ -302,22 +302,22 @@ $$
 Since the nucleon spin is $\frac{1}{2}$, the production amplitude will partly depend on spin and partly be independent of spin. Denoting the spin dependent part by ${\boldsymbol  K}$ and spin-independent part by $L$, we can write the transition operator as
 \setcounter{equation}{30}
 \begin{equation}
-t= ({\boldsymbol  \sigma \cdot K} + L) e^{i(\boldsymbol  \nu- \mu)\cdot {\boldsymbol  r}/\hbar}= ({\boldsymbol  \sigma \cdot K} + L) e^{i {\boldsymbol  q \cdot r}/\hbar}, \label{chap3-eq31}
+t= (\boldsymbol{ \sigma \cdot K} + L) e^{i\boldsymbol{(\nu- \mu)\cdot r}/\hbar}= (\boldsymbol{\sigma \cdot K} + L) e^{i \boldsymbol{q \cdot r}/\hbar}, \label{chap3-eq31}
 \end{equation}
-where $\boldsymbol{\sigma}$ is the Pauli spin operator. The incident photon and the outgoing pion are represented by plane waves $e^{i\nu  \cdot r/\hbar}$ and $e^{-i \mu \cdot r /\hbar}$ and ${\boldsymbol  q}$ denotes the momentum transfer to the nucleon. The matrix element for transition of the nucleon from the initial state $|\frac{1}{2}, m_i \rangle$ to the final state $|\frac{1}{2}, m_f \rangle$ is given by
+where $\boldsymbol{\sigma}$ is the Pauli spin operator. The incident photon and the outgoing pion are represented by plane waves $e^{i\boldsymbol{\nu  \cdot r}/\hbar}$ and $e^{-i \boldsymbol{\mu \cdot r} /\hbar}$ and ${\boldsymbol  q}$ denotes the momentum transfer to the nucleon. The matrix element for transition of the nucleon from the initial state $|\frac{1}{2}, m_i \rangle$ to the final state $|\frac{1}{2}, m_f \rangle$ is given by
 \begin{equation}
-  M_{fi} = \langle \tfrac{1}{2}, m_f | {\boldsymbol  \sigma \cdot K} + L | \tfrac{1}{2}, m_i \rangle e^{i {\boldsymbol  q \cdot r}/\hbar}. \label{chap3-eq32}
+  M_{fi} = \langle \tfrac{1}{2}, m_f | \boldsymbol{\sigma \cdot K} + L | \tfrac{1}{2}, m_i \rangle e^{i \boldsymbol{q \cdot r}/\hbar}. \label{chap3-eq32}
 \end{equation}
 This is the transition amplitude and the transition probability $T_{fi}$ is given by the modulus square $|M_{fi}|^2$, obtained after summing over the final spin state and averaging over the initial spin state.
 \begin{align}
-  T_{fi} & = \frac{1}{2} \sum_{m_i, m_f} | \langle \tfrac{1}{2}, m_f | {\boldsymbol  \sigma \cdot K} + L | \tfrac{1}{2}, m_i\rangle|^2 \notag \\
-  & = \frac{1}{2} \sum_{m)i, m_f} (\langle \tfrac{1}{2}, m_f | {\boldsymbol  \sigma. \cdot K + L}| \tfrac{1}{2}, m_i \rangle) \langle \tfrac{1}{2}, m_f | {\boldsymbol  \sigma, K + L}| \tfrac{1}{2}, m_i \rangle^\dagger \notag\\
-  & = \frac{1}{2} \sum_{m_i, m_f} \langle \tfrac{1}{2}, m_f + {\boldsymbol  \sigma \cdot K} + L | \tfrac{1}{2}, m_i \rangle \langle \tfrac{1}{2} , m_i | {\boldsymbol  \sigma \cdot K^\ast}+ L^\ast| \tfrac{1}{2}, m_f \rangle \notag\\
-  & = \frac{1}{2} \sum_{m_f} \langle \tfrac{1}{2}, m_f | ({\boldsymbol  \sigma \cdot K} + L) ({\boldsymbol  \sigma \cdot K^\ast} + L^\ast) | \tfrac{1}{2}, m_f \rangle,\notag\\
+  T_{fi} & = \frac{1}{2} \sum_{m_i, m_f} | \langle \tfrac{1}{2}, m_f | \boldsymbol{\sigma \cdot K} + L | \tfrac{1}{2}, m_i\rangle|^2 \notag \\
+  & = \frac{1}{2} \sum_{m)i, m_f} (\langle \tfrac{1}{2}, m_f | \boldsymbol{\sigma. \cdot K} + L| \tfrac{1}{2}, m_i \rangle) \langle \tfrac{1}{2}, m_f | \boldsymbol{\sigma, K} + L| \tfrac{1}{2}, m_i \rangle^\dagger \notag\\
+  & = \frac{1}{2} \sum_{m_i, m_f} \langle \tfrac{1}{2}, m_f + \boldsymbol{\sigma \cdot K} + L | \tfrac{1}{2}, m_i \rangle \langle \tfrac{1}{2} , m_i | \boldsymbol{\sigma \cdot K^\ast}+ L^\ast| \tfrac{1}{2}, m_f \rangle \notag\\
+  & = \frac{1}{2} \sum_{m_f} \langle \tfrac{1}{2}, m_f | (\boldsymbol{\sigma \cdot K} + L) (\boldsymbol{\sigma \cdot K^\ast} + L^\ast) | \tfrac{1}{2}, m_f \rangle,\notag\\
   & \qquad \qquad \qquad \qquad \qquad ~\text{since}~ \sum_{m_i} |\tfrac{1}{2}, m_i \rangle \langle \tfrac{1}{2}, m_i| =1 \notag\\
-  & = \frac{1}{2} ~\text{Tr}~  \{ ({\boldsymbol  \sigma \cdot K}+L)({\boldsymbol  \sigma \cdot K^\ast}
+  & = \frac{1}{2} ~\text{Tr}~  \{ (\boldsymbol{\sigma \cdot K}+L)(\boldsymbol{\sigma \cdot K^\ast}
   + L^\ast)\}\notag \\
-  & = {\boldsymbol  K \cdot K^\ast} + LL^\ast \label{chap3-eq33}
+  & = \boldsymbol{K \cdot K^\ast} + LL^\ast \label{chap3-eq33}
 \end{align}
 In deducing Eq.\ \eqref{chap3-eq33}, we have used the Hermitian property of the $2 \times 2$ Pauli matrices $\sigma_x, \sigma_y, \sigma_z$ with trace zero.
 $$
@@ -325,9 +325,9 @@ $$
 $$
 In addition,
 \begin{alignat*}{3}
-  &({\boldsymbol  \sigma \cdot K}) ({\boldsymbol  \sigma \cdot K}^\ast) = {\boldsymbol  K \cdot K}^\ast && +  i{\boldsymbol  \sigma \cdot (K \times K^\ast)}\\
-  & \text{Tr}~  ({\boldsymbol  \sigma \cdot K})L^\ast =0; && \text{Tr}~ \sigma \cdot ({\boldsymbol  K \times K}^\ast)=0\\
-  & \text{Tr}~ {\boldsymbol  K \cdot K}^\ast = 2 {\boldsymbol  K \cdot K}^\ast; & &\text{Tr}~LL^\ast = 2LL^\ast.
+  &(\boldsymbol{\sigma \cdot K)(\sigma \cdot K^\ast)} = \boldsymbol{K \cdot K^\ast} && +  i\boldsymbol{\sigma\cdot(K \times K^\ast)}\\
+  & \text{Tr}~  (\boldsymbol{\sigma \cdot K})L^\ast =0; && \text{Tr}~ \boldsymbol{\sigma \cdot (K \times K^\ast)}=0\\
+  & \text{Tr}~ \boldsymbol{K \cdot K^\ast} = 2 \boldsymbol{K \cdot K^\ast}; & &\text{Tr}~LL^\ast = 2LL^\ast.
 \end{alignat*}
 
 The transition probability $T_{fi}$ given by Eq.\ \eqref{chap3-eq33} is energy-dependent and one can obtain the transition probability per unit time $Q_{fi}$ for photo-pion production, using Fermi's Golden rule \cite{chap3-key23}.
@@ -363,7 +363,7 @@ The cross section depends on the incident flux. In this case, the number of phot
 where $\mu$ denotes the outgoing pion momentum and $\mu_0$, its relativistic energy (including the rest mass energy; $\mu_0^2 = \mu^2 c^2 + m_\pi^2 c^4$). The integral over $d\mu_0$ yields the muon energy ($\mu_0$) in the final state to be equal to the incident photon energy ($\nu_0$). It is convenient to use natural units $\hbar =1$, $c=1$, $m_\pi =1$. In natural units, the differential cross section becomes
 \begin{align}
   \frac{d \sigma}{d \Omega} & = (2 \pi)^{-2} \mu \mu_0 T_{fi}\notag \\
-  & = (2 \pi)^{-2} \mu \mu_0 ({\boldsymbol  K^\ast \cdot K} + L^\ast L) \label{chap3-eq36}
+  & = (2 \pi)^{-2} \mu \mu_0 (\boldsymbol{K^\ast \cdot K} + L^\ast L) \label{chap3-eq36}
 \end{align}
 Eq.\ \eqref{chap3-eq36} represents the differential cross section for the elementary process of photoproduction of pions from nucleons.
 
@@ -374,15 +374,15 @@ Eq.\ \eqref{chap3-eq36} represents the differential cross section for the elemen
 Let us now consider the transition of a bound nucleon from an initial state $|R_i (r)$, $l_i \frac{1}{2} j_i m_i \rangle$ to a final state $|R_f (r)$, $l_f \frac{1}{2} j_f m_f \rangle$ due to the interaction with an external field. Using the plane wave approximation for the incident photon and the emitted pion, the transition operator can be written as (in natural units with $\hbar =1$, $c=1$)
 \setcounter{equation}{36}
 \begin{equation}
-  t_{op}= e^{-i {\boldsymbol  \mu \cdot r}} ({\boldsymbol  \sigma \cdot K} + L)e^{i {\boldsymbol  \nu \cdot r}}= ({\boldsymbol  \sigma \cdot K}+ L) e^{i ({\boldsymbol  \nu - \mu})\cdot {\boldsymbol  r}} \label{chap3-eq37}
+  t_{op}= e^{-i \boldsymbol{\mu \cdot r}} (\boldsymbol{\sigma \cdot K} + L)e^{i \boldsymbol{\nu \cdot r}}= (\boldsymbol{\sigma \cdot K}+ L) e^{i \boldsymbol{(\nu - \mu)\cdot r}} \label{chap3-eq37}
 \end{equation}
 If we treat the spin-dependent and spin-independent parts of the amplitude alike by defining an unit operator $\sigma_0$ in spin space and redefining ${\boldsymbol  K}$ and $L$ by ${\boldsymbol  K_1}$ and $K_0$ , we can write the transition operator in a form, suitable for evaluation of the matrix element.
 \begin{align}
-  t_{op} = \sum_{0, 1} \sigma_n \cdot {\boldsymbol  K}_n e^{i{\boldsymbol  q \cdot r}}, \label{chap3-eq38}
+  t_{op} = \sum_{0, 1} \boldsymbol{\sigma}_n \cdot \boldsymbol{K}_n e^{i\boldsymbol{q \cdot r}}, \label{chap3-eq38}
 \end{align}
-where $q= \nu- \mu$ is the momentum transfer. Expanding $e^{i {\boldsymbol  q \cdot r}}$ into partial waves,
+where $\boldsymbol{q}= \boldsymbol{\nu- \mu}$ is the momentum transfer. Expanding $e^{i \boldsymbol{q \cdot r}}$ into partial waves,
 \begin{equation}
-  e^{i {\boldsymbol  q \cdot r}} = 4 \pi \sum_{lm} (i)^l j_l (qr) (-1)^{m}Y_l^m (\hat{{\boldsymbol  r}}) Y_l^{-m} (\hat{{\boldsymbol  q}}), \label{chap3-eq39}
+  e^{i \boldsymbol{q \cdot r}} = 4 \pi \sum_{lm} (i)^l j_l (qr) (-1)^{m}Y_l^m (\hat{{\boldsymbol  r}}) Y_l^{-m} (\hat{{\boldsymbol  q}}), \label{chap3-eq39}
 \end{equation}
 Where $j_l (qr)$ represents the spherical Bessel functions. the transition operator can now be written as
 \begin{equation}
@@ -391,7 +391,7 @@ Where $j_l (qr)$ represents the spherical Bessel functions. the transition opera
 Separating the nuclear operators from the rest and forming tensor products in pairs,
 \begin{align}
   Y_l^m ({\boldsymbol \hat{r}}) {\boldsymbol \sigma}_n^\mu & = \sum_{\lambda}
-  \begin{bmatrix} L & n & \lambda\\ m & \mu & m_\lambda \end{bmatrix} (Y_l ({\boldsymbol \hat{r}}) \times {\boldsymbol \sigma_n})_\lambda^{m_\lambda}. \label{chap3-eq41}\\
+  \begin{bmatrix} l & n & \lambda\\ m & \mu & m_\lambda \end{bmatrix} (Y_l ({\boldsymbol \hat{r}}) \times {\boldsymbol \sigma_n})_\lambda^{m_\lambda}. \label{chap3-eq41}\\
   Y_l^{-m} ({\boldsymbol \hat{q}}) {\boldsymbol K}_n^{-\mu} & = \sum_{\lambda'}
   \begin{bmatrix}    l & n & \lambda' \\ -m & -\mu & -m_\lambda  \end{bmatrix}
   (Y_l ({\boldsymbol \hat{q}}) \times {\boldsymbol K}_n)_{\lambda'}^{-m_\lambda} \notag \\
@@ -449,7 +449,7 @@ The angular momentum matrix elements that occur in Eq.\ \eqref{chap3-eq47} are g
   \langle \tfrac{1}{2} || \sigma_n || \tfrac{1}{2} \rangle & = [n]. \label{chap3-eq50}
 \end{align}
 
-In Eq.\ \eqref{chap3-eq47}, the only quantities that depend on $m_\lambda$ can be pulled out and summation over $m_\lambda$ performed.
+In Eq.\ \eqref{chap3-eq47},  only quantities that depend on $m_\lambda$ can be pulled out and summation over $m_\lambda$ performed.
 \begin{align}
   S & = \sum_{m_\lambda} (Y_l ({\boldsymbol \hat{q}}) \times {\boldsymbol K}_n)_\lambda^{-m_\lambda}
   \left\{ (Y_{l'} ({\boldsymbol \hat{q}}) \times {\boldsymbol K}_{n'})_\lambda^{-m_\lambda}\right\}^\ast \notag \\
@@ -474,7 +474,7 @@ Substituting \eqref{chap3-eq53} in Eq.\ \eqref{chap3-eq52}, we get
   & = (-1)^\lambda [\lambda] \sum_{N} (-1)^N  \frac{[l][l']}{\sqrt{4 \pi}[N]^2}
   \begin{bmatrix} l & n & \lambda\\ l' & n' & \lambda\\ N & N & 0  \end{bmatrix}
   \begin{bmatrix}l & l' & N\\ 0 & 0 & 0  \end{bmatrix} \notag \\
-  & \qquad \qquad \qquad \times (Y_N ({\boldsymbol \hat{q}}) \cdot  \Bigl({\boldsymbol K}_n \times {\boldsymbol K_{n'}^\ast})_N\Bigr)_0^0\label{chap3-eq54}
+  & \qquad \qquad \qquad \times (Y_N ({\boldsymbol \hat{q}}) \cdot  \Bigl({\boldsymbol K}_n \times {\boldsymbol K_{n'}^\ast})_N\Bigr)\label{chap3-eq54}
 \end{align}
 With the help of Eqs.\ \eqref{chap3-eq54} and \eqref{chap3-eq48}--\eqref{chap3-eq50}, the transition probability $T_{fi}$ given by Eq.\ \eqref{chap3-eq47} can be calculated.
 
@@ -482,18 +482,18 @@ With the help of Eqs.\ \eqref{chap3-eq54} and \eqref{chap3-eq48}--\eqref{chap3-e
 
 The transition operator for photo-pion production from nuclei from an initial nuclear state to a final nuclear state can be written as
 \begin{equation}
-t_{\text{op}} = \phi^\ast ({\boldsymbol \mu, r}) \left( \sum_{n=0, 1} \sigma_n \cdot {\boldsymbol K}_n\right) \exp (i \nu \cdot {\boldsymbol r}), \label{chap3-eq55}
+t_{\text{op}} = \phi^\ast (\boldsymbol{\mu, r}) \left( \sum_{n=0, 1} \sigma_n \cdot {\boldsymbol K}_n\right) \exp (i \boldsymbol{\nu \cdot r}), \label{chap3-eq55}
 \end{equation}
-where $\phi (\mu, {\boldsymbol r})$ is the distorted wave function of the outgoing pion of momentum $\mu$, taking into account the final state interaction of the pion with the nucleus. The incoming photon of momentum $\nu$ is represented by a plane wave which is a reasonable approximation. The quantities $K_0$ and ${\boldsymbol K}_1$ denote respectively the spin-independent and spin-dependent parts of the elementary photo-pion production amplitude and the operators $\sigma_0$ and $\sigma_1$ denote respectively the unit operator and the Pauli spin operator.
+where $\phi \boldsymbol{(\mu, r})$ is the distorted wave function of the outgoing pion of momentum $\boldsymbol{\mu}$, taking into account the final state interaction of the pion with the nucleus. The incoming photon of momentum $\boldsymbol{\nu}$ is represented by a plane wave which is a reasonable approximation. The quantities $K_0$ and ${\boldsymbol K}_1$ denote respectively the spin-independent and spin-dependent parts of the elementary photo-pion production amplitude and the operators $\sigma_0$ and $\sigma_1$ denote respectively the unit operator and the Pauli spin operator.
 
 If the nuclear distrotion effect on the emitted pion is neglected, then the transition operator reduces to the one which we have considered earlier.
 \begin{equation}
 t_{\text{op}} = \sum_{i=0, 1} \sigma_n \cdot {\boldsymbol K}_n \exp i {\boldsymbol q \cdot r}, \label{chap3-eq56}
 \end{equation}
-where $q= \nu -\mu$ denotes the momentum transfer. If we include the nuclear distortion effects on the emitted pion, then the pion wave function and the photon wave function have to be expanded separately into partial waves, as shown below:
+where $\boldsymbol{q}= \boldsymbol{\nu -\mu}$ denotes the momentum transfer. If we include the nuclear distortion effects on the emitted pion, then the pion wave function and the photon wave function have to be expanded separately into partial waves, as shown below:
 \begin{align}
-  \phi (\mu , {\boldsymbol r}) & = 4 \pi \sum_{l_{\mu}} (i)^{l_\mu} g_{l_\mu}(\mu r)\sum_{m_\mu} (-1)^\mu Y_{l_\mu}^{-m _\mu} ({\boldsymbol \hat{\mu}}) Y_{l_\mu}^{m_\mu} ({\boldsymbol \hat{r}}) \label{chap3-eq57}\\
-  \exp (i \nu \cdot {\boldsymbol r}) & = 4 \pi \sum_{l_\nu} (i)^{l_\nu} j_{l_\nu} (\nu r) \sum_{m_\nu} (-1)^\nu Y_{l_\nu}^{-m_\nu} ({\boldsymbol \hat{\nu}}) Y_{l_\nu}^{m_\nu} ({\boldsymbol \hat{r}}) \label{chap3-eq58}
+  \phi \boldsymbol{(\mu , r)} & = 4 \pi \sum_{l_{\mu}} (i)^{l_\mu} g_{l_\mu}(\mu r)\sum_{m_\mu} (-1)^\mu Y_{l_\mu}^{-m _\mu} ({\boldsymbol \hat{\mu}}) Y_{l_\mu}^{m_\mu} ({\boldsymbol \hat{r}}) \label{chap3-eq57}\\
+  \exp (i \boldsymbol{\nu \cdot r}) & = 4 \pi \sum_{l_\nu} (i)^{l_\nu} j_{l_\nu} (\nu r) \sum_{m_\nu} (-1)^\nu Y_{l_\nu}^{-m_\nu} ({\boldsymbol \hat{\nu}}) Y_{l_\nu}^{m_\nu} ({\boldsymbol \hat{r}}) \label{chap3-eq58}
 \end{align}
 In Eqn. \eqref{chap3-eq57}, $g_{l_\mu} (\mu r)$ denotes the radial wave function of the pion which is obtained by solving the Klein-Gordon equation with the pion-nucleus optical potential. If the pion-nucleus optical potential vanishes, the radial function $g_{l_\mu}(\mu r)$ goes over into the spherical Bessel function  $j_{l\mu}(\mu r)$. Substituting \eqref{chap3-eq57} and \eqref{chap3-eq58} into Eq.~\eqref{chap3-eq55} and grouping together separately the angular momentum operators depending on ${\boldsymbol \hat{r}}$ and those depending on ${\boldsymbol \hat{\mu}}$ and ${\boldsymbol \hat{\nu}}$, we obtain
 \eject
@@ -552,7 +552,7 @@ This article is dedicated to the memory of Prof.\ G. Ramachandran, with whom I l
 \end{thebibliography}
 \vskip .5cm
 
-\centerline{\includegraphics{authorsphotos/V_Devanathan.eps}}
+\centerline{\includegraphics[scale=0.4]{authorsphotos/V_Devanathan1.eps}}
 \bigskip
 
 \noindent
