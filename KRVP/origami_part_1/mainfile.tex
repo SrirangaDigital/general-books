@@ -16,29 +16,25 @@
 
 \newpage
 
-%\input src/copyright
+\input src/copyright
 
-%\newpage
+\newpage
 
-%\input src/arpane
-%\input src/mununxdi
-%\input src/arike1
-%%%%\input src/arike2%%%
-%\input src/mununxdi
+\input src/arike
 
-%\newpage
+\newpage
 
 \input src/preface
 
-\newpage
+%~ \newpage
 
-~
+%~ ~
 
-\phantom{a}
+%~ \phantom{a}
 
-\thispagestyle{empty}
+%~ \thispagestyle{empty}
 
-\newpage
+%~ \newpage
 
 
 
@@ -70,6 +66,8 @@
 %\setcounter{chapter}{0}
 \input src/001-chapter001.tex
 }
+
+
 %\minitoc
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
@@ -80,4 +78,5 @@
 \makeatother
 
 \chapterend
+
 \end{document}
