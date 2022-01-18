@@ -1,0 +1,673 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{mathrsfs,amsthm,graphicx,bm,amssymb,enumerate}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{mathtools}
+\usepackage{empheq}
+\usepackage[symbol]{footmisc}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{xpatch}
+\usepackage{caption}
+
+%~ \usepackage[]{titlesec}%
+%~ \titleformat{\subsubsec}
+%~ {\Large\bfseries}
+%~ {\ul{\thesubsubsec.\enspace}}
+%~ {-0.15em}
+%~ {\ul}
+
+
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+
+\DeclareMathOperator{\x}{\mathrm{X}}
+\DeclareMathOperator{\la}{\mathrm{L}}
+\DeclareMathOperator{\ka}{\mathrm{K}}
+\DeclareMathOperator{\md}{\mathrm{mod}}
+
+\theoremstyle{definition}
+{\newtheoremstyle{underlinethm}% name
+{-1.5mm}        % Space above, empty = `usual value'
+{}              % Space below
+{}              % Body font
+{}    % Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}              % Thm head font
+{}             % Punctuation after thm head
+{1.5mm}         % Space after thm head: \newline = linebreak
+{{\underline{\thmname{#1}\thmnumber{ #2}~\thmnote{(#3)}}}}
+
+\theoremstyle{underlinethm}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheoremstyle{underline}% name
+{-1.5mm}        % Space above, empty = `usual value'
+{}              % Space below
+{}              % Body font
+{}    % Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}              % Thm head font
+{}             % Punctuation after thm head
+{1.5mm}         % Space after thm head: \newline = linebreak
+{{{\thmname{#1}{\underline{(\thmnumber{ #2})}\relax}~\thmnote{(#3)}}}}  % Thm head spec
+
+\theoremstyle{underline}
+\newtheorem{subsubsec}{}[subsection]
+
+
+
+
+
+%~ \theoremstyle{definition}
+
+
+%~ \newtheorem{theorem}{Theorem}[section]
+%~ \newtheorem{subsubsec}{}[subsection]
+
+%~ \newtheorem{innercustomgeneric}{\customgenericname}
+%~ \providecommand{\customgenericname}{}
+%~ \newcommand{\newcustomtheorem}[2]{%
+  %~ \newenvironment{#1}[1]
+  %~ {%
+   %~ \renewcommand\customgenericname{#2}%
+   %~ \renewcommand\theinnercustomgeneric{##1}%
+   %~ \innercustomgeneric
+  %~ }
+  %~ {\endinnercustomgeneric}
+%~ }
+
+%~ \newcustomtheorem{customthm}{Theorem}
+
+
+\makeatother
+
+\begin{document}
+
+\title{Polynomial Representation of Quantum entanglement Properties of Resonating Valence bond States and Related States}
+\author{Sudipto Singha Roy\footnote{data missing???}, Aditi Sen(De){\footnote{Harish-Chandra Research Institute, Chatnag Road, Jhusi, Allahabad, 211019, India.}}, Ujjwal Sen{$^\dagger$} and\\ Ajit Iqbal Singh{\footnote{The Indian National Science Academy, Bahadeirshah Zafar Marg, New Delhi, 110002, India.}}}
+
+\date{\today}
+
+\maketitle
+
+\section*{Abstract}
+
+We study quantum entanglement properties of Resonating valence bond states and related states via polynomial representation. This renders easy proofs of genuine entanglemnet of doped states as well.
+
+
+\section{Introduction}\label{section-1}
+
+Resonation Valence Bond states (RVB) are important in condensed matter physics. Phillip W. Anderson's RVB paper [A1] is perhaps the most important paper that Triggered intensive and extensive studies of the topic. The progress from physics point of view can be gauged by survey or history articles by Anderson [A2 and A3], Baskaran [Ba 1, Ba 2], poilblarc, Cirac \& Perez-Garaia [PCPG], shuch [sh], Zeeman [Z] and an enormous collection of papers cited in them or elsewhere. Some particular aspects concerning quantum entanglement for different types have been studied by Chandran, Kaszlikowski, Sen(De), Sen \& Vedral [CKSSV], Dhar \& Sen(De) [DS], Dhar, Sen(De) \& Sen(DSS) Roy, Dhar, Sen(De) \& Sen [RDSS] and Roy [R].
+
+
+Polynomial have been used in different ways to study quantum entanglement. For instance, one can see paper by Wallach[w], Parthasarathy[P], Bhat[Bh],\break Skowronek[sk], Sengupta, Arvind \& Singh [SAS], Josza \& Mitchinson[JM],\break Adesso[Ad], Mor[M]. A recent paper by Bandyopadhyay \& Singh[Bs] displays a simple way to use polynomials for understanding multipartite entanglement in general and Schmidt rank in particular cases. For multi-qubit systems, the\break theory of polynomial representation of quantum entanglement takes rather a\break simple form. Further, for RVB is and related states it is enough to confine attention to homogeneous polynomials. So we recast a part of [BS] and strengthen it further in Section~\ref{section-2}. The basic theory of polynomials required for this can be found in many standard books but as in [BS] we take Fulton[F] as our basic reference. Similarly for multipartite  entanglement we may refer to any standard source  ?????? . We confine our attention to pure states.
+
+In Section~\ref{section-2}, we give polynomial representation of quantum entanglement of multiqubit system. It renders easy condition for classification of a pure state into a product vector, product vector in a bipartite cut or genuinely entangled in terms of the degree, support, number of terms or irreducible  of the corresponding polynomial.   
+
+We began Section~\ref{Section-3} with basics to the Cororings and resonance Valence bond states, nearest neighbour coverings etc. together with a few examples for the sake of self-completeness. Then we give their polynomial representations and obtain results on conditions in terms of them for quantum entanglement properties of RVB states. This ?????? us to the notion of decomporbility  and factorability  etc for converings together with interrelationships amongst them and renders easy proof of the fact that NN RVB are ???? ????? Master ??????? are obtained in terms of coverings for the corresponding RVB state to be a product vector in some bipartite cut. Illustrations have been provided. Doped RVB states are genuinely entangled is shown to be true in a very easy way. Section~\ref{section-4} concentrates on variable coefficients analogues and differences as compared to the constant ones in Section~\ref{section-3}. Doped states with variable coefficient with non-zero sum are shown to be genuinely entangled by a short proof.
+
+
+\section{Polynomial representation of quantum\\ entangement for multi-qubit systems}\label{section-2}
+
+Let $\mathbb{N}$ be the set of natural number $1,2,3, \ldots$ For $m\in \mathbb{N}$, let $\ulcorner m= \left\{ j \in \mathbb{N} : j \leq m \right\}$. For any set S, lot Ps be the set of subsets of S and $\#$ S, the cordinality of S.
+
+We take empty sums to be zero and empty products to be ??
+
+Let $n \in \mathbb{N}$ with $n \geq ???$.
+
+\subsection{Basics of multi-qubit systems and polynomials}\label{subsection-2.1}
+
+We begin with qubit systems. Let $l \leq j \leq n.$ 
+
+%~ \subsubsection*{(\underline{2.1.1})}
+\begin{subsubsec}\label{subsubsection-2.1.1}
+Let $\mathcal{H}_{j}$ be a qubit system with ordered basis $\left\{ | \uparrow \rangle_{j}, | \downarrow \rangle_{j}\right\}$ or $\left\{ | \alpha \rangle_{j}, | \shortmid \rangle_{j}\right\}$ or $\left\{ \beta^{j}_{1}, \beta^{j}_{2} \right\}$ of orthonormal vectors.
+\end{subsubsec}
+
+%~ \subsubsection*{(\underline{2.1.2})}
+\begin{subsubsec}\label{subsubsection-2.1.2}
+We also consider $\mathcal{H}_{j}$ as the space $C_{j}[\x_{j}]$ of comples polynomials in $\x_{j}$ of degree at root one, and the constant function $\underline{|}$ and the polynomial $\x_{j}$ ?????? an orthonormal basis for $\mathcal{H}_{j}$.
+
+In other words, we consider $\mathcal{H}_{j}$ as the subspace spanned by $\underline{|}$ and $\x_{j}$ of the Hilbert space $\la^{2}(\pi)$ of square $f$ on the unit circle. i.e; torus $\pi$ with $<f, g> = \int \overline{f} g d \lambda$, $\lambda$  being the normalized Lebesgue. measure on $\pi$.
+
+\end{subsubsec}
+
+%~ \subsubsection*{(\underline{2.1.3})}
+\begin{subsubsec}\label{subsubsection-2.1.3}
+Let $\mathcal{H} = \bigotimes\limits_{\rm d=1}^{\rm n} \mathcal{H}_{j}$ be the Hilbert space tensor product of Hilbert spaces $\mathcal{H}_{j}$, $1 \leq j \leq n$.
+
+Let $\mathcal{G}$ be the set of n-tuples $\underline{u} = (i_{j})^{n}_{j=1}$ with $i_{j}=0$ or 1 for $1 \leq j \leq n$. Then $\mathcal{G}$ is in one-one correspondence with the set $P_{n}$ of subsets of $\ulcorner n$ via $\underline{i} \longrightarrow K_{\underline{i}} = \left\{j : i_{j} = 1 \right\}$. We note that for $o \leq s \leq n $, $g_{s} = \left\{ \underline{i} \in g : |\underline{i}| = \sum_{i=1}^{\rm n}, i_{j} = s
+\right\}$ equals $\left\{\underline{i} \in g : \# K_{\underline{i}} = s \right\}$ and together, they constitute a decomposition of $g$.
+
+Further, $\left\{| \underline{i} \rangle = \bigotimes\limits_{j=1}^{\rm n} : \underline{i} = {({i_{j}})_{j=1}^{n}} \in g \right\}$  is an orthonormal  basis for $\mathcal{H}$. A generic element  of $\mathcal{H}$ has the ????? = $\sum_{\underline{i}\in g} a_{\underline{i}} ???? \rangle$ for a unique $\underline{a} = {(a_{\underline{i}})_{\underline{i}\in g}}$. $\mathscr{g}$
+\end{subsubsec}
+
+%~ \subsubsection*{(\underline{2.1.4})}
+\begin{subsubsec}\label{subsubsection-2.1.4}
+
+Continuing in The spirit set in (2.1.2) above, for $\underline{i} \in g$ 
+
+\noindent
+let $\underline{\x}^{\underline{i}} = \prod\limits_{j=1}^{n} \x_{j}^{i_{j}} = \prod \left\{ \x_{j} : j \in K_{\underline{i}} \right\} = \underline{\x}^{k_{\underline{i}}}$, so as to say by $\underline{\x}$ by $\underline{\x}^{\underline{i}}$ and accordingly, ???? $ in \mathcal{H}$ as in (2.1.3) above, by the polynomial F in several variables $\x = (\x_{j})^{n}_{j=1} = (\x_{1}, \x_{2}, \ldots \x_{n})$ given by ${\rm F} (\underline{\x}) = \sum_{\underline{i}\in g} a_{\underline{i}} \underline{\x}^{\underline{i}}$. This enables us to identity $\mathcal{H}$ with the space $C_{1}[\underline{\x}]$ of polynomials F in $\underline{\x}$ with degree of each variable $\x_{j}$ being less than or equal to |. Clearly the degree of each such F is at most $n$. We may also write F as $\sum\limits_{\rm K \in P_{n}} a_{\rm K} \underline{\x}^{\ka} = \sum\limits_{\rm K \in P_{n}} a_{\underline{i}_{\ka}} \underline{\x}^{\underline{i}_{k}}$, where for $\ka \in P_{n} (\underline{i}_{\ka})_{j} =1$ for $j\in \ka $ and $0$ otherwise.
+
+In other words we consider $\mathcal{H}$ as the subspace spanned by $\left\{ \underline{\x}^{\ka}, \ka \in P_{n}\right\}$ of the Hilbert space $\rm L^{2} \left(\prod^{n}\right)$ of square integrable complex functions $f$ on the torus $\prod^{n}$ with the normalized product Lebesque measure $\lambda$ ana take $<f, g> = \int\limits_{\prod^{n}} \overline{f} g d \lambda_{n}$.
+ 
+ \end{subsubsec}
+ 
+%~ \subsubsection*{(\underline{2.1.5})} 
+ \begin{subsubsec}\label{subsubsection-2.1.5}
+ Consider any non-empty subset $E$ of $\ulcorner_{n}$ with $E \neq \ulcorner_{n}$. Let $\mathcal{H}(E) = \bigotimes\limits_{j \in E} \mathcal{H}_{j}$ and $\mathcal{H}(E') = \bigotimes\limits_{j \in E'}$, $\mathcal{H}_{j}$.
+ 
+ Then $\mathcal{H} - \mathcal{H}(E) \bigotimes \mathcal{H}(E')$ a two-fold tensor product in the bipartite cut $(E, E')$, so as to say.
+ 
+ Let $C_{1}[\underline{\x}_{E}]$ and  $C_{1}[\underline{\x}_{E'}]$ have their obvious meanings. Further, $C_{1}[\underline{\x}] = C_{1}[\underline{\x}_{E}] \bigotimes  C_{1}[\underline{\x}_{E'}]$. We note that for $p \in C_{1}[\underline{\x}_{E}]$, $q \in C_{1}[\underline{\x}_{E'}]$, $F = p \bigotimes q$ is given by $F(\underline{x}) = p (\underline{\x}_{E}) q (\underline{\x}_{E'})$.
+ 
+ In view of (2.1.4) above we may identiy $\mathcal{H}(E)$ with $C_{1}[\underline{\x}_{E}]$ and $\mathcal{H}(E')$ with $C_{1}[\underline{\x}_{E'}]$.
+ 
+ \end{subsubsec}
+ 
+ %~ \subsubsection*{(\underline{2.1.6})}
+ \begin{subsubsec}\label{subsubsection-2.1.6}
+ Caution is needed in above indentification because the context is important. For instance for $n=4$, $E = \{ 1, 2 \}$, consider the polynomials written in The usual short form $1, \x_{1}-\x_{2}$.
+ 
+ Means $10 \rangle_{1}$ in $\mathcal{H}_{1}$, $100\rangle_{12} = 10 \rangle_{1} \otimes 10 \rangle_{2}$ in $\mathcal(E)$, $100 \rangle_{34} = 10\rangle_{3} \otimes 10 \rangle_{4}$ in $\mathcal{H}(E')$ and $10000\rangle_{1234} = 10 \rangle_{1} \otimes 10 \rangle_{2} \otimes 10 \rangle_{3} \otimes 10 \rangle_{4}$ in $\mathcal{H}$. On the other hand, $X_{1}-X_{2}$ has no meaning in $\mathcal{H}_{1}$ or $\mathcal{H}(E')$ but it stands for $110\rangle_{12} - 101\rangle_{12} = 11 \rangle_{1} \otimes 10 \rangle_{2} - 10 \rangle_{1} \otimes 11 \rangle_{2}$ in $\mathcal{H}_{E}$ and for $11000 \rangle_{1234} - 10100\rangle_{1234} = 11 \rangle_{1} \otimes 10 \rangle_{2} \otimes 10 \rangle_{3} \otimes 10 \rangle_{4}-10 \rangle_{1} \otimes 10 \rangle_{2} \otimes 10 \rangle_{3} \otimes 10 \rangle_{4} $ in $\mathcal{H}$.
+\end{subsubsec} 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%page no 9 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ 
+ \subsection{Multiqubit Entanglement and Polynomial Representation}\label{subsection-2.2}
+ 
+ Let $0 \neq ???  \in \mathcal{H}$ and $\digamma (\underline{\x})$, the corresponding polynomial in $???[\underline{\x}]$. Set $P_{???} = \frac{1}{|| ???||^{2}} | ??\rangle \langle??|$, the corresponding pure state; i.e; the rank one (orthogonal) projection on the linear span of $??$. We consider the following concepts related to entanglement of $??$ or $P_{???}$ to being with. 
+ 
+ %~ \subsubsection*{(\underline{2.2.1})}\label{2.2.1}
+ 
+ \begin{subsubsec}\label{subsubsection-2.2.1}
+ 
+ \begin{enumerate}[label=(\alph*)]
+ \item $???$ is a product vector in $\mathcal{H} = \bigotimes\limits_{\rm n}^{j=1} \mathcal{H}_{j}$ if $?? =\bigotimes\limits_{\rm n}^{j = 1} ???$ with $??? \in \mathcal{H}_{j}$ for $1 \leq j \leq n$. Otherwise, $??$ is called entangled vector.
+   
+ \item Let $\phi \neq E_{\neq} \subset \lceil_{n}$ $???$ is said to be a product vector in the bipartite cut $(E, E')$ if $??$ is a product vector in $\mathcal{H}(E)\otimes \mathcal{H}(E')$, i.e; if $??? = n \otimes 3$ for some $n \in \mathcal{H}(E)$ and $?? \in \mathcal(E')$
+ 
+ \item $???$ is said to be genuinely entangled if it is not product vector in any bipartite cut.
+  
+ \end{enumerate}
+ 
+ Clearly for $n = 2$, $??$ is entangled if and only if $??$ is genuinely entangled.
+ 
+ \end{subsubsec}
+ 
+ %~ \subsubsection*{(\underline{2.2.2})}\label{subsubsection-2.2.2}
+ 
+ \begin{subsubsec}\label{subsubsection-2.2.2}
+ The concepts and properties above will be transferred to the corresponding $F(\underline{\x})$ i.e; $F$.
+ 
+ We give some easy consequences as a Theorem below.
+ 
+ We shall use the following notation and terminology for that.
+ \end{subsubsec}
+ 
+ \begin{enumerate}[label=(\alph*)]
+ 
+ \item  Let $S_{F}$, the support of $F =\left\{ j \in \lceil_{n} \; ; \x_{j}\;\; \text{occurs in} F, \text{i.e;}  F \text{has degree 1 in} \x_{j} \right\}$ and $m = \neq S_{F}$, the number of $\x_{j}'$s that occur in $F$.
+ 
+ \item Let $d$ be the degree of $F$. Then $d > 0$ if and only if $m > 0$. Also $m \geq d$ simply because $F$ has degree at most one in each $\x_{j}$.
+ 
+ \item $F$ is said to be homogeneous if each term in $F$ has degree $d$.  
+ 
+ \item Suppose that $F = gh$ with $g$ and $h$ in $??? [\underline{\x}]$. Then $S_{g} \cap S_{h} = \emptyset$ because degree of $\x_{j}$ in $F(\underline{\x})$ is at most one for $1 \leq j \leq n$. If $g$ and $h$ are such that $S_{g} \neq \lceil_{n} \neq S_{h}$ then we may take any $E$ with $\emptyset \neq E_{\neq}\subset \lceil_{n}$ with $S_{g} \subset E$ and $S_{h} \subset E'$. This permits us to write $g(\x)$ as $g(\underline{\x}_{E})$ and $h(\underline{\x})$ as $h(\underline{\x}_{E'})$ as well and then $F(\underline{x}) = g(\x_{E}) h (\underline{\x}_{E'})$.
+ 
+ \item By Problem 1.1 $[F]$ if $F, g, h$ are as in $(d)$ above and $F$ is homogeneous then so are $g$ with $h$.
+ 
+ \item Suppose that $F$ is note a constant polynomial. $F$ is said to be irreducible if $F$ has no factors other than itself (up to constants). If $F$ is not irredcible then there exist $r(\neq 2)$ irreducible polynomials $F_{s}$, $1 \leq s \leq r$ such that $F(\underline{\x}) = \prod\limits_{\lambda = 1}^{???} F_{s} (\underline{\x})$. $F_{s}$'s are unique to with in order and up to constants. In view of $(d)$ above, $S_{F_{s}} \cap S_{F_{s}} = \emptyset$, for $1 \leq s \neq s' \leq r$.
+ \end{enumerate}
+ 
+ 
+ For rotational convenience we may take $r =1$ when $F$ is irreducible and take $F_{1} = F$, and take $r=0$ if $F$ is a non-zero constant function.
+ 
+ \vspace{.2cm}
+ 
+ \begin{thm}\label{thm-2.1}
+  Let $0 \neq F \in ??? [\underline{\x}]$ and $??? \in \mathcal{H}$ be the corresponding vector in $\mathcal{H}$.
+  
+  \begin{enumerate}[label=(\roman*)] 
+  \item 
+  \begin{enumerate}[label=(\alph*)] 
+   \item $??$ is a product vector if and only if $F(\underline{\x}) = \prod\limits_{j=1}^{\rm n} (a_{j} + b_{j} \x_{j})$ with $(0,0) \neq (a_{j}, b_{j}) \in ????$ for $1 \leq j \leq n$ if and only if $d=m=r$. 
+   \item  In case (a) happens, the number $t$ of terms in $F(\underline{\x})$ is $2^{u}$ with $u = \# \left\{ j \in \lceil_{n} : a_{j}\neq  0 \neq b_{j} \right\}$.
+  \end{enumerate}
+  
+  \item Let $\phi \neq E \subset_{\neq} \lceil_{n}$.
+  
+  \begin{enumerate}[label=(\alph*)] 
+  
+  \item $??$ is a product vector in the bipartite ate with $p$ and $q$ polynomials in $\underline{\x}_{E}$ and $\underline{\x}_{E'}$ respectively.
+  
+  \item Incase (a) happens and neither $p$ nor $q$ has the form $\lambda\underline{\x}^{k}$ for some scalar $\lambda \neq 0$ and $K$ with $K \subset \lceil_{n}$, we have that $t$ is a composite number.
+  
+  \item In case (a) happens and for $1 \leq j \leq n$, neither $\x_{j}$ is missing nor $\x_{j}$ is a factor of $F(\underline{\x})$, we have that $t$ is a composite number.
+  
+  \item Suppose that (a) happens. If we know any term of $p(\underline{\x}_{E})$ or $q(\underline{\x}_{E'})$ both $p$ and  $q$ can be determined from $F(\underline{\x})$ and that term.
+  
+  \end{enumerate}
+  
+  \item $???$ is genuinely entangled if and only if $m=n$, i.e, all $\x_{j}$'s occur in $F(\underline{\x})$ and $F$ is irreducible. In this case, no $\x_{j}$ is a factor of $F(\underline{\x})$.
+  
+  \item Suppose that $F$ is homogeneous. Then $t \leq ^{n}C_{d}$.
+  
+  \begin{enumerate}[label=(\alph*)] 
+   \item $???$ is a product vector if and only if $F(\underline{\x}) = \lambda\underline{\x}^{k}$ for some $K\subset \lceil_{n}$ and scalar $\lambda \neq 0$.
+   \item Let $\phi \neq E \subset_{\neq}\lceil_{n}$, $\alpha = \# E$, $\beta = \#E = n-\alpha$.   If $??$ is a product vector in the bipar??? cut ???? then both $p$ and $q$ in (ii) above are homogeneous, Further, $t \leq \tau_{\alpha}$, where 
+   
+   $\tau_{\alpha} = \max \left\{ ^{\alpha}C_{d_{1}} ^{n-\alpha}C_{d-d_{1}} : \max \{d-\beta, 0\} \leq d_{1} \min \{\alpha, d\}\right\}$ 
+   
+   \item Let $\tau = \max \tau_{\alpha}$. If $t > \tau$, then $???$ $\tau_{\alpha} = \tau_{n-\alpha}$ for $1 \leq \alpha \leq n-1$.
+  \end{enumerate}
+ \end{enumerate}
+ \end{thm}
+ \begin{proof}
+  (i) and (ii) (a) follow immediately from definitions,
+  
+  To see (ii) (b) we note that $t = t_{1} t_{2}$ with $t_{1} =$ number of terms in $p (\underline{\x}_{E})$ and $t_{2}=$ number of terms in $q(\underline{\x}_{E'})$, and under the given condition, $t_{1} \geq 2$ and $t_{2} \geq 2$.
+  
+  The condition in (ii) (c) is indeed stronger than that in (ii)(b). (ii)(d) Suppose we know the term $\lambda\underline{\x}^{k}$ in $p(\underline{\x}_{E})$. We figure out the polynomial $q_{k}(\underline{\x}_{E'})$ so that $\lambda \underline{\x}^{k} q_{k}(\underline{\x}_{E'})$ is the part of $F(\underline{\x})$ in which $\underline{\x}^{k}$ occurs. Then $q(\underline{\x}_{E'})$ is precisely $q(\underline{\x}_{E'})$. Consider any term $\lambda'\underline{\x}^{k'}$ of $q(\underline{\x}_{E'})$. We can repeat the arguments above to figure out $p(\underline{\x}_{E})$.
+  
+  (iii) $\underline{\Rightarrow {\rm part}}$. Let $???$ be genuinely entangled. 
+  
+  Let, if possible, $\x_{j}$ not occur in $F(\underline{\x})$. Set $E=\{j\}$, $p(\underline{\x}_{E})=$ The constant function $|$ in variable $\underline{\x}_{E}$ and $q(\x_{E'})$ same as $F(\underline{\x})$ considered as a function in variable $\underline{\x}_{E'}$ simply because $\x_{j}$ does not occur in $F(\underline{x})$. Then $F(\underline{\x}) = p(\underline{\x}_{E}) q (\underline{\x}_{E'})$. 
+  
+  (ii) (a) gives that  $???$ is a product vector in the bipartite cut $(E, E')$, a contradiction. Now suppose that all $\x_{j}$'s occur in $F(\underline{\x})$. Then $F$ in not, a constant function. If $F$ is not irreducible, then $F(\underline{\x}) = \prod\limits_{s=1}^{r} F_{s}(\underline{\x})$ for some $x \geq 2$, irreducible functions $F_{s}(\underline{\x})$. Let $E= S_{F_{'}}$, $E' = \lceil E$ then turns out to be $\bigcup\limits_{s=2}^{r} S_{F_{s}}$. Set $p(\underline{\x}_{E}) = F_{1}(\underline{\x})$ considered as a function of $\underline{\x}_{E}$ and $q(\underline{V}_{E}') = \prod\limits_{???}^{???} F_{s}(\underline{\x})$. considered as a function of $\underline{\x}_{E'}$. As a consequence, $F(\underline{\x}) = p (\underline{\x}_{E}) q (\underline{\x}_{E'})$. This in turn, gives that $???$ is product vector in the bipartite out $(E, E')$, a contradiction. Hence all $\x_{j}$'s occur in $F(\underline{\x})$ and $F(\underline{\x})$ is irreducible.
+  
+  $\underline{\Leftarrow {\rm part}}$ Suppose that all $\x_{j}$ is occur in $\x$ and $F$ is irreducible. Let, if possible, $???$ be not genuinely entangled. Then by (ii) (a) for some $\phi \neq E \subset_{\neq} \lceil_{n}$, polynomials $p(\underline{\x}_{E})$ and $q(\underline{\x}_{E'})$, we have $F(\underline{\x}) = p(\underline{\x}_{E}) q (\x_{E'})$. For $j \in E$, $\x_{j}$ occurs in $F(\underline{\x})$, and therefore, in $p(\underline{\x}_{E})$. Similarly for $k \in E'$, $\x_{k}$ occurs in $q(\underline{\x}_{E'})$. So $p$ and $q$ are note constant polynomials. This forces $F$ to be reducible, a contradiction. Hence $???$ is genuinely entangled.
+  
+  (iv) By 2.2.2(e) if $F(\underline{\x})= g(\underline{\x}) h(\underline{\x})$ for polynomials $g$ and $h$, then $g$ and $h$ are both homogeneous. To see (a). we have to only note that if $???$ a product vector, then for $1 \leq j \leq n$, $(a_{j}, b_{j}) \neq (0,0)$ as in (i) The polynomial $a_{j} + b_{j} \x_{j}$ considered as a polynomial in $\x$ is homogeneous if and only if either $a_{j}$ or $b_{j}$ is zero. We set $K = \left\{ j \in \lceil_{n} : a_{j} = 0\right\}$. Then $F(\underline{\x}) = \lambda\underline{\x}^{k}$ for some scalar $\lambda \neq 0$.
+  
+  (b) The ????? made above give that $p$ and $q$ are homogeneous polynomials in $\x_{E}$ and respectively. Then  $0 ??? d_{1} ??? \alpha_{1}$, $0 \leq d_{2} \leq \beta $ and number of terms in $p(\underline{\x}_{E}) \leq ^{\alpha}C_{d_{1}}$  whereas that in $q(\underline{\x}_{E'})$ is at more $^{\beta}C_{d_{2}}$. This give the rest of (b).
+  
+  (c) It is immediate from the definition and (b) above.
+  
+  (d) is ????? the definition.
+ 
+ \begin{example}\label{example-2.1}
+The well- known Pascal is triangle in Figure~\ref{figure01} helps us to give the numbers $\tau_{\alpha}$ occurring in Theorem~\ref{thm-2.1} (iv) above. Counting 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.8]{figure/fig1.eps}
+\caption{}\label{fig01}
+\end{figure}
+
+rows from the top we have to book at row number $\alpha$ and row number $n-\alpha$ only, consider suitable products and take their maximum.
+
+For $n=6$, $d=3$ we obtain $\tau = 10$, $\tau = 12$, $\tau_{3} = 9$ and $\tau = 12$. In the other hand $???$ can go upti $^6C_{3} = 20$ giving us several genuinely entangled vectors. It is clear how to proceed in general cases.
+\end{example}
+\end{proof}
+
+Above results and discussion give complete information in certain special cases with a little more effort. We record them in the Example below.
+
+\begin{example}\label{example-2.2}
+ Let $F$, $???$ etc. be as above. Indeed we follow the notation terminology and results above freely. 
+ 
+ \begin{enumerate}[label=(\roman*)]
+ \item $??$ is a product vector in the following two cases
+ 
+   \begin{enumerate}[label=(\alph*)]
+   \item $l=1$, i.e; $F(\underline{\x}) = \lambda\underline{\x}^{k}$ for some scalar $\lambda \neq 0$ and $k \subset \lceil_{n}$.
+	\item $m=1$ i.e; $F(\underline{\x}) = a + b\x_{j}$ for some $j$ with $1 \leq j \leq n$ and $(a , b) \in ???$ with $b \neq 0$.
+   \end{enumerate}
+   
+ \item Let us consider $F$ with $t \geq 2$, $m \geq 2$ and $d =1$. We have the following.
+ 
+ \begin{enumerate}[label=(\alph*)]
+ \item $???$ is not a product vector because $d < m$. Indeed, $F(\underline{\x}_{S_{F}})$ is irreducible. Here we set $F(\underline{\x}_{S_{F}}) = F(\underline{\x})$ only.
+ \item If $S_{F} = \lceil_{n}$, i.e; $m=n$, then $??$ is genuinely entangled. This does happen when $n=2$.
+ \item Consider the case when $n \neq 3$ and $S_{F} \neq \lceil_{n}$ and any ????? cut $(E, E')$. Then $???$ is a product vector in this cut if and only if either $E \supset S_{F}$ or $E' \supset S_{F}$.
+  \end{enumerate}
+ 
+ \item We now consider the case $n=2 =d = m \leq t$. Then $F$ has the form $F(\underline{\x}) = a_{0} + a_{1} \x_{1} + a_{2} \x_{2} + a_{3}\x_{1} \x_{2}$ with $a_{3} \neq 0$, $(a_{0}, a_{1}, a_{2}) \neq (0,0,0)$.
+ 
+ \begin{enumerate}[label=(\alph*)]
+  \item If $t=3$, then $??$ is entangled (and therefore, genuinely entangled).
+ \item If $t = 2$ then the situation gets divided in three forms for $F$, viz, $F(\underline{\x}) = a_{0} + a_{3}\x_{1} \x_{2}$ with $a_{0} \neq 0$, giving rise to an entangled $??$ and $F(\underline{\x}) = a_{1}\x_{1} + a_{3}\x_{1}\x_{2} = \x_{1}(a_{1} + a_{3}\x_{2})$ with $a_{1}\neq  0$ or $F(\underline{\x}) = a_{2} \x_{2} + a_{3}\x_{1}\x_{2} = (a_{2} + a_{3}\x_{1})\x_{2}$ with $a_{2}\neq 0$. both giving rise to product vectors.
+ 
+ \item If $t =4$, then each one of $a_{0}, a_{1}, a_{2}, a_{3}$ is non-zero. $??$ is a product vector if and only if $a_{0}a_{3}= a_{1}a_{2}$.
+   \end{enumerate}
+ 
+ \item Let $t=2$. Then $F(\underline{\x}) = a \underline{\x}^{k} + b \underline{\x}^{L}$ for some non-zero scalars $a$ and $b$ and distinct subsets $K$ and $L$ of $\lceil_{n}$. So $F(\underline{\x}) = \underline{\x}^{K \cap L} (a \underline{\x}^{K L} + b \underline{\x}^{L K})$ and $K \triangle L = (K  L) \cup  (L K) \neq \phi$. We write $q(\underline{\x}_{K \triangle L})$ for the second factor. Then $q$ is irreducible.
+ 
+ \begin{enumerate}[label=(\alph*)]
+ \item $???$ is a product vector if and only if $\# K \triangle = 1$, i.e; either $K \subset L$ or $L \subset K$ and correspondingly $\#(L K) = 1$ or $\# (K L) = 1$.
+ \item Given a bipartite cut $(E,E')$, $???$ is a product vector in this cut if and only if either $K \triangle L \subset E'$. This can happen only if $K \triangle ???$
+ \item $???$ is genuinely entangled if and only if $K \cap L = \phi$ and $K \cup L = \lceil_{n}$ i.e; $K \triangle L = \lceil_{n}$ if and only if for $1 \leq j \leq n$, neither $\x_{j}$ is a factor of $F(\underline{\x})$ nor it is missing in $F(\underline{\x})$. 
+ \end{enumerate}
+ 
+ \item Let $t$ be any add prime.
+ 
+ \begin{enumerate}[label=(\alph*)]
+ \item $???$ is entangled because $t$ is not of the form $2^{u}$ for any non-negative integer $u$.
+ \item $F(\underline{\x}) = \sum_{j=1}^{F} a_{j}\underline{\x}^{K_{j}}$ for some non-zero scalars $a_{j}$'s and distinct subsets $K_{j}$ of $\lceil_{n}$. Let $K =\bigcap\limits_{j=1}^{t} K_{j}$, $L_{j} = K_{j} . ????$ for $1 \leq j \leq t$, $L =\bigcup\limits_{j=1}^{t}L_{j}$. Then $S_{F} = K \cup L = \bigcup\limits_{j=1}^{t} K _{j}$. Further $F(\underline{\x}) = \underline{\x}^{K}(\sum_{j=1}^{t} a_{j}\underline{\x}^{L_{j}})$. We write $q(\underline{\x}_{L})$ for the second factor. Then $q$ is irreducible because $t$ is prime and no $\x_{j}$ is a factor of $q(\underline{\x}_{L})$. Moreover, $S_{q} = L$ and $\# L \geq 2$.
+ \item Give a biportite  and $(E, E')$, ??? product vector in this cut if and only ??? either $L \subset E$ or $L \subset E'$. This can happen only if $L ????$.
+ \item $???$ is ???? entangled if and only if $K = \phi$ and $L = \lceil_{n}$, i.e; $\bigcap\limits_{j=1}^{t} K, = \phi$ and $\bigcup\limits_{j=1}^{t} K = \lceil_{n}$ of and nor $\x_{j}$ is missing in $F(\underline{\x})$.
+  \end{enumerate}
+ 
+ \end{enumerate}
+ This ????? study to cases that ??? $n > 3$, $m \geq 2$, $d \geq 2$ and $???$ a composite number.
+\end{example} 
+
+\section{Polynomial Representation of Resonance Valence Bond states (RVB) and their quantum entangement}\label{section-3}
+
+For the sake of self-complateness and convenient notation and terminology we begin with the simple case of a singled a dimer and go upto that of ??? resonance ??? bond states with variable co-efficients. With the right choice made in Section~\ref{section-2} above, their polynomial representation turns ??? to be a homogeneous polynomial of small degree. This ??? the study of their quantum entanglement which requies new conditions that we introduce. For ???? we may refer to [1 to  12] or any other standard source.
+
+\subsection{Basic definition and ????}\label{subsection-3.1}
+
+Let $V \in \mathbb{N}$ and $n=2V$. We divide $\lceil_{n} = \left\{j \in N : 1 \leq j \leq n\right\}$ into two equal parts $A$ and $B$, say $A = \left\{2^{t-1} : l \leq t \leq V\right\}$ and $B = \left\{ 2t : 1 \leq t \leq V \right\}$. For ?????? representations of various concepts we will mark points of $A$ by $\bullet$ and those of $B$ by $\odot$ and arrange them in different ways. For instance,
+
+\begin{figure}
+\centering
+\includegraphics[scale=.8]{figure/fig2.eps}
+\caption{}\label{fig02}
+\end{figure}
+
+is useful in the nearest neighbour (NN) context.
+
+\begin{subsubsec}\label{subsubsection-3.1.1}
+Coverings A bijective map $\Psi$ of $A$ to $B$ is called a covering, say $C$, of $\lceil_{n}$. It can be given in terms of a permutation $\widetilde{\Psi}$ of $\lceil_{n}$ by setting $\Psi(2t-1) = 2\widetilde{\Psi}(t)$ for $t \in \lceil_{v}$.
+  \begin{enumerate}[label=(\alph*)]
+  \item $\Psi$ is called a nearest neighbour covering (???) $(NN)$ if $2(t-1) \leq \Psi(2t-1) \leq 2(t+1)$, i.e; $t-1 \leq \widetilde{\Psi}(t) \leq t H$(???) for $t \in \lceil_{v}$. In other words, the permutation matrix of $\widetilde{\Psi}$ is handed matrix with band-width $\leq 1$.
+   \item Samson and Ezermann [SE] study banded matrices and note in Remark 2.3 [SE] that the number of such matrices with bandwidth $\leq 1$ is the Fibonacci number $F_{v}$ with initial conditions $F_{1}=1 =F_{0}$.
+   \item $\Psi$ is called a periodic $NN$ covering of we permit $\Psi(2v-1)$ to be 2 and $\Psi(1)$ to be 2v as well. In other words, we work in $\mathbb{Z} \md 2v$ .
+   \item The number of all covering of $\lceil_{n}$ is $\d{v}|$, the number of permutations of $\lceil_{v}$.
+    \item We will be considering various set $\underline{\overline\Psi}$ of covering with $\#\underline{\overline\Psi} \geq 2$ and $v \geq 2$. For $v=2$, $\#\underline{\overline\Psi}$ can only be 2, since the covering are only.
+    
+    \newpage
+    
+    \item Here are pictures of some easy coverings.
+    
+    \begin{figure}[h]
+\centering
+\includegraphics[scale=.8]{figure/fig3.1.eps}
+\caption{}\label{fig03}
+\end{figure}
+
+  \end{enumerate}
+\end{subsubsec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%21 page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{subsubsec}\label{subsubsection-3.1.2}
+
+\underline{\bfseries Resonance valence bond (RVB) states and Vectors.}
+
+For $a\in A$, $b \in B$, we write $H_{a,b}$ for $\mathcal{H}_{a} \bigotimes \mathcal{H}_{b}$,. We follow the polynomial representation as set out in ??? 2 above.
+
+\begin{enumerate}[label=(\alph*)]
+\item A dimer or a single at a, b is the unit vector
+$$
+[a, b] = \frac{1}{\sqrt{2}} (| \uparrow \rangle_{a} \times | \downarrow \rangle_{b}) = \frac{1}{\sqrt{2}}(| O\rangle_{a} \times | \shortmid \rangle - | \shortmid \rangle_{a} \times | O \rangle_{b})\quad {\rm in} \quad  \mathcal{H}_{a,b} 
+$$
+
+Its polynomial representation is given by
+\begin{equation*}
+F_{a_{1}b}(\x_{a_{1}}, \x_{b}) = \frac{1}{\sqrt{2}}(\x_{b}- \x_{a})\tag{3.3}
+\end{equation*}
+
+\item Let  $C$ be a covering of $\lceil_{n}$ i.e; a bijective map $\Psi$ of $A$ to $B$. We let $| C \rangle = | \Psi \rangle$ be the vector in $\mathcal{H}$ identitial with $\bigotimes\limits_{a \in A} \quad \mathcal{H}_{a}\Psi(a)$ given by $\bigotimes\limits_{a \in A} [a, \Psi(a)]$, i.e;,
+\begin{gather*}
+2^{-v/2} \bigotimes\limits_{a \in A} \left(| \uparrow \rangle_{a} \otimes | \downarrow \rangle_{\Psi (a)}) - | \downarrow \rangle_{a} \otimes | \uparrow \rangle_{\Psi (a)}\right)\\
+= 2^{-v/2} \bigotimes\limits_{a\in A} \left(|0\rangle_{a} \otimes | \downharpoonleft \rangle_{\Psi(a)} - || \rangle_{a} \otimes | O \rangle_{\Psi(a)}\right)
+\end{gather*}
+ 
+ 
+It is a unit vector and its polynomial representation is 
+\begin{equation}
+F_{\underline{\overline{\Psi}}} = 2^{-v/2} \prod\limits_{a\in A}(\x_{\Psi(a)}- \x_{a})\tag{3.4}\label{eq-3.4}
+\end{equation}
+
+It is a non-zero homogeneous polynomial of degree $d=v$ and its support is $S_{F_{\Psi}} = \lceil_{n}$, i.e; $m=n$.
+
+Indeed, 
+\begin{align*}
+F_{\Psi}(\underline{\x}) &= 2^{-v/2} \sum_{A_{1} \subset A}(-1)^{??? A_{1}} \underline{\x}^{A_{1}} \underline{\x}^{B_{1}\Psi(A_{1})}\nonumber\\
+& = 2^{-v/2} \sum_{\substack{A_{1} \subset A \\ \#A_{1} \leq v/2 \\ 1 \in A_{1}}} \left(\underline{\x}^{A_{1}} \underline{\x}^{B\smallsetminus \Psi (A_{1}) } + (-1)^{v} \underline{\x}^{A \smallsetminus A_{1}} \underline{\x}^{\Psi (A_{1})} \right)\tag{3.5}  
+\end{align*}
+
+Clearly, The number $t$ of terms in $F_{\Psi}$ is $2^{v}$ and $\underline{\x}^{k}$ is not a factor of $F_{\Psi}(\underline{\x})$ for any $\phi \neq K_{\#} \subset \lceil_{n}$.
+
+\item Let $v \leq 2$ and $\underline{\overline{\Psi}}$ and  a set of coverings of $\lceil_{n}$ with $s= \# \underline{\overline{\Psi}} \leq 2$. Then we write $| \underline{\overline{\Psi}}\rangle$ for the RVB vector $\frac{1}{\# \underline{\overline{\Psi}}} \sum_{\Psi \in \underline{\overline{\Psi}}} | \Psi \rangle$ is $\mathcal{H}$. We note the $|| \underline{\overline{\Psi}} || \leq |$ and we will come to its normalization later in (3.1.4).
+
+\item The polynomial representation of $F\underline{\overline{\Psi}}$ is given by
+\begin{equation}
+F\underline{\overline{\Psi}} = \frac{1}{\# \underline{\overline{\Psi}}} \sum_{\Psi \in \underline{\overline{\Psi}}} F_{\Psi} = \frac{1}{\# \underline{\overline{\Psi}}} \sum_{A_{1} \subset A} (-1)^{\# A_{1}} \# \left\{ \Psi \in \underline{\overline{\Psi}} : \Psi (A_{1}) = B_{1}\right\} \underline{\x}^{A_{1}} \underline{\x}^{B\smallsetminus B_{1}}\tag{3.6}\label{eq-3.6}
+\end{equation}
+
+Then $| \underline{\overline{\x}} \rangle \neq 0$ simply because $0 \neq 2^{-v/2}(\underline{\x}^{B} + (-1)^{v} \underline{\x}^{A})$ is a part of $F_{\underline{\overline{\Psi}}}(\underline{\x})$.
+
+Indeed, this also gives that $S_{F_{\underline{\overline{\Psi}}}} = \lceil_{n}$, i.e; $m=n$ and $\underline{\x}^{k}$ is not a factor of $F_{\underline{\overline{\Psi}}} (\underline{\x})$ for any $\phi \neq K \subset \lceil_{n}$.
+
+\item Let $v \geq 2 $, $\underline{\overline{\Psi}}_{NN} =$ The set of nearest neighbour $(NN)$ coverings of $\lceil_{n}$ and $\underline{\overline{\Psi}}_{PNN} =$ the set of periodic nearest neighbour $(PNN)$  covering of $\lceil_{n}$. Then $|\underline{\overline{\Psi}}_{NN} \rangle$ and $| \underline{\overline{\Psi}}_{PNN} \rangle$ will be called the NN-RVB and the PNN-RVB vectors (in the context of n-qubit system).
+
+We record some immediate applications of Theorem~\ref{thm-2.1}, ????????? above is ????????????? labelled as Theorem~\ref{thm-3.1} and Example~\ref{example-3.1}.
+
+\end{enumerate}
+
+\end{subsubsec}
+
+\begin{thm}\label{thm-3.1}
+
+We consider the vectors given in~\ref{subsubsection-3.1.2} above in their respective spaces.
+
+\begin{enumerate}[label=(\roman*)]
+
+\item A dimer $[a, b]$, $| \Psi \rangle$, $| \underline{\overline{\Psi}} \rangle$ are all entangled.
+
+\item Let $v \geq 2$ and $(E, E')$ a  bipartite cut of $\lceil_{n}$.
+
+   \begin{enumerate}[label=(\alph*)]
+    \item $| \Psi \rangle$ is a product vector in the cut $(E, E')$ if and only of 
+			\begin{align*}
+			\Psi(E \cap A) &= E \cap B \quad \text{if and only of}\\
+			\Psi(E' \cap A) &= E'(\cap B) \tag{3.7}\label{eq-3.7}
+			\end{align*}
+			
+	 In this case we have $\# E$ and $\# E'$ are both even.
+	 \item If $| \underline{\overline{\Psi}} \rangle$ is a product vector in the cut $(E, E')$, then 
+	 		\begin{equation}
+	 		 \Psi(E \cap A) = E \cap B \quad ({\text {equivalently}}, \Psi (E' \cap A) = E' \cap B)\quad \text{for each}\quad \Psi \text{in} \underline{\overline{\Psi}}\tag{3.8}\label{eq-3.8}   
+	 		\end{equation}
+	 		
+	 	In this case, $\# E$ and $\# E'$ are both even.	
+    \end{enumerate}
+    
+   \item For $v=2$, $| \underline{\overline{\Psi}} \rangle$ is genuinely entangled.
+   
+   \item For $\underline{\overline{\Psi}} $ NN or PNN, $\underline{\overline{\Psi}}$ is genuinely entangled.
+   
+   \item (a) The converse of (ii) (b) holds for $v=3$ but not in general.
+   
+   (b) The converse of (ii) (b) holds for all $v \geq 3$ if we consider special cuts with $\min \left\{ \# E, \# E' \right\} = 2$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)]
+ 
+ \item  It follow from Theorem~\ref{thm-2.1} (i) (a) because $d=v < 2 v =n$ for the corresponding polynomials. 
+
+\item (a) The second equivalence is trivial. For the first one, the `if' part is immediate. For The  `only if' part, let, $p(\underline{\x}_{E}), q (\underline{\x}_{E'})$ be polynomials that satisfy $F(\underline{\x}) = (p\underline{\x}_{E}) q (\underline{\x}_{E'})$. Then by Theorem~\ref{thm-2.1} (iv) (b), $p(\underline{\x}_{E})$ and $q(\underline{\x}_{E'})$ are both homogeneous, say, of degree $v_{1}$ and $v_{2}$ respectively with $v_{1} \geq 1$, $v_{2} \geq 1$, $v_{1} + v_{2} = v$, $S_{p} =E$ and $S_{q} = E'$.  low by~\ref{subsubsection-3.1.2} (b) $\underline{\x}^{a}$ and $\underline{\x}^{B}$ both occur in $F_{\Psi}(\underline{\x})$. The one and only one way if can happen is the $underline{\x}^{E \cap A}$, $\underline{\x}^{E \cap B}$ occur in $p(\underline{\x}_{E})$, and $\underline{\x}^{E' \cap A}$ and $\underline{\x}^{E' \cap B}$ occur in $q(\underline{\x}_{E'})$. This gives that $\# E \cap A = \# E \cap B = v_{1}$ and $\# E' \cap A = \# E' \cap B =v_{2}$. Now $\underline{\x}^{E \cap A}$ $\underline{\x}^{E' \cap B}$ occurs in But this can happen for $F_{\Psi} (\underline{\x})$ if and only of $B \Psi(E \cap A) = E' \cap B$, i.e; $\Psi(E \cap A) = E \cap B$. As a consequence $\Psi (E' \cap A) = E' \cap B$ as well. This confirms the assertion already made about the relationships amongs cardinalties of the sets, $v_{1}$, $v_{2}$. Clearly $\# E = \# (E \cap A) + \# (E \cap B) = 2 v_{1}$.
+
+(b) As noted in ~\ref{subsubsection-3.1.2} (c), $\underline{\x}^{A}$ and $\underline{\x}^{B}$ both occur in $F_{\overline{\Psi}}(\underline{\x})$. So arguments in the proof of part (ii) (a) above by replacing $F_{\Psi}$ by $F_{\underline{\overline{\Psi}}}$ with the addition of ``for some $\Psi \in \underline{\overline{\Psi}}$ in the sentence beginning with `But'. Now consider any $\varphi \in \underline{\overline{\x}}$. Then $\underline{\x}^{E \cap A} \underline{\x}^{B \smallsetminus \varphi (E \cap A)}$ occurs in $F_{\underline{\overline{\Psi}}}(\underline{\x})$ and, therefore, in $p(\underline{\x}_{E}) q(\underline{\x}_{E'})$. The only way this can happen is that $B \smallsetminus \varphi (E \cap A) = E' \cap B$, which gives, in turn, $\varphi(E \cap A) - E \cap B$. This completes the proof of the first assertion. The second statement following ?????.
+
+\item For $v=2$, the condition~\ref{eq-3.8}   in (ii) (b) is note satisfied for any $\phi \neq E \subset \lceil_{4}$ as in clear from ~\ref{subsubsection-3.1.2} (e) above. (iii) It follow $\langle \neq \#$ from (ii)(b) and (c).
+
+\item In view of (iii), it is enough to consider the case $v \geq 3$. Let, if possible, the condition in (ii) (b) the case $v \geq 3$. Let if possible, the condition in (ii)(b) be satisfied for some $E$ with $\phi \neq E_{\neq} \subset \neq_{n}$ and $\underline{\overline{\Psi}}= \underline{\overline{\Psi}}_{NN}$.
+
+Consider any $2s-1 \in E \cap A$ with $1 \leq s\ leq v$. If $s < v$, then there exist $\Psi_{1}, \Psi_{2} \in \underline{\overline{\Psi}}$ with $\Psi_{1} (2s-1) = 2(s + 1)$ and $\Phi_{2} (2s+1) = 2(s+ 1)$. So $s(s+ 1) \in E \cap B$, which in turn, gives that $2s+1 \in E \cap A$. On the other hand, if $s > 1$, then there exist $\Psi_{3}, \Psi_{4} \in \underline{\overline{\Psi}}$ satisfying $\Psi_{3}(2s-1)= 2(s-1)$ and $\Psi_{3}(2s-3) =2 (s-1)$. So $2(s-1) \in E \cap B$ which leads to $2s-3 \in E \cap A$. Repeating the arguments iteratively we arrive at the conclusion that $\left\{2t-1 : 1 \leq t \leq v \right\} \subset E \cap A$. But that is not so. Hence $\underline{\overline{\Psi}}_{NN}$ is note a product vector in any bi?????? cut and is therefore genuinely entangled.  
+
+Now we come to $\underline{\overline{\Psi}}_{PNN}$. Because $\underline{\overline{\Psi}}_{PNN} \supset \underline{\overline{\Psi}}_{NN}$, it cannot satisfy (\ref{subsection-3.6}) in (ii)(b) for any $E$ with $\phi \neq E \subset_{\neq} \lceil_{n}$. Hence $\underline{\overline{\Psi}}_{PNN}$ is genuinely entangled.
+
+\item 
+\begin{enumerate}[label=(\alph*)]
+\item For any bipartite cut $(E, E')$ of $\lceil_{6}$ with $\#E$ and $\#E'$ both even,\break $\min\left\{\# E, \# E'\right\}=2$. Suppose $\#E'=2$. Then for any $\Psi \in \underline{\overline{\Psi}}$, $\Psi (E' \cap A) = E' \cap B$,say, $\Psi(a) = b$ where $E'\cap A = \{a\}$, $E'\cap B=\{b\}$. So $\x_{b} \smallsetminus \x_{a}$ is a factor of $F(\underline{\x})$. Similarly for the case of $\# E=2$. So $\lceil\underline{\Psi}\rangle$ is a product vector in the cut $(E, E')$ by Theorem~\ref{thm-2.1}(ii)(a).
+
+We shall give an example in Example~\ref{example-3.1} below to show that the converse of (ii)(b) in Theorem here does not hold in general.
+
+\item We can formulate the proof on the lines of that of (a) above.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{proof}
+
+
+\begin{definition}\label{def-3.1}
+(i) We call $\underline{\overline{\Psi}}$ $\underline{\text{decomposable Via} ~E}$ if it satisfies the condition~\ref{subsection-3.6} in Theorem~\ref{thm-3.1}(ii)(b) above, i.e; $\Psi(E\cap A) = E\cap B$ for $\Psi \in \underline{\overline{\Psi}}$. (ii) $\underline{\overline{\Psi}}$ will be called $\underline{\rm decomposable}$ if it is decomposable via $E$ for some bipartite cut $(E, E')$. 
+\end{definition}
+
+\begin{example}%%3.1
+We consider~\ref{subsubsection-3.1.1} $(F)$ above and use Theorem~\ref{thm-3.1} above freely.
+\end{example}
+
+\begin{enumerate}
+\item Let $v=3$ and $\underline{\overline{\Psi}}$ consist of the two converings given in Figures. Then $\underline{\overline{\Psi}}$ is not decomposable. So $\lceil\underline{\Psi}$ is genuinely entangled.
+
+\item Let $v=4$ and $\underline{\overline{\Psi}}$ consist of the two coverings in Figure\ref{fig03}. Then $\underline{\overline{\Psi}}$ is decomposable with $E= \{3,4,5,6\}$ serving the desired purpose. However,$\lceil\underline{\overline{\cup}}\rangle$ is note a product vector in the bipartite cut $(E, E')$  as can be seen by computing $F_{\underline{\overline{\Psi}}}$. In fact,
+\begin{equation*}
+\begin{split}
+F_{\underline{\overline{\Psi}}}(\underline{\x}) = &\left(\x_{2} \x_{8} + \x_{1}\x_{7} - \x_{1}\x_{2} -\x_{7}\x_{8}\right)\left(\x_{4}\x_{6} + \x_{3}\x_{5}- \x_{3}\x_{4} - \x_{5}\x_{6} \right)\\
+&+ \left(\x_{2}\x_{8} + \x_{1}\x_{7} - \x_{1}\x_{8}-\x_{2}\x_{7}\right) \left(\x_{4} \x_{6} + \x_{3} \x_{5} - \x_{3}\x_{6}-\x_{4} \x_{5}\right).
+\end{split}
+\end{equation*}
+
+This can note be factored as as $p(\underline{\x}_{E})~q(\underline{\x}_{E'})$ for any polynomials $p$ and $q$ more are apart from $E$ there is no other subset $G$ with $\phi \neq G \subset_{\neq} \lceil_{6}$ that satisfies the condition~\ref{subsection-3.6} of decomposability. This show that the converse of Theorem~\ref{thm-3.1}(ii)(b) does not hold in  general.
+\end{enumerate}
+
+\begin{subsubsec}\label{subsubsection-3.1.3}
+$\underline{\text{Concepts and properties if} \underline{\overline{\Psi}} \text{related to decomposability}.}$
+
+Let $v\geq 3$ and $\# \underline{\overline{\Psi}} \geq 2$.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item  Let $\varphi_{1} = \left\{A_{1} \subset A : \# \left\{\Psi (A_{1}) : \Psi \in \underline{\overline{\Psi}} \right\} \right\} =1$. For $A_{1} \in \varphi_{1}$ we write $B_{1}$ for $\Psi(A_{1})$ for any (and thus for all) $\Psi \in \underline{\overline{\Psi}}$. Then $\phi, A \in \varphi_{1}$ and $\varphi_{1}$ is an algebra of subsets of $A$. As a consequence, $B_{1} = \left\{B_{1}= \Psi(A_{1}) : A_{1} \in \varphi_{1} \right\}$ is an algebra of subsets of $B$. In particular, \# $\varphi_{1} \geq 3$ if and only if \# $B_{1} \geq 3$. In this case, let $\varphi_{1}$ mix be the subset of $\varphi_{1}\{\phi\}$ consisting of its minimal subsets.
+
+\item Now suppose \# $\varphi_{1} \geq 3$ and consider any $A_{1} \in \varphi_{1}$ with $\phi \neq A_{1}\neq A$. We set $E = A_{1} \cup B_{1}$. Then \# $E \neq \lceil_{n}$. Also $\Psi(E \cap A) = E \cap B$ for $\Psi \in \underline{\overline{\Psi}}$. In other words, $\underline{\overline{\Psi}}$ is decomposable via $E$. for $\Psi \in \underline{\overline{\Psi}}$. In other words, $\underline{\overline{\Psi}}$ is decomposable via $E$. Then $\phi \neq E \cap A \neq A$ and $E \cap A \in \varphi_{1}$. This in then, gives that \# $\varphi_{1} \geq 3$. 
+
+\item Because \# $\underline{\overline{\Psi}} \geq 2$, there exist $\Psi_{1}, \Psi_{2} \in \underline{\overline{\Psi}}$, $a \in A$, $b_{1} \neq b_{2}$ in $B$ with $\Psi_{1}(a_{1}) = b_{1}$, $\Psi_{2}(a_{1}) = b_{2}$. So $\{a_{1}\} \in \varphi_{1}$. Hence $\varphi_{1} \neq P_{A}$. Can de??? $\varphi_{1}$ is an algebra of subsets of $A$ too.
+
+\item Consider $a_{1}$ as in (c) above and $a_{2}\neq a_{1}$ in $A$. If $\left\{a_{1}, a_{2} \right\} \in \varphi_{1}$ then $\Psi_{1}\left\{a_{1}, a_{2} \right\} = \left\{b_{1},\Psi_{1} (a_{2})\right\}$ has to be $\Psi_{2}\left\{a_{1}, a_{2} \right\} = \left\{b_{2},\Psi_{2} (a_{2})\right\}$ so that $\Psi_{1}(a_{2}) = b_{2}$ and $\Psi_{2}(a_{2}) = b_{1}$ and, thus, $\left\{a_{2}\right\} \notin \varphi_{1}$. On the other hand, if $\left\{a_{2}\right\} \in \varphi_{1}$, then $\Psi_{1}\left\{a_{1}, a_{2}\right\} = \left\{b_{1}, \Psi_{1}(a_{2})\right\} = \left\{b_{1}, \Psi_{2}(a_{2})\right\} \neq \left\{b_{2}m \Psi_{2}(a_{2})\right\}$ and, thus $\left\{a_{1}, a_{2} \notin \varphi_{1}\right\}$. Hence\, at most one of $\left\{a_{2}\right\}$, $\left\{a_{1}, a_{2}\right\}$ is in $\varphi_{1}$.
+
+\item Let $\varphi_{2} = \left\{A_{2} \subset A : \# \{\Psi (A_{2}) : \Psi \in \underline{\overline{\Psi}}\} \geq 2\right\}$. Then $\varphi_{1} \cap \varphi_{2} = \phi$, $\varphi_{1} \cup \varphi_{2} = P_{A}$ and for $A_{2} \in \varphi_{2}$, $A \smallsetminus A_{2} \in \varphi_{2}$. By (c) above $\{a_{1}\} \in \varphi_{2}$ and therefore, $A\smallsetminus \{a_{1}\}$ and $\{a_{1}, a_{2}\}$ Now by (d), for $a_{2}\in A\smallsetminus\{a_{1}\}$, at least one of $\{a_{2}\}$
+and $\{a_{1}, a_{2}\}$ is in $\varphi_{2}$ and neither of them or their complements in $A$ equal $\{a_{1}\}$ or $A\smallsetminus\{a_{1}\}$ because $v\geq 3$. Hence $\# \varphi_{2}\geq 4$.
+
+\item $\phi$ and $A$ are in $\varphi_{1}$ and therefore, not in $\varphi_{2}$. So for $A_{2} \in \varphi_{2}$ $v-1 \geq \#$ $A_{2}\geq 1$ and, therefore, $^{v}C_{\# A_{2}} \geq v$.
+
+\item 
+\begin{align*}
+F_{\underline{\overline{\Psi}}}(\underline{\x}) &= 2^{-v/2} \sum_{A_{1} \in \varphi_{1}}(-1)  \underline{\x}^{A_{1}} \x^{B\smallsetminus B_{1}} + \\
+   & 2^{-v/2} \frac{1}{\# \underline{\overline{\Psi}}} \sum_{A_{2} \in \varphi_{2}} (-1)^{\# A_{2}} ??? \left(\sum_{B_{2} \in B} \# \left\{\Psi \in \underline{\overline{\Psi}} : \Psi(A_{2}) - B_{2}\right\}\underline{\x}^{B\smallsetminus B_{2}}\right)\tag{3.9}
+\end{align*}
+
+\item Let $A_{2} \in \varphi_{2}$. We write, for $B_{2} \subset B$, $A_{2}, B_{2}$ for $\frac{1}{\#\underline{\overline{\Psi}}} \# \{\Psi \in \underline{\overline{\Psi}} : \Psi (A_{2}) = B_{2} \}$. which in $\geq 0$.
+
+We note that $C_{A_{2}B_{2}} \neq 0$ if and only if $B_{2} \in \{ \Psi (A_{2}) : \Psi \in \underline{\overline{\Psi}}\}$ .
+
+In Particular, $C_{A_{2}B_{2}} = 0$ for $\# A_{2} \neq \# B_{2}$. Moreover $\sum_{B_{2 \subset B}}$ $C_{A_{2}, B_{2}} =1$ so $^{v}C_{\# A_{2}} \geq \# \{B_{2} \subset B : C_{A_{2}, B_{2}} \neq 0 \} \geq 2$.
+
+This, in turn, gives that $C_{A_{2}, B_{2}}>0$ for at last two distinct subsets $B_{2}$ of $B$. As a consequence, $C_{A_{2}, B_{2}} < 1$ for all $B_{2} \subset B$.
+
+\item Let 
+\begin{align*}
+F^{1}_{\underline{\overline{\Psi}}}(\underline{\x})  &= 2^{-v/2} \sum_{A_{1} \in \varphi_{1}}(1)^{\# A_{1}} \underline{\x}^{A_{1}} \underline{\x}^{B\smallsetminus} B_{1}\\
+F^{2}_{\underline{\overline{\Psi}}}(\underline{\x})  &= 2^{-v/2} \sum_{A_{2} \in \varphi_{2}} \sum_{B_{1} \subset B} C_{A_{2}, B_{2}}(-1)^{\# A_{2}} \underline{\x}^{A_{2}} \underline{\x}^{B\smallsetminus}B_{2}\tag{3.10}\\
+\text{So}\quad\quad F_{\underline{\overline{\Psi}}} (\underline{\x}) &= F^{1}_{\underline{\overline{\Psi}}} (\underline{\x}) + F^{2}_{\underline{\overline{\Psi}}} (\underline{\x})
+\end{align*}
+
+Let $t$, $t^{(1)}$, $t^{(2)}$ be the number of terms in $F_{\underline{\overline{\Psi}}}(\underline{x})$, $F^{(1)}_{\underline{\overline{\Psi}}}(\underline{x})$ and $F^{(2)}_{\underline{\overline{\Psi}}}(\underline{x})$ respectively then $t^{(1)} = \# \varphi_{1}$.
+
+Using (h), we have $\sum_{A_{2} \in \varphi_{2}} \quad ^{v}C_{\# A_{2}} \geq t^{(2)} \geq 2 \# \varphi_{2}$. But by (e), $\# \varphi_{2} \geq 4$  and therefore, $f^{(2)} \geq 8$. Hence 
+\begin{align*}
+2^ {v} + \sum_{A_{2} \in \varphi_{2}}(^{v}C_{\# A_{2}}-1) &= \# \varphi_{1} + \sum_{A_{2} \in \varphi_{2}} ^{v}C_{\# A_{2}} \geq t^{(1)} + t^{(2)} = t \geq \# \varphi_{1} + 2 \# \varphi_{2} = \#P_{A} + \# \varphi_{2}\\
+& = 2^{v} + \# \varphi_{2} \geq 2^{v} + 4 \tag{3.11}  
+\end{align*}
+
+\item If $\{a\} \in \varphi_{1}$ for some $a\in A$, then by (b) above and Theorem~\ref{thm-3.1} (v)(b), $|\underline{\overline{\Psi} \rangle}$ is a product vector in the bipartite cut $(E, E')$ with $E= \{a\}$.
+
+\item We confine out attention to the case that $\{a\} \notin \varphi_{1}$, $a\in A_{1}$. In that case, $\{a\} \in \varphi_{2}$ for $a\in A$. So $\# \varphi_{2} \geq 2v$ because $\{A \smallsetminus \{a\}, \{a\} : a \in A \}$ are all different sets in view $v \geq 3$. This refines the second part of (3.11) viz; 
+\begin{equation*}
+t \geq 2^{v} + \# \varphi_{2} \geq 2^{v} + 2 \Psi = 2(2^{v-1} + v)\tag{3.12} 
+\end{equation*} 
+
+\end{enumerate}
+
+We record a few test of decomposability which are ????? in 3.1.3 (a)\& (b), (i) and (k) above.
+
+\end{subsubsec}
+
+\begin{thm}\label{3.2}
+\underline{(Tests of decomposability)}. Let $v\geq 3$ and $\# \underline{\overline{\Psi}} 2$.
+\begin{enumerate}[label=(\roman*)]
+\item The following are equivalent
+\begin{enumerate}[label=(\alph*)]
+\item $\underline{\overline{\Psi}}$ is decomposable.
+
+\item $\# \varphi_{1} \geq 3$
+
+\item $\# \varphi_{1} \geq 4$
+
+\item The number $s$ of terms in $F_{\underline{\overline{\Psi}}}(\underline{\x})$ with $|$co-efficient$|= 2^{-v/2}$ is $\geq 3$.
+
+\item The number $s$  as in (d) above is $\geq 4$.
+
+\end{enumerate}
+
+\item If $t < 2^{v} + 2v$ then $\underline{\overline{\Psi}}$ is decomposable via  some $a \in A$. Further in this case $| \underline{\overline{\Psi}} \rangle$ is a product vector in the bipartite cut $(E, E')$.
+\end{enumerate}
+
+\end{thm}
+
+\begin{subsubsec}\label{subsubsection-3.1.4}
+\underline{Normarization of $| \underline{\overline{\Psi}} \rangle$}. Let $v \geq 2$ and $\# \underline{\overline{\Psi}} \geq 2 $. (a) By \ref{subsubsection-3.1.1} (e) for $v=2$, there is only one $\underline{\overline{\Psi}}$. 
+
+The polynomial representation of $| \underline{\overline{\Psi}} \rangle$ is given by
+\begin{align*}
+F_{\underline{\overline{\Psi}}} (\underline{\x}) &= \frac{1}{z^{2}}\left((\x_{2} - \x_{1}) (\x_{4} - \x_{3}) + (\x_{4}-\x_{1}) (\x_{2}-\x_{3})\right)\\
+ &= \frac{}1{4} \left(2(\x_{1} \x_{3} + \x_{2} \x_{4}) - \x_{1} \x_{4}- \x_{2}\x_{3} -\x_{1}\x_{2}-\x_{3}\x_{4}\right)\\
+\text{So} \quad || | \underline{\overline{\Psi}} \rangle || &= \frac{1}{4} \sqrt{\left(4+4+1+1+1+1\right)} = \frac{\sqrt{3}}{2}\tag{3.13}
+\end{align*}
+
+Hence the corresponding RVB state is $| \underline{\overline{\Psi}} \rangle  = \frac{2\sqrt{3}}{3} | \underline{\overline{\Psi}} \rangle$ and its polynomial representation is given by 
+\begin{equation*}
+F_{\underline{\overline{\Psi}}}(\underline{\x}) = \frac{\sqrt{3}}{6} \left(2(\x_{1}\x_{3} + \x_{2}\x_{4}) - \x_{1}\x_{4} - \x_{2}\x_{3}- \x_{1}\x_{4} -\x_{3}\x_{4}\right)\tag{3.14}
+\end{equation*}
+
+Let $v\geq 3$. We use\ref{subsubsection-3.1.3}(i). The terms of the polynomial representation of $F_{\underline{\overline{\Psi}}}(\underline{\x})$ coming from non-zero values of $C_{A_{2}, B_{2}}$'s are mutually orthogonal in $\lfloor^{2}\left(\prod^{n}\right)$, So
+\begin{equation*}
+|| | \underline{\overline{\Psi}} \rangle || = ||F_{\underline{\overline{\Psi}}}(\underline{\x})||_{2} = 2^{-v/2}\sqrt{\left(\# \varphi_{1}  + \sum_{A_{2} \in \varphi_{2}} \left(\sum_{B_{2} \subset B} C_{A_{2}, B_{2}}^{2}\right) \right)}\tag{3.15}
+\end{equation*}
+
+But for each $A_{2} \in \varphi_{2}$, $\# \{B_{2} \subset B  : C_{A_{2}, B_{2}} \neq 0\} \geq 2$ and $\sum C_{A_{2}, B_{2}} = 1$; by \ref{subsubsection-3.1.3}(h). So $\sum_{B_{2} \in B} C_{A_{2}, B_{2}} < 1$ for $A_{2} \in \varphi_{2}$.
+
+Hence
+\begin{equation*}
+|| | \underline{\overline{\Psi}} \rangle || < 2^{-v/2} (\# \varphi_{1} + \# \varphi_{2}) =1\tag{3.16}
+\end{equation*}
+
+The corresponding RVB state, say $\widetilde{| \underline{\overline{\Psi}} \rangle} = \frac{1}{|| | \underline{\overline{\Psi}} \rangle||} | \underline{\overline{\Psi}} \rangle$ and its polynomial representation is 
+\begin{equation*}
+\widetilde{F}_{\underline{\overline{\Psi}}} (\underline{\x}) = \frac{1}{|| | \underline{\overline{\Psi}} \rangle||} F_{\underline{\overline{\Psi}}}(\underline{\x})\tag{3.17}
+\end{equation*}
+
+\end{subsubsec}
+
+\begin{subsubsec}\label{subsubsection-3.1.5}
+\underline{Motivation for factor ability of sets of coverings}. Theorem~\ref{thm-3.1} and \ref{subsubsection-3.1.3} permit us to confine out attention to $v\geq 3$ and decomposable coverings $\underline{\overline{\Psi}}$ with $\# \underline{\overline{\Psi}} \geq 2$ and $\{a\} \notin \varphi_{1}$, for any $a \in A$ on the one hand and motivate the new concept of factorability of $\underline{\overline{\Psi}}$ on the other hand.
+
+(a) Suppose $\underline{\overline{\Psi}}$ is decomposable via $E$. Let $v_{1}= \# E \cap A$, $v_{2} = \# E' \cap A$
+
+
+\end{subsubsec}
+
+
+\end{document}
