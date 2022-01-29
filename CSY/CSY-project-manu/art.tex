@@ -781,7 +781,7 @@ Following pictures serve as examples for the concepts defined above.
 
 \end{example}
 
-\begin{thm}\label{thm-3.2}
+\begin{thm}\label{thm-3.3}
 It $\overline{\boldsymbol{\psi}}$ is factorable via $E$ Then $| \overline{\boldsymbol{\psi}} \rangle$ is a product vector in the bipartite cut $(E, E')$. In particular, it is so if $\overline{\boldsymbol{\Psi}}$ is flat or a pole via $E$.
 \end{thm}
 
@@ -794,6 +794,72 @@ It is is immediate from definition that
 Hence $| \overline{\boldsymbol{\Psi}}\rangle$ is a product vector in the cut $(E, E')$.
 
 \end{proof}
+
+
+\begin{subsubsec}\label{subsubsection-3.1.6}
+
+\textbf{Entanglement properties of $\mathbf{| \overline{\boldsymbol{\psi}} \rangle}$ via polynomial representation.} In new of Theorems~\ref{thm-3.1}, \ref{thm-3.3} and intermediary discussion we can confine our attention to the case when $v \geq 4$, $\overline{\bold{\Psi}}$ is decomposable via some  $E$ with $\phi \neq E_{\#} \subset \Gamma_{n}$ and $\Phi~~ \overline{\boldsymbol{\Psi}}$ is not factorable. We will do a little representation here in connection with polynomial representation of $| \overline{\boldsymbol{\Psi}} \rangle$ to streamline the proof of our next Theorem. We will use the notation and terminology above, particularly the lot in \eqref{subsubsection-3.1.5} above.
+\end{subsubsec}
+
+\begin{enumerate}[label=(\alph*)]
+
+\item The polynomial representation of the unit vectors $| \Phi_{1} \rangle$, $| \Phi_{2} \rangle$, $| \Phi_{1} \times \Phi_{2} \rangle$  in $\mathcal{H}_{E}$, $\mathcal{H}_{E'}$, $\mathcal{H}$ respectively are given by 
+\begin{align*}
+F_{\Psi_{1} \times \Psi_{2}} (\boldsymbol{\x}_{E}) & =  2^{-v_{1}/2} \prod_{a\in E \cap A}(\x_{\Psi_{1}(a)}- \x_{a}),~~\\
+ &\qquad\qquad\quad F_{\Psi_{1} \times \Psi_{2}} (\boldsymbol{\x}_{E'})= 2^{-v_{2}/2} \prod_{a \in E' \cap A}(\x_{\Psi_{2}(a)}-\x_{a})\\
+F_{\Psi_{1} \times \Psi_{2}} (\boldsymbol{\x}) &= 2^{-v/2} \prod_{a \in A} (\x_{\Psi_{1} \times \Psi_{2}(a)} - \x_{a})\\
+F_{\Psi_{1} \times \Psi_{2}} (\boldsymbol{\x}) &= F_{\Psi_{1}} (\boldsymbol{\x}_{E})~~ F_{\Psi_{2}}(\boldsymbol{\x}_{E'})\tag{3.21}
+\end{align*}
+
+This justifies the rotation $\Psi_{1} \times \Psi_{2}$ set up in \ref{subsubsection-3.1.5} (b) above.
+
+\item For $1 \leq j \leq j'$, let $T_{j} = \left\{k : 1 \leq k \leq k', \Psi_{j}^{E} \times \Psi_{k}^{E'} \in \overline{\boldsymbol{\Psi}}\right\}$, and for $1 \leq k \leq k'$, let $S_{E} = \left\{j : 1 \leq j \leq j', \Psi_{j}^{E} \times \Psi_{K}^{E'} \in  \overline{\boldsymbol{\Psi}}\right\}$. Then all these sets are non-empty  and $\overline{\boldsymbol{\Psi}} = \underset{j=1}{\overset{j'}{\bigcup}} ~~ \underset{R \in T_{j}}{\overset{}\bigcup} \left\{\Psi_{j}^{E} \times \Psi_{K}^{E'}\right\} = \underset{K=1}{\overset{k'}{\bigcup}}~~ \underset{j\in S_{k}}{\overset{}{\bigcup}}\left\{\Psi_{j}^{E} \times \Psi_{K}^{E'} \right\}$.
+
+The unions are all disjoint and $s = \# \overline{\boldsymbol{\Psi}} = \underset{j=1}{\overset{j}{\sum}} \# T_{j} = \underset{k=1}{\overset{R'}{\sum}} \# S_{k}$.
+
+We may express concepts in Definition~\ref{definition-3.2} in terms of $\# T_{j}$ , $\# S_{k}$ for $1 \leq k \leq k'$ For instance, $\overline{\boldsymbol{\Psi}}$ is factorable if and only if $\# T_{j} = k'$ for $1 \leq j \leq j'$ if and only if $\# S_{k} = j'$ for $1 \leq k \leq k'$ if and only $\therefore~ ??? = \# \overline{\boldsymbol{\Psi}} = j'^{k'}$.  
+
+\item For $\Psi \in {\boldsymbol{\Psi}}$ let $p_{\Psi} ({\boldsymbol{\x}}_{E}) = p_{\boldsymbol{\x}_{E}}= 2^{v/2}F_{\Psi/E}({\boldsymbol{\x}}_{E})= \prod\limits_{\substack{a\in E \cap A}}(\x_{\Psi(a)}- \x_{a})$ and $q_{\Psi}({\boldsymbol{\x}}_{E'}) = q_{\Psi/E'}(\boldsymbol{\x}_{E}) = 2^{v_{2}/2} F_{\Psi/E'} ({\boldsymbol{\x}}_{E'}) = \prod\limits_{\substack{a \in E' \cap A}} (\x_{\Psi(a)} - \x_{a})$.
+
+Set 
+\begin{equation}
+p^{0}_{\Psi}(\boldsymbol{\x}_{E}) = p^{0}_{\Psi/E}(\boldsymbol{\x}_{E}) = \sum_{\phi \neq A_{1_{\neq}} \subset E \cap A}(-1)^{\# A_{1}} {\boldsymbol{\x}^{A_{1}}} {\boldsymbol{\x}^{E \cap B \smallsetminus \Psi(A_{1})}}\tag{3.22}\label{eq-3.22}
+\end{equation}
+and 
+\begin{equation}
+q_{\Psi}^{0} (\boldsymbol{\x}_{E'}) = q^{0}_{\Psi/E'}(\boldsymbol{\x}_{E'})= \sum_{\phi \neq A_{2_{\neq}} \subset E' \cap A}(-1)^{\# A_{s}} {\boldsymbol{\x}^{A_{s}}} {\boldsymbol{\x}^{E' \cap B \smallsetminus \Psi(A_{2})}}\tag{3.23}\label{eq-3.23}
+\end{equation}
+Then
+\begin{equation}
+p_{\Psi}(\boldsymbol{\x}_{E}) = \boldsymbol{\x}^{E \cap B} + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A} + p^{0}_{\Psi}(\boldsymbol{\x}_{E})\tag{3.24}
+\end{equation}
+and
+\begin{equation}
+q_{\Psi}(\boldsymbol{\x}_{E'}) = \boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E' \cap A} + q^{0}_{\Psi}(\boldsymbol{\x}_{E'})\tag{3.25}
+\end{equation}
+
+\item Let $s= \# \overline{\boldsymbol{\Psi}}$. We set $| \overline{\boldsymbol{\psi}} \rangle = 2^{v/2} \# \overline{\boldsymbol{\psi}} |\overline{\boldsymbol{\psi}} \rangle$. Its $p$ entanglement properties are same as that for $| \overline{\boldsymbol{\psi}} \rangle$.
+
+Its polynomial representation has coefficients as integers and that is convenient to work with.
+
+Indeed,
+%~ \begin{equation}
+\begin{align*}
+F_{\overline{\boldsymbol{\Psi}}}(\boldsymbol{\x}) &= \sum_{\Psi \in \overline{\boldsymbol{\Psi}}} p_{\Psi} (\boldsymbol{\x}_{E})~~ q_{\Psi} (\boldsymbol{\x}_{E'})\\
+&= \sum_{\Psi \in \overline{\boldsymbol{\Psi}}} \Bigg((\boldsymbol{\x}^{B}) + (-1)^{v}~~\boldsymbol{\x}^{A} + (-1)^{v_{1}}~~ \boldsymbol{\x}^{E \cap A} ~~\boldsymbol{\x}^{E'\cap B} + (-1)^{v_{2}}~~ \boldsymbol{\x}^{E \cap B}~~ \boldsymbol{\x}^{E' \cap A})\\ 
+ &\quad  \left(\boldsymbol{\x}^{E \cap B} + (-1)^{v_{1}}~~ \boldsymbol{\x}^{E \cap A}\right)~~q_{\Psi}^{0} (\boldsymbol{\x}_{E'})  + p_{\Psi}^{0}(\boldsymbol{\x}_{E})~~ \left(\boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}}~~ \boldsymbol{\x}^{E' \cap A} \right)\\
+ &\quad p_{\Psi}^{0}~~ (\boldsymbol{\x}_{E})~~ q_{\Psi}^{0}(\boldsymbol{\x}_{E'}) \Bigg)\\
+ & = \# \overline{\boldsymbol{\Psi}} \left(\boldsymbol{\x}^{B} + (-1)^{v} \boldsymbol{\x}^{A} + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A} \boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E \cap B} \boldsymbol{\x}^{E' \cap A} \right)\\
+ &\quad + \left(\boldsymbol{\x}^{E \cap B} + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A}\right) \sum_{\Psi \in \overline{\boldsymbol{\Psi}}} q_{\Psi}^{0}(\boldsymbol{\x}_{E'}) + \sum_{\Psi \in \overline{\boldsymbol{\Psi}}} p_{\Psi}^{0}(\boldsymbol{\x}_{E}) \\
+ &\hspace{7cm} \left(\boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E \cap B} \boldsymbol{\x}^{E' \cap A} \right)\\
+ & \quad + \sum_{\Psi \in \overline{\boldsymbol{\Psi}}} p_{\Psi}^{0} (\boldsymbol{\x}_{E}) q^{0}_{\Psi} (\boldsymbol{\x}_{E'})\tag{3.26}\label{eq-3.26}
+\end{align*}
+%~ \end{equation}
+
+
+
+\end{enumerate}
+
 
 
 \end{document}
