@@ -856,10 +856,191 @@ F_{\overline{\boldsymbol{\Psi}}}(\boldsymbol{\x}) &= \sum_{\Psi \in \overline{\b
 \end{align*}
 %~ \end{equation}
 
+\item Consider homogeneous polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$ of degrees $v_{1}$ and $v_{2}$ respectively. They have the form
+$p(\boldsymbol{\x}_{E}) = \delta \boldsymbol{\x}^{E \cap A} + \beta\boldsymbol{\x}^{E \cap B} + p_{0}(\boldsymbol{\x}_{E})$ with
+\begin{equation}
+p_{0}(\boldsymbol{\x_{E}}) = \sum\left\{\delta_{A_{1}, B_{1}} \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{E \cap B \smallsetminus B_{1}} : \phi \neq A_{1 \neq} \subset E \cap A, \phi \neq B_{1 \neq} \subset E \cap B, \# A_{1}= \# B_{1}\right\}\tag{3.27}\label{eq-3.27} 
+\end{equation}
 
+and $q(\boldsymbol{\x}_{E'}) = \delta^{1} \boldsymbol{\x}^{E' \cap A} + \beta^{1} \boldsymbol{\x}^{E' \cap B} + q_{0}(\boldsymbol{\x}_{E'})$ with
+\begin{equation}
+q_{0}(\boldsymbol{\x}_{E'}) = \sum \left\{\delta'_{A_{1}, B_{2}} \boldsymbol{\x}^{A_{2}} \boldsymbol{\x}^{E' \cap B \smallsetminus B_{2}} : \phi \neq A_{2 \neq} \subset E' \cap A, \phi \neq B_{2 \neq} \subset E' \cap B, \# A_{2} = \# B_{2}\right\}\tag{3.28}
+\end{equation}
 
+where $\delta, \beta, \delta', \delta{'}, \beta_{'}, \delta_{A_{1}, B_{1}}$ are all scalars.
+
+So
+\begin{align*}
+p(\boldsymbol{\x}_{E}) q (\boldsymbol{\x}_{E'}) &= \delta \delta' \boldsymbol{\x}^{A} + \beta \beta' \boldsymbol{\x}^{B} + \delta \beta' \boldsymbol{\x^{E \cap A}} \boldsymbol{\x}^{E' \cap B} + \delta'\beta \x^{E' \cap A} \boldsymbol{\x}^{E \cap B} +\\
+&\quad(\alpha \boldsymbol{\x}^{E \cap A} + \beta \boldsymbol{\x}^{E \cap B}) q_{0}(\boldsymbol{\x}_{E'}) + p_{0}(\x_{E}) (\delta' \boldsymbol{\x}^{E' \cap A} +\beta' \boldsymbol{\x}^{E' \cap B}) +\\
+&\quad p_{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'})\tag{3.29}
+\end{align*}
+ 
+\item We compare (3.26) in (d) and (3.29) in (e) above. 
+
+We obtain that $\widetilde{F}_{\boldsymbol\Psi}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ if and only if
+\begin{align*}
+\beta \beta' &= s = (-1)^{v} \alpha \alpha' = (-1)^{v_{1}} \alpha \beta' = (-1)^{v_{2}} \alpha' \beta\tag{3.30}\label{eq-3.30}\\
+\beta q_{0}(\boldsymbol{\x}_{E'}) &= \sum_{\psi \in \boldsymbol{\Psi}} q_{\Psi}^{0}(\boldsymbol{\x}_{E'}) = (-1)^{v_{1}} \alpha q_{0} (\boldsymbol{\x}_{E'})\tag{3.31}\label{eq-3.31}\\
+\beta' p_{0}(\boldsymbol{\x}_{E}) &= \sum_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi} (\boldsymbol{\x}_{E}) = (-1)^{v_{2}} \delta' p_{0} (\boldsymbol{\x})\tag{3.32}\label{eq-3.32}\\
+ \text{and}\quad p_{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'}) &= \sum_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi} (\boldsymbol{\x}_{E}) q^{0}_{\psi} (\boldsymbol{\x}_{E'}) \tag{3.33}\label{eq-3.33}
+\end{align*}
+ 
+ \item Let us first consider the case when this does happen By (3.30) $\alpha = (-1)^{v_{1}} \beta$, $\alpha' = (-1)^{v_{2}} \beta'$ and $\alpha, \beta, \alpha', \beta'$ are all non-zero.
+ 
+ So we may take $\beta = s$, $\delta = (-1)^{v_{1}} s$, $\beta' = 1$, $\delta' = (-1)^{v_{2}}$ and multiply $p_{0}(\boldsymbol{\x}_{E})$ and $q_{0}(\boldsymbol{\x}_{E'})$ by suitable scalars if the need be and retain the same notation for them. Then~\eqref{eq-3.31} and \eqref{eq-3.32} give $s q_{0}(\boldsymbol{\x}_{E'}) = \sum\limits_{\psi \in \boldsymbol{\Psi}} q_{\psi}^{0} (\boldsymbol{\x}_{E'})$ and $p_{0}(\boldsymbol{\x}_{E}) = \sum\limits_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi}(\boldsymbol{\x}_{E})$. This turns~\eqref{eq-3.33} into
+ \begin{equation}
+ \left(\sum_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi}(\boldsymbol{\x}_{E})\right) \left(\sum_{\psi \in \boldsymbol{\Psi}} q^{0}_{\psi} (\boldsymbol{\x}_{E'})\right) = s \sum_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi} (\boldsymbol{\x}_{E}) q^{0}_{\psi}(\boldsymbol{\x}_{E'})\tag{3.34}\label{eq-3.34} 
+  \end{equation}
+
+For notational convenience, We write $p_{\psi^{E}}^{0} (\boldsymbol{\x}_{E})$ as $p^{0}_{j}(\boldsymbol{\x}_{E})$ and $q^{0}_{\psi_{k}^{E'}} (\boldsymbol{\x}_{E'})$ as $q_{k}^{0}(\boldsymbol{\x}_{E'})$ for $1\leq j \leq j'$, $1\leq k \leq k'$. 
+
+We expand both sides of \eqref{eq-3.34} using (b) above in parts.
+
+\begin{align*}
+\text{L.H.S}~~\text{of}~~{\eqref{eq-3.34}} &= \left(\sum_{j=1}^{j'}  \# T_{j} p_{j}^{0}(\boldsymbol{\x}_{E})\right)\left(\sum_{R=1}^{k'} \#S_{k}~ q_{R}^{0}(\boldsymbol{\x}_{E'})\right)\\
+&= \sum_{j=1}^{j'} \sum_{k=1}^{k'} \# T_{j} \#S_{k} p_{j}^{0}(\boldsymbol{\x}_{E}) q_{k}^{0}(\boldsymbol{\x}_{E'}).\tag{3.35}\label{eq-3.35}
+\end{align*}
+
+Now by (b) above $s= \sum_{k=1}^{k'} \# S_{k} = \sum_{j=1}^{j'} \# T_{j}$.
+
+R.H.S of \eqref{eq-3.34}
+\begin{equation}
+s\sum_{j=1}^{j'} p_{j}^{0} (\boldsymbol{\x}_{E}) \left(\sum_{l \in T_{j}} q_{l}^{0}(\boldsymbol{\x}_{E'})\right) = s\sum_{k=1}^{k}  \left(\sum_{t \in S_{k}}  p_{T}^{0} (\boldsymbol{\x}_{E})\right) q_{R}^{0} (\boldsymbol{\x}_{E'})\tag{3.36}\label{eq-3.36}
+\end{equation}
+
+Equating L.H.S  and R.H.S of~\eqref{eq-3.34}, we obtain
+\begin{equation}
+\sum_{j=1}^{j'} p_{j}^{0}(\boldsymbol{\x}_{E}) \left(\sum_{l\in T_{j}} (\# T_{j} \# S_{l} -s) q_{l}^{0}(\boldsymbol{\x}_{E'}) + \sum_{\substack{1 \leq k \leq k' \\ k \neq T_{j}}}, \# T_{j} \# S_{k} q_{k}^{0} (\boldsymbol{\x}_{E'}) \right) = 0 \tag{3.37}\label{eq-3.37}
+\end{equation}
+and
+\begin{equation}
+\sum_{k=1}^{k'} \left(\sum_{t \in S_{k}} (\# T_{t} \# S_{k} -s) p_{t}^{0}(\boldsymbol{\x}_{E}) +  \sum_{\substack{1 \leq j \leq j' \\ j \notin S_{k}}}, \# T_{j} \# S_{k}  p_{j}^{0}(\boldsymbol{\x}_{E})\right) q_{k}^{0}(\boldsymbol{\x}_{E'}) = 0\tag{3.38}\label{eq-3.38}
+\end{equation}
+
+\item Arguments in (g) above can be reversed and , therefor, we call \eqref{eq-3.34}, \eqref{eq-3.37}, \eqref{eq-3.38} Master Equations for $\widetilde{F}_{\boldsymbol{\Psi}}(\boldsymbol{\x})$ to be expressible as product of some polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$. We emphasize that the Master Equations do not involve $p(\boldsymbol{\x}_{E})$ or $q(\boldsymbol{\x}_{E'})$ and in  fact they are determined in an explicit way as explained in (g) above, Moreover, they are equivalent conditions for $| \Psi \rangle$ to be a product vector in the bipartite cut $(E, E')$.
 \end{enumerate}
 
 
+We give easy consequences of the Master equations be fore going to generalities. The spirit of the converse or partial converses of Theorem~\ref{thm-3.3}.
 
+\begin{thm}\label{thm-3.4}
+\textbf{Dichotomy}. Consider the following two conditions for $\boldsymbol{\Psi}$ with $\# \boldsymbol{\Psi} \geq 2$.
+\begin{enumerate}[label=(\alph*)]
+
+\item Either $\boldsymbol{\Psi}$ is flat or a pole.
+
+\item $| \boldsymbol{\Psi} \rangle$ is genuinely entangled.
+
+\end{enumerate}
+
+If $s=\# \boldsymbol{\Psi}$ is a prime number then one and only one of (a) and (b) holds.
+
+\end{thm}
+
+\begin{proof}
+If (a) holds then by Theorem~\ref{thm-3.3}, $| \Psi \rangle$ is not genuinely entangled. So at most one of (a) or (b) can hold.
+
+Now consider the case when (a) does not hold. Let, if possible, (b) not hold. Then $|\boldsymbol{\Psi} \rangle$ is a product vector in some bipartite cut $(E, E')$. By Theorem~\ref{thm-3.1} (ii), and its proof, $\boldsymbol{\Psi}$ is decomposable via $E$ and $F_{\boldsymbol{\Psi}}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q (\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$.
+
+By Master Equation~\ref{eq-3.34}, we have
+\begin{equation}
+\left(\sum_{\psi \in \boldsymbol{\Psi}} p_{\psi}^{0}(\boldsymbol{\x}_{E})\right) \left(\sum_{\psi \in \boldsymbol{\Psi}} q_{\psi}^{0} (\boldsymbol{\x}_{E'}) \right) = \sum_{\psi \in \boldsymbol{\Psi}} p_{\psi}^{0}(\boldsymbol{\x}_{E}) q_{\psi}^{0}(\boldsymbol{\x}_{E'})\tag{ME}\label{eq-ME}
+\end{equation}
+ 
+Consider any $a \in E \cap A$, $a' \in E' \cap A$ and any $\varphi \in \boldsymbol{\Psi}$. Put $b = \varphi(a)$, $b' = \varphi(a')$. Let $U = \left\{\Psi \in \boldsymbol{\Psi} : \varphi \psi(a) = b \right\}$, $V= \left\{\psi \in \boldsymbol{\Psi} : \psi(a) \neq b \right\}$, $W = \left\{\psi \in \boldsymbol{\Psi} : \psi(a) = b, \psi(a') = b'\right\}$,  $u =\# U$, $v = \# V$, $w = \# W$. Then $\varphi \in W \subset U \cap V$. So $1 \leq w \leq \min \{u, v\}$. Because $\boldsymbol{\Psi}$ is neither flat nor a pole, we have $V \subset_{\neq} \boldsymbol{\Psi}$, $U \subset_{\#} \boldsymbol{\Psi}$. So $u < s$, $v < s$.
+ 
+The co-efficient of $\boldsymbol{\x}^{\{a\}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus \{b\}}$ in $\sum_{\psi \in \boldsymbol{\Psi}} p_{\psi}^{0}(\boldsymbol{\x}_{E})$ is -u and that of $\boldsymbol{\x}^{\{a'\}}$ $\boldsymbol{\x}^{E' \cap B \smallsetminus \{b'\}}$ in $\sum_{\psi \in \boldsymbol{\Psi}} q_{\psi}^{0}(\x_{E'})$ is $-v$. So the co-efficient of $\boldsymbol{\x}^{\{a, a'\}}$ $\boldsymbol{\x}^{B \smallsetminus \{b, b'\}}$ in the L.H.S of \eqref{eq-ME} is $uv$. On the other hand, the coefficient of $\boldsymbol{\x}^{\{a, a'\}}$ $\boldsymbol{\x}^{B \smallsetminus \{b, b'\}}$ on  The R.H.S of \eqref{eq-ME} is $sw$. So we have the equation 
+\begin{equation}
+uv=sw \tag{3.39}\label{eq-3.39}
+\end{equation}
+
+Now $1 \leq u < s$ and $1 \leq v < s$. So $s$ cannot be a factor of $u$ or $v$. So if $s$ is a prime, then $s$ cannot be a factor of $uv$. This contradicts~\eqref{eq-3.39}. Hence $| \boldsymbol{\Psi} \rangle$ is genuinely entangled, i.e., (b) holds.
+ 
+\end{proof}
+
+\begin{thm}\label{thm-3.5}
+Let $\boldsymbol{\Psi}$ be decomposable via $E$ and $\{p_{j}^{0}(\boldsymbol{\x}_{E}) 1 \leq j \leq j'\}$ and $\{q_{k}^{0} (\boldsymbol{\x}_{E'}) : 1 \leq k \leq k'\}$ and other symbols be as in ~\eqref{subsubsection-3.1.6} above. Suppose that both these systems are linearly independent. If $| \boldsymbol{\Psi} \rangle$ is a product vector in the biparlite cut $(E, E')$ the $\boldsymbol{\Psi}$ is factorable via $E$.
+\end{thm}
+
+\begin{proof}
+By the Master Equation \eqref{eq-3.37}, the linear independence of $\left\{p_{j}^{0} (\boldsymbol{\x}_{E}) : 1 \leq j \leq j'\right\}$ forces the following. For $1 \leq j \leq j'$,  
+\begin{equation}
+\sum\limits_{l\in T_{j}} (\# T_{j} \# S_{l}-s) q_{l}^{0}(\boldsymbol{\x}_{E'}) + \sum_{1 \leq k \leq k'}, \# T_{j} \# S_{k} q_{k}^{0}(\boldsymbol{\x}_{E'}) = 0\tag{3.40}\label{eq-3.40} 
+\end{equation}
+
+But $\left\{q_{k}^{0}(\boldsymbol{\x}_{E}): 1 \leq k \leq k' \right\}$ is linearly independent and $\# T_{j} \neq 0 \neq \# S_{k}$ for $1 \leq j \leq j'$, $1 \leq k \leq k'$. So $T_{j} = \left\{k : 1 \leq k \leq k'\right\}$ for $1 \leq j \leq j'$.
+
+This gives that $\boldsymbol{\Psi}$ is factorable via $E$.
+\end{proof}
+
+\begin{example}\label{example-3.3}
+We give instance of $\boldsymbol{\Psi}$ for which the conditions of linear independence as in Theorem~\ref{thm-3.5} above holds. 
+
+(a) Let $v=5$, $E = \{1,2,3,4,5,6\}$, $E' = \{7,8,9,10\}$.
+
+Let $\boldsymbol{\Psi}$ consist of the four coverings $\psi (j), j = 1,2,3,4$ as in Figure~\ref{fig09}.
+\end{example}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.1]{figure/figures/fig9.eps}
+\caption{}\label{fig09}
+\end{figure}
+
+Then 
+\begin{align*}
+\boldsymbol{\Psi}_{E} &= \left\{\psi^{(1)}/E , \psi^{(2)}/E, \psi^{(3)}/E\right\},\\
+\boldsymbol{\Psi}_{E'} & = \left\{\psi^{(1)}/E' , \psi^{(2)}/E'\right\}.
+\end{align*}
+
+
+
+The grid is given by Figure~\ref{fig10} which shows that $\boldsymbol{\Psi}$ is not factorable. Indeed $j' =3$, $k'=2$ whereas $s = 4$.
+
+\newpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.1]{figure/figures/fig10.eps}
+\caption{}\label{fig10}
+\end{figure}
+
+ (c) For tuples $\boldsymbol{\lambda} = (\lambda_{1}, \lambda_{2}, \lambda_{3})$, $\mu =(\mu_{1}, \mu_{2})$ of consider the polynomials $p^{\boldsymbol{\lambda}}{\boldsymbol{\x}_{E}}) = \sum\limits_{j=1}^{3} \lambda_{j} \cdot p_{j}^{0} (\boldsymbol{\x}_{E})$ and $q^{\mu}(\boldsymbol{\x}_{E'}) = \sum\limits_{\mu =1}^{2} \mu_{k} q_{k}^{0} (\boldsymbol{\x}_{E'})$. Then the coefficient of $\x_{1}~ \x_{4}~\x_{6} = \boldsymbol{\x}^{\{1\}} \boldsymbol{\x}^{\{4,6\}}$, $\x_{1}~ \x_{2} ~\x_{6} = \x^{\{1\}} \boldsymbol{\x}^{\{2,6\}}$, $\x_{1} \x_{2} \x_{4} = \x^{\{1\}} \boldsymbol{\x}^{\{2,4\}}$ in $p^{\boldsymbol{\lambda}}(\boldsymbol{\x}_{E})$ are $\lambda_{1}, \lambda_{2}, \lambda_{3}$ respectively. So $p^{\boldsymbol{\lambda}}(\boldsymbol{\x}_{E}) =0$ if and only if $\lambda_{1} = 0 = \lambda_{2} = \lambda_{3}$. Hence $\{p_{j}^{0}(\boldsymbol{\x}_{E}), j = 1, 2, 3\}$  is linearly independent. On the other hand, the coefficients of $\x_{7} \x_{10} = \boldsymbol{\x}^{\{7\}} \boldsymbol{\x}^{\{10\}}$ and $\x_{7} \x_{8} = \boldsymbol{\x}^{\{7\}} \boldsymbol{\x}^{\{8\}}$ in $q^{\boldsymbol{\mu}}(\boldsymbol{\x}_{E'})$ are $\mu_{1}$ and $\mu_{2}$ respectively. So $q^{\boldsymbol{\mu}} (\boldsymbol{\x}_{E'})$ is $0$ if and only ???????????? Hence $\{q_{k}^{0}(\boldsymbol{\x}_{E'}): k = 1,2\}$ is linearly independent. ????????? that $| \boldsymbol{\Psi} \rangle$ is not ????
+ 
+ But $\boldsymbol{\Psi}$ is not decomposable via any other bipartite cut. So $| \boldsymbol{\Psi} \rangle$ is genuinely entangled.
+ 
+ This motivates our next definition and result.
+ 
+\begin{definition}\label{definition-3.3}
+Let $\boldsymbol{\Psi}$ be as set of coverings of $\Gamma_{n}$ with $\# \boldsymbol{\Psi} \geq 2$.
+\end{definition}
+
+\begin{enumerate}[label = (\roman*)]
+ \item Suppose that $\boldsymbol{\Psi}$ is decomposable via some with $E$ with $\phi  \neq E \subset_{\neq} \Gamma_{n}$. $\boldsymbol{\Psi}$ will. be said to be \textbf{independent via $\boldsymbol{E}$} if $ \boldsymbol{\Psi}_{E} = \left\{\psi_{j}^{E} : 1 \leq j \leq j' \right\}$ and $\boldsymbol{\Psi}_{E'} = \left\{\psi_{k}^{E'} : 1 \leq k \leq k' \right\}$  satisfy the following conditions.
+\begin{enumerate}[label = (\alph*)]
+\item For each $j, 1 \leq j \leq j'$ there exists $\phi \neq A^{E}_{j} \subset_{\neq} E \cap A$, $\phi \neq B_{j}^{E} \subset_{\neq} E \cap B$ such that $\left\{t : 1 \leq t \leq j', \psi_{t}^{E} (A_{j}^{E}) = B_{j}^{E}\right\} = \left\{j\right\}$.
+
+\item For each $k$, $1 \leq k \leq k'$, there exists $\phi \neq A_{j}^{E'} \subset_{\neq} E' \cap A$, $\phi\neq B_{k}^{E'} \subset_{\neq} E' \cap B $ such that $\left\{ u : 1 \leq u \leq k' : \psi_{u}^{E'} (A_{k}^{E'} = B_{k}^{E'})\right\} = \{k\}$.
+
+In other words, $\boldsymbol{\x}^{A_{j}^{E}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus B^{E}_{j}}$ does occur in and only in $p_{j}^{0} (\boldsymbol{\x}_{E})$ and $\boldsymbol{\x}^{A_{k}^{E'}}$ $\boldsymbol{\x}^{E' \cap B \smallsetminus B_{k}^{E'}}$ does occur in and only in $q_{k}^{0}(\boldsymbol{\x}_{E'})$.
+\end{enumerate}
+
+\item Suppose that neither flat nor a pole. $\boldsymbol{\Psi}$ be called \textbf{independent} if it is independents via $E$ for any $E$ via which $\boldsymbol{\Psi}$  is not decomposable then we note that if $\boldsymbol{\Psi}$ is not decomposable then $\boldsymbol{\Psi}$ is independent by this definition. On the other hand of $\boldsymbol{\x}$ is flat or a pole, then $\boldsymbol{\Psi}$ is not independent by this definition.
+
+\end{enumerate}
+
+\begin{thm}\label{thm-3.6}
+Suppose that $\boldsymbol{\Psi}$ is independent. Then $| \boldsymbol{\Psi} \rangle$ is genuinely entangled if and only if $\boldsymbol{\Psi}$ is not factorable.
+\end{thm}
+
+\begin{proof}
+In view of Theorem~\ref{thm-3.3} if $| \boldsymbol{\Psi} \rangle$ is genuinely entangled then $\boldsymbol{\Psi}$ in not factorable. Now suppose that $\boldsymbol{\Psi}$ is not factorable. Let, if possible, $| \boldsymbol{\Psi} \rangle$ be not genuinely entangled. Then $| \boldsymbol{\Psi} \rangle$ is a 
+product vector in some biparlite cut, say, $(E, E')$. Then by Theorem~\ref{thm-3.1} (ii) $\boldsymbol{\Psi}$ is decomposable via $E$. Because $\boldsymbol{\Psi}$ is independent we have that $\boldsymbol{\Psi}$ is independent via $E$. The arguments in Example~\ref{example-3.3} (c) above can be suitably modified to give that $\left\{p_{j}^{0}(\boldsymbol{\x}_{E}) : 1 \leq j \leq j' \right\}$ and $\left\{q_{k}^{0} (\boldsymbol{\x}_{E'})  : 1 \leq k \leq k'\right\}$ are both linearly independent. Indeea let if possible $p^{\lambda}(\boldsymbol{\x}_{E}) = \sum\limits_{j=1}^{j} \lambda_{j} p_{j}(\boldsymbol{\x}_{E}) = 0$ for some triple $\boldsymbol{\lambda} = (\lambda_{j})^{j'}_{j=1}$ of scalars. For $1 \leq j \leq j_{1}, $ the coefficient of $\boldsymbol{\x}^{A_{j}^{E}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus} B_{j}^{E}$ in $p^{\boldsymbol{\lambda}} (\boldsymbol{\x}_{E})$ is $(-1) \# A_{j}~ \lambda_{j}$. So $\lambda_{j} = 0$ for $1 \leq j \leq j'$, similarly we can prove that $\left\{q_{k}^{0}(\boldsymbol{\x}_{E'}) : 1 \leq k \leq k' \right\}$ is linearly independent. By Theorem~\ref{thm-3.5}, $\boldsymbol{\Psi}$ is factorable via $E$, a contradiction.
+  
+
+\end{proof}
+
+
+ 
 \end{document}
