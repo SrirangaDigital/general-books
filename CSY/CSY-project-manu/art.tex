@@ -1037,10 +1037,161 @@ Suppose that $\boldsymbol{\Psi}$ is independent. Then $| \boldsymbol{\Psi} \rang
 \begin{proof}
 In view of Theorem~\ref{thm-3.3} if $| \boldsymbol{\Psi} \rangle$ is genuinely entangled then $\boldsymbol{\Psi}$ in not factorable. Now suppose that $\boldsymbol{\Psi}$ is not factorable. Let, if possible, $| \boldsymbol{\Psi} \rangle$ be not genuinely entangled. Then $| \boldsymbol{\Psi} \rangle$ is a 
 product vector in some biparlite cut, say, $(E, E')$. Then by Theorem~\ref{thm-3.1} (ii) $\boldsymbol{\Psi}$ is decomposable via $E$. Because $\boldsymbol{\Psi}$ is independent we have that $\boldsymbol{\Psi}$ is independent via $E$. The arguments in Example~\ref{example-3.3} (c) above can be suitably modified to give that $\left\{p_{j}^{0}(\boldsymbol{\x}_{E}) : 1 \leq j \leq j' \right\}$ and $\left\{q_{k}^{0} (\boldsymbol{\x}_{E'})  : 1 \leq k \leq k'\right\}$ are both linearly independent. Indeea let if possible $p^{\lambda}(\boldsymbol{\x}_{E}) = \sum\limits_{j=1}^{j} \lambda_{j} p_{j}(\boldsymbol{\x}_{E}) = 0$ for some triple $\boldsymbol{\lambda} = (\lambda_{j})^{j'}_{j=1}$ of scalars. For $1 \leq j \leq j_{1}, $ the coefficient of $\boldsymbol{\x}^{A_{j}^{E}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus} B_{j}^{E}$ in $p^{\boldsymbol{\lambda}} (\boldsymbol{\x}_{E})$ is $(-1) \# A_{j}~ \lambda_{j}$. So $\lambda_{j} = 0$ for $1 \leq j \leq j'$, similarly we can prove that $\left\{q_{k}^{0}(\boldsymbol{\x}_{E'}) : 1 \leq k \leq k' \right\}$ is linearly independent. By Theorem~\ref{thm-3.5}, $\boldsymbol{\Psi}$ is factorable via $E$, a contradiction.
-  
-
 \end{proof}
 
+\begin{subsubsec}\label{subsubsection-3.1.7}
+\textbf{Master Equations in the general cases}. We continue our dicussion in \eqref{subsubsection-3.1.6} with inputs from other parts of the paper in the spirit of studying quantum entanglement of $| \boldsymbol{\Psi} \rangle$ in terms of properties of $\boldsymbol{\Psi}$.
+
+Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ that is neither flat nor a pole.
+
+We begin with the case that $\boldsymbol{\Psi}$ is decomposable via some $\phi \neq E \subset_{\neq} \Gamma_{n}$ and proceed with an attempt to characterize Master Equation~\eqref{eq-3.34}.
+\end{subsubsec}
+
+\begin{enumerate}[label=(\alph*)]
+
+\item Terms on the L.H.S or R.H.S of \eqref{eq-3.34} can only be of the form $\boldsymbol{\x}^{A_{3}}~\boldsymbol{\x}^{B \smallsetminus B_{3}} = \boldsymbol{\x}^{A_{1} \cup A_{2}}~~\boldsymbol{\x}^{B\smallsetminus (B_{1} \cup B_{2})}$ with $\phi \neq A_{1} \subset_{\neq} E \cap A$, $\phi \neq A_{2} \subset_{\neq} E' \cap A$, $\phi \neq B_{1} \subset_{\neq} E \cap B$, $\phi \neq B_{2} \subset_{\neq} E' \cap B$, $\# A_{1} = \# B_{1}$, $\# A_{2} = \# B_{2}$. Indeed,such or term occcurs in the L.H.S of~\eqref{eq-3.34} if and only if there exist $\varphi_{1}, \varphi_{2} \in \boldsymbol{\Psi}$ with $\varphi_{1}(A_{1})= B_{1}$ and $\varphi_{2}(A_{2}) = B_{2}$, and in this case the on the other hand, $t$ occurs in R.H.S of \eqref{eq-3.34} if and only if there exist $\varphi_{3} \in \boldsymbol{\Psi}$ with $\varphi_{3}(A_{1}) = B_{1}$, $\varphi_{3}(A_{2}) = B_{2}$ or equivalently, $\varphi_{3}(A_{3}) = B_{3}$.
+
+Set $U = \left\{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\right\} = \left\{\psi \in \boldsymbol{\Psi} : \psi /E (A_{1}) = B_{1}\right\}$,
+
+ $V= \left\{\psi \in \boldsymbol{\Psi} : \psi(A_{2}) = B_{2}\right\} = \left\{\psi \in \boldsymbol{\Psi} : \psi/E_{1} (A_{2}) =B_{2} \right\}$, 
+ 
+ $W = \left\{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) =B_{1}, \psi(A_{2}) = B_{2}\right\} = \left\{\psi \in \boldsymbol{\Psi} : \psi (A_{3}) = B_{3}\right\}$, 
+ 
+ $u = \# U$, $v=\# V$, $w=\# W$,
+ 
+  $Z= \left\{\psi \in \boldsymbol{\Psi} : \psi (A_{1}) \neq B_{1}, \psi(A_{2}) \neq B_{2}\right\} = \boldsymbol{\Psi} \smallsetminus (U \cup V)$, $z=\# Z$.
+  
+  The co-efficient of $\boldsymbol{\x}^{A_{3}}~~ \boldsymbol{\x}^{B\smallsetminus B_{3}}$ in L.H.S. of \eqref{eq-3.34} is $(-1)^{\# A_{3}} uv$ whereas in R.H.S. of \eqref{eq-3.34}, it is $(-1)^{\# A_{3}}s sw$. Therefore, the two are equal if and only of 
+  \begin{equation}
+  uv = sw\tag{3.41}\label{eq-3.41}
+  \end{equation}
+  Indeed, $uv-sw =(u-w)(v-w)-zw$. So~\eqref{eq-3.41} is equivalent to
+  \begin{equation}
+  (u-v)(v-w)= zw\tag{3.42}\label{eq-3.42}
+  \end{equation}
+  
+\item  If $U$ or $V$ is $\phi$ , then so is $W$ and therefore, $uv=0 =w$. So \eqref{eq-3.41} is satisfied.
+
+If $U = \boldsymbol{\Psi}$, Then $u=s$, $V=W$ and therefore, $v=w$. So \eqref{eq-3.41} is satisfied.
+
+Similarly, we obtain that if $V = \boldsymbol{\Psi}$, then ~\eqref{eq-3.41} is satisfied.
+
+We have already seen these conditions in ~\ref{subsubsection-3.1.3} (a) to (d).
+
+\item Let $A_{j}$, $B_{j} (j=1,2,3)$, $U,V,W,Z$, $u,v,w,z$, be as in (a) above with $\phi \neq U \neq \boldsymbol{\Psi}$, $\phi \neq V \neq \boldsymbol{\Psi}$, i.e., with $0 < u$, $v < s$. This is the only non-trivial class and and equivalent way of specifying it is that $A_{j} \in \varphi_{2}$ and $B_{j} \in \left\{\psi(A_{j}) : \psi \in \boldsymbol{\Psi}\right\}$ for $j=1,2$ and in this case $A_{3} \in \varphi_{2}$. Such $A_{j}$'s adn $B_{j}$'s do exist as explained in \eqref{subsubsection-3.1.3} (e) to (i) and also in the proof of Theorem~\ref{thm-3.4}, viz, $A_{1} = \{a\}$, $A_{2} = \{a'\}$, $B_{1} = \{b\}$, $B_{2} = \{b'\}$ with $a, a' b, b'$ as choosen there. We have $0< uv < \min \{sv, us\}$. 
+
+Now we have $uv=sw$ and $(u-w)(v-w) =zw$. This gives that $0< sw < \min \{sv, su\}$, which in turn, gives that $0 < w < \min\{ u,v\}$, ie., equivalent to the following for this special class.
+\begin{equation}
+w, u-w, v-w, z\quad \text{all}\quad  > 0, (u-w)(v-w) =zw \tag{3.43}\label{eq-3.43}
+\end{equation} 
+
+We may call \eqref{eq-3.43} criss-cross equation in view of the pictorial representation of $\boldsymbol{\Psi}$ given in Figure~\ref{fig11} with concrete situtions displayed in Example~\ref{example-3.4} and Figures~\ref{fig12} to \ref{fig15}.
+
+Furthermore, $s$ divides $uv$ and $0 < u$, $v < s$. So $s$ cannot be a prime number. Therefore, $s$ is a composite number, say, $s = t' t''$ with $2 \leq t'$, a factor of $u$ and $2 \leq t''$, a factor of $v$. Hence we may write ????????????????????????????
+
+
+\item \textbf{Pictorial representation of (c) above}. 
+
+Let $J = \{j : 1 \leq j \leq j' \}$, $K = \{k : 1 \leq k \leq k'\}$, $J_{1} = \{j \in  J : \psi_{j}^{E} (A_{1}) = B_{1}\}$, $J_{2} = J \smallsetminus J_{1} = \{ \psi_{j}^{E} : \psi_{j}^{E}(A_{1}) \neq B_{1}\}$, $K_{1} = \{k \in K : =\psi_{k}^{E'} (A_{2}) = B_{2}\}$, $K_{2} = K \smallsetminus K_{1}\{\psi_{k}^{E'} : \psi_{k}^{E'}(A_{2}) \neq B_{2}\}$, $j_{1} = \# J_{1}$, $j_{2} = \# J_{2} = j'-j_{1}$, $k_{1} = \# k_{1}$, $k_{2}= \# k_{2} = k' - ???$.
+
+Then $U = \left\{\psi\in \boldsymbol{\Psi} : \psi /E  \in \{\psi^{E}_{j} : J \in J_{1} \}\right\}$, 
+
+$V = \left\{\psi \in \boldsymbol{\Psi} : \psi/E' \in \{\psi_{k}^{E'} : k \in K_{1} \} \right\}$,
+
+$W = \left\{\psi \in \boldsymbol{\Psi} : \psi/E = \psi^{E}_{j}, \psi/E' = \psi^{E'}_{k} \quad \text{for some} \quad j \in J_{1}, k \in K_{1}\right\}$,
+
+$Z = \left\{\psi \in \boldsymbol{\Psi} : \psi /E = \psi^{E}_{j}, \psi/E' = \psi^{E'}_{k} \quad \text{for some}\quad j\in J_{2}, k \in K_{2} \right\}$.
+
+
+In case $j, k_{1}, j_{2}, k_{2}$ are all $> 0$, we have the pictorial representation as in Figure~\ref{fig11} which will be called $(A_{j}, B_{j})_{j=1,2}$ configuration clearly $w \leq j_{1} k_{1}$, $u-w \leq j_{1}k_{2}$, $v-w \leq j_{2} k$, and $z \leq j_{2} k_{2}$. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.2]{figure/figures/fig11.eps}
+\caption{}\label{fig11}
+\end{figure}
+ 
+\item Let us call the equations $v-w = j_{1}k_{2}$ and $v-w = j_{2} k_{1}$ by \textbf{criss}, and $w =j_{1}k_{1}$ and $z=j_{2} k_{2}$ by \textbf{cross}, Then \eqref{eq-3.43} together with criss holds if and only if ???????????????? with cross holds. Thus either of this  ?????? with in turn ??????
+
+\item For notational convenience, we write $L$ for the triple $(A_{j}, B_{j})_{1 \leq j \leq z}$ or\break $(A_{j}, B_{j})_{j=1,2}$ for that matter denots the corresponding sets $U, V, W, Z$ by $U_{L}, V_{L},\break W_{L}, Z_{L}$ respectively; further the numbers $u,v,w, t', t'', u' v''$ will be written as $u_{L}, v_{L}, w_{L}, z_{L}, t_{L}', t_{L}'', u_{L}', v_{L}''$ respectively. Then the Equations~\eqref{eq-3.41} to \eqref{eq-3.44} take the forms of~\eqref{eq-3.45} to \eqref{eq-3.48} respectively given below.
+\begin{align*}
+u_{L} v_{L} &= sw_{L}\tag{3.45}\label{eq-3.45}\\
+(u_{L}- w_{L}) (v_{L} - w_{L}) &= z_{L} w_{L}\tag{3.46}\label{eq-3.46}\\
+u_{L}, u_{L}-w_{L}, v_{L}-w_{L}, z_{L}~~\text{all} > 0, (v_{L}- w_{L})(v_{L}-w_{L}) &= z_{L}w_{L}\tag{3.47}\label{eq-3.47}
+\end{align*}
+
+For some 
+\begin{equation}
+i_{L}, t_{L}'' \geq 2, u_{L}', v_{L}'' \geq 1, s=t_{L}'~t_{L}'', u_{L}= t_{L}' u_{L}', v_{L} = t_{L}'' v_{L}'', w_{L} = u_{L}' v_{L}'' \tag{3.48}\label{eq-3.48}
+\end{equation}
+
+For $L$ as above. let $\widetilde{L} = (\widetilde{A}_{j}, \widetilde{B}_{j})_{1 \leq j \leq 3}$ where $\widetilde{A}_{j} = E \cap A \smallsetminus A_{1}$, $\widetilde{A}_{2} = E' \cap A \smallsetminus A_{2}$. $\widetilde{B}_{1} = E \cap B \smallsetminus B_{1}$, $\widetilde{B}_{2} = E' \cap B \smallsetminus B_{2}$, $\widetilde{A}_{3} = \widetilde{A}_{1} \cup \widetilde{A}_{2}$, $\widetilde{B}_{3} = \widetilde{B}_{1} \cup \widetilde{B}_{2}$.
+
+Then $U_{\widetilde{L}} = U_{L}$, $V_{\widetilde{L}} = V_{L}$, $W_{\widetilde{L}} =W_{L}$, $Z_{\widetilde{L}} =Z_{L}$, and therefore, $u_{\widetilde{L}} = u_{L}$, $v_{\widetilde{L}} = v_{L}$, $w_{\widetilde{L}} = w_{L}$, $z_{\widetilde{L}} =z_{L}$. So the equation~\eqref{eq-3.45}$_{L}$ to \eqref{eq-3.48}$_{L}$
+under go no change when we close $L$ to $\widetilde{L}$. Indeed, the same is true for $\widetilde{\widetilde{L}} = (\widetilde{A}_{1}, A_{2}, \widetilde{B}_{1}, B_{2}, \widetilde{B}_{1} \cup B_{2})$ and $\widetilde{\widetilde{L}} = (A_{1}, \widetilde{A}_{2}, B_{1}, \widetilde{B}_{2}, A_{1} \cup \widetilde{A}_{2}, B \cup \widetilde{B}_{2})$ as well.
+
+\item Let $\mathcal{L}$ be the set of all $L$ as above.
+
+Let
+\begin{align*}
+\hat{\mathcal{L}} & = \left\{L \in  \mathcal{L} : \# A_{1} \geq \frac{v_{1}}{2}\} = \{L \in \mathcal{L} : \# B_{1} \geq \frac{v_{1}}{2}\right\},\\
+\widetilde{\mathcal{L}} & = \left\{L \in \mathcal{L}  : \# A_{2} \geq \frac{v_{2}}{2}\} = \{L \in \mathcal{L} : \# B_{2} \geq \frac{v_{2}}{2}\right\}
+\end{align*}
+
+For $a_{0} \in E \cap A$, $b_{0} \in E \cap B$, $a_{0}' \in E' \cap A$, $b_{0}' \in E' \cap B$, let
+\begin{align*}
+\hat{\mathcal{L}}_{a_{0}} & = \left\{L \in  \mathcal{L} : \text{whenever} \# A_{1} = \frac{v_{1}}{2}~~ \text{we have}~~ a_{0} \in A_{1} \right\},\\
+\hat{\mathcal{L}}_{b_{0}} & = \left\{L \in  \mathcal{L} : \text{whenever} \# B_{1} = \frac{v_{1}}{2}~~ \text{we have}~~ b_{0} \in B_{1} \right\},\\
+\hat{\mathcal{L}}_{a_{0}'} & = \left\{L \in  \mathcal{L} : \text{whenever} \# A_{2} = \frac{v_{2}}{2}~~ \text{we have}~~ a_{0}' \in A_{2} \right\},\quad \text{and}\\
+\hat{\mathcal{L}}_{b_{0}'} & = \left\{L \in  \mathcal{L} : \text{whenever} \# B_{2} = \frac{v_{2}}{2}~~ \text{we have}~~ b_{0}' \in B_{2} \right\}
+\end{align*}
+ 
+Master Equation~\eqref{eq-3.34} is equivalent to any of the criss cross systems $s_{l, \mathcal{L}^{\ast}}$ with $l \in \{45,46, 47, 48 \}$,
+{\fontsize{10.5}{12.5}\selectfont
+\begin{equation*}
+\mathcal{L}^{\ast} \in \left\{\mathcal{L}, \hat{\mathcal{L}}, \hat{\mathcal{L}}, \hat{\mathcal{L}}_{a_{0}}, \hat{\mathcal{L}}_{b_{0}}, \widetilde{\mathcal{L}}_{a_{0}'}, \widetilde{\mathcal{L}}_{b_{0}'} : a_{0} \in E \cap A, b_{0} \in E \cap B, a_{0}' \in E' \cap A, b_{0}' \in E' \cap B \right\},
+\end{equation*} }
+
+Where
+\begin{equation}
+s_{l, \mathcal{L}^{\ast}} = \left\{(3.l)_{L} : L \in \mathcal{L}^{*} \right\}\tag{3.49}\label{eq-3.49}
+\end{equation}
+
+We note two of them with details as we will use them in applying our discussion.
+
+\begin{equation}
+W_{L}, u_{L}-w_{L}, v_{L}-w_{L}, z_{L}~~\text{are all} > 0, (u -w_{L})(v_{L}-w_{L}) =z_{L} w_{L}~~\text{for}~~ L \in \hat{\mathcal{L}}\tag{3.50}\label{eq-3.50}
+\end{equation}
+  
+For any $L \in \hat{\mathcal{L}}$, there exist $t_{L}'$, $t_{L}'' \geq 2$, $u_{L}', v_{L}'' \geq 1$ that satisfy
+\begin{equation}
+s = t_{L}' t_{L}'', a_{L} = t_{L}' u_{L}', v_{L} = t_{L}'' v_{L}'', w_{L} =u_{L}' v_{L}''\tag{3.51}\label{eq-3.51}
+\end{equation}   
+  
+  These motovate criss-cross concepts for $\boldsymbol{\Psi}$ and $s$ and we proceed with of them and their use.
+  
+\end{enumerate}
+
+\begin{definition}\label{definition-3.4}
+Let $\boldsymbol{\Psi}$ be a set of covering of $\Gamma_{n}$ Which is neither flat nor a pole. Let $\phi  \neq E \subset_{\neq} \Gamma_{n}$. $\boldsymbol{\Psi}$ will be said to be \textbf{criss-cross via $\mathbf{E}$} of it is decomposable via $E$ and satisfies the criss-cross system~\eqref{eq-3.50} or equivalently~\eqref{eq-3.51}.
+
+$\boldsymbol{\Psi}$ will be called \textbf{criss-cross} if it is criss-cross via some $E$ with $\phi \neq E \subset_{\#} \Gamma_{n}$.
+
+\end{definition}
+
+\begin{thm}\label{thm-3.7}
+Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ such that it is neither flat nor a pole.
+\begin{enumerate}[label=(\roman*)]
+\item Let $\phi \neq E \subset_{\neq} \Gamma_{n}, | \boldsymbol{\Psi}\rangle$ is a product vector in the bipartite cut $(E, E')$ of and only of $\boldsymbol{\Psi}$ is is criss-cross via $E$.
+\item $| \boldsymbol{\Psi} \rangle$ is genuinely entangled if and only if $\boldsymbol{\Psi}$ in not criss-cross.
+\end{enumerate}
+
+\end{thm}
+
+
+\begin{proof}
+(i) follows from ~\eqref{subsubsection-3.1.6} (h) and \eqref{subsubsection-3.1.7} (f) above. ??????????????? is immediate from (i). 
+\end{proof}
 
  
 \end{document}
