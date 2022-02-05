@@ -1368,7 +1368,67 @@ We readily obtain that $\boldsymbol{\Psi}$ is criss-cross via $E$ if and only if
 j_{2}k_{1}y_{1} + \left(j_{1}k_{1}-y_{1}\right)y_{4} &= \left(j_{2}k_{1} -y_{3}\right)y_{2} + j_{1}k_{2}y_{3}\tag{3.60}\label{eq-3.60}\\
 j_{2}k_{1}y_{1} + \left(j_{1}k_{1}-y_{1} \right)y_{4} &= j_{2}k_{1}y_{2}y + \left(j_{1}k_{2}-y_{2}\right)y_{3}\tag{3.61}\label{eq-3.61}
 \end{align*}
-
-
 \end{enumerate} 
+
+\begin{example}\label{example-3.5}
+\textbf{Solutions of ~\eqref{eq-3.57} and consequences}. We follow the notation and terminology as in~\eqref{subsubsection-3.1.9} above and book for solutions $\mathbf{y}=\left(y_{1} y_{2}, y_{3}, y_{4}\right)$ for~\eqref{eq-3.57}.
+\end{example}
+\begin{enumerate}[label=(\alph*)]
+
+\item Trivially, there is no solution for $\sigma=1$.
+
+\item Let $\sigma=2$. Then $\mathbf{y} = (1,1,0,0)$ is a solution if and only if $k_{1}=k_{2}$ if and only if $\mathbf{f}= (0,0,1,1)$ is solution on. In this case $k'$ is even \textbf{a solution}. Next, $\mathbf{y} = (1,0,1,0)$ is a solution. if and only if $j_{1}=j_{2}$ if and only if $\mathbf{y}= (0,1,0,1)$ is a solution. In this case $j'$ is even.
+
+Hence if both $j'$ and $k'$ are old then there is no solution for~\eqref{eq-3.57}.
+
+\item Let $\sigma = 3$. Then $\mathbf{y} = (1,1,1,0)$ is a solution if and only if $1 = j_{2}k_{1} + (j_{1}-j_{2})k_{2} = j_{1}k_{2} + j_{2}(k_{1}-k_{2})$.
+
+In this case $j_{1}\leq j_{2}$ and $k_{1} \leq k_{2}$.
+
+But $\mathbf{y} = (1,1,0,1)$ is a solution if and only if $1=j_{2}k_{2} + (j_{1}-j_{2})k_{1}=j_{1}k_{1} + j_{2}\left(k_{2}-k_{1}\right)$. in case, $j_{1} \leq j_{2}$ and $k_{2} \leq k_{1}$.
+
+Next, $\mathbf{y} = (1,0,1,1)$ is a solution if and only if $1=\left(j_{2}-j_{1}\right)k_{2} + j_{1}k_{1} \equiv j_{1}(k_{1}-k_{2}) + j_{2} k_{2}$. In this case $j_{2} \leq j_{1}$ and $k_{1}\leq k_{2}$.
+
+Finally, $\mathbf{y}=(0,1,,1,1)$ is a solution if and only if\\ $1=\left(j_{2}-j_{1} k_{1} + j_{1}k_{2}\equiv \left(k_{2}-k_{1}\right)j_{1} + j_{2}k_{1} \right)$. In this case $j_{2} < j_{1}$ and $k_{2}\leq k_{1}$.
+
+We now, come to ??? possible solutions ???????????????????????????????????.
+
+$\mathbf{y}=(2,1,0,0)$ is a solution if and only if $2k_{2}=k_{???}$ if and only if $\mathbf{y}=(0,0,2,1)$ is a solution. But $\mathbf{y}=(1,2,0,0)$ is a solution if and only if $k_{2}=2k_{1}$ if and only if $(0,0,1,2)$ is a solution.
+
+Similarly we obtain conditions or other four either $(2,0,1,0)$ in terms of $j_{1}$ and $j_{2}$. 
+
+\item Let $\sigma = 4$. Then $\mathbf{y} = (1,1,1,1)$ is a solution if and only if $\left(j_{2} -j_{1} \right)\left(k_{2}-k_{1}\right) = 0$, i.e., either $j_{1} =j_{2}$ or $k_{1}=k_{2}$.
+
+In this case, either $j'$ or $k'$ is even. 
+
+Under respective condition in (b), a solution $\mathbf{y}$ of $\sigma=2$ renders $2\mathbf{y}$ as a solution for $\sigma=4$. 
+
+The remaining possible solutions are 12 of the type $(2,1,1,0)$ with conditions of the type. $1 = j_{2}k_{1} + (j_{1} =2j_{2})k_{2} \equiv (R_{1}-2k_{2})j_{2} + j_{1}k_{2}$.
+
+This can happen only of $j_{1}-2j_{2} \leq 0$ and $k_{1} - 2k_{2} \leq 0$. On the one hand and of the type $(3,1,0,0)$
+
+\end{enumerate}
+
+
+\begin{subsubsec}\label{subsubsection-3.1.10}
+\textbf{Modification of $\boldsymbol{\Psi}$}. Let $\boldsymbol{\Psi}$ be as in Theorem~\ref{thm-3.8} (1) above. We work in the setup of~\eqref{subsubsection-3.1.7} (c) and (d) above.
+\end{subsubsec}
+
+\begin{enumerate}[label =(\alph*)]
+\item Consider any set $\boldsymbol{\widetilde{\Psi}}$ of coverings of $\Gamma_{n}$ for which either $\boldsymbol{\widetilde{\Psi}} \subset_{\neq} \boldsymbol{\Psi}$ or $\boldsymbol{\widetilde{\Psi}} \supset\neq \boldsymbol{\Psi}$. We call $\boldsymbol{\widetilde{\Psi}}$ \textbf{compatible with $\boldsymbol{\widetilde{\Psi}}$} of $\boldsymbol{\widetilde{\Psi}}_{E}= \boldsymbol{E}$ and $\boldsymbol{\widetilde{\Psi}}_{E'} = \boldsymbol{\Psi}_{E}$. Such a compatible $\boldsymbol{\widetilde{\Psi}}$ will be called a \textbf{reduction of $\boldsymbol{\Psi}$} of $\boldsymbol{\widetilde{\Psi}} \subset \boldsymbol{\Psi}$ and \textbf{extension of} $\boldsymbol{\Psi}$ if $\boldsymbol{\Psi} \subset \boldsymbol{\widetilde{\Psi}}$. For any such modification of $\boldsymbol{\Psi}$, the \textbf{modification size} is the number on $\boldsymbol{\widetilde{\Psi}} = / \# \boldsymbol{\widetilde{\Psi}} - \# \boldsymbol{\Psi}/$.
+
+\item If modification $\boldsymbol{\widetilde{\Psi}}$ takes place in any of the four cells $W, U \smallsetminus W, V\smallsetminus W, Z$ as in Figure~\ref{fig11}, then the analogne of the Criss-Cross Equation~\eqref{eq-3.43} for $\boldsymbol{\Psi}$ can not be satisfied. So $| \boldsymbol{\widetilde{\Psi}} \rangle$ is not a product vector in the bipaartite cut $(E, E')$.
+
+\item The sutiation in (b) does occur if $m_{\boldsymbol{\widetilde{\Psi}}} =1$. In particular, if we take $\boldsymbol{\Psi}$ to be factorable so that $s=j'k'$, then for $\boldsymbol{\widetilde{\Psi}} \subset \boldsymbol{\Psi}$ with $\# \boldsymbol{\widetilde{\Psi}} = s-1$, $| \boldsymbol{\Psi} \rangle$ is not a product vector in the bipartite cut $(E, E')$. This is in line with~\eqref{eq-3.57} in~\eqref{subsubsection-3.1.9} (a) and ????????????????
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+
 \end{document}
