@@ -1420,15 +1420,135 @@ This can happen only of $j_{1}-2j_{2} \leq 0$ and $k_{1} - 2k_{2} \leq 0$. On th
 \item If modification $\boldsymbol{\widetilde{\Psi}}$ takes place in any of the four cells $W, U \smallsetminus W, V\smallsetminus W, Z$ as in Figure~\ref{fig11}, then the analogne of the Criss-Cross Equation~\eqref{eq-3.43} for $\boldsymbol{\Psi}$ can not be satisfied. So $| \boldsymbol{\widetilde{\Psi}} \rangle$ is not a product vector in the bipaartite cut $(E, E')$.
 
 \item The sutiation in (b) does occur if $m_{\boldsymbol{\widetilde{\Psi}}} =1$. In particular, if we take $\boldsymbol{\Psi}$ to be factorable so that $s=j'k'$, then for $\boldsymbol{\widetilde{\Psi}} \subset \boldsymbol{\Psi}$ with $\# \boldsymbol{\widetilde{\Psi}} = s-1$, $| \boldsymbol{\Psi} \rangle$ is not a product vector in the bipartite cut $(E, E')$. This is in line with~\eqref{eq-3.57} in~\eqref{subsubsection-3.1.9} (a) and ????????????????
+\end{enumerate}
+
+\begin{subsubsec}\label{subsubsection-3.1.11}
+\textbf{Further refinement of Criss-Cross and pictorial representation}. We refer to ~\eqref{subsubsection-3.1.7} and refine it. Let $\phi\neq A_{1} \subset_{\neq} E \cap A$, $\phi \neq A_{2} \subset_{\neq} E' \cap A$ with $A_{1}, A_{2} \in \varphi_{2}$.
+\end{subsubsec}
+
+\begin{enumerate}[label=(\alph*)]
+\item Let $\left\{\psi(A_{1}) : \psi \in \boldsymbol{\Psi}\right\} = \left\{B(A_{1}, p)\right\} : 1 \leq p \leq j'_{A_{1}}$ and $\left\{\psi (A_{2}) : \psi \in \boldsymbol{\Psi}\right\} = \left\{B(A_{2}, q) : 1 \leq q \leq k'_{A_{2}}\right\}$, say with $B(A_{1}, p)$'s all distinct and $B(A_{2}, q)$'s all distinct. Because $A_{1}, A_{2} \in \varphi_{2}$ we have $j_{A_{2}}' \geq a$ and $k_{A_{2}}' \geq 2$. Let $1 \leq p \leq j_{A_{1}}'$, $1 \leq q \leq k_{A_{2}}'$. Set 
+\begin{align*}
+J_{p} &= \left\{j \in J  : \psi_{j}^{E} (A_{1}) = B(A_{1}, p)\right\}, j_{p} = \# J_{p},\\
+K_{q} & = \left\{k \in K : \psi_{k}^{E'} (A_{2}) = B(A_{2}, q)\right\}, k_{q} = \# K_{q},\\
+U_{p} & = \left\{\psi \in \boldsymbol{\Psi} : \psi / E \in \left\{\psi_{j}^{E} : j \in J_{p}\right\}\right\}, u_{p} = \# U_{p},\\
+V_{q} & = \left\{\psi \in \boldsymbol{\Psi} : \psi/E' \in \left\{\psi_{k}^{E'} : k \in K_{q}\right\} \right\}, v_{q} = \# V_{q},\\
+W_{p,q} & = U_{p} \cap V_{q},\quad w_{p, q} = \# W_{p,q},\\
+Z_{p,q} & = \left\{\psi \in \boldsymbol{\Psi} : psi /E \notin \{ \psi_{j}^{E} : j \in J_{p}\}, \psi/E', \notin \{\psi_{k}^{E'} : k \in K_{??}\} \right\}\\
+ & = \boldsymbol{\Psi} \smallsetminus (U_{p} \cup V_{q}), z_{p,q} = \# Z_{p,q}.
+\end{align*}
+
+Then $J_{p} \neq \phi \neq K_{q}$ and $U_{p} \neq \phi \neq V_{q}$. Further, $j$, is the disjoint union of $J'_{p} s$, $1 \leq p \leq j'_{A_{1}}$, where as $K$ is the disjoint union of $K_{q}'s$, $1 \leq q \leq k_{A_{2}'}$. Moreover, $\boldsymbol{\Psi}$ is the disjoint union of $U_{p}'s$, $1 \leq p \leq j'_{A_{1}}$ >????????????????????
+
+$1 \leq p \leq j'_{A_{1}}$, $U_{p}$ is the disjoint union of $\{W_{p,q} : 1 \leq q \leq k'_{A_{2}} \}$ whereas for $1 \leq q \leq k'_{A_{2}}$, $v_{q}$ is the disjoint union of $\{W_{p,q} : 1 \leq p_{1} \leq j'_{A_{1}}\}$.
+
+\item If follow from (a) that 
+\begin{equation}
+j' = \sum_{p=1}^{jA_{1}} j_{p}, ~~ k_{1} = \sum_{q=1}^{k'A_{1}} k_{q},~~ s= \sum_{p=1}^{j'A_{1}} u_{p}= \sum_{q=1}^{p'A_{???}}v_{q}\tag{3.62}\label{eq-3.62}
+\end{equation}
+
+Also, for $1 \leq p \leq j'_{A_{1}}$, $1 \leq q \leq k'_{A_{2}}$, we have
+\begin{equation}
+0 \leq W_{p,q} \leq j_{p}k_{q},~~1 \leq j_{p} \leq u_{p} \leq j_{p}k',~~ 1 \leq k_{q} \leq v_{q} \leq k_{q}j'\tag{3.63}\label{eq-3.63}
+\end{equation}
+\begin{equation}
+\phi \neq U_{p} \subset_{\neq} \boldsymbol{\Psi},~~ \boldsymbol{\Phi} \neq V_{q} \subset_{\neq} \boldsymbol{\Psi}\tag{3.64}\label{eq-3.64}
+\end{equation}
+\begin{equation}
+u_{p}= \sum_{q_{1}=1}^{k'A_{2}} w_{p,q_{1}}, v_{q}=\sum_{p_{1}=1}^{j' A_{1}}W_{p_{1}, q}\tag{3.65}\label{eq-3.35}
+\end{equation}
+As a consequence,
+\begin{equation}
+s =\sum \left\{w_{p,q} : 1 \leq p \leq j'_{A_{1}}, 1 \leq q \leq k'_{A_{2}}\right\}\tag{3.66}\label{eq-3.66}
+\end{equation}
+
+Hence $\boldsymbol{\Psi}$ is factorable if and only of ????????????
+\begin{equation}
+w_{pq} = j_{p}k_{q}\tag{3.67}\label{eq-3.67}
+\end{equation}
+
+\item We may apply the discussion in ~\eqref{subsubsection-3.1.7}(c) to $U_{p}, V_{q}, W_{p,q}$ etc. (in place of $U, V, W$ etc.) and obtain respective collective versions of~\eqref{eq-3.41} and \eqref{3.43} as follows
+
+Let $1 \leq p \leq j'_{A_{1}}$, $1 \leq q \leq k'_{A_{2}}$. Then
+\begin{equation}
+u_{p}v_{q} = sw_{p,q}\tag{3.38}\label{eq-3.68}
+\end{equation} 
+
+$W_{p,q}>0$, $u_{p}-w_{p,q} > 0$, $u_{q}-w_{p,q} > 0$, $z_{p,q}>0$ and 
+\begin{equation}
+(u_{p}-w_{p,q})(v_{q}-w_{p,q}) = z_{p,q}w_{p,q}\tag{3.69}\label{eq-3.69}
+\end{equation}
+
+In view of \eqref{eq-3.58} we do obtain $u_{p}-w_{p,q}>0$, $v_{q}-w_{p,q}>0$ and $z_{p,q} >0$ for $1 \leq p \leq j'_{A_{1}}$, $1 \leq q \leq k'_{A_{2}}$ right from $W_{p,q}>0$ for $1 \leq p \leq j'_{A_{1}}$, $1 \leq p \leq k'_{A_{2}}$ simply because $z_{p,q} = \sum \left\{W_{p,q} : 1 \leq p_{1} \leq j'_{A_{1}}, 1 \leq q_{1} \leq k'_{A_{2}}, p_{1} \neq p, q_{1} \neq q \right\}$
+
+%~    
+
+We may inter that
+\begin{equation}
+s \geq j'_{A_{1}} k'_{A_{2}} \tag{3.71}\label{eq-3.71}
+\end{equation} 
 
 
+We show the situation in $(A_{1}, A_{2})$-gird displayed in Figure~\ref{fig16}.
 
+\newpage
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1]{figure/figures/fig16.eps}
+\caption{}\label{fig16}
+\end{figure}
+
+We may rewrite~\eqref{eq-3.69} in terms of $w_{p,q}$ is alone as For $1 \leq j \leq j'_{A_{1}}$, $1 \leq \leq k'_{A_{2}}$,
+\begin{align*}
+w_{p,q}>0,& \left(\sum\{w_{p,q} : 1 \leq q_{1} \leq k'_{A_{2}}, q\neq q\}\right) \left(\sum \{w_{p,q} : 1 \leq p_{1} \leq j'_{A_{1}}, p_{1} \neq p\} \right)\\
+& = w_{p,q} \left(\sum \{w_{p_{1}, q_{1}} : 1 \leq p_{1} \leq j'_{A_{1}}, 1 \leq q_{1} \leq k'_{A}, p_{1} \neq p, q_{1} \neq q \} \right)\tag{3.72}\label{eq-3.72}
+\end{align*}
+
+We call \eqref{eq-3.72} $\mathbf{A_{1}, A_{2}}$-\textbf{criss-cross equations}.
+
+\item Steps in (c) above can be reversed. Hence the ??????????? \eqref{eq-3.34} is equivalent to
 
 \end{enumerate}
 
 
+\begin{thm}\label{thm-3.9}
 
+Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ wroth is neither flat nor a pole.
+
+\end{thm}
+
+\begin{enumerate}[label=(\alph*)]
+\item Let $(E, E')$ be a bipartite cut with $\phi \neq E \subset_{\neq} \Gamma_{n}$. Then the following are equivalent.
+ \begin{enumerate}[label=(\roman*)]
+\item $| \boldsymbol{\Psi} \rangle$ is a product vector in the bipartite cut $(E, E')$.
+
+\item $\boldsymbol{\Psi}$ is decomposable via $E$ and for $\phi \neq A_{1} \subset_{\neq} E \cap A$, $\phi \neq A_{2} \subset_{\neq}  E' \cap A$, $A_{1}, A_{2} \in \varphi_{2}$, $(A_{1}, A_{2})$ criss-cross Equation~\eqref{eq-3.72} are satisfied.
+
+\item $\boldsymbol{\Psi}$ is criss-cross via $E$.
+ \end{enumerate}
+
+\item In case (a) (ii) we have $s \geq j'_{A_{1}} \cdot k'_{A_{2}}$ and therefore,\\ $s \geq s_{E} = \max\left\{j'_{A_{1}} \cdot k'_{A_{2}} : \phi \neq A_{1} \subset_{\neq} E \cap A, \phi\neq A_{2} \subset_{\neq} E' \cap A, A_{1} A_{2} \in \varphi_{2} \right\}$. As a consequence, if $s < s_{E}$ then $| \Psi \rangle$ is not a product vector in the bipartite cut $(E, E')$. 
+
+\item Suppose $| \boldsymbol{\Psi} \rangle$ is a product vector in the bipartite cut $(E, E')$ but $\boldsymbol{\Psi}$ is not factorable via $E$. Then for $\phi \neq A_{1} \subset_{\neq} E \cap A$, $\phi \neq A_{2} \subset_{\neq} E' \cap A$, $A_{1}, A_{2} \in \varphi_{2}$, no crossroad $\left(U_{p}, V_{q}\right), 1 \leq p \leq j'_{A_{1}}, 1 \leq q \leq k'_{A_{2}}$ is full in the terminology of~\eqref{subsubsection-3.1.7}(e).
+
+\item For $\boldsymbol{\Psi}$ decomposable via $E$, let $\sigma_{E} = j'k'-s$ as in~\eqref{subsubsection-3.1.9} (c) and $\widetilde{\sigma}_{E} = \max \left\{\min \left\{j'_{A_{1}}, k'_{A_{2}}\right\} : \phi \neq A_{1} \subset_{\neq} E \cap A, \phi \neq A_{2} \subset_{\neq} E' \cap A, A_{1}, A_{2} \in \varphi_{2} \right\}$.
+
+Let $\boldsymbol{\Psi}$ be as in (c) above. Then we have $\sigma_{E} \geq \widetilde{\sigma}_{E}$.
+
+\item Let $\boldsymbol{\Psi}$ be decomposable. Set
+$$
+\sigma_{0} = \min \left\{\sigma_{E}- \widetilde{\sigma}_{E} : \boldsymbol{\Psi}~\text{is decomposable via}~ E\right\}.
+$$
+
+If $\sigma_{0} < 0$, then $| \boldsymbol{\Psi}\rangle$ is genuinely entangled.
+
+\item Let $\boldsymbol{\Psi}$ be decomposable. Set
+$$
+s_{??} = \min \left\{s_{E} : \boldsymbol{\Psi}~ \text{is decomposable via}~E \right\}.
+$$
+ ????????????
+\end{enumerate}
 
 
 \end{document}
