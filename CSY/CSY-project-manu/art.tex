@@ -1550,5 +1550,163 @@ $$
  ????????????
 \end{enumerate}
 
+\subsection{Polynomial representation of doped RVB states, i.e., RVB states with holes and their quantum entanglement}
+
+Doped RVB states are genuinely entangled and the proof is rather easy using their polynomial representation.
+
+Let $1 \leq r < v$ and $??=v-r$ so that $1 \leq u \leq v-1$. We will study RVB states with $r$ holes unless otherwise stated.
+
+\begin{subsubsec}\label{subsubsection-3.2.1}
+\begin{enumerate}[label=(\alph*)]
+\item  For $a \in A$, $b \in B$, a hole or a dope at $a, b$ is the unit vector in $\mathcal{H}_{a,b} = \mathcal{H}_{a} \bigotimes \mathcal{H}_{b}$ given by 
+$$
+[a, b]_{h} = 1 \uparrow \rangle_{a} 1 \uparrow \rangle_{b}.
+$$
+It is orthogonal to $[a,b]$. Its polynomial representation is $h_{a,b} (\x_{a}, \x_{b})=1$, the constant function 1 in variables 
+\begin{equation}
+\x_{a}, \x_{b}\tag{3.73}\label{eq-3.73}
+\end{equation}
+
+\item Let $C$ be a covering of $\Gamma_{n}$, i.e., a bijective map $\psi$ in $A$ to $B$. We introduce $r$ holes in $C$ or $\psi$ in all possible ways, alternatively we introduce $\mu$ resonants in $C$ in all possible ways. To elaborate, let $D\subset A$ with $\# D = r$, the corresponding $R = A \smallsetminus D \subset A$ with $\# R = \mu$, say, $D = \{a'_{k}: 1 \leq \leq r \}$, $R = \{a_{j} : 1 \leq j \leq \mu \}$. The corresponding holes and resonants are given by $(D, \psi) = \left\{\left(a'_{k}, \psi(a'_{k})\right) : 1 k \leq r\right\}$, $(R, \psi) = \left\{\left(a_{j}, \psi(a_{j})\right) : 1 \leq j \leq \mu \right\}$ respectively. Let $D = \left\{D \subset A : \# D=r\right\}$, $R=\left\{R \subset A \# R = \mu\right\}$, $s=\left\{s\subset B \# S=\mu\right\}$, $(\mathcal{D}, \psi) = \{(D, \psi) : D \i  \mathcal{D}\}$, $(\mathcal{E},\psi) = \{(R, \psi) : R \in \mathcal{R}\}$. all these five sets have same carlinality $v_{C_{\mu}} v_{C_{r}} = \frac{v !}{r ! \mu !}$.
+
+\item For $D \in \mathcal{D}$, the corresponding $R = A \smallsetminus D \in \mathcal{R}$, we put $| (D , \psi) \rangle_{h} = | (R, \psi) \rangle = \left(\bigotimes\limits_{j=1}^{\mu} [a_{j}, \psi (a_{j})] \right) \bigotimes \left(\bigotimes\limits_{k=1}^{r} [a'_{k}, \psi (a'_{k})]_{h}\right)$
+
+considered as an elelment of $\mathcal{H}$ identified with $\left(\bigotimes\limits_{j=1}^{\mu} \mathcal{H}_{a_{j}, \psi(a_{j})}\right) \bigotimes \left(\bigotimes\limits_{k=1}^{r} \mathcal{H}_{a'_{k}, \psi (a'_{k})} \right)$. It is a unit vector and its polynomial representation is
+\begin{align*}
+F_{D, \psi}^{h} (\boldsymbol{\x}) &= F_{R, \psi}^{h}(\boldsymbol{\x}) = 2^{-\mu/2} \prod_{j=1}^{\mu} \left(\x_{\psi(a_{j}) - \x_{a_{j}}}\right)\\
+ & = 2^{-\mu/2} \left(\boldsymbol{\x}^{\psi(R)} + (-1)^{\mu} \boldsymbol{\x}^{R} + \sum{1 \leq \mu \leq \mu-1} \sum_{\substack{A_{1} \subset R \\ \#A_{1} = \mu_{1}}}\boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{\psi(R \smallsetminus A_{1})}\right)\tag{3.74}\label{eq-3.74}
+  %~ \sum_{\substack{A_{1} \subset R} \\ {\#A_{1} = \mu_{1}}} (-1)^{\mu_{1}} \
+\end{align*} 
+
+This is a homogeneous polynomial of degree $\mu$ and $X_{l}$ occurs in it for each $l \in R \cup \psi (R)$.
+
+The third part is absent and by our convention, zero if and only if $\mu=1$.
+
+
+\item $\left\{| (D, \psi) \rangle_{h} : D \in \mathcal{D} \right\} = \left\{ | (R, \psi) \rangle : R \in \mathcal{R}\right\}$ is an othonormal subset of $\mathcal{H}$.
+
+\item The doped state $| C\rangle_{k} = | \psi \rangle_{h}$ with $r$ holes in $C$ is the element of $\mathcal{H}$ given by
+$$
+| C \rangle_{h} = | \psi \rangle_{h} = \frac{1}{\sqrt{\# \mathcal{D}}} \sum_{D \in \mathcal{D}} | (D, \psi) \rangle_{h} = \frac{1}{\sqrt{\# R}} \sum_{R \in \mathcal{R}} | (R, \psi) \rangle.
+$$
+
+\item The polynomial representation of $| \psi \rangle_{h}$ is given by 
+{\fontsize{8}{10}\selectfont
+\begin{align*}
+F_{\psi}^{h}(\boldsymbol{\x}) &= \frac{1}{\sqrt{\# \mathcal{R}}} \sum_{R \in \mathcal{R}} F_{R, \psi}^{h}(\boldsymbol{\x})\\
+ & = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2}\left(\sum_{R \in \mathcal{R}} \boldsymbol{\x}^{\psi(R)} + (-1)^{\mu}\sum_{R \in \mathcal{R}} \boldsymbol{\x}^{R} + \sum_{1 \leq \mu_{1} \leq \mu-1} \sum_{\substack{A_{1} \subset A,\\ \# A_{1}= \mu_{1}}}(-1)^{\mu_{1}} \boldsymbol{\x}^{A_{1}} \left(\sum_{\substack{A_{2} \subset A \smallsetminus A_{1},\\ \# A_{2}= \mu-\mu_{1}}}  \boldsymbol{\x}^{\psi(A_{2})}\right)\right)\\
+ & = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \left(\sum_{S \in s} \boldsymbol{\x}^{s} + (-1)^{\mu} \sum_{R \in \mathcal{R}} \boldsymbol{\x}^{R}\right) + \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \left(\sum_{1 \leq \mu_{1} \leq \mu-1} \left( \sum_{\substack{A_{1} \subset A,\\
+ \# A_{1}=\mu_{1}}} (-1)^{\mu_{1}} \boldsymbol{\x}^{A_{1}} \left( \sum_{\substack{A_{2} \subset A \smallsetminus A_{1},\\ \# A_{2} = \mu-\mu_{1}}} \boldsymbol{\x}^{\psi(A_{2})}\right)\right)\right)\\
+ & = F^{hc} (\boldsymbol{\x}) + F_{\psi}^{hd} (\boldsymbol{\x}), \quad \text{say}\tag{3.75}\label{eq-3.75}
+\end{align*}}
+ 
+\item We note that $F^{hi}(\boldsymbol{\x})$ is independent of $\psi$, it has full support, i.e., $\Gamma_{n}$ and has no $X_{j}$ as a factor. But $F_{\psi}^{hd}(\boldsymbol{\x})$ does depend on $\psi$, indeed, it is absent and thus, by convention, is zero if and only of $\mu=1$.
+
+In case $\mu =1$, by Theorem~\ref{thm-2.1} (iii)(b), $| \psi/h$ is genui ??????????????.
+
+\item For $\mu \geq 2$, $F_{\psi}^{hd}(\boldsymbol{\x})$ has an alternative form, viz, 
+\begin{equation}
+F_{\psi}^{hd} (\boldsymbol{\x}) = \frac{1}{ \sqrt{\#} \mathcal{R}} 2^{-\mu/2} \sum_{1 \leq \mu_{2} \leq \mu-1} \sum_{\substack{B_{2} \subset B,\\
+\# B_{2} = \mu_{2}}} \boldsymbol{\x}^{B_{2}} \left(\sum_{\substack{B_{1} \subset B \smallsetminus B_{2} \\ \# B_{1} = \mu-\mu_{2}}} (-1)^{\mu-\mu_{2}} \boldsymbol{\x}^{\psi^{-1} (B_{1})}\right)\tag{3.76}\label{eq-3.76}
+\end{equation}
+
+\item Let $\boldsymbol{\Psi}$ be as set of converings of $\Gamma_{n}$ with $s=\# \boldsymbol{\Psi} \geq 1$. Then the \textbf{doped vector} $| \boldsymbol{\Psi} \rangle_{h}$ in $\mathcal{H}$ is given by $\frac{1}{\# \boldsymbol{\Psi}} \sum_{\psi \in \boldsymbol{\Psi}} | \psi \rangle_{h}$. Then $|| | \boldsymbol{\Psi} \rangle_{h}||^{2} \leq 1$.
+
+The polynomial representation of $| \boldsymbol{\Psi}\rangle_{h}$ is given by
+\begin{align*}
+F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x}) &= F^{hi}(\boldsymbol{\x}) + \frac{1}{\# \boldsymbol{\x}} \sum_{\boldsymbol{\psi \in \boldsymbol{\Psi}}} F_{\psi}^{hd}(\boldsymbol{\x})\\
+& = F^{hc}(\boldsymbol{\x}) + F_{\Psi}^{hd} (\boldsymbol{\x}),\quad \text{say}\tag{3.77}\label{eq-3.77}
+\end{align*} 
+
+So as in (g) above, $F_{\boldsymbol{\Psi}^{g}}(\boldsymbol{\x})$ is a homogeneous polynomial of degree $\mu$, it has full support, i.e., $\Gamma_{n}$ and has row $X_{j}$ as a factor. Further more, for $\mu=1$, $F_{\Psi}^{h} (\boldsymbol{\x})= F^{hi}(\boldsymbol{\x})$ and $| \boldsymbol{\Psi} \rangle_{h}$ is genuinely entangled.
+ 
+\item Let $\mu\geq 2$. For $\phi \neq A_{1} \subset_{\neq} A$, $\phi \neq B_{2} \subset_{\neq}B$ with $\# A_{1} + \# B_{2}= \mu$, let $\boldsymbol{\Psi}_{A_{1}, B_{2}}^{h} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1})\cap B_{2} = \phi\}$ and $w(A_{1}, B_{2}) = \frac{1}{\# \boldsymbol{\Psi}} \# \boldsymbol{\Psi}_{A_{1}, B_{2}}$. We write $A/wB_{2}$ to mean that $w(A_{1}, B_{2}) \neq 0$. Using \eqref{eq-3.75}, we have
+{\fontsize{10}{12}\selectfont
+\begin{align*}
+F_{\boldsymbol{\Psi}}^{hd} (\boldsymbol{\x}) &= \frac{1}{\# \boldsymbol{\Psi}} \frac{1}{\sqrt{\#\mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \leq \mu-1} \left(\sum_{\substack{A_{1}\subset A,\\\# A_{1}=\mu_{1}}} (-1)^{\mu_{1}} \boldsymbol{\x}^{A_{1}}\left( \sum_{\psi \in \boldsymbol{\Psi}} \left( \sum_{\substack{A_{2} \subset A \smallsetminus A_{1},\\ \# A_{2} = \mu=\mu_{1}}} \boldsymbol{\x}^{\psi(A_{2})}\right) \right) \right)\\
+& = \frac{1}{\sqrt{\#\mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \mu-1} \sum_{\substack{A_{1}\subset A, B_{2}\subset B, \\ \# A_{1}=\mu_{1}, \# B_{2}= \mu-\mu_{1}}} (-1)^{\mu_{1}} w(A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}}\\
+& = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \leq \mu-1} (-1)^{\mu_{1}} \sum \left\{w(A_{1}, B_{2})\boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}}, \# A_{1} =\mu_{1} \# B_{2} = \mu-\mu_{1}, A_{1} w B_{2}\right\}\tag{3.78}\label{eq-3.78}
+\end{align*}} 
+
+The last specification is only to specify the non-zero co-effieient representation of $F_{\boldsymbol{\Psi}}^{hd}(\boldsymbol{\x})$ as a sum of mutually orthogonal elelments in $\mathcal{H}$. Thus $F^{h}(\boldsymbol{\x})$ is the sum of multually orthgonal (non-zero) elements as follows 
+\begin{equation}
+\begin{multlined}
+F_{h}(\boldsymbol{\x}) = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \Bigg(\sum_{S \in s} \boldsymbol{\x}^{s} + \sum_{R \in \mathcal{R}} (-1)^{\mu} \boldsymbol{\x}^{R}  + \sum \Big\{(-1)^{\mu_{1}} w(A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}} :\\ \# A_{1} = \mu_{1}, \# B_{2} = \mu-\mu_{1}, A, wB_{2}~~ 1 \leq \mu_{1} \leq \mu-1 \Big\}\Bigg)\tag{3.79}\label{eq-3.79}
+\end{multlined}
+\end{equation} 
+ 
+\item Using~\eqref{eq-3.79}, 
+\begin{align*}
+|| | \psi \rangle_{h} ||^{2} &= \frac{1}{\# \mathcal{R}} 2^{-\mu} \bigg(\# s + \# \mathcal{E} + \sum\bigg\{ (w(A_{1}, B_{2}))^{2} \# A_{1}=\mu_{1}, \# A_{1} wB_{2}, 1 \leq \mu_{1} \leq \mu-1\bigg\}\bigg) \\
+& = 2^{-\mu} \bigg(2 + \sum \bigg\{(w(A_{1}, B_{2}))^{2} /\# \mathcal{R}, \# A_{1}=\mu_{1}, \# B_{2}=\mu-\mu_{1}, A_{1}wB_{2},\\&\hspace{7cm} 1 \leq \mu_{1} \leq \mu-1 \bigg\} \bigg)\tag{3.80}\label{eq-3.80}
+\end{align*}
+
+Thus, we may normalize $| \boldsymbol{\Psi} \rangle_{h}$ by replacing it by $| \boldsymbol{\Psi} \rangle_{h}^{v} = \frac{1}{|| | \boldsymbol{\Psi}\rangle_{h}||} ~~ | \boldsymbol{\Psi} \rangle_{h}$ to obtain the corresponding doped state.
+
+The entanglement properties of $| \boldsymbol{\Psi} \rangle_{h}$ and $| \boldsymbol{\Psi}\rangle_{h}^{v}$ are the we need is $F^{hi}(\boldsymbol{\x})$ for that purpose.
+\end{enumerate}
+\end{subsubsec}
+
+\begin{thm}\label{thm-3.9}
+The doped state $| \boldsymbol{\Psi}\rangle_{h}^{v}$ is genuinely entangled.
+\end{thm}
+
+\begin{proof}
+Let, if possible, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ be not genuinely entangled. Then the same is true of $|\boldsymbol{\Psi} \rangle_{h}$. So it is a product vector in some bipartite cut $(E, E')$. Then $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$. Now $F_{\boldsymbol{\Psi}}^{h} (\boldsymbol{\x})$ is a homogeneous polynomial of degree $\mu$. So by~\eqref{subsubsection-2.2.2}(e) $p$ and $q$ are homogeneous polynomials of degrees, say $\mu_{1}$ and $\mu_{2}$ respectively with $\mu_{1} + \mu_{2} =\mu$. By~\eqref{subsubsection-3.2.1}(j), support of $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$ is full. So $\mu_{1} \geq 1$ and $\mu_{2}\geq 1$. This forces $\mu \geq 2$. We note in passing that for this does give that for $\mu=1$, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled, a fact already noted in ~\eqref{subsubsection-3.2.1}(j), support of $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$ is full. So $\mu_{1} \geq 1$ and $\mu_{2}\geq 1$. Thus force $\mu \geq 2$. We note in passing that for this does give that for $\mu =1$, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled, a fact already noted in ~\eqref{subsubsection-3.2.1}(j).  Let $R \in \mathcal{R}$. Then by~\eqref{eq-3.79}, $\boldsymbol{\x}^{R}$ occures in $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$, the only way that it can occur in $p(\boldsymbol{\x}_{E})$$q(\boldsymbol{\x}_{E'})$ is that $\boldsymbol{\x}^{E \cap R}$ occurs in $p(\boldsymbol{\x}_{E})$ and $\boldsymbol{\x}^{E' \cap R}$ occurs in $q(\boldsymbol{\x}_{E'})$. Let $A_{1}= E \cap R$, $A_{2} = E'\cap R$. Then $\# A_{1}= \mu_{1}$, $\# A_{2}=\mu_{2}$ and therefore, $A_{1}, A_{2}$ are both non-empty subsets of $A$. Now $\# A_{1} \cup A_{2} = \mu < v = \# A$. So there exists an $a \in A \smallsetminus A_{1} \cup A_{2}$. But $A=(E \cap A)\cup (E' \cap A)$. So either $a \in E \cap A$ or $a \in E' \cap A$. Consider the case when $a \in E \cap A$. There exists $a_{2} \in A_{2}$, Let $R_{1} = A_{1} \cup \{a\} \cup (A_{2} \smallsetminus \{a_{2}\})$. Then $R_{1} \subset A$, $\# R_{1} =\mu$. So $R_{1} \in \mathcal{R}$. By~\eqref{eq-3.79}, $\boldsymbol{\x}^{R_{1}}$ occurs in $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$.
+
+So as argued before for $R$, we have $\boldsymbol{\x}^{E \cap R_{1}}$ occurs in $p(\boldsymbol{\x}_{E})$. $\# E \cap R_{1} = \# A_{1} \cup \{a\} = \mu + 1$, a contradiction similarly, we can deal with the case, $a \in E' \cap A$ to arrive at a contradiction. Hence $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled.
+\end{proof}
+
+\section{Generalities, Analogies and Differences}
+
+The basic ideia of this section is to take $v \geq 2$ and a set $\boldsymbol{\Psi}$ of coverings of $\Gamma_{n} = \Gamma_{2v}$ with $s=\# \boldsymbol{\Psi} \geq 2$ as in ~\eqref{subsubsection-3.1.2}(e) but take a general convex combination or even a balanced convex combination of $| \psi \rangle$'s with $\psi$ in $\boldsymbol{\Psi}$ instead of just the arithmetic mean $| \boldsymbol{\Psi} \rangle = \sum_{\psi \in \boldsymbol{\Psi}} \frac{1}{\# \boldsymbol{\Psi}}| \psi \rangle$ and study its quantum entanglement properties via its polynomial representation. We define the corresponding concepts and obtain some analogies and some differences for the discussion and results in $????$, which we shall freely use.
+
+\subsection{Basic definitions and results}
+
+We begin with a definition.
+
+\begin{definition}\label{definition-4.1}
+Let $\alpha$ be a function on $\boldsymbol{\Psi}$ to $\vertchar[.08ex]{C} \smallsetminus \{0\}$ with $\sum\limits_{\psi \in \boldsymbol{\Psi}} |\alpha(\Psi)| =1$.
+\end{definition}
+\begin{enumerate}[label=(\roman*)]
+\item $| \alpha \rangle  = \sum\limits_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) | \psi \rangle$ will be called a \textbf{generalized RVB vector} in $\mathbf{H}$.
+
+\item If $\alpha$ is such that $| \alpha \rangle \neq 0$, then $| \widetilde{\alpha} \rangle = \frac{1}{|| |\alpha \rangle||} | \alpha \rangle$ will be called a \textbf{generalized RVB (pure) state}.
+
+\item For $S \subset \boldsymbol{\Psi}, | \alpha \rangle_{s} = \sum\limits_{\psi \in S} \alpha(\psi) | \psi \rangle$ will be called \textbf{S-generalized RVB Vector} in $\mathcal{H}$.
+
+\item For ????????? let $\alpha^{\#}(S)= \sum_{?????} \alpha(\psi)$, we shall denote?????????????????.
+
+\item $\alpha(\psi) > 0$ for all $\psi \in \boldsymbol{\Psi}$ if and only if $\hat{\alpha} =1$, and in this case $| \alpha \rangle$ will be called a \textbf{convex RVB Vector}.
+
+\item If $\hat{\alpha} =0$ then $| \alpha \rangle$ will be called a \textbf{conditional RVB Vector}, otherwise $| \alpha \rangle$ will be said to be \textbf{non-conditional RVB}.
+
+\end{enumerate}
+
+\begin{subsubsec}\label{subsubsection-4.1.1}
+
+We note a few facts about $\alpha^{\#}$ and set up useful notation for further use.
+
+\begin{enumerate}[label=(\alph*)]
+\item For any disjoint collection in $\{S_{j} : 1 \leq j \leq j_{0} \}$ of subsets of $\boldsymbol{\Psi}$,
+\begin{equation}
+\alpha^{\#} \left(\bigcup\limits_{j=1}^{j_{0}} S_{j} \right) = \sum\limits_{j=1}^{j_{0}} \alpha^{\#}(S_{j})\tag{4.1}\label{eq-4.1}
+\end{equation}
+
+\item For $\phi \neq S \subset \boldsymbol{\Psi}$, $\alpha^{\#}(S)=0$ implies that 
+\begin{equation}
+\# S \geq 2\tag{4.2}\label{eq-4.2}
+\end{equation}
+
+By convention (that empty sums are zero), $\alpha^{\#}(\phi)=0$ and $| \alpha \rangle_{\phi} =0$.
+
+\item Let $A_{1} \subset A$, $B_{1} \subset B$, Set $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\}$, $\{\psi(A_{1}) : \psi \in = \boldsymbol{\Psi} \} = \{B(A_{1, j}) : 1 \leq j \leq j_{A_{1}} \}$ with $B(A_{1,j})$'s all distinct and $\{\psi^{-1}(B_{1}) : \psi \in  \boldsymbol{\Psi}\} = \{A(B_{1}, k) : 1\leq k \leq k_{B_{1}}\}$ with $A(B_{1}, k)$'s all distinct. Then $\boldsymbol{\Psi}_{A_{1}, B_{1}} \neq \phi$ if and only if $B_{1} = B(A_{1, j})$ for some $j$ with $1 \leq j \leq j_{A_{1}}$, if and only if $A_{1} = A(B_{1, k})$ for some $k$ with $1 \leq k \leq k_{R}$. Moreover, $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \boldsymbol{\Psi}_{A \smallsetminus A_{1}, B \smallsetminus B_{1}}$ and $\boldsymbol{\Psi}$ is the disjoint union of non-empty sets $\boldsymbol{\Psi}_{A_{1}}, B(A_{1,j}), 1 \leq j \leq j_{A_{1}}$ and also $\boldsymbol{\Psi}_{A(B_{1}, k), B_{1}}, 1 \leq k \leq k_{R}$.
+
+??????????????????????? we write $\alpha(A_{1}, B_{1})$ for $\alpha^{\#}(\boldsymbol{\Psi}_{A_{1}, B_{1}})$. We have
+
+\end{enumerate}
+
+
+\end{subsubsec}
 
 \end{document}
