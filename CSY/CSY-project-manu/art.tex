@@ -1942,8 +1942,68 @@ Let $\boldsymbol{\Psi}, \alpha$ etc. be as in $??$\ref{subsection-4.1} with $| \
 \begin{subsubsec}
 \textbf{Matrix representation of vectors in $\mathcal{H}$ in the bipartite cut $(E, E')$}. We recall this well known concept in the way we like for further use together with a few results as well.
 \begin{enumerate}[label = (\alph*)]
-\item We arrange $P_{E}$ and $P_{E'}$ in any way we with. One way that will be useful is to arrange them in blockes according to their sizes with any order within the block. To eleborate, for $0 \leq j \leq n$, $0 \leq k \leq n_{2}$, let $P_{j}^{E} = \{K \subset E : \# K =j\}$ and $P_{k}^{E'} = \{L \subset E' : \# L =k\}$. Then $P_{n}= P_{E} \times P_{E'}= \bigcup\limits_{0 \leq j \leq n_{1}} P_{j}^{E} \times P_{k}^{E'}$ ?????? $???? \subset \Gamma_{n} \rightarrow (K=M \cap E')$. This permuts us to
+\item We arrange $P_{E}$ and $P_{E'}$ in any way we with. One way that will be useful is to arrange them in blockes according to their sizes with any order within the block. To eleborate, for $0 \leq j \leq n$, $0 \leq k \leq n_{2}$, let $P_{j}^{E} = \{K \subset E : \# K =j\}$ and $P_{k}^{E'} = \{L \subset E' : \# L =k\}$. Then $P_{n}= P_{E} \times P_{E'}= \bigcup\limits_{0 \leq j \leq n_{1}} P_{j}^{E} \times P_{k}^{E'}$ ?????? $???? \subset \Gamma_{n} \rightarrow (K=M \cap E')$. This permuts us to identity the polynomial $F(\boldsymbol{\x}) = \sum\limits_{M \subset \Gamma_{n}} a_{M} \boldsymbol{\x} \Gamma$ with 
+\begin{equation}
+\sum_{\substack{K \in P_{E},\\ L \in P_{}E'}} a_{K, L} \boldsymbol{\x}^{k} \boldsymbol{\x}^{L} +  \sum_{\substack{0 \leq j \leq n_{1} \\0 \leq k \leq n_{2}}} \left(\sum_{\substack{K \in P_{j}^{E},\\ L \in P_{k}^{E'}}} a_{K, L} \boldsymbol{\x}^{k} \boldsymbol{\x}^{L} \right)\tag{4.18}\label{eq-4.18}
+\end{equation}
+Which in turn gives rise to the corresponding matrix $G_{E} = [a_{K, L}]_{\substack{K \in P_{E}, L \in P_{E'}}}$, and the block matrix $G^{E} =[G_{jk}^{E}]_{\substack{0 \leq j \leq n_{1}\\ 0 \leq k \leq n_{2}}}$ with 
+\begin{equation}
+G_{jk}^{E}= [a_{K, L}]_{\substack{K \in p_{j}^{E}, L \in P_{k}^{E}}}, 0 \leq j \leq n_{1}, 0 \leq k \leq n_{2}\tag{4.19}\label{eq-4.19}
+\end{equation}
+Clearly $F \neq 0$ if and only if $G_{E} \neq 0$ if and only if $G_{j k}^{E} \neq 0$ for some $1 \leq j \leq n_{1}$, $1 \leq k \leq n_{2}$. Let $\xi_{F}$ be the vector represented by $F$.
+
+\item Suppose $\xi_{F}$ is a unit vector. Then\\ $||G_{E}|| = \max\{| \langle \x, \xi_{F} \rangle | : \x~~\text{is a unit product vector in the bipartite cut}~~(E, E')\}$. Further, $||G_{e}||=1$ if and only if $\xi_{F}$ is product vector in the bipartite cut $(E, E')$ if and only if rank $G_{E}=1$.
+
+\item It is immedeate from (b) above that unit vector $\xi_{F}$ is genuinely entangled if and only if $||G_{E}|| < 1 $ for $\phi \neq E \subset_{\neq} \Gamma_{n}$ if and only if rank $G_{E} \geq 2$ for $E$ with $\phi \neq E \subset_{\neq} \Gamma_{n}$.
+
+In this case, The \textbf{generalized geometric measure} (GGM, in short) of $\xi_{F}$ is given by 
+\begin{equation}
+1 -\max\substack{\phi \neq E \subset_{\neq}\Gamma_{n}}|| G_{E}||^{2}\tag{4.20}\label{eq-4.20}
+\end{equation} 
+
+\item Now suppose that $F$ is a non-zero homogeneous polynomial of degree $d \geq 2$, suppose $F = \Gamma_{n}$ By Theorem~\ref{thm-2.1}(iv), $\xi_{F}$ is a product vector in the bipartite cut $(E, E')$ if and only if $F(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E})q(\boldsymbol{\x}_{E'})$ for some polynomials $p$
+ and $q$ of degree $d_{1}$, and $d_{2}$ respectively with $1 \leq d_{1} < d$, $d_{2}=d-d_{1}$. In view of (b) above this is true of and only if for some $d_{1}, d_{2}$ with $1 \leq d_{1} < d$, $d_{2}=d-d_{1}$, $G_{jk} =0$ for $(j,k) \neq (d_{1}, d_{1})$ and $||G_{d_{1}, d_{2}}||=|| \xi_{F}||$ if and only if for some $d_{1}, d_{2}$ with $1 \leq d_{1} < d$, $d_{2}=d-d_{1}$, $G_{jk}=0$ for $(j,k) \neq (d_{1}, d_{2})$ and rank $G_{d_{1},d_{2}}=1$.
+ 
+ \item In case (d) happens, $G_{j~0} =0$ and $G_{0~k}=0$ for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$; in other words $F(\boldsymbol{\x})$ has no terms of the type $\lambda \boldsymbol{\x}^{k}$ or $\lambda \boldsymbol{\x}^{L}$ with non-zero scalar $\lambda$ and $L \subset E$ or $L \subset E'$.
+ 
+ \item Let $F$ be as in the first paragraph of (d) above. If it does not satisfy the conditions in (d) stated in the second paragraph of (d) for any $\phi \neq E \subset_{\neq} \Gamma_{n}$, then $\x_{F}$ is genuinely entangled.
+ 
+ \item It is clear from (d) and (e) above that we can limit our choice of the bipartite cuts $(E, E')$ for which of check the details. One such restriction in that for $\lambda\boldsymbol{\x}^{M}$ present in $F(\boldsymbol{\x})$ with $\lambda\neq 0$, we must have $K = M \cap E \neq \phi \neq M \cap E' =L$. 
+ 
+ Moreover it will be enough to take $0 \leq j \leq \min \{n_{1}, d\}$ and ??????
 
 \end{enumerate}
 \end{subsubsec}
+
+\begin{subsubsec}\label{subsubsection-4.2.2}
+\textbf{Quantum Entanglement of $\xi$ via matrix representation}. We apply~\eqref{subsubsection-4.2.1} to $\xi$ via $F_{\xi}(\boldsymbol{\x})$.
+\begin{enumerate}[label=(\alph*)]
+\item $F_{\xi}$ satisfies the conditions for $F$ in the first paragraph of~\eqref{sunsubsection-4.2.1} (d) with $d=v$, $n_{1} + n_{2} =n = 2v$ so either $n_{1}\leq v \leq n_{2}$ or $n_{2} \leq v \leq n_{1}$.
+
+In view of ~\eqref{subsubsection-4.2.1} (g), if $0 \neq \lambda \boldsymbol{\x}^{M}$ is part of $F_{\xi}(\boldsymbol{\x})$ for $M=L \subset E'$ in find fist case and $M = K \subset E$ in the second case, then $\xi$ is not a product vector in the bipartite cut $(E, E')$.
+
+\item We refer to ~\eqref{subsubsection-4.2.1} (a) and take $F= F_{\xi}$. For $K\subset E$, $L \subset E'$, $A_{1} \subset A$, $B_{1} \subset B$ $K cup L = A_{1} \cup (B \smallsetminus B_{1})$ if and only if $A_{1} = (K \cup L) \cap A$, $B_{1}= B \smallsetminus (K \cup L)\cap B$ if and only of $K =(E \cap A_{1}) \cup (E \cap (B\smallsetminus B_{1}))$, $L=(E' \cap A_{1})\cup (E' \cap (B \smallsetminus B_{1}))$. As a consequence, $E \smallsetminus K = (E \cap (A \smallsetminus A_{1})) \cup (E \cap B_{1})$, $E' \smallsetminus L = E' \cap (A \smallsetminus A_{1}) \cup (E' \cap B_{1})$. As a sample of applications \eqref{eq-4.3} gives.
+\begin{align*}
+a_{k L} &= (-1)^{\#(K \cup L)\cap A} \alpha \left((K \cup L) \cap A, B \smallsetminus (K \cup L) \cap B \right) = (-1)^{\# A_{1}} \alpha(A _{1}, B_{1})\\
+ & = (-1)^{v} (-1)^{\#} (A \smallsetminus (K \cup L) \cap A) \alpha (A \smallsetminus (K \cup L) \cap A), (K \cup L )\cap B)\\
+ & = (-1)^{v} a_{E \smallsetminus k, E' \smallsetminus L} \tag{4.21}\label{eq-4.21}
+\end{align*}
+
+\item It helps to make tha proofs and discussion shorter and transparent if we order $P_{j}^{E}$'s and $P_{k}^{E'}$'s in a convenient manner for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. We first note that the complementation maps $S \rightarrow E \smallsetminus S$ and $T \rightarrow E' \smallsetminus T$ set up one-to-one correspondence between $P_{j}^{E}$ and $P_{n_{\Gamma}j}^{E}$ and between $P_{k}^{E'}$ and $P_{n_{2}-k}^{E'}$ respectively for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. Indeed for $n_{1}$ even, say $n_{1}= 2v_{1}$, so is $n_{2}$ say $2v_{2}$ with $v_{2}= v-v_{1}$; and in this case, for $j=v_{1}$, $k=v_{2}$, we have $P_{j}^{E}= P_{n_{\Gamma}j}^{E}$ and $P_{k}^{E'} = P_{n_{2}=k}^{E'}$ and the complementation maps are only permutations order 2.
+
+\item For $0 \leq j < \frac{n_{1}}{2}$, $0 \leq k < \frac{n_{2}}{2}$, we order $P_{j}^{E}$ and $P_{k}^{E'}$ the way we like and then follow the order in $P_{n_{1}-j}^{E}$ and $P_{n_{2}-k}^{E'}$ dictated by the complementation maps. This permits as, in view of~\eqref{eq-4.21} in (b) above, to write
+\begin{equation}
+G_{j,k}^{E} = (-1)^{v} G_{n_{1}-j, n_{2}-k}^{E} \tag{4.22}\label{eq-4.22}
+\end{equation}
+
+\end{enumerate}
+
+\end{subsubsec}
+
+
+
+
+
+
+
 \end{document}
