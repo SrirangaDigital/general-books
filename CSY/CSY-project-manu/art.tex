@@ -1996,12 +1996,148 @@ a_{k L} &= (-1)^{\#(K \cup L)\cap A} \alpha \left((K \cup L) \cap A, B \smallset
 G_{j,k}^{E} = (-1)^{v} G_{n_{1}-j, n_{2}-k}^{E} \tag{4.22}\label{eq-4.22}
 \end{equation}
 
+\item If $n_{1}$ is old (equivalently, $n_{2}$ is odd), Then for $0 \leq j \leq n_{1}$ and $0 \leq k \leq n_{2}$ we have $(j,k) \neq (n_{1}-j, n_{2}-k)$ and therefore least two non-zero blocks of the form $G_{j,k}$ and $G_{n_{1}-j, n_{2}-k}$ for some $0\leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. 
+
+\item By \ref{subsubsection-4.2.1} (d), $\xi$ cannot be a product vector for the bipartite cut $(E, E')$ if $n_{1}$ is odd (equivalently, $n_{2}$ is odd) in view of $(e)$ above.
+
+\item Now suppose $n_{1}$ is even say $n_{1}=2v_{1}$ with $1 \leq v_{1} < v$. Then $n_{2}=2v_{2}$ with $v_{2}=v-v_{1}$.
+
+Consider any $k \in P_{v_{1}}^{E}$, $L \in P_{v_{2}}^{E'}$. Then $E \smallsetminus K \in P_{v_{1}}^{E}$ and $E'\smallsetminus L \in P_{v_{2}}^{E'}$. So after relabelling amongst these four, of the need be,
+\begin{equation*}
+M_{K_{1}~L} = 
+\begin{bmatrix}
+a_{k,E' \smallsetminus L} &  a_{E \smallsetminus k, E'\smallsetminus L}\\ 
+a_{k,L} & a_{E \smallsetminus K, L}\tag{4.23}\label{eq-4.23}
+\end{bmatrix}
+\end{equation*}
+is a 2 $\times$ 2-minor in $G_{v_{1}, v_{2}}^{E}$. By~\eqref{eq-4.21} we have $a_{E \smallsetminus K_{1}~L} = (-1)^{v} a_{K, E'\smallsetminus L}$ and therefore $M_{K, L}$ has the value $m_{K,L} = (-1)^{v} \left((a_{K, E' \smallsetminus L})^{2} - (a_{K, L})^{2} \right)$.
+
+Now suppose $\xi$ is a product vector in the bipartite cut $(E, E')$. Because of~\eqref{subsubsection-4.2.1}(d) and (e), we have $G_{j~k}^{E}=0$ for $(j,k) \neq (v_{1}, v_{2}) $, $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$ and $G_{v_{1}, v_{2}}^{E}$ has rank one. So for $(K, L) \in P_{v_{1}}^{E} \times P_{v_{2}}^{E'}$, we have $m_{K_{1}~L} = 0$, i.e., $a_{K, E'\smallsetminus L} \pm a_{K, L} $ and as a consequences, $M_{KL}= a_{KL}\begin{pmatrix}\pm 1 & (-1)^{v} \\ 1 & \pm (-1)^{v}\end{pmatrix}$. More over, as least one such ???????.
+
+\item We continue with the care that $n_{1}$ is even as in the item (g) above.
+
+Fix any $x\in E$. Let $P_{v_{1}, n}^{E} = \{K \in P_{v}^{E} : x\in K\}$ Then $\# P_{v_{1}, n}^{E} \subset ????_{v_{1}}^{2v_{1}} = ????$ say order $P_{v_{1}, x}^{E}$ in any manner that we like.
+
+The $P_{v_{1}}^{E} \smallsetminus P_{v_{1}, n}^{E} = \{K \in P_{v_{1}}^{E} : x \notin K\} = \{E \smallsetminus K : K \in P_{v_{1}, n}^{E}\}$.
+
+We order $P_{v}^{E} \smallsetminus P_{v_{1}, n}^{E}$ in the opposite order to that of $P_{v_{1}, n}^{E}$ dictated by the complementation map.
+
+Similar we for a $y \in E'$ and follow the procedure above above for $(E, n)$ for $(E', y)$. We put $C_{v_{1}}' = ^{2v_{2}}C_{v_{2}}$. 
+
+Now consider that matrix $G_{v_{1}, v_{2}}^{E}$ Then the 2 $\times$ 2 minors $M_{K,L}$ as in (g) above are placed symmetrically above the horizontal and vertical lines through the point $(C_{v_{1}} + \frac{1}{2}, C_{v_{2}} + \frac{1}{2})$ in the matrix. We call them symmetrical minors.
+
+A geometrical interpretation for (g) is that it $\xi$ is a product vector  in the bipartite cut $(E, E')$, then at least one such minor has non-zero entries, all of them have the form
+$$
+M_{K, L} = a_{K, L}\begin{bmatrix}\pm 1 & (-1)^{v}\\ 1 & \pm (-1)^{v} \end{bmatrix}, K \in P_{v_{1}}^{E}, L \in P_{v_{2}}^{E'}
+$$ 
+and $G_{j k}^{E}=0$ for $(j,k) \neq (v_{1}, v_{2})$.
+
+\item We consider the case when $E = A$ and $E'=B$ motivated by Example~\ref{example-4.2}. By~\eqref{subsubsection-4.2.1} (g) it is worth considering if and only if $\boldsymbol{\x}^{E}$ and $\boldsymbol{\x}^{E'}$ do not occur in $F_{\xi}(\boldsymbol{\x})$ if and only if $\hat{\alpha} =0$. so we consider the case when $\hat{\alpha}=0$.
+
+Next, by~\eqref{subsubsection-4.2.2} (f) $\xi$ is not a product vector in the bipartite cut $(E, E')$ if $v=2v_{1}$. Then $\xi$ is a product vector in the cut $(E, E')$ if and only if $G_{k}^{E}=0$ for $(j, k)\neq (v_{1}, v_{1})$ and $G_{v_{1}, v_{2}}$ has rank one we  
+
 \end{enumerate}
 
 \end{subsubsec}
 
+\begin{thm}\label{thm-4.2}
+Let $\alpha, \xi, F_{\xi}, E , G^{E}$ etc. be as above.
+\begin{enumerate}[label=(\roman*)]
+ \item If $\xi$ is a product vector in the bipartite cut $(E, E')$ then the following hold.
+\begin{enumerate}[label= (\alph*)]
+\item $n_{1}\# E$ is even, say $2v_{1}$, $n_{2}= \# E'$ is even, say=$2v_{2}$ with $1 \leq v_{1} < v$, $v_{2}= v-v_{1}$.
+
+\item If $0 \neq \lambda \boldsymbol{\x}M$ is a part of $F_{\xi}(\boldsymbol{\x})$ then $K = M \cap E \neq  \phi \neq M \cap E' = L$, say.
+
+\item $G_{jk} =0$ for $(j,k) \neq (v_{1}, v_{2})$.
+
+\item $||G_{v_{1}, v_{2}}^{E}||= |\xi |||$.
+
+\item $G_{v_{1}, v_{2}}^{E}$ has rank one.
+
+\item All symmetrical 2 $\times$ 2 minors have the form 
+$$
+M_{K, L} = a_{K L} \begin{bmatrix}\pm 1 & (-1)^{v}\\ 1  & \pm(-1)^{v} \end{bmatrix}
+$$
+and at least one $M_{K, L}$ is non-zero.
+\end{enumerate}
+
+\item Suppose $E$ is as in (i) (a) above If (i) (c) together with (i) (d) or with (i) (e) are satisfied then $\xi$ is a product vector in the bipartite cut $(E, E')$.
+
+\item If for each $E$ as in (i) (a) above, (i) (c) or (i) (d) or (i) (e) or (i) (f) is not satisfied then $\xi$ is genuinely entangled.
+
+\item $\xi$ is a product vector in the cut $(A, B)$ pf and only if the following hold.
+
+\begin{enumerate}[label= (\alph*)]
+\item $\hat{\alpha} = 0$.
+
+\item $v$ is even, say $v=2v_{1}$.
+
+\item For $0 \leq  \leq v$, $j \neq v_{1}$, $[\alpha(A_{1}, B_{1})]_{A_{1} \in P_{j}^{A}, B_{1}\in P_{j}^{B}}$ is zero.
+
+\item $[\alpha(A_{1}, B_{1})]$ ??????????????????? has rank one.
+
+\end{enumerate}
+
+ 
+\end{enumerate}
 
 
+
+\end{thm}
+
+\subsection{Quantum Entanglement of Generalized RVB States for Decomposable Sets of Coverings Via polynomial Representations}\label{subsection-4.3}
+
+Let $\boldsymbol{\Psi}$ be a set of coverings with $\# \boldsymbol{\Psi} \geq 2$ such that $\boldsymbol{\Psi}$ is decomposable  via $E$ for some $\phi \neq E \subset_{\neq} \Gamma_{n}$. In view of Theorem~\ref{thm-4.1} it is enough to confine our attention to $v \geq 4$ and $\boldsymbol{\Psi}$ neither flat nor a pole. We consider any $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C} \smallsetminus \{0\}$ with $| \alpha \neq  0$ try to find conditions under which $| \alpha \rangle$ is a product vector in the bipartite cut $(E, E')$ using the notation, terminology and results in ???? sections particularly $??$ 3.
+
+\begin{subsubsec}\label{subsubsection-4.3.1}
+We begin with ~\eqref{subsubsection-3.1.6} as it is. It will be convenient to consider $\xi = 2^{v/2} | \alpha \rangle$ which has same entanglement properties as $| \alpha \rangle $ and its polynomial representation $F_{\xi}(\boldsymbol{\x}) =2^{v/2}F_{\alpha}(\boldsymbol{\x})$. 
+\end{subsubsec}
+\begin{enumerate}[label=(\alph*)]
+\item Part (d) of~\eqref{subsubsection-3.1.6} undergoes obvious changes to give a modified version using~\eqref{subsubsection-4.1.2}, particularly ~\eqref{subsection-4.8} above to give
+\begin{align*}
+F_{\xi}(\boldsymbol{\x}) &= \hat{\alpha}\left(\boldsymbol{\x}^{B} + (-1) \boldsymbol{\x}^{A}\right)\\
+ & + \hat{\alpha}\left((-1)^{v_{1}} \boldsymbol{\x}^{E \cap A} \boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E \cap B} \boldsymbol{\x}^{E' \cap A}\right)\\
+ & + \left(\boldsymbol{\x}^{E \cap B} + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A}\right) \left(\sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) q_{\psi}^{0} (\boldsymbol{\x}_{E'}) \right)\\
+ & + \left(\sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) p_{\psi}^{0} (\boldsymbol{\x}_{E}) \right) \left(\boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E' \cap A} \right)\tag{4.25}\label{eq-4.25}
+\end{align*}
+
+We will utilize (3.29) in ~\eqref{subsubsection-3.1.6} (e) and compare it with (4.24) above to have that $F_{\xi}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ if and only if 
+\begin{equation}
+\beta\beta' = \hat{\alpha} = (-1)^{v} \delta \delta' = (-1)^{v_{1}} \delta\beta' = (-1)^{v_{2}} \delta' \beta\tag{4.26}\label{eq-4.26}
+\end{equation}
+
+\begin{equation}
+\beta q_{0} (\boldsymbol{\x}_{E'}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) q_{\psi}^{0} (\boldsymbol{\x}_{E'}) = (-1)^{v_{1}} \delta q_{\delta} (\boldsymbol{\x}_{E'})\tag{4.27}\label{eq-4.27}
+\end{equation}
+
+\begin{equation}
+\beta' p_{0} (\boldsymbol{\x}_{E}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) p_{\psi}^{0} (\boldsymbol{\x}_{E}) = (-1)^{v_{2}} \delta' p_{0} (\boldsymbol{\x}_{E})\tag{4.28}\label{eq-4.28}
+\end{equation}
+\begin{equation}
+\text{and}\quad p_{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) p_{\psi}^{0} (\boldsymbol{\x}_{E}) q_{\psi}^{0} (\boldsymbol{\x}_{E'})\tag{4.29}\label{eq-4.29}
+\end{equation}
+
+Let us first consider the case when (4.3.1) (b) does happen together with $\hat{\alpha} \neq 0$.
+
+By (4.26), $\delta = (-1)^{v_{1}}\beta$, $\delta' =(-1)^{v_{2}}\beta'$ are all non-zero. So we may take $\beta = \hat{\alpha}$, $\delta = (-1)^{v_{1}} \hat{\alpha}$, $\beta' =1$, $\delta' = (-1)^{v_{2}}$ and multiply $p_{0}(\boldsymbol{\x}_{E})$ and $q_{0}(\boldsymbol{\x}_{E'})$ by suitable scalars if the need be and retain the same notation for them. Than (4.27) and (4.28) give
+$$
+\hat{\alpha} q_{0} (\boldsymbol{\x}_{E'}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) q_{\psi}^{0}(\boldsymbol{\x}_{E'})
+$$
+$$
+\text{and}~~ p_{0} (\boldsymbol{\x}_{E}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) p_{\psi}^{0}(\boldsymbol{\x}_{E})
+$$
+
+This turns (4.29) into
+
+\begin{equation}
+\left(\sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) p_{\psi}^{0} (\boldsymbol{\x}_{E}) \right) \left(\sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) q_{\psi}^{0} (\boldsymbol{\x}_{E'}) \right) = \hat{\alpha} \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) p_{\psi}^{0} (\boldsymbol{\x}_{E}) q_{\psi}^{0} (\boldsymbol{\x}_{E'})\tag{4.30}\label{eq-4.30}
+\end{equation}
+
+\item Arguments in (c) can be reversed and Therefore for $\hat{\alpha} \neq 0$ we call (4.30) the Master Equation for $F_{\xi}(\boldsymbol{\x})$ to be expressible as product of some polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$. WE emphasize just as in (3.1.6) (a), that for $\hat{\alpha} \neq 0$, Master Equation does not involve $p(\boldsymbol{\x}_{E})$ or $q(\boldsymbol{\x}_{E'})$ and, in fact, they are determined in an explicit way as explained in (a) above Moreover, it is an equivalent condition for $\xi$ to be a product vector in the bipartite cut $(E, E')$.
+
+\item We could also have analogues of (3.37) and (3.38)  by replacing $\# T_{j}$ by $\alpha^{\#}(T_{j}) =\sum_{k \in T_{j}} \alpha (\psi_{j}^{E} \times \psi_{k}^{e})$, $\# S_{k}$ by $\alpha^{\#}(S_{k}) =\sum_{jn\in S_{k}} \alpha (\psi_{j}^{E} \times \psi_{k}^{E'})$, $s$ by $\hat{\alpha}$. However, these Master Equations have restricted applications compared to when it comes to developing Master Equations.
+\end{enumerate}
 
 
 
