@@ -2137,9 +2137,237 @@ This turns (4.29) into
 \item Arguments in (c) can be reversed and Therefore for $\hat{\alpha} \neq 0$ we call (4.30) the Master Equation for $F_{\xi}(\boldsymbol{\x})$ to be expressible as product of some polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$. WE emphasize just as in (3.1.6) (a), that for $\hat{\alpha} \neq 0$, Master Equation does not involve $p(\boldsymbol{\x}_{E})$ or $q(\boldsymbol{\x}_{E'})$ and, in fact, they are determined in an explicit way as explained in (a) above Moreover, it is an equivalent condition for $\xi$ to be a product vector in the bipartite cut $(E, E')$.
 
 \item We could also have analogues of (3.37) and (3.38)  by replacing $\# T_{j}$ by $\alpha^{\#}(T_{j}) =\sum_{k \in T_{j}} \alpha (\psi_{j}^{E} \times \psi_{k}^{e})$, $\# S_{k}$ by $\alpha^{\#}(S_{k}) =\sum_{jn\in S_{k}} \alpha (\psi_{j}^{E} \times \psi_{k}^{E'})$, $s$ by $\hat{\alpha}$. However, these Master Equations have restricted applications compared to when it comes to developing Master Equations.
+
+\item We note the simplified versions of certain polynomilas in (4.27) to (4.30) in terms of $p_{j}^{0}(\boldsymbol{\x}_{E})=p_{\psi^{E}_{j}}^{0}(\boldsymbol{\x}_{E})$, $q_{k}^{0}(\boldsymbol{\x}_{E'}) = q_{\psi^{E'}_{k}}^{0}(\boldsymbol{\x}_{E'})$, $1 \leq j \leq j'$, $1 \leq k \leq k'$ for record and further use regardless of $\hat{\alpha} \neq  0$ or $\hat{\alpha}=0$. 
+\begin{equation}
+P_{\alpha}^{0}(\boldsymbol{\x}_{E}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) p_{\psi}^{0}(\boldsymbol{\x}_{E}) = \sum_{j=1}^{j'} \alpha^{\#} (T_{j}) p_{j}^{0}(\boldsymbol{\x}_{E})\tag{4.31}\label{eq-4.31}
+\end{equation}
+\begin{equation}
+q_{\alpha}^{0}(\boldsymbol{\x}_{E'}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) q_{\psi}^{0}(\boldsymbol{\x}_{E'}) =\sum_{k=1}^{k'} \alpha^{\#}(S_{k}) q_{k}^{0} (\boldsymbol{\x}_{E'})\tag{4.32}\label{eq-4.32}
+\end{equation}
+\begin{align*}
+F_{\alpha}^{0}(\boldsymbol{\x}) &= \sum_{\psi \in \boldsymbol{\Psi}}\alpha (\psi) p_{\psi}^{0}(\boldsymbol{\x}_{E}) q_{\psi}^{0}(\boldsymbol{\x}_{E'}) = \sum_{j=1}^{j'} p_{j}^{0}(\boldsymbol{\x}_{E}) \left(\sum_{k \in T_{j}} \alpha(\psi_{j}^{E} \times \psi_{k}^{E'}) q_{k}^{0}(\boldsymbol{\x}_{E'})\right)\\
+& = \sum_{k=1}^{k'} \left(\sum_{j} \in S_{k} \alpha (\psi_{j}^{E} \times \psi_{k}^{E'}) p_{j}^{0} (\boldsymbol{\x}_{E})\right) q_{k}^{0}(\boldsymbol{\x}_{E'})\tag{4.33}\label{eq-4.33}
+\end{align*} 
+and also note that
+\begin{equation}
+\hat{\alpha} = \sum_{j=1}^{j} \alpha^{\#}(T_{j}) = \sum_{k=1}^{k'} \alpha^{\#}(S_{k})\tag{4.34}\label{eq-4.34}
+\end{equation}
+
+So (4.30) taken two equivalent forms analagons to (3.37) and (3.38).
+
+(4.3.3) We now come to the case that (b) does happen together with $\hat{\alpha} =0$. we will use the notation and equations set up above, particularly in (4.3.2) (c) for the sake of convenience 
+\begin{enumerate}[label=(\alph*)]
+\item We see that
+\begin{align*}
+F_{\xi}(\boldsymbol{\x})& = \left(\boldsymbol{\x}^{E \cap B}  + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A}\right) q_{\alpha}^{0} (\boldsymbol{\x}_{E})\\
+ &\qquad + p_{\alpha}^{0} (\boldsymbol{\x}_{E}) (\boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E' \cap A}) + F_{\alpha}^{0}(\boldsymbol{\x})\tag{4.35}\label{eq-4.35}
+\end{align*}
+ Next, (4.33) take the form
+ \begin{equation}
+ \beta\beta' = 0 = \delta\delta' = \delta \beta' = \delta'\beta\tag{4.36}\label{eq-4.36}
+ \end{equation}
+
+The trivial solution $\beta = \delta = \beta' = \delta' = 0$ turns  (4.27) and (4.28) into $q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) = 0$ and $p_{\alpha}^{0}(\boldsymbol{\x}_{E})=0$ respectively. This forces $F_{\xi}(\boldsymbol{\x})$ as in (4.28) reduce to $F_{\alpha}^{0}(\boldsymbol{\x})$ which has to be non-zero. So (4.29) persists as
+\begin{equation}
+0 \neq p_{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'}) = F_{\alpha}^{0}(\boldsymbol{\x})\tag{4.37}\label{eq-4.37}
+\end{equation}
+
+Which is not really helpful to reduce the task.
+
+\item So we have two subcases to look into, viz, $(\beta, \delta) =(0,0) \neq (\beta', \delta')$ and $(\beta', \delta') = (0,0) \neq (\beta, \delta)$. They are similar in the sense that we have essentially to the other. Let $p$'s with $q'$ s to get from one to the other. Let us consider the subcase $(\beta, \delta) =(0,0) \neq (\beta', \delta')$. Because of $(\beta, \delta) = (0,0)$, (4.37) becomes 
+\begin{equation}
+q_{\alpha}^{0}(\boldsymbol{\x}_{E'})= 0\tag{4.38}\label{eq-4.38}
+\end{equation}  
+
+Let, of possible, $p_{0}(\boldsymbol{\x}_{E})=0$. Then (4.28) gives that $p_{0}(\boldsymbol{\x}_{E})=0 = p_{\alpha}^{0}(\boldsymbol{\x}_{E})$. But that forces $F_{\alpha}^{0}(\boldsymbol{\x})=0$ in view of (4.29), which in turn gives $F_{\xi}(\boldsymbol{\x})=0$ ??????
+
+Consequence, $p_{0}(\boldsymbol{\x}_{E}) \neq  0$. This combined with $(\beta', \delta') \neq (0,0)$ and (4.28) renders 
+\begin{equation}
+\beta'=(-1)^{v_{2}} \delta' \neq 0, ~~p_{0}(\boldsymbol{\x}_{E}) = \frac{1}{\beta'} p_{\alpha}^{0}(\boldsymbol{\x}_{E}) \neq 0\tag{4.39}\label{eq-4.39}
+\end{equation} 
+
+This turns (4.22) into
+\begin{equation}
+p_{\alpha}^{0} (\boldsymbol{\x}_{E}) \left(\frac{1}{\beta'} q_{0} (\boldsymbol{\x}_{E'}) \right) = F_{\alpha}^{0}(\boldsymbol{\x})\tag{4.40}\label{eq-4.40}
+\end{equation}
+
+On the other hand, $(\beta', \delta') = (0,0) \neq (\beta, \delta)$ We obtain the following counter parts of (4.31) to (4.33).
+
+\begin{align*}
+&p_{\alpha}^{0} (\boldsymbol{\x}_{E}) = 0\tag{4.41}\label{eq-4.41}\\
+\beta &= (-1)^{v_{1}} \delta \neq 0, \quad q_{0}(\boldsymbol{\x}_{E'}) = \frac{1}{\beta} ~~q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) \neq 0\tag{4.42}\label{eq-4.42}\\
+&\left(\frac{1}{\beta} p_{0}(\boldsymbol{\x}_{E}) \right)~~q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) = F_{\alpha}^{0}(\boldsymbol{\x})\tag{4.43}\label{eq-4.43}
+\end{align*} 
+
+\item The arguments (g) can be reversed, by but the equation (4.40) and (4.41) do leave the task of determining $q_{0}(\boldsymbol{\x}_{E'})$ and $p_{0}(\boldsymbol{\x}_{E})$  respectively while checking their validity. We can simplify them a bit by incorportating the constant $\frac{1}{\beta'}$ and $\frac{1}{\beta}$ with $q_{0}(\boldsymbol{\x}_{E'})$ and $p_{0}(\boldsymbol{\x}_{E})$ respectively.
+
+We write the final outcome in a consolidated form as a Theorem and leave in to the reader to formulate further analogues of Theorems and discussion etc.
+\end{enumerate}
+\end{enumerate}
+
+\begin{thm}\label{thm-4.3}
+Let $\boldsymbol{\Psi}$, $\alpha$, $\xi$ etc. be as in the beging paragrapha of $??$ 4.2.
+
+$\xi$ is a product vector in the bipartite cut $(E, E')$ if and only if the Master Equations listed case-wise hold.
+\begin{enumerate}[label = (\roman*)]
+\item \textbf{ME1} or ${\boldsymbol{\hat{\alpha} \neq 0}}$.
+
+$p_{\alpha}^{0}(\boldsymbol{\x}_{E}) ~~q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) = \hat{\alpha} F_{\alpha}^{0} (\boldsymbol{\x})$, i.e.,
+\begin{equation}
+\left(\sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi)p_{\psi}^{0} (\boldsymbol{\x}_{E})\right) \left(\sum_{\psi \in \boldsymbol{\Psi}}  q_{\psi}^{0} (\boldsymbol{\x}_{E'})\right) = \hat{\alpha} \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) p_{\psi}^{0} (\boldsymbol{\x}_{E}) q_{\psi}^{0}(\boldsymbol{\x}_{E'})\tag{4.44}\label{eq-4.44}
+\end{equation}
+In this case, $F_{\xi}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ with
+\begin{align*}
+p(\boldsymbol{\x}_{E}) &= \hat{\alpha} \left(\boldsymbol{\x}^{E \cap B} + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A} \right) + p_{\alpha}^{0}(\boldsymbol{\x}_{E})\\
+q(\boldsymbol{\x}_{E'}) &= \boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E' \cap A} + \frac{1}{\alpha} q_{\alpha}^{0} (\boldsymbol{\x}_{E'})\tag{4.45}\label{eq-4.45}
+\end{align*}
+
+\item \textbf{Trichotomy} for ME for $\hat{\alpha} = 0$ one and only one if the following hold.
+
+\textbf{ME(a)} $p_{\alpha}^{0} (\boldsymbol{\x}_{E}) = 0$, $q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) = 0$
+\begin{equation}
+0 \neq p_{0} (\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'}) = F_{\alpha}^{0} (\boldsymbol{\x}) = F_{\xi}(\boldsymbol{\x})\tag{4.46}\label{eq-4.46}
+\end{equation}
+for some polynomials $p_{0}$ and $q_{0}$ (with $\boldsymbol{\x}^{E \cap A}$) and $\boldsymbol{\x}^{E \cap B}$ not occurring in $p_{0}(\boldsymbol{\x}_{E})$ and $\boldsymbol{\x}^{E \cap A}$ and $\boldsymbol{\x}^{E' \cap B}$ not occurring in $q_{0}(\boldsymbol{\x}_{E'})$
+
+\textbf{ME(b)} $q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) = 0$, $p_{\alpha}^{0}(\boldsymbol{\x}_{E}) \neq 0$,
+\begin{equation}
+p_{\alpha}^{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'}) = F_{\alpha}^{0} (\boldsymbol{\x}) \tag{4.47}\label{eq-4.47}
+\end{equation}
+for some polynomial $q_{0}$ (with $\boldsymbol{\x}^{E' \cap B}$ and $\boldsymbol{\x}^{E' \cap A}$ not occurring in $q_{0}(\boldsymbol{\x}_{E'})$).
+
+In this case, \begin{equation}F_{\xi}(\boldsymbol{\x}) = p_{\alpha}^{0} (\boldsymbol{\x}_{E'}) \left(\boldsymbol{\x}^{E' \cap B} + (-1)^{v_{2}} \boldsymbol{\x}^{E' \cap A}  + q_{0} (\boldsymbol{\x}_{E'})\right)\tag{4.48}\label{eq-4.48}\end{equation}
+
+\textbf{ME(c)} $p_{\alpha}^{0} (\boldsymbol{\x}_{E})= 0$, $q_{\alpha}^{0} (\boldsymbol{\x}_{E'}) \neq 0$,
+\begin{equation}
+p_{0}(\boldsymbol{\x}_{E}) q_{\alpha}^{0}(\boldsymbol{\x}_{E'}) = F_{\alpha}^{0}(\boldsymbol{\x})\tag{4.49}\label{eq-4.49}
+\end{equation} 
+for some polynomial $p_{0}$ (with $\boldsymbol{\x}^{E \cap B}$ and $\boldsymbol{\x}^{E \cap A}$) not occurring in $p_{0}(\boldsymbol{\x}_{E})$.
+
+In this case, 
+\begin{equation}
+F_{\xi}(\boldsymbol{\x}) = \left(\boldsymbol{\x}^{E \cap B} + (-1)^{v_{1}} \boldsymbol{\x}^{E \cap A} + p_{0} (\boldsymbol{\x}_{E}) \right) q_{\alpha}^{0}(\boldsymbol{\x}_{E'})\tag{4.50} \label{eq-4.50}
+\end{equation}
+
+\end{enumerate}
+
+\end{thm}
+
+\subsection{Quantum Entanglement of Generalized doped RVB States}\label{subsection-4.4}
+
+We proceed as in $??$ 3.2 and note that the difference starts only from 3.2.1 (i) onward and $\# \boldsymbol{\Psi} \geq 2$.
+
+\begin{subsubsec}\label{subsubsection-4.4.1}
+\textbf{The concept}. Let $\boldsymbol{\Psi}$ be a set of coverings of the $\# \boldsymbol{\Psi} \geq 2$, $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C} \smallsetminus \{0\}$ with $\sum_{\psi in \boldsymbol{\Psi}} |\alpha (\psi)|= 1$ as in $??$ 4.1. Let $1 \leq r \leq v$ and $\mu = v r$ as in $??$ 3.2.
+\begin{enumerate}[label = (\alph*)]
+\item The \textbf{generalized RVB Vector with $\gamma$ holes} is $| \alpha \rangle_{h} = \sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) | \psi \rangle_{h}$, where $| \psi \rangle_{h}$ is as in 3.2.1 (e) with polynomial representation $F_{\psi}^{h}(\boldsymbol{\x})$ as in 3.2.1 $(\psi)$, viz, (3.75).
+
+\item The polynomial representation of $| \alpha \rangle_{h}$ is given by modifying (3.77) to (3.80) accordingly. To begin with, 
+\begin{equation}
+F_{\alpha}^{h}(\boldsymbol{\x}) = \hat{\alpha} F^{hi}(\boldsymbol{\x}) + \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) F_{\psi}^{hd}(\boldsymbol{\x})\tag{4.51}\label{eq-4.51}
+\end{equation}
+ 
+So $F_{\alpha}^{h}(\boldsymbol{\x})$ is a homogeneous polynomial of degree $\mu$.
+ 
+\item Let $\mu=1$ then 
+\begin{equation}
+F_{\alpha}^{h}(\boldsymbol{\x}) = \hat{\alpha} F^{hc}(\boldsymbol{\x})=\frac{1}{\sqrt{\#\mathcal{R}}} 2^{-M/2} \hat{\alpha} \left(\sum_{S \in s} \boldsymbol{\x}^{s} + (-1) \sum_{R \in \mathcal{R}} \x^{R} \right)\tag{4.52}\label{eq-4.52} 
+\end{equation}
+
+so $F_{\alpha}^{h}(\boldsymbol{\x}) \neq 0$ if and only if $\hat{\alpha} \neq 0$. So for $\hat{\alpha} \neq 0$. we have $F_{\alpha}^{h}(\boldsymbol{\x})$ is a ??????? degree 1 with supp ????? to $\Gamma_{n}$. We note that for Example 4.2 (a), $| \alpha \rangle_{h}=0$. 
+
+\item Now suppose that $\mu \geq 2$. This forces $v \geq 3$. As in 3.2.1 (j), let for $\phi \neq A \subset_{\neq} A$, $\phi \neq B_{2} \subset_{\neq B}$ with $\# A_{1} + \# B_{2} = \mu$, $\boldsymbol{\Psi}_{A_{1}, B_{2}}^{h} = \{\psi \in \boldsymbol{\Psi} : \psi (A_{1}) \cap B_{2} = \phi\}$. We now set $\varpi^{\alpha} (A_{1}, B_{2}) = \alpha^{\#}\left(\boldsymbol{\Psi}_{A_{1}, B_{2}}^{h}\right)$. We write $A_{1} \varphi^{\alpha} B_{2}$ to mean that $\varphi^{\alpha}(A_{1}, B_{2}) \neq 0$. Then we obtain an analogue of (3.78) with $F_{\boldsymbol{\Psi}}^{hd}(\boldsymbol{\x})$ replaced by $F_{\alpha}^{hd}(\boldsymbol{\x}) = \sum_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) F_{\psi}^{hd}(\boldsymbol{\x})$ occurring in (4.51) above, $\varphi (A_{1}, B_{2})$ by $\varphi^{\alpha}(A_{1}, B_{2})$ and $A_{1} \varphi B_{2}$ by $A_{1}, \varphi^{\alpha} B_{2}$.
+
+We write the analoge of (3.79) in full as
+\begin{align*}
+F_{\alpha}^{h} (\boldsymbol{\x}) &= \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \left( \left(\sum_{S \in s} \boldsymbol{\x}^{s} + \sum_{R \in \mathcal{R}} (-1)^{\mu} \boldsymbol{\x}^{R} \right) +\right.\\
+&\quad\sum \left\{(-1)^{\mu_{1}} \varphi^{\alpha} (A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}} : \# A_{1}= \mu, \# B_{2} = \mu-\mu_{1}, A_{1} \varphi^{\alpha} B_{2},\right.\\
+ &\quad\left.\left. 1 \leq \mu_{1} \leq \mu-1\right\} \right)\tag{4.53}\label{eq-4.53}\\ 
+\end{align*}
+ 
+So $| \alpha \rangle_{h} =0$ if and only if $F_{\alpha}^{h} (\boldsymbol{\x})=0$ if and only if $\hat{\alpha}=0$ and $\varphi^{\alpha}(A_{1}, B_{2}) =0$ for $A_{1} \subset A$, $B_{1} \subset B$ with $\# A_{1}= \mu_{1}$, $\# B_{2}=\mu-\mu_{1}$, $ 1 \leq \mu_{1} \leq \mu-1$. 
+
+In other words, $| \alpha \rangle_{h} \neq 0$ if and only of either $\hat{\alpha} \neq $ or $\varphi^{\alpha}(A_{1}, B_{2}) \neq 0$ for some $A_{1}\subset A$, $B_{2}\subset B$ with $\# A_{1} = \mu_{1}$, $\# B_{2} = \mu-\mu_{1}$ for some $1 \leq \mu_{1} \leq \mu-1$.
+
+\item For the case $\mu \geq 2$ as in (d) above
+
+\begin{align*}
+|| | \alpha \rangle_{h} ||^{2} &= 2^{-\mu} \left(2| \hat{\alpha} |^{2} \right.+ \sum \left\{ | \varphi^{\alpha}(A_{1}, B_{2}) |^{2}/\#\mathcal{R} : \# A_{1} = \mu_{1},\right.\\ 
+&\left. \left.\# B_{2} = \mu-\mu_{1}, A_{1} \varphi^{\alpha} B_{2}, 1 \leq \mu_{1} \leq \mu-1 \right\}\right)\tag{4.54}\label{eq-4.54}
+\end{align*}
+  
+So in case $| \alpha \rangle_{h} \neq 0$ as specified in (d) above, we may ??????????????? by replacing it by  $| \alpha \rangle_{h}^{\sim} = \frac{1}{|| | \alpha \rangle_{h} ||} | \alpha \rangle_{h}$ to  
+\end{enumerate}
+
+\end{subsubsec}
+
+\begin{thm}\label{thm-4.4}
+If $\hat{\alpha} \neq 0$, then $| \alpha \rangle_{h}^{\sim}$ is genuinely entangled.
+\end{thm}
+
+\begin{proof}
+It follows on the lines of that of Theorem~\ref{thm-3.9}.
+\end{proof}
+
+\begin{subsubsec}\label{subsubsection-4.4.2}
+\textbf{Case $\boldsymbol{\alpha} =0$}. We have already noted in (4.4.1) (c) that $| \alpha \rangle_{h} = 0$ for Example 4.2(a) and indeed foe the subcase $\mu=1$ for any general situation as well.
+
+Now suppose $\mu \geq 2$ and $| \alpha \rangle_{h} \neq 0$. This foces $v \geq 3$.
+
+\end{subsubsec}
+
+\begin{enumerate}[label=(\alph*)]
+
+\item By (4.53)
+
+\begin{align*}
+F_{\alpha}^{h}(\boldsymbol{\x}) &= \sum (-1)^{\mu} \omega^{\alpha}(A_{1}, B_{2}) \boldsymbol{\x}^{a_{1}} \boldsymbol{\x}^{B_{2}} : \# A_{1} = \mu_{1}, \# B_{2} = \mu-\mu_{1},\\
+&\quad A_{1}\omega^{\alpha} B_{2}, 1 \leq \mu_{1} \leq \mu-1\tag{4.55}\label{eq-4.55} 
+\end{align*}
+
+\item If $S_{F^{h}_{\alpha}} \neq \Gamma_{n}$ or $\x_{j}$ is a factor of $F_{\alpha}^{h}(\boldsymbol{\x})$ then $F_{h}^{\alpha}$ is a product vector in some bipartite cut and therefore, $| \alpha \rangle_{h}$ is not genuinely entangled. 
+
+\item Now suppose $S_{F_{\alpha}^{h}}= \Gamma_{n}$ and no $\x_{j}$ is a factor of $F_{\alpha}^{h}(\boldsymbol{\x})$. We can carry out the discussion as in per??? sections to study quantum entanglement properties of $| \alpha \rangle_{h}$.
+
+Because $\# A_{1} + \# B_{2} = \mu$ for $A_{1}$, $B_{2}$ occurring in (4.55) and $2\mu \leq 2v-2 < n = \# \Gamma_{n}$, we have at least three terms in (4.55), i.e., there exist there distinct $(A_{1}^{\mu}, B_{2}^{\mu})$, $\mu= 1,2,3$.
+\end{enumerate}
+
+\begin{subsubsec}\label{subsubsection-4.4.3}
+The case $\hat{\alpha} = 0$, $\mu = 2$, $v \geq 3$ is rather simple. We consider the case $| \alpha \rangle_{h} \neq 0$ and let $t$ be the number of terms in $F_{\alpha}^{h}(\boldsymbol{\x})$.
+\end{subsubsec}
+\begin{enumerate}[label=(\alph*)]
+\item By (4.53), we have 
+\begin{equation}
+F_{\alpha}^{h}(\boldsymbol{\x}) = - \sum_{\substack{a \in A}, b \in B} \omega^{\alpha} (\{a\}, \{b\}) \boldsymbol{\x}^{a} \boldsymbol{\x}^{b}\tag{4.56}\label{eq-4.56}
+\end{equation}
+
+\item For $a \in A$, $b \in B$, $a \in S_{F_{\alpha}^{h}}$ if and only if for some $b_{a} \in B$, $\varpi^{\alpha}(\{a\}, \{b_{a}\})\neq 0$ whereas $b \in S_{F_{\alpha}^{h}}$ if and only if for some $a_{b} \in B$, $\omega^{\alpha}(\{a_{b}\}, \{b\}) \neq 0$.
+
+As a consequence, $S_{F_{\alpha}^{h}} = \Gamma_{n}$ only if $t \geq v$ and is so if $t \geq v(v-1) + 1$.
+
+\item For $a in A$, $b \in B$, $\boldsymbol{\x}^{a}$ is a factor of $F_{\alpha}^{h}(\boldsymbol{\x})$ if and only if $S_{F_{\alpha}^{h}} \cap A = \{a\}$ where as $\boldsymbol{\x}^{b}$ is a factor of $F_{\alpha}^{h}(\boldsymbol{\x})$ in care $K \subset A$ or $K \subset B$ whereas for $K =\{a, b\}$ for some $a \in A$, $b \in B$, $\boldsymbol{\x}^{k}$ is a factor of $F_{\alpha}^{h}(\boldsymbol{\x})$ if and only if $t=1$ and $F_{\alpha}^{h}(\boldsymbol{\x}) = -\varpi^{\alpha} (\{a\}, \{b\}) \boldsymbol{\x^{k}}$.
+
+\item It follow from (b) and (c) that if $S_{F_{\alpha}^{h}} = \Gamma_{n}$ then no $\boldsymbol{\x}^{k}$ is a factor of $F_{\alpha}^{h}(\boldsymbol{\x})$ for $\phi \neq K \subset_{\neq } \Gamma_{n}$.
+
+\item Suppose $S_{F_{\alpha}^{h}} = \Gamma_{n}$. Then $| \alpha \rangle_{h}$ is a product vector in some bipartite cut $(E, E')$ if and only if $(E, E') = (A, B)$ or $(B, A)$ and for  some tupler $(\alpha_{a})_{a \in A} $ and $(\beta_{b})_{b \in B}$ of non-zero scalars, 
+\begin{equation}
+F_{\alpha}^{h}(\boldsymbol{\x}) = \left(\sum_{a \in A} \alpha_{a} \boldsymbol{\x}^{a} \right) \left(\sum_{b \in B} \beta_{b} \boldsymbol{\x}^{b}\right)~~\text{i.e.,}~~ \omega^{\alpha} (\{a\}, \{b\}) = -\alpha_{a}\beta_{b}~~\text{for}~~a\in A , b \in B\tag{4.57}\label{eq-4.57}
+\end{equation}
+
+In this case
+\begin{equation}
+t = \# A \# B =v^{2} \tag{4.58}\label{eq-4.58}
+\end{equation}
+
+\item $| \alpha \rangle_{h}$ is gonuinely entangled if and only if $S_{F_{\alpha}^{h}} = \Gamma_{n}$ and (4.57) does not hold. 
+
+In particular, of $S_{F_{\alpha}^{h}} = \Gamma_{n}$ and $t < v^{2}$, then $| \alpha \rangle_{h}$ is genuinely entangled, whereas if $t < v$, then $| \alpha \rangle_{h}$ is not genuinely entangled.
 \end{enumerate}
 
 
+\section{Acknowledgement}
 
+The work began when Ajit Iqbal Singh Visited the Quantum Information end competition Group at Harish-Chandra Institute (HRI) Allhabal (Prayagraj) in 2015 and it has been continued by subsequent visits and emails. She thanks Aditi Sen(De), Ujjwal Sen and The Director of HRI for their kind hospitaluty. She would also to thank G. Baskaran for his insight full discussion on the tipie at The Institute of Mathematical Sciences in  Chennai and his encouragement. It is pleasure for her to tank Richard Josza, Gerardo Adesso and their research groups at Cambridge and Nottingham respectively for their kind hospitality and interesting discussion sessions she thanks The Indian National Science Academy for its continuous support. Authors thank M/S Sriranga Documentations for the Latex typing of the paper. 
 
 \end{document}
