@@ -859,20 +859,22 @@ F_{\overline{\boldsymbol{\Psi}}}(\boldsymbol{\x}) &= \sum_{\Psi \in \overline{\b
 
 \item Consider homogeneous polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$ of degrees $v_{1}$ and $v_{2}$ respectively. They have the form
 $p(\boldsymbol{\x}_{E}) = \delta \boldsymbol{\x}^{E \cap A} + \beta\boldsymbol{\x}^{E \cap B} + p_{0}(\boldsymbol{\x}_{E})$ with
-\begin{equation}
-p_{0}(\boldsymbol{\x_{E}}) = \sum\left\{\delta_{A_{1}, B_{1}} \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{E \cap B \smallsetminus B_{1}} : \phi \neq A_{1 \neq} \subset E \cap A, \phi \neq B_{1 \neq} \subset E \cap B, \# A_{1}= \# B_{1}\right\}\tag{3.27}\label{eq-3.27} 
-\end{equation}
+\begin{align*}
+p_{0}(\boldsymbol{\x_{E}}) &= \sum\left\{\delta_{A_{1}, B_{1}} \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{E \cap B \smallsetminus B_{1}} : \phi \neq A_{1 \neq} \subset E \cap A, \phi \neq B_{1 \neq} \subset E \cap B,\right.\\
+&\left.\hspace{4cm} \# A_{1}= \# B_{1}\right\}\tag{3.27}\label{eq-3.27} 
+\end{align*}
 
-and $q(\boldsymbol{\x}_{E'}) = \delta^{1} \boldsymbol{\x}^{E' \cap A} + \beta^{1} \boldsymbol{\x}^{E' \cap B} + q_{0}(\boldsymbol{\x}_{E'})$ with
-\begin{equation}
-q_{0}(\boldsymbol{\x}_{E'}) = \sum \left\{\delta'_{A_{1}, B_{2}} \boldsymbol{\x}^{A_{2}} \boldsymbol{\x}^{E' \cap B \smallsetminus B_{2}} : \phi \neq A_{2 \neq} \subset E' \cap A, \phi \neq B_{2 \neq} \subset E' \cap B, \# A_{2} = \# B_{2}\right\}\tag{3.28}
-\end{equation}
+and $q(\boldsymbol{\x}_{E'}) = \delta' \boldsymbol{\x}^{E' \cap A} + \beta' \boldsymbol{\x}^{E' \cap B} + q_{0}(\boldsymbol{\x}_{E'})$ with
+\begin{align*}
+q_{0}(\boldsymbol{\x}_{E'}) &= \sum \left\{\delta'_{A_{2}, B_{2}} \boldsymbol{\x}^{A_{2}} \boldsymbol{\x}^{E' \cap B \smallsetminus B_{2}} : \phi \neq A_{2 \neq} \subset E' \cap A, \phi \neq B_{2 \neq} \subset E' \cap B,\right.\\ 
+ &\left.\hspace{4cm}\qquad\qquad\# A_{2} = \# B_{2}\right\}\tag{3.28}
+\end{align*}
 
-where $\delta, \beta, \delta', \delta{'}, \beta_{'}, \delta_{A_{1}, B_{1}}$ are all scalars.
+where $\delta, \beta, \delta', \delta{'}, \beta', \delta_{A_{1}A_{2}, B_{1}B_{2}}$ are all scalars.
 
 So
 \begin{align*}
-p(\boldsymbol{\x}_{E}) q (\boldsymbol{\x}_{E'}) &= \delta \delta' \boldsymbol{\x}^{A} + \beta \beta' \boldsymbol{\x}^{B} + \delta \beta' \boldsymbol{\x^{E \cap A}} \boldsymbol{\x}^{E' \cap B} + \delta'\beta \x^{E' \cap A} \boldsymbol{\x}^{E \cap B} +\\
+p(\boldsymbol{\x}_{E}) q (\boldsymbol{\x}_{E'}) &= \alpha \alpha' \boldsymbol{\x}^{A} + \beta \beta' \boldsymbol{\x}^{B} + \delta \beta' \boldsymbol{\x^{E \cap A}} \boldsymbol{\x}^{E' \cap B} + \delta'\beta \x^{E' \cap A} \boldsymbol{\x}^{E \cap B} +\\
 &\quad(\alpha \boldsymbol{\x}^{E \cap A} + \beta \boldsymbol{\x}^{E \cap B}) q_{0}(\boldsymbol{\x}_{E'}) + p_{0}(\x_{E}) (\delta' \boldsymbol{\x}^{E' \cap A} +\beta' \boldsymbol{\x}^{E' \cap B}) +\\
 &\quad p_{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'})\tag{3.29}
 \end{align*}
@@ -881,13 +883,13 @@ p(\boldsymbol{\x}_{E}) q (\boldsymbol{\x}_{E'}) &= \delta \delta' \boldsymbol{\x
 
 We obtain that $\widetilde{F}_{\boldsymbol\Psi}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ if and only if
 \begin{align*}
-\beta \beta' &= s = (-1)^{v} \alpha \alpha' = (-1)^{v_{1}} \alpha \beta' = (-1)^{v_{2}} \alpha' \beta\tag{3.30}\label{eq-3.30}\\
-\beta q_{0}(\boldsymbol{\x}_{E'}) &= \sum_{\psi \in \boldsymbol{\Psi}} q_{\Psi}^{0}(\boldsymbol{\x}_{E'}) = (-1)^{v_{1}} \alpha q_{0} (\boldsymbol{\x}_{E'})\tag{3.31}\label{eq-3.31}\\
+\beta \beta' &= s = (-1)^{v} \delta \delta' = (-1)^{v_{1}} \delta \beta' = (-1)^{v_{2}} \delta' \beta\tag{3.30}\label{eq-3.30}\\
+\beta q_{0}(\boldsymbol{\x}_{E'}) &= \sum_{\psi \in \boldsymbol{\Psi}} q_{\Psi}^{0}(\boldsymbol{\x}_{E'}) = (-1)^{v_{1}} \delta q_{0} (\boldsymbol{\x}_{E'})\tag{3.31}\label{eq-3.31}\\
 \beta' p_{0}(\boldsymbol{\x}_{E}) &= \sum_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi} (\boldsymbol{\x}_{E}) = (-1)^{v_{2}} \delta' p_{0} (\boldsymbol{\x})\tag{3.32}\label{eq-3.32}\\
  \text{and}\quad p_{0}(\boldsymbol{\x}_{E}) q_{0}(\boldsymbol{\x}_{E'}) &= \sum_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi} (\boldsymbol{\x}_{E}) q^{0}_{\psi} (\boldsymbol{\x}_{E'}) \tag{3.33}\label{eq-3.33}
 \end{align*}
  
- \item Let us first consider the case when this does happen By (3.30) $\alpha = (-1)^{v_{1}} \beta$, $\alpha' = (-1)^{v_{2}} \beta'$ and $\alpha, \beta, \alpha', \beta'$ are all non-zero.
+ \item Let us first consider the case when this does happen. By (3.30) $\delta = (-1)^{v_{1}} \beta$, $\alpha' = (-1)^{v_{2}} \beta'$ and $\alpha, \beta, \alpha', \beta'$ are all non-zero.
  
  So we may take $\beta = s$, $\delta = (-1)^{v_{1}} s$, $\beta' = 1$, $\delta' = (-1)^{v_{2}}$ and multiply $p_{0}(\boldsymbol{\x}_{E})$ and $q_{0}(\boldsymbol{\x}_{E'})$ by suitable scalars if the need be and retain the same notation for them. Then~\eqref{eq-3.31} and \eqref{eq-3.32} give $s q_{0}(\boldsymbol{\x}_{E'}) = \sum\limits_{\psi \in \boldsymbol{\Psi}} q_{\psi}^{0} (\boldsymbol{\x}_{E'})$ and $p_{0}(\boldsymbol{\x}_{E}) = \sum\limits_{\psi \in \boldsymbol{\Psi}} p^{0}_{\psi}(\boldsymbol{\x}_{E})$. This turns~\eqref{eq-3.33} into
  \begin{equation}
@@ -907,23 +909,23 @@ Now by (b) above $s= \sum_{k=1}^{k'} \# S_{k} = \sum_{j=1}^{j'} \# T_{j}$.
 
 R.H.S of \eqref{eq-3.34}
 \begin{equation}
-s\sum_{j=1}^{j'} p_{j}^{0} (\boldsymbol{\x}_{E}) \left(\sum_{l \in T_{j}} q_{l}^{0}(\boldsymbol{\x}_{E'})\right) = s\sum_{k=1}^{k}  \left(\sum_{t \in S_{k}}  p_{T}^{0} (\boldsymbol{\x}_{E})\right) q_{R}^{0} (\boldsymbol{\x}_{E'})\tag{3.36}\label{eq-3.36}
+= s\sum_{j=1}^{j'} p_{j}^{0} (\boldsymbol{\x}_{E}) \left(\sum_{l \in T_{j}} q_{l}^{0}(\boldsymbol{\x}_{E'})\right) = s\sum_{k=1}^{k}  \left(\sum_{t \in S_{R}}  p_{t}^{0} (\boldsymbol{\x}_{E})\right) q_{R}^{0} (\boldsymbol{\x}_{E'})\tag{3.36}\label{eq-3.36}
 \end{equation}
 
 Equating L.H.S  and R.H.S of~\eqref{eq-3.34}, we obtain
 \begin{equation}
-\sum_{j=1}^{j'} p_{j}^{0}(\boldsymbol{\x}_{E}) \left(\sum_{l\in T_{j}} (\# T_{j} \# S_{l} -s) q_{l}^{0}(\boldsymbol{\x}_{E'}) + \sum_{\substack{1 \leq k \leq k' \\ k \neq T_{j}}}, \# T_{j} \# S_{k} q_{k}^{0} (\boldsymbol{\x}_{E'}) \right) = 0 \tag{3.37}\label{eq-3.37}
+\sum_{j=1}^{j'} p_{j}^{0}(\boldsymbol{\x}_{E}) \left(\sum_{l\in T_{j}} (\# T_{j} \# S_{l} -s) q_{l}^{0}(\boldsymbol{\x}_{E'}) + \sum_{\substack{1 \leq k \leq k' \\ k \notin T_{j}}}, \# T_{j} \# S_{k} q_{k}^{0} (\boldsymbol{\x}_{E'}) \right) = 0 \tag{3.37}\label{eq-3.37}
 \end{equation}
 and
 \begin{equation}
-\sum_{k=1}^{k'} \left(\sum_{t \in S_{k}} (\# T_{t} \# S_{k} -s) p_{t}^{0}(\boldsymbol{\x}_{E}) +  \sum_{\substack{1 \leq j \leq j' \\ j \notin S_{k}}}, \# T_{j} \# S_{k}  p_{j}^{0}(\boldsymbol{\x}_{E})\right) q_{k}^{0}(\boldsymbol{\x}_{E'}) = 0\tag{3.38}\label{eq-3.38}
+\sum_{k=1}^{k'} \left(\sum_{t \in S_{k}} (\# T_{t} \# S_{k} -s) p_{t}^{0}(\boldsymbol{\x}_{E}) +  \sum_{\substack{1 \leq j \leq j' \\ j \notin S_{k}}} \# T_{j} \# S_{k}  p_{j}^{0}(\boldsymbol{\x}_{E})\right) q_{k}^{0}(\boldsymbol{\x}_{E'}) = 0\tag{3.38}\label{eq-3.38}
 \end{equation}
 
-\item Arguments in (g) above can be reversed and , therefor, we call \eqref{eq-3.34}, \eqref{eq-3.37}, \eqref{eq-3.38} Master Equations for $\widetilde{F}_{\boldsymbol{\Psi}}(\boldsymbol{\x})$ to be expressible as product of some polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$. We emphasize that the Master Equations do not involve $p(\boldsymbol{\x}_{E})$ or $q(\boldsymbol{\x}_{E'})$ and in  fact they are determined in an explicit way as explained in (g) above, Moreover, they are equivalent conditions for $| \Psi \rangle$ to be a product vector in the bipartite cut $(E, E')$.
+\item Arguments in (g) above can be reversed and , therefore, we call \eqref{eq-3.34}, \eqref{eq-3.37}, \eqref{eq-3.38} Master Equations for $\widetilde{F}_{\boldsymbol{\Psi}}(\boldsymbol{\x})$ to be expressible as product of some polynomials $p(\boldsymbol{\x}_{E})$ and $q(\boldsymbol{\x}_{E'})$. We emphasize that the Master Equations do not involve $p(\boldsymbol{\x}_{E})$ or $q(\boldsymbol{\x}_{E'})$ and in  fact they are determined in an explicit way as explained in (g) above, Moreover, they are equivalent conditions for $| \Psi \rangle$ to be a product vector in the bipartite cut $(E, E')$.
 \end{enumerate}
 
 
-We give easy consequences of the Master equations be fore going to generalities. The spirit of the converse or partial converses of Theorem~\ref{thm-3.3}.
+We give easy consequences of the Master equations before going to generalities in the spirit of the converse or partial converses of Theorem~\ref{thm-3.3}.
 
 \begin{thm}\label{thm-3.4}
 \textbf{Dichotomy}. Consider the following two conditions for $\boldsymbol{\Psi}$ with $\# \boldsymbol{\Psi} \geq 2$.
@@ -940,16 +942,16 @@ If $s=\# \boldsymbol{\Psi}$ is a prime number then one and only one of (a) and (
 \end{thm}
 
 \begin{proof}
-If (a) holds then by Theorem~\ref{thm-3.3}, $| \Psi \rangle$ is not genuinely entangled. So at most one of (a) or (b) can hold.
+If (a) holds then by Theorem~\ref{thm-3.3}, $| \boldsymbol{\Psi} \rangle$ is not genuinely entangled. So at most one of (a) or (b) can hold.
 
 Now consider the case when (a) does not hold. Let, if possible, (b) not hold. Then $|\boldsymbol{\Psi} \rangle$ is a product vector in some bipartite cut $(E, E')$. By Theorem~\ref{thm-3.1} (ii), and its proof, $\boldsymbol{\Psi}$ is decomposable via $E$ and $F_{\boldsymbol{\Psi}}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q (\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$.
 
-By Master Equation~\ref{eq-3.34}, we have
+By Master Equation~\eqref{eq-3.34}, we have
 \begin{equation}
 \left(\sum_{\psi \in \boldsymbol{\Psi}} p_{\psi}^{0}(\boldsymbol{\x}_{E})\right) \left(\sum_{\psi \in \boldsymbol{\Psi}} q_{\psi}^{0} (\boldsymbol{\x}_{E'}) \right) = \sum_{\psi \in \boldsymbol{\Psi}} p_{\psi}^{0}(\boldsymbol{\x}_{E}) q_{\psi}^{0}(\boldsymbol{\x}_{E'})\tag{ME}\label{eq-ME}
 \end{equation}
  
-Consider any $a \in E \cap A$, $a' \in E' \cap A$ and any $\varphi \in \boldsymbol{\Psi}$. Put $b = \varphi(a)$, $b' = \varphi(a')$. Let $U = \left\{\Psi \in \boldsymbol{\Psi} : \varphi \psi(a) = b \right\}$, $V= \left\{\psi \in \boldsymbol{\Psi} : \psi(a) \neq b \right\}$, $W = \left\{\psi \in \boldsymbol{\Psi} : \psi(a) = b, \psi(a') = b'\right\}$,  $u =\# U$, $v = \# V$, $w = \# W$. Then $\varphi \in W \subset U \cap V$. So $1 \leq w \leq \min \{u, v\}$. Because $\boldsymbol{\Psi}$ is neither flat nor a pole, we have $V \subset_{\neq} \boldsymbol{\Psi}$, $U \subset_{\#} \boldsymbol{\Psi}$. So $u < s$, $v < s$.
+Consider any $a \in E \cap A$, $a' \in E' \cap A$ and any $\varphi \in \boldsymbol{\Psi}$. Put $b = \varphi(a)$, $b' = \varphi(a')$. Let $U = \left\{\Psi \in \boldsymbol{\Psi} : \varphi \psi(a) = b \right\}$, $V= \left\{\psi \in \boldsymbol{\Psi} : \psi(a') \neq b' \right\}$, $W = \left\{\psi \in \boldsymbol{\Psi} : \psi(a) = b,\right.\\ \left.\psi(a') = b'\right\}$,  $u =\# U$, $v = \# V$, $w = \# W$. Then $\varphi \in W \subset U \cap V$. So $1 \leq w \leq \min \{u, v\}$. Because $\boldsymbol{\Psi}$ is neither flat nor a pole, we have $V \subset_{\neq} \boldsymbol{\Psi}$, $U \subset_{\#} \boldsymbol{\Psi}$. So $u < s$, $v < s$.
  
 The co-efficient of $\boldsymbol{\x}^{\{a\}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus \{b\}}$ in $\sum_{\psi \in \boldsymbol{\Psi}} p_{\psi}^{0}(\boldsymbol{\x}_{E})$ is -u and that of $\boldsymbol{\x}^{\{a'\}}$ $\boldsymbol{\x}^{E' \cap B \smallsetminus \{b'\}}$ in $\sum_{\psi \in \boldsymbol{\Psi}} q_{\psi}^{0}(\x_{E'})$ is $-v$. So the co-efficient of $\boldsymbol{\x}^{\{a, a'\}}$ $\boldsymbol{\x}^{B \smallsetminus \{b, b'\}}$ in the L.H.S of \eqref{eq-ME} is $uv$. On the other hand, the coefficient of $\boldsymbol{\x}^{\{a, a'\}}$ $\boldsymbol{\x}^{B \smallsetminus \{b, b'\}}$ on  The R.H.S of \eqref{eq-ME} is $sw$. So we have the equation 
 \begin{equation}
@@ -967,7 +969,7 @@ Let $\boldsymbol{\Psi}$ be decomposable via $E$ and $\{p_{j}^{0}(\boldsymbol{\x}
 \begin{proof}
 By the Master Equation \eqref{eq-3.37}, the linear independence of $\left\{p_{j}^{0} (\boldsymbol{\x}_{E}) : 1 \leq j \leq j'\right\}$ forces the following. For $1 \leq j \leq j'$,  
 \begin{equation}
-\sum\limits_{l\in T_{j}} (\# T_{j} \# S_{l}-s) q_{l}^{0}(\boldsymbol{\x}_{E'}) + \sum_{1 \leq k \leq k'}, \# T_{j} \# S_{k} q_{k}^{0}(\boldsymbol{\x}_{E'}) = 0\tag{3.40}\label{eq-3.40} 
+\sum\limits_{l\in T_{j}} (\# T_{j} \# S_{l}-s) q_{l}^{0}(\boldsymbol{\x}_{E'}) + \sum_{\substack{1 \leq k \leq k'\\ k \notin T_{j}}} \# T_{j} \# S_{k} q_{k}^{0}(\boldsymbol{\x}_{E'}) = 0\tag{3.40}\label{eq-3.40} 
 \end{equation}
 
 But $\left\{q_{k}^{0}(\boldsymbol{\x}_{E}): 1 \leq k \leq k' \right\}$ is linearly independent and $\# T_{j} \neq 0 \neq \# S_{k}$ for $1 \leq j \leq j'$, $1 \leq k \leq k'$. So $T_{j} = \left\{k : 1 \leq k \leq k'\right\}$ for $1 \leq j \leq j'$.
@@ -976,7 +978,7 @@ This gives that $\boldsymbol{\Psi}$ is factorable via $E$.
 \end{proof}
 
 \begin{example}\label{example-3.3}
-We give instance of $\boldsymbol{\Psi}$ for which the conditions of linear independence as in Theorem~\ref{thm-3.5} above holds. 
+We give instance of $\boldsymbol{\Psi}$ for which the conditions of linear independence as in Theorem~\ref{thm-3.5} above hold. 
 
 (a) Let $v=5$, $E = \{1,2,3,4,5,6\}$, $E' = \{7,8,9,10\}$.
 
@@ -1007,27 +1009,29 @@ The grid is given by Figure~\ref{fig10} which shows that $\boldsymbol{\Psi}$ is 
 \caption{}\label{fig10}
 \end{figure}
 
- (c) For tuples $\boldsymbol{\lambda} = (\lambda_{1}, \lambda_{2}, \lambda_{3})$, $\mu =(\mu_{1}, \mu_{2})$ of consider the polynomials $p^{\boldsymbol{\lambda}}{\boldsymbol{\x}_{E}}) = \sum\limits_{j=1}^{3} \lambda_{j} \cdot p_{j}^{0} (\boldsymbol{\x}_{E})$ and $q^{\mu}(\boldsymbol{\x}_{E'}) = \sum\limits_{\mu =1}^{2} \mu_{k} q_{k}^{0} (\boldsymbol{\x}_{E'})$. Then the coefficient of $\x_{1}~ \x_{4}~\x_{6} = \boldsymbol{\x}^{\{1\}} \boldsymbol{\x}^{\{4,6\}}$, $\x_{1}~ \x_{2} ~\x_{6} = \x^{\{1\}} \boldsymbol{\x}^{\{2,6\}}$, $\x_{1} \x_{2} \x_{4} = \x^{\{1\}} \boldsymbol{\x}^{\{2,4\}}$ in $p^{\boldsymbol{\lambda}}(\boldsymbol{\x}_{E})$ are $\lambda_{1}, \lambda_{2}, \lambda_{3}$ respectively. So $p^{\boldsymbol{\lambda}}(\boldsymbol{\x}_{E}) =0$ if and only if $\lambda_{1} = 0 = \lambda_{2} = \lambda_{3}$. Hence $\{p_{j}^{0}(\boldsymbol{\x}_{E}), j = 1, 2, 3\}$  is linearly independent. On the other hand, the coefficients of $\x_{7} \x_{10} = \boldsymbol{\x}^{\{7\}} \boldsymbol{\x}^{\{10\}}$ and $\x_{7} \x_{8} = \boldsymbol{\x}^{\{7\}} \boldsymbol{\x}^{\{8\}}$ in $q^{\boldsymbol{\mu}}(\boldsymbol{\x}_{E'})$ are $\mu_{1}$ and $\mu_{2}$ respectively. So $q^{\boldsymbol{\mu}} (\boldsymbol{\x}_{E'})$ is $0$ if and only ???????????? Hence $\{q_{k}^{0}(\boldsymbol{\x}_{E'}): k = 1,2\}$ is linearly independent. ????????? that $| \boldsymbol{\Psi} \rangle$ is not ????
+ (c) For tuples $\boldsymbol{\lambda} = (\lambda_{1}, \lambda_{2}, \lambda_{3})$, $\mu =(\mu_{1}, \mu_{2})$ of consider the polynomials $p^{\boldsymbol{\lambda}}{\boldsymbol{\x}_{E}}) = \sum\limits_{j=1}^{3} \lambda_{j} \cdot p_{j}^{0} (\boldsymbol{\x}_{E})$ and $q^{\mu}(\boldsymbol{\x}_{E'}) = \sum\limits_{\mu =1}^{2} \mu_{k} q_{k}^{0} (\boldsymbol{\x}_{E'})$. Then the coefficient of $\x_{1}~ \x_{4}~\x_{6} = \boldsymbol{\x}^{\{1\}} \boldsymbol{\x}^{\{4,6\}}$, $\x_{1}~ \x_{2} ~\x_{6} = \x^{\{1\}} \boldsymbol{\x}^{\{2,6\}}$, $\x_{1} \x_{2} \x_{4} = \x^{\{1\}} \boldsymbol{\x}^{\{2,4\}}$ in $p^{\boldsymbol{\lambda}}(\boldsymbol{\x}_{E})$ are $\lambda_{1}, \lambda_{2}, \lambda_{3}$ respectively. So $p^{\boldsymbol{\lambda}}(\boldsymbol{\x}_{E}) =0$ if and only if $\lambda_{1} = 0 = \lambda_{2} = \lambda_{3}$. Hence $\{p_{j}^{0}(\boldsymbol{\x}_{E}), j = 1, 2, 3\}$  is linearly independent. On the other hand, the coefficients of $\x_{7} \x_{10} = \boldsymbol{\x}^{\{7\}} \boldsymbol{\x}^{\{10\}}$ and $\x_{7} \x_{8} = \boldsymbol{\x}^{\{7\}} \boldsymbol{\x}^{\{8\}}$ in $q^{\boldsymbol{\mu}}(\boldsymbol{\x}_{E'})$ are $\mu_{1}$ and $\mu_{2}$ respectively. So $q^{\boldsymbol{\mu}} (\boldsymbol{\x}_{E'})$ is $0$ if and only if $\mu_{1} =0 =\mu_{2}$. Hence $\{q_{k}^{0}(\boldsymbol{\x}_{E'}): k = 1,2\}$ is linearly independent. 
+ 
+  (d) Applying Theorem 3.5 abovewe,  obtain that that $| \boldsymbol{\Psi} \rangle$ is not a product vector in the cut $(E,E')$.
  
  But $\boldsymbol{\Psi}$ is not decomposable via any other bipartite cut. So $| \boldsymbol{\Psi} \rangle$ is genuinely entangled.
  
  This motivates our next definition and result.
  
 \begin{definition}\label{definition-3.3}
-Let $\boldsymbol{\Psi}$ be as set of coverings of $\Gamma_{n}$ with $\# \boldsymbol{\Psi} \geq 2$.
+Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ with $\# \boldsymbol{\Psi} \geq 2$.
 \end{definition}
 
 \begin{enumerate}[label = (\roman*)]
  \item Suppose that $\boldsymbol{\Psi}$ is decomposable via some with $E$ with $\phi  \neq E \subset_{\neq} \Gamma_{n}$. $\boldsymbol{\Psi}$ will. be said to be \textbf{independent via $\boldsymbol{E}$} if $ \boldsymbol{\Psi}_{E} = \left\{\psi_{j}^{E} : 1 \leq j \leq j' \right\}$ and $\boldsymbol{\Psi}_{E'} = \left\{\psi_{k}^{E'} : 1 \leq k \leq k' \right\}$  satisfy the following conditions.
 \begin{enumerate}[label = (\alph*)]
-\item For each $j, 1 \leq j \leq j'$ there exists $\phi \neq A^{E}_{j} \subset_{\neq} E \cap A$, $\phi \neq B_{j}^{E} \subset_{\neq} E \cap B$ such that $\left\{t : 1 \leq t \leq j', \psi_{t}^{E} (A_{j}^{E}) = B_{j}^{E}\right\} = \left\{j\right\}$.
+\item For each $j, 1 \leq j \leq j'$ there exist $\phi \neq A^{E}_{j} \subset_{\neq} E \cap A$, $\phi \neq B_{j}^{E} \subset_{\neq} E \cap B$ such that $\left\{t : 1 \leq t \leq j', \psi_{t}^{E} (A_{j}^{E}) = B_{j}^{E}\right\} = \left\{j\right\}$.
 
-\item For each $k$, $1 \leq k \leq k'$, there exists $\phi \neq A_{j}^{E'} \subset_{\neq} E' \cap A$, $\phi\neq B_{k}^{E'} \subset_{\neq} E' \cap B $ such that $\left\{ u : 1 \leq u \leq k' : \psi_{u}^{E'} (A_{k}^{E'} = B_{k}^{E'})\right\} = \{k\}$.
+\item For each $k$, $1 \leq k \leq k'$, there exist $\phi \neq A_{j}^{E'} \subset_{\neq} E' \cap A$, $\phi\neq B_{k}^{E'} \subset_{\neq} E' \cap B $ such that $\left\{ u : 1 \leq u \leq k' : \psi_{u}^{E'} (A_{k}^{E'} = B_{k}^{E'})\right\} = \{k\}$.
 
 In other words, $\boldsymbol{\x}^{A_{j}^{E}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus B^{E}_{j}}$ does occur in and only in $p_{j}^{0} (\boldsymbol{\x}_{E})$ and $\boldsymbol{\x}^{A_{k}^{E'}}$ $\boldsymbol{\x}^{E' \cap B \smallsetminus B_{k}^{E'}}$ does occur in and only in $q_{k}^{0}(\boldsymbol{\x}_{E'})$.
 \end{enumerate}
 
-\item Suppose that neither flat nor a pole. $\boldsymbol{\Psi}$ be called \textbf{independent} if it is independents via $E$ for any $E$ via which $\boldsymbol{\Psi}$  is not decomposable then we note that if $\boldsymbol{\Psi}$ is not decomposable then $\boldsymbol{\Psi}$ is independent by this definition. On the other hand of $\boldsymbol{\x}$ is flat or a pole, then $\boldsymbol{\Psi}$ is not independent by this definition.
+\item Neither flat nor a pole. $\boldsymbol{\Psi}$ be called \textbf{independent} if it is independents via $E$ for any $E$ via which $\boldsymbol{\Psi}$  is not decomposable. We note that if $\boldsymbol{\Psi}$ is not decomposable then $\boldsymbol{\Psi}$ is independent by this definition. On the other hand of $\boldsymbol{\Psi}$ is flat or a pole, then $\boldsymbol{\Psi}$ is not independent by this definition.
 
 \end{enumerate}
 
@@ -1036,8 +1040,8 @@ Suppose that $\boldsymbol{\Psi}$ is independent. Then $| \boldsymbol{\Psi} \rang
 \end{thm}
 
 \begin{proof}
-In view of Theorem~\ref{thm-3.3} if $| \boldsymbol{\Psi} \rangle$ is genuinely entangled then $\boldsymbol{\Psi}$ in not factorable. Now suppose that $\boldsymbol{\Psi}$ is not factorable. Let, if possible, $| \boldsymbol{\Psi} \rangle$ be not genuinely entangled. Then $| \boldsymbol{\Psi} \rangle$ is a 
-product vector in some biparlite cut, say, $(E, E')$. Then by Theorem~\ref{thm-3.1} (ii) $\boldsymbol{\Psi}$ is decomposable via $E$. Because $\boldsymbol{\Psi}$ is independent we have that $\boldsymbol{\Psi}$ is independent via $E$. The arguments in Example~\ref{example-3.3} (c) above can be suitably modified to give that $\left\{p_{j}^{0}(\boldsymbol{\x}_{E}) : 1 \leq j \leq j' \right\}$ and $\left\{q_{k}^{0} (\boldsymbol{\x}_{E'})  : 1 \leq k \leq k'\right\}$ are both linearly independent. Indeea let if possible $p^{\lambda}(\boldsymbol{\x}_{E}) = \sum\limits_{j=1}^{j} \lambda_{j} p_{j}(\boldsymbol{\x}_{E}) = 0$ for some triple $\boldsymbol{\lambda} = (\lambda_{j})^{j'}_{j=1}$ of scalars. For $1 \leq j \leq j_{1}, $ the coefficient of $\boldsymbol{\x}^{A_{j}^{E}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus} B_{j}^{E}$ in $p^{\boldsymbol{\lambda}} (\boldsymbol{\x}_{E})$ is $(-1) \# A_{j}~ \lambda_{j}$. So $\lambda_{j} = 0$ for $1 \leq j \leq j'$, similarly we can prove that $\left\{q_{k}^{0}(\boldsymbol{\x}_{E'}) : 1 \leq k \leq k' \right\}$ is linearly independent. By Theorem~\ref{thm-3.5}, $\boldsymbol{\Psi}$ is factorable via $E$, a contradiction.
+In view of Theorem~\ref{thm-3.3} if $| \boldsymbol{\Psi} \rangle$ is genuinely entangled then $\boldsymbol{\Psi}$ is not factorable. Now suppose that $\boldsymbol{\Psi}$ is not factorable. Let, if possible, $| \boldsymbol{\Psi} \rangle$ be not genuinely entangled. Then $| \boldsymbol{\Psi} \rangle$ is a 
+product vector in some biparlite cut, say, $(E, E')$. Then by Theorem~\ref{thm-3.1} (ii) $\boldsymbol{\Psi}$ is decomposable via $E$. Because $\boldsymbol{\Psi}$ is independent we have that $\boldsymbol{\Psi}$ is independent via $E$. The arguments in Example~\ref{example-3.3} (c) above can be suitably modified to give that $\left\{p_{j}^{0}(\boldsymbol{\x}_{E}) : 1 \leq j \leq j' \right\}$ and $\left\{q_{k}^{0} (\boldsymbol{\x}_{E'})  : 1 \leq k \leq k'\right\}$ are both linearly independent. Indeed, let if possible $p^{\lambda}(\boldsymbol{\x}_{E}) = \sum\limits_{j=1}^{j} \lambda_{j} p_{j}(\boldsymbol{\x}_{E}) = 0$ for some triple $\boldsymbol{\lambda} = (\lambda_{j})^{j'}_{j=1}$ of scalars. For $1 \leq j \leq j_{1}, $ the coefficient of $\boldsymbol{\x}^{A_{j}^{E}}$ $\boldsymbol{\x}^{E \cap B \smallsetminus B_{j}^{E}}$ in $p^{\boldsymbol{\lambda}} (\boldsymbol{\x}_{E})$ is $(-1) \# A^{j}~ \lambda_{j}$. So $\lambda_{j} = 0$ for $1 \leq j \leq j_{1}$. Similarly we can prove that $\left\{q_{k}^{0}(\boldsymbol{\x}_{E'}) : 1 \leq k \leq k' \right\}$ is linearly independent. By Theorem~\ref{thm-3.5}, $\boldsymbol{\Psi}$ is factorable via $E$, a contradiction.
 \end{proof}
 
 \begin{subsubsec}\label{subsubsection-3.1.7}
@@ -1050,7 +1054,7 @@ We begin with the case that $\boldsymbol{\Psi}$ is decomposable via some $\phi \
 
 \begin{enumerate}[label=(\alph*)]
 
-\item Terms on the L.H.S or R.H.S of \eqref{eq-3.34} can only be of the form $\boldsymbol{\x}^{A_{3}}~\boldsymbol{\x}^{B \smallsetminus B_{3}} = \boldsymbol{\x}^{A_{1} \cup A_{2}}~~\boldsymbol{\x}^{B\smallsetminus (B_{1} \cup B_{2})}$ with $\phi \neq A_{1} \subset_{\neq} E \cap A$, $\phi \neq A_{2} \subset_{\neq} E' \cap A$, $\phi \neq B_{1} \subset_{\neq} E \cap B$, $\phi \neq B_{2} \subset_{\neq} E' \cap B$, $\# A_{1} = \# B_{1}$, $\# A_{2} = \# B_{2}$. Indeed,such or term occcurs in the L.H.S of~\eqref{eq-3.34} if and only if there exist $\varphi_{1}, \varphi_{2} \in \boldsymbol{\Psi}$ with $\varphi_{1}(A_{1})= B_{1}$ and $\varphi_{2}(A_{2}) = B_{2}$, and in this case the on the other hand, $t$ occurs in R.H.S of \eqref{eq-3.34} if and only if there exist $\varphi_{3} \in \boldsymbol{\Psi}$ with $\varphi_{3}(A_{1}) = B_{1}$, $\varphi_{3}(A_{2}) = B_{2}$ or equivalently, $\varphi_{3}(A_{3}) = B_{3}$.
+\item Terms on the L.H.S or R.H.S of \eqref{eq-3.34} can only be of the form $\boldsymbol{\x}^{A_{3}}~\boldsymbol{\x}^{B \smallsetminus B_{3}} = \boldsymbol{\x}^{A_{1} \cup A_{2}}~~\boldsymbol{\x}^{B\smallsetminus (B_{1} \cup B_{2})}$ with $\phi \neq A_{1} \subset_{\neq} E \cap A$, $\phi \neq A_{2} \subset_{\neq} E' \cap A$, $\phi \neq B_{1} \subset_{\neq} E \cap B$, $\phi \neq B_{2} \subset_{\neq} E' \cap B$, $\# A_{1} = \# B_{1}$, $\# A_{2} = \# B_{2}$. Indeed,such a term occurs in the L.H.S of~\eqref{eq-3.34} if and only if there exist $\varphi_{1}, \varphi_{2} \in \boldsymbol{\Psi}$ with  $\varphi_{1}(A_{1})= B_{1}$ and $\varphi_{2}(A_{2}) = B_{2}$, and on the other hand, $t$ it occurs in R.H.S of \eqref{eq-3.34} if and only if there exist $\varphi_{3} \in \boldsymbol{\Psi}$ with $\varphi_{3}(A_{1}) = B_{1}$, $\varphi_{3}(A_{2}) = B_{2}$ or equivalently, $\varphi_{3}(A_{3}) = B_{3}$.
 
 Set $U = \left\{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\right\} = \left\{\psi \in \boldsymbol{\Psi} : \psi /E (A_{1}) = B_{1}\right\}$,
 
@@ -1062,38 +1066,44 @@ Set $U = \left\{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\right\} = \left
  
   $Z= \left\{\psi \in \boldsymbol{\Psi} : \psi (A_{1}) \neq B_{1}, \psi(A_{2}) \neq B_{2}\right\} = \boldsymbol{\Psi} \smallsetminus (U \cup V)$, $z=\# Z$.
   
-  The co-efficient of $\boldsymbol{\x}^{A_{3}}~~ \boldsymbol{\x}^{B\smallsetminus B_{3}}$ in L.H.S. of \eqref{eq-3.34} is $(-1)^{\# A_{3}} uv$ whereas in R.H.S. of \eqref{eq-3.34}, it is $(-1)^{\# A_{3}}s sw$. Therefore, the two are equal if and only of 
+  The co-efficient of $\boldsymbol{\x}^{A_{3}}~~ \boldsymbol{\x}^{B\smallsetminus B_{3}}$ in L.H.S. of \eqref{eq-3.34} is $(-1)^{\# A_{3}} uv$ whereas in R.H.S. of \eqref{eq-3.34}, it is $(-1)^{\# A_{3}} sw$. Therefore, the two are equal if and only of 
   \begin{equation}
   uv = sw\tag{3.41}\label{eq-3.41}
   \end{equation}
   Indeed, $uv-sw =(u-w)(v-w)-zw$. So~\eqref{eq-3.41} is equivalent to
   \begin{equation}
-  (u-v)(v-w)= zw\tag{3.42}\label{eq-3.42}
+  (u-w)(v-w)= zw\tag{3.42}\label{eq-3.42}
   \end{equation}
   
 \item  If $U$ or $V$ is $\phi$ , then so is $W$ and therefore, $uv=0 =w$. So \eqref{eq-3.41} is satisfied.
 
-If $U = \boldsymbol{\Psi}$, Then $u=s$, $V=W$ and therefore, $v=w$. So \eqref{eq-3.41} is satisfied.
+If $U = \boldsymbol{\Psi}$, then $u=s$, $V=W$ and therefore, $v=w$. So \eqref{eq-3.41} is satisfied.
 
 Similarly, we obtain that if $V = \boldsymbol{\Psi}$, then ~\eqref{eq-3.41} is satisfied.
 
 We have already seen these conditions in ~\ref{subsubsection-3.1.3} (a) to (d).
 
-\item Let $A_{j}$, $B_{j} (j=1,2,3)$, $U,V,W,Z$, $u,v,w,z$, be as in (a) above with $\phi \neq U \neq \boldsymbol{\Psi}$, $\phi \neq V \neq \boldsymbol{\Psi}$, i.e., with $0 < u$, $v < s$. This is the only non-trivial class and and equivalent way of specifying it is that $A_{j} \in \varphi_{2}$ and $B_{j} \in \left\{\psi(A_{j}) : \psi \in \boldsymbol{\Psi}\right\}$ for $j=1,2$ and in this case $A_{3} \in \varphi_{2}$. Such $A_{j}$'s adn $B_{j}$'s do exist as explained in \eqref{subsubsection-3.1.3} (e) to (i) and also in the proof of Theorem~\ref{thm-3.4}, viz, $A_{1} = \{a\}$, $A_{2} = \{a'\}$, $B_{1} = \{b\}$, $B_{2} = \{b'\}$ with $a, a' b, b'$ as choosen there. We have $0< uv < \min \{sv, us\}$. 
+\item Let $A_{j}$, $B_{j} (j=1,2,3)$, $U,V,W,Z$, $u,v,w,z$, be as in (a) above with $\phi \neq U \neq \boldsymbol{\Psi}$, $\phi \neq V \neq \boldsymbol{\Psi}$, i.e., with $0 < u$, $v < s$. This is the only non-trivial class and an equivalent way of specifying it is that $A_{2} \in \varphi_{2}$ and $B_{j} \in \left\{\psi(A_{j}) : \psi \in \boldsymbol{\Psi}\right\}$ for $j=1,2$ and in this case $A_{3} \in \varphi_{2}$. Such $A_{j}$'s and $B_{j}$'s do exist as explained in \eqref{subsubsection-3.1.3} (e) to (i) and also in the proof of Theorem~\ref{thm-3.4}, viz, $A_{1} = \{a\}$, $A_{2} = \{a'\}$, $B_{1} = \{b\}$, $B_{2} = \{b'\}$ with $a, a' b, b'$ as choosen there. We have $0< uv < \min \{sv, us\}$. 
 
-Now we have $uv=sw$ and $(u-w)(v-w) =zw$. This gives that $0< sw < \min \{sv, su\}$, which in turn, gives that $0 < w < \min\{ u,v\}$, ie., equivalent to the following for this special class.
+Now suppose that (3.41) is satisfied. Then so is (3.42). So we have $uv=sw$ and $(u-w)(v-w) =zw$. This gives that $0< sw < \min \{sv, su\}$, which in turn, gives that $0 < w < \min\{ u,v\}$, ie., $w, u-w, v-w$ are all $> 0$. This forces $z>0$ as well. Thus (3.42) equivalent to the following for this special class.
 \begin{equation}
 w, u-w, v-w, z\quad \text{all}\quad  > 0, (u-w)(v-w) =zw \tag{3.43}\label{eq-3.43}
 \end{equation} 
 
-We may call \eqref{eq-3.43} criss-cross equation in view of the pictorial representation of $\boldsymbol{\Psi}$ given in Figure~\ref{fig11} with concrete situtions displayed in Example~\ref{example-3.4} and Figures~\ref{fig12} to \ref{fig15}.
+We may call \eqref{eq-3.43} criss-cross equation in view of the pictorial representation of $\boldsymbol{\Psi}$ given in Figure~11 with concrete situtions displayed in Example~3.4 and Figures~12 to 15.
 
-Furthermore, $s$ divides $uv$ and $0 < u$, $v < s$. So $s$ cannot be a prime number. Therefore, $s$ is a composite number, say, $s = t' t''$ with $2 \leq t'$, a factor of $u$ and $2 \leq t''$, a factor of $v$. Hence we may write ????????????????????????????
+Furthermore, $s$ divides $uv$ and $0 < u$, $v < s$. So $s$ cannot be a prime number. Therefore, $s$ is a composite number, say, $s = t' t''$ with $2 \leq t'$, a factor of $u$ and $2 \leq t''$, a factor of $v$. Hence we may write as follows. 
+For some 
+\begin{equation}
+t', t''>=2, u', v' >=1, s=t't'', u=t'u', v=t''v'', w=u'v''\tag{3.44}\label{eq-3.44}
+\end{equation}
+This representation is not uniqueas can be seen for the case s=16, u=12, v=8, w=6.
+
 
 
 \item \textbf{Pictorial representation of (c) above}. 
 
-Let $J = \{j : 1 \leq j \leq j' \}$, $K = \{k : 1 \leq k \leq k'\}$, $J_{1} = \{j \in  J : \psi_{j}^{E} (A_{1}) = B_{1}\}$, $J_{2} = J \smallsetminus J_{1} = \{ \psi_{j}^{E} : \psi_{j}^{E}(A_{1}) \neq B_{1}\}$, $K_{1} = \{k \in K : =\psi_{k}^{E'} (A_{2}) = B_{2}\}$, $K_{2} = K \smallsetminus K_{1}\{\psi_{k}^{E'} : \psi_{k}^{E'}(A_{2}) \neq B_{2}\}$, $j_{1} = \# J_{1}$, $j_{2} = \# J_{2} = j'-j_{1}$, $k_{1} = \# k_{1}$, $k_{2}= \# k_{2} = k' - ???$.
+Let $J = \{j : 1 \leq j \leq j' \}$, $K = \{k : 1 \leq k \leq k'\}$, $J_{1} = \{j \in  J : \psi_{j}^{E} (A_{1}) = B_{1}\}$, $J_{2} = J \smallsetminus J_{1} = \{ j\in J : \psi_{j}^{E}(A_{1}) \neq B_{1}\}$, $K_{1} = \{k \in K : =\psi_{k}^{E'} (A_{2}) = B_{2}\}$, $K_{2} = K \smallsetminus K_{1}\{k \in K : \psi_{K}^{E'}(A_{2}) \neq B_{2}\}$, $j_{1} = \# J_{1}$, $j_{2} = \# J_{2} = j'-j_{1}$, $k_{1} = \# K_{1}$, $k_{2}= \# k_{2} = k' - k_{1}$.
 
 Then $U = \left\{\psi\in \boldsymbol{\Psi} : \psi /E  \in \{\psi^{E}_{j} : J \in J_{1} \}\right\}$, 
 
@@ -1104,7 +1114,7 @@ $W = \left\{\psi \in \boldsymbol{\Psi} : \psi/E = \psi^{E}_{j}, \psi/E' = \psi^{
 $Z = \left\{\psi \in \boldsymbol{\Psi} : \psi /E = \psi^{E}_{j}, \psi/E' = \psi^{E'}_{k} \quad \text{for some}\quad j\in J_{2}, k \in K_{2} \right\}$.
 
 
-In case $j, k_{1}, j_{2}, k_{2}$ are all $> 0$, we have the pictorial representation as in Figure~\ref{fig11} which will be called $(A_{j}, B_{j})_{j=1,2}$ configuration clearly $w \leq j_{1} k_{1}$, $u-w \leq j_{1}k_{2}$, $v-w \leq j_{2} k$, and $z \leq j_{2} k_{2}$. 
+In case $j_{1}, k_{1}, j_{2}, k_{2}$ are all $> 0$, we have the pictorial representation as in Figure~\ref{fig11} which will be called $(A_{j}, B_{j})_{j=1,2}$ configuration. Clearly $w \leq j_{1} k_{1}$, $u-w \leq j_{1}k_{2}$, $v-w \leq j_{2} k_{1}$, and $z \leq j_{2} k_{2}$. 
 
 \begin{figure}[h]
 \centering
@@ -1112,9 +1122,9 @@ In case $j, k_{1}, j_{2}, k_{2}$ are all $> 0$, we have the pictorial representa
 \caption{}\label{fig11}
 \end{figure}
  
-\item Let us call the equations $v-w = j_{1}k_{2}$ and $v-w = j_{2} k_{1}$ by \textbf{criss}, and $w =j_{1}k_{1}$ and $z=j_{2} k_{2}$ by \textbf{cross}, Then \eqref{eq-3.43} together with criss holds if and only if ???????????????? with cross holds. Thus either of this  ?????? with in turn ??????
+\item Let us call the equations $u-w = j_{1}k_{2}$ and $v-w = j_{2} k_{1}$ by \textbf{criss}, and $w =j_{1}k_{1}$ and $z=j_{2} k_{2}$ by \textbf{cross}, Then \eqref{eq-3.43} together with criss holds if and only if (3.43) with cross holds. Thus either of this  becomes equivalent to $\boldsymbol{\psi}$ is factorable, which in turn becomes equivalent to (3.43) together with $U$ and $V$ are full, i.e., $u=j_{1} k'$, and $v=j'k_{1}$, i.e., cross-roads $U$ and $V$ are full.
 
-\item For notational convenience, we write $L$ for the triple $(A_{j}, B_{j})_{1 \leq j \leq z}$ or\break $(A_{j}, B_{j})_{j=1,2}$ for that matter denots the corresponding sets $U, V, W, Z$ by $U_{L}, V_{L},\break W_{L}, Z_{L}$ respectively; further the numbers $u,v,w, t', t'', u' v''$ will be written as $u_{L}, v_{L}, w_{L}, z_{L}, t_{L}', t_{L}'', u_{L}', v_{L}''$ respectively. Then the Equations~\eqref{eq-3.41} to \eqref{eq-3.44} take the forms of~\eqref{eq-3.45} to \eqref{eq-3.48} respectively given below.
+\item For notational convenience, we write $L$ for the triple $(A_{j}, B_{j})_{1 \leq j \leq z}$ or\break $(A_{j}, B_{j})_{j=1,2}$ for that matter, denotes the corresponding sets $U, V, W, Z$ by $U_{L}, V_{L},\break W_{L}, Z_{L}$ respectively; further the numbers $u,v,w, t', t'', u' v''$ will be written as $u_{L}, v_{L}, w_{L}, z_{L}, t_{L}', t_{L}'', u_{L}', v_{L}''$ respectively. Then the Equations~{3.41} to {3.44} take the forms of~\eqref{eq-3.45} to \eqref{eq-3.48} respectively given below.
 \begin{align*}
 u_{L} v_{L} &= sw_{L}\tag{3.45}\label{eq-3.45}\\
 (u_{L}- w_{L}) (v_{L} - w_{L}) &= z_{L} w_{L}\tag{3.46}\label{eq-3.46}\\
@@ -1123,58 +1133,58 @@ u_{L}, u_{L}-w_{L}, v_{L}-w_{L}, z_{L}~~\text{all} > 0, (v_{L}- w_{L})(v_{L}-w_{
 
 For some 
 \begin{equation}
-i_{L}, t_{L}'' \geq 2, u_{L}', v_{L}'' \geq 1, s=t_{L}'~t_{L}'', u_{L}= t_{L}' u_{L}', v_{L} = t_{L}'' v_{L}'', w_{L} = u_{L}' v_{L}'' \tag{3.48}\label{eq-3.48}
+t_{L}, t_{L}'' \geq 2, u_{L}', v_{L}'' \geq 1, s=t_{L}'~t_{L}'', u_{L}= t_{L}' u_{L}', v_{L} = t_{L}'' v_{L}'', w_{L} = u_{L}' v_{L}'' \tag{3.48}\label{eq-3.48}
 \end{equation}
 
 For $L$ as above. let $\widetilde{L} = (\widetilde{A}_{j}, \widetilde{B}_{j})_{1 \leq j \leq 3}$ where $\widetilde{A}_{j} = E \cap A \smallsetminus A_{1}$, $\widetilde{A}_{2} = E' \cap A \smallsetminus A_{2}$. $\widetilde{B}_{1} = E \cap B \smallsetminus B_{1}$, $\widetilde{B}_{2} = E' \cap B \smallsetminus B_{2}$, $\widetilde{A}_{3} = \widetilde{A}_{1} \cup \widetilde{A}_{2}$, $\widetilde{B}_{3} = \widetilde{B}_{1} \cup \widetilde{B}_{2}$.
 
-Then $U_{\widetilde{L}} = U_{L}$, $V_{\widetilde{L}} = V_{L}$, $W_{\widetilde{L}} =W_{L}$, $Z_{\widetilde{L}} =Z_{L}$, and therefore, $u_{\widetilde{L}} = u_{L}$, $v_{\widetilde{L}} = v_{L}$, $w_{\widetilde{L}} = w_{L}$, $z_{\widetilde{L}} =z_{L}$. So the equation~\eqref{eq-3.45}$_{L}$ to \eqref{eq-3.48}$_{L}$
-under go no change when we close $L$ to $\widetilde{L}$. Indeed, the same is true for $\widetilde{\widetilde{L}} = (\widetilde{A}_{1}, A_{2}, \widetilde{B}_{1}, B_{2}, \widetilde{B}_{1} \cup B_{2})$ and $\widetilde{\widetilde{L}} = (A_{1}, \widetilde{A}_{2}, B_{1}, \widetilde{B}_{2}, A_{1} \cup \widetilde{A}_{2}, B \cup \widetilde{B}_{2})$ as well.
+Then $U_{\widetilde{L}} = U_{L}$, $V_{\widetilde{L}} = V_{L}$, $W_{\widetilde{L}} =W_{L}$, $Z_{\widetilde{L}} =Z_{L}$, and therefore, $u_{\widetilde{L}} = u_{L}$, $v_{\widetilde{L}} = v_{L}$, $w_{\widetilde{L}} = w_{L}$, $z_{\widetilde{L}} =z_{L}$. So the equations~\eqref{eq-3.45}$_{L}$ to \eqref{eq-3.48}$_{L}$
+under go no change when we change $L$ to $\widetilde{L}$. Indeed, the same is true for $\widetilde{\widetilde{L}} = (\widetilde{A}_{1}, A_{2}, \widetilde{B}_{1}, B_{2}, \widetilde{B}_{1} \cup B_{2})$ and $\widetilde{\widetilde{\widetilde{L}}} = (A_{1}, \widetilde{A}_{2}, B_{1}, \widetilde{B}_{2}, A_{1} \cup \widetilde{A}_{2}, B \cup \widetilde{B}_{2})$ as well.
 
 \item Let $\mathcal{L}$ be the set of all $L$ as above.
 
 Let
 \begin{align*}
-\hat{\mathcal{L}} & = \left\{L \in  \mathcal{L} : \# A_{1} \geq \frac{v_{1}}{2}\} = \{L \in \mathcal{L} : \# B_{1} \geq \frac{v_{1}}{2}\right\},\\
-\widetilde{\mathcal{L}} & = \left\{L \in \mathcal{L}  : \# A_{2} \geq \frac{v_{2}}{2}\} = \{L \in \mathcal{L} : \# B_{2} \geq \frac{v_{2}}{2}\right\}
+\hat{\mathcal{L}} & = \left\{L \in  \mathcal{L} : \# A_{1} \leq \frac{\nu_{1}}{2}\} = \{L \in \mathcal{L} : \# B_{1} \leq \frac{\mu_{1}}{2}\right\},\\
+\hat{\mathcal{L}} & = \left\{L \in \mathcal{L}  : \# A_{2} \leq \frac{\nu_{2}}{2}\} = \{L \in \mathcal{L} : \# B_{2} \leq \frac{\nu_{2}}{2}\right\}
 \end{align*}
 
 For $a_{0} \in E \cap A$, $b_{0} \in E \cap B$, $a_{0}' \in E' \cap A$, $b_{0}' \in E' \cap B$, let
 \begin{align*}
-\hat{\mathcal{L}}_{a_{0}} & = \left\{L \in  \mathcal{L} : \text{whenever} \# A_{1} = \frac{v_{1}}{2}~~ \text{we have}~~ a_{0} \in A_{1} \right\},\\
-\hat{\mathcal{L}}_{b_{0}} & = \left\{L \in  \mathcal{L} : \text{whenever} \# B_{1} = \frac{v_{1}}{2}~~ \text{we have}~~ b_{0} \in B_{1} \right\},\\
-\hat{\mathcal{L}}_{a_{0}'} & = \left\{L \in  \mathcal{L} : \text{whenever} \# A_{2} = \frac{v_{2}}{2}~~ \text{we have}~~ a_{0}' \in A_{2} \right\},\quad \text{and}\\
-\hat{\mathcal{L}}_{b_{0}'} & = \left\{L \in  \mathcal{L} : \text{whenever} \# B_{2} = \frac{v_{2}}{2}~~ \text{we have}~~ b_{0}' \in B_{2} \right\}
+\hat{\mathcal{L}}_{a_{0}} & = \left\{L \in  \hat{\mathcal{L}} : \text{whenever}~\#~ A_{1} = \frac{v_{1}}{2}~~ \text{we have}~~ a_{0} \in A_{1} \right\},\\
+\hat{\mathcal{L}}_{b_{0}} & = \left\{L \in  \hat{\mathcal{L}} : \text{whenever} ~\#~ B_{1} = \frac{v_{1}}{2}~~ \text{we have}~~ b_{0} \in B_{1} \right\},\\
+\hat{\mathcal{L}}_{a_{0}'} & = \left\{L \in  \widetilde{\mathcal{L}} : \text{whenever} ~\#~ A_{2} = \frac{v_{2}}{2}~~ \text{we have}~~ a_{0}' \in A_{2} \right\},\quad \text{and}\\
+\hat{\mathcal{L}}_{b_{0}'} & = \left\{L \in  \widetilde{\mathcal{L}} : \text{whenever} ~\#~ B_{2} = \frac{v_{2}}{2}~~ \text{we have}~~ b_{0}' \in B_{2} \right\}.
 \end{align*}
  
-Master Equation~\eqref{eq-3.34} is equivalent to any of the criss cross systems $s_{l, \mathcal{L}^{\ast}}$ with $l \in \{45,46, 47, 48 \}$,
+Master Equation~\eqref{eq-3.34} is equivalent to any of the criss cross systems $S_{l, \mathcal{L}^{\ast}}$ with $l \in \{45,46, 47, 48 \}$,
 {\fontsize{10.5}{12.5}\selectfont
 \begin{equation*}
 \mathcal{L}^{\ast} \in \left\{\mathcal{L}, \hat{\mathcal{L}}, \hat{\mathcal{L}}, \hat{\mathcal{L}}_{a_{0}}, \hat{\mathcal{L}}_{b_{0}}, \widetilde{\mathcal{L}}_{a_{0}'}, \widetilde{\mathcal{L}}_{b_{0}'} : a_{0} \in E \cap A, b_{0} \in E \cap B, a_{0}' \in E' \cap A, b_{0}' \in E' \cap B \right\},
 \end{equation*} }
 
-Where
+where
 \begin{equation}
-s_{l, \mathcal{L}^{\ast}} = \left\{(3.l)_{L} : L \in \mathcal{L}^{*} \right\}\tag{3.49}\label{eq-3.49}
+S_{l, \mathcal{L}^{\ast}} = \left\{(3.l)_{L} : L \in \mathcal{L}^{*} \right\}\tag{3.49}\label{eq-3.49}
 \end{equation}
 
 We note two of them with details as we will use them in applying our discussion.
 
 \begin{equation}
-W_{L}, u_{L}-w_{L}, v_{L}-w_{L}, z_{L}~~\text{are all} > 0, (u -w_{L})(v_{L}-w_{L}) =z_{L} w_{L}~~\text{for}~~ L \in \hat{\mathcal{L}}\tag{3.50}\label{eq-3.50}
+w_{L}, u_{L}-w_{L}, v_{L}-w_{L}, z_{L}~~\text{are all} > 0, (u -w_{L})(v_{L}-w_{L}) =z_{L} w_{L}~~\text{for}~~ L \in \hat{\mathcal{L}}\tag{3.50}\label{eq-3.50}
 \end{equation}
   
 For any $L \in \hat{\mathcal{L}}$, there exist $t_{L}'$, $t_{L}'' \geq 2$, $u_{L}', v_{L}'' \geq 1$ that satisfy
 \begin{equation}
-s = t_{L}' t_{L}'', a_{L} = t_{L}' u_{L}', v_{L} = t_{L}'' v_{L}'', w_{L} =u_{L}' v_{L}''\tag{3.51}\label{eq-3.51}
+s = t_{L}' t_{L}'',~~a_{L} = t_{L}' u_{L}',~~ v_{L} = t_{L}'' v_{L}'',~~ w_{L} =u_{L}' v_{L}''\tag{3.51}\label{eq-3.51}
 \end{equation}   
   
-  These motovate criss-cross concepts for $\boldsymbol{\Psi}$ and $s$ and we proceed with of them and their use.
+  These motivate criss-cross concepts for $\boldsymbol{\Psi}$ and $s$ and we proceed with them and their use.
   
 \end{enumerate}
 
 \begin{definition}\label{definition-3.4}
-Let $\boldsymbol{\Psi}$ be a set of covering of $\Gamma_{n}$ Which is neither flat nor a pole. Let $\phi  \neq E \subset_{\neq} \Gamma_{n}$. $\boldsymbol{\Psi}$ will be said to be \textbf{criss-cross via $\mathbf{E}$} of it is decomposable via $E$ and satisfies the criss-cross system~\eqref{eq-3.50} or equivalently~\eqref{eq-3.51}.
+Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ which is neither flat nor a pole. Let $\phi  \neq E \subset_{\neq} \Gamma_{n}$. $\boldsymbol{\Psi}$ will be said to be \textbf{criss-cross via $\mathbf{E}$} of it is decomposable via $E$ and satisfies the criss-cross system~\eqref{eq-3.50} or equivalently,~\eqref{eq-3.51}.
 
 $\boldsymbol{\Psi}$ will be called \textbf{criss-cross} if it is criss-cross via some $E$ with $\phi \neq E \subset_{\#} \Gamma_{n}$.
 
@@ -1183,7 +1193,7 @@ $\boldsymbol{\Psi}$ will be called \textbf{criss-cross} if it is criss-cross via
 \begin{thm}\label{thm-3.7}
 Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ such that it is neither flat nor a pole.
 \begin{enumerate}[label=(\roman*)]
-\item Let $\phi \neq E \subset_{\neq} \Gamma_{n}, | \boldsymbol{\Psi}\rangle$ is a product vector in the bipartite cut $(E, E')$ of and only of $\boldsymbol{\Psi}$ is is criss-cross via $E$.
+\item Let $\phi \neq E \subset_{\neq} \Gamma_{n}. | \boldsymbol{\Psi}\rangle$ is a product vector in the bipartite cut $(E, E')$ if and only if $\boldsymbol{\Psi}$ is is criss-cross via $E$.
 \item $| \boldsymbol{\Psi} \rangle$ is genuinely entangled if and only if $\boldsymbol{\Psi}$ in not criss-cross.
 \end{enumerate}
 
@@ -1191,11 +1201,11 @@ Let $\boldsymbol{\Psi}$ be a set of coverings of $\Gamma_{n}$ such that it is ne
 
 
 \begin{proof}
-(i) follows from ~\eqref{subsubsection-3.1.6} (h) and \eqref{subsubsection-3.1.7} (f) above. ??????????????? is immediate from (i). 
+(i) follows from ~\eqref{subsubsection-3.1.6} (h) and \eqref{subsubsection-3.1.7} (f) above. (ii) It is immediate from (i). 
 \end{proof}
 
 \begin{definition}\label{definition-3.5}
-Let $x\in \mathbb{N}$ with $x \geq 4$. The number $x$ will be said to be \textbf{criss-cross decomposable} of there exist $x_{1}, x_{2}, x_{3}, x_{4}$ in $\mathbb{N}$ that satisfy
+Let $x\in \mathbb{N}$ with $x \geq 4$. The number $x$ will be said to be \textbf{criss-cross decomposable} if there exist $x_{1}, x_{2}, x_{3}, x_{4}$ in $\mathbb{N}$ that satisfy
 \begin{equation}
 x= x_{1} + x_{2} + x_{3} + x_{4}, \qquad x_{2} x_{3} = x_{4} x_{1}\tag{3.52}\label{eq-3.52}
 \end{equation}
@@ -1215,13 +1225,13 @@ will be called the \textbf{corresponding configuration}.
 \textbf{Criss-cross decompsitions and their use}. 
 
 \begin{enumerate}[label=(\alph*)]
-\item The property is relevant in view of $???? = \# \boldsymbol{\Psi}$ satisfying $s=s_{1} + s_{2} + s_{3} + s_{4}$ with $s_{1} = w_{1}$, $s_{2} = u-w$, $s_{3}=v-w$, $s_{4} =z$ in \ref{subsubsection-3.1.7} (c) and specifying the criss-cross equation~\eqref{eq-3.43} there, the configuration given in Definition~\ref{definition-3.5} expresses the cardinalities of the sets in Figure~\ref{fig11}. 
+\item The property is relevant in view of $s = \# \boldsymbol{\Psi}$ satisfying $s=s_{1} + s_{2} + s_{3} + s_{4}$ with $s_{1} = w$, $s_{2} = u-w$, $s_{3}=v-w$, $s_{4} =z$ in \ref{subsubsection-3.1.7} (c) and specifying the criss-cross equation~\eqref{eq-3.43} there, the configuration given in Definition~\ref{definition-3.5} expresses the cardinalities of the sets in Figure~\ref{fig11}. 
 
-\item At most eight rearrangements of $x_{1}, x_{2}, x_{3}, x_{4}$ satisfy the same requirements as in Definition~\ref{definition-3.5} and on and only on is non-decreasing in the sense that $x_{1} \leq x_{2} \leq x_{3} \leq x_{4}$. The eight rearrangements can be listed via corresponding configurations viz,
+\item At most eight rearrangements of $x_{1}, x_{2}, x_{3}, x_{4}$ satisfy the same requirements as in Definition~\ref{definition-3.5} and one and only one is non-decreasing in the sense that $x_{1} \leq x_{2} \leq x_{3} \leq x_{4}$. The eight rearrangements can be listed via corresponding configurations viz,
 
 \begin{equation}
 \begin{array}{c|c}
-x_{??} & x_{4}\nonumber\\\hline
+x_{2} & x_{4}\nonumber\\\hline
 x_{1} & x_{3}
 \end{array}\\~~,~~
 \begin{array}{c|c}
@@ -1256,11 +1266,11 @@ x_{2} & x_{4}
 \end{array}
 \end{equation}
 
-\item Suppose $x$ is criss-cross decomposable and $x_{1}, x_{2}, x_{3}, x_{4}$ are is in ~\eqref{eq-3.52}. Set $y_{2} =x_{1} + x_{2}$, $y_{3} =x_{1} +x_{3}$, Then $y_{2}~y_{3} = \left(x_{1} + x_{2}\right)~\left(x_{1} + x_{3}\right)= x_{1}^{2} + x_{2}x_{1} + x_{1} x_{3} + x_{2}x_{3} + x_{1}^{2} + x_{2}x_{1} +x_{1} x_{3} + x_{1} x_{4} = x_{1} \left(x_{1} + x_{2} + x_{3} + x_{4} \right)= x_{1} x$.  
+\item Suppose $x$ is criss-cross decomposable and $x_{1}, x_{2}, x_{3}, x_{4}$ are is as ~\eqref{eq-3.52}. Set $y_{2} =x_{1} + x_{2}$, $y_{3} =x_{1} +x_{3}$, Then $y_{2}~y_{3} = \left(x_{1} + x_{2}\right)~\left(x_{1} + x_{3}\right)= x_{1}^{2} + x_{2}x_{1} + x_{1} x_{3} + x_{2}x_{3} = x_{1}^{2} + x_{2}x_{1} +x_{1} x_{3} + x_{1} x_{4} = x_{1} \left(x_{1} + x_{2} + x_{3} + x_{4} \right)= x_{1} x$.  
 
-So $x$ divides $y_{2}~y_{3}$. But $2 \leq y_{2}$, $y_{3} < x$. So $x$ cannot divide any on out of $y_{2}, y_{3}$. So $x$ cannot be a prime number. On the other hand, suppose that $x$ is a composite number say $x=pq$ with $2 \leq p \leq q$. Consider any $1 \leq p_{1} < p$, $1 < q_{1} < q$. Set $x_{1} = p_{1}q_{1}$, $x_{2} = p(qq_{1})$, $x_{3} =(p-p_{1})q_{1}$ $x_{4} = (p-p_{1})(q-q_{1})$. Then $x_{1} + x_{2} + x_{3} + x_{4} = pq =x$ and $x_{1}x_{4} = x_{2}x_{3}$. So $x$ is criss-cross decomposable. 
+So $x$ divides $y_{2}~y_{3}$. But $2 \leq y_{2}$, $y_{3} < x$. So $x$ cannot divide any one out of $y_{2}, y_{3}$. So $x$ cannot be a prime number. On the other hand, suppose that $x$ is a composite number say $x=pq$ with $2 \leq p \leq q$. Consider any $1 \leq p_{1} < p$, $1 < q_{1} < q$. Set $x_{1} = p_{1}q_{1}$, $x_{2} = p(q-q_{1})$, $x_{3} =(p-p_{1})q_{1}$ $x_{4} = (p-p_{1})(q-q_{1})$. Then $x_{1} + x_{2} + x_{3} + x_{4} = pq =x$ and $x_{1}x_{4} = x_{2}x_{3}$. So $x$ is criss-cross decomposable. 
  
-\item Now consider any composite number $x$ and any criss-cross decomposition of $x$. We proceed as in the first part of (c) except the lat sentence. Comparing the factorization of the two sides of $y_{2} y_{1} =x_{1} x$ we can express $y_{2}= y^{'}_{2} y_{2}^{'}$, $y_{3} = y_{3}' y_{3}''$, $x=y_{2}'y_{3}'$, $x_{1} =y_{2}'' y_{3}''$  for some $y_{2}', y_{3} \geq 2$, $y_{2}'', y_{3}'' \geq 1$. This give us $x_{2} = y_{2}-x_{1} =\left(y_{2}'-y_{3}''\right)y_{2}''$, $x_{3} =y_{3} -x_{1} =\left(y_{3}'-y_{2}''\right)y_{3}''$, $x_{4}=x-y_{2}-x_{3} = (y_{2}'-y_{3}'')(y_{3}'-y_{2}'')$.
+\item Now consider any composite number $x$ and any criss-cross decomposition of $x$. We proceed as in the first part of (c) except the last sentence. Comparing the factorization of the two sides of $y_{2} y_{1} =x_{1} x$ we can express $y_{2}= y^{'}_{2} y_{2}^{''}$, $y_{3} = y_{3}' y_{3}''$, $x=y_{2}'y_{3}'$, $x_{1} =y_{2}'' y_{3}''$  for some $y_{2}', y_{3} \geq 2$, $y_{2}'', y_{3}'' \geq 1$. This give us $x_{2} = y_{2}-x_{1} =\left(y_{2}'-y_{3}''\right)y_{2}''$, $x_{3} =y_{3} -x_{1} =\left(y_{3}'-y_{2}''\right)y_{3}''$, $x_{4}=x-y_{2}-x_{3} = (y_{2}'-y_{3}'')(y_{3}'-y_{2}'')$.
  We know that $x_{1}, x_{2}, x_{3}, x_{4} > 0$. So $1 \leq y_{3}'' < y_{2}''$ and $1 \leq y_{2}'' < y_{3}'$. Hence $x_{1}, x_{2}, x_{3}, x_{4}$ have the same form as in the second paragraph of (c) with $p,q$ replaced by $y_{2}', y_{3}'$ respectively and $p_{1}, q_{1}$ by $y_{3}'', y_{2}''$ respectively.
  
  Hence all criss-cross decompositions of $x$ are given by the method in the second paragraph of (c) by varying factorizations of $x$ that re available.
@@ -1271,15 +1281,15 @@ For $s=4$ : $1 \leq 1 \leq 1 \leq 1$  ; $\begin{pmatrix}1 & 1\\ 1 & 1\end{pmatri
 
 For $s=6$ : $1 \leq 1 \leq 2 \leq 2$  ; $\begin{pmatrix}1 & 1\\ 2 & 2\end{pmatrix}$,~ $\begin{pmatrix}1 & 2\\ 1 & 2\end{pmatrix}$,~ $\begin{pmatrix}2 & 1\\ 2 & 1\end{pmatrix}$,~ $\begin{pmatrix}2 & 3\\ 1 & 1\end{pmatrix}$.
 
-{\fontsize{11}{14}\selectfont For $s=8$ : $1 \leq 1 \leq 3 \leq 3$, $1 \leq 2 \leq 2 \leq 2$~; $\begin{pmatrix}1 & 1\\ 3 & 3\end{pmatrix}$,~$\begin{pmatrix}1 & 3\\ 1 & 3\end{pmatrix}$,~$\begin{pmatrix}3 & 1\\ 3 & 1\end{pmatrix}$,~ $\begin{pmatrix}3 & 3\\ 1 & 1\end{pmatrix}$,~ $\begin{pmatrix}2 & 2\\ 2 & 2\end{pmatrix}$.} 
+{\fontsize{11}{14}\selectfont For $s=8$ : $1 \leq 1 \leq 3 \leq 3$, $2 \leq 2 \leq 2 \leq 2$~; $\begin{pmatrix}1 & 1\\ 3 & 3\end{pmatrix}$,~$\begin{pmatrix}1 & 3\\ 1 & 3\end{pmatrix}$,~$\begin{pmatrix}3 & 1\\ 3 & 1\end{pmatrix}$,~ $\begin{pmatrix}3 & 3\\ 1 & 1\end{pmatrix}$;~ $\begin{pmatrix}2 & 2\\ 2 & 2\end{pmatrix}$.} 
 \end{enumerate}
 
-????????????????????  $1 \leq 2 \leq 2 \leq 4$~; $\begin{pmatrix}1 & 2\\ 2 & 4\end{pmatrix}$,~ $\begin{pmatrix}4 & 2\\ 2 & 1\end{pmatrix}$,~ $\begin{pmatrix}2 & 1\\ 4 & 2\end{pmatrix}$,~ $\begin{pmatrix}2 & 4\\ 1 & 2\end{pmatrix}$.
+For $s=9$, $1 \leq 2 \leq 2 \leq 4$~; $\begin{pmatrix}1 & 2\\ 2 & 4\end{pmatrix}$,~ $\begin{pmatrix}4 & 2\\ 2 & 1\end{pmatrix}$,~ $\begin{pmatrix}2 & 1\\ 4 & 2\end{pmatrix}$,~ $\begin{pmatrix}2 & 4\\ 1 & 2\end{pmatrix}$.
 
 \end{subsubsec}
 
 \begin{example}\label{example-3.4}
-Let $v=6$, $E = \{1,2,3,4,5,6\}$. Next, cut $\psi_{j}^{E}, \psi_{k}' : 1 \leq j, k\leq 3$ be as given in Figure~\ref{fig12} and $\boldsymbol{\Psi} = \left\{\psi_{j}^{E} \times \psi_{k}^{E'} : j=2~~\text{or}~~ k=1~~\text{or}~~(j,k)=(3,2)\right\}$ as displayed in Figure~\ref{fig13}.
+Let $v=6$, $E = \{1,2,3,4,5,6\}$. Next, let $\psi_{j}^{E}, \psi_{k}' : 1 \leq j, k\leq 3$ be as given in Figure~\ref{fig12} and $\boldsymbol{\Psi} = \left\{\psi_{j}^{E} \times \psi_{k}^{E'} : j=2~~\text{or}~~ k=1~~\text{or}~~(j,k)=(3,2)\right\}$ as displayed in Figure~\ref{fig13}.
 \end{example}
 
 \newpage
@@ -1299,7 +1309,7 @@ Let $v=6$, $E = \{1,2,3,4,5,6\}$. Next, cut $\psi_{j}^{E}, \psi_{k}' : 1 \leq j,
 
 \begin{enumerate}[label=(\alph*)]
 
-\item  We consider the case $A_{1} = \{1\}$, $B_{1}=\{2\}$, $A_{2} = \{7\}$, $B_{2} = \{8\}$, i.e., $A_{3}= \{1,7\}$, $B_{2} = \{2,8\}$.
+\item  We consider the case $A_{1} = \{1\}$, $B_{1}=\{2\}$, $A_{2} = \{7\}$, $B_{2} = \{8\}$, i.e., $A_{3}= \{1,7\}$, $B_{3} = \{2,8\}$.
 
 \begin{figure}[h]
 \centering
@@ -1307,7 +1317,7 @@ Let $v=6$, $E = \{1,2,3,4,5,6\}$. Next, cut $\psi_{j}^{E}, \psi_{k}' : 1 \leq j,
 \caption{}\label{fig14}
 \end{figure} 
 
-We note from Figure~\ref{fig14} that $L=(A_{j}, B_{j})_{1 \leq j \leq 3}$ ???????????? equation~\eqref{eq-3.46}.
+We note from Figure~\ref{fig14} that $L=(A_{j}, B_{j})_{1 \leq j \leq 3}$ satisfies the Criss-cross  Equation~\eqref{eq-3.46}$_{L}$.
 
 \newpage
 
@@ -1317,24 +1327,29 @@ We note from Figure~\ref{fig14} that $L=(A_{j}, B_{j})_{1 \leq j \leq 3}$ ??????
 \includegraphics[scale=.9]{figure/figures/fig15.eps}
 \caption{}\label{fig15}
 \end{figure} 
-$\boldsymbol{\Psi}$ does not satisfy the cirss-Cron Equation~\eqref{eq-3.46} for this ????? $L = \left(A_{j}, B_{??}\right)_{1 \leq j \leq 3}$
+$\boldsymbol{\Psi}$ does not satisfy the Criss-cross Equation~\eqref{eq-3.46} for this the triple  $L = \left(A_{j}, B_{j}\right)_{1 \leq j \leq 3}$
 
 \item Hence by Theorem~\ref{thm-3.6} $| \boldsymbol{\Psi} \rangle$ is genuinely entangled.
 
-\item (a) and (b) show that~\eqref{eq-3.40}$_{L}$ and \eqref{eq-3.46}$_{L}$ can be in different situations of holding or not holding for certain $L_{1}, L_{2} \in s$ in ~\eqref{subsubsection-3.1.7} (e) and (f).
+\item (a) and (b) show that~\eqref{eq-3.40}$_{L_{1}}$ and \eqref{eq-3.46}$_{L_{2}}$ can be in different situations of holding or not holding for certain $L_{1}, L_{2} \in L$ in ~\eqref{subsubsection-3.1.7} (e) and (f).
 
-We can reword Theorem~\ref{thm-3.7} in terms of criss-cross decompostions of $s/ {rm in}$ place of~\eqref{eq-3.50} and ~\eqref{eq-3.51} as alone below.
+We can reword Theorem~\ref{thm-3.7} in terms of criss-cross decompostions of $s/ {\rm in}$ place of~\eqref{eq-3.50} and ~\eqref{eq-3.51} as alone below.
 
 \end{enumerate}
 
 \begin{thm}\label{thm-3.8}
 (i) (a) If $\boldsymbol{\Psi}$ is such that every configuration as in \ref{subsubsection-3.1.7} (d) and figure~\ref{fig11} corresponds to some criss-cross decompsition of $s$ then $\boldsymbol{\Psi}$ is a product vector in the bipartite cut $(E, E')$.
 
-(b) The converse is also true. ??????????????????
+(b) The converse is also true. 
+
+(ii) (i)(a) does happen if bold capital psi is factorable
+
+(iii) If (i) (a) does not happen for any $E \phi \neq \Gamma_{n}$, then $L \Psi >$ is genuinely entangled.
+
 \end{thm}
 
 \begin{subsubsec}\label{subsubsection-3.1.9}
-{\bfseries(Alter???)} We now ???? the same situation as above from another point of view. We continue with the notation and terminology above, particularly that in~\eqref{subsubsection-3.1.7} and \eqref{subsubsection-3.1.8}. We consider the case that $j_{1}, k_{1}, j_{2}, k_{2} > 0$ but $\boldsymbol{\Psi}$ is not factorable. 
+{\bfseries(Alter???)} We now look at the same situation as above from another point of view. We continue with the notation and terminology above, particularly that in~\eqref{subsubsection-3.1.7} and \eqref{subsubsection-3.1.8}. We consider the case that $j_{1}, k_{1}, j_{2}, k_{2} > 0$ but $\boldsymbol{\Psi}$ is not factorable. 
 \end{subsubsec}
 
 \begin{enumerate}[label =(\alph*)]
@@ -1351,7 +1366,9 @@ $$
 (j_{1}k_{2} -y_{2})(j_{2} k_{1} - y_{3}) = (j_{1}k_{1}-y_{1})(j_{2}k_{2}-y_{4})\tag{3.56}\label{eq-3.56}
 \end{equation}
 
-\item We combine~\eqref{eq-3.55} and \eqref{eq-3.56} and obtain that\eqref{eq-3.56} is equivalent to $0 \leq y_{1} < j_{1} k_{1}$, $0 \leq y_{2} < j_{1} k_{2}$, $0 \leq y_{3} < j_{2} k_{1}$, $ 0 \leq y_{4} < j_{2} k_{2}$, $\left(y_{1}, y_{4}\right) \neq (0,0) \neq \left(y_{2}, y_{3}\right)$, $\sigma - y_{1} + y_{2} + y_{3} + y_{4} \geq 2$, 
+\item We combine~\eqref{eq-3.55} and \eqref{eq-3.56} and obtain that\eqref{eq-3.56} is equivalent to 
+
+$0 \leq y_{1} < j_{1} k_{1}$, $0 \leq y_{2} < j_{1} k_{2}$, $0 \leq y_{3} < j_{2} k_{1}$, $ 0 \leq y_{4} < j_{2} k_{2}$, $\left(y_{1}, y_{4}\right) \neq (0,0) \neq \left(y_{2}, y_{3}\right)$, $\sigma - y_{1} + y_{2} + y_{3} + y_{4} \geq 2$, 
 \begin{equation}
 j_{2}k_{2}y_{1} + j_{1} k_{1} y_{4} - y_{1}y_{4} = j_{2} k_{1} y_{2} + j_{1} k_{2} y_{3} - y_{2}y_{3}\tag{3.57}\label{eq-3.57}
 \end{equation}
@@ -1360,14 +1377,14 @@ We may proceed as in ~\eqref{subsubsection-3.1.7} (f) and (g), change $j_{1}, j_
 
 We readily obtain that $\boldsymbol{\Psi}$ is criss-cross via $E$ if and only if \eqref{eq-3.57}$_{L}$ holds for $L \in \hat{\mathcal{L}}$.
 
-\item We note that ever though $s$ depends only on $\boldsymbol{\Psi}$ $j'$ and $k'$ depend on $E$ and $\boldsymbol{\Psi}$. So we can denote $\sigma$ by $\sigma_{E}$, if that need be.
+\item We note that even though $s$ depends only on $\boldsymbol{\Psi}$, $j'$ and $k'$ depend on $E$ and $\boldsymbol{\Psi}$. So we can denote $\sigma$ by $\sigma_{E}$, if that the need be.
 
-\item We note ???????????? ways of writing~\eqref{eq-3.57} to facililate the process of finding solutions.
+\item We note different  ways of writing~\eqref{eq-3.57} to facililate the process of finding solutions.
 \begin{align*}
 \left(j_{2}k_{2} - y_{4} \right)y_{1} + j_{1}k_{1} y_{4} & =\left(j_{2}k_{1}-y_{3}\right)y_{2} + j_{1}k_{2}y_{3}\tag{3.58}\label{eq-3.58}\\
 \left(j_{2}k_{2} - y_{4} \right)y_{1} + j_{1} k_{1} y_{4} &= j_{2}k_{1}y_{2} + \left(j_{1} k_{2} -y_{2} \right)y_{3} \tag{3.59}\label{eq-3.59}\\
 j_{2}k_{1}y_{1} + \left(j_{1}k_{1}-y_{1}\right)y_{4} &= \left(j_{2}k_{1} -y_{3}\right)y_{2} + j_{1}k_{2}y_{3}\tag{3.60}\label{eq-3.60}\\
-j_{2}k_{1}y_{1} + \left(j_{1}k_{1}-y_{1} \right)y_{4} &= j_{2}k_{1}y_{2}y + \left(j_{1}k_{2}-y_{2}\right)y_{3}\tag{3.61}\label{eq-3.61}
+j_{2}k_{1}y_{1} + \left(j_{1}k_{1}-y_{1} \right)y_{4} &= j_{2}k_{1}y_{2} + \left(j_{1}k_{2}-y_{2}\right)y_{3}\tag{3.61}\label{eq-3.61}
 \end{align*}
 \end{enumerate} 
 
@@ -1703,7 +1720,29 @@ By convention (that empty sums are zero), $\alpha^{\#}(\phi)=0$ and $| \alpha \r
 
 \item Let $A_{1} \subset A$, $B_{1} \subset B$, Set $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\}$, $\{\psi(A_{1}) : \psi \in = \boldsymbol{\Psi} \} = \{B(A_{1, j}) : 1 \leq j \leq j_{A_{1}} \}$ with $B(A_{1,j})$'s all distinct and $\{\psi^{-1}(B_{1}) : \psi \in  \boldsymbol{\Psi}\} = \{A(B_{1}, k) : 1\leq k \leq k_{B_{1}}\}$ with $A(B_{1}, k)$'s all distinct. Then $\boldsymbol{\Psi}_{A_{1}, B_{1}} \neq \phi$ if and only if $B_{1} = B(A_{1, j})$ for some $j$ with $1 \leq j \leq j_{A_{1}}$, if and only if $A_{1} = A(B_{1, k})$ for some $k$ with $1 \leq k \leq k_{R}$. Moreover, $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \boldsymbol{\Psi}_{A \smallsetminus A_{1}, B \smallsetminus B_{1}}$ and $\boldsymbol{\Psi}$ is the disjoint union of non-empty sets $\boldsymbol{\Psi}_{A_{1}}, B(A_{1,j}), 1 \leq j \leq j_{A_{1}}$ and also $\boldsymbol{\Psi}_{A(B_{1}, k), B_{1}}, 1 \leq k \leq k_{R}$.
 
-??????????????????????? we write $\alpha(A_{1}, B_{1})$ for $\alpha^{\#}(\boldsymbol{\Psi}_{A_{1}, B_{1}})$. We have on the other hand For $A_{2} \in \varphi_{2}$, $B_{1} \in B_{2}$ we have $j_{A_{1}} \geq 2$, $k_{B_{1}}\geq 2$ and 
+%~ alpha (A-sub-1, B-sub-1)=alpha ( ,A\ A-sub-1, B \ B-sub-1).........(4.3)
+%~ alpha^=alpha#(bold capital psi)=Symbol capital sigma WITH  j=1 BELOW IT AND j-sub-A-sub-1 ABOVE IT
+%~ alpha(A-sub-1, B (A-sub-1,j) = Symbol capital sigma WITH k=1 BELOW IT AND k-sub-B-sub-1 ABOVE IT alpha(A(B-sub-1,k),B-sub-1)...(4.4)
+%~ (d) For A-sub-1 epsilon script A-sub-1, B-sub-1 epsilon script B-sub-1, we have j-sub-A-sub-1=1=k-sub-B-sub-1 and therefore, 
+%~ alpha^=
+\begin{equation}
+\alpha(A_{1}, B_{1}) = \alpha(A \smallsetminus A_{1}, B \smallsetminus B_{1})\tag{4.3}\label{eq-4.3}
+\end{equation}
+
+$\alpha=\alpha \# (\boldsymbol{\Psi})= \sigma_{j=1} j_{A_{1}}$
+
+\begin{equation}
+\hat{\alpha} = \alpha \# (\boldsymbol{\Psi}) = \sum_{j=1}^{j_{A_{1}}} \alpha (A_{1}, B(A_{1, j})) = \sum_{k=1}^{kB_{1}} \alpha (a(B_{1}, k), B_{1})\tag{4.4}\label{eq-4.4}
+\end{equation}
+
+\item For $A_{1} \epsilon A_{1}, B_{1} \epsilon B_{1}$, we have $j_{A_{1}}=1=k_{B_{1}}$ and therefore,
+
+%~ alpha^=alpha(A-ub-1, B(A-sub-1,1)=alpha(A(B-sub-1,1), B-sub-1)....(4.5)
+\begin{equation}
+\alpha = \alpha (A_{1}, B(A_{1}, 1)= \alpha(a(B_{1}), 1), B_{1}\tag{4.5}\label{eq-4.5}
+\end{equation}
+
+we write $\alpha(A_{1}, B_{1})$ for $\alpha^{\#}(\boldsymbol{\Psi}_{A_{1}, B_{1}})$. We have on the other hand, for $A_{1} \in \phi_{2}$, $B_{1} \in B_{2}$ we have $j_{A_{1}} \geq 2$, $k_{B_{1}}\geq 2$ and 
 \begin{equation}
 s \geq \max\{j_{A_{1}}, k_{B_{1}}\}\tag{4.6}\label{eq-4.6}
 \end{equation}
@@ -1722,30 +1761,36 @@ F_{\alpha}(\boldsymbol{\x}) &= \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) F_
 & = 2^{-v/2} \sum_{\psi \in \boldsymbol{\Psi}} \alpha(\psi) \left(\sum_{B_{1}\subset B} (-1)^{\# B_{1}} \boldsymbol{\x}^{\psi^{-1}(B_{1})} \boldsymbol{\x}^{B \smallsetminus B_{1}} \right)\tag{4.7}\label{eq-4.7}
 \end{align*}
 
-$S, F_{\alpha}$ is a homogeneous polynomial in $\boldsymbol{\x}$ of degree $v$.
+So, $F_{\alpha}$ is a homogeneous polynomial in $\boldsymbol{\x}$ of degree $v$.
 
 \item We combine (a) above with~\eqref{subsubsection-4.1.1}(c) and (d) and have, in analogy with~\eqref{subsubsection-3.1.3}(c), particularly~\eqref{eq-3.10},
 \begin{align*}
-F_{\alpha}(\boldsymbol{\x}) &= 2^{-v/2} \sum_{A_{1}\subset A}(-1)^{\# A_{1}} \boldsymbol{\x}^{A_{1}} \sum_{j=1}^{j_{A_{1}}} \alpha(A_{1}, B(A_{1}, j)) \boldsymbol{\x}^{B\smallsetminus B(A_{1, j})}\\
-& = 2^{-v/2} \hat{\alpha} \sum_{A_{1}\in \varphi_{1}} (-1)^{\# A_{1}} \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B \smallsetminus B(A_{1},1)} +\\
-    & \qquad\qquad2^{-v/2} \sum_{A_{1}\in \varphi_{2}} \sum_{j=1}^{j_{A_{1}}} (-1)^{F A_{1}} \alpha(A_{1}, B(A_{1}, j)) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B \smallsetminus B(A_{1}, j)}\\
+F_{\alpha}(\boldsymbol{\x}) &= 2^{-v/2} \sum_{A_{1}\subset A}(-1)^{\# A_{1}} \boldsymbol{\x}^{A_{1}} \sum_{j=1}^{j_{A_{1}}} \alpha(A_{1}, B(A_{1}, j)) \boldsymbol{\x}^{B\smallsetminus B(A_{1},j)}\\
+& = 2^{-v/2} \hat{\alpha} \sum_{\phi_{1}\in \varphi_{1}} (-1)^{\# A_{1}} \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B \smallsetminus B(A_{1},1)} +\\
+    & \qquad\qquad2^{-v/2} \sum_{\phi_{1}\in \varphi_{2}} \sum_{j=1}^{j_{A_{1}}} (-1)^{\# A_{1}} \alpha(A_{1}, B(A_{1}, j)) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B \smallsetminus B(A_{1}, j)}\\
  & = \hat{\alpha} F_{\boldsymbol{\Psi}}^{1} (\boldsymbol{\x}) + F_{\alpha}^{2}(\boldsymbol{\x}) = F_{\alpha}^{1}(\boldsymbol{\x}) + F_{\alpha}^{2} (\boldsymbol{\x}),~~ \text{say}\tag{4.8}\label{eq-4.8}    
 \end{align*}
 
-Here $F_{\boldsymbol{\Psi}}^{1}(\boldsymbol{\x})$ is independent of $\alpha$, is non-zero and has support $\Gamma_{n}$, but $F_{\alpha}^{2}(\boldsymbol{\x})$ depends on $\alpha$, it is either zero or has support $\Gamma_{n}$ in view of ~\eqref{eq-4.3} in \eqref{subsubsection-4.1.1} (c) above. In the latter case, no $\x_{j}$ is a factor of $F_{\boldsymbol{\Psi}}^{1}(\boldsymbol{\x})$.
+Here $F_{\boldsymbol{\Psi}}^{1}(\boldsymbol{\x})$ is independent of $\alpha$, is non-zero and has support $\Gamma_{n}$, but $F_{\alpha}^{2}(\boldsymbol{\x})$ depends on $\alpha$, it is either zero or has support $\Gamma_{n}$ in view of (4.3) in \eqref{subsubsection-4.1.1} (c) above. In the latter case, no $\x_{j}$ is a factor of $F_{\boldsymbol{\Psi}}^{2}(\boldsymbol{\x})$.
 
-An alternative form for $F_{\alpha}^{2} (\boldsymbol{\x})$ is ?????????????????????????????????????
+An alternative form for $F_{\alpha}^{2} (\boldsymbol{\x})$ is 
+
+%~ F-sup-2-sub-alpha(bold X)= 2 power minus nu/2 capital sigma WITH B-sub-1 elpsilon script B-sub-2 BELOW IT (-1) superscript #B-sub-1 alpha(A(B-sub-1,k), B-sub-1) bold X-sup-A(B-sub-1,k) bold X-superscript B \B-sub-1.....(4.9)
+
+\begin{equation}
+F^{2}_{\alpha(\boldsymbol{\x})} = 2^{\nu/2} \sigma_{B_{1}} \epsilon B_{2} (-1)^{\# B_{1}} \alpha(A(B_{1}), k B_{1}) \boldsymbol{\x}^{A} (B_{1}, k) \boldsymbol{\x}^{B \smallsetminus B_{1}}\tag{4.9}\label{eq-4.9} 
+\end{equation}
 
 
 \item $\hat{\alpha}~ F_{\boldsymbol{\Psi}}^{1} (\boldsymbol{\x}) \neq 0$ if and only if $\hat{\alpha} \neq 0$ if and only if $\boldsymbol{\x}^{B}$ occurs in $F_{\alpha}(\boldsymbol{\x})$ if and only if $\boldsymbol{\x}^{A}$ occurs in $F_{\alpha}(\boldsymbol{\x})$. In this case $F_{\alpha}^{1}(\boldsymbol{\x})$ has support $\Gamma_{n}$ and no $\x_{j}$ is a factor of $F_{\alpha}^{1}(\boldsymbol{\x})$.
 
 
-\item Now suppose $\hat{\alpha} \neq 0$. Then by~\eqref{eq-4.4} in ~\eqref{subsubsection-4.1.1} (b) above, for $A_{1} \in \varphi_{2}$, $B_{1} \in B_{2}$, we have that $\alpha(A_{1}, B(A_{1}, j)) \neq 0$, for some $j$ with $1 \leq j \leq j_{A_{1}}$, and $\alpha_{(A(B_{1}, k), B_{1})} \neq 0$ for some $k$ with 
+\item Now suppose $\hat{\alpha} \neq 0$. Then by (4.4) in ~\eqref{subsubsection-4.1.1} (b) above, for $A_{1} \in \varphi_{2}$, $B_{1} \in B_{2}$, we have that $\alpha(A_{1}, B(A_{1}, j)) \neq 0$ for some $j$ with $1 \leq j \leq j_{A_{1}}$, and 
 \begin{equation}
-1 \leq k \leq k_{B_{1}}\tag{4.10}\label{eq-4.10} 
+\alpha {(A(B_{2}, k), B_{1})} \neq 0~\text{for some}~k~\text{with}~ 1 \leq k \leq k_{B_{1}}\tag{4.10}\label{eq-4.10} 
 \end{equation}
 
-Therefore, $F_{\alpha}^{2}(\boldsymbol{\x})$ has at least $\# \varphi_{2}$ (non-zero) terms and is, thus, non-zero. Moreover, using~\eqref{eq-4.3} in ~\eqref{subsubsection-4.1.1}(b) we have that $\alpha\left(A \smallsetminus A_{1} B\smallsetminus B (A_{1}, j) \right) \neq 0 \neq \alpha \left(A\smallsetminus A (B_{1}, k), B \smallsetminus B_{1} \right)$ with $j$ and $k$ as in ~\eqref{eq-4.10} above. So $F_{\alpha}^{2}(\boldsymbol{\x})$ has support $\Gamma_{n}$ and no $\x_{j}$ is a factor of $F_{\alpha}^{2}(\boldsymbol{\x})$.
+Therefore, $F_{\alpha}^{2}(\boldsymbol{\x})$ has at least $\# \varphi_{2}$ (non-zero) terms and is, thus, non-zero. Moreover, using (4.3) in ~\eqref{subsubsection-4.1.1}(b) we have that $\alpha\left(A \smallsetminus A_{1} B\smallsetminus B (A_{1}, j) \right) \neq 0 \neq \alpha \left(A\smallsetminus A (B_{1}, k), B \smallsetminus B_{1} \right)$ with $j$ and $k$ as in ~\eqref{eq-4.10} above, So $F_{\alpha}^{2}(\boldsymbol{\x})$ has support $\Gamma_{n}$ and no $\x_{j}$ is a factor of $F_{\alpha}^{2}(\boldsymbol{\x})$.
 
 \item We now come to the case $\hat{\alpha}=0$.
 
@@ -1758,7 +1803,7 @@ if and only i for some $B_{1} \in B_{2}$, $\alpha\left(A(B_{1}, k), B_{1}\right)
 1 \leq k \leq k_{B_{1}}\tag{4.12}\label{eq-4.12}
 \end{equation}
 
-But $\hat{\alpha} = 0$ and therefore, by~\eqref{eq-4.4}, if ~\eqref{eq-4.11} holds for $j$ then it has to hold for some $1 \leq \hat{j} \neq j \leq j_{A_{1}}$ as well and as a consequence, 
+But $\hat{\alpha} = 0$ and therefore, by (4.4), if ~\eqref{eq-4.11} holds for $j$ then it has to hold for some $1 \leq \tilde{j} \neq j \leq j_{A_{1}}$ as well and as a consequence, 
 \begin{align*}
 &\alpha\left(A_{1}, B(A_{1}, j)\right)~~\alpha \left(A_{1}, B(A_{1}, \tilde{j}) \right)~, \alpha\left(A\smallsetminus A_{1}, B\smallsetminus B(A_{1}, j)\right)~,\\
   &~\alpha\left(A \smallsetminus A_{1}, B \smallsetminus B(A_{1}, \tilde{j})\right)~ \text{are all non-zero}~\tag{4.13}\label{eq-4.13}
@@ -1766,10 +1811,10 @@ But $\hat{\alpha} = 0$ and therefore, by~\eqref{eq-4.4}, if ~\eqref{eq-4.11} hol
 similarly, if~\eqref{eq-4.12} holds for $k$, then for some 
 \begin{align*}
 &1 \leq \tilde{k} \neq k \leq k_{B_{1}}, \alpha(A (B_{1}, k), B_{1}), \alpha\left(A(B_{1}, \tilde{k}), B_{1}\right),\\
-& \alpha(A(B_{1}, k), B\smallsetminus B_{1}), \alpha(A \smallsetminus A (B_{1}, \tilde{k}), B, B_{1})~ \text{are all non-zero}\tag{4.14}\label{eq-4.14} 
+& \alpha(A \smallsetminus(B_{1}, k), B\smallsetminus B_{1}), \alpha(A \smallsetminus A (B_{1}, \tilde{k}), B, B_{1})~ \text{are all non-zero}\tag{4.14}\label{eq-4.14} 
 \end{align*}
 
-Hence $F_{\alpha}^{2}(\boldsymbol{\x}) \neq 0$ of and only if $F_{\alpha}^{2}(\boldsymbol{\x})$ has at least ??????????????????.
+Hence $F_{\alpha}^{2}(\boldsymbol{\x}) \neq 0$ of and only if $F_{\alpha}^{2}(\boldsymbol{\x})$ has at least four terms coming from co-efficients in (4.13) and (4.14) jotted in (4.8) and (4.9) respectively. In this case $F^{2}_{\alpha({\boldsymbol{\x}})}$ has support $\Gamma_{n}$ and has no $\boldsymbol{\x}_{j i}$ as a factor.
 
 \item We continue with the case $\hat{\alpha} = 0$.
 
@@ -1784,17 +1829,17 @@ B_{1} \in B_{2},~~ \alpha(A(B_{1}, k), B_{1}) =0 ~~\text{for}~~ 1 \leq k \leq k_
 
 By $\eqref{subsubsection-4.1.1}$ (b), if \eqref{eq-4.15} and \eqref{eq-4.16} hold then $\# \boldsymbol{\Psi}(A_{1}, B(A_{1}, j))\geq 2$ and $\# \boldsymbol{\Psi} (A(B_{1}, k), B_{1}) \geq 2$ and therefore, 
 $$
-s= \# \boldsymbol{\Psi} \geq 2 \max \left\{j_{A_{1}}, k_{B_{1}} : A_{1} \in \varphi_{2}m B_{1} \in B_{2}\right\}=2~~\text{so, say}.
+s= \# \boldsymbol{\Psi} \geq 2 \max \left\{j_{A_{1}}, k_{B_{1}} : A_{1} \in \varphi_{2}m, B_{1} \in B\right\}=2_{s_{0}}, \text{say}.
 $$
 
-Also by~\eqref{subsection-4.6}, $2 \leq s_{0} \leq s$.
+Also by (4.6), $2 \leq s_{0} \leq s$.
 
-Hence if $F_{\alpha}^{2}(\boldsymbol{\x})=0$, then $s \geq 2s_{0} \geq 4$~\eqref{eq-4.16}
+Hence if $F_{\alpha}^{2}(\boldsymbol{\x})=0$, then $s \geq 2s_{0} \geq 4$~~~\eqref{eq-4.16}
 	
-In other words, if $s < 2~s_{0}$, Then $F_{\alpha}^{2} (\boldsymbol{\x}) \neq 0$. In particular, $t$ is so if $s=2$ or $3$.
+In other words, if $s < 2~s_{0}$, then $F_{\alpha}^{2} (\boldsymbol{\x}) \neq 0$. In particular, $t$ is so if $s=2$ or $3$.
 	
 
-\item We note that for $s \> 2^{n} = {\rm dim} \mathcal{H}\left\{| \psi \rangle : \psi \in \boldsymbol{\Psi} \right\}$ is linearly dependent and therefore, there exists $\phi \neq \boldsymbol{\Psi} \subset \boldsymbol{\Psi}$ and $\alpha : \phi \rightarrow  \vertchar[.08ex]{C} \smallsetminus \{0\}$ with $| \alpha \rangle = 0$. And such $\boldsymbol{\Psi}$'s can exist if and only of $v > 2^{n} = 2^{2v}$ if and only if $v \geq 9$, as simple computations show the situation given in Figure 17.
+\item We note that for $s > 2^{n} = {\rm dim}~\mathcal{H}, \left\{| \psi \rangle : \psi \in \boldsymbol{\Psi} \right\}$ is linearly dependent and therefore, there exists $\boldsymbol{\phi} \neq \boldsymbol{\Psi} \subset \boldsymbol{\Psi}$ and $\alpha : \boldsymbol{\phi} \rightarrow  \vertchar[.08ex]{C} \smallsetminus \{0\}$ with $| \alpha \rangle = 0$. And such $\boldsymbol{\Psi}$'s can exist if and only of $v > 2^{n} = 2^{2v}$ if and only if $v \geq 9$, as simple computations show the situation given in Figure 17.
 
 \begin{table}
 \begin{center}
@@ -1815,13 +1860,13 @@ $v$ & $v!$ & $n=2v$ & $2^{n}$ \\\cline{1-4}
 \end{table}
 
 
-\item In any case by~\eqref{eq-4.8} and \eqref{eq-4.9}, we have 
+\item In any case by~\eqref{eq-4.8} and (4.9), we have 
 \begin{align*}
 || | \alpha \rangle ||^{2} &= 2^{-v} \left(| \hat{\alpha}|^{2} \# \varphi_{1} + \sum_{A_{1} \in \varphi_{2}} \sum_{j=1}^{j_{A_{1}}} 1 | \alpha(A_{1}, B(A_{1}, j))|^{2} \right)\\
 &= 2^{-v} \left(| \hat{\alpha}|^{2} \# \varphi_{1} | \sum_{B_{1} \in B_{2}} \sum_{k=1}^{kB_{1}} | \alpha (A(B_{1}, k)), B_{1} |^{2}\right)\tag{4.17}\label{eq-4.17}
 \end{align*}
 
-\item In view of (a) to (f) above we may apply results or modify proofs via $??_2$ and $?? 3$ above to study quantum entanglement properties of generalized RVB states $| \tilde{\alpha} \rangle$. We shall note a few strainght forward analogies and give a few contrasiting exaple to motivate detailed lot in the next subsections.
+\item In view of (a) to (f) above we may apply results or modify proofs via section 2 and section 3 above to study quantum entanglement properties of generalized RVB states $| \tilde{\alpha} \rangle$. We shall note a few strainght forward analogies and give a few contrasiting examples to motivate detailed lot in the next subsections.
 	
 \end{enumerate}
 
@@ -1836,13 +1881,13 @@ Let $\xi = | \alpha \rangle$ be a non-zero generalized RVB vector.
 
 It does happen if $\boldsymbol{\Psi}$ is decomposable via $E$ and $v=3$.
 
-\item Suppose $\xi$ is a convex RVB vector, i.e., $\alpha(\psi) > 0$ for $\psi \in \boldsymbol{\Psi}$, i.e., $\hat{\alpha}=1$ 
+\item Suppose $\xi$ is a convex RVB vector, i.e., $\alpha(\psi) > 0$ for $\psi \in \boldsymbol{\Psi}$, i.e., $\hat{\alpha}=1$. 
 \begin{enumerate}[label=(\alph*)]
 \item If $\xi$ is product vector in some bipartite cut $(E, E')$ then $\boldsymbol{\Psi}$ is decomposable via $E$.
 
 \item The converse of (a) is not true in general for $v > 3$.
 
-\item If $\gamma = 2$, then $\xi$ is genuinely entangled.
+\item If $\nu = 2$, then $\xi$ is genuinely entangled.
 
 \item If $\boldsymbol{\Psi}$ is NN or PNN then $\xi$ is genuinely entangled.
 \end{enumerate}
@@ -1855,7 +1900,7 @@ It does happen if $\boldsymbol{\Psi}$ is decomposable via $E$ and $v=3$.
 \begin{enumerate}[label=(\roman*)]
 \item It follows from Theorem ~\ref{thm-2.1}(i)(a) or (iv)(a) simply because the degree of $F_{\alpha}(\boldsymbol{\x})$ is $d=v < 2v = n$.
 
-\item (a) we follow the notation as in ~\eqref{subsubsection-3.1.5}(d) It is enough to consider the case that $\boldsymbol{\Psi}$ is flat via $E$ i.e., $\psi_{E'}= \left\{\psi^{E'}_{1}\right\}$. Let $\alpha_{E}$ be the function on $\boldsymbol{\Psi}_{E}$ given by $\alpha_{E}\left(\psi_{j}^{E}\right) = \alpha\left(\psi_{j}^{E} \times \psi_{1}^{E'}\right)$, $1 \leq j \leq j'$. Then $\xi = | \alpha \rangle = \left(\sum\limits_{j=1}^{j'} \alpha(\psi_{j}^{E}) | \psi_{j}^{E} \rangle \right) \otimes | \psi_{1}^{E'} \rangle$ and is , therefore, a product vector in the bipartite cut $(E, E')$.
+\item (a) we follow the notation as in ~\eqref{subsubsection-3.1.5}(d). It is enough to consider the case that $\boldsymbol{\Psi}$ is flat via $E$ i.e., $\psi_{E'}= \left\{\psi^{E'}_{1}\right\}$. Let $\alpha_{E}$ be the function on $\boldsymbol{\Psi}_{E}$ given by $\alpha_{E}\left(\psi_{j}^{E}\right) = \alpha\left(\psi_{j}^{E} \times \psi_{1}^{E'}\right)$, $1 \leq j \leq j'$. Then $\xi = | \alpha \rangle = \left(\sum\limits_{j=1}^{j'} \alpha(\psi_{j}^{E}) | \psi_{j}^{E} \rangle \right) \otimes | \psi_{1}^{E'} \rangle$ and is , therefore, a product vector in the bipartite cut $(E, E')$.
 
 We already know from the proof of Theorem~\ref{thm-3.1}(v)(a) that in this case, viz, $v=3$ and $\boldsymbol{\Psi}$ is decomposable via $E$, that $\boldsymbol{\Psi}$ is flat or a pole via $E$.
 
@@ -1886,44 +1931,44 @@ Theorem~\ref{thm-4.1}(iii) & Theorem~\ref{thm-3.1}\\[4pt]
 \begin{example}\label{example-4.1}
 Let $\boldsymbol{\Psi}$ be factorable via $E$ for some $\phi \neq E \subset_{\neq} \Gamma_{n}$, say 
 \begin{align*}
-\psi_{E} &= \left\{\psi_{j}^{E} : 1 \leq j \leq j' \right\},~~~\psi_{E'} = \left\{\psi_{k}^{E'} : 1 \leq k \leq k' \right\},\\
+\boldsymbol{\psi}_{E} &= \left\{\psi_{j}^{E} : 1 \leq j \leq j' \right\},~~~\boldsymbol{\psi}_{E'} = \left\{\psi_{k}^{E'} : 1 \leq k \leq k' \right\},\\
 \boldsymbol{\Psi} &= \left\{\psi_{j}^{E} \times \psi_{k}^{E'} : 1 \leq j \leq j', 1 \leq k \leq k' \right\}
 \end{align*}
 
 \begin{enumerate}[label=(\roman*)]
-\item Consider any matrix $T = [\alpha_{jk}]_{\substack{1 \leq j \leq j'\\ 1 \leq k \leq k'}}$ with non-zero scalar entries and set $\alpha (\psi_{j}^{E} \times \psi_{k}^{E'}) = \alpha_{jk}$ for $1 \leq j \leq j'$, $1 \leq k \leq k'$. Let us call $\boldsymbol{\alpha}$ \textbf{factorable} if $T$ is of rank one, i.e., $\alpha_{jk} =\beta_{j}\cdot \gamma_{k}$ for $1 \leq j \leq j'$, $1 \leq k \leq k'$ for some Triples $\boldsymbol{\beta} = (\beta_{j})_{j=1}^{j'}$, $\boldsymbol{\gamma} = (\gamma_{k})_{k=1}^{k'}$ of non-zero scalars. Then $\xi = | \alpha \rangle = \eta \otimes ??? $ with $\eta = \sum\limits_{j=1}^{j'} \beta_{j} | \psi_{j}^{E} \rangle$, $??? = \sum\limits_{k=1}^{k'} \gamma_{k} | \psi_{k}^{E'}\rangle$  and $\xi \neq 0$ if and only if $\eta \neq 0$, $??? \neq 0$.
+\item Consider any matrix $T = [\alpha_{jk}]_{\substack{1 \leq j \leq j'\\ 1 \leq k \leq k'}}$ with non-zero scalar entries and set $\alpha (\psi_{j}^{E} \times \psi_{k}^{E'}) = \alpha_{jk}$ for $1 \leq j \leq j'$, $1 \leq k \leq k'$. Let us call $\boldsymbol{\alpha}$ \textbf{factorable} if $T$ is of rank one, i.e., $\alpha_{jk} =\beta_{j}\cdot \gamma_{k}$ for $1 \leq j \leq j'$, $1 \leq k \leq k'$ for some tiples $\boldsymbol{\beta} = (\beta_{j})_{j=1}^{j'}$, $\boldsymbol{\gamma} = (\gamma_{k})_{k=1}^{k'}$ of non-zero scalars. Then $\xi = | \alpha \rangle = \eta \otimes \zeta $ with $\eta = \sum\limits_{j=1}^{j'} \beta_{j} | \psi_{j}^{E} \rangle$, $\zeta = \sum\limits_{k=1}^{k'} \gamma_{k} | \psi_{k}^{E'}\rangle$  and $\xi \neq 0$ if and only if $\eta \neq 0$, $\zeta \neq 0$.
 
 
 \item Thus we have a restricted analogne of Theorem~\ref{thm-3.3}, viz, If $\alpha$ is factorable via $E$ then $| \alpha \rangle$ is a product vector in the bipertite cut $(E, E')$. 
 
 
-\item The converse is easily seen to hold for the case $j'=2=k'$. Indeed, in this case, There exist $a \in E \cap A$, $a' \in E' \cap A$ with $\psi_{1}^{E}(a) = b_{1} \neq b_{2} = \psi_{2}^{E}(a)$, $\psi_{1}^{E'}(a') = b'_{1} \neq b'_{2} = \psi E'(a')$. So $\boldsymbol{\x}^{a,a'} (\alpha_{???} \boldsymbol{\x}^{B \smallsetminus \{b_{1}, b'_{1}\}} + \alpha_{1, 2} \boldsymbol{\x}^{B\smallsetminus \{b_{1}, b'_{2}\}} + \alpha_{2, 1} \boldsymbol{\x}^{B\smallsetminus \{b_{2}, b'_{1}\}} + \alpha_{2 2} \boldsymbol{\x}^{B \smallsetminus \{b_{2}m b'_{2}\}} )$  is a part of $F_{\alpha}(\boldsymbol{\x})$. But $F_{\alpha}(\boldsymbol{\x}) = p (\boldsymbol{\x}_{E})q(\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$. So it is necessary that for some scalars $\beta_{1}, \beta_{2}, \gamma_{1}, \gamma_{2} $, $\boldsymbol{\x}^{a} \left(\beta_{1}\boldsymbol{\x}^{E \cap B \smallsetminus \{b_{1}\}} + \beta_{2} \boldsymbol{\x}^{E \cap B \smallsetminus\{b_{2}\}} \right)$ is a part of $p(\boldsymbol{\x}_{E})$ and\\ $\boldsymbol{\x}^{a'}(\gamma_{1} \x^{E'\cap B \smallsetminus \{b'_{1}\}} + \gamma_{2} \boldsymbol{\x}^{E'\cap B\smallsetminus \{b_{2}'\}})$ is a part of $q(\x_{E'})$. But that forces $\alpha_{11} = \beta_{1}\gamma_{1}$, $\alpha_{2 1}= \beta_{2} \alpha_{1}$ and $\alpha_{22}= \beta_{2}\gamma_{2}$. This gives $\alpha_{11} \alpha_{22} = \alpha_{12} \alpha_{21}$. In other words $[\alpha_{jk}]_{1 \leq j \leq j', 1 \leq \leq \alpha}$ has rank one.
+\item The converse is easily seen to hold for the case $j'=2=k'$. Indeed, in this case, there exist $a \in E \cap A$, $a' \in E' \cap A$ with $\psi_{1}^{E}(a) = b_{1} \neq b_{2} = \psi_{2}^{E}(a)$, $\psi_{1}^{E'}(a') = b'_{1} \neq b'_{2} = \psi E'(a')$. So $\boldsymbol{\x}^{a,a'} (\alpha_{11}^{a,a'} \boldsymbol{\x}^{B \smallsetminus \{b_{1}, b'_{1}\}} + \alpha_{1, 2} \boldsymbol{\x}^{B\smallsetminus \{b_{1}, b'_{2}\}} + \alpha_{2, 1} \boldsymbol{\x}^{B\smallsetminus \{b_{2}, b'_{1}\}} + \alpha_{2 2} \boldsymbol{\x}^{B \smallsetminus \{b_{2}m, b'_{2}\}} )$  is a part of $F_{\alpha}(\boldsymbol{\x})$. But $F_{\alpha}(\boldsymbol{\x}) = p (\boldsymbol{\x}_{E})q(\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$. So it is necessary that for some scalars $\beta_{1}, \beta_{2}, \gamma_{1}, \gamma_{2} $, $\boldsymbol{\x}^{a} \left(\beta_{1}\boldsymbol{\x}^{E \cap B \smallsetminus \{b_{1}\}} + \beta_{2} \boldsymbol{\x}^{E \cap B \smallsetminus\{b_{2}\}} \right)$ is a part of $p(\boldsymbol{\x}_{E})$ and\\ $\boldsymbol{\x}^{a'}(\gamma_{1} \x^{E'\cap B \smallsetminus \{b'_{1}\}} + \gamma_{2} \boldsymbol{\x}^{E'\cap B\smallsetminus \{b_{2}'\}})$ is a part of $q(\x_{E'})$. But that forces $\alpha_{11} = \beta_{1}\gamma_{1}$, $\alpha_{12}= \beta_{1} \gamma_{2}$ and $\alpha_{22}= \beta_{2}\gamma_{2}$. This gives $\alpha_{11} \alpha_{22} = \alpha_{12} \alpha_{21}$. In other words $[\alpha_{jk}]_{1 \leq j \leq j', 1 \leq k \leq k'}$ has rank one.
 
-\item Several 2 $\times$ 2 matrices like $\begin{bmatrix}1 & 2\\3 & 4 \end{bmatrix}$ give that  there is no general analoge of Theorem~\ref{thm-3.3} and Theorem~\ref{thm-4.1}(iii)(b) is true even for $v=4$.
+\item Several 2 $\times$ 2 matrices like $\begin{bmatrix}0.1 & 0.2\\0.3 & 0.4 \end{bmatrix}$ give that  there is no general analogue of Theorem~\ref{thm-3.3} and also that Theorem~\ref{thm-4.1}(iii)(b) is true even for $v=4$.
 
-\item Indeed, if $\{| \psi_{j}^{E} \rangle : 1 \leq j \leq j' \}$ and $\{| \psi_{k}^{E'} \rangle : 1 \leq k \leq k'\}$ are linearly independent in $\mathcal{H}_{E}$ and $\mathcal{H}_{E'}$ respectively we can extend them to form bases $B$ and $B'$ of $\mathcal{H}_{E}$ and $\mathcal{H}_{E'}$ respectively. Then $\sum_{\substack{\beta \in B \\ \beta' \in B'}} \gamma_{\beta \beta'}$ is a product vector in $\mathcal{H}_{E}\otimes \mathcal{H}_{E'}$ if and only if the matrix $[\gamma_{\beta \beta'}]_{\substack{\beta \in \beta \\ b' \in B'}}$, has rank one. As a consequence $| \alpha \rangle$ is a product vector in $\mathcal{H}_{E} \otimes \mathcal{H}_{E'}$ if and ??????????????????????? has rank one. 
+\item Indeed, if $\{| \psi_{j}^{E} \rangle : 1 \leq j \leq j' \}$ and $\{| \psi_{k}^{E'} \rangle : 1 \leq k \leq k'\}$ are linearly independent in $\mathcal{H}_{E}$ and $\mathcal{H}_{E'}$ respectively we can extend them to form bases $B$ and $B'$ of $\mathcal{H}_{E}$ and $\mathcal{H}_{E'}$ respectively. Then $\sum_{\substack{B \in B \\ B' \in B'}} \gamma_{\beta \beta'}$ is a product vector in $\mathcal{H}_{E}\otimes \mathcal{H}_{E'}$ if and only if the matrix $[\gamma_{\beta \beta'}]_{\substack{\beta \in \beta \\ B' \in B'}}$, has rank one. As a consequence $| \alpha \rangle$ is a product vector in $\mathcal{H}_{E}^{B} \otimes \mathcal{H}_{E'}^{B'}$ if and only if $\alpha_{jk} 1 \leq j \leq j'$, $1 \leq j \leq j'$ has rank one. 
 
 \end{enumerate}
 \end{example}
 
 \begin{example}\label{example-4.2}
-Let $v=2$ and $\boldsymbol{\Psi}$ the NN covering of $\Gamma_{n}$, i.e., $\boldsymbol{\Psi} = \{\psi_{1}, \psi_{2}\}$ with $\psi(1)=2$, $\psi_{1}(3) =4$, $\psi_{2}(1)=4$, $\psi_{2}(3) =2$. Then $\boldsymbol{\Psi}$ is not decomposable.
+Let $v=2$ and $\boldsymbol{\Psi}$ the NN covering of $\Gamma_{4}$, i.e., $\boldsymbol{\Psi} = \{\psi_{1}, \psi_{2}\}$ with $\psi(1)=2$, $\psi_{1}(3) =4$, $\psi_{2}(1)=4$, $\psi_{2}(3) =2$. Then $\boldsymbol{\Psi}$ is not decomposable.
 
 \begin{enumerate}[label=(\alph*)]
-\item Consider $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C} \smallsetminus \{0\}$ given by $\alpha(\psi_{1}) = \frac{1}{2}$, $ \alpha(\psi_{2}) = \frac{-1}{2}$. Then $\hat{\alpha} =0$. Further]
+\item Consider $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C} \smallsetminus \{0\}$ given by $\alpha(\psi_{1}) = \frac{1}{2}$, $ \alpha(\psi_{2}) = \frac{-1}{2}$. Then $\hat{\alpha} =0$. Further],
 \begin{align*}
-F_{\alpha}(\boldsymbol{\x}) &= \frac{1}{2} \cdot \frac{1}{2} \left(\x_{2} - \x_{1}\right)\left(\x_{4}-\x_{3} \right) + \frac{1}{2}~\frac{1}{2} \left(\x_{4}-\x_{1}\right) \left(\x_{2}-\x_{3} \right)\\
+F_{\alpha}(\boldsymbol{\x}) &= \frac{1}{2} \cdot \frac{1}{2} \left(\x_{2} - \x_{1}\right)\left(\x_{4}-\x_{3} \right) - \frac{1}{2}~\frac{1}{2} \left(\x_{4}-\x_{1}\right) \left(\x_{2}-\x_{3} \right)\\
 &= -\frac{1}{4} \left(\x_{1} \x_{4} + \x_{2} \x_{3} \right) + \frac{1}{4} \left(\x_{1} \x_{2} + \x_{3} \x_{4} \right)\\
-& = \frac{1}{4} \left(\x_{1}-\x_{3}\right)\left(\x_{2}-\x_{4} \right)
+& = \frac{1}{4} \left(\x_{1}-\x_{3}\right)\left(\x_{2}-\x_{4} \right).
 \end{align*}
 
-So $| \alpha \rangle \neq 0$ and it is a product vector in the bipartite cut $(a, B)= (\{1,3\}, \{2,4\})$. Therefore, $| \alpha \rangle$ is not genuinely entangled.
+So $| \alpha \rangle \neq 0$ and it is a product vector in the bipartite cut $(A, B)= (\{1,3\}, \{2,4\})$. Therefore, $| \alpha \rangle$ is not genuinely entangled.
 
-Hence the condition $\alpha(\psi) \> 0$ for $\psi in \boldsymbol{\Psi}$, i.e., $\hat{\alpha}=1$ is important in Theorem~\ref{thm-4.1}(a), (c), (d).
+Hence the condition $\alpha(\psi) > 0$ for $\psi \epsilon \boldsymbol{\Psi}$, i.e., $\hat{\alpha}=1$ is important in Theorem~\ref{thm-4.1}(a), (c), (d).
 
 Indeed the arguments apply to any $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C} \smallsetminus\{0\}$ with $\hat{\alpha} = 0$ as in Definition~\ref{definition-4.1}.
 
-\item Consider any $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C}$ as one Definition~\ref{definition-4.1} with $\hat{\alpha} \neq 0$.
+\item Consider any $\alpha : \boldsymbol{\Psi} \rightarrow \vertchar[.08ex]{C}$ as in Definition~\ref{definition-4.1} with $\hat{\alpha} \neq 0$.
 
 Then $| \alpha \rangle$ has polynomial representation.
 \begin{equation*}
@@ -1932,65 +1977,65 @@ F_{\alpha}(\boldsymbol{\x}) &= \frac{1}{2} \Bigg(\hat{\alpha}\left(\x_{2} \x_{4}
 &\qquad\qquad - \alpha \left(\psi_{2}\right) \left(\x_{1} \x_{2} + \x_{3} \x_{4}\right) \Bigg)
 \end{split}
 \end{equation*}
-which has via terms. Let of possible, $| \alpha \rangle$ be a product vector in a bipartite cut $(E, E')$ so that $F_{\alpha}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E})~~ q(\boldsymbol{\x}_{E'})$. Because supp $F_{\alpha}= \Gamma_{n}$ and $F_{\alpha}(\boldsymbol{\x})$ is homogeneous of degree 2 , so both $p$ and $q$ have degree 1. So the number of terms in $p(\boldsymbol{\x}_{E})~~q(\boldsymbol{\x}_{E'})$ can be 3 or 4. Hence $| \alpha \rangle$ is genuinely entangled. Indeed we ????????????
+which has via six terms. Let if possible, $| \alpha \rangle$ be a product vector in a bipartite cut $(E, E')$ so that $F_{\alpha}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E})~~ q(\boldsymbol{\x}_{E'})$. Because supp $F_{\alpha}= \Gamma_{n}$ and $F_{\alpha}(\boldsymbol{\x})$ is homogeneous of degree 2 , so both $p$ and $q$ have degree 1. So the number of terms in $p(\boldsymbol{\x}_{E})~~q(\boldsymbol{\x}_{E'})$ can be 3 or 4. Hence $| \alpha \rangle$ is genuinely entangled. Indeed we have repeated the simpler version of  Theorem  2.1 (iv)(c) in this case.
 \end{enumerate}
 \end{example}
 
-\subsection{Quantum Entanglement of generalized RVB states via\\ polynomial representation matrix forms}\label{subsection-4.2}
+\subsection{Quantum Entanglement of generalized RVB states via\\ polynomial representation in matrix forms}\label{subsection-4.2}
 
-Let $\boldsymbol{\Psi}, \alpha$ etc. be as in $??$\ref{subsection-4.1} with $| \alpha \rangle \neq 0$ and $\xi = 2^{v/2} | \alpha \rangle$. Consider any bipartite cut $(E, E')$ and $\mathcal{H}$ expressed in this break-up are will-studied, praticularly in terms of the rank of The associete  matrix $A_{3}$ in terms of any chosen bases $B_{E}$ and $B_{E'}$ for $\mathcal{H}(E)$ and $\mathcal{H}(E')$ respectively. As seen in $??$\ref{subsection-4.1} the polynomial representation $F_{\xi}(\boldsymbol{\x})$ of $\xi$ is a homogeneous polynomial of degree $v$. So disusion in var???? sections above ca be used to advantage we proced to work that out. Let $n_{1}=\# E$, $n_{2} = \#E'$ that $n_{2}= n-n_{1}$. Let $\tilde{\xi} = \frac{1}{|| \xi ||}$, so that $\tilde{\xi}$ is unit vector.
+Let $\boldsymbol{\Psi}, \alpha$ etc. be as in Subsection 4.1 with $| \alpha \rangle \neq 0$ and $\xi = 2^{v/2} | \alpha \rangle$. Consider any bipartite cut $(E, E')$ and $\mathcal{H}$ expressed as $\mathcal{H}(E) \otimes \mathcal(E')$, the entanglement properties in this break-up are will-studied, praticularly in terms of the rank of the associeted  matrix $A_{3}$ in terms of any chosen bases $B_{E}$ and $B_{E'}$ for $\mathcal{H}(E)$ and $\mathcal{H}(E')$ respectively. As seen in 4.1 the polynomial representation $F_{\xi}(\boldsymbol{\x})$ of $\xi$ is a homogeneous polynomial of degree $v$. So disussion in various sections above can be used to advantage. We proced to work that out. Let $n_{1}=\# E$, $n_{2} = \#E'$ so that $n_{2}= n-n_{1}$. Let $\tilde{\xi} = \frac{1}{|| \xi ||} \xi $, so that $\tilde{\xi}$ is a unit vector.
 
 \begin{subsubsec}
-\textbf{Matrix representation of vectors in $\mathcal{H}$ in the bipartite cut $(E, E')$}. We recall this well known concept in the way we like for further use together with a few results as well.
+\textbf{Matrix representation of vectors in $\mathcal{H}$ in the bipartite cut $(E, E')$}. We recall this well-known concept in the way we like for further use together with a few results as well.
 \begin{enumerate}[label = (\alph*)]
-\item We arrange $P_{E}$ and $P_{E'}$ in any way we with. One way that will be useful is to arrange them in blockes according to their sizes with any order within the block. To eleborate, for $0 \leq j \leq n$, $0 \leq k \leq n_{2}$, let $P_{j}^{E} = \{K \subset E : \# K =j\}$ and $P_{k}^{E'} = \{L \subset E' : \# L =k\}$. Then $P_{n}= P_{E} \times P_{E'}= \bigcup\limits_{0 \leq j \leq n_{1}} P_{j}^{E} \times P_{k}^{E'}$ ?????? $???? \subset \Gamma_{n} \rightarrow (K=M \cap E')$. This permuts us to identity the polynomial $F(\boldsymbol{\x}) = \sum\limits_{M \subset \Gamma_{n}} a_{M} \boldsymbol{\x} \Gamma$ with 
+\item We arrange ${\rm P}_{E}$ and ${\rm P}_{E'}$ in any way we like. One way that will be useful is to arrange them in blockes according to their sizes with any order within the block. To eleborate, for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$, let $P_{j}^{E} = \{K \subset E : \# K =j\}$ and $P_{k}^{E'} = \{L \subset E' : \# L =k\}$. Then $P_{n}= P_{E} \times P_{E'}= \bigcup\limits_{\substack{0 \leq j \leq n_{1}\\ 1 \leq k \leq n_{2}}} {\rm P}_{j}^{E} \times {\rm P}_{k}^{E'}$ via $M \subset \Gamma_{n} \rightarrow (K=M \cap E, L=M \cap E')$. This permits us to identity the polynomial $F(\boldsymbol{\x}) = \sum\limits_{M \subset \Gamma_{n}} a_{M} \boldsymbol{\x}^{M}$ with 
 \begin{equation}
-\sum_{\substack{K \in P_{E},\\ L \in P_{}E'}} a_{K, L} \boldsymbol{\x}^{k} \boldsymbol{\x}^{L} +  \sum_{\substack{0 \leq j \leq n_{1} \\0 \leq k \leq n_{2}}} \left(\sum_{\substack{K \in P_{j}^{E},\\ L \in P_{k}^{E'}}} a_{K, L} \boldsymbol{\x}^{k} \boldsymbol{\x}^{L} \right)\tag{4.18}\label{eq-4.18}
+\sum_{\substack{K \in P_{E},\\ L \in P_{}E'}} a_{K, L} \boldsymbol{\x}^{k} \boldsymbol{\x}^{L} +  \sum_{\substack{0 \leq j \leq n_{1} \\0 \leq k \leq n_{2}}} \left(\sum_{\substack{K \in P_{j}^{E},\\ L \in P_{k}^{E'}}} a_{K, L} \boldsymbol{\x}^{K} \boldsymbol{\x}^{L} \right)\tag{4.18}\label{eq-4.18}
 \end{equation}
-Which in turn gives rise to the corresponding matrix $G_{E} = [a_{K, L}]_{\substack{K \in P_{E}, L \in P_{E'}}}$, and the block matrix $G^{E} =[G_{jk}^{E}]_{\substack{0 \leq j \leq n_{1}\\ 0 \leq k \leq n_{2}}}$ with 
+which in turn gives rise to the corresponding matrix $G_{E} = [a_{K, L}]_{\substack{K \in P_{E}, L \in P_{E'}}}$, and the block matrix $G^{E} =[G_{jk}^{E}]_{\substack{0 \leq j \leq n_{1}\\ 0 \leq k \leq n_{2}}}$ with 
 \begin{equation}
-G_{jk}^{E}= [a_{K, L}]_{\substack{K \in p_{j}^{E}, L \in P_{k}^{E}}}, 0 \leq j \leq n_{1}, 0 \leq k \leq n_{2}\tag{4.19}\label{eq-4.19}
+G_{jk}^{E}= [a_{K, L}]_{\substack{K \in p_{j}^{E}, L \in P_{k}^{E'}}}, 0 \leq j \leq n_{1}, 0 \leq k \leq n_{2}\tag{4.19}\label{eq-4.19}
 \end{equation}
 Clearly $F \neq 0$ if and only if $G_{E} \neq 0$ if and only if $G_{j k}^{E} \neq 0$ for some $1 \leq j \leq n_{1}$, $1 \leq k \leq n_{2}$. Let $\xi_{F}$ be the vector represented by $F$.
 
-\item Suppose $\xi_{F}$ is a unit vector. Then\\ $||G_{E}|| = \max\{| \langle \x, \xi_{F} \rangle | : \x~~\text{is a unit product vector in the bipartite cut}~~(E, E')\}$. Further, $||G_{e}||=1$ if and only if $\xi_{F}$ is product vector in the bipartite cut $(E, E')$ if and only if rank $G_{E}=1$.
+\item Suppose $\xi_{F}$ is a unit vector. Then\\ $||G_{E}|| = \max\{| \langle \chi, \xi_{F} \rangle | : \chi~~\text{is a unit product vector in the bipartite cut}~~(E, E')\}$. Further, $||G_{E}||=1$ if and only if $\xi_{F}$ is product vector in the bipartite cut $(E, E')$ if and only if rank $G_{E}=1$.
 
 \item It is immedeate from (b) above that unit vector $\xi_{F}$ is genuinely entangled if and only if $||G_{E}|| < 1 $ for $\phi \neq E \subset_{\neq} \Gamma_{n}$ if and only if rank $G_{E} \geq 2$ for $E$ with $\phi \neq E \subset_{\neq} \Gamma_{n}$.
 
-In this case, The \textbf{generalized geometric measure} (GGM, in short) of $\xi_{F}$ is given by 
+In this case, the \textbf{generalized geometric measure} (GGM, in short) of $\xi_{F}$ is given by 
 \begin{equation}
 1 -\max\substack{\phi \neq E \subset_{\neq}\Gamma_{n}}|| G_{E}||^{2}\tag{4.20}\label{eq-4.20}
 \end{equation} 
 
-\item Now suppose that $F$ is a non-zero homogeneous polynomial of degree $d \geq 2$, suppose $F = \Gamma_{n}$ By Theorem~\ref{thm-2.1}(iv), $\xi_{F}$ is a product vector in the bipartite cut $(E, E')$ if and only if $F(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E})q(\boldsymbol{\x}_{E'})$ for some polynomials $p$
+\item Now suppose that $F$ is a non-zero homogeneous polynomial of degree $d \geq 2$, in place of suppose $F = \Gamma_{n}$ By Theorem~\ref{thm-2.1}(iv), $\xi_{F}$ is a product vector in the bipartite cut $(E, E')$ if and only if $F(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E})q(\boldsymbol{\x}_{E'})$ for some polynomials $p$
  and $q$ of degree $d_{1}$, and $d_{2}$ respectively with $1 \leq d_{1} < d$, $d_{2}=d-d_{1}$. In view of (b) above this is true of and only if for some $d_{1}, d_{2}$ with $1 \leq d_{1} < d$, $d_{2}=d-d_{1}$, $G_{jk} =0$ for $(j,k) \neq (d_{1}, d_{1})$ and $||G_{d_{1}, d_{2}}||=|| \xi_{F}||$ if and only if for some $d_{1}, d_{2}$ with $1 \leq d_{1} < d$, $d_{2}=d-d_{1}$, $G_{jk}=0$ for $(j,k) \neq (d_{1}, d_{2})$ and rank $G_{d_{1},d_{2}}=1$.
  
- \item In case (d) happens, $G_{j~0} =0$ and $G_{0~k}=0$ for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$; in other words $F(\boldsymbol{\x})$ has no terms of the type $\lambda \boldsymbol{\x}^{k}$ or $\lambda \boldsymbol{\x}^{L}$ with non-zero scalar $\lambda$ and $L \subset E$ or $L \subset E'$.
+ \item In case (d) happens, $G_{j~0} =0$ and $G_{0~k}=0$ for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$; in other words $F(\boldsymbol{\x})$ has no terms of the type $\lambda \boldsymbol{\x}^{K}$ or $\lambda \boldsymbol{\x}^{L}$ with non-zero scalar $\lambda$ and $K \subset E$ or $L \subset E'$.
  
- \item Let $F$ be as in the first paragraph of (d) above. If it does not satisfy the conditions in (d) stated in the second paragraph of (d) for any $\phi \neq E \subset_{\neq} \Gamma_{n}$, then $\x_{F}$ is genuinely entangled.
+ \item Let $F$ be as in the first paragraph of (d) above. If it does not satisfy the conditions in (d) stated in the second paragraph of (d) for any $\phi \neq E \subset_{\neq} \Gamma_{n}$, then $\xi_{F}$ is genuinely entangled.
  
- \item It is clear from (d) and (e) above that we can limit our choice of the bipartite cuts $(E, E')$ for which of check the details. One such restriction in that for $\lambda\boldsymbol{\x}^{M}$ present in $F(\boldsymbol{\x})$ with $\lambda\neq 0$, we must have $K = M \cap E \neq \phi \neq M \cap E' =L$. 
+ \item It is clear from (d) and (e) above that we can limit our choice of the bipartite cuts $(E, E')$ for which of to check the details. One such restriction in that for $\lambda\boldsymbol{\x}^{M}$ present in $F(\boldsymbol{\x})$ with $\lambda\neq 0$, we must have $K = M \cap E \neq \phi \neq M \cap E' =L$. 
  
- Moreover it will be enough to take $0 \leq j \leq \min \{n_{1}, d\}$ and ??????
+ Moreover it will be enough to take $0 \leq j \leq \min \{n_{1}, d\}$ and $0 \leq k \leq \min {n_{2}, d}$. 
 
 \end{enumerate}
 \end{subsubsec}
 
 \begin{subsubsec}\label{subsubsection-4.2.2}
-\textbf{Quantum Entanglement of $\xi$ via matrix representation}. We apply~\eqref{subsubsection-4.2.1} to $\xi$ via $F_{\xi}(\boldsymbol{\x})$.
+\textbf{Quantum Entanglement of $\xi$ via matrix representation}. We apply (4.2.1) to $\xi$ via $F_{\xi}(\boldsymbol{\x})$.
 \begin{enumerate}[label=(\alph*)]
-\item $F_{\xi}$ satisfies the conditions for $F$ in the first paragraph of~\eqref{sunsubsection-4.2.1} (d) with $d=v$, $n_{1} + n_{2} =n = 2v$ so either $n_{1}\leq v \leq n_{2}$ or $n_{2} \leq v \leq n_{1}$.
+\item $F_{\xi}$ satisfies the conditions for $F$ in the first paragraph of (4.2.1) (d) with $d=v$, $n_{1} + n_{2} =n = 2v$, so either $n_{1}\leq v \leq n_{2}$ or $n_{2} \leq v \leq n_{1}$.
 
-In view of ~\eqref{subsubsection-4.2.1} (g), if $0 \neq \lambda \boldsymbol{\x}^{M}$ is part of $F_{\xi}(\boldsymbol{\x})$ for $M=L \subset E'$ in find fist case and $M = K \subset E$ in the second case, then $\xi$ is not a product vector in the bipartite cut $(E, E')$.
+In view of (4.2.1) (g), if $0 \neq \lambda \boldsymbol{\x}^{M}$ is part of $F_{\xi}(\boldsymbol{\x})$ for $M=L \subset E'$ in the fist case and $M = K \subset E$ in the second case, then $\xi$ is not a product vector in the bipartite cut $(E, E')$.
 
-\item We refer to ~\eqref{subsubsection-4.2.1} (a) and take $F= F_{\xi}$. For $K\subset E$, $L \subset E'$, $A_{1} \subset A$, $B_{1} \subset B$ $K cup L = A_{1} \cup (B \smallsetminus B_{1})$ if and only if $A_{1} = (K \cup L) \cap A$, $B_{1}= B \smallsetminus (K \cup L)\cap B$ if and only of $K =(E \cap A_{1}) \cup (E \cap (B\smallsetminus B_{1}))$, $L=(E' \cap A_{1})\cup (E' \cap (B \smallsetminus B_{1}))$. As a consequence, $E \smallsetminus K = (E \cap (A \smallsetminus A_{1})) \cup (E \cap B_{1})$, $E' \smallsetminus L = E' \cap (A \smallsetminus A_{1}) \cup (E' \cap B_{1})$. As a sample of applications \eqref{eq-4.3} gives.
+\item We refer to (4.2.1) (a) and take $F= F_{\xi}$. For $K\subset E$, $L \subset E'$, $A_{1} \subset A$, $B_{1} \subset B$ $K \cup L = A_{1} \cup (B \smallsetminus B_{1})$ if and only if $A_{1} = (K \cup L) \cap A$, $B_{1}= B \smallsetminus (K \cup L)\cap B$ if and only if $K =(E \cap A_{1}) \cup (E \cap (B\smallsetminus B_{1}))$, $L=(E' \cap A_{1})\cup (E' \cap (B \smallsetminus B_{1}))$. As a consequence, $E \smallsetminus K = (E \cap (A \smallsetminus A_{1})) \cup (E \cap B_{1})$, $E' \smallsetminus L = E' \cap (A \smallsetminus A_{1}) \cup (E' \cap B_{1})$. As a sample of applications (4.3) gives
 \begin{align*}
-a_{k L} &= (-1)^{\#(K \cup L)\cap A} \alpha \left((K \cup L) \cap A, B \smallsetminus (K \cup L) \cap B \right) = (-1)^{\# A_{1}} \alpha(A _{1}, B_{1})\\
- & = (-1)^{v} (-1)^{\#} (A \smallsetminus (K \cup L) \cap A) \alpha (A \smallsetminus (K \cup L) \cap A), (K \cup L )\cap B)\\
- & = (-1)^{v} a_{E \smallsetminus k, E' \smallsetminus L} \tag{4.21}\label{eq-4.21}
+a_{K L} &= (-1)^{\#(K \cup L)\cap A} \alpha \left((K \cup L) \cap A, B \smallsetminus (K \cup L) \cap B \right) = (-1)^{\# A_{1}} \alpha(A _{1}, B_{1})\\
+ & = (-1)^{v} (-1)^{\#} (A \smallsetminus (K \cup L) \cap A) \alpha (A \smallsetminus (K \cup L) \cap A, (K \cup L )\cap B)\\
+ & = (-1)^{v} a_{E \smallsetminus K, E' \smallsetminus L} \tag{4.21}\label{eq-4.21}
 \end{align*}
 
-\item It helps to make tha proofs and discussion shorter and transparent if we order $P_{j}^{E}$'s and $P_{k}^{E'}$'s in a convenient manner for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. We first note that the complementation maps $S \rightarrow E \smallsetminus S$ and $T \rightarrow E' \smallsetminus T$ set up one-to-one correspondence between $P_{j}^{E}$ and $P_{n_{\Gamma}j}^{E}$ and between $P_{k}^{E'}$ and $P_{n_{2}-k}^{E'}$ respectively for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. Indeed for $n_{1}$ even, say $n_{1}= 2v_{1}$, so is $n_{2}$ say $2v_{2}$ with $v_{2}= v-v_{1}$; and in this case, for $j=v_{1}$, $k=v_{2}$, we have $P_{j}^{E}= P_{n_{\Gamma}j}^{E}$ and $P_{k}^{E'} = P_{n_{2}=k}^{E'}$ and the complementation maps are only permutations order 2.
+\item It helps to make the proofs and discussion shorter and transparent if we order $P_{p}^{E}$'s and $P_{p}^{E'}$'s in a convenient manner for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. We first note that the complementation maps $S \rightarrow E \smallsetminus S$ and $T \rightarrow E' \smallsetminus T$ set up one-to-one correspondence between $P_{j}^{E}$ and $P_{n_{1}-j}^{E}$ and between $P_{k}^{E'}$ and $P_{n_{2}-k}^{E'}$ respectively for $0 \leq j \leq n_{1}$, $0 \leq k \leq n_{2}$. Indeed for $n_{1}$ even, say $n_{1}= 2v_{1}$, so is $n_{2}$ say $2v_{2}$ with $v_{2}= v-v_{1}$; and in this case, for $j=v_{1}$, $k=v_{2}$, we have $P_{j}^{E}= P_{n_{\Gamma}j}^{E}$ and $P_{k}^{E'} = P_{n_{2}-k}^{E'}$ and the complementation maps are only permutations of order 2.
 
 \item For $0 \leq j < \frac{n_{1}}{2}$, $0 \leq k < \frac{n_{2}}{2}$, we order $P_{j}^{E}$ and $P_{k}^{E'}$ the way we like and then follow the order in $P_{n_{1}-j}^{E}$ and $P_{n_{2}-k}^{E'}$ dictated by the complementation maps. This permits as, in view of~\eqref{eq-4.21} in (b) above, to write
 \begin{equation}
