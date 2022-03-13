@@ -13,6 +13,9 @@
 \usepackage{caption}
 \usepackage{secdot}
 \usepackage{xurl}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 
 %~ \usepackage[]{titlesec}%
 %~ \titleformat{\subsubsec}
@@ -119,14 +122,14 @@ We study quantum entanglement properties of Resonating valence bond states and r
 
 \section{Introduction}\label{section-1}
 
-Resonating Valence Bond states (RVB) are important in condensed matter physics. Phillip W. Anderson's RVB paper [A1] is perhaps the most important paper that triggered intensive and extensive studies of the topic. The progress from physics point of view can be gauged by survey or history articles by Anderson [A2 and A3], Baskaran [Ba 1, Ba 2], Poilblanc, Cirac \& Perez-Garaia [PCPG], Shuch [Sh], Zaanen [Z] and an enormous collection of papers cited in them or elsewhere. Some particular aspects concerning quantum entanglement for different types have been studied by Chandran, Kaszlikowski, Sen(De), Sen \& Vedral [CKSSV], Dhar \& Sen(De) [DS], Dhar, Sen(De) \& Sen[DSS], Roy, Dhar, Sen(De) \& Sen [RDSS] and Roy [R].
+Resonating Valence Bond states (RVB) are important in condensed matter physics. Phillip W. Anderson's RVB paper \cite{A1} is perhaps the most important paper that triggered intensive and extensive studies of the topic. The progress from physics point of view can be gauged by survey or history articles by Anderson  \cite{A2} and \cite{A3}, Baskaran \cite{Ba 1}, \cite{Ba 2}, Poilblanc, Cirac \& Perez-Garaia \cite{PCPG}, Shuch \cite{Sh}, Zaanen \cite{Z} and an enormous collection of papers cited in them or elsewhere. Some particular aspects concerning quantum entanglement for different types have been studied by Chandran, Kaszlikowski, Sen(De), Sen \& Vedral \cite{CKSSV}, Dhar \& Sen(De) \cite{DS}, Dhar, Sen(De) \& Sen\cite{DSS}, Roy, Dhar, Sen(De) \& Sen \cite{RDSS} and Roy \cite{R}.
 
 
-Polynomial have been used in different ways to study quantum entanglement. For instance, one can see papers by Wallach[W], Parthasarathy[P], Bhat[Bh],\break Skowronek[Sk], Sengupta, Arvind \& Singh [SAS], Josza \& Mitchinson[JM],\break Adesso \& Regula[Ad], Mor[M]. A recent paper by Bandyopadhyay \& Singh[BS] displays a simple way to use polynomials for understanding multipartite entanglement in general and Schmidt rank in particular cases. For multi-qubit systems, the\break theory of polynomial representation of quantum entanglement takes rather a\break simple form. Further, for RVB's and related states it is enough to confine attention to homogeneous polynomials. So we recast a part of [BS] and strengthen it further in Section~\eqref{section-2}. The basic theory of polynomials required for this can be found in many standard books but as in [BS] we take Fulton[F] as our basic reference. Similarly for multipartite  entanglement we may refer to any standard source such as Horodecki's[HHH] and Szalay[Sz]. We confine our attention to pure states.
+Polynomial have been used in different ways to study quantum entanglement. For instance, one can see papers by Wallach\cite{W}, Parthasarathy\cite{P}, Bhat\cite{Bh},\break Skowronek\cite{Sk}, Sengupta, Arvind \& Singh \cite{SAS}, Josza \& Mitchinson\cite{JM},\break Adesso \& Regula\cite{Ad}, Mor\cite{M}. A recent paper by Bandyopadhyay \& Singh\cite{BS} displays a simple way to use polynomials for understanding multipartite entanglement in general and Schmidt rank in particular cases. For multi-qubit systems, the\break theory of polynomial representation of quantum entanglement takes rather a\break simple form. Further, for RVB's and related states it is enough to confine attention to homogeneous polynomials. So we recast a part of \cite{BS} and strengthen it further in Section~\eqref{section-2}. The basic theory of polynomials required for this can be found in many standard books but as in \cite{BS} we take Fulton\cite{F} as our basic reference. Similarly for multipartite  entanglement we may refer to any standard source such as Horodecki's\cite{HHH} and Szalay\cite{Sz}. We confine our attention to pure states.
 
-In Section~\eqref{section-2}, we give polynomial representation of quantum entanglement by for a multiqubit system. It renders easy conditions for classification of a pure state into a product vector, product vector in a bipartite cut or genuinely entangled in terms of the degree, support, number of terms or irreducibility  of the corresponding polynomial.   
+In Section~\eqref{section-2}, we give polynomial representation of quantum entanglement for a multiqubit system. It renders easy conditions for classification of a pure state into a product vector, product vector in a bipartite cut or genuinely entangled in terms of the degree, support, number of terms or irreducibility  of the corresponding polynomial.   
 
-We began Section~\eqref{section-3} with basics like coverings and resonating valence to the Cororings and resonance Valence bond states, nearest neighbour (in short, NN) coverings etc. together with a few examples for the sake of self-completeness. Then we give their polynomial representations and obtain results on conditions in terms of them for quantum entanglement properties of RVB states. This brings us to the notion of decomposability  and factorability  etc. for converings together with interrelationships amongst them and renders easy proof of the fact that NN RVB's are genuinely entangled. Master Equations are obtained in terms of coverings for the corresponding RVB state to be a product vector in some bipartite cut. Illustrations have been provided. Doped RVB states are genuinely entangled is shown to be true in a very easy way. Section~\eqref{section-4} concentrates on variable coefficients analogues and differences as compared to the constant ones in Section~\eqref{section-3}. Doped states with variable coefficient with non-zero sum are shown to be genuinely entangled by a short proof.
+We begin Section~\eqref{section-3} with basics like coverings and resonating bond states, nearest neighbour (in short, NN) coverings etc. together with a few examples for the sake of self-completeness. Then we give their polynomial representations and obtain results on conditions in terms of them for quantum entanglement properties of RVB states. This brings us to the notion of decomposability  and factorability  etc. for coverings together with interrelationships amongst them and renders easy proof of the fact that NN RVB's are genuinely entangled. Master Equations are obtained in terms of coverings for the corresponding RVB state to be a product vector in some bipartite cut. Illustrations have been provided. Doped RVB states are genuinely entangled is shown to be true in a very easy way. Section-4 concentrates on variable coefficients analogues and differences as compared to the constant ones in Section~\eqref{section-3}. Doped states with variable coefficients with non-zero sum are shown to be genuinely entangled by a short proof.
 
 
 \section{Polynomial representation of quantum\\ entanglement for multi-qubit systems}\label{section-2}
@@ -148,8 +151,7 @@ Let $\mathcal{H}_{j}$ be a qubit system with ordered basis $\left\{ | \uparrow \
 
 %~ \subsubsection*{(\underline{2.1.2})}
 \begin{subsubsec}\label{subsubsection-2.1.2}
-We also consider $\mathcal{H}_{j}$ as the space $\vertchar[.08ex]{C}_{1}[\x_{j}]$ of complex polynomials in $\x_{j}$ of degree at most 
-in place of root one, and the constant function $\bold{1}$ and the polynomial $\x_{j}$ constituting an orthonormal basis for $\mathcal{H}_{j}$.
+We also consider $\mathcal{H}_{j}$ as the space $\vertchar[.08ex]{C}_{1}[\x_{j}]$ of complex polynomials in $\x_{j}$ of degree at most, and the constant function $\bold{1}$ and the polynomial $\x_{j}$ constituting an orthonormal basis for $\mathcal{H}_{j}$.
 
 In other words, we consider $\mathcal{H}_{j}$ as the subspace spanned by $\bold{1}$ and $\x_{j}$ of the Hilbert space $\la^{2}(T)$ of square Lebesgue integrable complex functions $f$ on the unit circle. i.e; torus T with $<f, g> = \int \bar{f} g d \lambda$, $\lambda$  being the normalized Lebesgue. measure on T.
 
@@ -160,9 +162,9 @@ In other words, we consider $\mathcal{H}_{j}$ as the subspace spanned by $\bold{
 Let $\mathcal{H} = \bigotimes\limits_{\rm d=1}^{\rm n} \mathcal{H}_{j}$ be the Hilbert space tensor product of Hilbert spaces $\mathcal{H}_{j}$, $1 \leq j \leq n$.
 
 Let $\mathcal{I}$ be the set of n-tuples $\bold{i} = (i_{j})^{n}_{j=1}$ with $i_{j}=0$ or 1 for $1 \leq j \leq n$. Then $\mathcal{I}$ is in one-one correspondence with the set $P_{n}$ of subsets of $\Gamma_{n}$ via $\bold{i} \longrightarrow K_{\bold{i}} = \left\{j : i_{j} = 1 \right\}$. We note that for $o \leq s \leq n $, $\mathcal{I}_{s} = \left\{ \bold{i} \in \mathcal{I} : |\bold{i}| = \sum_{i=1}^{\rm n} i_{j} = s
-\right\}$ equals $\left\{\bold{i} \in g : \# K_{\bold{i}} = s \right\}$ and together, they constitute a decomposition of $\mathcal{I}$.
+\right\}$ equals $\left\{\bold{i} \in \mathcal{I} : \# K_{\bold{i}} = s \right\}$ and together, they constitute a decomposition of $\mathcal{I}$.
 
-Further, $\left\{| \bold{i} \rangle = \bigotimes\limits_{j=1}^{\rm n} : |\bold{i}_{j} = {({i_{j}})_{j=1}^{n}} \in \mathcal{I} \right\}$  is an orthonormal  basis for $\mathcal{H}$. A generic element $\xi$ of $\mathcal{H}$ has the form $\xi$ = $\sum_{\bold{i}\in \mathcal{I}} a_{\bold{i}} |\bold{i} \rangle$ for a unique $\bold{a} = {(a_{\bold{i}})_{\bold{i}\in \mathcal{I}}} \vertchar[.08ex]{C}^{\mathcal{I}}$.
+Further, $\left\{| \bold{i} \rangle = \bigotimes\limits_{j=1}^{\rm n}| i_{j} \rangle : \bold{i}_{j} = {({i_{j}})_{j=1}^{n}} \in \mathcal{I} \right\}$  is an orthonormal  basis for $\mathcal{H}$. A generic element $\xi$ of $\mathcal{H}$ has the form $\xi$ = $\sum_{\bold{i}\in \mathcal{I}} a_{\bold{i}} |\bold{i} \rangle$ for a unique $\bold{a} = {(a_{\bold{i}})_{\bold{i}\in \mathcal{I}}} ^{\in}\vertchar[.08ex]{C}^{\mathcal{I}}$.
 \end{subsubsec}
 
 %~ \subsubsection*{(\underline{2.1.4})}
@@ -171,7 +173,7 @@ Further, $\left\{| \bold{i} \rangle = \bigotimes\limits_{j=1}^{\rm n} : |\bold{i
 Continuing in the spirit set in (2.1.2) above, for $\bold{i} \in \mathcal{I}$ 
 
 \noindent
-let $\bold{\x}^{\bold{i}} = \prod\limits_{j=1}^{n} \x_{j}^{i_{j}} = \prod \left\{ \x_{j} : j \in K_{\bold{i}} \right\} = \bold{\x}^{K_{\bold{i}}}$, so as to say by $\bold{\x}$ by $\bold{\x}^{\bold{i}}$ and accordingly, $\xi in \mathcal{H}$ as in (2.1.3) above, by the polynomial F in several variables $\x = (\x_{j})^{n}_{j=1} = (\x_{1}, \x_{2}, \ldots \x_{n})$ given by ${\rm F} (\bold{\x}) = \sum_{\bold{i}\in \mathcal{I}} a_{\bold{i}} \bold{\x}^{\bold{i}}$. This enables us to identity $\mathcal{H}$ with the space $\vertchar[.08ex]{C}_{1}[\bold{\x}]$ of polynomials F in $\bold{\x}$ with degree of each variable $\x_{j}$ being less than or equal to 1. Clearly the degree of each such F is at most $n$. We may also write F as $\sum\limits_{\rm K \in P_{n}} a_{\rm K} \bold{\x}^{\ka} = \sum\limits_{\rm K \in P_{n}} a_{\bold{i}_{\ka}} \bold{\x}^{\bold{i}_{K}}$, where for $\ka \in P_{n} (\bold{i}_{\ka})_{j} =1$ for $j\in \ka $ and $0$ otherwise.
+let $\bold{\x}^{\bold{i}} = \prod\limits_{j=1}^{n} \x_{j}^{i_{j}} = \prod \left\{ \x_{j} : j \in K_{\bold{i}} \right\} = \bold{\x}^{K_{\bold{i}}}$, so as to say. Further, we may represent $| \boldsymbol{i} \rangle \in \mathcal{H}$ by $\bold{\x}^{\bold{i}}$ and accordingly, $\xi~in~\mathcal{H}$ as in (2.1.3) above, by the polynomial F in several variables $\x = (\x_{j})^{n}_{j=1} = (\x_{1}, \x_{2}, \ldots \x_{n})$ given by ${\rm F} (\bold{\x}) = \sum_{\bold{i}\in \mathcal{I}} a_{\bold{i}} \bold{\x}^{\bold{i}}$. This enables us to identity $\mathcal{H}$ with the space $\vertchar[.08ex]{C}_{1}[\bold{\x}]$ of polynomials F in $\bold{\x}$ with degree of each variable $\x_{j}$ being less than or equal to 1. Clearly the degree of each such F is at most $n$. We may also write F as $\sum\limits_{\rm K \in P_{n}} a_{\rm K} \bold{\x}^{\ka} = \sum\limits_{\rm K \in P_{n}} a_{\bold{i}_{\ka}} \bold{\x}^{\bold{i}_{K}}$, where for $\ka \in P_{n}, (\bold{i}_{\ka})_{j} =1$ for $j\in \ka $ and $0$ otherwise.
 
 In other words, we consider $\mathcal{H}$ as the subspace spanned by $\left\{ \bold{\x}^{\ka}, \ka \in P_{n}\right\}$ of the Hilbert space $\rm L^{2} \left(T^{n}\right)$ of square integrable complex functions $f$ on the torus $T^{n}$ with the normalized product Lebesque measure $\lambda_{n}$ and take $<f, g> = \int\limits_{T^{n}} \overline{f} g d \lambda_{n}$.
  
@@ -185,7 +187,7 @@ In other words, we consider $\mathcal{H}$ as the subspace spanned by $\left\{ \b
  
  Let $\vertchar[.08ex]{C}_{1}[\bold{\x}_{E}]$ and  $\vertchar[.08ex]{C}_{1}[\bold{\x}_{E'}]$ have their obvious meanings. Further, $\vertchar[.08ex]{C}_{1}[\bold{\x}] = \vertchar[.08ex]{C}_{1}[\bold{\x}_{E}] \bigotimes  \vertchar[.08ex]{C}_{1}[\bold{\x}_{E'}]$. We note that for $p \in \vertchar[.08ex]{C}_{1}[\bold{\x}_{E}]$, $q \in \vertchar[.08ex]{C}_{1}[\bold{\x}_{E'}]$, $F = p \bigotimes q$ is given by $F(\bold{x}) = p (\bold{\x}_{E}) q (\bold{\x}_{E'})$.
  
- In view of (2.1.4) above we may identiy $\mathcal{H}(E)$ with $\vertchar[.08ex]{C}_{1}[\bold{\x}_{E}]$ and $\mathcal{H}(E')$ with $\vertchar[.08ex]{C}_{1}[\bold{\x}_{E'}]$.
+ In view of (2.1.4) $\boldsymbol{\x}$ is capital here above we may identiy $\mathcal{H}(E)$ with $\vertchar[.08ex]{C}_{1}[\bold{\x}_{E}]$ and $\mathcal{H}(E')$ with $\vertchar[.08ex]{C}_{1}[\bold{\x}_{E'}]$.
  
  \end{subsubsec}
  
@@ -193,25 +195,25 @@ In other words, we consider $\mathcal{H}$ as the subspace spanned by $\left\{ \b
  \begin{subsubsec}\label{subsubsection-2.1.6}
  Caution is needed in above identification because the context is important. For instance, for $n=4$, $E = \{ 1, 2 \}$, consider the polynomials written in the usual short form $1, \x_{1}-\x_{2}$.
  
- Means $10 \rangle_{1}$ in $\mathcal{H}_{1}$, $100\rangle_{12} = 10 \rangle_{1} \otimes 10 \rangle_{2}$ in $\mathcal(E)$, $100 \rangle_{34} = 10\rangle_{3} \otimes 10 \rangle_{4}$ in $\mathcal{H}(E')$ and $10000\rangle_{1234} = 10 \rangle_{1} \otimes 10 \rangle_{2} \otimes 10 \rangle_{3} \otimes 10 \rangle_{4}$ in $\mathcal{H}$. On the other hand, $X_{1}-X_{2}$ has no meaning in $\mathcal{H}_{1}$ or $\mathcal{H}(E')$ but it stands for $110\rangle_{12} - 101\rangle_{12} = 11 \rangle_{1} \otimes 10 \rangle_{2} - 10 \rangle_{1} \otimes 11 \rangle_{2}$ in $\mathcal{H}_{E}$ and for $11000 \rangle_{1234} - 10100\rangle_{1234} = 11 \rangle_{1} \otimes 10 \rangle_{2} \otimes 10 \rangle_{3} \otimes 10 \rangle_{4}-10 \rangle_{1} \otimes 10 \rangle_{2} \otimes 10 \rangle_{3} \otimes 10 \rangle_{4} $ in $\mathcal{H}$.
+ Means $| 0 \rangle_{1}$ in $\mathcal{H}_{1}$, $|00\rangle_{12} = |0 \rangle_{1} \otimes |0 \rangle_{2}$ in $\mathcal(E)$, $|00 \rangle_{34} = |0\rangle_{3} \otimes |0 \rangle_{4}$ in $\mathcal{H}(E')$ and $|0000\rangle_{1234} = |0 \rangle_{1} \otimes |0 \rangle_{2} \otimes |0 \rangle_{3} \otimes |0 \rangle_{4}$ in $\mathcal{H}$. On the other hand, $X_{1}-X_{2}$ has no meaning in $\mathcal{H}_{1}$ or $\mathcal{H}(E')$ but it stands for $||0\rangle_{12} - |0|\rangle_{12} = || \rangle_{1} \otimes |0 \rangle_{2} - |0 \rangle_{1} \otimes || \rangle_{2}$ in $\mathcal{H}_{E}$ and for $||000 \rangle_{1234} - |0|00\rangle_{1234} = || \rangle_{1} \otimes |0 \rangle_{2} \otimes |0 \rangle_{3} \otimes |0 \rangle_{4}-|0 \rangle_{1} \otimes |0 \rangle_{2} \otimes |0 \rangle_{3} \otimes |0 \rangle_{4} $ in $\mathcal{H}$.
 \end{subsubsec} 
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%page no 9 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
  
  \subsection{Multiqubit Entanglement and Polynomial Representation}\label{subsection-2.2}
  
- Let $0 \neq \xi  \in \mathcal{H}$ and $\digamma (\bold{\x})$, the corresponding polynomial in $\vertchar[.08ex]{C}_{1}[\bold{\x}]$. Set $P_{???} = \frac{1}{|| \xi||^{2}} | \xi\rangle \langle \xi|$, the corresponding pure state; i.e; the rank one (orthogonal) projection on the linear span of $\xi$. We consider the following concepts related to entanglement of $\xi$ or $P_{\xi}$ to being with. 
+ Let $0 \neq \xi  \in \mathcal{H}$ and $\digamma (\bold{\x})$, the corresponding polynomial in $\vertchar[.08ex]{C}_{1}[\bold{\x}]$. Set $P_{\xi} = \frac{1}{|| \xi||^{2}} | \xi\rangle \langle \xi|$, the corresponding pure state; i.e; the rank one (orthogonal) projection on the linear span of $\xi$. We consider the following concepts related to entanglement of $\xi$ or $P_{\xi}$ to being with. 
  
  %~ \subsubsection*{(\underline{2.2.1})}\label{2.2.1}
  
  \begin{subsubsec}\label{subsubsection-2.2.1}
  
  \begin{enumerate}[label=(\alph*)]
- \item $\xi$ is a product vector in $\mathcal{H} = \bigotimes\limits_{\rm n}^{j=1} \mathcal{H}_{j}$ if $\xi =\bigotimes\limits_{\rm n}^{j = 1} \xi_{j}$ with $\xi_{j} \in \mathcal{H}_{j}$ for $1 \leq j \leq n$. Otherwise, $\xi$ is called entangled vector.
+ \item $\xi$ is a product vector in $\mathcal{H} = \bigotimes\limits_{\rm n}^{j=1} \mathcal{H}_{j}$ if $\xi =\bigotimes\limits_{\rm n}^{j = 1} \xi_{j}$ with $\xi_{j} \in \mathcal{H}_{j}$ for $1 \leq j \leq n$. Otherwise, $\xi$ is called an entangled vector.
    
- \item Let $\phi \neq E_{\neq} \subset \Gamma_{n}$ $\xi$ is said to be a product vector in the bipartite cut $(E, E')$ if $\xi$ is a product vector in $\mathcal{H}(E)\otimes \mathcal{H}(E')$, i.e; if $\xi = n \otimes 3$ for some $n \in \mathcal{H}(E)$ and $\xi \in \mathcal(E')$
+ \item Let $\phi \neq E \subset_{\neq} \Gamma_{n}$ $\xi$ is said to be a product vector in the bipartite cut $(E, E')$ if $\xi$ is a product vector in $\mathcal{H}(E)\otimes \mathcal{H}(E')$, i.e; if $\xi = \eta \otimes \zeta$ for some $\eta \in \mathcal{H}(E)$ and $\zeta \in \mathcal(E')$
  
- \item $\xi$ is said to be genuinely entangled if it is not product vector in any bipartite cut.
+ \item $\xi$ is said to be genuinely entangled if it is not a product vector in any bipartite cut.
   
  \end{enumerate}
  
@@ -231,17 +233,17 @@ In other words, we consider $\mathcal{H}$ as the subspace spanned by $\left\{ \b
  
  \begin{enumerate}[label=(\alph*)]
  
- \item  Let $S_{F}$, the support of $F =\left\{ j \in \Gamma_{n} \; ; \x_{j}\;\; \text{occurs in} F, \text{i.e;}  F \text{has degree 1 in} \x_{j} \right\}$ and $m = \neq S_{F}$, the number of $\x_{j}'$s that occur in $F$.
+ \item  Let $S_{F}$, the support of $F =\left\{ j \in \Gamma_{n} \; ; \x_{j}\;\; \text{occurs in}~ F, \text{i.e.,}  F~ \text{has degree 1 in} \x_{j} \right\}$ and $m = \# S_{F}$, the number of $\x_{j}'$s that occur in $F$.
  
  \item Let $d$ be the degree of $F$. Then $d > 0$ if and only if $m > 0$. Also $m \geq d$ simply because $F$ has degree at most one in each $\x_{j}$.
  
  \item $F$ is said to be homogeneous if each term in $F$ has degree $d$.  
  
- \item Suppose that $F = gh$ with $g$ and $h$ in $\vertchar[.08ex]{C}_{1} [\bold{\x}]$. Then $S_{g} \cap S_{h} = \emptyset$ because degree of $\x_{j}$ in $F(\bold{\x})$ is at most one for $1 \leq j \leq n$. If $g$ and $h$ are such that $S_{g} \neq \Gamma_{n} \neq S_{h}$ then we may take any $E$ with $\emptyset \neq E_{\neq}\subset \Gamma_{n}$ with $S_{g} \subset E$ and $S_{h} \subset E'$. This permits us to write $g(\x)$ as $g(\bold{\x}_{E})$ and $h(\bold{\x})$ as $h(\bold{\x}_{E'})$ as well and then $F(\underline{x}) = g(\x_{E}) h (\bold{\x}_{E'})$.
+ \item Suppose that $F = gh$ with $g$ and $h$ in $\vertchar[.08ex]{C}_{1} [\bold{\x}]$. Then $S_{g} \cap S_{h} = \emptyset$ because degree of $\x_{j}$ in $F(\bold{\x})$ is at most one for $1 \leq j \leq n$. If $g$ and $h$ are such that $S_{g} \neq \Gamma_{n} \neq S_{h}$ then we may take any $E$ with $\emptyset \neq E\subset_{\neq} \Gamma_{n}$ with $S_{g} \subset E$ and $S_{h} \subset E'$. This permits us to write $g(\x)$ as $g(\bold{\x}_{E})$ and $h(\bold{\x})$ as $h(\bold{\x}_{E'})$ as well and then $F(\boldsymbol{\x}) = g(\x_{E}) h (\bold{\x}_{E'})$.
  
- \item By Problem 1.1 $[F]$ if $F, g, h$ are as in $(d)$ above and $F$ is homogeneous then so are $g$ with $h$.
+ \item By Problem 1.1 $[F]$ if $F, g, h$ are as in $(d)$ above and $F$ is homogeneous then so are g with h.
  
- \item Suppose that $F$ is note a constant polynomial. $F$ is said to be irreducible if $F$ has no factors other than itself (up to constants). If $F$ is not irredcible then there exist $r(\neq 2)$ irreducible polynomials $F_{s}$, $1 \leq s \leq r$ such that $F(\bold{\x}) = \prod\limits_{\lambda = 1}^{???} F_{s} (\bold{\x})$. $F_{s}$'s are unique to with in order and up to constants. In view of $(d)$ above, $S_{F_{s}} \cap S_{F_{s}} = \emptyset$, for $1 \leq s \neq s' \leq r$.
+ \item Suppose that $F$ is note a constant polynomial. $F$ is said to be irreducible if $F$ has no factors other than itself (up to constants). If $F$ is not irredcible then there exist $r(\neq 2)$ irreducible polynomials $F_{s}$, $1 \leq s \leq r$ such that $F(\bold{\x}) = \prod\limits_{s = 1} F_{s} (\bold{\x})$. $F_{s}$'s are unique to with in order and up to constants. In view of $(d)$ above, $S_{F_{s}} \cap S_{F_{s}} = \emptyset$, for $1 \leq s \neq s' \leq r$.
  \end{enumerate}
  
  
@@ -424,12 +426,12 @@ For $a\in A$, $b \in B$, we write $H_{a,b}$ for $\mathcal{H}_{a} \bigotimes \mat
 \begin{enumerate}[label=(\alph*)]
 \item A dimer or a singlet at a, b is the unit vector
 $$
-[a, b] = \frac{1}{\sqrt{2}} (| \uparrow \rangle_{a} \otimes | \downarrow \rangle_{b}) = \frac{1}{\sqrt{2}}(| 0\rangle_{a} \otimes | \shortmid \rangle - | \shortmid \rangle_{a} \otimes | 0 \rangle_{b})\quad {\rm in} \quad  \mathcal{H}_{a,b} 
+[a, b] = \frac{1}{\sqrt{2}} (| \uparrow \rangle_{a} \otimes | \downarrow \rangle_{b} - | \downarrow \rangle \otimes | \uparrow \rangle_{b}) = \frac{1}{\sqrt{2}}(| 0\rangle_{a} \otimes | 1 \rangle - | 1 \rangle_{a} \otimes | 0 \rangle_{b})\quad {\rm in} \quad  \mathcal{H}_{a,b} 
 $$
 
 Its polynomial representation is given by
 \begin{equation*}
-F_{a_{1}b}(\x_{a}, \x_{b}) = \frac{1}{\sqrt{2}}(\x_{b}- \x_{a})\tag{3.3}
+F_{a_{1}, b}(\x_{a}, \x_{b}) = \frac{1}{\sqrt{2}}(\x_{b}- \x_{a})\tag{3.3}
 \end{equation*}
 
 \item Let  $C$ be a covering of $\Gamma_{n}$ i.e; a bijective map $\Psi$ of $A$ to $B$. We let $| C \rangle = | \Psi \rangle$ be the vector in $\mathcal{H}$ identified with $\bigotimes\limits_{a \in A} \quad \mathcal{H}_{a}\Psi_{(a)}$ given by $\bigotimes\limits_{a \in A} [a, \Psi(a)]$, i.e;,
@@ -441,7 +443,7 @@ F_{a_{1}b}(\x_{a}, \x_{b}) = \frac{1}{\sqrt{2}}(\x_{b}- \x_{a})\tag{3.3}
  
 It is a unit vector and its polynomial representation is 
 \begin{equation}
-F_{\underline{\overline{\Psi}}} = 2^{-v/2} \prod\limits_{a\in A}(\x_{\Psi(a)}- \x_{a})\tag{3.4}\label{eq-3.4}
+F_{{\Psi}} = 2^{-v/2} \prod\limits_{a\in A}(\x_{\Psi(a)}- \x_{a})\tag{3.4}\label{eq-3.4}
 \end{equation}
 
 It is a non-zero homogeneous polynomial of degree $d=v$ and its support is $S_{F_{\underline{\overline{\Psi}}}} = \Gamma_{n}$, i.e., $m=n$.
@@ -449,7 +451,7 @@ It is a non-zero homogeneous polynomial of degree $d=v$ and its support is $S_{F
 Indeed, 
 \begin{align*}
 F_{\Psi}(\bold{\x}) &= 2^{-v/2} \sum_{A_{1} \subset A}(-1)^{??? A_{1}} \bold{\x}^{A_{1}} \bold{\x}^{B\smallsetminus\Psi(A_{1})}\nonumber\\
-& = 2^{-v/2} \sum_{\substack{A_{1} \subset A \\ \#A_{1} \leq v/2 \\ | \in A_{1}={\rm nu}/2 }} \left(\bold{\x}^{A_{1}} \bold{\x}^{B\smallsetminus \Psi (A_{1}) } + (-1)^{v} \bold{\x}^{A \smallsetminus A_{1}} \bold{\x}^{\Psi (A_{1})} \right)\tag{3.5}  
+& = 2^{-v/2} \sum_{\substack{A_{1} \subset A \\ \#A_{1} \leq v/2 \\ 1 \epsilon A_{1}}} \left(\bold{\x}^{A_{1}} \bold{\x}^{B\smallsetminus \Psi (A_{1}) } + (-1)^{v} \bold{\x}^{A \smallsetminus A_{1}} \bold{\x}^{\Psi (A_{1})} \right)\tag{3.5}  
 \end{align*}
 
 Clearly, the number $t$ of terms in $F_{\Psi}$ is $2^{v}$ and $\bold{\x}^{k}$ is not a factor of $F_{\Psi}(\bold{\x})$ for any $\phi \neq K_{\neq} \subset \Gamma_{n}$.
@@ -458,7 +460,7 @@ Clearly, the number $t$ of terms in $F_{\Psi}$ is $2^{v}$ and $\bold{\x}^{k}$ is
 
 \item The polynomial representation of $| \underline{\overline{\Psi}}\rangle$ is given by
 \begin{equation}
-F_{\underline{\overline{\Psi}}} = \frac{1}{\# \underline{\overline{\Psi}}} \sum_{\Psi \in \underline{\overline{\Psi}}} F_{\Psi} = \frac{1}{\# \underline{\overline{\Psi}}} \sum_{\substack{{A_{1} \subset A}\\ B_{1}\subset, \# B_{1}= \# A_{1}}} (-1)^{\# A_{1}} \# \left\{ \Psi \in \underline{\overline{\Psi}} : \Psi (A_{1}) = B_{1}\right\} \bold{\x}^{A_{1}} \bold{\x}^{B\smallsetminus B_{1}}\tag{3.6}\label{eq-3.6}
+F_{\underline{\overline{\Psi}}} = \frac{1}{\# \underline{\overline{\Psi}}} \sum_{\Psi \in \underline{\overline{\Psi}}} F_{\Psi} = \frac{1}{\# \underline{\overline{\Psi}}} \sum_{\substack{{A_{1} \subset A}\\ B_{1}\subset B, \# B_{1}= \# A_{1}}} (-1)^{\# A_{1}} \# \left\{ \Psi \in \underline{\overline{\Psi}} : \Psi (A_{1}) = B_{1}\right\} \bold{\x}^{A_{1}} \bold{\x}^{B\smallsetminus B_{1}}\tag{3.6}\label{eq-3.6}
 \end{equation}
 
 Then $| \underline{\overline{\psi}} \rangle \neq 0$ simply because $0 \neq 2^{-v/2}(\bold{\x}^{B} + (-1)^{v} \bold{\x}^{A})$ is a part of $F_{\underline{\overline{\Psi}}}(\bold{\x})$.
@@ -467,7 +469,7 @@ Indeed, this also gives that $S_{F_{\underline{\overline{\Psi}}}} = \Gamma_{n}$,
 
 \item Let $v \geq 2 $, $\underline{\overline{\Psi}}_{NN} =$ the set of nearest neighbour $(NN)$ coverings of $\Gamma_{n}$ and $\underline{\overline{\Psi}}_{PNN} =$ the set of periodic nearest neighbour $(PNN)$  covering of $\Gamma_{n}$. Then $|\underline{\overline{\Psi}}_{NN} \rangle$ and $| \underline{\overline{\Psi}}_{PNN} \rangle$ will be called the NN-RVB and the PNN-RVB vectors (in the context of n-qubit system).
 
-We record some immediate applications of Theorem~\eqref{thm-2.1}, 2.2 above is section~\eqref{section-2} labelled as Theorem~\eqref{thm-3.1} and Example~\eqref{example-3.1}.
+We record some immediate applications of Theorem~\eqref{thm-2.1}, and 2.2 above in section~\eqref{section-2} labelled as Theorem~\eqref{thm-3.1} and Example~\eqref{example-3.1}.
 
 \end{enumerate}
 
@@ -514,13 +516,17 @@ We consider the vectors given in~\eqref{subsubsection-3.1.2} above in their resp
  
  \item  It follows from Theorem~\eqref{thm-2.1} (i) (a) because $d=v < 2 v =n$ for the corresponding polynomials. 
 
-\item (a) The second equivalence is trivial. For the first one, the `if' part is immediate. For the  `only if' part, let, $p(\bold{\x}_{E}), q (\bold{\x}_{E'})$ be polynomials that satisfy $F(\bold{\x}) = p(\bold{\x}_{E}) q(\bold{\x}_{E'})$. Then by Theorem~\eqref{thm-2.1} (iv) (b), $p(\bold{\x}_{E})$ and $q(\bold{\x}_{E'})$ are both homogeneous, say, of degree $v_{1}$ and $v_{2}$ respectively with $v_{1} \geq 1$, $v_{2} \geq 1$, $v_{1} + v_{2} = v$, $S_{p} =E$ and $S_{q} = E'$.  low by~\eqref{subsubsection-3.1.2} (b) $\bold{\x}^{A}$ and $\bold{\x}^{B}$ both occur in $F_{\Psi}(\bold{\x})$. The one and only one way it can happen is the $\bold{\x}^{E \cap A}$, $\bold{\x}^{E \cap B}$ occur in $p(\bold{\x}_{E})$, and $\bold{\x}^{E' \cap A}$ and $\bold{\x}^{E' \cap B}$ occur in $q(\bold{\x}_{E'})$. This gives that $\# E \cap A = \# E \cap B = v_{1}$ and $\# E' \cap A = \# E' \cap B =v_{2}$. Now $\bold{\x}^{E \cap A}$ $\bold{\x}^{E' \cap B}$ occurs in But this can happen for $F_{\Psi} (\bold{\x})$ if and only of $B \Psi(E \cap A) = E' \cap B$, i.e., $\Psi(E \cap A) = E \cap B$. As a consequence $\Psi (E' \cap A) = E' \cap B$ as well. This confirms the assertion already made about the relationships amongst cardinalties of the sets, $v_{1}$, $v_{2}$. Clearly $\# E = \# (E \cap A) + \# (E \cap B) = 2 v_{1}$.
+\item (a) The second equivalence is trivial. For the first one, the `if' part is immediate. For the  `only if' part, let, $p(\bold{\x}_{E}), q (\bold{\x}_{E'})$ be polynomials that satisfy $F(\bold{\x}) = p(\bold{\x}_{E}) q(\bold{\x}_{E'})$. Then by Theorem~\eqref{thm-2.1} (iv) (b), $p(\bold{\x}_{E})$ and $q(\bold{\x}_{E'})$ are both homogeneous, say, of degree $v_{1}$ and $v_{2}$ respectively with $v_{1} \geq 1$, $v_{2} \geq 1$, $v_{1} + v_{2} = v$, $S_{p} =E$ and $S_{q} = E'$.  low by~\eqref{subsubsection-3.1.2} (b) $\bold{\x}^{A}$ and $\bold{\x}^{B}$ both occur in $F_{\Psi}(\bold{\x})$. The one and only one way it can happen is the $\bold{\x}^{E \cap A}$, $\bold{\x}^{E \cap B}$ occur in $p(\bold{\x}_{E})$, and $\bold{\x}^{E' \cap A}$ and $\bold{\x}^{E' \cap B}$ occur in $q(\bold{\x}_{E'})$. This gives that $\# E \cap A = \# E \cap B = v_{1}$ and $\# E' \cap A = \# E' \cap B =v_{2}$. Now $\bold{\x}^{E \cap A}$ $\bold{\x}^{E' \cap B}$ occurs in $p(\boldsymbol{\x}_{E})q(\boldsymbol{\x}_{E'})$. But this can happen for $F_{\Psi} (\bold{\x})$ if and only of $B \Psi(E \cap A) = E' \cap B$, i.e., $\Psi(E \cap A) = E \cap B$. As a consequence $\Psi (E' \cap A) = E' \cap B$ as well. This confirms the assertion already made about the relationships amongst cardinalties of the sets, $v_{1}$, $v_{2}$. Clearly $\# E = \# (E \cap A) + \# (E \cap B) = 2 v_{1}$.
 
 (b) As noted in ~\eqref{subsubsection-3.1.2} (c), $\bold{\x}^{A}$ and $\bold{\x}^{B}$ both occur in $F_{\overline{\Psi}}(\bold{\x})$. So arguments in the proof of part (ii) (a) above by replacing $F_{\Psi}$ by $F_{\underline{\overline{\Psi}}}$ with the addition of ``for some $\Psi \in \underline{\overline{\Psi}}$ in the sentence beginning with `But'. Now consider any $\varphi \in \underline{\overline{\x}}$. Then $\bold{\x}^{E \cap A} \bold{\x}^{B \smallsetminus \varphi (E \cap A)}$ occurs in $F_{\underline{\overline{\Psi}}}(\bold{\x})$ and, therefore, in $p(\bold{\x}_{E}) q(\bold{\x}_{E'})$. The only way this can happen is that $B \smallsetminus \varphi (E \cap A) = E' \cap B$, which gives, in turn, $\varphi(E \cap A) - E \cap B$. This completes the proof of the first assertion. The second statement following ?????.
 
-\item For $v=2$, the condition~\eqref{eq-3.8}   in (ii) (b) is note satisfied for any $\phi \neq E \subset \lceil_{4}$ as in clear from ~\eqref{subsubsection-3.1.2} (e) above. (iii) It follow $\langle \neq \#$ from (ii)(b) and (c).
+\item For $v=2$, the condition~\eqref{eq-3.8}   in (ii) (b) is note satisfied for any $\phi \neq E \subset \Gamma_{4}$ as is clear from ~\eqref{subsubsection-3.1.2} (e) above. 
 
-\item In view of (iii), it is enough to consider the case $v \geq 3$. Let, if possible, the condition in (ii) (b) the case $v \geq 3$. Let if possible, the condition in (ii)(b) be satisfied for some $E$ with $\phi \neq E_{\neq} \subset \neq_{n}$ and $\underline{\overline{\Psi}}= \underline{\overline{\Psi}}_{NN}$.
+%~ (iii) It follow $\langle \neq \#$ from (ii)(b) and (c).
+
+\item In view of (iii), it is enough to consider the case $v \geq 3$. 
+
+%~ Let, if possible, the condition in (ii) (b) the case $v \geq 3$. Let if possible, the condition in (ii)(b) be satisfied for some $E$ with $\phi \neq E_{\neq} \subset \neq_{n}$ and $\underline{\overline{\Psi}}= \underline{\overline{\Psi}}_{NN}$.
 
 Consider any $2s-1 \in E \cap A$ with $1 \leq s\ leq v$. If $s < v$, then there exist $\Psi_{1}, \Psi_{2} \in \underline{\overline{\Psi}}$ with $\Psi_{1} (2s-1) = 2(s + 1)$ and $\Phi_{2} (2s+1) = 2(s+ 1)$. So $s(s+ 1) \in E \cap B$, which in turn, gives that $2s+1 \in E \cap A$. On the other hand, if $s > 1$, then there exist $\Psi_{3}, \Psi_{4} \in \underline{\overline{\Psi}}$ satisfying $\Psi_{3}(2s-1)= 2(s-1)$ and $\Psi_{3}(2s-3) =2 (s-1)$. So $2(s-1) \in E \cap B$ which leads to $2s-3 \in E \cap A$. Repeating the arguments iteratively we arrive at the conclusion that $\left\{2t-1 : 1 \leq t \leq v \right\} \subset E \cap A$. But that is not so. Hence $\underline{\overline{\Psi}}_{NN}$ is note a product vector in any bi?????? cut and is therefore genuinely entangled.  
 
@@ -668,11 +674,11 @@ Let $v\geq 3$. We use\eqref{subsubsection-3.1.3}(i). The terms of the polynomial
 || | \underline{\overline{\Psi}} \rangle || = ||F_{\underline{\overline{\Psi}}}(\bold{\x})||_{2} = 2^{-v/2}\sqrt{\left(\# \varphi_{1}  + \sum_{A_{2} \in \varphi_{2}} \left(\sum_{B_{2} \subset B} C_{A_{2}, B_{2}}^{2}\right) \right)}\tag{3.15}
 \end{equation*}
 
-But for each $A_{2} \in \varphi_{2}$, $\# \{B_{2} \subset B  : C_{A_{2}, B_{2}} \neq 0\} \geq 2$ and $\sum C_{A_{2}, B_{2}} = 1$; by \eqref{subsubsection-3.1.3} (h). So $\sum_{B_{2} \in B} C_{A_{2}, B_{2}} < 1$ for $A_{2} \in \varphi_{2}$.
+But for each $A_{2} \in A_{2}$, $\# \{B_{2} \subset B  : C_{A_{2}, B_{2}} \neq 0\} \geq 2$ and $\sum_{B_{2}\subset B} C_{A_{2}, B_{2}} = 1$; by \eqref{subsubsection-3.1.3} (h). So $\sum_{B_{2} \epsilon B} C_{A_{2}, B_{2}}^{2} < 1$ for $A_{2} \in A_{2}$.
 
 Hence
 \begin{equation*}
-|| | \underline{\overline{\Psi}} \rangle || < 2^{-v/2} (\# \varphi_{1} + \# \varphi_{2}) =1\tag{3.16}
+|| | \underline{\overline{\Psi}} \rangle || < 2^{-v/2} (\# A_{1} + \# A_{2}) =1\tag{3.16}
 \end{equation*}
 
 The corresponding RVB state, say $\widetilde{| \underline{\overline{\Psi}} \rangle} = \frac{1}{|| | \underline{\overline{\Psi}} \rangle||} | \underline{\overline{\Psi}} \rangle$ and its polynomial representation is 
@@ -683,42 +689,42 @@ The corresponding RVB state, say $\widetilde{| \underline{\overline{\Psi}} \rang
 \end{subsubsec}
 
 \begin{subsubsec}\label{subsubsection-3.1.5}
-{\bf Motivation for factor ability of sets of coverings}. Theorem~\eqref{thm-3.1} and \eqref{subsubsection-3.1.3} permit us to confine out attention to $v\geq 3$ and decomposable coverings $\underline{\overline{\Psi}}$ with $\# \underline{\overline{\Psi}} \geq 2$ and $\{a\} \notin \varphi_{1}$, for any $a \in A$ on the one hand and motivate the new concept of factorability of $\underline{\overline{\Psi}}$ on the other hand.
+{\bf Motivation for factorability of sets of coverings}. Theorem~\eqref{thm-3.1} and \eqref{subsubsection-3.1.3} permit us to confine out attention to $v\geq 3$ and decomposable coverings $\underline{\overline{\Psi}}$ with $\# \underline{\overline{\Psi}} \geq 2$ and $\{a\} \notin A_{1}$, for any $a \in A$ on the one hand and motivate the new concept of factorability of $\underline{\overline{\Psi}}$ on the other hand.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%31%%%%%%%%%%%%%%%%
 \begin{enumerate}[label=(\alph*)]
 \item Suppose $\underline{\overline{\Psi}}$ is decomposable via $E$. Let $v_{1}= \# E \cap A$, $v_{2} = \# E' \cap A$
 
-Let $\overline{\bold{\Psi}}_{E} = \left\{ \Psi /E : \Psi \in \overline{\bold{\Psi}}\right\}$ and $\overline{\bold{\Psi}_{E'}} = \left\{\Psi/E^{-1}: \Psi \in \overline{\bold{\Psi}}\right\}$.
+Let $\overline{\bold{\Psi}}_{E} = \left\{ \Psi /E : \Psi \in \overline{\bold{\Psi}}\right\}$ and $\overline{\bold{\Psi}_{E'}} = \left\{\Psi/E': \Psi \in \overline{\bold{\Psi}}\right\}$.
 
-We may set up label things $\left\{\Psi_{\alpha}^{E} : 1 \leq j \leq j^{1} \right\}$ and $\left\{\Psi_{k}^{E'} : 1 \leq k \leq k'\right\}$ for $\overline{\bold{\Psi}}_{E}$ and $\overline{\bold{\Psi}}_{E'}$ respectively. Then $\max\left\{j^{-1}, k'\right\} \geq 2$ simply because $\# \overline{\bold{\Psi}} \geq 2$. 
+We may set up labellings $\left\{\Psi_{j}^{E} : 1 \leq j \leq j' \right\}$ and $\left\{\Psi_{k}^{E'} : 1 \leq k \leq k'\right\}$ for $\overline{\bold{\Psi}}_{E}$ and $\overline{\bold{\Psi}}_{E'}$ respectively. Then $\max\left\{j', k'\right\} \geq 2$ simply because $\# \overline{\bold{\Psi}} \geq 2$. 
 
 \item For any bijective  maps $\Psi_{1} : E \cap A \longrightarrow E \cap B$ and $\Psi_{2} : E' \cap A \longrightarrow E' \cap B$
 
-We write $\Psi_{1} \times \Psi_{2}$ for the bijective map of $A$ to $B$ given by
+we write $\Psi_{1} \times \Psi_{2}$ for the bijective map of $A$ to $B$ given by
 \[
 (\Psi_{1} \times \Psi_{2})~(a) =  
 \begin{cases*}
 \Psi_{1}(a),~~ \text{if}~~ a\in E\tag{3.18} \\
-\Psi_{1}(a),~~ \text{if}~~a \in E' 
+\Psi_{2}(a),~~ \text{if}~~a \in E' 
 \end{cases*}
 \]
 
 For instance, $\Psi \in \overline{\bold{\Psi}}$ can be written as $\Psi_{E} \times \Psi_{E'}$.
 
-\item Let $\overline{\bold\Phi}_{1}$ and $\overline{\bold{\Phi}}_{2}$ be any two sets of bijective maps $\varphi_{1}$ and $\varphi_{2}$ of in $E \cap A$ to $E \cap B$ and on $E' \cap A \rightarrow E' \cap B$  respectively. These we denote $\{ \varphi_{1} \times \varphi_{2} : \varphi \in \overline{\bold\Phi}_{1}, \varphi_{2} \in \overline{\bold\Phi}_{2}\}$ by $\overline{\bold\Phi}_{1} \times \overline{\bold\Phi}_{2}$.
+\item Let $\overline{\bold\Phi}_{1}$ and $\overline{\bold{\Phi}}_{2}$ be any two sets of bijective maps $\varphi_{1}$ and $\varphi_{2}$ of on $E \cap A$ to $E \cap B$ and on $E' \cap A \rightarrow E' \cap B$  respectively. Then we denote $\{ \varphi_{1} \times \varphi_{2} : \varphi_{1} \in \overline{\bold\Phi}_{1}, \varphi_{2} \in \overline{\bold\Phi}_{2}\}$ by $\overline{\bold\Phi}_{1} \times \overline{\bold\Phi}_{2}$.
 
-\item For the sake of conveniende, we call $\psi_{1}$ and $\psi_{2}$ as in (b) \textbf{converings of $\mathbf{E}$ and $\mathbf{E'}$} respectively. We note 
+\item For the sake of convenience, we call $\psi_{1}$ and $\psi_{2}$ as in (b) \textbf{converings of $\mathbf{E}$ and $\mathbf{E'}$} respectively. We note 
 that
 
  \begin{equation}
- \overline{\bold{\psi}}=????_{\Psi \in \overline{\bold\Psi}} \left(\{\psi/E\} \times \{\psi/E' \} \right) \quad \overline{\bold\psi}_{E} \times \overline{\bold\psi}_{E'} = \left\{\psi_{j}^{E} \times \psi_{R}^{E'} : 1 \leq j \leq j', 1 \leq k \leq k'\right\}\tag{3.19}\label{eq-3.19}
+ \overline{\boldsymbol{\Psi}}=\bigcup_{\Psi \in \overline{\bold\Psi}} \left(\{\psi/E\} \times \{\psi/E' \} \right) \subset \overline{\boldsymbol\Psi}_{E} \times \overline{\bold\Psi}_{E'} = \left\{\psi_{j}^{E} \times \psi_{R}^{E'} : 1 \leq j \leq j', 1 \leq k \leq k'\right\}\tag{3.19}\label{eq-3.19}
  %~ \overline{\bold{\psi}} = ????_{\Psi \in \overline{\bold\Psi}}} \left(\{\psi/E\} \times \{\psi/E' \} \right)
  %~ \quad \overline{\bold\psi}_{E} \times \overline{\bold\psi}_{E'} = \left\{\psi_{j}^{E} \times \psi_{R}^{E'} : 1 \leq j \leq j', 1 \leq k \leq k'\right\}
 \end{equation}
 
 
-\item We may picuture $\overline{\bold\psi}_{E} \times \overline{\bold\psi}_{E'}$ as a rectangular array $\varphi$ of dots, or, for that matter the $k' \times j'$ matrix $M$ with all entries 1. The $\overline{\bold\Psi}$ is a subset of $R$. haring at least on dot in each row and at least one dot in each column. The corresponding matrix for $\overline{\boldsymbol{\psi}}$ is a matrix of 0's or 1's with sum of each row and sum of. 
+\item We may picuture $\overline{\boldsymbol\Psi}_{E} \times \overline{\boldsymbol\Psi}_{E'}$ as a rectangular array $\mathcal{R}$ of dots, or, for that matter the $k' \times j'$ matrix $M$ with all entries 1. Then $\overline{\bold\Psi}$ is a subset of $\mathcal{R}$. haring at least one dot in each row and at least one dot in each column. The corresponding matrix for $\overline{\boldsymbol{\psi}}$ is a matrix of 0's or 1's with sum of each row and sum of each column bigger than or equal to one. . 
 \end{enumerate}
 \end{subsubsec}
 
@@ -728,15 +734,15 @@ Let $v \geq 3$ and $\overline{\boldsymbol{\psi}}$ a set of coverings of $\Gamma_
 
 \begin{enumerate}[label=(\roman*)]
 
-\item $\overline{\boldsymbol{\psi}}$ is \textbf{factorable via $\mathbf{E}$} if for some $\overline{\boldsymbol{\phi}}_{1}$ and $\overline{\boldsymbol{\phi}}_{2}$ of coverings of $E$ and $E'$ respectively, $\overline{\boldsymbol{\psi}} = \overline{\boldsymbol{\phi}}_{1} \times \overline{\boldsymbol{\phi}}_{2}$. In this case $\overline{\boldsymbol{\psi}}$ is decomposable vai $E$, $\overline{\boldsymbol{\phi}}_{1}= \overline{\boldsymbol\psi}_{E}$, $\overline{\boldsymbol{\phi}}_{2}= \overline{\boldsymbol\psi}_{E'}$, so that $\overline{\boldsymbol\psi}= \overline{\boldsymbol\psi}_{E} \times \overline{\boldsymbol\psi}_{E'}$ and $\# \overline{\psi}~~\# \overline{\boldsymbol\psi}_{E} \cdot \# \overline{\boldsymbol\psi}_{E'}$. These are indeed equivalent conditions in place of factorability and we may use the names \textbf{a grid of full-size} as well.
+\item $\overline{\boldsymbol{\psi}}$ is \textbf{factorable via $\mathbf{E}$} if for some sets $\overline{\boldsymbol{\phi}}_{1}$ and $\overline{\boldsymbol{\phi}}_{2}$ of coverings of $E$ and $E'$ respectively, $\overline{\boldsymbol{\psi}} = \overline{\boldsymbol{\phi}}_{1} \times \overline{\boldsymbol{\phi}}_{2}$. In this case $\overline{\boldsymbol{\psi}}$ is decomposable via $E$, $\overline{\boldsymbol{\phi}}_{1}= \overline{\boldsymbol\psi}_{E}$, $\overline{\boldsymbol{\phi}}_{2}= \overline{\boldsymbol\psi}_{E'}$, so that $\overline{\boldsymbol\psi}= \overline{\boldsymbol\psi}_{E} \times \overline{\boldsymbol\psi}_{E'}$ and $\# \overline{\psi}-=\# \overline{\boldsymbol\psi}_{E} \cdot \# \overline{\boldsymbol\psi}_{E'}$. These are indeed equivalent conditions in place of factorability and we may use the names \textbf{a grid of full-size} as well.
 
-\item Let $\overline{\boldsymbol{\psi}}$ be decomposable via $E$. We say that $\overline{\boldsymbol{\psi}}$ is \textbf{flat} or \textbf{a pole} vai $E$  accordings  as $\# \overline{\boldsymbol{\psi}}_{E'} =1$ or $\overline{\boldsymbol{\psi}}_{E}=1$ respectively. In both these cases, $\overline{\boldsymbol{\psi}} = \overline{\boldsymbol{\psi}}_{E} \times \overline{\boldsymbol{\psi}}_{E'}$ so that $\overline{\boldsymbol{\psi}}$ is factorable. This does happen if $\#E'=2$ or $\# E=2$ respectively.
+\item Let $\overline{\boldsymbol{\psi}}$ be decomposable via $E$. We say that $\overline{\boldsymbol{\psi}}$ is \textbf{flat} or \textbf{a pole} via $E$  accordings  as $\# \overline{\boldsymbol{\psi}}_{E'} =1$ or $\overline{\boldsymbol{\psi}}_{E}=1$ respectively. In both these cases, $\overline{\boldsymbol{\psi}} = \overline{\boldsymbol{\psi}}_{E} \times \overline{\boldsymbol{\psi}}_{E'}$ so that $\overline{\boldsymbol{\psi}}$ is factorable. This does happen if $\#E'=2$ or $\# E=2$ respectively.
 
-\item $\overline{\boldsymbol{\psi}}$ is \textbf{sleep} or \textbf{diazonal} via of $E$ of $\psi_{E}$'s are all distinct and $\psi_{E'}$'s are all distinct as $\psi$ varies in $\overline{\boldsymbol{\psi}}$, in other words, $j=k' = \# \overline{\boldsymbol{\psi}}$, or equivalently, $\psi \longrightarrow \psi/E$ and $\psi \longrightarrow \psi/E'$ are injective maps on $\overline{\boldsymbol{\psi}}$ to the sets of coverings of $E$ and $E'$ respectively.
+\item $\overline{\boldsymbol{\psi}}$ is \textbf{steep} or \textbf{diagonal} via  $E$ if $\psi_{E}$'s are all distinct and $\psi_{E'}$'s are all distinct as $\psi$ varies in $\overline{\boldsymbol{\psi}}$, in other words, $j'=k' = \# \overline{\boldsymbol{\psi}}$, or equivalently, $\psi \longrightarrow \psi/E$ and $\psi \longrightarrow \psi/E'$ are injective maps on $\overline{\boldsymbol{\psi}}$ to the sets of coverings of $E$ and $E'$ respectively.
 
-\item $\overline{\boldsymbol{\psi}}$ is \textbf{hilly} via $E$ if $\overline{\boldsymbol{\psi}}$ is decomposable via $E$ but neither factorable nor sleep via $E$.
+\item $\overline{\boldsymbol{\psi}}$ is \textbf{hilly} via $E$ if $\overline{\boldsymbol{\psi}}$ is decomposable via $E$ but neither factorable nor steep via $E$.
 
-\item $\overline{\boldsymbol{\psi}}$ is \textbf{factorable} (flat, a pole) if it is \textbf{factorable} via $E$ for some $\phi \neq E \subset_{\#} \Gamma_{n}$.
+\item $\overline{\boldsymbol{\psi}}$ is \textbf{factorable} (flat, a pole) if it is \textbf{factorable} via $E$ for some $\phi \neq E \subset_{\neq} \Gamma_{n}$.
 
 \end{enumerate}
 
@@ -762,7 +768,7 @@ Following pictures serve as examples for the concepts defined above.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1.3]{figure/fig6.eps}
-\caption{Grid, Factorable}\label{fig06}
+\caption{Grid of Full size, Factorable}\label{fig06}
 \end{figure}
 
 \newpage
@@ -778,19 +784,19 @@ Following pictures serve as examples for the concepts defined above.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{figure/fig8.eps}
-\caption{}\label{fig05}
+\caption{Hilly}\label{fig05}
 \end{figure}
 
 \end{example}
 
 \begin{thm}\label{thm-3.3}
-It $\overline{\boldsymbol{\psi}}$ is factorable via $E$ Then $| \overline{\boldsymbol{\psi}} \rangle$ is a product vector in the bipartite cut $(E, E')$. In particular, it is so if $\overline{\boldsymbol{\Psi}}$ is flat or a pole via $E$.
+It $\overline{\boldsymbol{\psi}}$ is factorable via $E$ then $| \overline{\boldsymbol{\psi}} \rangle$ is a product vector in the bipartite cut $(E, E')$. In particular, it is so if $\overline{\boldsymbol{\Psi}}$ is flat or a pole via $E$.
 \end{thm}
 
 \begin{proof}
 It is is immediate from definition that 
 \begin{equation}
-| \overline{\boldsymbol{\psi}} = \frac{1}{\# \overline{\boldsymbol{\Psi}}} \sum_{\substack{1 \leq j \leq j'}\\ 1 \leq k \leq k'} | \psi^{E}_{j} \rangle \bigotimes | \psi_{k}^{E'} \rangle = \frac{1}{\# \overline{\boldsymbol{\Psi}}}\left(\sum_{j=1}^{j} | \psi_{j}^{E} \rangle\right) \bigotimes \left(\sum_{k=1}^{k'} | \psi_{k}^{E'}\right) \tag{3.20}\label{eq-3.20}
+| \overline{\boldsymbol{\psi}} > \frac{1}{\# \overline{\boldsymbol{\Psi}}} \sum_{\substack{1 \leq j \leq j'},\\ 1 \leq k \leq k'} | \psi^{E}_{j} \rangle \bigotimes | \psi_{k}^{E'} \rangle = \frac{1}{\# \overline{\boldsymbol{\Psi}}}\left(\sum_{j=1}^{j'} | \psi_{j}^{E} \rangle\right) \bigotimes \left(\sum_{k=1}^{k'} | \psi_{k}^{E'} \rangle\right) \tag{3.20}\label{eq-3.20}
 \end{equation}
 
 Hence $| \overline{\boldsymbol{\Psi}}\rangle$ is a product vector in the cut $(E, E')$.
@@ -1645,31 +1651,31 @@ F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x}) &= F^{hi}(\boldsymbol{\x}) + \frac{1}
 
 So as in (g) above, $F_{\boldsymbol{\Psi}^{h}}(\boldsymbol{\x})$ is a homogeneous polynomial of degree $\mu$, it has full support, i.e., $\Gamma_{n}$ and has no row $X_{j}$ as a factor. Furthermore, for $\mu=1$, $F_{\Psi}^{h} (\boldsymbol{\x})= F^{hi}(\boldsymbol{\x})$ and $| \boldsymbol{\Psi} \rangle_{h}$ is genuinely entangled.
  
-\item Let $\mu\geq 2$. For $\phi \neq A_{1} \subset_{\neq} A$, $\phi \neq B_{2} \subset_{\neq}B$ with $\# A_{1} + \# B_{2}= \mu$, let $\boldsymbol{\Psi}_{A_{1}, B_{2}}^{h} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1})\cap B_{2} = \phi\}$ and $w(A_{1}, B_{2}) = \frac{1}{\# \boldsymbol{\Psi}} \# \boldsymbol{\Psi}_{A_{1}, B_{2}}$. We write $A/wB_{2}$ to mean that $w(A_{1}, B_{2}) \neq 0$. Using \eqref{eq-3.75}, we have
+\item Let $\mu\geq 2$. For $\phi \neq A_{1} \subset_{\neq} A$, $\phi \neq B_{2} \subset_{\neq}B$ with $\# A_{1} + \# B_{2}= \mu$, let $\boldsymbol{\Psi}_{A_{1}, B_{2}}^{h} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1})\cap B_{2} = \phi\}$ and $w(A_{1}, B_{2}) = \frac{1}{\# \boldsymbol{\Psi}} \# \boldsymbol{\Psi}^{h}_{A_{1}, B_{2}}$. We write $A_{1}/wB_{2}$ to mean that $w(A_{1}, B_{2}) \neq 0$. Using \eqref{eq-3.75}, we have
 {\fontsize{10}{12}\selectfont
 \begin{align*}
-F_{\boldsymbol{\Psi}}^{hd} (\boldsymbol{\x}) &= \frac{1}{\# \boldsymbol{\Psi}} \frac{1}{\sqrt{\#\mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \leq \mu-1} \left(\sum_{\substack{A_{1}\subset A,\\\# A_{1}=\mu_{1}}} (-1)^{\mu_{1}} \boldsymbol{\x}^{A_{1}}\left( \sum_{\psi \in \boldsymbol{\Psi}} \left( \sum_{\substack{A_{2} \subset A \smallsetminus A_{1},\\ \# A_{2} = \mu=\mu_{1}}} \boldsymbol{\x}^{\psi(A_{2})}\right) \right) \right)\\
-& = \frac{1}{\sqrt{\#\mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \mu-1} \sum_{\substack{A_{1}\subset A, B_{2}\subset B, \\ \# A_{1}=\mu_{1}, \# B_{2}= \mu-\mu_{1}}} (-1)^{\mu_{1}} w(A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}}\\
-& = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \leq \mu-1} (-1)^{\mu_{1}} \sum \left\{w(A_{1}, B_{2})\boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}}, \# A_{1} =\mu_{1} \# B_{2} = \mu-\mu_{1}, A_{1} w B_{2}\right\}\tag{3.78}\label{eq-3.78}
+F_{\boldsymbol{\Psi}}^{hd} (\boldsymbol{\x}) &= \frac{1}{\# \boldsymbol{\Psi}} \frac{1}{\sqrt{\#\mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \leq \mu-1} \left(\sum_{\substack{A_{1}\subset A,\\\# A_{1}=\mu_{1}}} (-1)^{\mu_{1}} \boldsymbol{\x}^{A_{1}}\left( \sum_{\psi \in \boldsymbol{\Psi}} \left( \sum_{\substack{A_{2} \subset A \smallsetminus A_{1},\\ \# A_{2} = \mu-\mu_{1}}} \boldsymbol{\x}^{\psi(A_{2})}\right) \right) \right)\\
+& = \frac{1}{\sqrt{\#\mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1}\leq \mu-1} \sum_{\substack{A_{1}\subset A, B_{2}\subset B, \\ \# A_{1}=\mu_{1}, \# B_{2}= \mu-\mu_{1}}} (-1)^{\mu_{1}} w(A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}}\\
+& = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \sum_{1 \leq \mu_{1} \leq \mu-1} (-1)^{\mu_{1}} \sum \left\{w(A_{1}, B_{2})\boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}}, \# A_{1} =\mu_{1}, \# B_{2} = \mu-\mu_{1}, A_{1} w B_{2}\right\}\tag{3.78}\label{eq-3.78}
 \end{align*}} 
 
 The last specification is only to specify the non-zero co-effieient representation of $F_{\boldsymbol{\Psi}}^{hd}(\boldsymbol{\x})$ as a sum of mutually orthogonal elelments in $\mathcal{H}$. Thus $F^{h}(\boldsymbol{\x})$ is the sum of multually orthgonal (non-zero) elements as follows 
 \begin{equation}
 \begin{multlined}
-F_{h}(\boldsymbol{\x}) = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \Bigg(\sum_{S \in s} \boldsymbol{\x}^{s} + \sum_{R \in \mathcal{R}} (-1)^{\mu} \boldsymbol{\x}^{R}  + \sum \Big\{(-1)^{\mu_{1}} w(A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}} :\\ \# A_{1} = \mu_{1}, \# B_{2} = \mu-\mu_{1}, A, wB_{2}~~ 1 \leq \mu_{1} \leq \mu-1 \Big\}\Bigg)\tag{3.79}\label{eq-3.79}
+F_{h}(\boldsymbol{\x}) = \frac{1}{\sqrt{\# \mathcal{R}}} 2^{-\mu/2} \Bigg(\sum_{S \in S} \boldsymbol{\x}^{S} + \sum_{R \in \mathcal{R}} (-1)^{\mu} \boldsymbol{\x}^{R}  + \sum \Big\{(-1)^{\mu_{1}} w(A_{1}, B_{2}) \boldsymbol{\x}^{A_{1}} \boldsymbol{\x}^{B_{2}} :\\ \# A_{1} = \mu_{1}, \# B_{2} = \mu-\mu_{1}, A_{1}, wB_{2},~~ 1 \leq \mu_{1} \leq \mu-1 \Big\}\Bigg)\tag{3.79}\label{eq-3.79}
 \end{multlined}
 \end{equation} 
  
 \item Using~\eqref{eq-3.79}, 
 \begin{align*}
-|| | \psi \rangle_{h} ||^{2} &= \frac{1}{\# \mathcal{R}} 2^{-\mu} \bigg(\# s + \# \mathcal{E} + \sum\bigg\{ (w(A_{1}, B_{2}))^{2} \# A_{1}=\mu_{1}, \# A_{1} wB_{2},  \\
+|| | \psi \rangle_{h} ||^{2} &= \frac{1}{\# \mathcal{R}} 2^{-\mu} \bigg(\# S + \# \mathcal{R} + \sum\bigg\{ (w(A_{1}, B_{2}))^{2}: \# A_{1}=\mu_{1},B_{2}=\mu -mu_{1}, \# A_{1} wB_{2},  \\
 &\hspace{7cm} 1 \leq \mu_{1} \leq \mu-1\bigg\}\bigg)\\
 & = 2^{-\mu} \bigg(2 + \sum \bigg\{(w(A_{1}, B_{2}))^{2} /\# \mathcal{R}, \# A_{1}=\mu_{1}, \# B_{2}=\mu-\mu_{1}, A_{1}wB_{2},\\&\hspace{7cm} 1 \leq \mu_{1} \leq \mu-1 \bigg\} \bigg)\tag{3.80}\label{eq-3.80}
 \end{align*}
 
-Thus, we may normalize $| \boldsymbol{\Psi} \rangle_{h}$ by replacing it by $| \boldsymbol{\Psi} \rangle_{h}^{v} = \frac{1}{|| | \boldsymbol{\Psi}\rangle_{h}||} ~~ | \boldsymbol{\Psi} \rangle_{h}$ to obtain the corresponding doped state.
+Thus, we may normalize $| \boldsymbol{\Psi} \rangle_{h}$ by replacing it by $| \boldsymbol{\Psi} \rangle_{h}^{\tilde{}} = \frac{1}{|| | \boldsymbol{\Psi}\rangle_{h}||} ~~ | \boldsymbol{\Psi} \rangle_{h}$ to obtain the corresponding doped state.
 
-The entanglement properties of $| \boldsymbol{\Psi} \rangle_{h}$ and $| \boldsymbol{\Psi}\rangle_{h}^{v}$ are the we need is $F^{hi}(\boldsymbol{\x})$ for that purpose.
+The entanglement properties of $| \boldsymbol{\Psi} \rangle_{h}$ and $| \boldsymbol{\Psi}\rangle_{h}^{\tilde{}}$ are the we need is $F^{hi}(\boldsymbol{\x})$ for that purpose.
 \end{enumerate}
 \end{subsubsec}
 
@@ -1678,14 +1684,14 @@ The doped state $| \boldsymbol{\Psi}\rangle_{h}^{v}$ is genuinely entangled.
 \end{thm}
 
 \begin{proof}
-Let, if possible, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ be not genuinely entangled. Then the same is true of $|\boldsymbol{\Psi} \rangle_{h}$. So it is a product vector in some bipartite cut $(E, E')$. Then $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$. Now $F_{\boldsymbol{\Psi}}^{h} (\boldsymbol{\x})$ is a homogeneous polynomial of degree $\mu$. So by~\eqref{subsubsection-2.2.2}(e) $p$ and $q$ are homogeneous polynomials of degrees, say $\mu_{1}$ and $\mu_{2}$ respectively with $\mu_{1} + \mu_{2} =\mu$. By~\eqref{subsubsection-3.2.1}(j), support of $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$ is full. So $\mu_{1} \geq 1$ and $\mu_{2}\geq 1$. This forces $\mu \geq 2$. We note in passing that for this does give that for $\mu=1$, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled, a fact already noted in ~\eqref{subsubsection-3.2.1}(j), support of $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$ is full. So $\mu_{1} \geq 1$ and $\mu_{2}\geq 1$. Thus force $\mu \geq 2$. We note in passing that for this does give that for $\mu =1$, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled, a fact already noted in ~\eqref{subsubsection-3.2.1}(j).  Let $R \in \mathcal{R}$. Then by~\eqref{eq-3.79}, $\boldsymbol{\x}^{R}$ occures in $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$, the only way that it can occur in $p(\boldsymbol{\x}_{E})$$q(\boldsymbol{\x}_{E'})$ is that $\boldsymbol{\x}^{E \cap R}$ occurs in $p(\boldsymbol{\x}_{E})$ and $\boldsymbol{\x}^{E' \cap R}$ occurs in $q(\boldsymbol{\x}_{E'})$. Let $A_{1}= E \cap R$, $A_{2} = E'\cap R$. Then $\# A_{1}= \mu_{1}$, $\# A_{2}=\mu_{2}$ and therefore, $A_{1}, A_{2}$ are both non-empty subsets of $A$. Now $\# A_{1} \cup A_{2} = \mu < v = \# A$. So there exists an $a \in A \smallsetminus A_{1} \cup A_{2}$. But $A=(E \cap A)\cup (E' \cap A)$. So either $a \in E \cap A$ or $a \in E' \cap A$. Consider the case when $a \in E \cap A$. There exists $a_{2} \in A_{2}$, Let $R_{1} = A_{1} \cup \{a\} \cup (A_{2} \smallsetminus \{a_{2}\})$. Then $R_{1} \subset A$, $\# R_{1} =\mu$. So $R_{1} \in \mathcal{R}$. By~\eqref{eq-3.79}, $\boldsymbol{\x}^{R_{1}}$ occurs in $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$.
+Let, if possible, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ be not genuinely entangled. Then the same is true of $|\boldsymbol{\Psi} \rangle_{h}$. So it is a product vector in some bipartite cut $(E, E')$. Then $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x}) = p(\boldsymbol{\x}_{E}) q(\boldsymbol{\x}_{E'})$ for some polynomials $p$ and $q$. Now $F_{\boldsymbol{\Psi}}^{h} (\boldsymbol{\x})$ is a homogeneous polynomial of degree $\mu$. So by~\eqref{subsubsection-2.2.2}(e) $p$ and $q$ are homogeneous polynomials of degrees, say $\mu_{1}$ and $\mu_{2}$ respectively with $\mu_{1} + \mu_{2} =\mu$. By~\eqref{subsubsection-3.2.1}(j), support of $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$ is full. So $\mu_{1} \geq 1$ and $\mu_{2}\geq 1$. This forces $\mu \geq 2$. We note in passing that this does give that for $\mu=1$, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled, a fact already noted in ~\eqref{subsubsection-3.2.1}(j), support of $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$ is full. So $\mu_{1} \geq 1$ and $\mu_{2}\geq 1$. Thus force $\mu \geq 2$. We note in passing that for this does give that for $\mu =1$, $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled, a fact already noted in ~\eqref{subsubsection-3.2.1}(j).  Let $R \in \mathcal{R}$. Then by~\eqref{eq-3.79}, $\boldsymbol{\x}^{R}$ occures in $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$, The only way that it can occur in $p(\boldsymbol{\x}_{E})$$q(\boldsymbol{\x}_{E'})$ is that $\boldsymbol{\x}^{E \cap R}$ occurs in $p(\boldsymbol{\x}_{E})$ and $\boldsymbol{\x}^{E' \cap R}$ occurs in $q(\boldsymbol{\x}_{E'})$. Let $A_{1}= E \cap R$, $A_{2} = E'\cap R$. Then $\# A_{1}= \mu_{1}$, $\# A_{2}=\mu_{2}$ and therefore, $A_{1}, A_{2}$ are both non-empty subsets of $A$. Now $\# A_{1} \cup A_{2} = \mu < v = \# A$. So there exists an $a \in A \smallsetminus A_{1} \cup A_{2}$. But $A=(E \cap A)\cup (E' \cap A)$. So either $a \in E \cap A$ or $a \in E' \cap A$. Consider the case when $a \in E \cap A$. There exists $a_{2} \in A_{2}$. Let $R_{1} = A_{1} \cup \{a\} \cup (A_{2} \smallsetminus \{a_{2}\})$. Then $R_{1} \subset A$, $\# R_{1} =\mu$. So $R_{1} \in \mathcal{R}$. By~\eqref{eq-3.79}, $\boldsymbol{\x}^{R_{1}}$ occurs in $F_{\boldsymbol{\Psi}}^{h}(\boldsymbol{\x})$.
 
-So as argued before for $R$, we have $\boldsymbol{\x}^{E \cap R_{1}}$ occurs in $p(\boldsymbol{\x}_{E})$. $\# E \cap R_{1} = \# A_{1} \cup \{a\} = \mu + 1$, a contradiction similarly, we can deal with the case, $a \in E' \cap A$ to arrive at a contradiction. Hence $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled.
+So as argued before for $R$, we have $\boldsymbol{\x}^{E \cap R_{1}}$ occurs in $p(\boldsymbol{\x}_{E})$. $\# E \cap R_{1} = \# A_{1} \cup \{a\} = \mu + 1$, a contradiction. Similarly, we can deal with the case, $a \in E' \cap A$ to arrive at a contradiction. Hence $| \boldsymbol{\Psi} \rangle_{h}^{v}$ is genuinely entangled.
 \end{proof}
 
 \section{Generalities, Analogies and Differences}
 
-The basic ideia of this section is to take $v \geq 2$ and a set $\boldsymbol{\Psi}$ of coverings of $\Gamma_{n} = \Gamma_{2v}$ with $s=\# \boldsymbol{\Psi} \geq 2$ as in ~\eqref{subsubsection-3.1.2}(e) but take a general convex combination or even a balanced convex combination of $| \psi \rangle$'s with $\psi$ in $\boldsymbol{\Psi}$ instead of just the arithmetic mean $| \boldsymbol{\Psi} \rangle = \sum_{\psi \in \boldsymbol{\Psi}} \frac{1}{\# \boldsymbol{\Psi}}| \psi \rangle$ and study its quantum entanglement properties via its polynomial representation. We define the corresponding concepts and obtain some analogies and some differences for the discussion and results in $????$, which we shall freely use.
+The basic ideia of this section is to take $v \geq 2$ and a set $\boldsymbol{\Psi}$ of coverings of $\Gamma_{n} = \Gamma_{2v}$ with $s=\# \boldsymbol{\Psi} \geq 2$ as in ~\eqref{subsubsection-3.1.2}(e) but take a general convex combination or even a balanced convex combination of $| \psi \rangle$'s with $\psi$ in $\boldsymbol{\Psi}$ instead of just the arithmetic mean $| \boldsymbol{\Psi} \rangle = \sum_{\psi \in \boldsymbol{\Psi}} \frac{1}{\# \boldsymbol{\Psi}}| \psi \rangle$ and study its quantum entanglement properties via its polynomial representation. We define the corresponding concepts and obtain some analogies and some differences for the discussion and results in Section 3, which we shall freely use.
 
 \subsection{Basic definitions and results}
 
@@ -1695,13 +1701,13 @@ We begin with a definition.
 Let $\alpha$ be a function on $\boldsymbol{\Psi}$ to $\vertchar[.08ex]{C} \smallsetminus \{0\}$ with $\sum\limits_{\psi \in \boldsymbol{\Psi}} |\alpha(\Psi)| =1$.
 \end{definition}
 \begin{enumerate}[label=(\roman*)]
-\item $| \alpha \rangle  = \sum\limits_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) | \psi \rangle$ will be called a \textbf{generalized RVB vector} in $\mathbf{H}$.
+\item $| \alpha \rangle  = \sum\limits_{\psi \in \boldsymbol{\Psi}} \alpha (\psi) | \psi \rangle$ will be called a \textbf{generalized RVB vector} in $\mathcal{H}$.
 
 \item If $\alpha$ is such that $| \alpha \rangle \neq 0$, then $| \widetilde{\alpha} \rangle = \frac{1}{|| |\alpha \rangle||} | \alpha \rangle$ will be called a \textbf{generalized RVB (pure) state}.
 
-\item For $S \subset \boldsymbol{\Psi}, | \alpha \rangle_{s} = \sum\limits_{\psi \in S} \alpha(\psi) | \psi \rangle$ will be called \textbf{S-generalized RVB Vector} in $\mathcal{H}$.
+\item For $S \subset \boldsymbol{\Psi}, | \alpha \rangle_{s} = \sum\limits_{\psi \in S} \alpha(\psi) | \psi \rangle$ will be called \textbf{S-generalized RVB vector} in $\mathcal{H}$.
 
-\item For ????????? let $\alpha^{\#}(S)= \sum_{?????} \alpha(\psi)$, we shall denote?????????????????.
+\item For $S \subset \boldsymbol{\Psi}$ let $\alpha^{\#}(S)= \sum_{\psi \epsilon S} \alpha(\psi)$, we shall denote $\alpha \# (S) s_{\alpha}, \alpha_{S}$ and $\alpha\#(\Psi)\hat{\alpha}$.
 
 \item $\alpha(\psi) > 0$ for all $\psi \in \boldsymbol{\Psi}$ if and only if $\hat{\alpha} =1$, and in this case $| \alpha \rangle$ will be called a \textbf{convex RVB Vector}.
 
@@ -1714,7 +1720,7 @@ Let $\alpha$ be a function on $\boldsymbol{\Psi}$ to $\vertchar[.08ex]{C} \small
 We note a few facts about $\alpha^{\#}$ and set up useful notation for further use.
 
 \begin{enumerate}[label=(\alph*)]
-\item For any disjoint collection in $\{S_{j} : 1 \leq j \leq j_{0} \}$ of subsets of $\boldsymbol{\Psi}$,
+\item For any disjoint collection $\{S_{j} : 1 \leq j \leq j_{0} \}$ of subsets of $\boldsymbol{\Psi}$,
 \begin{equation}
 \alpha^{\#} \left(\bigcup\limits_{j=1}^{j_{0}} S_{j} \right) = \sum\limits_{j=1}^{j_{0}} \alpha^{\#}(S_{j})\tag{4.1}\label{eq-4.1}
 \end{equation}
@@ -1726,7 +1732,7 @@ We note a few facts about $\alpha^{\#}$ and set up useful notation for further u
 
 By convention (that empty sums are zero), $\alpha^{\#}(\phi)=0$ and $| \alpha \rangle_{\phi} =0$.
 
-\item Let $A_{1} \subset A$, $B_{1} \subset B$, Set $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\}$, $\{\psi(A_{1}) : \psi \in = \boldsymbol{\Psi} \} = \{B(A_{1, j}) : 1 \leq j \leq j_{A_{1}} \}$ with $B(A_{1,j})$'s all distinct and $\{\psi^{-1}(B_{1}) : \psi \in  \boldsymbol{\Psi}\} = \{A(B_{1}, k) : 1\leq k \leq k_{B_{1}}\}$ with $A(B_{1}, k)$'s all distinct. Then $\boldsymbol{\Psi}_{A_{1}, B_{1}} \neq \phi$ if and only if $B_{1} = B(A_{1, j})$ for some $j$ with $1 \leq j \leq j_{A_{1}}$, if and only if $A_{1} = A(B_{1, k})$ for some $k$ with $1 \leq k \leq k_{R}$. Moreover, $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \boldsymbol{\Psi}_{A \smallsetminus A_{1}, B \smallsetminus B_{1}}$ and $\boldsymbol{\Psi}$ is the disjoint union of non-empty sets $\boldsymbol{\Psi}_{A_{1}}, B(A_{1,j}), 1 \leq j \leq j_{A_{1}}$ and also $\boldsymbol{\Psi}_{A(B_{1}, k), B_{1}}, 1 \leq k \leq k_{R}$.
+\item Let $A_{1} \subset A$, $B_{1} \subset B$. Set $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \{\psi \in \boldsymbol{\Psi} : \psi(A_{1}) = B_{1}\}$, $\{\psi(A_{1}) : \psi \in = \boldsymbol{\Psi} \} = \{B(A_{1, j}) : 1 \leq j \leq j_{A_{1}} \}$ with $B(A_{1},j)$'s all distinct and $\{\psi^{-1}(B_{1}) : \psi \in  \boldsymbol{\Psi}\} = \{A(B_{1}, k) : 1\leq k \leq k_{B_{1}}\}$ with $A(B_{1}, k)$'s all distinct. Then $\boldsymbol{\Psi}_{A_{1}, B_{1}} \neq \phi$ if and only if $B_{1} = B(A_{1}, j)$ for some $j$ with $1 \leq j \leq j_{A_{1}}$ if and only if $A_{1} = A(B_{1}, k)$ for some $k$ with $1 \leq k \leq k_{B_{1}}$. Moreover, $\boldsymbol{\Psi}_{A_{1}, B_{1}} = \boldsymbol{\Psi}_{A \smallsetminus A_{1}, B \smallsetminus B_{1}}$ and $\boldsymbol{\Psi}$ is the disjoint union of non-empty sets $\boldsymbol{\Psi}_{A_{1}}, B(A_{1,j}), A_{1} 1 \leq j \leq j_{A_{1}}$ and also $\boldsymbol{\Psi}_{A(B_{1}, k), B_{1}}, 1 \leq k \leq k_{B_{1}}$.
 
 %~ alpha (A-sub-1, B-sub-1)=alpha ( ,A\ A-sub-1, B \ B-sub-1).........(4.3)
 %~ alpha^=alpha#(bold capital psi)=Symbol capital sigma WITH  j=1 BELOW IT AND j-sub-A-sub-1 ABOVE IT
@@ -2427,63 +2433,63 @@ In particular, if $S_{F_{\alpha}^{h}} = \Gamma_{n}$ and $t < v^{2}$, then $| \al
 The work began when Ajit Iqbal Singh Visited the Quantum Information end Competition Group at Harish-Chandra Research Institute (HRI) Allhabal (Prayagraj) in 2015 and it has been continued by subsequent visits and emails. She thanks Aditi Sen(De), Ujjwal Sen and The Director of HRI for their kind hospitaluty. She would also like to thank G. Baskaran for his insightfull discussion on the topic at The Institute of Mathematical Sciences in  Chennai and his encouragement. It is pleasure for her to tank Richard Josza, Gerardo Adesso and their research groups at Cambridge and Nottingham respectively for their kind hospitality and interesting discussion sessions. She thanks The Indian National Science Academy for its continuous support. Authors thank M/S Sriranga Documentations for the Latex typing of the paper. 
 
 \begin{thebibliography}{99}
-\bibitem{} (A1) Philip W Anderson, The Resonating Valence Bond States in $La_{2}CuO_{4}$ and Superconductivity, Science 6 March 1987. Vol.235, Issue 4793. pp.1196-1198.DOI : 10.1126 science 235.4793.1196.
+\bibitem{A1} (A1) Philip W Anderson, The Resonating Valence Bond States in $La_{2}CuO_{4}$ and Superconductivity, Science 6 March 1987. Vol.235, Issue 4793. pp.1196-1198.DOI : 10.1126 science 235.4793.1196.
 
-\bibitem{} (A2) $\underline{\hspace{3cm}}$, Personal History of my management with cuprate superconductivity, 1986-2010, International Journal of Modern physics B, 2011, Vol.25, No.01, pp.11-39,\\ \url{https://doi.org 10.1142/502179211057013}.
+\bibitem{A2} (A2) $\underline{\hspace{3cm}}$, Personal History of my management with cuprate superconductivity, 1986-2010, International Journal of Modern Physics B, 2011, Vol.25, No.01, pp.11-39,\\ \url{https://doi.org 10.1142/S02179211057013}.
 
-\bibitem{} (A3) $\underline{\hspace{3cm}}$, More and Different notes from a thoughtful curmudgeon World Scientific 2011.
+\bibitem{} (A3) $\underline{\hspace{3cm}}$, More and Different notes from a thoughtful curmudgeon, World Scientific 2011.
 
-\bibitem{} (Ba1) G. Baskaran, Resonationg Valence Bond states in 2 and 3D-Brief History and Recent Examples, Indian J. Phys., 2006, 80 (6), pp.583-592.
+\bibitem{} (Ba1) G. Baskaran, Resonating Valence Bond states in 2 and 3D-Brief History and Recent Examples, Indian J. Phys., 2006, 80 (6), pp.583-592.
 
 \bibitem{} (Ba2) $\underline{\hspace{3cm}}$, My Random walks in Anderson's Garden. PWA-90 : A Lifetime of Emergence,\\ 
 \url{https://doi.org/10.1142/9882/February 2016},\\ 
-Page : 252, Eds Premi Chandra, Piers Coleman, Gabi Kotliar, Phuan Ong Dariel L. Stein Clare Yu. arxiv :1608. 085872 [cond-mat].
+Pages : 252, Eds Premi Chandra, Piers Coleman, Gabi Kotliar, Phuan Ong Dariel L. Stein Clare Yu. arxiv :1608. 08587 [cond-mat].
 
-\bibitem{} (PSPC) D. Poiblanc, N. Schurh, D. Perez-Garaia, J.I. Cirac, Topoligical and entanglement Properties of resonating Valence bond wave functions Physics Review B, 2012, 86(1), 014401.
+\bibitem{} (PSPC) D. Poiblanc, N. Schuch, D. Perez-Garaia, J.I. Cirac, Topoligical and entanglement Properties of resonating valence bond wave functions, Physics Review B, 2012, 86(1), 014101.
 
-\bibitem{} (Sh) N. Schuch, D. Perez-Garaia, I. Cirac, Classifying quantum phases using matrix product states and projected entangled pair states, physics Review B, 2011, 84(16), 165139.
+\bibitem{} (Sh) N. Schuch, D. Perez-Garaia, I. Cirac, Classifying quantum phases using matrix product states and projected entangled pair states, Physics Review B, 2011, 84(16), 165139.
 
-\bibitem{} (Z) J. Zaanen, A modern, but way too short history of the theory of superconducting at a high temperature, Chapter in the book "100years of superconductivity Eds. H. Rochalla and P.H. Kes Chapman and Hall arxiv :1012.5461 [Cond-mat-super-con]
+\bibitem{} (Z) J. Zaanen, A modern, but way too short history of the theory of superconductivity at a high temperature, Chapter in the book "100 years of superconductivity (Eds). H. Rogalla and P.H. Kes, Chapman and Hall 2010 arxiv :1012.5461 [Cond-mat-super-con]
 
-\bibitem{} (CKSSv) A. Chandran, D. Kaszlikowski, Adite Sen (De), ujjwal Sen, V. Vedral, Regional versus Global Entanlement Resonating Valence Bond States, Physics Review Letters, 2007, 99(17), 170502.
+\bibitem{} (CKSSv) A. Chandran, D. Kaszlikowski, Adite Sen (De), Ujjwal Sen, V. Vedral, Regional versus Global Entanlement Resonating Valence Bond States, Physics Review Letters, 2007, 99(17), 170502.
 
-\bibitem{} (DS) H. S Dhar, Aditi Sen (De), Entanglement in resonating valence bond states : ladder versus isotropical letters, Journal of Physics A Mathematical and Theoretical, 2011, 44(46), 465302.
+\bibitem{} (DS) H. S Dhar, Aditi Sen (De), Entanglement in resonating valence bond states : ladder versus isotropical lattices, Journal of Physics A Mathematical and Theoretical, 2011, 44(46), 465302.
 
-\bibitem{} (DSS), H.S. Dhar, Aditi Sen(De) and Ujjwal Sen, Characterizing genuine multisite entanglement in isotropic spin lattices physical Review Letters 2013, 111 (7), 070501.
+\bibitem{} (DSS), H.S. Dhar, Aditi Sen(De) and Ujjwal Sen, Characterizing genuine multisite entanglement in isotropic spin lattices Physical Review Letters 2013, 111 (7), 070501.
 
-\bibitem{} (RDSS) Sudifi to Singha Roy, H.S. Dhar, D. Rakshi, Aditi Sen (De) and Ujjwal Sen Diverging scaling with converging multistate entanglement in odd and even quantum Heisenberg ladders. 
+\bibitem{} (RDSS) Sudipto Singha Roy, H.S. Dhar, D. Rakshit, Aditi Sen (De) and Ujjwal Sen Diverging scaling with converging multistate entanglement in odd and even, quantum Heisenberg ladders. 
 
 New Journel of Physics, 2016, 18 023025.
 
-\bibitem{} $\underline{\hspace{3cm}}$, Analytical recursive method to ascertain multiste entanglement in doped quantum spin ladders, physical Review B, 2017, 96, 075143-1-075143-10.
+\bibitem{} $\underline{\hspace{3cm}}$, Analytical recursive method to ascertain multisite entanglement in doped quantum spin ladders, Physical Review B, 2017, 96, 075143-1-075143-10.
 
-\bibitem{} Sudipto Singha Roy, Resonating Valence Bond states A Quantum Information perspective Ph.D. Thesis, Harish-Chandra Research Institue, Allahabad, September 2017.
+\bibitem{} Sudipto Singha Roy, Resonating Valence Bond states A Quantum Information perspective. Ph.D. Thesis, Harish-Chandra Research-Institute, Allahabad, September 2017.
 
-\bibitem{} (GW) Gilad Gour and N.R. Wallawah, Classification of multipartite entanglement of all finite dimensionality, physical Review Letters, 2013, 111(6), 060502.
+\bibitem{} (GW) Gilad Gour and N.R. Wallach, Classification of multipartite entanglement of all finite dimensionality, Physical Review Letters, 2013, 111(6), 060502.
 
-\bibitem{} (P) K.R. Parthasarathy, on the maximal dimension of completely entangled subspace for finite level quantum systems Proe. Indian Acad. Sci. Math Sci. 2004, 114, no.4, 365-374, DOI 10.1007/BF02829441.
+\bibitem{} (P) K.R. Parthasarathy, On the maximal dimension of completely entangled subspace for finite level quantum systems Proe. Indian Acad. Sci. Math Sci. 2004, 114, no.4, 365-374, DOI 10.1007/BF02829441.
 
 \bibitem{} (Bh) Rajarama Bhat, A completely entangled subspace of maximal dimension, International J. Quantum Information, 2006, 4(2), 325-330.
 
-\bibitem{} (Sk) Lukasz skowronak unex tendible product bases, J. Math. Phsy, 2011, 52, 122202. 
+\bibitem{} (Sk) Lukasz Skowronek, Three-by-three bound entanglement with general unextendible product unex tendible product bases, J. Math. Phys, 2011, 52, 122202. 
 
 \url{https://doi.org/10.1063/1.3663836}.
 
-\bibitem{} (SAS) Ritabrata Sengupta, Arvind and Ajit Iqbal Singh, Entanlement properties of possitive operators with ranges in complely entangled subspaces, Phys. Rev. A, 2041, 90, 062323.
+\bibitem{} (SAS) Ritabrata Sengupta, Arvind and Ajit Iqbal Singh, Entanlement properties of possitive operators with ranges in complely entangled subspaces, Phys. Rev. A, 2014, 90, 062323.
 
 \bibitem{} (JM) Richard Josza and G. Mitchinson, Symmetric polynomials in information theory, entropy and subentropy, 2015, 56 p.062201.
 
-\bibitem{} (Ad)[AR] G. Adesso and B. Regula, Geomatric approach to entanglement quantification with polynomial measures, physical Review A, 2016, 94(2), 022324.
+\bibitem{} (Ad)[AR] G. Adesso and B. Regula, Geomatric approach to entanglement quantification with polynomial measures, Physical Review A, 2016, 94(2), 022324.
 
 \bibitem{} (M) M. Boyer, R. Liss and Tal Mor, Geometry of entanglement in the Bloch sphere, Phys. Rev. A, 2017, 15(3), 0332 3 08.
 
-\bibitem{} (BS) Somshubhro Bandyopadhyay and Ajit Iqbalsingl Polynomial representation of Quantum entanglement, Problems and Recent Methods in operator theory, AMS Contemporery Mathematics 2017, Vol.687, pp.31-44.
+\bibitem{} (BS) Somshubhro Bandyopadhyay and Ajit Iqbal Singh, Polynomial representation of Quantum entanglement, Problems and Recent Methods in Operator theory, (Eds. Fernanda Botelho, Raena King, T.S.S.R.K. Rao) AMS Contemporery Mathematics 2017, Vol.687, pp.31-44.
 
-\bibitem{} (F) William Fulton, Algebraic curves, An introduction to algebraic geometry, W.A. Benjamin Inc. New York-Amsterdam, 1969, Reprinted Addison Wesley 1989, Fulltext online. 
+\bibitem{} (F) William Fulton, Algebraic curves, An introduction to algebraic geometry, W.A. Benjamin Inc. New York-Amsterdam, 1969, Reprinted Addison Wesley 1989, Full text online. 
 
 \bibitem{} Ryszard Horodecki, Pavel Horodecki Mishal Horodecki and Karol Horodecki, Quantum Entanglement, Rev. Modern Phy. 2009, 81(2), 865-942.
 
-DOI : 10.11031 Rev Mod phys.81, 805.MR251 5619.
+DOI : 10.1103/1 Rev Mod Phys.81, 805.MR251 5619.
 
 \bibitem{} S. Szalay, Multipartite entanglement measures, Phys. Rev. A, 2015, 92(4) 042329.
 
