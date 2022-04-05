@@ -1,0 +1,242 @@
+%importing packages
+\usepackage[utf8]{inputenc}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{imakeidx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{endnotes}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{amsmath,lscape}
+\usepackage{rotating}
+\usepackage{xfrac}
+\usepackage{verse}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{multirow}
+%~ \usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[xindy]{glossaries}
+\usepackage[bottom,flushmargin,hang,multiple]{footmisc}
+
+\allowdisplaybreaks
+
+\floatstyle{plain}
+%~ \floatplacement{Figure}{H}
+
+%page settings for the book
+ \usepackage[papersize={140mm,215mm},textwidth=110mm,
+ textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
+ leftmargin=15mm,rightmargin=15mm,footskip=0.6cm]{zwpagelayout}
+ \usepackage[justification=centering]{caption}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\setdefaultlanguage{english}
+
+
+\setmainfont[
+	Script=Latin,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic
+]{GentiumBasic}
+
+\newfontfamily\englishfont[
+	Script=Latin,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic
+]{GentiumBasic}
+
+\newfontfamily\gentiumplus[
+	Script=Latin
+]{GentiumPlus}
+
+%%defining fonts
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\gplus#1{{\gentiumplus #1}}
+
+
+
+\def\enginline#1{{\fontsize{10}{12}\selectfont\eng{#1}}}
+
+\long\def\bookTitle#1{\vfill\centerline{{\fontsize{22}{24}\selectfont\textbf{#1}}}\vfill}
+\def\titleauthor#1{{\Large\textbf{#1}}}
+\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
+\def\general#1{#1}
+\long\def\supskpt#1{$^{#1}$}
+\def\namesinorder#1{\\ {\rm\sl\small #1}}
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[{\thepage}]{{\thepage}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+%%user defined commands
+\newenvironment{shloka}{\bgroup\centering\fontsize{11pt}{14pt}\selectfont}{\par\egroup}
+\newenvironment{myquote}[1]{\par\bgroup\sizenine\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
+\newenvironment{centerquote}[1]{\par\bgroup\sizenine\leftskip=70pt\rightskip=10pt#1}{\par\egroup}
+\newenvironment{longquote}[1]{\par\bgroup\sizenine\leftskip=35pt\rightskip=10pt#1}{\par\egroup}
+\newenvironment{normalmyquote}[1]{\par\bgroup\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
+\newenvironment{myquoteplus}[1]{\par\bgroup\sizenine\leftskip=70pt\rightskip=10pt#1}{\par\egroup}
+
+\newcommand{\heading}[1]{\textbf{\large #1}}
+\newcommand{\verseauthor}[1]{\hfill{\normalfont\normalsize #1}}
+\newcommand{\versenum}[1]{\hfill{#1}}
+\newcommand{\quoteauthor}[1]{\hfill{#1}}
+
+\def\Authorline#1{\hfill{\iflanguage{english}{\englishfont\Large\sl\bfseries -- \,#1}{\devanagarifont\Large\sl\bfseries --\,#1}}%
+\lhead[\small\thepage\quad #1]{}}
+\def\authoraffiliation#1{{~\hfill\fontsize{11}{13}\selectfont #1}}
+
+\def\sizenine{\fontsize{9}{11}\selectfont}
+
+\newcolumntype{C}{>{\centering\arraybackslash}m{6cm}}
+
+%%general settings
+\pretolerance=9000
+\parindent=0pt
+\setlength{\parskip}{5pt}
+
+%%redefining macros
+\makeatletter
+
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+
+\renewcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{arabic}}
+\renewcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+}
+
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+		\setcounter{endnote}{0}%
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \bfseries #2\par}%
+    \@endpart}
+
+ 
+\def\enoteformat{\rightskip\z@ \leftskip\z@ \parindent=0.3em
+  \leavevmode\llap{\makeenmark}}
+
+\def\enoteheading{\section*{\notesname}%
+  \mbox{}\par\vskip-\baselineskip}
+
+\addto{\captionsenglish}{%
+  \renewcommand{\bibname}{References}
+}
+
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.2ex \@plus -1.3ex \@minus -.3ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\englishfont\Large\bfseries}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\englishfont\large\bfseries}}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\englishfont\bfseries}}
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {-3.25ex \@plus -1ex \@minus -.2ex}%
+                                    {1em}%
+                                    {\englishfont\bfseries}}
+                                     
+\renewcommand\thesection{\@arabic\c@section}
+\renewcommand\thesubsubsection{\@arabic\c@subsubsection}
+\renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\def\Break{\break }
+\def\passim#1{\textsl{passim}}
+
+\usepackage{caption}
+\DeclareCaptionFormat{empty}{#1}
+\renewcommand*\figurename{Figure}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+
+\def\fsize#1#2{\fontsize{#1}{#2}\selectfont }
+\renewcommand\arraystretch{1.15}
+
+
