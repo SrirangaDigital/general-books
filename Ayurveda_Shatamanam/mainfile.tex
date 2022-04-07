@@ -1,4 +1,4 @@
-\documentclass[twoside,openany]{book}
+\documentclass[11pt,twoside,openany]{book}
 
 
 \input macros
@@ -9,23 +9,16 @@
 
 \input src/000a-title
 \newpage
-\end{document}
+
 \input src/000b-copyright
 \newpage
+
 \input src/000c-introduction
 \newpage
+
 \input src/000d-acknowledgements
+
 \tableofcontents
-%~ \makeatletter
-%~ \def\@makeschapterhead#1{%
-  %~ \vspace*{50\p@}%
-  %~ {\parindent \z@ \raggedleft
-    %~ \normalfont
-    %~ \interlinepenalty\@M
-    %~ \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
-    %~ \vskip 40\p@
-  %~ }}
-%~ \makeatother
 
 \mainmatter
 
@@ -36,7 +29,7 @@
 \input src/part2-chap1
 \input src/part3
 \input src/part3-chap1
-
+\end{document}
 \makeatletter
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%

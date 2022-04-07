@@ -56,8 +56,8 @@
 
 \newfontfamily\devanagarifont[
 	Script=Devanagari,
-	BoldFont=SHREE_DEV_OTF_0702
-]{SHREE_DEV_OTF_0701}
+	BoldFont=Sanskrit2003
+]{Sanskrit2003}
 
 \newfontfamily\kannadafont[
 	Script=Kannada,
@@ -87,7 +87,7 @@
 \def\enginline#1{{\fontsize{10}{12}\selectfont\eng{#1}}}
 
 
-\long\def\bookTitle#1{\vfill\centerline{{\fontsize{25}{27}\selectfont\textbf{#1}}}\vfill}
+\long\def\bookTitle#1{\centerline{{\fontsize{25}{27}\selectfont\textbf{#1}}}}
 \def\titleauthor#1{\centerline{{\Large\textbf{#1}}}\vfil}
 \def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
 \def\general#1{#1}
@@ -111,7 +111,7 @@
 \newenvironment{normalmyquote}[1]{\par\bgroup\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
 \newenvironment{myquoteplus}[1]{\par\bgroup\sizenine\leftskip=70pt\rightskip=10pt#1}{\par\egroup}
 
-\newcommand{\heading}[1]{\textbf{\large #1}}
+\newcommand{\heading}[1]{\textbf{#1}}
 \newcommand{\verseauthor}[1]{\hfill{#1}}
 \newcommand{\versenum}[1]{\hfill{#1}}
 \newcommand{\quoteauthor}[1]{\hfill{#1}}
@@ -143,19 +143,34 @@
   \@mainmattertrue
 }
 
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 0.25em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode 
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      {\fontsize{10pt}{12pt}\selectfont #1}\nobreak\hfil
+      \nobreak\hb@xt@\@pnumwidth{\hss #2%
+                                 \kern-\p@\kern\p@}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
 \def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedleft \normalfont
+  {\parindent \z@ \centering \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
 		\setcounter{endnote}{0}%
-        \huge\bfseries \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 20\p@
+        \large\bfseries\thechapter. 
       \fi
     \fi
     \interlinepenalty\@M
-    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \iflanguage{sanskrit}{\devanagarifont\large\bfseries #1}{\englishfont\large\bfseries #1}\par\nobreak
     \vskip 20\p@
   }}
 
@@ -200,7 +215,7 @@
        \par
        \vskip 20\p@
      \fi
-     \Huge \bfseries #2\par}%
+     \LARGE \bfseries #2\par}%
     \@endpart}
 
  
