@@ -1,0 +1,65 @@
+\documentclass[twoside,openany]{book}
+
+
+\input macros
+
+\begin{document}
+
+\frontmatter
+
+\input src/000a-title
+\newpage
+\end{document}
+\input src/000b-copyright
+\newpage
+\input src/000c-introduction
+\newpage
+\input src/000d-acknowledgements
+\tableofcontents
+%~ \makeatletter
+%~ \def\@makeschapterhead#1{%
+  %~ \vspace*{50\p@}%
+  %~ {\parindent \z@ \raggedleft
+    %~ \normalfont
+    %~ \interlinepenalty\@M
+    %~ \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    %~ \vskip 40\p@
+  %~ }}
+%~ \makeatother
+
+\mainmatter
+
+\input src/part1
+\input src/part1-chap1
+\input src/part2
+\setcounter{chapter}{0}
+\input src/part2-chap1
+\input src/part3
+\input src/part3-chap1
+
+\makeatletter
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+%~ \lhead[\small\thepage\quad Index]{}
+%~ \rhead[]{Index\quad\small\thepage}
+%~ \label{index}
+%~ \printindex
+%~ \vfill
+%~ \centerline{{\sl Finis}}
+%~ \vfill
+
+\end{document}
+
