@@ -1,0 +1,90 @@
+\documentclass[10pt,twoside,openany]{book}
+
+\usepackage{rotating}
+\usepackage{chngcntr}
+\input macros
+
+\begin{document}
+
+\frontmatter
+
+\input src/titlepage
+\newpage
+\input src/copyright
+
+\newpage
+~\thispagestyle{empty}
+
+\newpage
+~\thispagestyle{empty}
+
+\newpage
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot[]{}
+
+\lhead[\small\thepage]{\small Foreword}
+\input src/1_P_Venkataramaiah.tex
+\clearpage
+~\thispagestyle{empty}
+\newpage
+\lhead[\small\thepage]{\small Contents}
+\tableofcontents
+\newpage
+~\thispagestyle{empty}
+
+\newpage
+~\thispagestyle{empty}
+\label{prelims}
+
+
+\mainmatter
+
+
+\renewcommand\figurename{Photo}
+\lhead[\small\thepage]{\small\leftmark}
+\input src/2_G_Ramachandran.tex
+\counterwithout{equation}{chapter}
+\renewcommand\figurename{Figure}
+\input src/3_V_Devanathan.tex
+\counterwithout{equation}{chapter}
+\input src/4_A_P_Balachandran.tex
+\input src/5_G_Bhamathi.tex
+\input src/6_N_G_Deshpande.tex
+\input src/7_K_Srinavasa_Rao.tex
+\input src/8_K_R_Parthasarathy.tex
+\input src/9_S_K_Singh.tex
+\input src/10_B_Ramachandran.tex
+\input src/11_R_Parthasarathy.tex
+\input src/12_M_V_Satyanarayana.tex
+\input src/13_Rajaram_Nityananda.tex
+\input src/14_C_S_Unnikrishnan.tex
+\input src/15_S_Prakash.tex
+\input src/16_A_V_Gopala_Rao.tex
+\input src/17_B_S_Kiranagi.tex
+\input src/18_G_Umesh.tex
+\input src/19_R_Somasekhar.tex
+\input src/20_H_K_T_Kumar.tex
+\input src/21_B_A_Kagali.tex
+\input src/22_Sharath_Ananthamurthy.tex
+\input src/23_Srinivasan_Anand.tex
+\input src/24_MVN_Murthy.tex
+\input src/25_V_Ravishankar.tex
+\input src/26_K_S_Mallesh.tex
+\input src/27_Swarnamala_Sirsi_1.tex
+\input src/27_Swarnamala_Sirsi_2.tex
+\input src/28_A_R_Usha_Devi.tex
+\counterwithout{equation}{section}
+\input src/29_A_R_Sudha.tex
+\input src/30_M_S_Vidya.tex
+\input src/31_Vinay_Deepak.tex
+\input src/32_Yee_Yee_Oo.tex
+\input src/33_J_Balasubramanyam.tex
+\input src/34_S_P_Shilpashree.tex
+\input src/35_Vikas_Shelar.tex
+\input src/36_GR_Family.tex
+\input src/37_G_Ramachandran.tex
+\input src/38_Acknowledgements.tex
+\label{bookend}
+\end{document}
