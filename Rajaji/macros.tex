@@ -1,48 +1,33 @@
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{tfrupee}
-\usepackage{txfonts}
-\usepackage{rotating}
-\usepackage{xfrac}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec,graphicx}
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\usepackage{array}
 \usepackage{fancyhdr}
-\usepackage{imakeidx}
-%~ \usepackage[dvips,breaklinks]{hyperref}
 \usepackage{url}
-\usepackage{cite}
 \usepackage{chngcntr}
-\usepackage{multirow}
-\usepackage{slashbox}
-\usepackage{epsfig}
-\usepackage{soul}
-\usepackage{mathtools, nccmath}%this is reduce the equation space
 \usepackage{wrapfig}
 \usepackage[table]{xcolor}
-\usepackage{booktabs}
-\usepackage{boldline}
-\usepackage{lscape}
-
-\newtheorem*{prop*}{Proposition}
-\newtheorem{thm}{Theorem}
-\newtheorem*{remark}{\textit{Remark}}
-\newtheorem{coro}{Corollary}
-
-\numberwithin{equation}{chapter}
-
-\allowdisplaybreaks
+\usepackage[font=footnotesize,format=plain,labelfont=normal,textfont=normal,justification=justified]{caption}
 
 \floatstyle{plain}
-%~ \floatplacement{Figure}{H}
+\floatplacement{Figure}{H}
 
 %%page settings for the book
 \usepackage[papersize={145mm,215mm},textwidth=100mm,
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
 leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \usepackage[justification=centering]{caption}
+
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[	
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{Gentium Basic}
 
 %%fancy header settings
 \fancypagestyle{plain}{%
@@ -54,6 +39,8 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
 
+
+
 \def\Authorline#1{\centerline{{\large\bfseries #1}}\vskip 0.1cm}
 \long\def\authinfo#1{%
 \begin{center}
@@ -61,8 +48,6 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \end{center}
 }
 \def\authbio#1{\centerline{{\large\sf\bf #1}}}
-%\lhead[\small\thepage\quad #1]{}}
-%\def\authoraffiliation#1{{~\hfill\fontsize{11}{13}\selectfont #1}}
 
 
 %%redefining macros
@@ -74,15 +59,6 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \rhead[\small MY INWARD BOUND JOURNEY]{\small\thepage}
 \lhead[\small\thepage]{\small\leftmark}
 
-%~ \renewcommand\frontmatter{%
-    %~ \cleardoublepage
-  %~ \@mainmatterfalse
-  %~ \pagenumbering{arabic}}
-%~ \renewcommand\mainmatter{%
-    %~ \cleardoublepage
-  %~ \@mainmattertrue
-%~ }
-
 \def\@makechapterhead#1{%
   \setcounter{equation}{0}
   \vspace*{50\p@}%
@@ -92,8 +68,6 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
     \vskip 20\p@
   }}
 
-
-
 \renewcommand\thesection{\@arabic\c@section}
 \renewcommand\thesubsubsection{\@arabic\c@subsubsection}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
@@ -101,164 +75,6 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
 \thispagestyle{empty}\hbox{\phantom{.}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
-\renewcommand*\seealso[2]{(\emph{\alsoname} #1)}
-
-\def\@xfootnote[#1]{%
-  \protected@xdef\@thefnmark{#1}%
-  \@footnotemark\@footnotetext}
-
 \makeatother
-
-\setcounter{secnumdepth}{4}
-\def\Break{\break }
-\def\passim#1{\textsl{passim}}
-
-\usepackage[font=footnotesize,format=plain,labelfont=normal,textfont=normal,justification=justified]{caption}
-%~ \usepackage[format=plain]{caption}
-%\DeclareCaptionFormat{empty}{#1}
-%~ \renewcommand*\figurename{Figure}
-%~ \renewcommand{\thefigure}{\arabic{figure}}
-\renewcommand{\bibname}{References}
-
-\DeclareMathOperator{\Iim}{\mathrm{Im}}
-
-
-%\makeatletter
-%\usepackage{etoolbox}
-%\newcounter{savedchapter}% for remembering the last chapter number
-%\preto\appendix{\setcounter{savedchapter}{\arabic{chapter}}}% remembering!
-%\newcommand\resumechapters{% the \appendix command with some tweaks
-%  \setcounter{chapter}{\arabic{savedchapter}}% restore chapter number
-%  \setcounter{section}{0}% reset section counter
-%  \gdef\@chapapp{\chaptername}% reset chapter name
-%  \gdef\thechapter{\@arabic\c@chapter}% make chapter numbers arabic
-%}
-%\makeatother
-
-\usepackage{bm}
-
-\def\tns#1{\bm{\mathcal{#1}}}
-\def\bsymb#1{\bm{#1}}
-\def\dt{..}
-\def\mbb#1{\mathbb{#1}}
-\def\bmsf#1{\mathbf{#1}}
-\def\veca#1{\overrightarrow{#1}}
-\def\wt#1{\widetilde{#1}}
-\def\dd{\mathrm{d}}
-
-\makeatletter
-\newsavebox\curwrapfig
-\long\def\wrapfiguresafe#1#2#3{%
-  \sbox\curwrapfig{#3}%
-  \par\penalty-100%
-  \begingroup % preserve \dimen@
-    \dimen@\pagegoal \advance\dimen@-\pagetotal % space left
-    \advance\dimen@-\baselineskip % allow an extra line
-    \ifdim \ht\curwrapfig>\dimen@ % not enough space left
-      \break%
-    \fi%
-  \endgroup%
-  \begin{wrapfigure}{#1}{#2}%
-    \usebox\curwrapfig%
-  \end{wrapfigure}%
-}
-
-\newenvironment{abstract}{%
-	\small
-	\begin{center}%
-	  {\bfseries Abstract\vspace{-.5em}\vspace{\z@}}%
-	\end{center}%
-	\quotation}
-{\endquotation}
-
-\renewenvironment{thebibliography}[1]
-     {\section*{\bibname}%
-      %\@mkboth{\bibname}{\bibname}%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
-
-\@addtoreset{equation}{chapter}
-
-\def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \centering
-    \normalfont
-    \interlinepenalty\@M
-    \Huge \bfseries  #1\par\nobreak
-    \vskip 20\p@
-  }}
-\c@secnumdepth=1
-
-\renewcommand\@dotsep{200}
-\makeatother
-\renewcommand{\floatpagefraction}{0.75}
-\setlength\intextsep{0pt}
-\hfuzz=2pt
-
-%~ \setcounter{secnumdepth}{-1}
-\def\drawline{\centerline{\rule{2cm}{0.5pt}}}
-\def\biofntsize{\fontsize{9pt}{11pt}\selectfont}
-
-
-%\input spec.tex
-%\input double_spacing
-%\renewcommand{\baselinestretch}{1.5}
-\newcommand{\beqn}{\begin{equation}}
-\newcommand{\eeqn}{\end{equation}}
-\newcommand{\bea}{\begin{eqnarray}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\del}{\mbox{$\Delta m^2 \;$}}
-\newcommand{\nuket}[1]{\mbox{$| \nu _{#1}\rangle$}}
-\newcommand{\nutket}[2]{\mbox{$| \nu _{#1}(#2)\rangle$}}
-\newcommand{\psiket}[1]{\mbox{$| \psi _{#1}\rangle$}}
-\newcommand{\psitket}[2]{\mbox{$| \psi _{#1}(#2)\rangle$}}
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\be}{\begin{eqnarray}}
-\newcommand{\ee}{\end{eqnarray}}
-\newcommand{\etal}{{\it et al.}}
-\def\d{{\rm d}}
-\def\bea{\begin{eqnarray}}
-\def\eea{\end{eqnarray}}
-\def\nue{{\nu_e}}
-\def\anue{{\bar{\nu_e}}}
-\def\numu{{\nu_{\mu}}}
-\def\anumu{{\bar{\nu_{\mu}}}}
-\def\nutau{{\nu_{\tau}}}
-\def\anutau{{\bar{\nu_{\tau}}}}
-\def\pmutau{{${\rm P_{\mu \tau}}$ }}
-\def\pmue{{${\rm P_{\mu e}}$ }}
-\def\pmumu{{${\rm P_{\mu \mu}}$ }}
-\def\numutonutau{{${\rm {\nu_\mu \to \nu_\tau}}$ }}
-\def\numutonue{{${\rm {\nu_\mu \to \nu_e}}$ }}
-\def\numutonumu{{${\rm {\nu_\mu \to \nu_\mu}}$ }}
-\def\nuetonutau{{${\rm {\nu_e \to \nu_\tau}}$ }}
-\def\pnumutonutau{{${\rm P ({\nu_\mu \to \nu_\tau})}$ }}
-\def\pnumutonue{{${\rm P ({\nu_\mu \to \nu_e})}$ }}
-\def\pnumutonumu{{${\rm P ({\nu_\mu \to \nu_\mu})}$ }}
-\def\gev{{\rm GeV }}
-\def\l{{\rm L}}
-\def\db{{$\delta b$ }}
-\def\dc{{$\delta c$ }}
-\def\evsq{{${\rm eV^2}$ }}
-\def\L{{\rm L }}
-\def\E{{\rm E }}
-\def\p{{\rm p}}
-\def\e{{\rm e}}
-
 
 
