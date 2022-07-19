@@ -58,25 +58,26 @@
   ~\thispagestyle{empty}
   \vfill
   {\centering
-    %~ \ifnum \c@secnumdepth >\m@ne
-      %~ \if@mainmatter
-		%~ \setcounter{endnote}{0}%
-        %~ \huge\bfseries \@chapapp\space \thechapter
-        %~ \par\nobreak
-        %~ \vskip 20\p@
-      %~ \fi
-    %~ \fi
-    %~ \interlinepenalty\@M
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+		\setcounter{endnote}{0}%
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
     {\englishfont\Huge\bfseries #1}\par\nobreak
     \vfill
     \eject
   }}
+
 \makeatother
 \input src/part2-chap1
-\input src/part2-chap2
-\input src/part2-chap3
-\input src/part2-chap4
-\input src/part2-chap5
+%~ \input src/part2-chap2
+%~ \input src/part2-chap3
+%~ \input src/part2-chap4
+%~ \input src/part2-chap5
 
 \end{document}
 
