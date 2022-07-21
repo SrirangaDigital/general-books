@@ -9,6 +9,7 @@
 \input src/00a-title
 \input src/copyright
 \input src/00b-preface
+\lhead[\small\thepage]{\small Foreword}
 \input src/00c-forward
 
 \tableofcontents
@@ -16,6 +17,7 @@
 \mainmatter
 
 \input src/001-part1
+\lhead[\small\thepage]{\small\leftmark}
 \input src/002-chapter001
 \input src/002-chapter002
 \input src/002-chapter003
@@ -23,6 +25,8 @@
 \input src/003-part2
 \setcounter{chapter}{0}
 \input src/004-chapter001
+\newpage
+~\thispagestyle{empty}
 \input src/004-chapter002
 %\input src/Abio-Rajaji
 %~ \input src/Rajaji-lett
