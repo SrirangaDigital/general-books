@@ -18,7 +18,7 @@
 %%page settings for the book
 \usepackage[papersize={145mm,215mm},textwidth=100mm,
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
-leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
+leftmargin=22.5mm,rightmargin=22.5mm,footskip=0.6cm]{zwpagelayout}
 \usepackage[justification=centering]{caption}
 
 
@@ -59,6 +59,23 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 
 \rhead[\small MY INWARD BOUND JOURNEY]{\small\thepage}
 \lhead[\small\thepage]{\small\leftmark}
+
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
 
 \def\@makechapterhead#1{%
   \setcounter{equation}{0}
