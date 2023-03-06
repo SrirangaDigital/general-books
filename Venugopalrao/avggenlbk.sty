@@ -1,0 +1,1040 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THIS IS A COMMON STY-FILE (general+theorem+figures)
+%% TO BE INCLUDED IN  THE PREAMBLE  OF
+%% ALL MY LATEX SOURCE FILES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+%% BEGIN avggennew.sty
+%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{comment}
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage{lscape}
+% \usepackage{booktabs}
+% For nicely typeset tabular material
+% \usepackage{setspace}
+%%%%%%%%%%%%%%%%%%%%%
+
+% SIUNITS
+\usepackage{siunitx}
+%Ex: \num{-3e10\si{kg.m.s^{-2}} 
+%produces -3x10^10 kg.m.s^{-2} on compilation
+% \sisetup{detect-all}; Including this 'detect-all' option 
+% may make certain font-substitutions not available. 
+% CHECK the abovestatement.
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%GRAPHICX PACKAGE
+\usepackage{graphicx}
+% \setkeys{Gin}{width=.7\linewidth,totalheight=\textheight,
+% keepaspectratio}
+% \graphicspath{{graphics/}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%SOME ABBREVIATIONS
+\newcommand{\diag}{\mbox{diag}}
+\newcommand{\bsk}{\baselineskip}
+\newcommand{\dt}{\ensuremath{..}}
+\newcommand{\lra}%
+{\ensuremath{\quad\longrightarrow\quad}}
+\newcommand{\mbb}[1]%
+{{\mbox{${\mathbb{#1}}$}}}%
+\newcommand{\mk}[1]{\mathcal{#1}}
+\newcommand{\ph}{\phantom}
+\newcommand{\sgn}[1]{\text{sgn}({#1})}
+\newcommand{\hairsp}{\hspace{1pt}}% hair space
+\newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace}
+\newcommand{\rgrt}{\raggedright}
+\newcommand{\taup}{\ensuremath{\tau_{_P}}}
+% %SOME OLDER ABBREVIATIONS
+% \newcommand{\str}{{\ensuremath{\ast}}}
+% \newcommand{\BM}[1]{\mbox{\boldmath $#1$}}
+% \newcommand{\bmsf}[1]{\mbox{$\mathsf{\bf{#1}}$}}
+% \newcommand{\bsym}[1]{\mbox{$\boldsymbol{#1}$}}
+% \newcommand{\bsymb}[1]{\mbox{$\boldsymbol{#1}$}}
+% \newcommand{\bsqr}{\ensuremath{\Box}\ }
+% \newcommand{\cdt}{\ensuremath{\cdots}}
+% \newcommand{\rmb}{\par $\blacksquare\;$%
+% \textsl{Remember$\,:\;$}}%
+%%%%%%%%%%%%%%%%%%%%%
+
+%SOME RENEWCOMMANDS
+\renewcommand{\dot}{\dotup}
+\renewcommand{\ddot}{\ddotup}
+%\renewcommand{\tilde}{\widetilde}
+%%%%%%%%%%%%%%%%%%%%%
+
+%GREEK ALPHABETS
+\newcommand{\gka}{\ensuremath{{\alpha}}}
+\newcommand{\gkb}{\ensuremath{{\beta}}}
+\newcommand{\gkc}{\ensuremath{{\chi}}}
+\newcommand{\gkd}{\ensuremath{{\delta}}}
+\newcommand{\gke}{\ensuremath{{\epsilon}}}
+\newcommand{\gkf}{\ensuremath{{\varphi}}}
+\newcommand{\gkg}{\ensuremath{{\gamma}}}
+\newcommand{\gki}{\ensuremath{{\iota}}}
+\newcommand{\gkk}{\ensuremath{{\kappa}}}
+\newcommand{\gkl}{\ensuremath{{\lambda}}}
+\newcommand{\gkm}{\ensuremath{{\mu}}}
+\newcommand{\gkn}{\ensuremath{{\nu}}}
+% \newcommand{\gko}{\ensuremath{{\omecron}}}
+\newcommand{\gkp}{\ensuremath{{\psi}}}
+\newcommand{\gkq}{\ensuremath{{\theta}}}
+\newcommand{\gkr}{\ensuremath{{\rho}}}
+\newcommand{\gks}{\ensuremath{{\sigma}}}
+\newcommand{\gkt}{\ensuremath{{\tau}}}
+\newcommand{\gkv}{\ensuremath{{\upsilon}}}
+\newcommand{\gkw}{\ensuremath{{\omega}}}
+\newcommand{\gkx}{\ensuremath{{\xi}}}
+\newcommand{\gky}{\ensuremath{{\eta}}}
+\newcommand{\gkz}{\ensuremath{{\zeta}}}
+
+\newcommand{\gkD}{\ensuremath{{\Delta}}}
+\newcommand{\gkF}{\ensuremath{{\phi}}}
+\newcommand{\gkG}{\ensuremath{{\Gamma}}}
+\newcommand{\gkL}{\ensuremath{{\Lambda}}}
+\newcommand{\gkQ}{\ensuremath{{\Theta}}}
+\newcommand{\gkS}{\ensuremath{{\Sigma}}}
+
+%%%%%%%%%%%%%%%%%%%%%
+%PRIMED-GREEK ALPHABETS
+
+\newcommand{\gkap}{\ensuremath{{\alpha'}}}
+\newcommand{\gkbp}{\ensuremath{{\beta'}}}
+\newcommand{\gkcp}{\ensuremath{{\chi'}}}
+\newcommand{\gkdp}{\ensuremath{{\delta'}}}
+\newcommand{\gkep}{\ensuremath{{\eta'}}}
+\newcommand{\gkfp}{\ensuremath{{\varphi'}}}
+\newcommand{\gkgp}{\ensuremath{{\gamma'}}}
+\newcommand{\gkip}{\ensuremath{{\iota'}}}
+\newcommand{\gkkp}{\ensuremath{{\kappa'}}}
+\newcommand{\gklp}{\ensuremath{{\lambda'}}}
+\newcommand{\gkmp}{\ensuremath{{\mu'}}}
+\newcommand{\gknp}{\ensuremath{{\nu'}}}
+\newcommand{\gkop}{\ensuremath{{\omicron'}}}
+\newcommand{\gkpp}{\ensuremath{{\varpsi'}}}
+\newcommand{\gkqp}{\ensuremath{{\theta'}}}
+\newcommand{\gkrp}{\ensuremath{{\rho'}}}
+\newcommand{\gksp}{\ensuremath{{\sigma'}}}
+\newcommand{\gktp}{\ensuremath{{\tau'}}}
+\newcommand{\gkvp}{\ensuremath{{upsilon'}}}
+\newcommand{\gkwp}{\ensuremath{{\omega'}}}
+\newcommand{\gkxp}{\ensuremath{{\xi'}}}
+\newcommand{\gkyp}{\ensuremath{{\eta'}}}
+\newcommand{\gkzp}{\ensuremath{{\zeta'}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%PRIMED-numbers 0,1,2,3
+\newcommand{\notp}{\ensuremath{{0'}}}
+\newcommand{\onep}{\ensuremath{{0'}}}
+\newcommand{\twop}{\ensuremath{{0'}}}
+\newcommand{\trip}{\ensuremath{{0'}}}
+
+%PRIMED-LATIN ALPHABETS
+\newcommand{\ltap}{\ensuremath{{a'}}}
+\newcommand{\ltbp}{\ensuremath{{b'}}}
+\newcommand{\ltcp}{\ensuremath{{c'}}}
+\newcommand{\ltdp}{\ensuremath{{d'}}}
+\newcommand{\ltep}{\ensuremath{{e'}}}
+\newcommand{\ltfp}{\ensuremath{{f'}}}
+\newcommand{\ltgp}{\ensuremath{{g'}}}
+\newcommand{\lthp}{\ensuremath{{h'}}}
+\newcommand{\ltip}{\ensuremath{{i'}}}
+\newcommand{\ltjp}{\ensuremath{{j'}}}
+\newcommand{\ltkp}{\ensuremath{{k'}}}
+\newcommand{\ltlp}{\ensuremath{{l'}}}
+\newcommand{\ltmp}{\ensuremath{{m'}}}
+\newcommand{\ltnp}{\ensuremath{{n'}}}
+\newcommand{\ltop}{\ensuremath{{o'}}}
+\newcommand{\ltpp}{\ensuremath{{p'}}}
+\newcommand{\ltqp}{\ensuremath{{q'}}}
+\newcommand{\ltrp}{\ensuremath{{r'}}}
+\newcommand{\ltsp}{\ensuremath{{s'}}}
+\newcommand{\lttp}{\ensuremath{{t'}}}
+\newcommand{\ltup}{\ensuremath{{u'}}}
+\newcommand{\ltvp}{\ensuremath{{v'}}}
+\newcommand{\ltwp}{\ensuremath{{w'}}}
+\newcommand{\ltxp}{\ensuremath{{x'}}}
+\newcommand{\ltyp}{\ensuremath{{y'}}}
+\newcommand{\ltzp}{\ensuremath{{z'}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%GREEK ALPHABETS--EARLIER VERSIONS
+\newcommand{\ga}{\ensuremath{{\alpha}}}
+\newcommand{\gb}{\ensuremath{{\beta}}}
+\newcommand{\gd}{\ensuremath{{\delta}}}
+\newcommand{\get}{\ensuremath{{\eta}}}
+\newcommand{\gf}{\ensuremath{{\varphi}}}
+\newcommand{\ggm}{\ensuremath{{\gamma}}}
+\newcommand{\gk}{\ensuremath{{\kappa}}}
+\newcommand{\gl}{\ensuremath{{\lambda}}}
+\newcommand{\gm}{\ensuremath{{\mu}}}
+\newcommand{\gn}{\ensuremath{{\nu}}}
+\newcommand{\gp}{\ensuremath{{\varpsi}}}
+\newcommand{\gr}{\ensuremath{{\rho}}}
+\newcommand{\gs}{\ensuremath{{\sigma}}}
+\newcommand{\gt}{\ensuremath{{\tau}}}
+\newcommand{\gw}{\ensuremath{{\omega}}}
+\newcommand{\gx}{\ensuremath{{\xi}}}
+\newcommand{\gz}{\ensuremath{{\zeta}}}
+\newcommand{\gq}{\ensuremath{{\theta}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+% FONTS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{euscript} %usage: \EuScript{A}
+% \usepackage{eufrak}    %usage: $\EuFrak{A}$
+\usepackage{textcomp}
+%%%%%%%%%%%%%%%%%%%%%
+
+%FONTENC
+\usepackage[T1]{fontenc}
+
+%FONT-PACKAGES
+%\usepackage{palatino}
+\usepackage{times}
+%\usepackage{helvet}
+%\renewcommand{\rmdefault}{phv}
+
+%A MAGNIFIED FONT
+%\newfont{\newt}{\rm scaled \magstep 40}
+
+%TINY-CAPS for vector-labels
+\newcommand{\ty}[1]{\mbox{\tiny{{#1}}}}
+\newcommand{\scap}[1]{\mbox{\scriptsize{{#1}}}}
+
+%MATHRM d
+\newcommand{\rmd}{\emathbox{\mathrm d}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%DUMMY CHARACTER
+\newcommand{\dm}{\hspace*{0mm}}
+%%%%%%%%%%%%%%%%%%%%%
+
+% SPACES
+\newcommand{\vse}{\vspace*{-2\bsk}}
+\newcommand{\vst}{\vspace*{-2.75\bsk}}
+\newcommand{\vs}{\dm\vspace*{0.5\baselineskip}}
+\newcommand{\hsp}{\hspace*{1cm}}
+\newcommand{\vsn}{\dm}
+%\newcommand{\vsn}{\dm\vspace*{-0.5\baselineskip}}
+\newcommand{\hs}{\hspace*{6pt}}
+
+%NEGATIVE THIN SPACES
+\newcommand{\hsn}{\hspace*{-4pt}}
+\newcommand{\hspneg}{\hsn}
+\newcommand{\nt}{\ensuremath{\negthinspace}}
+\newcommand{\nnt}{\ensuremath%
+{\negthinspace\negthinspace}}%
+\newcommand{\nnnt}{\ensuremath%
+{\negthinspace \negthinspace\negthinspace}}%
+%%%%%%%%%%%%%%%%%%%%%
+
+%BULLETS AND BOXES
+\newcommand{\Bx}{{\ensuremath{\Box~}}}
+\newcommand{\pBx}{\par {\ensuremath{\Box~}}}
+\newcommand{\blt}{\Bx}
+\newcommand{\bsqr}{\par\ensuremath{\blacksquare}~~}
+%%%%%%%%%%%%%%%%%%%%%
+
+% % % 'START-ALIGNED-NEW-LINE' FOR align ENVs
+% % %align-tag-newline-equals
+% % \newcommand{\atn}{\ensuremath{\\&=}}
+% % %align-notag-newline-equals
+% % \newcommand{\ann}{\ensuremath{\notag\\&=}}
+% % %align-tag-newline
+% % \newcommand{\atnl}{\ensuremath{\\&}}
+% % %align-notag-newline
+% % \newcommand{\annl}{\ensuremath{\notag\\&}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%SOME COLOR DEFINITIONS
+\usepackage{color}
+\newcommand{\pl}[1]{{\color{blue2}#1}}
+\newcommand{\rd}[1]{{\color{red2}#1}}
+\definecolor{red2}{rgb}{.5,.06,.08}
+\definecolor{blue2}{rgb}{0,0,.9}
+\definecolor{ornj}{rgb}{1,.8,0}
+\definecolor{pal}{rgb}{0,1,.498}
+\definecolor{pink}{rgb}{1,.9,.9}
+\definecolor{nightsky}{rgb}{0,0,.3}
+\definecolor{grey}{rgb}{.09,.09,.09}
+\definecolor{grey2}{rgb}{.2,.2,.2}
+\definecolor{purple}{rgb}{.1,.1,1}
+\definecolor{peach}{rgb}{1,.9,.9}
+\definecolor{paper}{rgb}{.24,.23,.19}
+\definecolor{bgn}{rgb}{0,.5,.5}
+\definecolor{ilgre2}{rgb}{.6353, .9039,.3529}
+\definecolor{brown}{rgb}{.14,.08,.06}
+%%%%%%%%%%%%%%%%%%%%%
+
+%QUESTION-PAPER-TEMPLATE
+\newcommand{\qtext}{\parbox[t]{5.5in}}%
+\newcommand{\mks}[1]{~\parbox[t]{.7in}{\hfill #1}}%
+\newcommand{\qnum}[1]{\vspace{1mm}%
+\zf\vspace{2pt} \parbox[t] {.7in}{#1 .}\hfill}%
+\newcommand{\qnuma}[1]{\vspace{1mm}%
+\zf\vspace{2pt}\parbox[t] {.7in}{#1 (a).}\hfill}%
+\newcommand{\qnumb}[1]{\zf\vspace{1mm}%
+\parbox[t] {.7in}{#1 (b).}\hfill}%
+\newcommand{\qnumc}[1]{\zf\vspace{1mm}
+\parbox[t] {.7in}{#1 (c).}\hfill}%
+\newcommand{\qnumd}[1]{\zf\vspace{1mm}%
+\parbox[t] {.7in}{#1 (d).}\hfill}%
+\newcommand{\qnume}[1]{\zf\vspace{1mm}%
+\parbox[t] {.7in}{#1 (e).}\hfill}%
+\newcommand{\qnumf}[1]{\zf\vspace{2mm}
+\parbox[t] {.7in}{#1 (f).}\hfill}%
+\newcommand{\choice}{\vspace{5mm}%
+\centerline{\small OR }}
+%%%%%%%%%%%%%%%%%%%%%
+
+%NON-FRAGILE-LINE-BREAK (PROTECTED)
+\newcommand{\hbk}{\protect \\} %
+%Non-fragile stretch-line-break (protected)
+\newcommand{\lbk}{\protect \break}%
+%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\defn}{\par\textsl{Defn:\ }}
+
+
+%%%%%%%%%%%%%%%
+%%%%%END--\avggen-new.sty
+%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%
+%%%%BEGIN--\avgthm-new.sty
+%%%%%%%%%%%%%%%
+
+\usepackage{theorem}
+%  Plain macros without ending in b or, c,
+%  are MACROS with two counters, viz., the
+%  chapterno and the item-counternos.
+%  THE b-versions of these macros, omit
+%  chapter numbers, but retain item-numbers.
+%  THE c-versions of these macros, do not
+%  retain any numbers.
+%
+% EXERCISE  \exise, \exiseb, \exisec
+\newcounter{exercise}
+\setcounter{exercise}{1}%
+
+\newcommand{\exise}{\par\noindent%
+\textsl{Exercise~\thechapter.\theexercise .~}%
+\addtocounter{exercise}{1}}%
+%
+\newcommand{\exiseb}{\par\noindent%
+\textsl{Exercise~\theexercise .~}%
+\addtocounter{exercise}{1}}%
+%
+\newcommand{\exisec}{\par\noindent%
+ \textsl{Exercise.~}}%
+
+%EXERCISE-MULTIPLE-CHOICE
+\newcommand{\exisem}[6]%
+{\par\dm  \noindent%
+\textsl{Exercise~\thechapter.\theexercise .~}{#1}%
+\dm\vspace*{.25\bsk}\\
+ (A)~{#2, \\}
+ (B)~{#3, \\}
+ (C)~{#4, \\}
+ (D)~{#5. \\}
+\dm\hfill Ans:~{#6.}\addtocounter{exercise}{1}}
+
+\newcommand{\exisemb}[6]{\vspace*{.25\bsk}\par\dm
+\noindent%
+\textsl{{Exercise~\theexercise .~}}{#1}%
+\vspace*{.5\bsk}\\ (A)~{#2},\quad
+\noindent(B)~{#3},\quad
+\noindent(C)~{#4},\quad
+\noindent(D)~{#5},\quad
+\ans{#6}\addtocounter{exercise}{1}} %
+
+\newcommand{\exisemc}[6]{\vspace*{.25\bsk}\par\dm
+\noindent%
+\textsl{{Exercise.~}}{#1}%
+\vspace*{.5\bsk}\\\noindent (A)~{#2},\quad
+\noindent(B)~{#3},\quad
+\noindent(C)~{#4},\quad
+\noindent(D)~{#5},\quad
+\ans{#6}} %
+
+
+%PROBLEM_MULTICHOICE
+\newcounter{probm}
+\setcounter{probm}{1}
+\newcommand{\probm}[6]{\vspace*{.25\bsk}\par\dm
+\noindent%
+\textsl{{Problem~\thechapter.\theprobm.~}}
+{#1}\vspace*{.5\bsk } \\
+(A)~{#2},\quad (B)~{#3},\quad (C)~{#4},\quad (D)~{#5}.\\
+\ans{#6}\addtocounter{probm}{1}}
+%
+\newcommand{\probmb}[6]{\vspace*{.25\bsk}\par\dm
+\noindent%
+\textsl{{Problem~\theprobm.~}}
+{#1}\vspace*{.5\bsk } \\
+\noindent (A)~{#2},\quad
+\noindent (B)~{#3},\quad
+\noindent (C)~{#4},\quad
+\noindent (D)~{#5},\quad
+\ans{#6}\addtocounter{probm}{1}}
+%
+\newcommand{\probmc}[6]{\vspace*{.25\bsk}\par\dm
+\noindent%
+\textsl{{Problem.~}}
+{#1}\vspace*{.5\bsk } \\
+\noindent (A)~{#2},\quad
+\noindent (B)~{#3},\quad
+\noindent (C)~{#4},\quad
+\noindent (D)~{#5},\quad
+\ans{#6}}
+
+% EXAMPLE \exm, \exmnp (np=no para version), \exmb, \exmc
+\newcounter{example}
+\setcounter{example}{1}
+
+\newcommand{\exm}{{\vspace*{.25\bsk}\par \dm  \noindent%
+\textsl{Example \thechapter.\theexample.~}
+\addtocounter{example}{1}}}
+
+\newcommand{\exmnp}{\noindent%
+\textsl{Example \thechapter.\theexample.~}%
+\addtocounter{example}{1}}%
+%
+\newcommand{\exmb}{\vspace*{.25\bsk}\par \dm  \noindent
+\textsl{Example~\theexample.~}%
+\addtocounter{example}{1}}%
+%
+\newcommand{\exmc}{\par \dm \\ \noindent
+\textsl{Example.~}}%
+%
+
+\newcommand{\eg}{\vspace*{.25\bsk}\par \dm  \noindent
+\textsl{Eg. \thechapter.\theexample.~}%
+\addtocounter{example}{1}}%
+%
+\newcommand{\egb}{\vspace*{.25\bsk}\par \dm  \noindent
+\textsl{Eg.~\theexample.~}%
+\addtocounter{example}{1}}%
+
+\newcommand{\ex}{\vspace*{.25\bsk}\par \dm \noindent
+\textsl{e.g.~}}%
+
+%EXAMPLE-MULTIPLE CHOICE
+\newcommand{\exmpm}[6]{\par\dm  \noindent %
+\textsl{Example~\thechapter.\theexample.~}{#1}%
+\vspace*{.25\bsk}\\
+ (A)~{#2, \\}
+ (B)~{#3, \\}
+ (C)~{#4, \\}
+ (D)~{#5. \\}
+\dm\hfill Ans:~{#6.}\addtocounter{example}{1}}
+
+% Note: If the arguments of A,B,C,D are long and we want
+% them on separate lines, we may put a line-break
+% command \\ after the space command \; as in
+% {A <argument> \\}.
+
+\newcommand{\exmpmb}[6]{\dm \noindent
+\vspace*{.5\bsk}\\  %
+\textsl{Example~\theexample.~}{#1}%
+\vspace*{.5\bsk}\\
+ (A)~{#2},\quad
+ (B)~{#3},\quad
+ (C)~{#4},\quad
+ (D)~{#5},\quad\\
+\ans{#6}\addtocounter{example}{1}} %
+
+\newcommand{\exmpmc}[6]{\dm\noindent \\  %
+\textsl{Example.~}{#1}%
+\vspace*{.5\bsk}\\
+ (A)~{#2},\quad
+ (B)~{#3},\quad
+ (C)~{#4},\quad
+ (D)~{#5},\quad \\
+\ans{#6}\addtocounter{example}{1}} %
+
+% DEFINITION \dfn (with counter no+chap no), \dfnb(plain),
+% \dfnc (without chap no),  \dfnarg[1], %
+
+\newcounter{dfn}
+\setcounter{dfn}{1}
+
+\newcommand{\dfn}{\par\noindent
+\textsl{Definition \thechapter.\thedfn:~}%
+\addtocounter{dfn}{1}}%
+
+\newcommand{\dfnb}%
+{\par \dm \\ \noindent\textsl{Definition:~}}%
+
+\newcommand{\dfnc}%
+{\par \dm \\ \noindent\textsl{Definition %
+\thedfn:~}\addtocounter{dfn}{1}}%
+%
+\newcommand{\dfnarg}[1]{\par  \noindent%
+\textsl{Definition \thechapter.\thedfn.~~{#1}.~}%
+\addtocounter{dfn}{1}}%
+%
+%\dfnargb=\dfnarg without chapter and definition  counter
+%numbers
+\newcommand{\dfnargb}[1]{\par \noindent%
+\textsl{Definition.~~{#1}.~}}%
+%
+
+%LEMMA, LEMMA-B, \lem, \lemb, \lemc
+
+\newcounter{lem}
+\setcounter{lem}{1}
+%
+\newcommand{\lem}{\par   \noindent%
+\textsl{Lemma \thechapter.\thelem:~}%
+\addtocounter{lem}{1}}%
+%
+\newcommand{\Lem}{\par   \noindent%
+\textbf{Lemma \thechapter.\thelem:~}%
+\addtocounter{lem}{1}}%
+%
+\newcommand{\lemc}{\par  \noindent%
+\textsl{Lemma \thelem:~}%
+\addtocounter{lem}{1}}%
+%
+\newcommand{\lemarg}[1]{\par   \noindent%
+\textsl{Lemma \thechapter.\thelem:~~{#1}.~}%
+\addtocounter{lem}{1}}%
+%
+\newcommand{\lemb}{\par \noindent%
+\textsl{Lemma:~}}%\dm \\
+
+%THEOREM, \thm, \thmb, \thmarg{} \thmc
+\newcounter{thm}
+\setcounter{thm}{1}
+\newcommand{\thm}{\par  \dm \noindent \\%
+\textsl{Theorem \thechapter.\thethm.~}%
+\addtocounter{thm}{1}}%
+%
+\newcommand{\thmarg}[1]{\par \dm  \noindent%
+\textsl{Theorem \thechapter.\thethm.~~{#1}.~}%
+\addtocounter{thm}{1}}%
+%
+\newcommand{\thmb}{\par   \dm\noindent%
+\textsl{Theorem \thethm.~}%
+\addtocounter{thm}{1}}%\dm \\
+%
+\newcommand{\thmc}{\par  \dm\noindent%
+\textsl{Theorem.~}}%\dm \\
+%
+%THEOREM HEADER  \thmhed{x}{x}
+\newcommand{\thmhed}[2]{ {\par \dm \\ \noindent%
+\textsl{\small #1:}} \textit { {#2}}\par}%
+% Ex., \thmhed{Definition}{text...}
+%
+%PROPERTY
+\newcommand{\prop}[1]{\par \dm \\ \noindent
+{\bfseries{Property\;{#1}}\,:\;}}%
+%\newcommand{\prop}[1]{\noindent
+%\mbox{\bfseries{Property\;{#1}\,:\;}}}%
+
+%PROOF
+\newcommand{\prf}{\noindent%
+\mbox{Proof:~}}%\dm \\
+
+%REMEMBER
+\newcommand{\rmb}[1]{\par \noindent\textbf%
+{{Example~\theexample.~}}{#1}\\
+\textsl{Remember$\,:\;$}}%\dm \\
+
+%SOLUTION
+\newcommand{\soln}{\par \flushleft\textsl{Solution:~}}%
+
+% \newcommand{\sol}{\soln}
+
+%ENDBOX
+%endbox
+\newcommand{\ebx}{\dm \hfill  $\Box$}
+%endbox-up
+\newcommand{\ebxup}{\dm \vspace*{-1\bsk}\hfill $\Box$}
+%endbox-down
+\newcommand{\ebxdn}{\dm \vspace*{1\bsk}\dm\hfill $\Box$}
+%re-defined older versions
+\newcommand{\ebxns}{\ebx}
+\newcommand{\ebxnsup}{\ebxup}
+
+%KEY-IDEA
+\newcommand{\kidea}{\par  \noindent\textsl{Key
+ideas:~}}%\dm \\
+
+%HINT
+\newcommand{\hint}{\par \noindent\textsl{Hint:~}}% \dm \\
+
+%ANSWER
+\newcommand{\ans}[1]{\dm\hfill [Ans: {{\small \;#1\;}}]}
+
+%INCOMPLETE
+\newcommand{\inc}{\vspace{1mm}%
+\fbox{\large\bfseries To be completed...}}%
+
+% OTHER THEOREM LIKE HEADERS
+% textbf-header with par-skip
+\newcommand{\hbf}[1]{\par\noindent\textbf{#1}:~}
+
+%\textsl-header without par-skip
+\newcommand{\hsl}[1]{\noindent{\textsl{#1}}:~}
+\newcommand{\hd}{\hsl}
+
+%BOX+ HEADER WITH ARGUMENT header-b
+\newcommand{\Hdb}[1]{\par\noindent%
+$\Box~$\textsl{#1}\,:\  }%
+
+%BLUE COLORED HEADER (PAR-SKIP+ARGUMENT) \hpl{x}
+\newcommand{\hpl}[1]{\dm\par\pl{#1\,:\  }}
+\newcommand{\hdr}{\hpl}
+
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%END--\avgthm-new.sty
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%BEGIN--\avgfigs-new.sty
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc,through,backgrounds}
+\usepackage{wrapfig}
+\usepackage{color}
+% \usepackage{pstricks,pst-node,pst-text,pst-grad}
+%\usepackage{picinpar}
+%\usepackage{hangcaption}
+%\usepackage{overpic}
+\usepackage{epstopdf}%
+
+%SOME COLOR DEFINITIONS
+
+% \newcommand{\pl}[1]{{\color{blue}#1}}
+% \newcommand{\rd}[1]{{\color{red2}#1}}
+% \definecolor{ornj}{rgb}{1,.8,0}
+% \definecolor{pal}{rgb}{0,1,.498}
+% \definecolor{pink}{rgb}{1,.9,.9}
+% \definecolor{nightsky}{rgb}{0,0,.3}
+% \definecolor{grey}{rgb}{.09,.09,.09}
+% \definecolor{grey2}{rgb}{.2,.2,.2}
+% \definecolor{purple}{rgb}{.1,.1,1}
+% \definecolor{peach}{rgb}{1,.9,.9}
+% \definecolor{paper}{rgb}{.24,.23,.19}
+% \definecolor{bgn}{rgb}{0,.5,.5}
+% \definecolor{ilgre2}{rgb}{.6353, .9039,.3529}
+% \definecolor{blue2}{rgb}{0,0,.9}
+% \definecolor{red2}{rgb}{.5,.06,.08}
+% \definecolor{brown}{rgb}{.14,.08,.06}
+
+
+%  FIGURE MACROS
+% \portrait{x}{x}{x} For inserting portraits of fixed
+% width=10cm, height=7.5cm ", preserving the aspect ratio,
+% "here" (at point of insertion) in the page.
+% Usage: \portrait{scale #1}{image-path #2}{legend-text
+% #3}.
+% The legend-text #3 is set in \small size on a separate
+% para which is convenient for long figure legends.
+
+\newcommand{\portrait}[3]{\begin{figure}[h]%
+\centering\includegraphics[width=10cm,height=7.5cm,%
+{scale=1},keepaspectratio=true]{#2}%
+\\\dm\\{\small #3}%
+\end{figure}}
+
+
+% \ingr{x}{x} For inserting graphics-files (especially,
+% inside "tikzpicture" environment) with aselectable
+% scale-factor, preserving the aspect ratio "here"  in the
+% page.
+
+\newcommand{\ingr}[2]%
+{\includegraphics[{scale=#1},keepaspectratio=true]{#2}}
+
+\newcommand{\ingra}[2]%
+{\scalebox{#1}{\includegraphics{#2} } }
+
+
+% The \fig{scalebox}{fig-file}{caption}{fig-label}
+% macro for Books and Reports where
+% ''\thefigure'' = '' the chapter-number dot the figure-no''.
+
+\newcommand{\fig}[4]{\begin{figure}[ht]%
+\begin{center} {\scalebox{#1}{\includegraphics{#2} } }%
+\caption{#3}\label{#4} \end{center}\end{figure}}%
+
+\newcommand{\figl}[4]{\begin{flushleft}%               
+\begin{figure}[ht]%
+\begin{center} {\scalebox{#1}{\includegraphics{#2} } }%
+\caption{#3}\label{#4} \end{center}\end{figure} 
+\end{flushleft}}%
+% For figures with long captions (extending to more than
+% one text-line), it looks better to leave the third
+% argument in the above macro  blank (with a \dm) in
+% \fig{x}{x}{x}{x} and type the long caption-text outside
+% the \fig{x}{x}{x}{x} macro % with one base-line-skip.
+
+%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%
+%Portrait insertion
+%% \fig{x}{x}{x},
+%%  The b-versions of these macros, namely,
+% % \figb{x}{x}{x},  donot  contain chapter numbers
+%% \figwrp{x}{x}{x}
+
+% %INCLUDE GRAPGHICS :
+% %usage: \ingr{{scale: #1}{image: #2}}
+%
+% \newcommand{\ingr}[2]%
+% {\includegraphics[{scale=#1},keepaspectratio=true]{#2}}
+
+%FIGURE environments
+
+
+%Figure macro \fig{x}{×}{×}{×}for Books and Reports where
+%''\thefigure'' = '' the chapter-no dot the figure-no''.)
+%%%%%%%% %%%%%%%%%%%%%%%% %%%%%%%%
+
+%THE \mfig macro for the TUFTE-BOOK-CLASS3
+% \mfig[4]{scale-box}{figure}{label}{caption}
+%
+\newcommand{\mfig}[4]%
+{\begin{marginfigure}%
+{\scalebox{#1}{\includegraphics{#2}}}%
+\vspace*{1\bsk}\caption{\dm #3}%
+\label{#4}\end{marginfigure}}%
+%
+% % USAGE
+%\mfig{.3}{tensor-figs/p-curve}{A parametric-curve}
+% {p-curve}
+%
+
+% This command \figwrp[3]{}{}{} below puts the figure  in a
+% text-wrap of witdth 0.4\textwidth, and along-side text in a
+% column of width 0.6\ textwidth: Arg #1 is the size of the
+% figure: [scale=#1]. Arg #2 is the  figure name and location.
+% Arg #3 is the text for the figure caption. It also numbers
+% the figures using the counter ''figure''. The  command
+% \addtocounter{figure}{1} is already contained in
+% \figcapb{#3} which is part of this command.
+
+\newcommand{\figwrp}[3] %
+{\begin{wrapfigure}[12]{l}{.5\textwidth}%
+\begin{center} \vspace*{0mm} %
+\includegraphics[scale=#1]{#2}%
+\vspace*{-3mm}\figcapb{#3} \end{center}%
+\end{wrapfigure}}%
+
+%
+% This b-version of command \figwrp defined
+% below takes two arguments, namely {the figure name and
+% location} and {the figure caption}. It  uses the fixed
+% scale factor 1 and is to be used with an optimal
+% pdf- bounding-box of  size 5cmx4cm.
+
+\newcommand{\figwrpb}[2] {\begin{wrapfigure}%
+[14]{l}{0.5\textwidth} \begin{center}\vspace*{3mm}%
+\includegraphics[scale=1]{#1}%
+\vspace*{-2mm}\figcapb{#2}\end{center}%
+\end{wrapfigure}}%
+
+\newcommand{\figwrpd}[2] {\begin{wrapfigure}%
+{l}{0.4\textwidth} \begin{ center}\vspace*{-5mm} %
+\includegraphics[scale=#1]{#2}%
+\vspace*{-2mm}\end{center}\end{wrapfigure}}%
+
+% Below, we define the dummy-command \figcolb
+% and then redefine it as \figwrpb: This is used in
+% converting beamer % files to a hout form.
+
+\newcommand{\figcolb}{\dm}
+\renewcommand{\figcolb}{\figwrpb}
+%\renewcommand{\vsn}{\dm}
+
+\newcommand{\figqp}[2]{{\par\flushleft%
+\vspace*{0mm}\includegraphics[scale=.9]{#1}%
+\vspace*{3mm}\figcapqp{#2}}\par }
+
+
+%%%%%%%%%%%%%%
+%%END--avggennew.sty
+%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+ 
+% %  \figwrp{x}{x}{x}
+% 
+% \newcounter{figureno}
+% \setcounter{figureno}{1}
+% %
+% \newcommand{\figcap}[1]%
+% {\begin{center}{\scriptsize{Figure%
+% \thechapter.\thefigureno.\ {#1}}}%
+% \end{center}\addtocounter{figureno}{1}}%
+% %
+% \newcommand{\figcapb}[1]%
+% {\begin{center}{\scriptsize{Figure%
+% \thefigureno.\ {#1}}}\end{center}%
+% \addtocounter{figureno}{1}}%
+% %
+% \newcommand{\figcapqp}[1]{\scriptsize{#1}}
+% 
+% \newcommand{\fig}[3]{\par\begin{center}%
+% {\scalebox{#1}{\includegraphics{#2}}} \\%
+% \vspace*{1\baselineskip}%
+% \figcap{#3}\end{center}}%
+% %
+% \newcommand{\figb}[3]{\par\begin{center}%
+% {\scalebox{#1}{\includegraphics{#2}}} \\ %
+% \vspace*{1\baselineskip}%
+% \figcapb{#3}\end{center}}%
+% 
+% \newcommand{\figc}[2]{\par\begin{center}%
+% {\scalebox{#1}{\includegraphics{#2}}} \\%
+% \end{center}}
+% 
+% \newcommand{\figd}[3]{\par\begin{center}%
+% {\scalebox{#1}{\includegraphics{#2}}%
+% \vspace*{1\baselineskip} {#3}}%
+% \end{center}}%
+% 
+% % This command \figwrp[3]{}{}{} below puts the figure  in a
+% % text-wrap of witdth 0.4\textwidth, and along-side text in
+% a
+% % column of width 0.6\ textwidth: Arg #1 is the size of the
+% % figure: [scale=#1]. Arg #2 is the  figure name and
+% location.
+% % Arg #3 is the text for the figure caption. It also
+% numbers
+% % the figures using the counter ''figureno''. The  command
+% % \addtocounter{figureno}{1} is already contained in
+% % \figcapb{#3} which is part of this command.
+% 
+% \newcommand{\figwrp}[3] %
+% {\begin{wrapfigure}[12]{l}{.5\textwidth}%
+% \begin{center} \vspace*{0mm} %
+% \includegraphics[scale=#1]{#2}%
+% \vspace*{-3mm}\figcapb{#3} \end{center}%
+% \end{wrapfigure}}%
+% 
+% %
+% % This b-version of command \figwrp defined
+% % below takes two arguments, namely {the figure name and
+% % location} and {the figure caption}. It  uses the fixed
+% % scale factor 1 and is to be used with an optimal
+% % pdf- bounding-box of  size 5cmx4cm.
+% 
+% \newcommand{\figwrpb}[2] {\begin{wrapfigure}%
+% [14]{l}{0.5\textwidth} \begin{center}\vspace*{3mm}%
+% \includegraphics[scale=1]{#1}%
+% \vspace*{-2mm}\figcapb{#2}\end{center}%
+% \end{wrapfigure}}%
+% 
+% \newcommand{\figwrpd}[2] {\begin{wrapfigure}%
+% {l}{0.4\textwidth} \begin{ center}\vspace*{-5mm} %
+% \includegraphics[scale=#1]{#2}%
+% \vspace*{-2mm}\end{center}\end{wrapfigure}}%
+% 
+% % Below, we define the dummy-command \figcolb
+% % and then redefine it as \figwrpb: This is used in
+% % converting beamer % files to a hout form.
+% 
+% \newcommand{\figcolb}{\dm}
+% \renewcommand{\figcolb}{\figwrpb}
+% \renewcommand{\vsn}{\dm}
+% 
+% \newcommand{\figqp}[2]{{\par\flushleft%
+% \vspace*{0mm}\includegraphics[scale=.9]{#1}%
+% \vspace*{3mm}\figcapqp{#2}}\par }
+% 
+% 
+% 
+% % EXERCISE  \exise, \exiseb
+% \newcommand{\exise}{\par\textsl{Exercise~%
+% \thechapter.\theexercise.~} %
+% \ addtocounter{exercise}{1}}%
+% %
+% \newcommand{\exiseb}{\par\textsl{\rd{Exercise~%
+% \theexercise.~}}\addtocounter{exercise}{1}}%
+% 
+% \newcommand{\exisem}[6]{\par%
+% \textsl{\rd{Exercise~\theexercise.~}}{#1}%
+% \\\\ (A)~{#2}\\\\ (B)~{#3}\\\\ (C)~{#4}\\\\%
+% (D)~{#5}\\\ans{#6}\addtocounter{exercise}{1}}%
+% 
+% % \renewcommand{\exisem}[6]{\par
+% % \textsl{{Exercise~\theexercise.~}}{#1}
+% % \\\\ (A)~{#2}\\\\ (B)~{#3}\\\\ (C)~{#4}
+% % \\\\ (D)~{#5}\\\ans{#6}\addtocounter{exercise}{1}}
+% 
+% \newcommand{\exmpm}[6]{\par\textbf%
+% {\rd{Example~\theexample.~}}{#1}\\%
+% \dm\\ (A)~{#2}\\\dm\\ (B)~{#3}\\\dm\\ (C)~{#4}\\%
+% \dm\\ (D)~{#5}\\ \ans{#6}\addtocounter{example}{1}}%
+% 
+% % \renewcommand{\exmpm}[6]{\par
+% %\textsl{{Example~\theexample.~}}{#1}\\\
+% %\ (A)~{#2}\\\\ (B)~{#3}\\\\ (C)~{#4}\\\\
+% %(D)~{#5}\\\ans{#6}\addtocounter{example}{1}}
+% 
+% 
+% 
+% \newcommand{\exisec}{\par%
+% {\thechapter.\theexercise.~}%
+% \addtocounter{exercise}{1}}%
+% 
+% \newcommand{\exercise}[1]{\par{
+% \thechapter.\theexercise.~\textsl{#1}}
+% \addtocounter{exercise}{1}}
+% % % PROBLEM\ prob, \probc, \probb
+% 
+% \newcounter{probm}
+% \setcounter{probm}{1}
+% \newcommand{\probm}[6]{\par\textbf
+% {\rd{Problem~\theprobm.~}}{#1}\\\\
+% (A)~{#2}\\\\ (B)~{#3}\\\\ (C)~{#4}\\\\
+% (D)~{#5}\\\ans{#6}\addtocounter{probm}{1}}
+% 
+% \newcounter{problem}
+% \setcounter{problem}{1}
+% \newcommand{\prob}{\par\textsl
+% {Problem~\thechapter.\theproblem.~}
+% \addtocounter{problem}{1}}
+% 
+% %PROBLEM \probc is \prob with problem
+% %counter only
+% \newcommand{\probc}[1] {\par%
+% \textsl{Problem~\theproblem.~}{\textsl{#1}}%
+% \addtocounter{problem}{1}}%
+% 
+% % PROBLEM \probb is \prob
+% %without any counter.
+% \newcommand{\probb}{\par%
+% \textsl{Problem~\theproblem.~}}%
+% 
+% % EXAMPLE \exm, \exmb
+% 
+% \newcommand{\exm}{\par%
+% \textsl{Example \thechapter.\theexample.~}%
+% \addtocounter{example}{1}}%
+% %
+% \newcommand{\exmb}{\par%
+% \textsl{Example \theexample.}%
+% ~\addtocounter{example}{1}}%
+% 
+% \newcommand{\exmc}{\par%
+% $\blacksquare~$\textsl{%
+% \thechapter.\theexample.~}%
+% \addtocounter{example}{1}}%
+% 
+% % DEFINITION \dfn , \dfnb
+% \newcounter{dfn}
+% \setcounter{dfn}{1}
+% \newcommand{\dfn}{\par%
+% \textsl{Definition%
+% \thechapter.\thedfn.~}%
+% \addtocounter{dfn}{1}}%
+% %
+% \newcommand{\dfnb}%
+% {\par\textsl{Definition\thedfn.~}%
+% \addtocounter{dfn}{1}}%
+% 
+% % LEMMA, \lem, \lemb
+% \newcounter{lem}
+% \setcounter{lem}{1}
+% \newcommand{\lem}{\par%
+% \textsl{Lemma \thechapter.\thelem.~}%
+% \addtocounter{lem}{1}}%
+% %
+% \newcommand{\lemb}{\par%
+% \textsl{Lemma \thelem.~}%
+% \addtocounter{lem}{1}}%
+% 
+% %THEOREM \thm, \thmb
+% \newcounter{thm}
+% \setcounter{thm}{1}
+% \newcommand{\thm}{\par%
+% \textsl{Theorem \thechapter.\thethm.~}%
+% \addtocounter{thm}{1}}%
+% %
+% \newcommand{\thmb}{\par%
+% \textsl{Theorem \thethm.~}%
+% \addtocounter{thm}{1}}%
+% 
+% % OTHER THEOREM LIKE HEADERS
+% \newcommand{\thmhed}[2]{ {\par%
+% \textsl{\small #1:}} \textit { {#2}}\par}%
+% % Ex., \thmhed{Definition}{text...}
+% \newcommand{\define}{\pl{$\blacksquare%
+% ~~$}\textsl{Definition:~}}%
+% \newcommand{\hbf}[1]{{\textsl{#1}:~}}
+% \newcommand{\hd}[1]{{\textsl{#1}}\,:\  }
+% \newcommand{\Hd}[1]{\par\pl{#1}\,:\  }
+% \newcommand{\Hdb}[1]{\par%
+% $\Box~$\textsl{#1}\,:\  }%
+% \newcommand{\hint}{\par\textsl{Hint:~}}
+% 
+% % Some macros to be removed
+% \newcommand{\ba}[1]{\left( \begin{array}{#1}}
+% \newcommand{\ea}{\end{array}\right)}
+% \newcommand{\brmatrix}[1]{\left\{ \begin{array}{#1}}
+% \newcommand{\ermatrix}{\end{array}\right\}}
+% \newcommand{\beq}{\begin{equation}}
+% \newcommand{\eeq}{\end{equation}
+% 
+% %%TEXT SIZE AND MARGINS FOR A5 PAPER
+% 
+% %\documentclass[a5paper]{book}
+% % \usepackage[body={11cm,16cm}]{geometry}
+% % \usepackage{avgbook}
+% % \pagestyle{fancy}
+% % \usepackage{fancyhdr}
+% % \usepackage{eufrak}
+% % \topmargin -5mm
+% % \oddsidemargin 0mm
+% % \evensidemargin -10mm
+% % \usepackage{helvet}
+% %%% HEADERS AND FOOTERS
+% 
+% %\lhead{\scriptsize\slshape A. V. Gopala Rao:
+% %Group Theory for the
+% %NET: April 2012}
+% %\rhead{\thepage}
+% %\cfoot{}
+% %\lfoot{\scriptsize\slshape garakali@gmail.com}
+% %\rfoot{\scriptsize\slshape\S\,\thesection}
+% 
+% % WE DEFINE THE FANCY-PAGE-STYLE BELOW
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+%  \fancyhf{} % Empty every style
+% \fancyhead[RO,RE]{\thepage}
+% \fancyhead[LO]{\slshape\small \chapter \thechapter }
+% \fancyhead[LO]{\slshape\small \thesection }
+% \fancyfoot[RO,RE]{\small\slshape\S\,\thesection}
+% \fancyfoot[LO,LE]{\small\slshape garakali@gmail.com}
+% \renewcommand{\headrulewidth}{0pt}%{0.1pt}
+% \renewcommand{\footrulewidth}{0pt}%{0.1pt}
+%%%%%%%%%%%%%%%%%%%%%
+% 
+% 
+% 
+% 
+% 
+
+

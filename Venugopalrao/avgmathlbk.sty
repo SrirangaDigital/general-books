@@ -1,0 +1,761 @@
+%%%%%%%%%%%%%%%%
+%%AVGMATH-NEW.STY
+%%%%%%%%%%%%%%%%
+
+
+%INCLUDED PACKAGES
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{euscript}
+\usepackage{tensind}
+%\usepackage[a]{esvect}
+\tensordelimiter{?}
+
+%THE ENSUREMATHBOX \emathbox
+
+\newcommand{\emathbox}[1]%
+{{\mbox{\ensuremath{{ #1 }}}}}
+
+% %RENEWCOMMANDS
+\renewcommand{\dot}{\dotup}
+\renewcommand{\ddot}{\ddotup}
+\renewcommand{\tilde}{\widetilde}
+% \newcommand{\rmd}{\emathbox{\mathrm d}}
+
+
+% DOWN-TETRAD AND UP-TETRAD OF 4-VECTORS
+% AND THEIR  TILDE-VERSIONS
+
+%The down-tetrad: \dtet. \dnot, \dwon, \dtwo, \dtri
+\newcommand{\dtet}[1]
+{\ensuremath{\mathcal{E}_{\vl{#1}}}}
+\newcommand{\dnot}
+{\ensuremath{\mathcal{E}_{\vl{0}}}}
+\newcommand{\dwon}
+{\ensuremath{\mathcal{E}_{\vl{1}}}}
+\newcommand{\dtwo}
+{\ensuremath{\mathcal{E}_{\vl{2}}}}
+\newcommand{\dtri}
+{\ensuremath{\mathcal{E}_{\vl{3}}}}
+
+% \newcommand{\dtet}[1]
+% {\ensuremath{e_{\vl{#1}}}}
+% \newcommand{\dnot}
+% {\ensuremath{e_{\vl{0}}}}
+% \newcommand{\dwon}
+% {\ensuremath{e_{\vl{1}}}}
+% \newcommand{\dtwo}
+% {\ensuremath{e_{\vl{2}}}}
+% \newcommand{\dtri}
+% {\ensuremath{e_{\vl{3}}}}
+
+%TRANSPOSED DOWN-TETRAD:  \TDNOT,
+%\TDWON, \TDTWO, \TDTRI
+
+\newcommand{\tdtet}[1]
+{\ensuremath{\mathcal{\tilde{E}}_\vl{#1}}}
+\newcommand{\tdnot}
+{\ensuremath{\mathcal{\tilde{E}}_{\vl{0}}}}
+\newcommand{\tdwon}
+{\ensuremath{\mathcal{\tilde{E}}_{\vl{1}}}}
+\newcommand{\tdtwo}
+{\ensuremath{\mathcal{\tilde{E}}_{\vl{2}}}}
+\newcommand{\tdtri}
+{\ensuremath{\mathcal{\tilde{E}}_{\vl{3}}}}
+
+% \newcommand{\tdtet}[1]
+% {\ensuremath{\tilde{e_\vl{#1}}}}
+% \newcommand{\tdnot}
+% {\ensuremath{\tilde{e_{\vl{0}}}}}
+% \newcommand{\tdwon}
+% {\ensuremath{\tilde{e_{\vl{1}}}}}
+% \newcommand{\tdtwo}
+% {\ensuremath{\tilde{e_{\vl{2}}}}}
+% \newcommand{\tdtri}
+% {\ensuremath{\tilde{e_{\vl{3}}}}}
+
+%The up-tetrad:  \unot, \uwon, \utwo, \utri
+
+\newcommand{\utet}[1]
+{\ensuremath{\EuScript {{E}}^{\vl{#1}}}}
+\newcommand{\unot}
+{\ensuremath{ \mathcal{E}^{\vl{0}}}}
+\newcommand{\uwon}
+{\ensuremath{\EuScript {E}^{\vl{1}}}}
+\newcommand{\utwo}
+{\ensuremath{\EuScript {E}^{\vl{2}}}}
+\newcommand{\utri}
+{\ensuremath{\EuScript {E}^{\vl{3}}}}
+
+% \newcommand{\utet}[1]
+% {\ensuremath{e^{\vl{#1}}}}
+% \newcommand{\unot}
+% {\ensuremath{e^{\vl{0}}}}
+% \newcommand{\uwon}
+% {\ensuremath{e^{\vl{1}}}}
+% \newcommand{\utwo}
+% {\ensuremath{e^{\vl{2}}}}
+% \newcommand{\utri}
+% {\ensuremath{e^{\vl{3}}}}
+
+%The transposed up-tetrad:  \tunot, \tuwon, \tutwo, \tutri
+
+\newcommand{\tutet}[1]%
+{{\ensuremath{\tilde{\EuScript {E}}^\vl{#1}}}}%
+\newcommand{\tunot}%
+{{\ensuremath{\tilde{\EuScript {E}}^\vl{0}}}}%
+\newcommand{\tuwon}%
+{{\ensuremath{\tilde{\EuScript {E}}^\vl{1}}}}%
+\newcommand{\tutwo}%
+{{\ensuremath{\tilde{\EuScript {E}}^\vl{2}}}}%
+\newcommand{\tutri}%
+{{\ensuremath{\tilde{\EuScript {E}}^\vl{3}}}}%
+
+% \newcommand{\tutet}[1]%
+% {\ensuremath{\tilde{e^\vl{#1}}}}
+% \newcommand{\tunot}%
+% {\ensuremath{\tilde{e^\vl{0}}}}
+% \newcommand{\tuwon}%
+% {\ensuremath{\tilde{e^\vl{1}}}}
+% \newcommand{\tutwo}%
+% {\ensuremath{\tilde{e^\vl{2}}}}
+% \newcommand{\tutri}%
+% {\ensuremath{\tilde{e^\vl{3}}}}
+
+%ORTHONORMAL TRIAD OF VECTORS IN E3
+
+%TRIAD WITH A GENERAL SUFFIX
+\newcommand{\etrd}[1]{\ensuremath{\uvec{e}_{#1}}}
+
+%VECTOR-LABELLED-TRIADS
+\newcommand{\ewon}{{\ensuremath{\uvec{e}_1}}}
+\newcommand{\etwo}{{\ensuremath{\uvec{e}_2}}}
+\newcommand{\etri}{{\ensuremath{\uvec{e}_3}}}
+
+%STARRED-TRIADS OF VECTORS IN E3
+\newcommand{\swon}{{\ensuremath{\uvec{e}^\bst_1}}}
+\newcommand{\stwo}{{\ensuremath{\uvec{e}^\bst_2}}}
+\newcommand{\stri}{{\ensuremath{\uvec{e}^\bst_3}}}
+
+%SPECIFIC VECTOR_LABELS
+%Redefine these with 3-characters
+\newcommand{\gc}{\ensuremath{{\vl{c}}}}
+\newcommand{\ze}{\ensuremath{{\vl{0}}}}
+\newcommand{\on}{\ensuremath{{\vl{1}}}}
+\newcommand{\tw}{\ensuremath{{\vl{2}}}}
+%\newcommand{\tr}{\ensuremath{{\vl{3}}}}
+
+
+\newcommand{\ns}{\ensuremath{\nnnt}}
+\newcommand{\bst}{{\ensuremath{\textstyle \ast}}}
+\newcommand{\ak}{{\ensuremath{\bst}}}
+\newcommand{\str}{{\ensuremath{\bst}}}
+\newcommand{\bsym}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\bsymb}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\cdt}{\ensuremath{\cdots}}
+% \newcommand{\dash}[1]{\ensuremath{{#1}^{\lower%
+% 1ex \hbox{\prime}}}}%
+\newcommand{\dash}[1]{\hbox{${#1}^{\lower%
+1ex\prime}$}}%
+%\newcommand{\dbar}{\ensuremath{\dj}}
+\newcommand{\dual}[1]{\ensuremath{{}^{\bst}%
+\negthinspace{#1} } }
+%\newcommand{\dummy}{\hspace*{0mm}}
+%\newcommand{\dn}[1]{{\ensuremath{{}_{#1}}}}
+%\newcommand{\dnd}[1]{{\ensuremath{{}^{.}_{#1}}}}
+
+% \newcommand{\grad}[2]{\ensuremath{q_{{#1},{#2}}}}
+%\newcommand{\hsp}{\hspace*{1cm}}
+%\newcommand{\hspneg}{\hspace*{-4pt}}
+%\newcommand{\inc}{\vspace{1mm}%
+%\fbox{\large\bfseries To be completed...}}%
+% \newcommand{\lie}%
+% {\ensuremath{\boldsymbol{\mathcal{L}}}}
+% \newcommand{\nt}{\ensuremath{\negthinspace}}
+% \newcommand{\nnt}{\ensuremath%
+% {\negthinspace\negthinspace}}%
+% \newcommand{\nnnt}{\ensuremath%
+% {\negthinspace \negthinspace\negthinspace}}%
+%\newcommand{\ph}{\phantom}
+\newcommand{\pE}{{\ensuremath{E'}}}
+\newcommand{\pB}{{\ensuremath{B'}}}
+\newcommand{\physcomp}[1]{\ensuremath{{}^{P}%
+\negthinspace{#1}}}%\textsc{P}
+
+% 'd' stands for dash in the ffollowing
+\newcommand{\xd}{{\ensuremath{\bar{x}}}}
+\newcommand{\mud}{{\ensuremath{\bar{\mu}}}}
+\newcommand{\etad}{{\ensuremath{\bar{\eta}}}}
+
+% \newcommand{\gc}{\ensuremath{{\vl{c}}}}
+% \newcommand{\ze}{\ensuremath{{\vl{0}}}}
+% \newcommand{\on}{\ensuremath{{\vl{1}}}}
+% \newcommand{\tw}{\ensuremath{{\vl{2}}}}
+% \newcommand{\utet}[1]{{\ensuremath{\tilde{\mathcal{E}}^\vl{
+% #1}}}}
+% \newcommand{\unot}{{\ensuremath{\mathcal{E}^\vl{0}}}}
+% \newcommand{\uwon}{{\ensuremath{\mathcal{E}^\vl{1}}}}
+% \newcommand{\utwo}{{\ensuremath{\mathcal{E}^\vl{2}}}}
+% \newcommand{\utri}{{\ensuremath{\mathcal{E}^\vl{3}}}}
+
+%DERIVATIVES, JACOBIANS (USE COMMATH PACKAGE)
+
+%
+
+% Abbreviation for \partial
+%\newcommand{\dow}{\ensuremath{\partial}}
+
+% macros from  from package
+
+%general  partial-derivative \pd{}{}
+
+%general  ordinary-derivative \od{}{}
+
+%  general  partial-derivative fraction-form
+%  display-mode \dpd{x}{x}
+
+%  general  partial-derivative fraction-form text-mode
+%  \tpd{x}{x}
+
+% Note that  the macros \dpd{}{} and  \od{}{} and its
+% variants from the package commath.sty
+% complain of double superscripts/subscripts at
+% compile-time when their arguments
+%  have suffixes such as x^a or x_a.
+% Therefore, one must protect the  arguments of \pd{}{} and
+% \od{}{} with  extra braces in such cases and we do
+% precisely that in the  macros below:
+
+%GENERAL PARTIAL DERIVATIVE DISPLAY MODE \gpd{x}{x}:
+\newcommand{\gpd}[2]{\ensuremath{\dpd{{#1}}%
+{{#2}}}}
+
+\newcommand{\tpdx}[2]%
+[2]{\ensuremath{({\dow {#1}}/{\dow {#2}})}}
+
+%general-partial-derivative slash-form within
+%brackets \spd{x}{x}:
+\newcommand{\spd}[2]{\ensuremath{({\dow {#1}}/{\dow
+{#2}})}}
+%Jacobian-matrix-elements
+%forward  JACOBIAN-MATRIX-ELEMENT\lmd{}{}
+\newcommand{\lmd}[2]
+{\ensuremath{ ?\Lambda^{{#1}}_{{#2}n}? } }
+
+% inverse JACOBIAN-MATRIX-ELEMENT \kmd{}{}
+\newcommand{\kmd}[2]
+{\ensuremath{ ?K^{{#1}}_{{#2}}? } }
+
+%  general Jacobian-Matrix-Element partial-derivative-form
+%  display-mode
+\newcommand{\pdx}[2]%
+{\ensuremath{\gpd{{x^{#1}}} {{x^{#2}}}} }
+
+%  general Jacobian-Matrix-Element--slashed-partial
+%  derivative form, within brackets
+\newcommand{\spdx}[2]%
+{\ensuremath{ (\dow {{x^{#1}}} / \dow {{x^{#2}}) } } }
+
+%% ordinaryderivatives--DOT forms
+\newcommand{\dotup}[1]%
+{{\ensuremath{\overset{\hspace*{1.5pt}\centerdot}{#1}} }}%
+\newcommand{\ddotup}[1]%
+{\ensuremath{\overset{\hspace*{1.5pt}\centerdot\hspace{%
+1pt}\centerdot }{#1}} }%
+\newcommand{\dtq}%
+{{\ensuremath{\dotup{q} }}}%
+\newcommand{\ddtq}%
+{{\ensuremath{\ddotup{q} }}}%
+
+%CAUCHY PRINCIPAL VALUE
+\newcommand{\cauchy}{\ensuremath{{\rm P}\hspace{-3mm} }}
+
+
+
+
+
+%INTEGRAL SIGNS
+\newcommand{\ctr}[1]%
+{\ensuremath{_{_{#1}}\hspace{-2pt}}}%
+\newcommand{\pathint}[1]%
+{\ensuremath{_{_{#1}}\hspace{-2pt}\int}}%
+\newcommand{\Lint}{{\ensuremath{\Huge  \int }}}
+
+%VECTORS
+%Alternative form of a vector
+\newcommand{\veca}[1]{{\ensuremath{\overrightarrow{#1}}}}
+\renewcommand{\vec}{\veca}
+
+%PRIMED-VECTOR
+\newcommand{\pvec}[1]%
+{{\ensuremath{\vec{#1}\hspace*{.3pt}'}}}
+% {{\ensuremath{\vec{#1}\,'}}}
+
+%STARRED-VECTOR
+\newcommand{\svec}[1]%
+{\ensuremath{{\vec{#1}^{\,\bst}}}}%
+
+%CROSS-PRODUCT
+\newcommand{\cross}{\ensuremath{\times}}
+
+%Dot-product
+%\newcommand{\dotp}{\ensuremath{\mathbf{\cdot}}}
+\newcommand{\dotp}{\ensuremath{\hspace{0em}\raise
+.21em\hbox{{\Large .}\hspace{0em}}}}
+
+
+%UNIT VECTORS, STARRED-UNIT-VECTOR,
+
+\renewcommand{\hat}{\what}
+\newcommand{\uvec}[1]{\ensuremath{\hat{#1}}}
+\newcommand{\eye}{\ensuremath{\uvec{\imath}}}
+\newcommand{\jay}{\ensuremath{\uvec{\jmath}}}
+\newcommand{\kay}{\ensuremath{\uvec{k}}}
+\newcommand{\suvec}[1]%
+{\ensuremath{{\uvec{#1}^{\,\bst}}}}%
+
+%NABLA VECTOR-OPERATOR
+\newcommand{\vnab}{{\ensuremath{\vec{\nabla}} }}
+
+% BOLD-FACE FORMS OF VECTORS
+% COMMENT-OUT EITHER THE OVER-ARROW
+% FORMS OF VECTORS  Given above OR THE
+% BOLD-FACE FORMS OF
+% VECTORS given below AS DESIRED
+
+% Note that the system-defined command \vec{x}
+%  must be redefined to provide bold-face vector
+%  characters as done below:
+
+% \renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+% \newcommand{\vecs}[1]{\ensuremath{\boldsymbol{#1}}}
+% \newcommand{\eye}{\ensuremath{\mathbf{i}}}
+% \newcommand{\jay}{\ensuremath{\mathbf{j}}}
+% \newcommand{\kay}{\ensuremath{\mathbf{k}}}
+
+% VECTOR-LABEL
+% THE  \vl{X} command PRODUCES A BRACKETTED-INDEX
+%  SUCH AS (a), (b), (A), (II),  ETC. 
+\newcommand{\vl}[1] {\ensuremath{ {({#1})}}\ }%
+
+%BRA, KET, BRAKET
+%\newcommand{\bra}[1]{\ensuremath{ \langle  {#1} | }}
+%\newcommand{\ket}[1]{\ensuremath{| #1\rangle}}
+%\newcommand{\braket}[2]{\ensuremath{  \langle {#1}|{#2}
+%\rangle }}
+
+%GROUP THEORY
+\newcommand{\grp}
+{\ensuremath{\boldsymbol{\mathcal{G}}}}
+
+
+%%%%%%%%%%%%%%%%%%%
+% % physics.sty package DERIVATIVES:   We don't use
+% % the   physics.sty package as it conflicts with the
+% % commath.sty  package that we use.
+%%%%%%%%%%%%%%%%%%%
+
+%% \dv{x} =d over  dx operator
+%% \dv{f}{x} =df over dx
+%% \dv{x}(text) =d over dx (text) Long form, automatic
+%% braces, spacing
+%% \dv*{f}{x} =df/dx    (df slash dx)
+%% \dv[n]{f}{x} =d^nf by dx^n (n-th derivative wrt x)
+%% \pdv{x} =dow over  dow x operator (partial derivative op)
+%% \pdv{f}{x} =dow f over  dow x  (partial derivative:over)
+%% \pdv*{f}{x} =dow f slash  dow x  (p-derivative: slash)
+%% \pdv[n]{f}{x} =dow^n f by dow x^n
+%% (n-th partial-derivative wrt x)
+%%\pdv{f}[x}  first-partial-derivative-fraction-form
+%% pdv{f}[x}{y}: mixed 2nd p-derivative
+%% of f(x,y) wrt x and y:
+%% \pdv{x}(text) =(dow over dow x) (text) Long form,
+%% automatic braces and spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%DERIVATIVES
+%%%%%%%%%%%%%%%%%%
+% Macros from the commath package
+
+% \dod{f}{x}=ordinary derivative of f wrt x--display style
+% \tod{f}{x}=ordinary der of f wrt x--text style
+% \dod[n]{f}{x}=nth-ordinary der of f wrt x--display style
+% \tod[n]{f}{x}=nth-ordinary der of f wrt x--display style
+% \dpd[n]{f}{x}=nth-partial  der  of f wrt x--display style
+% \tpd[n]{f}{x}=nth-partial  der  of f wrt x--text style
+% \dmd{f}{2}{x}{}{y}{}=2nd-mixed-partial  der  of f wrt
+%x and y --display style
+% \tmd{f}{2}{x}{}{y}{}=2nd-mixed-partial  der  of f wrt
+%x and y --text style
+% \dif =\dd
+% \Dif  F =DF
+%%%%%%%%%%%%%%%%%%
+%%DERIVATIVES, Macros redefined by me
+%%%%%%%%%%%%%%%%%%
+
+%operators \dd and \dow
+\newcommand{\dd}{{\ensuremath{\mathrm{d}}}}
+% \newcommand{\Dif}{{\ensuremath{\mathrm{D}}}}
+\newcommand{\dow}
+{{\ensuremath{\partial}}}
+
+%\ddv{f}{x} ordinary derivative-fraction-form (df over dx)
+\newcommand{\ddv}[2]%
+{\ensuremath{\frac{\dd{#1}}{\dd{#2}}}}%
+
+% Defns retained for compatibility with some
+% older tex-docs.
+\newcommand{\dv}{\ddv}%\dv{f}{x}
+\newcommand{\Der}{\ddv}%\Der{f}{x}
+
+
+%\sdv{f}{x} ordinary derivative-slash-form (df / dx)
+% within brackets
+\newcommand{\sdv}[2]%
+{\ensuremath{(\dd{#1} / \dd{#2})}}%
+%OLD: \Der{f}{x}
+
+%% \pdv{f}{x}: partial derivative \dow f over dow x
+\newcommand{\pdv}[2]%
+{\ensuremath{\frac{\dow{#1}}{\dow{#2}}}}%
+
+%OLD:\Pder{f}[x}
+
+%% \spdv{f}{x}: partial derivative
+%% slash-form, within brackets , (\dow f / dow x},
+\newcommand{\spdv}[2]%
+{\ensuremath{(\dow{#1}/\dow{#2})}}%
+
+%OLD: \pder{x}{x}
+
+
+%% \bdv{f}[x}: ordinary derivative-slash-form within
+%%  brackets (df/dx)
+\newcommand{\bdv}[2]%
+{\ensuremath{(\dd\nt{#1}/\dd{#2})}}%
+%OLD: \der{f}[x}=(df/dx):
+%%%%%%%%%%%
+
+%% \ldv{label}{f}{x}:
+%% labelled-ordinary-derivative--fraction form:
+%%   (Eg. d*f over dx)
+\newcommand{\ldv}[3]%
+{\ensuremath{\frac{\dd{{}^{#1}\nt{#2}}}{\dd {{#3}}}}}
+%OLD: \Lder{x}{×}{×}
+%\newcommand{\Lder}[3]{\ldv}
+%%%%%%%%%%%
+
+%% \lds{label}{f}{x}:  labelled-ordinary
+%% derivative--slash-form:    (Eg. d*f slash dx)
+\newcommand{\lds}[3]%
+{\ensuremath {(\dd^{#1}\nt{#2}/\dd {#3})}}%
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+% The \dfrac{}{} produces a fraction which is too big
+% compared to the fraction \frac{}{}. We don't
+% normally use  the  \dfrac{}{} or other macros built
+% from it.
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+%FIELD-THEORY
+\newcommand{\qam}{\ensuremath{q_{_{\gkq}} }}
+\newcommand{\lie}%
+{\ensuremath{\boldsymbol{\EuScript{L}}}}
+\newcommand{\qgr}[1]%
+{\ensuremath{q_{_{\gkq,{#1}}}}}
+\newcommand{\fgrad}[3]%
+{\ensuremath{{#1}_{{#2},{#3}}}}
+
+% FOUR-VECTORS
+\newcommand{\fv}[1]{ {\ensuremath{{\mathcal{#1}}} } }
+\newcommand{\fvec}[1]{{\ensuremath{ \underset{\raise .4ex%
+\hbox{\sim}}{#1}}}}
+
+
+%Leastcount
+\newcommand{\lc}[1]
+{\ensuremath{{\text{lc}({#1})}}}
+
+%CENTER-OF-MASS
+\newcommand{\CM}[1]
+{\ensuremath{{#1}_{\text{cm}}}}
+
+%MISC--ALPHABETICAL ABBREVIATIONS
+\newcommand{\BM}[1]{\ensuremath{\boldmath #1}}
+\newcommand{\bos}{\bsym}
+\newcommand{\bmsf}[1]{\ensuremath{\mathsf{\mathbf{#1}}}}
+
+%DEGREE CELCIUS
+\newcommand\Deg{\ensuremath{^\circ}}
+\newcommand{\degc}{\ensuremath{{}^{\circ}}\mathrm{C}}
+
+%ELECTRODYNAMICS
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\epso}{\ensuremath{\epsilon_0}}
+\newcommand{\muo}{\ensuremath{\mu_0}}
+
+%TENSORS, INDICES ETC. (Use tensind package instead of
+%these)
+
+%MINKOSKI-PRODUCT
+% \newcommand{\minp}{\hspace{-2pt}\raise .3ex \hbox{%
+% \ensuremath{\pmb{\cdot}}\hspace{-1pt}}}
+\newcommand{\minp}{\dotp}
+
+%TENSORS
+% MIXED TENSOR COMPONENT
+\newcommand{\mixt}[3]{\ensuremath{{\protect
+{#1}}^{#2}_{\,\; #3}}}
+
+% TENSOR (4-VECTOR)
+\newcommand{\tns}[1]
+{\ensuremath{\protect{\boldsymbol{\mathsf{#1}}}}}
+% \newcommand{\tns}[1]
+% {\ensuremath{\protect{\boldsymbol{\mathcal{#1}}}}}
+%usage $\tns{A}$
+
+% COLUMN-VECTOR of contra-components of a 4-VECTOR
+\newcommand{\tnsa}[1]
+{\ensuremath{\protect{{\mathcal{#1}}}}}
+%usage $\tnsa{A}$
+
+\newcommand{\fict}%
+{\ensuremath{\,\text{\tiny{fict}} }}
+
+\newcommand{\topstar}[1]%
+{\ensuremath{\overset{{\,\,\bst}}{#1}}}
+
+\newcommand{\Rdot}{\dotup{R}}
+
+\newcommand{\topset}[4]
+{\ensuremath{\overset{\kern #1em  \lower #2ex \hbox{#3}}
+{#4}}}
+
+% usage $\topset{-1.3}{.5}{\tiny +}
+%{\mixt{R}{pqr}{\;\;\;s}}$ %
+%usage  $\topset{-1.3}{0}{==}{\mixt{R}{pqr}{\;\;\;s}}$
+
+\newcommand{\mtud}[3]{{\ensuremath{{#1}^{#2}_{.\;#3}}}}
+\newcommand{\mtdu}[3]{{\ensuremath{{#1}_{#2\,.}^{\;\:#3}}}}
+\newcommand{\up}[1]{{\ensuremath{{}^{#1}}}}
+\newcommand{\upd}[1]%
+{{\ensuremath{{}_{.}^{#1}}}}%
+\newcommand{\dnd}[1]{{\ensuremath{{}^{}_{#1}}}}
+\newcommand{\dn}[1]{{\ensuremath{{}_{#1}}}}
+\newcommand{\ustar}{\topstar}
+
+% SECOND KIND CHRISTOFFEL-SYMBOL
+\newcommand{\brsymb}[2]{\ensuremath{%
+\left\{\hsn \begin{array}
+{c}{#1}\\{#2}\end{array}\hsn\right\}}}%
+
+% FIRST KIND CHRISTOFFEL-SYMBOL
+\newcommand{\sqsymb}[2]{\ensuremath{[{#1},\,{#2}]}}
+
+% %DOUBLE-SUFFIX, DOUBLE-CAPS-SUFFIX
+\newcommand{\sfx}[1]%
+{{\ensuremath{_{\hspace*{-1.5pt}{#1}}}}}%
+ \newcommand{\csfx}[1]%
+{{\ensuremath{_{\hspace*{-1.5pt}\textsc{#1} }}}}%
+
+%MATRICES
+%ARRAY ENVIRONMENTs WITH INBUILT PARANTHESES
+% The PARAY is an array with column-formatting arguments.
+% The array is set enclosed between parantheses
+% '(...)' of self-adjusting height:
+% Syntax: \begin{paray}{column-pos}{math-code}\end{paray}
+% We have also defined, similarly, the  baray, varay,
+% and Varay environments
+\newenvironment{paray}[1]{\left(\nnt
+\begin{array}{#1}}{\end{array}\nnt\right) }
+
+\newenvironment{baray}[1]{\left[\nnt
+\begin{array}{#1}}{\end{array}\nnt\right] }
+
+\newenvironment{varay}[1]{\left|\nnt
+\begin{array}{#1}}{\end{array}\nnt\right|}
+
+\newenvironment{Varay}[1]{\left|\left|\nnt
+\begin{array}{#1}}{\end{array}\nnt\right|\right|}
+
+\newenvironment{Baray}[1]{\left\{\nnt
+\begin{array}{#1}}{\end{array}\nnt\nnt\right\}}
+
+\newcommand{\ba}[1]{\left( \begin{array}{#1}}
+\newcommand{\ea}{\end{array}\right)}
+
+\newcommand{\bpa}[1]{\begin{paray}{#1}}
+\newcommand{\epa}{\end{paray}}
+
+\newcommand{\msf}[1]{{\ensuremath{{\mathsf{#1}}}}}
+%\newcommand{\mbb}[1]{{\ensuremath{{\mathbb{#1}}}}}
+%\newcommand{\mk}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\tr}[1]{\ensuremath{\text{tr}(#1)}}
+\newcommand{\dg}{{\ensuremath{\dagger}}}
+\newcommand{\wt}{\widetilde}
+\newcommand{\what}[1] {{\ensuremath{\widehat{#1}}}}
+\newcommand{\prm}{\prime}
+\newcommand{\de}[1]{\ensuremath{\text{det}(#1)}}
+
+\newcommand{\alx}{\ensuremath{\alpha_{1}}}
+\newcommand{\aly}{\ensuremath{\alpha_{2}}}
+\newcommand{\alz}{\ensuremath{\alpha_{3}}}
+\newcommand{\rht}{\ensuremath{\rho_{0}}}
+\newcommand{\rhx}{\ensuremath{\rho_{1}}}
+\newcommand{\rhy}{\ensuremath{\rho_{2}}}
+\newcommand{\rhz}{\ensuremath{\rho_{3}}}
+\newcommand{\nht}{\ensuremath{n_{0}}}
+
+
+
+%%%%%%%%%%%%%%%%
+%%END AVGMATH-NEW.STY
+%%%%%%%%%%%%%%%%
+
+%GREEK ALPHABETS
+% \newcommand{\gka}{\ensuremath{{\alpha}}}
+% \newcommand{\gkb}{\ensuremath{{\beta}}}
+% \newcommand{\gkc}{\ensuremath{{\chi}}}
+% \newcommand{\gkd}{\ensuremath{{\delta}}}
+% \newcommand{\gke}{\ensuremath{{\epsilon}}}
+% \newcommand{\gkf}{\ensuremath{{\varphi}}}
+% \newcommand{\gkg}{\ensuremath{{\gamma}}}
+% \newcommand{\gki}{\ensuremath{{\iota}}}
+% \newcommand{\gkk}{\ensuremath{{\kappa}}}
+% \newcommand{\gkl}{\ensuremath{{\lambda}}}
+% \newcommand{\gkm}{\ensuremath{{\mu}}}
+% \newcommand{\gkn}{\ensuremath{{\nu}}}
+% \newcommand{\gko}{\ensuremath{{\omicron}}}
+% \newcommand{\gkp}{\ensuremath{{\psi}}}
+% \newcommand{\gkq}{\ensuremath{{\theta}}}
+% \newcommand{\gkr}{\ensuremath{{\rho}}}
+% \newcommand{\gks}{\ensuremath{{\sigma}}}
+% \newcommand{\gkt}{\ensuremath{{\tau}}}
+% \newcommand{\gkv}{\ensuremath{{\upsilon}}}
+% \newcommand{\gkw}{\ensuremath{{\omega}}}
+% \newcommand{\gkx}{\ensuremath{{\xi}}}
+% \newcommand{\gky}{\ensuremath{{\eta}}}
+% \newcommand{\gkz}{\ensuremath{{\zeta}}}
+%
+% \newcommand{\gkD}{\ensuremath{{\Delta}}}
+% \newcommand{\gkF}{\ensuremath{{\phi}}}
+% \newcommand{\gkG}{\ensuremath{{\Gamma}}}
+% \newcommand{\gkL}{\ensuremath{{\Lambda}}}
+% \newcommand{\gkQ}{\ensuremath{{\Theta}}}
+% \newcommand{\gkS}{\ensuremath{{\Sigma}}}
+%
+% %PRIMED-GREEK ALPHABETS
+%
+% \newcommand{\gkap}{\ensuremath{{\alpha'}}}
+% \newcommand{\gkbp}{\ensuremath{{\beta'}}}
+% \newcommand{\gkcp}{\ensuremath{{\chi'}}}
+% \newcommand{\gkdp}{\ensuremath{{\delta'}}}
+% \newcommand{\gkep}{\ensuremath{{\eta'}}}
+% \newcommand{\gkfp}{\ensuremath{{\varphi'}}}
+% \newcommand{\gkgp}{\ensuremath{{\gamma'}}}
+% \newcommand{\gkip}{\ensuremath{{\iota'}}}
+% \newcommand{\gkkp}{\ensuremath{{\kappa'}}}
+% \newcommand{\gklp}{\ensuremath{{\lambda'}}}
+% \newcommand{\gkmp}{\ensuremath{{\mu'}}}
+% \newcommand{\gknp}{\ensuremath{{\nu'}}}
+% \newcommand{\gkop}{\ensuremath{{\omicron'}}}
+% \newcommand{\gkpp}{\ensuremath{{\varpsi'}}}
+% \newcommand{\gkqp}{\ensuremath{{\theta'}}}
+% \newcommand{\gkrp}{\ensuremath{{\rho'}}}
+% \newcommand{\gksp}{\ensuremath{{\sigma'}}}
+% \newcommand{\gktp}{\ensuremath{{\tau'}}}
+% \newcommand{\gkvp}{\ensuremath{{upsilon'}}}
+% \newcommand{\gkwp}{\ensuremath{{\omega'}}}
+% \newcommand{\gkxp}{\ensuremath{{\xi'}}}
+% \newcommand{\gkyp}{\ensuremath{{\eta'}}}
+% \newcommand{\gkzp}{\ensuremath{{\zeta'}}}
+%
+% %PRIMED-LATIN ALPHABETS
+%
+% \newcommand{\ltap}{\ensuremath{{a'}}}
+% \newcommand{\ltbp}{\ensuremath{{b'}}}
+% \newcommand{\ltcp}{\ensuremath{{c'}}}
+% \newcommand{\ltdp}{\ensuremath{{d'}}}
+% \newcommand{\ltep}{\ensuremath{{e'}}}
+% \newcommand{\ltfp}{\ensuremath{{f'}}}
+% \newcommand{\ltgp}{\ensuremath{{g'}}}
+% \newcommand{\lthp}{\ensuremath{{h'}}}
+% \newcommand{\ltip}{\ensuremath{{i'}}}
+% \newcommand{\ltjp}{\ensuremath{{j'}}}
+% \newcommand{\ltkp}{\ensuremath{{k'}}}
+% \newcommand{\ltlp}{\ensuremath{{l'}}}
+% \newcommand{\ltmp}{\ensuremath{{m'}}}
+% \newcommand{\ltnp}{\ensuremath{{n'}}}
+% \newcommand{\ltop}{\ensuremath{{o'}}}
+% \newcommand{\ltpp}{\ensuremath{{p'}}}
+% \newcommand{\ltqp}{\ensuremath{{q'}}}
+% \newcommand{\ltrp}{\ensuremath{{r'}}}
+% \newcommand{\ltsp}{\ensuremath{{s'}}}
+% \newcommand{\lttp}{\ensuremath{{t'}}}
+% \newcommand{\ltup}{\ensuremath{{u'}}}
+% \newcommand{\ltvp}{\ensuremath{{v'}}}
+% \newcommand{\ltwp}{\ensuremath{{w'}}}
+% \newcommand{\ltxp}{\ensuremath{{x'}}}
+% \newcommand{\ltyp}{\ensuremath{{y'}}}
+% \newcommand{\ltzp}{\ensuremath{{z'}}}
+%
+% %GREEK ALPHABETS--EARLIER VERSIONS
+% \newcommand{\ga}{\ensuremath{{\alpha}}}
+% \newcommand{\gb}{\ensuremath{{\beta}}}
+% \newcommand{\gd}{\ensuremath{{\delta}}}
+% \newcommand{\get}{\ensuremath{{\eta}}}
+% \newcommand{\gf}{\ensuremath{{\varphi}}}
+% \newcommand{\ggm}{\ensuremath{{\gamma}}}
+% \newcommand{\gk}{\ensuremath{{\kappa}}}
+% \newcommand{\gl}{\ensuremath{{\lambda}}}
+% \newcommand{\gm}{\ensuremath{{\mu}}}
+% \newcommand{\gn}{\ensuremath{{\nu}}}
+% \newcommand{\gp}{\ensuremath{{\varpsi}}}
+% \newcommand{\gr}{\ensuremath{{\rho}}}
+% \newcommand{\gs}{\ensuremath{{\sigma}}}
+% \newcommand{\gt}{\ensuremath{{\tau}}}
+% \newcommand{\gw}{\ensuremath{{\omega}}}
+% \newcommand{\gx}{\ensuremath{{\xi}}}
+% \newcommand{\gz}{\ensuremath{{\zeta}}}
+% \newcommand{\gq}{\ensuremath{{\theta}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
