@@ -1,7 +1,6 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{tfrupee}
-\usepackage{txfonts}
 \usepackage{rotating}
 \usepackage{xfrac}
 \usepackage{float}
@@ -11,12 +10,12 @@
 \usepackage{array}
 \usepackage{fancyhdr}
 \usepackage{imakeidx}
-%~ \usepackage[dvips,breaklinks]{hyperref}
+
 \usepackage{url}
 \usepackage{cite}
 \usepackage{chngcntr}
 \usepackage{multirow}
-\usepackage{slashbox}
+
 \usepackage{epsfig}
 \usepackage{soul}
 \usepackage{mathtools, nccmath}%this is reduce the equation space
@@ -29,38 +28,26 @@
 
 %~ authors packages
 \usepackage[utf8]{inputenc}
-\usepackage{titlesec}
 \usepackage{avggenlbk}
 \usepackage{avgmathlbk}
-\usepackage{sectsty}
 \usepackage{palatino}
 \usepackage[book]{ragged2e}
-\RaggedRight
 
-
-
-
-
-
-%~ \newtheorem*{prop*}{Proposition}
-%~ \newtheorem{thm}{Theorem}subs
-%~ \newtheorem*{remark}{\textit{Remark}}
-%~ \newtheorem{coro}{Corollary}
 
 \tikzset{>=latex}
 
 \numberwithin{equation}{chapter}
-%~ \renewcommand{\thesubsection}{\thesection 1.\arabic{subsection}}
+
 
 \allowdisplaybreaks
 
 \floatstyle{plain}
-%~ \floatplacement{Figure}{H}
+
 
 %%page settings for the book
 \usepackage[papersize={145mm,215mm},textwidth=100mm,
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
-leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
+leftmargin=22.5mm,rightmargin=22.5mm,footskip=0.6cm]{zwpagelayout}
 \usepackage[justification=centering]{caption}
 
 %%fancy header settings
@@ -80,8 +67,6 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \end{center}
 }
 \def\authbio#1{\centerline{{\large\sf\bf #1}}}
-%\lhead[\small\thepage\quad #1]{}}
-%\def\authoraffiliation#1{{~\hfill\fontsize{11}{13}\selectfont #1}}
 
 
 %%redefining macros
@@ -90,17 +75,10 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
 \renewcommand\chaptermark[1]{\markboth{\thechapter. #1}{}}
 \renewcommand\sectionmark[1]{}
 
-\rhead[\small Pursuit of Excellence]{\small\thepage}
+\rhead[\small The Physics and Geometry of The
+Lorentz Transformation]{\small\thepage}
 \lhead[\small\thepage]{\small\leftmark}
 
-%~ \renewcommand\frontmatter{%
-    %~ \cleardoublepage
-  %~ \@mainmatterfalse
-  %~ \pagenumbering{arabic}}
-%~ \renewcommand\mainmatter{%
-    %~ \cleardoublepage
-  %~ \@mainmattertrue
-%~ }
 
 \def\@makechapterhead#1{%
   \setcounter{equation}{0}
@@ -112,47 +90,23 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
   }}
 
 
-
-\renewcommand\thesection{\@arabic\c@section}
-\renewcommand\thesubsubsection{\@arabic\c@subsubsection}
-\renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
-
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
 \thispagestyle{empty}\hbox{\phantom{.}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \renewcommand*\seealso[2]{(\emph{\alsoname} #1)}
 
-\def\@xfootnote[#1]{%
-  \protected@xdef\@thefnmark{#1}%
-  \@footnotemark\@footnotetext}
-
 \makeatother
 
-\setcounter{secnumdepth}{4}
+
 \def\Break{\break }
 \def\passim#1{\textsl{passim}}
 
 \usepackage[font=footnotesize,format=plain,labelfont=normal,textfont=normal,justification=justified]{caption}
-%~ \usepackage[format=plain]{caption}
-%\DeclareCaptionFormat{empty}{#1}
-%~ \renewcommand*\figurename{Figure}
-%~ \renewcommand{\thefigure}{\arabic{figure}}
 \renewcommand{\bibname}{References}
 
 \DeclareMathOperator{\Iim}{\mathrm{Im}}
 
 
-%\makeatletter
-%\usepackage{etoolbox}
-%\newcounter{savedchapter}% for remembering the last chapter number
-%\preto\appendix{\setcounter{savedchapter}{\arabic{chapter}}}% remembering!
-%\newcommand\resumechapters{% the \appendix command with some tweaks
-%  \setcounter{chapter}{\arabic{savedchapter}}% restore chapter number
-%  \setcounter{section}{0}% reset section counter
-%  \gdef\@chapapp{\chaptername}% reset chapter name
-%  \gdef\thechapter{\@arabic\c@chapter}% make chapter numbers arabic
-%}
-%\makeatother
 
 \usepackage{bm}
 
@@ -220,7 +174,7 @@ leftmargin=27mm,rightmargin=18mm,footskip=0.6cm]{zwpagelayout}
     \Huge \bfseries  #1\par\nobreak
     \vskip 20\p@
   }}
-\c@secnumdepth=1
+
 
 \renewcommand\@dotsep{200}
 \makeatother

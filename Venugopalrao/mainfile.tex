@@ -8,9 +8,9 @@
 
 \frontmatter
 
-%~ \input src/titlepage
-%~ \newpage
-%~ \input src/copyright
+\input src/titlepage
+\newpage
+\input src/copyright
 
 %~ \newpage
 %~ ~\thispagestyle{empty}
@@ -18,33 +18,42 @@
 %~ \newpage
 %~ ~\thispagestyle{empty}
 
-%~ \newpage
+\newpage
 
-%~ \pagestyle{fancy}
-%~ \renewcommand{\headrulewidth}{0pt}
-%~ \cfoot[]{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot[]{}
 
-%~ \lhead[\small\thepage]{\small Foreword}
+\lhead[\small\thepage]{\small Foreword}
 %~ \input src/1_P_Venkataramaiah.tex
-%~ \clearpage
-%~ ~\thispagestyle{empty}
-%~ \newpage
-%~ \lhead[\small\thepage]{\small Contents}
-%~ \tableofcontents
+\clearpage
+~\thispagestyle{empty}
+\newpage
+\lhead[\small\thepage]{\small Contents}
+\tableofcontents
 %~ \newpage
 %~ ~\thispagestyle{empty}
 
 %~ \newpage
 %~ ~\thispagestyle{empty}
-%~ \label{prelims}
+\label{prelims}
 
 
 \mainmatter
 
 
-\renewcommand\figurename{Photo}
+\renewcommand\figurename{Figure}
 \lhead[\small\thepage]{\small\leftmark}
 \input src/001-chapter001
+\input src/002-chapter002
+\input src/003-chapter003
+\input src/004-chapter004
+\input src/005-chapter005
+\input src/006-chapter006
+\input src/007-chapter007
+\input src/008-chapter008
+\input src/009-chapter009
+
 %~ \counterwithout{equation}{chapter}
 %~ \renewcommand\figurename{Figure}
 %~ \input src/3_V_Devanathan.tex
@@ -86,5 +95,5 @@
 %~ \input src/36_GR_Family.tex
 %~ \input src/37_G_Ramachandran.tex
 %~ \input src/38_Acknowledgements.tex
-%~ \label{bookend}
+\label{bookend}
 \end{document}
