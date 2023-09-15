@@ -28,7 +28,6 @@
 \usepackage{mathtools, nccmath}%this is reduce the equation space
 \usepackage{xurl}
 \usepackage{endnotes}
-\usepackage{ragged2e}
 
 
 %~ \usepackage[utf8]{inputenc}
@@ -45,7 +44,7 @@
 
 \usepackage[papersize={210mm,280mm},textwidth=150mm,
 textheight=230mm,headheight=6mm,headsep=4mm,topmargin=15mm,botmargin=19mm,
-leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
+leftmargin=30mm,rightmargin=30mm,footskip=6mm,cropmarks]{zwpagelayout}
 
 \defaultfontfeatures{Ligatures=TeX}
 %~ \setdefaultlanguage{english} % (english)
@@ -72,8 +71,6 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
 
 
 
-
-
 \let\footnote=\endnote
 
 \renewcommand{\thefootnote}{\noindent}
@@ -94,8 +91,8 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
    {\large\bfseries{RESEARCH}}}}}
   \null
   \vskip 2em%
-  \begin{raggedright}%
-  %~ \chead[reacher]{}
+  \begin{center}%
+  \chead[reacher]{}
   \let \footnote \thanks
     {\LARGE \@title \par}%
     \vskip 1.5em%
@@ -106,7 +103,7 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
       \end{tabular}\par}%
     \vskip 1em%
     {\large \@date}%
-  \end{raggedright}%
+  \end{center}%
   \par
   \vskip 1.5em}
 
@@ -145,8 +142,6 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
     %~ \global\let\and\relax
   %~ }
 
-
-
 \makeatother
 
 \fancyhead[LE]{{\it Dialogue - Science, Scientists, and Society (2023) }}
@@ -184,12 +179,13 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
 
 \renewcommand{\thefootnote}{\noindent}
 
-\renewcommand\theparagraph{\thesubsubsection.\@ {\fontsize{12}{14}\selectfont Linux Libertine O}\c@paragraph}
-
 \begin{document}
   
   
-{\begin{titlepage}
+  %~ 
+  
+  
+\begin{titlepage}
    \begin{center}
    {\fontsize{14}{16}\selectfont
    {\large\textbf{RESEARCH}}}
@@ -199,7 +195,9 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
        {\LARGE People’s Science Movement and the Missing People: Save\\ Silent Valley Movement and the Scientisation of\\[0.2cm] Environmental Debates in Kerala}
 }
        \vspace{0.7cm}
-                
+        
+            
+       %~ \vspace{1.5cm}
 {\fontsize{14}{16}\selectfont
        {\large RANJITH KALLYANI$^{1}$~~ and~~ N C NARAYANAN$^{2}$}}
 
@@ -220,19 +218,27 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
 		
 		
 		}
+       
+            
+       %~ \vspace{7cm}
      
      \vfill
-       \includegraphics{image/001.jpg}           
+       \includegraphics{image/001.jpg}
+            
+       %~ Department Name\\
+       %~ University Name\\
+       %~ Country\\
+       %~ Date
             
    \end{center}
-\end{titlepage}}
+\end{titlepage}
 
 % \tableofcontents
 
 
 \maketitle
   
-%~ \chead[]{}{}
+\chead[]{}{}
 
 
 \noindent
@@ -241,7 +247,7 @@ leftmargin=30mm,rightmargin=30mm,footskip=6mm]{zwpagelayout}
 
 \vspace{-.5cm}
 
-%~ {\fontsize{14}{16}\selectfont
+{\fontsize{14}{16}\selectfont
 $^{1}$Department of Humanities and Social Sciences, Jaypee University of Information Technology, Waknaghat, Himachal Pradesh, India.
        
 $^{2}$Ashank Desai Centre for Policy Studies, Indian Institute of Technology Bombay, Mumbai, India.
@@ -261,7 +267,7 @@ Corresponding Editor: DHRUV RAINA
 
 DOI~:
 
-%~ }
+}
 %~ \end{center}
 \noindent\rule{\textwidth}{0.2mm}
 
@@ -272,24 +278,22 @@ DOI~:
 {\fontsize{18}{20}\selectfont \section*{Abstract}}
 
 \vspace{-.4cm}
-
-\justifying{{\fontsize{12}{14}\selectfont Though primarily understood as New Social Movements, People’s Science Movements (PSM) in India are also a favourite theme for Science and Technology Studies (STS) scholars. Kerala Sastra Sahitya Parishad (KSSP) is often projected as a pioneering reference point for studying PSMs. KSSP also figures in Environmental Social Sciences discussions because of its active involvement in the Save Silent Valley Movement (SSVM), one of India's successful anti-damenvironmental movements. While KSSP was foregrounded to abstract some attributes of PSMs by STS scholars, SSVM was one of the environmental movements epitomised to develop explanations on Indian Environmentalism. While agreeing with the PSM’s attributes conferred on KSSP, this paper questions the extent of SSVM’s commonalities with other environmental movements in the debates on Indian Environmentalism. 
+{\renewcommand\theparagraph    {\thesubsubsection.\@Linux Libertine\c@paragraph}}
+{\fontsize{12}{14}\selectfont Though primarily understood as New Social Movements, People’s Science Movements (PSM) in India are also a favourite theme for Science and Technology Studies (STS) scholars. Kerala Sastra Sahitya Parishad (KSSP) is often projected as a pioneering reference point for studying PSMs. KSSP also figures in Environmental Social Sciences discussions because of its active involvement in the Save Silent Valley Movement (SSVM), one of India's successful anti-damenvironmental movements. While KSSP was foregrounded to abstract some attributes of PSMs by STS scholars, SSVM was one of the environmental movements epitomised to develop explanations on Indian Environmentalism. While agreeing with the PSM’s attributes conferred on KSSP, this paper questions the extent of SSVM’s commonalities with other environmental movements in the debates on Indian Environmentalism. 
 
 \vspace{.2cm}
 
-{\bfseries Keywords:} Scientism; Indian Environmentalism; People’s Science; Environmental Movement; Kerala Sastra Sahitya Parishad; Save Silent Valley Movement}}
+{\bfseries Keywords:} Scientism; Indian Environmentalism; People’s Science; Environmental Movement; Kerala Sastra Sahitya Parishad; Save Silent Valley Movement}
 
 %~ \vspace{-.2cm}
-
-\newpage
 
 {\fontsize{18}{20}\selectfont\section*{Introduction}}
 
 \vspace{-.3cm}
 
-{\fontsize{12}{14}\selectfont Quite often understood as an exemplar of a People’s Science Movement (PSM) \break(\underline{Jaffry et al., 1983}), the Kerala Sastra Sahitya Parishad (KSSP) has been an important subject to many scholars with development concerns. It has been praised for using science as a weapon in its fights against feudalism (\underline{Isaac et al., 1997}), in promoting secularism (\underline{Kannan, 1990}), and in catering to sustainable development (\underline{Isaac et al., 1997}). Apart from these, the KSSP stands tall in two other strands of social science scholarships: Science and Technology Studies (STS) and Environmental Social Sciences. While it is a vibrant people’s science movement for the former, it is a case of interest for its active involvement in Save Silent Valley Movement\endnote{{\fontsize{8}{10}\selectfont Silent Valley is a reserve forest spread across both sides of the Kunthi River, which is a tributary of the Bharathappuzha River in Palakkad District, Kerala. The Kerala State Electricity Board (hereafter, KSEB) found it appropriate to launch a hydroelectric project in the central part of Silent Valley in 1970, installing four units of 60 MW each. The KSEB held the strong contention that the state’s electricity requirements would not be met without this additional power. Furthermore, the project aspired to generate irrigation water for an additional 100 sq. km in two backward districts in northern Kerala. KSEB also highlighted the employment opportunities that the project was likely to generate during its construction and its potential to boost the economy of the State. But this proposal invited huge opposition from various groups in Kerala, citing the immense ecological damage to the evergreen forest ecosystem of the Silent Valley. Many scientists, ecologists, and social activists stood against the project. At the same time, many other scientists and trade unionists stood with KSEB and argued for the project. A heated debate between these two groups could be considered the first set of environmental discussions in Kerala, which, in turn, helped formulate environmentalism sensibility.}} (SSVM), one of the successful anti-dam movements in India (\underline{Guha, 1988; Baviskar, 2014}), for the latter.}
+{\fontsize{12}{14}\selectfont Quite often understood as an exemplar of a People’s Science Movement (PSM) (\underline{Jaffry et al., 1983}), the Kerala Sastra Sahitya Parishad (KSSP) has been an important subject to many scholars with development concerns. It has been praised for using science as a weapon in its fights against feudalism (\underline{Isaac et al., 1997}), in promoting secularism (\underline{Kannan, 1990}), and in catering to sustainable development (\underline{Isaac et al., 1997}). Apart from these, the KSSP stands tall in two other strands of social science scholarships: Science and Technology Studies (STS) and Environmental Social Sciences. While it is a vibrant people’s science movement for the former, it is a case of interest for its active involvement in Save Silent Valley Movement\endnote{{\fontsize{8}{10}\selectfont Silent Valley is a reserve forest spread across both sides of the Kunthi River, which is a tributary of the Bharathappuzha River in Palakkad District, Kerala. The Kerala State Electricity Board (hereafter, KSEB) found it appropriate to launch a hydroelectric project in the central part of Silent Valley in 1970, installing four units of 60 MW each. The KSEB held the strong contention that the state’s electricity requirements would not be met without this additional power. Furthermore, the project aspired to generate irrigation water for an additional 100 sq. km in two backward districts in northern Kerala. KSEB also highlighted the employment opportunities that the project was likely to generate during its construction and its potential to boost the economy of the State. But this proposal invited huge opposition from various groups in Kerala, citing the immense ecological damage to the evergreen forest ecosystem of the Silent Valley. Many scientists, ecologists, and social activists stood against the project. At the same time, many other scientists and trade unionists stood with KSEB and argued for the project. A heated debate between these two groups could be considered the first set of environmental discussions in Kerala, which, in turn, helped formulate environmentalism sensibility.}} (SSVM), one of the successful anti-dam movements in India (\underline{Guha, 1988; Baviskar, 2014}), for the latter.}
 
-
+\newpage
 {\fontsize{12}{14}\selectfont Through a brief survey of both these sets of literature and their positioning of KSSP, this paper explores some of the specific characteristics of KSSP that make it different from other environmental movements in India, especially within the discussions on Indian Environmentalism.\endnote{{\fontsize{8}{10}\selectfont By Indian Environmentalism, the paper doesn’t refer to environmentalism in India. The phrase here is used to denote a different theoretical formation that talks about a variety of environmentalism in India which is significantly different from its Global Northern counterparts. According to the relevant scholarship, the major environmental movements in India show the characteristics of Indian Environmentalism. In this paper, the phrase “Environmental Movements in India” is used on occasions where the empirical aspect of the movements is referred and “Indian Environmentalism” when the political philosophy of the movements is referred to.}} For instance, a major characteristic of environmental movements in India is their focus on the “environmentalism of the poor”, especially through their engagement with the questions of social, spatial, and environmental justice (\underline{Gadgil and Guha, 1995}). Similarly, a prominent notion of PSMs in India is about their roles in critiquing the way science \& technology is performed “in furthering the goals of social and redistributive justice for the marginalised people and communities” (Venkateswaran, 2020:3). The Save Silent Valley Movement in Kerala was slightly different from these in terms of the questions it raised, the method of protest and the motivations of the people involved. Unlike Chipko in the Himalayas, Appikoin Karnataka, Narmada Bachao Andolan in Central India, or any other major environmental movement in India, the Save Silent Valley Movement was not initiated by an affected community. It was a struggle initiated by one of India’s oldest People’s Science Movements — the Kerala Sastra Sahitya Parishad. The very idea of environment\endnote{{\fontsize{8}{10}\selectfont The Malayalam equivalent of this word is ‘Paristhithi’. In the interviews with some of the leaders of the movement, such as Satishchandran Nair, Anita, and Latha Ananda that we conducted in December 2016, the respondents discussed the struggle they had faced in introducing this new word “paristhithi” and how people always used to confuse it with the word ‘parithasthithi’, which refers to ‘situation’ or ‘surroundings’}} and a vernacular coinage of the term was introduced and popularised in Kerala by this PSM. A new imagination and a new sensibility got introduced to people’s everyday language, the credit for which goes mainly to KSSP. Thus, the movement was pertinent in imparting environmental education to the masses.}
 
 {\fontsize{12}{14}\selectfont However, this paper raises the question of whether KSSP’s model of environmentalism marks a major divergence from what has been identified as Indian Environmentalism by pioneering scholars. The paper puts forth three novel assumptions that have not been discussed in earlier scholarship. Firstly, it is not by an ecosystem people\endnote{{\fontsize{8}{10}\selectfont Ecosystem people, according to Guha and Gadgil (1995), are those people who depend on the natural environment of their own locality to meet most of their material needs. Guha and Gadgil guesstimate that four-fifths of India’s rural population and half of its total population belong to this category of Ecosystem People.}} (\underline{Gadgil and Guha, 1995}) but by a group of scientists that the Silent Valley has been identified as an environmental issue. Secondly, the motivation for the environmental issue originated primarily from an aspiration to be environmentally concerned scientists than from any locally situated trepidations associated with environmental justice. Thirdly, a politically mobilised ecosystem people are missing in the debates on environmental conservations in the Western Ghats regions of Kerala. Unlike other major environmental movements in India, the environmental question in Silent Valley did not come from people’s experiences laden with rights and social justice questions. In Silent Valley’s case, the environment was presented as a question of science. KSSP, being a People’s Science Movement, articulated it in the language of science.}
@@ -298,7 +302,7 @@ DOI~:
 
 {\fontsize{12}{14}\selectfont This paper argues that this particular experience of environmentalism was formed more as a scientistic environmentalism\endnote{{\fontsize{8}{10}\selectfont What we mean by Scientistic Environmentalism is that a major player in the environmentalism discourse turning to be different manifestations of science. This can be academic science, scientific temper, people’s science, science-related populism, etc. It can be in terms of the scientists and science communicators}} than as something that evolved from people’s everyday experiences. With the advantage of hindsight, we argue that this kind of environmentalism failed to recognise and acknowledge the human-nature relationships, claims of people, and collective ownership of communities over resources, and thus address questions of environmental justice as depicted in the Indian environmental debates post-nineties that linked such questions. Both the scholarly works on SSVM, Indian Environmentalism, and PSM, as well as publicly available literature written by the activists and scientists of KSSP have been used in this paper. Interviews conducted by the authors with a few environmentalists in Kerala are also used as a source of data.}
 
-%~ \vspace{-.8cm}
+\vspace{-.8cm}
 
 {\fontsize{18}{20}\selectfont\section*{PSMs and Indian Environmentalism: A Brief Mapping}}
 
@@ -310,7 +314,7 @@ DOI~:
 
 {\fontsize{18}{20}\selectfont\section*{\textit{People’s Science Movements}}}
 
-\vspace{-.4cm}
+\vspace{-.3cm}
 
 {\fontsize{12}{14}\selectfont PSM is an umbrella term used to refer to a number of organisations or movements, predominantly grassroots groups of different sizes, coming from different ideological positions and working in a series of areas in a variety of ways (\underline{Varma, 2001}). With few elements of commonality, the prominent trait among them is their focus on issues of science (S) and technology (T) in society. Though primarily understood as social movements, PSMs are a debated theme in the scholarship of Science, Technology, and Society Studies (STS) too. For instance, Dhruv Raina projects its importance in the context of science being driven by economic aspirations. PSMs can bear different kinds of roles, starting from simply popularising scientific knowledge and the world view of science in a language and cultural form that is connected with the targeted audience, invoking a social critic among them and to provide S \& T inputs on vital issues that affect human lives (\underline{Raina, 1990}). 
 
@@ -322,9 +326,9 @@ For Raina, many of the old PSMs in India take a lot more responsibilities than s
 
 This paper also endorses the opinion that KSSP as a PSM has a developmentalist approach. Kerala’s development experience to critics has exclusionary tendencies too. Despite the high social and human development, the Tribal and Fisher Communities were identified as the ‘outliers’ marginalised from the mainstream tendencies of social development of the celebrated Kerala Model (\underline{Kurien, 1995}). Omvedt adds Dalits to the list, indicating that 77 per cent of them in agriculture are landless (\underline{Omvedt, 1998}). This paper, however, is not about the KSSP as a PSM but as an organiser of an environmental movement, particularly its roles in Save Silent Valley Movement. This paper has the view that, as an environmental movement, KSSP marks a significant divergence from the characteristics of major environmental movements in India that have been marked as Indian Environmentalism, details of which is discussed in the next section.} 
 
-%~ \newpage
+\newpage
 
-\vspace{.2cm}
+%~ \vspace{-.8cm}
 
 {\fontsize{18}{20}\selectfont\section*{Indian Environmentalism}}
 
@@ -341,7 +345,7 @@ The distinctive character of Indian Environmentalism is identified as “an ecol
 
 %~ \vspace{.2cm}
 
-%~ \newpage
+\newpage
 
 {\fontsize{18}{20}\selectfont\section*{PSMs and Indian Environmentalism}}
 
@@ -366,15 +370,13 @@ Another common ground is the Marxist inspiration behind the two. It is an agreed
 
 {\fontsize{12}{14}\selectfont It is crucial to remember a few important milestones that led to the evolution of the present KSSP and political developments that changed the characteristic of the organisation from that of a closed and less socially oriented educator to a PSM with support from the masses. A group called \textit{Sastra Sahitya Samiti}\endnote{To trace the history of organised collective efforts to popularise science in Kerala, we must examine the history of the Sastra Sahitya Samithi (Science Literary Forum) formed in 1957. They were a group of science writers and activists who had gathered as part of a traditional arts festival at Ottappalam High School in the Palakkad District. The executive committee of the Samiti was as follows: P. K. Korumaster (President), P. T. Bhaskara Panicker (Vice President), and O. P. Namboothiripad (secretary) (Krishnakumar, 1977).} was formed in 1957 to promote science writing and make science more accessible to the local people. This necessitated and resulted in the translation of several science writings from English to Malayalam. By the next year, the group started publishing science articles from multiple disciplines across the sciences in their trimonthly titled \textit{Adhunika Sastram}.\endnote{{\fontsize{8}{10}\selectfont Vernacular Meaning: Modern Science}} Although the first edition also turned out to be the last, the idea of bringing science to the people of Kerala lived on and became institutionalised in one of the most influential, successful, and biggest movements still active in Kerala today (\underline{Krishnakumar, 1977}). 
 
-\newpage
-
 In April 1962, 10 to 15 people gathered in Kozhikode with a motive to promote and popularise science in Kerala under the leadership of KG Adiyodi,\endnote{Dr. KG Adiyodi was a scientist and science- writer from Kerala. His major research area was in invertebrate reproductive physiology. He was one of the founding members of the International Society of Invertebrate Reproduction} and in four months, the KSSP was formed. The major aim of the organisation was to popularise science beyond the borders of the scientific community and bring it to school classrooms and the general public in the Malayalam language. However, during the initial years, the organisation and membership were offered to only scientists or intellectuals from Kerala. This tendency has changed over time. By 1965, membership was expanded and opened to all the next year. The organisation grew exponentially during this year due to the decision to open membership to the public, from approximately 50 members in 1966 to 120 members in 1967, with many units in Kerala and a few units in Bangalore and Calcutta (\underline{Swain, 2016}). 
 
 During the emergency period of 1975 to 1977, many banned political outfits found their way into KSSP as they found the organisation a safe non-political space for their activities (\underline{Swain, 2016}). This has contributed to increasing the membership and changing the organisation's agenda towards more socially committed activities. Many of the first-generation leaders withdrew with the changing character of the organisation from an elite science movement to a mass organisation. The change in the nature of the organisation was reflected in the shift in its activities from small group discussions and publications to those involving the mass promotion of science through camps and classes (\underline{Zachariah, 1989}).
 
 Though that is the case, there are instances where Silent Valley has been added to the other set of movements in India, and all the characteristics of Indian Environmentalism are attributed to it without enough contemplation. For example, there is a suggestion that “ever since the Silent Valley environmental protection movement, India has been witnessing a growth in the number of environmental protection movements such as Chipko Movement in Uttar Pradesh, Appiko Movement in Karnataka, Narmada Bachao Andolan in Central India, Gandhamardhan Movement in Orissa, etc. A close look at the evolution of these movements suggests the following: i) there is a link between the livelihoods of the people and their participation in the movement, and ii) the participation of local people plays a major role in the success of the movement” (\underline{Sahu, 2007: 2}). Though Sahu’s claims to the link between livelihood and people’s participation are true in the case of the other movements mentioned, it is not so in the case of Silent Valley.}
 
-\vspace{-.3cm}
+\vspace{.2cm}
 
 {\fontsize{18}{20}\selectfont\section*{KSSP and Indian Environmentalism: Meeting Points}}
 
@@ -383,7 +385,7 @@ Though that is the case, there are instances where Silent Valley has been added 
 {\fontsize{12}{14}\selectfont
 It is important to mention here that there were two other environmental movements, which shared the characteristics of Indian Environmentalism, that had arisen at the same time as the SSVM. Interestingly, KSSP was involved in those movements too. Both the movements were against industrial pollution- one in the industrial areas of Aluva and Kalamasseri in Ernakulam District and the other against water pollution by the Gwalior Rayons factory at Mavoor, in the Chaliyar river basin in Calicut District. The pollution in the industrial areas of Aluva and Kalamasseri was one of the first ecological issues taken up by KSSP. Even before KSSP intervened in 1974, protests were initiated by the area’s residents. In 1972, Kunjappan, a leader of CPI (ML), led a protest march. An anti-pollution activist working in the area, Purushan Eloor, alleges that though KSSP had adequate resources, its role in the movement was negligible. Another scientist, VT Padmanabhan, conducted a comprehensive study about pollution in 1985 (Purushan Eloor, personal communication, 2 April 2017). Though KSSP is often identified as the one that spearheaded the successful Save Silent Valley Movement, it is curious that this first environmental issue that KSSP took up has not been successful even now.
 
-The other movement against water pollution by the Gwalior Rayons factory at Mavoor, in the Chaliyar river basin, was successful as the factory was closed down due to the movement. In Mavoor, too, KSSP’s intervention came after a series of spontaneous protests by the local people. A team of experts conducted a detailed study in collaboration with professional organisations of the region. This team submitted its report to KSSP in May 1979, which was released on 21 June, 1979 (\underline{Radhakrishnan and Koottummel, 2017;} \underline{Nambeesan, 2017}). Nevertheless, it is not to be forgotten that there had initially been a huge uprising by the people of that area.\endnote{{\fontsize{8}{10}\selectfont This movement, led by the residents of the River Chaliyar of Northern Kerala basin against the industrial pollution of the Gwalior Rayons Factory at Mavoor, Kozhikode, has not been studied sufficiently except by a few works like that of Seethi (2001). However, the memories of this movement, including its iconic leadership of K A Rahman have been preserved at the local level through various means such as publishing souvenirs, observing public memorials, publishing newspaper and magazine articles, and others.}} It is difficult to blame KSSP’s environmentalism as solely scientistic. We raise this criticism only in the Save Silent Valley Movement since it is the most celebrated and analysed in the discussions on Indian Environmentalism. }
+The other movement against water pollution by the Gwalior Rayons factory at Mavoor, in the Chaliyar river basin, was successful as the factory was closed down due to the movement. In Mavoor, too, KSSP’s intervention came after a series of spontaneous protests by the local people. A team of experts conducted a detailed study in collaboration with professional organisations of the region. This team submitted its report to KSSP in May 1979, which was released on 21 June, 1979 (\underline{Radhakrishnan and Koottummel, 2017; Nambeesan, 2017}). Nevertheless, it is not to be forgotten that there had initially been a huge uprising by the people of that area.\endnote{{\fontsize{8}{10}\selectfont This movement, led by the residents of the River Chaliyar of Northern Kerala basin against the industrial pollution of the Gwalior Rayons Factory at Mavoor, Kozhikode, has not been studied sufficiently except by a few works like that of Seethi (2001). However, the memories of this movement, including its iconic leadership of K A Rahman have been preserved at the local level through various means such as publishing souvenirs, observing public memorials, publishing newspaper and magazine articles, and others.}} It is difficult to blame KSSP’s environmentalism as solely scientistic. We raise this criticism only in the Save Silent Valley Movement since it is the most celebrated and analysed in the discussions on Indian Environmentalism. }
 
 \vspace{.2cm}
 
@@ -403,7 +405,7 @@ KSSP has perspectives on issues on the environment from its involvement in the m
 {\fontsize{12}{14}\selectfont
 The environmental concerns of KSSP did not stem from any sites of environmental conflict but from the larger environmental concerns formed internationally. We may understand the aspiration of scientists to be cosmopolitan in terms of their interest in the environment. After imbibing those ideas from the science community from the rest of the world, they started looking at Kerala and picked up issues of environmental significance. Though the publishing of Silent Spring hugely influenced the environmental consciousness of people worldwide, it took some time for that momentum to reach the KSSP members. According to M P Parameswaran, the Stockholm Conference of WCED in 1972 influenced many of the members of KSSP. Motivated by the WCED, some of the leading members, such as M K Prasad, UK Gopalan, and P Menon, under the banner of another organisation Cochin Science Society, called for a meeting in 1974. The meeting passed a resolution that India should enact a law for environmental conservation (\underline{Parameswaran, 2015}). The international inspiration behind forming an environmental agenda is not fundamentally flawed. It only indicates the plausible reason for KSSP’s evasion of social and environmental justice questions. It is also worth mentioning here that the movement received good international attention, too.\endnote{{\fontsize{8}{10}\selectfont The movement got significant national and international attention in the late 1970s. The General Assembly of the IUCN urged the Government of India to conserve the undisturbed forest area. People like Salim Ali, Madhav Gadgil, MS Swaminathan, etc., wrote that the project is short-sighted and has limited objectives. Institutions like the BNHS and Geological Survey of India requested that the area be declared a Natural Bioreserve. But unfortunately, the then Prime Minister Morarji Desai rejected all the appeals and recommended that the proposal begins without delay.}}
 
-%~ \newpage
+\newpage
 
 KSSP started understanding the new environmental awareness formed at the international level, then started studies on ecological issues and their consequences in society and initiated actions based on the learning. Silent Valley is the first forest conservation activity taken up by the KSSP (\underline{Radhakrishnan and Koottummel, 2010}) inspired by international debates. However, the science’s way of environmentalism underwent drastic changes internationally as movements against ecological racism based on environmental justice intensified (\underline{Rudy and Konefal, 2007}). Unfortunately, KSSP's institutional learning of environmentalism has not benefited much from these international developments.} 
 
@@ -417,7 +419,7 @@ In the third workers’ camp held at Kalady in Cochin in May, 1977, an intereste
 
 \vspace{-.5cm}
 
-{\fontsize{18}{20}\selectfont\section*{Divergence of the Save Silent Valley Movement\\ from Indian Environmentalism}}
+{\fontsize{18}{20}\selectfont\section*{Divergence of the Save Silent Valley Movement from Indian Environmentalism}}
 
 \vspace{-.3cm}
 
@@ -432,9 +434,7 @@ The well-known ecologist Madhav Gadgil also had a similar opinion about the Save
 
 To conclude this discussion, this study does not undermine the contributions of the supporters of the movement, such as the poets, writers, schoolteachers, students and so on. The literary works of poets like Sugathakumari hugely contributed to popularising the movement. However, the lead role was taken by the scientists. Here we do not believe that scientists should not play a role. The major issue we are concerned about is the absence of the political mobilisation of an ecosystem community that would have later spoken on behalf of their rights and the environment.
 
-Similarly, in the more recent debates on the Western Ghats Ecology Expert Panel\break (WGEEP) and High-level Working Group on the Western Ghats (HLWG)\endnote{{\fontsize{8}{10}\selectfont These are two committees constituted by the Ministry of Environment and the Forest Government of India in the early years of the last decade. Though the environmentalists welcomed their reports, it was deadly opposed by various groups citing developmental concerns. }} reports by the two expert committees on the Western Ghats have also left the discussions to a group mostly from outside the Western Ghats. The environmental issues, in short, were regarded as the exclusive concerns of a few scientists and environmentalists. The issue is not only the absence of the involvement of people in talking for the environment but also of a section of local elites, particularly with economic interests in plantations, resorts, quarrying, etc., coming out and boldly talking against the interests of the environment. This debate, complicated further due to the interplay of various vested interests and mobilisation of the masses, is beyond the scope of this paper. We do not undermine the demands from some of the Dalit and Adivasi groups to implement WGEEP reports, however small they were compared to the ones from the opposite camps. This weaker representation of an affected community articulating environmental conservation as in other environmental movements in India is the major issue.
-
-\newpage
+Similarly, in the more recent debates on the Western Ghats Ecology Expert Panel (WGEEP) and High-level Working Group on the Western Ghats (HLWG)\endnote{{\fontsize{8}{10}\selectfont These are two committees constituted by the Ministry of Environment and the Forest Government of India in the early years of the last decade. Though the environmentalists welcomed their reports, it was deadly opposed by various groups citing developmental concerns. }} reports by the two expert committees on the Western Ghats have also left the discussions to a group mostly from outside the Western Ghats. The environmental issues, in short, were regarded as the exclusive concerns of a few scientists and environmentalists. The issue is not only the absence of the involvement of people in talking for the environment but also of a section of local elites, particularly with economic interests in plantations, resorts, quarrying, etc., coming out and boldly talking against the interests of the environment. This debate, complicated further due to the interplay of various vested interests and mobilisation of the masses, is beyond the scope of this paper. We do not undermine the demands from some of the Dalit and Adivasi groups to implement WGEEP reports, however small they were compared to the ones from the opposite camps. This weaker representation of an affected community articulating environmental conservation as in other environmental movements in India is the major issue.
 
 In light of this discussion, let us examine one debate in Indian environmentalism that discussed the character of KSSP. Guha (1988) describes three ideological strands in Indian Environmentalism, and the second strand, “Ecological Marxists” is explicated using the People’s Science Movement of Kerala, with KSSP as an example. For him, the relatively greater emphasis on confrontational movements is a distinguishable characteristic of this strand, and political action for systematic economic change prior to the ecological change is a necessary step for this. According to Guha, this strand, termed ‘Ecological Marxists’ is the most eclectic one. Here one reaches Environmentalism only after a protracted engagement with conventional political philosophies, notably Marxism. To quote him, “while including elements of the Naxalite movement and radical Christian groups, \textit{Ecological Marxists} are perhaps most closely identified with the People’s Science Movements (for example, the Kerala Sastra Sahitya Parishad), whose initial concern with ‘taking science to the people’ has widened to include environmental protection” (\underline{Guha, 1988: 2580}). Baviskar, with a different understanding than Guha, points out that the Save Silent Valley campaign is an example of elite environmentalism (\underline{Baviskar, 2014}). In her understanding, environmentalists fall into two categories - one is the wildlife enthusiasts whose interest in the environment comes from their previous generation’s hunting legacy and their photography interests. The other section comprises the people who are part of the scientific establishments “who had privileged access to Indira Gandhi” (\underline{Baviskar, 2014: 45}). We brought these perspectives on Indian environmentalism since both directly addressed SSVM from two contradictory viewpoints. Engagement with this debate is beyond the scope of the paper. Instead, we will look at the crux of this debate – social and environmental justice- in the next section.
 Unlike what we have seen in the context of Indian Environmentalism, the question of distributive justice is missing in the discourse of the SSVM. Here, the environment has been understood not as a “landscape of resistance” (\underline{Baviskar, 2006}) but as a landscape with ecological significance and biodiversity.}
@@ -461,7 +461,7 @@ One may argue that there were no people residing in the Silent Valley area, and 
 {\fontsize{12}{14}\selectfont The questions of social and environmental justice have not been addressed in the discourse of environmental conservation in the Western Ghats in the fifty years of environmentalism. Social and political movements occur across the Western Ghats in Kerala, where people of subaltern backgrounds fight for ownership over resources such as land, water, forest, etc. (\underline{Bijoy and Raman, 2003; Rammohan, 2008}). A quick annotation on the dominant nature of KSSP’s science popularisation points immediately to the social location of the scientists, who were predominantly upper-caste, heterosexual men.\endnote{{\fontsize{8}{10}\selectfont It is worth mentioning here about a website https://www.namboothiri.com/an online platform with several seriously written notes about Namboothiris, the predominant Brahmin community of Kerala. It has a special page dedicated to “Namboothiris in the Mainstream of Science Popularisation”. The website claims that many prime scientists who tried to popularise science in Kerala, either by being part of the KSSP or in other ways, were Namboothiris. A brief biographical note of KSSP members such as O. P Nambudiripad, M. C. Nambudiripad, V M N Nambudiripad, and M P Parameswaran was also given on the website, which portrays them as “Namboothiri Scientists” Although this paper won’t definitely accuse these scientists as casteist, the website is a clear indication of how such claims are being raised by vested interests.} } As it is not the scope of this paper, we are not analysing in detail here the ways in which the people’s science turned out to be a science of the socially dominant sections. However, one should remember that ‘caste’, the most significant factor of social organisation and stratification in India, is not part of the list of KSSP’s areas of interest, although ‘gender’ is an important area. Moreover, questions of neither caste nor gender were taken to the environmental debates. }
 
 
-\vspace{-.7cm}
+\vspace{-.6cm}
 
 {\fontsize{18}{20}\selectfont\section*{Concluding Observations}}
 
@@ -478,7 +478,7 @@ SSVM was a successful movement in resisting the dam proposal and getting the pro
 {\fontsize{12}{14}\selectfont We thank Professor Sarmistha Pattanaik and Gautam Ganapathy for their comments and support. We thank Aparna Rajan for her comments and copy editing of the paper. We also thank the anonymous reviewer for the valuable comments.}
 
 
-\vspace{-.5cm}
+\vspace{-.2cm}
 {\fontsize{12}{14}\selectfont
 \begin{thebibliography}{99}
 
@@ -506,9 +506,6 @@ SSVM was a successful movement in resisting the dam proposal and getting the pro
 \bibitem{} Parameswaran, M. P. 2012. Thriparisthithi Sidhantham[Theory of three-dimensional environment]. in Parameswaran M P. \textit{Janakeeya sastra prasthanam}. [People’s Science Movement]. (pp. 71-77). Kerala sastra Sahitya Parishad. Thrissur.
 \bibitem{} Parameswaran, M.P. 2015. Party fulltimer in: Parameswaran M P. \textit{Kalaharanamillatha Swapnangal}[Dreams that cannot be expired] (pp. 183-188). Kerala Sasthra Sahithya Parishad. Thrissur.
 \bibitem{} Prasad, A. 2008. Environmentalism and the Left.In A. Prasad,\textit{Environment, Development and Society in Contemporary India:An Introduction }(pp. 360-367). Macmillan Publishers India.
-
-\newpage
-
 \bibitem{}  Radhakrishnan, R. and Koottumel, J. 2010. Silent Valley: Cheruthunilppinte Nalvazhi [Silent Valley: The Timeline of Rseistance].. Kerala Sastra Sahitya Parishad. Kozhikkode.
 \bibitem{} Radhakrishnan, R. and Koottumel, J. 2017. \textit{Chaliyar Puzha Malineekaranam}[Chaliyar River PollutionIn: Radhadkrishnan R and Koottumel J. \textit{Kerala Paristhiti: Pradhirodhathinte Charithra Vazhikal}[Kerala Environment: Historical Trajectories of Resistance (pp. 24-33). . Kerala Sastra Sahitya Parishad. Thrissur
 \bibitem{} Raina, D. 1990. Commoditised Science or Science for Consumption? \textit{Economic and Political Weekly}, 25 (40), 2245-2247.
@@ -525,9 +522,7 @@ SSVM was a successful movement in resisting the dam proposal and getting the pro
 \bibitem{} Zachariah, M. 1989. People's Movements and Reform of Formal Education: Reflections on Kerala Sastra Sahitya Parishad (KSSP) in India. \textit{Canadian and International Education}, 18, 3-19.
 \bibitem{} Zachariah, M. and Sooryamoorthy, R. 1994. \textit{Science for Social Revolution: Achievements and Dilemmas of a Development Movement-the Kerala Sastra Sahitya Parishad.} Zed Books.
 
-\end{thebibliography}}}
-
-\newpage
+\end{thebibliography}}
 
 \theendnotes
 
