@@ -1,0 +1,898 @@
+\chapter[Electroweak Symmetry ]{Electroweak Symmetry}\label{chap28}
+
+\Authorline{G. RAJASEKARAN }
+\addtocontents{toc}{\protect\contentsline{section}{{\sl G. RAJASEKARAN }\smallskip}{}}
+\authinfo{lastitute of Mathematical Sciences, C.LT. Campus, Madras 600 113, India.}
+\lhead[\small\thepage]{\small\thechapter. }
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+\section{Introduction}
+
+A number of speakers in this symposjum have talked on various aspects of Light — a subject in
+which Raman © made epoch-making contributions, Optics continues to remain a fertile field of
+investigations, as is amply illustrated in these talks. 1 have decided to talk on a topic which may
+appear to be far removed from these things; electroweak theory is in fact considered a part of
+High Energy Physics. However, my main reason for choosing this topic is to convey to the wider
+audience of scientists the message that, far from being an out-of-the-way theme, electroweak dynamics
+is the unifying framework which now encompasses the familiar electrodynamics and the weak
+interactions of nuclei and particles. Thus, electroweak physics is in fact the natural home for optics,
+which is after all a part of clectrodynamics. 
+
+| am happy to dedicate this talk to the memory of C. V. Raman, a scientist {\it par excellence} whose
+work will continue to inspire generations of Indian scientists. 1 think Raman would be pleased to
+see the fundamental unity linking optics and nuclear beta decay, which in his day. appeared so unrelated. 
+
+The basic laws of electrodynamics (figure 1.1) were first formulated by Maxwell more than a
+century ago. In this, Maxwell was greatly influenced by the intuitive physical pictures which Faraday
+had already built up for the understanding of clectromagnetic phenomena. 
+\begin{center}
+\begin{tabular}{ccc}
+& $\vec{\nabla} \cdot \vec{E} = 4 \pi \rho$ &\\[.2cm]
+& $\vec{\nabla} \times \vec{E} + \frac{\partial \vec{B}}{\partial t} = 0$\\[.2cm]
+& $\vec{\nabla} \cdot \vec{B} = 0$&\\[.2cm]
+& $\vec{\nabla} \times \vec{B}- \frac{\partial \vec{E}}{\partial t} = 4 \pi \vec{j}$&\\[.2cm]
+& {\textbf Figure 1.1.} Laws of Electrodynamics&\\[.2cm]
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccc}
+& $\vec{\nabla} \cdot \vec{E}_{i} = 4 \pi \rho_{i}$ &\\[.2cm]
+& $\vec{\nabla} \times \vec{E}_{i} + \frac{\partial \vec{B}}{\partial t}+\ldots = 0$\\[.2cm]
+& $\vec{\nabla} \cdot \vec{B}_{i}+ \ldots = 0$&\\[.2cm]
+& $\vec{\nabla} \times \vec{B}_{i}- \frac{\partial \vec{E}_{i}}{\partial t} = 4 \pi \vec{j}_{i}$&\\[.2cm]
+& {\textbf Figure 1.2.} Laws of Electroweak dynamics &\\[.2cm]
+\end{tabular}
+\end{center}
+
+Important predictions followed, once a complete and consistent system of laws was found. For
+instance, Maxwell predicted light itself to be an electromagnetic phenomenon, Earlier discoveries
+of Oersted, Ampere and Faraday had unified electricity and magnetism into a single science of
+electromagnetism. Maxwell then unified optics with electrodynamics. 
+
+These fundamental discoveries opened up vast areas of technological development. Electromagnetic machinery and wireless communication have become part of everyday life. 
+
+All this is old stuff. Maxwell’s equations have stood the test of time for all these 100 years. Will they remain in isolated glory for ever? 
+
+‘The answer has to be in the negative. Progress in physics generally consists in the discovery of more general laws of wider applicability which reduce fo the older Jaws in some restricted domain. 
+
+This is precisely what we are witnessing now. The successful development of electroweak theory shows that there exist more general laws which subsume Maxwell’s laws of electrodynamics, ‘There exist more general fields $E^{i}$ and $B^{i}$ (four of them, with the index i running over 1 to 4) and these fields are generalisations of the usual electric and magnetic fields and describe not only electrodynamics but also. weak interactions which are responsible for beta radioactivity. These electroweak fields $E^{i}$ and $B^{i}$ satisfy dynamical laws which are generalizations of Maxwell's laws of electrodynamics (see figure 1.2). There are some crucial differences indicated by the dotted lines. These are nonlinear terms which we shail face later. 
+
+In this talk which is mainly intended for nonspecialists, a somewhat unconventional “derivation” of electroweak theory will be presented. The structure and interrelationship among the various ingredients of this theory may be revealed better in this approach, especially from the view point of electroweak
+symmetry. In the later part of the talk some implications of the electroweak unification will be discussed. 
+
+\section{Weak Interaction}
+
+The story of weak interaction starts with Becquerel’s discovery of radioactivity in 1896 and its subsequent
+classification into alpha, beta and gamma radiations. But the first real understanding of beta decay caine only after Fermi invented the physical mechanism for the decay process in 1934 and developed
+its theory. 
+
+s theory.
+Fermi’s idea was simple. He drew an analogy with electromagnetism where the basic interaction is the emission or absorption of a photon by an electron (figure 2.1a), He pictured the weak interactions
+responsible for the beta decay of the neutron in the same manner as the emission of an
+electron-antineutrino pair, the neutron converting itself into a proton during the process (figure 2.1b). 
+
+Before we proceed further, we have to refer to an important development of more recent times,
+namely the discovery of the substructure of the nucleon. There is now evidence that protons and
+neutrons are composed of the “quarks” $u$ and $d$ (with electrical charges 2/3 and --1/3 respectively): 
+$$
+p=uud,\quad
+n=ddu
+$$
+
+Therefore any physical process involving $p$ and $n$ can be pictured in terms of the more basic
+processes involving $u$ and $d$.
+
+The beta decay of the neutron is redrawn in figure 2.2a in terms of its quark-constituents. The
+neutron which is the three-quark state $(udd)$ converts itself into the proton which is $(udu)$. Thus, the
+real transition is that of a d quark which turns into $u$ in the final state; the other two quarks are
+mere spectators. Hence, as far as the weak interaction is concerned, we need to consider only figure
+2.2b. Hereafter, we shall ignore $p$ and $n$ and express the interactions in terms of the constituents $u$ and $d$ only. 
+
+Returning to Fermi’s theory, we now write down the weak interaction in analogy with electrodynamic interaction. For the latter, one writes the interaction Lagrangian: 
+\begin{equation*}
+\mathcal{L}_{E}=\epsilon j_{\mu}^{E}A_{\mu}= - \epsilon \bar{e}\gamma_{\mu} e A_{\mu},\tag{2.1}
+\end{equation*}
+
+where $A_{\mu}$, is the four-vector potential of electromagnetism $(\mu = 0,1,2,3)$, $j_{\mu}^{E}$ is the electric current four-vector formed from the electron wave function or electron field $e$ and the Dirac matrix $\gamma_{\mu}$ 
+ 
+\begin{equation*}
+j_{\mu}^{E}= -\bar{e}\gamma_{\mu} e\tag{2.2}
+\end{equation*}
+and $\epsilon$ is the electronic charge. In exact correspondence, the weak interaction Lagrangian for the process in figure 2.2b is written as 
+\begin{equation*}
+\mathcal{L}_{w} = \frac{G_{F}}{\sqrt{2}}\bar{u}\gamma_{\mu} d \bar{e}\gamma_{\mu} v + {\rm hermitian conjugate},\tag{2.3}
+\end{equation*}
+where\footnote{In quantum field theoy, $u$ represents intitial quark or final antiquark; the conjugate field $\bar{u}$ represents initial antiquark or final quark. Similarly for the other symbols.} $u, d, e$ and $v$ denote the wavefunctions or fields for the respective particle and $G_{F}$ is Fermi’s coupling constant having the value: 
+$$
+G_{F}\simeq 10^{-5}m_{p}^{-2},
+$$
+where $m_{p}$, is the mass of the proton. The smallness of the dimensionless number $10^{-5}$ is responsible for the weakness of the interaction, 
+
+This simple form of the weak interaction which was written down by Fermi purely on an intuitive basis stood the ground for almost 40 years except for some important modifications in its structure brought about by the developments in these years. One was the parity revolution of 1956 which culminated in the change of $\gamma_{\mu}$, into $\mu_{\mu}(1 — \gamma_{5})$; 80 the weak currents became $\bar{u}\gamma_{\mu}(1 — \gamma_{5})d$ and $\bar{e}\gamma_{\mu}(1 — \gamma_{5})v$ and contain equal mixtures of polar vector and axial vector parts in contrast to the electric current $\bar{e}\gamma_{\mu}e$ which is a polar vector. The other important development was the discovery of many other weak processes and the recognition of the universality of weak interaction which finally led to the current $\times$ current form of the Fermi Lagrangian: 
+\begin{equation*}
+\mathcal{L}_{w}= \frac{G_{F}}{2 \sqrt{2}} (j^{+}_{\mu} j^{-}_{\mu} + j^{-}_{\mu}j^{+}_{\mu}),\tag{2.4}
+\end{equation*}
+where,
+\begin{align*}
+j^{+}_{\mu} &= \frac{1}{2} \bar{u}\gamma_{\mu}(1-\gamma_{5})d + \frac{1}{2} \bar{v}\gamma_{\mu}(1-\gamma_{5})e+\ldots,\tag{2.5}\\
+j^{-}_{\mu}&= \frac{1}{2} \bar{d}\gamma_{\mu}(1-\gamma_{5})u + \frac{1}{2} \bar{e}\gamma_{\mu}(1-\gamma_{5})v+\ldots\tag{2.6}
+\end{align*}
+
+The dots on the right side refer to other similar terms which may be added in order to incorporate all the observed weak processes such as: 
+\begin{align*}
+& \pi \rightarrow \mu v, \mu \rightarrow e + v + \bar{v}, \bar{v} + p \rightarrow e^{+} + n\\
+& K \rightarrow \pi + \pi, \Lambda \rightarrow p + \pi^{-} ~~etc., etc.
+\end{align*}
+
+The current $j^{+}_{\mu}$ is a charge-raising current since it describes the transitions $d\rightarrow u$ and $e \rightarrow v$ both of which result in an increase of electric charge by one unit. For similar reason, $j^{-}_{\mu}$ is a charge-lowering current\footnote{The symmetrized product $\frac{1}{2}()j^{+}_{\mu} + j^{-}_{\mu}j^{+}_{\mu}$ has been used in $\mathcal{L_{w}}$ since $j^{+}_{\mu}$ and $j^{-}_{\mu}$ become noncommuting operators in quantum field theory and symmetrisation is necessary in order to respcet the usual requirements of quantum field theory.}. Both $j^{+}_{\mu}$ and $j^{-}_{\mu}$ are called “charged currents”. 
+
+We must also introduce the decompositions of the wavefunction of the spin $\frac{1}{2}$. particle into its
+left-handed and right-handed spin projections: 
+\begin{equation*}
+u_{L}= \frac{1}{2} (1-\gamma_{5})u; u_{R}= \frac{1}{2} (1+\gamma_{5})u\tag{2.7}
+\end{equation*}
+with similar decompositions for the other particles. Then, the weak currents $j^{\pm}_{\mu}$ can be rewritten in
+terms of the left-handed fermions alone: 
+\begin{align*}
+j^{+}_{\mu} &= \bar{u}_{L}d_{L} + \bar{v}_{L}\gamma_{\mu}e_{L}+ \ldots\tag{2.8}\\
+j^{+}_{\mu} &= \bar{d}_{L}\gamma_{\mu}u_{L}+ \bar{e}_{L}\gamma_{\mu}v_{L} + \ldots\tag{2.9}
+\end{align*}
+
+So, weak interactions act only on the left-handed fermions\footnote{This is not true for the newer weak interaction (neutral-current type) about which we shall say more, later.}, thus manifesting the parity violation
+(left-right asymmetry) directly. 
+
+\section{Construction of The Electroweak Theory}
+
+The analogy with electrodynamics which Fermi banked upon, not only inspired him to choose
+basically the correct form of the weak interaction, namely the vector form, in contrast to the scalar
+or tensor form, but also continued to serve as a fruitful paradigm in the search for a more complcte
+theory of weak interaction. For, the basic idea of the electroweak theory is in fact to push the
+analogy with electromagnetism as far as possible. The development of this line of thought proceeds
+through the following steps. 
+
+\subsection*{Step 1. Introduction of W bosons}
+
+Let us again compare a typical electromagnetic process, say, clectron-clectron scattering with beta
+decay. In electron-electron scattering, a photon is exchanged between the two clectron lines (figure
+3.1a). In beta decay Fermi had imagined the nucleon line (replaced by the quark line now) and
+the $e-v$ line interacting at the same space-time point (figure 3.1b). But, clearly, the resemblance
+with electromagnetism is greatly enhanced if we imagine an exchange of a boson between the quark
+line and the $e-v$ line (figure 3.1c), This boson is called the weak boson $W$,
+
+figure??
+
+What are the properties of the $W$ boson? (i) It has to be charged, in contrast to photon, as can
+be seen by conserving charge at each vertex in figure 3.1c. Remember, the charges of $u$, $d$, $v$, $e$
+are $\frac{2}{3}$, $-\frac{1}{3}$, $0$, $-1$ respectively. (ii) It should have spin unity, because of the vector nature of the interaction, just as in the case of the photon. (The inclusion of axial vector in weak interaction current
+does not change this conclusion). (iii) In contrast to the photon, the $W$ boson has to be very
+massive. For, in beta decay we know the interaction between the nucleon Jine (or the quark line) and the $e-v$ line acts almost at the same spacetime point. In other words, the Fermi contact
+interaction has been really in good agreement with the experiment so far. If the mass of $W$ was
+zero or even small, the weak interaction will be of long range just as the electromagnetic interaction
+due to the exchange of massless photons between electrons. So, to preserve the agreement with
+experiment, the mass $m_{w}$ has to be very large.
+
+In Fermi’s theory the coupling constant was $G_{F}$. In the $W$ boson theory, we have a coupling
+constant $g$ at each vertex of the diagram in figure 3.1c and so, for the same process, $G_{F}$ is replaced
+by $g^{2}$ multiplied by the propagation amplitude for the $W$ boson. Since this propagation amplitude
+is $1/m^{2}_{w}$ for small momentum-transfers, we get the important relationship:  
+\begin{equation*}
+\frac{G_{F}}{\sqrt{2}} = \left(\frac{g}{2\sqrt{2}}\right)^{2} \frac{1}{m^{2}_{w}}\tag{3.1}
+\end{equation*}
+
+The numerical factors correspond to the choice of the normalization of $g$ (see (3.3) below).
+
+Let us now rewrite the electromagnetic and weak interaction Lagrangians:- 
+\begin{equation*}
+\mathcal{L}_{E}= \epsilon j_{\mu}^{E} A_{\mu},\tag{3.2}
+\end{equation*} 
+\begin{equation*}
+\mathcal{L}_{w}= \frac{g}{2\sqrt{2}}(j^{+}_{\mu}W^{-}_{\mu} + j^{-}_{\mu} W^{+}_{\mu}),\tag{3.3}
+\end{equation*}
+where $W^{+}_{\mu}$ and $W^{+}_{\mu}$, are the charged $W$ boson fields. 1t is clear that we have achieved a greater
+Symmetry between weak and electromagnetic interactions. 
+
+However, this symmetry between $L_{E}$ and $L_{w}$ written above is only apparent and does not hold
+at a deeper level. For that, the following step is needed. 
+
+\subsection*{Step 2. Gauge invariance}
+
+An important characteristic of electrodynamics is gauge invariance. To appreciate this let us write
+the more complete Lagrangian of electrodynamics by adding the interaction of (3.2) to the free
+field Lagrangian of the electromagnetic field and of the electron: 
+\begin{equation*}
+L= - \frac{1}{4}(\partial_{\mu} A_{v}-\partial_{v}A_{\mu})^{2} + ie\gamma_{\mu}\partial_{\mu}e-m\bar{e}e + \epsilon j^{E}_{\mu}A_{\mu},\tag{3.4}
+\end{equation*}
+where,
+\begin{equation*}
+j^{E}_{\mu} = - \bar{e}\gamma_{\mu}e.\tag{3.5}
+\end{equation*}
+
+This is invariant under the gauge transformation 
+\begin{align*}
+e \rightarrow e' &= ({\rm exp}~~ i \epsilon \phi)e,\tag{3.6}\\
+A_{\mu} \rightarrow A_{\mu}' &= A_{\mu}-\partial_{\mu}\phi\tag{3.7}
+\end{align*}
+where $\phi$ is an arbitrary function of space and time coordinates. Invariance under the {\it special}
+transformation with a {\it constant} $\phi$ can be shown to lead to the conservation of the current: 
+\begin{equation*}
+\partial_{\mu} j^{E}_{\mu} = 0\tag{3.8}
+\end{equation*}
+
+Does a similar situation prevail for the weak interaction? Before we answer this question, we
+have to do a little algebra and recast our weak currents in terms of “isospin” matrices, 
+
+Using the simple $2 \times 2$ matrices (which are the SU(2) or isospin raising and lowering matrices): 
+\begin{equation*}
+\tau^{+} = 
+\begin{pmatrix}
+0 & 1\\
+0 & 0
+\end{pmatrix}
+~;~\tau^{-} = 
+\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}\tag{3.9}
+\end{equation*}
+and also the doublet notation for the quark and lepton fields 
+\begin{equation*}
+q_{L}= \begin{pmatrix}
+u_{L}\\
+d_{L}
+\end{pmatrix}~;~
+\bar{q}_{L} = (\bar{u}_{L} \bar{d}_{L})\tag{3.10}
+\end{equation*}
+\begin{equation*}
+l_{L}= \begin{pmatrix}
+v_{L}\\
+e_{L}
+\end{pmatrix}~;~
+\bar{l}_{L} = (\bar{v}_{L} \bar{e}_{L})\tag{3.11}
+\end{equation*}
+we can rewrile our weak currents in the form: 
+\begin{equation*}
+j^{\pm}_{\mu} = \bar{q}_{L}\gamma_{\mu}\tau^{\pm}q_{L} + \bar{l}_{L}\gamma_{\mu}\tau^{\pm}l_{L}\tag{3.12}
+\end{equation*}
+The complete isospin current is actually a vector in an abstract three-dimensional space called isospace and has three components given by 
+\begin{equation*}
+j^{i}_{u} = \frac{1}{2} \bar{q}_{L}\gamma_{\mu}\tau_{i}q_{L} + \frac{1}{2}\bar{l}_{L}\tau_{i}l_{L}; i=1,2,3, \tag{3.13}
+\end{equation*}
+where $\tau_{i}$ are the famous Pauli matrices (but used here for isospin, rather than the mechanical spin): 
+\begin{equation*}
+\tau_{1}=
+\begin{pmatrix}
+0 & 1\\
+1 & 0\\
+\end{pmatrix}~;~
+\tau_{2} = 
+\begin{pmatrix}
+0 & -i\\
+i & 0\\
+\end{pmatrix}~;~
+\tau_{3} = 
+\begin{pmatrix}
+1 & 0\\
+0 & -1\\
+\end{pmatrix}\tag{3.14}
+\end{equation*}
+
+The weak currents $j^{\pm}_{\mu}$, are linear combinations of two of these components $j^{1}_{\mu}$ and $j^{2}_{\mu}$: 
+\begin{equation*}
+j^{\pm}_{\mu} = j^{1}_{\mu} \pm ij^{2}_{\mu}\tag{3.15}
+\end{equation*}
+
+Introducing $W^{1}$ and $W^{2}$ through the equations 
+\begin{equation*}
+W^{\pm}_{\mu} = \frac{1}{\sqrt{2}}(W^{1}_{\mu} \pm i w^{2}_{\mu}), \tag{3.16}
+\end{equation*}
+the weak interaction in (3.3) can be rewritten as 
+\begin{equation*}
+\mathcal{L}_{w} = g(j_{1}w_{1} + j_{2}W_{2})\tag{3.17}
+\end{equation*}
+
+In contrast to the electromagnetic current in (3.5), the weak currents in (3.12) involve the SU) matrices. Correspondingly, it turns out that the gauge transformations to be considered for the weak dynamics involve non-commuting SU(2) matrices and are called nonabelian SU(2) gauge transformations. These are nontrivial generalisations of the gauge transformations of electrodynamics given in (3.6) and (3.7) which are abelian and are called U(1) gauge transformations\footnote{The U(1) group is an abelian group whose elements commute with each other, fike the rotation group in 2 dimensions. In contrast, the SU(2) group, like the group of rotations jin 3 dimensions, is a noncommuting nonabelian group.}. Such, a theory invariant under the nonabelian gauge transformations was first constructed by Yang and Mills in 1954. 
+
+We shall not describe these transformations here, but straightaway write down the Lagrangian invariant under SU(2) gauge transformations for the case of interest to us: 
+
+\begin{align*}
+\mathcal{L} &= -\frac{1}{4}(\partial_{\mu} W_{v}- \partial_{v}W_{\mu} + g W_{\mu} \times W_{v}^{3}) + \bar{m}\gamma_{\mu}\partial_{\mu} u + i\bar{d}\gamma_{\mu} \partial_{\mu} d\\
+& + \bar{ie}\gamma_{\mu}\partial{\mu}e + \bar{iv}_{L}\gamma_{\mu}\partial_{\mu}v_{L} + gj_{\mu}\cdot W_{\mu}\tag{3.18}
+\end{align*}
+where the weak current is the same as in (3.13), written in the vector form: 
+\begin{equation*}
+j_{\mu} =\frac{1}{2}\bar{q}_{L}\gamma_{\mu}\tau q_{L} + \frac{1}{2} \bar{l}_{L} \gamma_{\mu}\tau l_{L}\tag{3.19}
+\end{equation*}
+
+Let us describe the various ingredients of this Lagrangian. First of all, one more boson field
+$W^{3}_{\mu}$ has been introduced, so that the triplet of fields $W^{i}_{j}$, $W^{2}_{\mu}$, $W^{3}_{\mu}$ form the three
+components of a vector $W_{\mu}$, in isospace . So, the interaction with the fermions now assumes the
+symmetric form of a scalar product in isospace: 
+\begin{equation*}
+g j_{\mu}\cdot w_{\mu} = g(j^{1}_{\mu} W^{1}_{\mu} + j^{2}_{\mu}W^{2}_{\mu} + j^{3}_{\mu}W^{3}_{\mu})\tag{3.20}
+\end{equation*}
+
+Compare this with the original $\mathcal{L}_{w}$, in (3.17). The additional term $j^{3}_{\mu} W^{3}_{\mu}$ describes an interaction of
+the neutral vector boson $W^{3}_{\mu}$ with the current 
+\begin{align*}
+j^{3}_{\mu} &= \frac{1}{2} \bar{q}_{L} \gamma_{\mu}\tau_{3}q_{L} + \frac{1}{2}\bar{l}_{L} \gamma_{\mu}\tau_{3}l_{L}\\
+& = \frac{1}{2} \bar{u}_{L}\gamma_{\mu}u_{L}- \frac{1}{2} \bar{d}_{L}\gamma_{\mu}d_{L} + \frac{1}{2}\bar{v}_{L}\gamma_{\mu}v_{L}- \frac{1}{2}\bar{e}_{L}\gamma_{\mu}e_{L}\tag{3.21}
+\end{align*}
+
+What is the interpretation of this interaction? We must wait until the dust settles. 
+
+Just as in the case of electrodynamics, from the invariance under special (i.e. space-time independent)
+SU(2) transformations, one can show the conservation of isospin currents. For this, the symmetry
+or isotropy in isospace exhibited by the interaction in (3.20) as well as by all the terms in the
+Lagrangian of (3.18) is crucial. 
+
+in addition to the quadratic terms in $W_{\mu}$ which describe the free fields, the Lagrangian .of (3. 18)
+contains cubic as well as quartic terms in the $W$ fields, which lead to self-interaction among the
+$W$ bosons. This self-interaction which is illustrated in figure 3.2 is a new feature not present in
+electrodynamics, Photon interacts with every charged object. But the photon itself being uncharged,
+does not interact with itself. The $W$ boson interacts with everything having isospin; since $W$ itself has isospin it has to interact with itself. 
+
+figure??
+
+In this respect, the new theory is nearer to Einstein’s theory of gravitation. The gravitational
+field interacts with everything having mass or energy. Since the gravitational field itself has energy,
+it has to interact with itself. So, in Finstein's theory, the gravitational field has self-interaction. 
+
+In electromagnetic theory, gauge invariance is intimately associated with the photon being
+massless, A photonic mass term $\frac{1}{2}m^{2}A_{\mu}A_{\mu}$ added to $\mathcal{L}$ in (3.4) would not be invariant under
+the transformation of (3.7). In the same way, nonabelian gauge invariance of the $W$ boson dynamics
+implies that $W$ bosons be massless. Hence, if in our attempt to push the analogy with electromagnetism
+to its logical conclusion, we take the weak interactions to be invariant under nonabelian gauge
+transformations, we run into trouble since the consequent masslessness of $W$ will contradict the
+empirical fact that beta decay interaction, does not have a long range. 
+
+The situation is actually much worse; SU(2) invariance forbids\footnote{SU(2) invarian mass terms such as $\bar{q}_{L} q_{L}$ and $\bar{u}_{R}u_{R}$ can be shown to vanish identically and mass terms such as $\bar{u}_{R}u_{L}$ are not SU(2) invariant.}
+mass for the fermions also. This is a consequence of the special nature of the SU(2) used in weak interaction. The “weak SU(2)”
+transformation acts only on the left-handed fermions. 
+
+To escape the above pitfalls, the following step can be taken: 
+
+\subsection{Step 3. Spontaneous breakdown of symmetry}
+
+This idea banks upon the following possibility that exists for a dynamical system with an infinite
+number of degrees of freedom, Although the equations of motion of such a system may be invariant
+under somé symmetry transformation, the ground state of the system may not be invariant. A’
+well-known example is the ferromagnet. Although the Heisenberg exchange interaction between the
+atomic spins is rotationally invariant, the ground state of a ferromagnet with all spin magnetic
+moments pointing in one direction is obviously not invariant under rotation, In the same manner
+although the interaction and the dynamical equations of the W field may be chosen to be invariant
+under nonabelian gauge transformation, the ground state of the field system need not exhibit this
+symmetry and hence the physical $W$ boson can very well be massive. Such a mechanism for
+spontaneous breakdown of symmetry in the context of gauge theory is called Higgs-Kibble mechanism,
+but this is the least established part of the Electroweak theory. A consequence of this mechanism
+is the existence of the so-far undiscovered Higgs boson. 
+
+The Higgs-Kibble mechanism is described in many text books and review articles’. We shall not
+dwell on this breakdown of symmetry\footnote{Actually, the term “breakdown of symmetry” is inappropriate. The Higgs-Kibble phenomenon can in fact be regarded as a “rearrangement of symmetry”. I thank Prof. V. Srinivasan (of the University of Hyderabad) for trying to teach me this
+point of view.} in a Symposium devoted to Symmetry! Fortunately, this
+aspect of the theory does not affect the form of the interaction or that of the current already
+written down above. 
+
+We now come to our final step. 
+
+\subsection*{Step 4. Linking of electrodynamics with weak dynamics}
+
+So far we have considered weak interaction in isolation and recast it as a nonabelian gauge theory,
+What we have constructed is an SU(2) gauge theory of weak interactions alone. To this, one may
+think of adding the usual electrodynamics. We shall now show that this combination leads ta an
+inconsistent theory! 
+
+The combined theory either violates conservation of electric charge or in addition to violating
+conservation of the “weak isospin” currents and SU(2) gauge invariance, has other troubles. To
+get a consistent theory, electrodynamics must be linked to weak interactions through an extension
+of the nonabelian gauge theory. There is neither a consistent theory of weak interaction alone, nor
+with the adhoc addition of electrodynamics lo it. 
+
+In the SU(2) theory of weak interaction which we have constructed, there are three vector bosons,
+two of them electrically charged $W^{\pm}$. The electric current $J^{E}_{\mu}$ entering in Maxwell's ekcctrodynamic
+equations is a conserved current and hence it must include the fields of all the charged particles
+(which may be present or which may be created!). If the charged weak boson fields $W^{\pm}$ were
+omitted from $7^{E}_{\mu}$, it will no longer be conserved during weak processes. So $J^{E}_{\mu}$ must include the $W^{\pm}$ fields: 
+\begin{equation*}
+J^{E}_{\mu} = -\bar{e}\gamma_{\mu}e + \frac{2}{3} \bar{u}\gamma_{\mu}u - \frac{1}{3}\bar{d}\gamma_{\mu}d + i \{W^{-}_{v}\partial_{\mu} W^{+}_{v}+ \ldots \}\tag{3.22}
+\end{equation*}
+where, for the W-dependent part, we have written only one term of a more complicated expression.
+Inclusion of $W^{\pm}_{\mu}$ in $J^{E}_{\mu}$ implies that $W^{\pm}_{v}$ are coupled to the photon $A_{\mu}$ as can be seen explicitly by
+writing the electromagnetic interaction: 
+\begin{align*}
+\mathcal{L}_{E}&= \epsilon A_{\mu}J^{E}_{\mu}\\
+& = i \epsilon A_{\mu} \{W^{-}_{v}\partial_{\mu} W^{+}_{v} + \ldots\}-\epsilon A_{\mu}\bar{e}\gamma_{\mu}e + \ldots\tag{3.23}
+\end{align*}
+
+Addition of this $\mathcal{L}_{E}$ to the symmetric Lagrangian of (3.18) will however undo our step 2; $L_{E}$ isno longer symmetric among $W_{1}$, $W_{2}$ and $W_{3}$ and hence conservation of the weak isospin current 
+and SU(2) gauge invariance will be lost. Further, there are other serious problems with the Lagrangian $L_{E}$ of (3.23). Such a theory of massive W* interacting with electromagnetic field is inconsistent in general. It is not even relativistically invariant! More details on this problem will be given in § 5, but it suffices here fo note that a consistent theory is obtained only by incorporating
+$W^{\pm}$ and the photon in a symmetric or gauge invariant frame work.
+
+The obvious first choice for such a theory would be a unified SU(2) gauge theory of electroweak
+interactions with the neutral vector boson $W^{3}_{\mu}$ identified as the photon $A_{\mu}$. In fact, if we reexpress the $W$- self-interactions contained in (3.18) in terms of Wy already defined and $W^{3}_{\mu}\mod A_{\mu}$, the resulting electromagnetic interactions of the $W^{\pm}$ bosons are now quite free of troubles. But the problem now arises in the fermionic sector.  
+
+The current of the fermions which interacts with $W^{3}_{\mu}(\mod A_{\mu})$ in (3.18) is $j^{3}_{\mu}$ which is of equal to the electromagnetic current of the fermions $j^{E}_{\mu}$. We have
+\begin{align*}
+j^{3}_{\mu} &= \frac{1}{2} \bar{u}_{L}\gamma_{\mu}u_{L} - \frac{1}{2}\bar{d}_{L}\gamma_{\mu}d_{L} + \frac{1}{2} \bar{v}_{L}\gamma_{\mu}v_{L} - \frac{1}{2}\bar{\mu}e_{L}\tag{3.24}\\
+j^{E}_{\mu} & = \frac{2}{3} \bar{u}\gamma_{\mu}u- \frac{1}{3} \bar{d}\gamma_{\mu}d- \bar{e}\gamma_{\mu}e\tag{3.25}
+\end{align*}
+
+The solution of this problem is obtained as follows. First, we note that if we define a new current 
+\begin{equation*}
+j^{\gamma}_{\mu} = j^{E}_{\mu}-j^{3}_{\mu}\tag{3.26}
+\end{equation*}
+then, using (3.24) and (3.25) and remembering $u=u_{L} + u_{R}$ etc. we get
+\begin{align*}
+j^{\gamma}_{\mu} &= \frac{1}{6}\bar{q}_{L}\gamma_{\mu}1q_{L} - \frac{1}{2} \bar{l}_{L}\gamma_{\mu}1l_{L}-\frac{1}{3} \bar{d}_{R}\gamma_{\mu}d_{R}- \bar{e}_{R}\gamma_{\mu}e_{R}\tag{3.27}
+\end{align*}
+
+The important new feature of this current $j^{\gamma}_{\mu}$ (in contrast to $j^{3}_{\mu}$ and $j^{E}_{\mu}$) is that it associates the unit matrix 
+\begin{equation*}
+\underline{1}= 
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}\tag{3.28}
+\end{equation*}
+with the left-handed SU(2) doublets 
+\begin{equation*}
+q_{L}= 
+\begin{pmatrix}
+u_{L}\\
+d_{L}
+\end{pmatrix}~{\rm and}~
+l_{L} =
+\begin{pmatrix}
+v_{L}\\
+e_{L}
+\end{pmatrix}\tag{3.29}
+\end{equation*}
+
+We have the associations: 
+\begin{equation*}
+j_{\mu} \sim \tau ; j^{y}_{\mu} \sim \underline{1}\tag{3.30}
+\end{equation*}
+for the left-handed SU(2) doublets. So, $j^{y}_{\mu}$ commutes with all the components of the weak isospin current $j_{\mu}$ and hence can be used to generate an independent U(1) gauge interaction: 
+\begin{equation*}
+\mathcal{L}_{y} = g^{1}j^{y}_{\mu}B_{\mu}\tag{3.31}
+\end{equation*}
+where $B_{\mu}$ is a new $u(1)$ gauge boson and $g'$ is the corresponding coupling constant; $j^{y}_{\mu}$ is called the weak hypercharge current. Since $B_{\mu}$ is an abclian U(1) gauge field, it has no self-interaction and so the pure $B$ field part of the Lagrangian has quadratic terms only: 
+\begin{equation*}
+\mathcal{L}_{B}= - \frac{1}{4} (\partial_{\mu} B_{v}- \partial_{v}B_{\mu})^{2}\tag{3.32}
+\end{equation*}
+
+Adding $L_{y}$ and $L_{B}$ to $L$ of (3.18), we now have the complete electroweak theory based on the extended gauge group $SU(2) \times U(1)$.
+
+Photon field $A_{\mu}$ will turn out to be a mixture (linear combination) of $W^{3}_{\mu}$ and $B_{\mu}$ and so this combination must be left massless. Another linear combination of $W^{3}_{\mu}$ and $B_{\mu}$, orthogonal to the photonic combination, will however pick up mass by spontaneous symmetry breaking and this will be a massive {\it neutral} vector boson $Z_{\mu}$.  
+
+To sum up, we implement the following four steps: 
+\begin{itemize}
+\item Introduce the charged vector bosons $W^{\pm}$ to mediate the charged-current weak interaction. 
+\item Symmetrize the interaction in “isospin” space by introducing a new neutral-current weak interaction and also by recasting the theory into a nonabelian gauge theory.
+\item Invoke spontancous breakdown of symmetry to make the $W$ bosons massive. 
+\item Incorporate electrodynamics and weak dynamics into gauge-invariant framework: based on the group SU(2) $\times$ U(1) thus ensuring a consistent dynamical theory.  
+\end{itemize}
+
+The resulting Yang-Mills gauge theory based on the group SU(2) $\times$ U(1) with Higegs-Kibble mechanism for symmetry breaking is called the Glashow-Salam-Weinberg electroweak theory. 
+
+\section{Electroweak Theory}
+
+We shall now study the SU(2) $\times$ U(1) electroweak theory constructed in the last section and analyse the consequences. We start by. writing down the complete Lagrangian (complete except for the specification of the Higgs-Kibble part): 
+
+{\fontsize{8}{10}\selectfont\begin{align*}
+\mathcal{L} &= - \frac{1}{4}(\partial_{\mu} W_{v} - \partial_{v}W_{\mu} + g W_{\mu} \times W_{v})^{2}- \frac{1}{4} (\partial_{\mu} B_{v}-\partial_{v}B_{\mu})^{2}\\
+&+ \bar{iu}\gamma^{\mu} \partial_{\mu}u + \bar{id}\gamma^{\mu} \partial_{\mu}d + \bar{ie}\gamma^{\mu}\partial_{\mu}e + \bar{iv}_{L} \gamma^{\mu}\partial_{\mu}v_{L} + g j_{\mu} \cdot W_{\mu} + g' j^{y}_{\mu}B_{\mu}\tag{4.1}\\
+&+ {Higgs-Kibble mechanism},
+\end{align*}}
+where the fermionic currents $j_{\mu}$ and $j^{y}_{\mu}$ are as in (3.19) and (3,27) respectively, This Lagrangian is
+obtained by adding the Lagrangians in (3.18), (3.31) and (3,32).
+
+In nature there exist more quark doublets and lepton doublets in addition to $(u, d)$ and $(v,e)$ (at least two more of each). Although their study is an important part of present-day particle physics, they do not seem to contribute to any further understanding of basic SU(2) x U(1) theory. So, we shall restrict ourselves to the single quark doublet $(u,d)$ and the single lepton doublet $(v,e)$.
+
+The right-handed neutrino $v_{R}$ has not been detected by any one so far and so has been left out of the free field part of $\mathcal{L}$ in (4.1). If it exists, we have to add it. 
+
+Let us now take a closer look at the interaction of the fermions with the gauge fields: 
+\begin{equation*}
+\mathcal{L}_{f}= g j_{\mu} \cdot W_{\mu} + g' j^{y}_{\mu} B_{\mu}\tag{4.2}
+\end{equation*}   
+
+As already mentioned, two orthogonal combinations of $W^{3}_{\mu}$ and $B_{\mu}$ correspond to $A_{\mu}$ and $Z_{\mu}$:
+\begin{align*}
+A_{\mu} &= \sin \theta_{w} W^{3}_{\mu} + \cos \theta_{w} B_{\mu},\tag{4.3}\\
+Z_{\mu} &= \cos \theta_{w} W^{3}_{\mu} - \sin \theta_{w} B_{\mu},\tag{4.4}
+\end{align*} 
+where $\theta_{w}$ is the electroweak mixing angle. Also, the charged fields $W^{\pm}_{\mu}$ are the linear combinations; 
+\begin{equation*}
+W^{\pm}_{\mu} = \frac{1}{\sqrt{2}} (W^{1}_{\mu} \pm i W^{2}_{\mu}).\tag{4.5}
+\end{equation*}
+
+Reexpressing $W^{3}_{\mu}$ and $B_{\mu}$ in terms of $A_{\mu}$ and $Z_{\mu}$, and also $W^{1}_{\mu}$ and $W^{2}_{\mu}$ in terms of $W^{\pm}$, $L_{f}$ in (4.2)
+becomes 
+\begin{align*}
+\mathcal{L}_{f} = \frac{g}{2\sqrt{2}} (j^{+}_{\mu}W^{-}_{\mu} +j^{-}_{\mu}W^{+}_{\mu}) + (g \sin \theta_{w} j^{3}_{\mu} + g' \cos \theta_{w} j^{y}_{\mu})A_{mu}\tag{4.6}\\
++ (g \cos \theta_{w} j^{3}_{\mu} -g' \sin \theta_{w} j^{y}_{\mu})Z_{\mu}.
+\end{align*}
+
+The first term is the familiar charged-current interaction we started with. The second term must
+be identified with the electro-magnetic interaction and hence 
+\begin{align*}
+& g \sin \theta_{w} j^{3}_{\mu} + g' \cos \theta_{w} j^{y}_{\mu} = \epsilon j^{E}_{\mu}\\
+& = e(j^{3}_{\mu} + j^{Y}_{\mu}),\tag{4.7}
+\end{align*}
+where we have used (3.26). Equating coefficients, we get 
+\begin{align*}
+g \sin \theta_{w} &= \epsilon\tag{4.8}\\
+\tan \theta_{w} &=\frac{g'}{g}\tag{4.9}
+\end{align*}
+Thus, the electroweak mixing angle $\theta_{w}$ and $\epsilon$ are determined in terms of $g$ and $g'$, (or vice versa). 
+
+Using these relations for $\theta_{w}$ in (4.6) we get our final form of $L_{f}$:
+\begin{equation*}
+\mathcal{L}_{f}= \frac{g}{2\sqrt{2}} (j^{+}_{\mu} W^{-}_{\mu} + j^{-}_{\mu}W^{+}_{\mu}) + \epsilon j^{E}_{\mu} A_{\mu} + \frac{g}{\cos \theta_{w}} (\frac{g}{\cos \theta_{w}})(j^{3}_{\mu} - \sin^{2} \theta_{w}j^{E}_{\mu})Z_{\mu}\tag{4.10}
+\end{equation*}
+
+The third piece in this equation describes the neutral current” $j^{N}_{\mu}$ given by
+\begin{equation*}
+j^{N}_{\mu}= j^{3}_{\mu}- \sin^{2}\theta_{w}j^{E}_{\mu}\tag{4.11}
+\end{equation*}
+interacting with the neutral vector boson $Z_{\mu}$. The existence of this new weak interaction, which will lead to processes such as elastic neutrino scattering (figure 4.1a) with a strength comparable to that of the usual charged current weak interaction responsible for beta decay (figure 4.1b) is a - consequence of the SU(2) x U(1) electroweak symmetry. Neutral current acts something like a bridge between conventional weak and electromagnetic phenomena. 
+
+Earlier, in §3, we had abandoned the electroweak model based on SU(2) since $j^{3}_{\mu} \neq j^{E}_{\mu}$. It is possible to resurrect the SU(2) model if the doublet assignment for quarks and leptons is given up in favour of a triplet or higher multiplet including some new hypothetical quarks and leptons. This will be an electroweak model without neutral current. But the discovery of neutral current interaction through neutrino experiments in 1973 ruled out this possibility. 
+
+This discovery of a new type of weak interactions which had remained undetected through the 80-year history of weak interaction physics, and the subsequent detailed studies which showed the properties of the neutral-current to be exactly those predicted by the SU(2) x U(1) electroweak theory, helped to confirm the theory, It is important to note that the neutral current is not of the polar minus axial vector form, the relative Strengths of the polar and axial vector pieces being determined by the mixing angle $\theta_{w}$ (see 4.11). Detailed analyses have shown that all the neutral-current interactions among the leptons and quarks, so far studied, are in agreement with.the form of the interaction in (4.10), with 
+\begin{equation*}
+\sin^{2}\theta_{w}\approx 0.23\tag{4.12}
+\end{equation*}	
+
+What does the electroweak theory predict for the masses of the $W$ and $Z$ bosons? Combining (3.1) and (4.8), we get the formula for $m_{w}$: 
+\begin{equation*}
+m_{w} = \left(\frac{\pi \alpha}{\sqrt{2}G_{F}}\right)^{1/2} \frac{1}{\sin \theta_{w}} \approx 75 GeV,\tag{4.13}
+\end{equation*}
+where we have used the known values of the fine structure constant $\alpha =\epsilon^{2}/4\pi$ and $G_{F}$ along with (4.12). So far, we have not used any specific assumption about spontaneous breakdown of symmetry except for the existence of this breakdown. Remarkably enough, even this formula for ny does not depend on any detailed property of the symmetry breaking mechanism. On the other hand, $m_{z}$ does depend on it. In the simplest model of the symmetry breaking mechanism, one gets 
+\begin{equation*}
+m_{z}= \frac{m_{w}}{\cos \theta_{w}} = \left(\frac{\pi \alpha}{\sqrt{2}G_{F}} \right)^{1/2} \frac{2}{\sin 20_{w}}\approx 87 GeV.\tag{4.14}
+\end{equation*}
+
+We thus see that the weak bosons are very massive ~ about 80-90 times the mass of the nucleon, This is the reason for the apparent weakness of the weak: interaction at low energies [See (3.1) for $G_{F}$]. At energies much larger than 100 GeV, the strength of the weak interaction is measured by $g = \epsilon/sin \theta_{w} \approx 2\epsilon$ and so its strength becomes comparable to that of electromagnetism. This is ‘the reason why it has taken so long for physicists to discover the electroweak symmetry. 
+
+A proton-antiproton collider with centre-of-mass energy of 540 GeV was specially constructed for the discovery of the weak bosons $W$ and $Z$ and the search culminated in their actual discovery in 1983 with masses roughly equal to the values predicted in (4.13) and (4.14), thus providing a spectacular confirmation of the electroweak SU(2) x U(1) gauge theory. More precise tests of the predicted masses will be described in § 7.
+
+We next turn to the dynamics of the electroweak gauge fields. In terms of $W^{\pm}_{\mu}$, $Z_{\mu}$, and $A_{\mu}$, defined in (4.3)-(4.5), the pure gauge field part of the Lagrangian in (4.1) becomes, with the addition of mass terms generated by spontaneous breakdown of symmetry: 
+
+{\fontsize{8}{10}\selectfont
+\begin{align*}
+\mathcal{L}_{g} &= -\frac{1}{2}W^{+}_{\mu v}W^{-}_{\mu v} + m^{2}_{w}W^{+}_{\mu} W^{-}_{\mu} - \frac{1}{4}Z_{\mu v}Z_{\mu  v} + \frac{1}{2}m^{2}_{z}Z_{\mu} Z_{\mu} - \frac{1}{4}F_{\mu v} F_{\mu v}\\
+& [ig \sin \theta_{w}\{A_{\mu}(W^{-}_{\mu v} W^{+}_{v} - W^{-}_{v}W^{+}_{\mu v}) \} - g^{2} \sin^{2} \theta_{w} \{A_{\mu}A_{v} W^{+}_{\mu}W^{-}_{v} - A_{\mu} A_{\mu} W^{+}_{v}W^{-}_{v}\}]\\
+&-ig \sin \theta_{w} F_{\mu v}W^{+}_{\mu}W^{-}_{v} + ig \cos \theta_{w}\{Z_{\mu} W^{-}_{\mu v} W^{+}_{v} - W^{-}_{v}W^{+}_{\mu v})\} -g^{2} \cos^{2}\theta_{w}\\
+&\{Z_{\mu} Z_{v} W^{+}_{\mu}W^{-}_{v} - Z_{\mu} Z_{\mu} W^{+}_{v} W^{-}_{v}\} - ig \cos \theta_{w}W^{+}_{\mu} W^{-}_{v} - g^{2} \cos \theta_{w}\\
+& \{A_{\mu} Z_{v} W^{+}_{\mu} W^{-}_{v} + A_{v} Z_{\mu} W^{+}_{\mu} W^{-}_{v} -2A_{\mu}Z_{\mu}W^{+}_{\mu} W^{1}_{v}\} + (g^{1}/2) \{W^{+}_{\mu} W^{+}_{\mu} W^{-}_{v}W^{-}_{v}-W^{+}_{\mu} W^{+}_{\mu}W^{-}_{\mu}W^{-}_{v}\}\tag{4.15}\\
+\end{align*}}
+
+where we have put
+\begin{align*}
+W^{\pm}_{\mu v} & = \partial_{\mu}W^{\pm}_{v}-\partial_{v}W^{\pm}_{\mu},\tag{4.16}\\
+Z^{\mu v} &= \partial_{\mu}Z_{v}-\partial_{\mu} Z_{\mu},\tag{4.17}\\
+F_{\mu, v} & = \partial_{\mu}A_{v}-\partial_{v}A_{\mu}\tag{4.18} 
+\end{align*}
+
+We make the following observations on the structure of this Lagrangian. 
+\begin{itemize}
+\item[(i)] The coupling of the charged vector bosons $W^{\pm}_{\mu}$ to the photon $A_{\mu}$ is automatically contained in the Lagrangian, provided we identify 
+$$
+g \sin \theta_{w} = \epsilon,
+$$
+as we have already done in (4.8). 
+
+\item[(ii)] In particular, all the terms within the square brackets arise from the so-called “minimal” electromagnetic coupling of $W^{\pm}$ obtained through the following replacement of the derivative terms $-\frac{1}{2}W^{+}_{\mu v}W^{-}_{\mu v}$ in the free-field part: 
+$$
+\partial W^{\pm}_{v}\rightarrow (\partial_{\mu} \mp i \epsilon A_{\mu})W^{\pm}_{v}
+$$
+
+\item[(iii)] However, there is a "nonminimal” term also. This is the piece $F_{\mu}W^{+}_{\mu}W^{-}_{\mu}$, which, in fact,
+ascribes an anomalous magnetic moment to the $W$ boson. The value of this anomalous magnetic
+moment $k$ can be shown to be unity, thus giving 2 for the g factor of the $W$ boson: 
+\begin{equation*}
+g_{w} = 1+k =2\tag{4.19}
+\end{equation*}
+
+This feature is a consequence of the symmetry of the cubic Yang-Mills vertex between the
+three vector bosons $W_{1}$, $W_{2}$, and $W_{3}$; and is a characteristic of any theory in which charged
+vector bosons and photon are incorporated into a Yang-Mills Theory. 
+
+\item[(iv)] The original cubic and quartic couplings of Yang-Mills boson $W^{3}_{\mu}$ are now shared out by $Z_{\mu}$,
+and $A_{\mu}$, with coefficients $\cos \theta_{w}$ and $\sin \theta_{w}$ as shown in figure 4.2. As a consequence, the
+charged bosons $W^{\pm}$ are coupled to $Z_{\mu}$, exactly in the same manner as to $A_{\mu}$, the only difference .
+being the replacement of $g \sin \theta_{w}$ by $g \cos \theta_{y}$. Thus, there is an electroweak symmetry between
+the photon $A_{\mu}$, and the “heavy photon” $Z_{\mu}$. 
+
+figure??
+
+
+\item[(v)] Our last comment is to focus attention on the $w^{+} W^{+}W^{-}W^{-}$ term, which implies a direct
+contact interaction among the charged bosons without involving the electromagnetic field (see
+the last diagram in figure 4.2). It is, in fact, the presence of this term in Yang-Mills theory
+which cures the troubles of the theory of massive charged vector bosons as we shall see in
+the next section. 
+\end{itemize}
+
+These self interactions among the four electroweak gauge bosons $W^{\pm}$, $Z$ and $A$ have not yet
+been tested by experiments, but theoreticians have no serious doubt about their existence and
+structure folowing from nonabelian gauge invariance. 
+
+\section{Trouble With Massive Charged Vector Bosons}
+
+It bas been known for a long time$^{2}$ that the theory of the charged vector bosons interacting with
+the electromagnetic field does not make much sense, especially if a non-zero anomalous magnetic
+moment $k$ is allowed. Nakamura$^{3}$ and Tzou$^{4}$ pointed out that the troubles can be removed if a
+direct scattering term between the charged bosons is added. For $k = 1$, one finds that this term is
+precisely the quartic coupling of the Yang-Mills $W$ boson. 
+
+The Lagrangian\footnote{Hero we are not starting with the Yang-Mills theory.} for the charged vector boson $W$ of mass $m$ coupled to the electromagnetic field is 
+
+\begin{equation*}
+\mathcal{L} = \mathcal{L}_{0} + \mathcal{L}_{\rm int}\tag{5.1}
+\end{equation*}
+where
+\begin{equation*}
+\mathcal{L}_{0} = -\frac{1}{2} W^{+}_{\mu v}W^{-}_{\mu v} - m^{2}W^{+}_{\mu}W^{-}_{v}-\frac{1}{4}F_{\mu v}F_{\mu v}\tag{5.2}
+\end{equation*}
+and
+{\fontsize{8}{10}\selectfont\begin{equation*}
+\mathcal{L}_{\rm int} = i \epsilon A_{\mu} (W^{-}_{\mu} W^{+}_{v}-W^{+}_{\mu v}W^{-}_{v})-\epsilon^{2}(A_{\mu} A_{v} W^{+}_{\mu} W^{-}_{v}- A_{\mu}A_{\mu}W^{+}_{v} W^{-}_{v})-i \epsilon k F_{\mu v} W^{+}_{\mu} W^{+}_{v},\tag{5.3}
+\end{equation*}}
+where we have used the definitions: 
+\begin{align*}
+W^{\pm}_{\mu v} &= \partial_{\mu} W^{\pm}_{v}-\partial_{v}W^{\pm}_{\mu},\\
+F_{\mu v} &= \partial_{\mu}a_{v}-\partial_{\mu}
+\end{align*}
+and $\mathcal{L}_{0}$ describes the free field dynamics of $W^{\pm}_{\mu}$ and $A_{\mu}$. The first two terms in 
+$\mathcal{L}_{\rm int}$, proportional to
+$\epsilon$ and $\epsilon^{2}$ describe the "minimal” electromagnetic interaction of $W^{\pm}_{\mu}$ arising from the replacement of
+the derivatives of the charged fields $W^{\pm}_{\mu}$ in $L_{0}$ by gauge-covariant derivatives: 
+$$
+\partial_{\mu} W^{\pm}_{v}\rightarrow (\partial_{\mu} \mp i \epsilon A_{\mu})W^{\pm}_{v}
+$$
+
+The last term proportional to $\epsilon k$ describes the anomalous magnetic moment term. 
+
+The canonical quantisation of this field theory leads to the following interaction Hamiltonian density: 
+
+\begin{equation*}
+\mathcal{H}_{\rm int} = -\mathcal{L}_{\rm int} + \frac{1}{2} i \delta^{4} (0) log\left[\left\{1 - \left(\frac{\epsilon k}{m}\right)^{2} W^{-}_{j} W^{+}_{j} \right\}^{2} + \left(\frac{\epsilon k}{m}\right)^{4} W^{+}_{j} W^{+}_{j}W^{-}_{k}W^{-}_{k}\right]\tag{5.4}
+\end{equation*}
+
+Apart from the appearance of $\delta^{4}(0)$ which is infinite, this additional term involves only the spatial
+components of the $W$ field specified by the Latin index $j$ or $k = 1, 2, 3$ and hence relativistic
+invariance of the theory is lost\footnote{Noncovariant terms arise also in the propagators of the theory. In “good” theories, the noncovariant terms arising from 
+the propagators and those arising in the $\mathcal{H}_{\rm int}$, cancel each other. But, in the present theory, they do not cancel completely,
+leading to the effective nonpolynomiat noncovariant term given in (5.4).}. Further, the presence of $i$ in front of the term makes $\mathcal{H}_{\rm int}$
+non-hermition. The theory is truly sick! 
+
+The cure discovered by Nakamura$^{3}$ and Tzou$^{4}$ is to add a direct coupling term for $W^{\pm}$: 
+{\fontsize{8}{10}\selectfont
+\begin{equation*}
+\mathcal{L}_{d} = \rho e^{2} k^{2} (W^{-}_{\mu} W^{+}_{v} -W^{-}_{v}W^{+}_{\mu})^{2}\tag{5.5}
+\end{equation*}
+to the $\mathcal{L}_{\rm int}$ in (5.4) is modified to 
+\begin{align*}
+\mathcal{H}_{\rm int} &= - \mathcal{L}_{\rm int} - \mathcal{L}_{d} + \frac{1}{2} i \partial^{4}(0) log \left[\left\{1-(1-4p)\left(\frac{e k}{m}\right)^{2}W^{-}_{j}W^{+}_{j} \right\}^{2}\right.\\
+&\left. + (1-4p)^{2} \left(\frac{ek}{m} \right)^{4}W^{+}_{j}W^{+}_{j}W^{-}_{k}W^{-}_{k} \right].\tag{5.6}
+\end{align*}}
+
+We thus see that if we choose the strength parameter $\rho = \frac{1}{4}$., the troublesome terms disappear
+altogether and we have a relativistically covariant theory, H in addition, we choose k = 1, this
+direct coupling term in (5.5) is precisely the quartic term of the SU(2) Yang-Mills theory, which
+we briefly considered in § 3 with the identification $A_{\mu} =W^{3}_{\mu}$. 
+
+On the other hand, in the SU(2) x U(1) theory, the coefficient $g^{2}$ of the quartic term in (4.15)
+can be split up into $g^{2} \sin^{4} \theta_{w}$ and $g^{2} \cos^{2} \theta_{w}$ and the two quartic terms can then be used in
+conjunction with the $A_{\mu}$, and $Z_{\mu}$, parts of the theory respectively, to cure the troubles of both parts. 
+
+Thus, a consistent theory of massive charged vector bosons is obtained only by combining the
+charged vector boson fields $W^{\pm}_{\mu}$ and the photon field $A_{\mu}$ (or a part of $A_{\mu}$, as in the SU(2) x U(1)
+theory) into a Yang-Mills multiplet. 
+
+\section{Some Implications of Electroweak\\ Unification}
+
+We shall now briefly describe a few examples of electroweak phenomena which show how close
+the links between the weak and electromagnetic parts of the theory are and how these two parts
+of the theory hejp to solve each other’s problems. 
+
+\subsection*{(i) Equivalent-photon method and electroweak theory}
+
+iquivalent photon method is a time-honoured procedure for the treatment of electromagnetic
+processes at high energies, and is associated with the names of Bohr, Fermi, Weiszacker and
+Williams. In this method which is used to calculate the cross-sections of reactions initiated by a
+charged particle at high energies, the fast-moving charged particle is replaced by the equivalent
+cloud of photons accompanying it and one calculates the cross sections of reactions induced by the
+photons themselves. In the more modern language of diagrams (sce figure 6.1), the process $CD \rightarrow CF$
+is replaced by $\gamma D \rightarrow F$, with the photon $(\gamma)$ emitted by the charged particle regarded as a real photon. 
+
+figure???
+
+A particularly interesting example is electron-positron collision at high energies producing a pair
+of charged spin-1 particles $V^{+}V^{-}$ through the virtual photons as shown in figure 6.2. Applying
+equivalent photon method, this process, at sufficiently high energies, must become equivalent to
+real photon-photon collisions producing $V^{+}V^{-}$, But, this expectation has been found to be false. 
+
+figure???
+
+Certain new effects have been found$^{5}$, which invalidate the equivalent photon method for the
+production of charged spin-1 particles, although it remains valid for spin $\leq \frac{1}{2}$ The validity of the
+equivalent photon method depends on the difference between real and virtual photons and this
+difference in turn depends on the vatue of the invariant mass $q^{2}$ carried by the photon. This
+invariant mass is zero for real photons and non-zero for the exchanged virtual photons, It turns
+out that the cross section for the production of particles of spin $\leq \frac{1}{2}$ involves this photon mass $q^{2}$
+only through terms of the form $q^{2}/E^{2}$ where $E$ is a measure of the total energy of the system. So
+as $E$ increases, the dependence on $q^{2}$ drops out and equivalence between real and virtual photon
+holds. On the other hand, for the nroduction of spin-1 particles in the process of figure 6.2, there
+occur terms of the form $q^{2}q'^{2}E^{4}/m^{8}$ where $q^{2}$ and $q^{'2}$ are the invariant masses of the two photons 
+and $m$ is the mass of the spin-1 particle, These terms prevent the asymptotic approach of equality of the process to the equivalent real photon process. In fact, because of the presence of $E$ in the numerator of the term, the failure of the equivalence becomes worse with increasing energy! 
+
+The cure of the problem is found to lie in electroweak theory$^{5}$, if the spin-1 particle $V^{\pm}$ is identified with the $W^{\pm}$ boson of this theory. The troublesome terms disappear and a generalized equivalence gets restored\footnote{ There do exist terms of the form $q^{2}/m^{2}$ and $q^{2}/m^{2}$ however, and so we must use kinematic cuts such that  $q^{2}/m^{2}$ and  $q^{'2}/m^{2} \ll 1$. } if the full set of processes present in electroweak theory are considered. As shown in figure 6.3, this implies that, in addition to photon-photon ($\gamma \gamma$) collisions, $\gamma Z$ and $ZZ$ collisions must be included. In electroweak theory, a {\it very high energy electron is accompanied not only by a cloud of photons, but also by a cloud of Z bosons and so the equivalent photon method is replaced by the equivalent boson method.} 
+
+figure???
+
+\subsection*{(ii) The charge radius of the neutrino}
+
+The electrical charge of the neutrino is zero, but it can have a charge distribution and hence a charge-radius (as in the case of a neutral atom or the neutron). Such a charge-radius will be induced by the weak interaction, As shown in the diagrams of figure 6.4, the neutrino can virtually dissociate into $e^{-}$ and $W^{+}$ and the photon can “see” the charge distribution through the charge of $e^{-}$ or $W^{+}$. However, when one calculates the tharge-radius from the diagrams it turns out to be infinite\footnote{One may choose a “gauge” aug for I the calculations, where the charge radius may y come out finite; but then the result being “gauge-dependent” is not physical. }. 
+
+
+figure???
+
+
+The solution of the problem lies in the realization that the charge distribution or the charge form factor of a neutrino is not a measurable quantity, To measure it, virtual photons of $(mass)^{2} \mod q^{2} \neq 0$ is necessary. (Real photons of $q^{2}=0$ will see only the total charge). So, one should consider the whole process including the charged particle $C$ which emits the virtual photon, But then, in 
+electroweak theory, there is a $Z$ which interacts with all the charged particles. The neutral current
+with which $Z$ interacts is partly made of the electromagnetic current itself [see (4.10)]. So, we
+should include the $Z$ exchange diagrams (figure 6.5) too. Actually there are many other diagrams,
+to this order in coupling contract. Once we add all these diagrams together and consider the whole
+scattering process of $v$ on $C$, a finite and gauge-invariant result is obtained$^{6,7}$, 
+
+figure??
+
+Thus, the concept of the electroma znetic from factors used to describe the interaction of a particle
+with an external classical electromagnetic field is not valid any more. 
+
+\subsection*{{\it (iii) Corrections to the magnetic moment of the W boson}}
+
+We have already mentioned that the total magnetic moment of the $W$ boson is $g_{w} = 1 + k = 2$.
+There are quantum corrections to this, arising from the diagrams in figure 6.6. The contribution
+from each diagram is divergent, but the sum is found to be convergent$^{7}$. It is important to note
+that the pure electromagnetic contribution of order $eg^{2} \sin^{2} \theta_{w}$, given by diagrams (a), (b) and (c)
+by itself is divergent. Only when the diagram (g), of order $eg^{2}$ arising from the $WWWW$ vertex,
+along with the $Z$ diagrams (d), (e) and (f), of order $eg^{2} \cos^{2} \theta_{w}$, are added to the electromagnetic
+contribution, that we get a finite result, 
+
+figure??
+
+\subsection*{{\it (iv) Symmetry between photon and heavy photon}}
+
+A manifestation of the electroweak symmetry is the symmetry between the massless photon and
+{he massive $Z$ boson which may be called the heavy photon. How symmetrical are the photon and
+the heavy photon in reality? One may rephrase the question in more practical terms and ask how
+symmetrical or similar are the processes mediated by the photon and the heavy photon illustrated
+in figure 6.7. The answer is given by a factorization theorem proved in ref. 8. 
+
+The factorization theorem states that as long as the initial electron and positron are unpolarized or longitudinally polarized and the final bosons are unpolarized or linearly polarized, and we restrict ourselves to tree-diagrams only, the cross-sections of the photon mediated and heavy-photon mediated processes are the same function of the final state variables. The various restrictions in the theorem can be traced to the fact that whereas photon couples to fermions by the parity conserving vector current, the fermionic coupling of the heavy photon $Z$ involves the parity violating vector-axial
+vector combination of currents. Within these restrictions, there does exist a symmetry between $\gamma$
+and $Z$, which manifests as the factorization theorem and has important consequences such as
+restoration of unitarity of the scattering matrix in the high-energy limit$^{8}$. 
+
+\section{Quantum Corrections and Precision Tests of Eu Theory}
+
+As already mentioned, the discovery of the weak bosons $W$ and $Z$ at the CERN proton-antiproton collider in 1983 confirmed the validity of the SU(2) x U(1) gauge theory as the correct theory of
+. electroweak interactions, A closer look at the masses of the bosons $m_{w}$ and $m_{z}$ given in table 1
+reveals how impressive the success of the electroweak theory is. Further, as seen from the table
+the predictions of the theory agree with the experimental values {\it only} if the quantum corrections are included, 
+
+\newpage
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&\multicolumn{2}{c|}{Theory} &\multirow{1}{*}{Expt.}\\
+\cline{2-3}
+& {\rm without quantum } &{\rm With quantum } & \\
+& {\rm corrections} &{\rm corrections} & \\
+\hline
+$m_{w}$ & 75.9 $\pm$ 1.0 & 80.2 $\pm 1.1$ & 80.9 $\pm$ 1.4 \\
+$m_{z}$ & 87.1 $\pm$ 0.7 & 91.6 $\pm$ 0.9 & 92.1 $\pm$ 1.8\\
+\hline
+\end{tabular}
+\end{center}
+
+With these quantum corrections, our formulae for $m_{w}$ and $m_{z}$ given in (4.13) and (4.14) are
+modified to (see for instance ref. 9): 
+\begin{align*}
+m_{w} & = \left[\frac{\pi \alpha}{\sqrt{2}G_{F}} \frac{1}{(1-\Delta)} \right]^{1/2}\frac{1}{\sin \theta_{w}}\tag{7.1}\\
+m_{z} & = \left[\frac{\pi \alpha}{\sqrt{2}G_{F}} \frac{1}{(1-\Delta)} \right]^{1/2}\frac{1}{\sin 2\theta_{w}}\tag{7.2}
+\end{align*}
+where $\Delta$ is the quantum correction. Whereas precise values of the fine structure constant $\alpha$ and
+‘the Fermi constant $G_{F}$ have been determined from Josephson junction and muon decay rate
+respectively, the weak mixing angle $\theta_{w}$ and the radiative correction $\Delta$ are not known so precisely, The values of these quantities at the present level of accuracy are given below$^{[10, 11]}$:- 
+\begin{align*}
+\alpha &= [137.0359895(61)]^{-1}\tag{7.3}\\
+G_{F}& = [1.16637(2)] \times 10^{-5} GeV^{-2}\tag{7.4}
+\end{align*}
+\begin{equation*}
+\sin^{2} \theta_{w}=
+\begin{cases}
+0.242 \pm 0.006 & \text{(without quantum corrections)},\\
+0.233 \pm 0.006 & \text{(with quantum corrections),}\tag{7.5}
+\end{cases}
+\end{equation*}
+
+\begin{equation*}
+\Delta = 0.0713 \pm 0.0013{\footnote{Actuatly the valuc of $\Delta$ depends on racy unknown parameters; see ref,[9]. }}\tag{7.6}
+\end{equation*}
+
+‘The crucial parameter $\sin^{2} \theta_{w}$ occurring in the formulae for the weak boson masses is determined
+from experimental data on neutral current interactions, as we already mentioned. ‘The neutral current
+data also are subject to quantum corrections and the effect of these corrections on the extracted
+value of $\sin^{2} \theta_{w}$ Oy is shown through 7.5a) and (7.5b). 
+
+The finiteness of the quantum correctioa $\Delta$ is a consequence of the {\it renormatizability} of the
+SU(2) X UU) gauge theory and it is this renormalizability which distinguishes it as a full-fledged
+theory, in contrast to the earlier Fermi theory of weak interaction which leads to uncontrollable
+divergences in higher order and hence can be regarded only as an approximate theory 10 be used
+in lowest order alone. Thus, testing the electroweak theory at the level of quantum corrections will
+truly establish the theory as the correct one, just as QHD was established in the late 1940s as the
+correct theory of electromagnetism after the experimentally measured Lambshift and the anomalous
+magnetic moment of the electron could be correctly calculated as QED quantum corrections. ‘This
+is the importance of the quantum corrections.
+
+However, one must balance this agains the fact that the precision of neither the theoretical
+predictions nor the experimental data shown in table 1 are anywhere near the fantastic degree of
+accuracy reached in QED. 
+
+Great expectations have been consequently raised on the possibility of precision measurements
+of the mass and width of the $Z$ boson at the new $e^{+}$ $e^{-}$ colliders LEP and SLC, The total $e^{+}$ $e^{-}$
+energy of these machines can be tuned to match exactly the resonance energy of $Z$ (namely, $m_{z}$)
+so that copious production of $Z$ bosons becomes possible and the resonance energy $m_{z}$ and the
+width $\Gamma$ can be measured precisely\footnote{This has in fact been achieved now with the following results$^{[14-18]}$.
+\begin{align*}
+m_{z} &= 91.154 \pm 0.032 GeV\\
+\Gamma_{z}& = 2.535 \pm 0.030 GeV
+\end{align*}
+ }
+
+\section{Epilogue}
+
+Finally, to put the whole thing into proper perspective, let us come back to electrodynamics, We
+have now seen how Maxwell's laws have been incorporated into a more general system of laws
+which unify clectrodynamics and weak interactions. We have discussed a few of the implications of
+this electroweak unification, but what has been done so far in this respect is hardly more than
+scratching the surface. The deeper implications of this unification are yet to be fully developed,
+The consequences of such a development may be as profound and far-reaching as those of Faraday’s
+unification of electricity and magnetism or of Maxwell’s unification of electrodynamics and optics.   
+
+\newpage
+
+\begin{thebibliography}{99}
+\bibitem{} Hzykson, C. and Zuber, 1-B., {\it Quantum Field Theory}, McGraw Hill (1985), Abers, E. S. and Lee, B. W., {\it Phys. Rep.}, 1973, C9, 1. 
+
+Rajasckaran, G., Building up the Standard Gauge Model of High Energy Physics, in {\it  Gravitation, Gauge Theories and
+the Early Universe, (eds.) } B. R. Iyer, N. Mukunda and C, V, Vishveshwara, Kluwer Academic Publishers, 1989, = 185, 
+\bibitem{} Lee, T. D, and Yang, C, N., {\it Phys. Rev.}, 1962, 128, 885. 
+\bibitem{} Nakamura, M., {\it Prog. Theor. Phys.}, 1965, 33, 279, 
+\bibitem{} Tzou, K. H., {\it Nuovo. Clinento.}, 1964, 33, 286. 
+\bibitem{} tayaraman, T., Rajasckaran, G. and Rindani, S. D., {\it Pramana}, 1986, 26, 21, 
+\bibitem{} Lee, S. Y., {\it Phys. Rev,}, 1972, D6, 1701. 
+\bibitem{} Bardeen, W. A., Gastmans, R. and Lautrup, B., {\it Nucl. Phys.}, 1972, B46, 319. 
+\bibitem{} Lakshmi Bala, S., and Rajasekaran, G., {\it Int, J. Mod. Phys.}, 1989, 4, 2977, 
+\bibitem{}  Rajasekuran, G., Electroweak Radiative corrections and the Masses of Weak Bosans, in {\it Standard Model and Beyond,} (eds,) D. P. Roy and Probir Roy {\it World Scientific}, 1989, p. 407, 
+\bibitem{} Yost, G. P. et, al, (Particle Data Group), {\it Phys. Lett.}, 1988, 204B, . 
+\bibitem{} Amaldi, V. {\it et. al.}, Phys. Rev., 1987, D36, 1385. 
+\bibitem{} Arnison, G. {\it et. al.} (UA I Collaboration), {\it Phys. Lett.}, 1986, 166B, 484. 
+\bibitem{} Ansari, R. {\it er. al.} (UA 2 Collaboration), {\it Phys. Lett.}, 1987, 186B, 440. 
+\bibitem{} Adeva, B, ef. al. (L 3 Collaboration), {\it Phys. Lett.} 1989, 231B, 519. 
+\bibitem{} Decamp, D, et. al. (ALEPH Collaboration), {\it Phys. Let.}, 1989, 231B, 530. 
+\bibitem{} Akrawy, M. Z. et. a. (OPAL Collaboration), {\it Phys. Lett.}, 1989, 231B, 530, 
+\bibitem{} Aarnio, P. ef, al, (DELPHI Collaboration), {\it Phys. Lett}, 1989, 231B, 539, 
+\bibitem{} Abrams, G. S. ef. al. (MARK Il Collaboration), {\it Phys. Rev. Lett}, 1989, 63, 2173. 
+\end{thebibliography}
+
+{\bf ACKNOWLEDGEMENT:} The author is grateful to Prof. V. Radhakrishnan, Prof. S. Ramaseshan and
+Prof. G. Srinivasan for their kind invitation to deliver this talk, for the excellent hospitality during
+the Symposium and for their abundant patience which made this written version possible. 

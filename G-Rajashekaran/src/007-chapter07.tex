@@ -1,0 +1,432 @@
+\chapter{The Discovery of Dirac Equation and its Impact on Present-day Physics}\label{chap7}
+
+\Authorline{G. Rajasekaran}
+\addtocontents{toc}{\protect\contentsline{section}{{\sl K Srinivasa Rao}\smallskip}{}}
+\lhead[\small\thepage]{\small\thechapter. Quantum Theory of Angular Momentum and Hypergeometric series}
+
+\authinfo{Institute of Mathematical Sciences Madras 600 113}
+
+\textbf{Abstract:}	The major events in the discovery of the Dirac equation and its interpretation are traced. The subsequent role it has played in the development of quantum field theory culminating in the Standard Model of present-day high energy physics is discussed.
+
+Invited talk at the National Seminar on
+Sixty Years of Dirac Equation, Santiniketan, January 1989
+
+
+\section{Discovery of the Dirac Equation and its Impact on Present-day Physics}
+
+The relativistic wave equation of the electron ranks among the highest achievements of 20th century science. Dirac’s two papers on the subject published in 1928 are the following :-
+
+\begin{center}
+\begin{tabular}{|ll|}
+\hline
+&P.A.M. Dirac Proc. Roy. Soc. A117, 610, 1928\\
+&P.A.M. Dirac Proc. Roy. Soc. A118, 351, 1928\\
+\hline
+\end{tabular}
+\end{center}
+
+Dirac himself is supposed to have remarked that the relativistic wave equation of the electron is the basis of all of Chemistry and almost all of Physics.
+
+We shall start by telling the story of the discovery of the Dirac equation. There is no better way of telling it than in the words of the protagonists themselves and this is the way we shall do it. In this, we are greatly helped by the excellent book “Inward Bound” by Abraham Pais (Pais 1986). Almost all our quotations are taken from this source. Every serious student of physics must read this book.
+
+\subsection*{Quantum Mechanics}
+
+The background to the story of the Dirac equation is the story of Quantum Mechanics itself, with the following milestones :-
+\begin{center}
+\begin{tabular}{lcl}
+	1925		&:&	Matrix mechanics (Heisenberg)\\
+	1926		&:&	Wave mechanics (Schrödinger)\\
+	1925		&:&	$[q, p] = i\hbar$
+\end{tabular}
+\begin{equation*}
+\begin{rcases}
+  1927 &:  {\rm Poisson bracket} \rightarrow\frac{1}{i \hbar}  {\rm  Commutator} \\
+       & {\rm Transformation Theory} \\
+\end{rcases}
+\text{(Dirac)}
+\end{equation*}
+\end{center}
+The significance of Dirac’s contribution to this phase can be brought out by quoting
+
+\textbf{Einstein~:}	“Dirac to whom, in my opinion, we owe the most logically perfect presentation of quantum mechanics”.
+
+Let us next listen to a conversation.
+
+\textbf{A Conversation in 1927}
+
+Bohr		:	What are you working on ?
+Dirac		:	I am trying to get a relativistic theory of the electron.
+Bohr		:	But Klein has already solved that problem.
+
+\textbf{Dirac disagreed} To see the reason, let us look at the equation of Klein, Gordon et al.
+
+\textbf{The Klein-Gordon-Schrödinger – Fock – de Donder – Van den Dungan – Kudar Equation (1926)}
+
+\begin{tabular}{|cc|}
+\hline
+$\frac{1}{c^{2} \frac{\partial^{2}}{\partial t^{2}}} - \nabla^{2} + \frac{m^{2} c^{2}}{\hbar^{2}}\phi$ &$=0$\\
+\hline
+\end{tabular}
+
+From this, one can derive the following continuity equation :
+
+\begin{tabular}{|cc|}
+\hline
+$\frac{\partial \rho}{\partial t} + \nabla \cdot j$ &$=0$\\
+\hline
+\end{tabular}
+
+where
+
+\begin{tabular}{|cc|}
+\hline
+$j$ & $= \frac{i \hbar}{2m} (\phi \nabla_{\phi} - \nabla_{\phi \phi} )$\\
+\hline
+\end{tabular}
+
+\begin{tabular}{|cc|}
+\hline
+$rho$ & $= \frac{i \hbar}{2mc^{2}} (\phi \frac{\partial \phi}{\partial t} - \frac{\partial \phi}{\partial t} \phi )$\\
+\hline
+\end{tabular}
+
+Note that the probability density $\rho$ is not positive definite. That is why Dirac disagreed with Bohr. A positive definite $\rho$ is central to transformation theory. “The transformation theory had become my darling. I was not interested in considering any theory which would not fit with my darling”.
+
+“The linearity (of the wave equation) in $\frac{\partial}{ \partial t}$  was absolutely essential for me. I just couldn’t face giving up the transformation theory”.
+
+\textbf{Thus, Dirac set out to find an alternative relativistic equation}
+
+(The scalar equation is not as bad as Dirac thought in 1927. We shall come back to this point later).
+
+\textbf{Playing with Equations}
+
+	“A great deal of my work is just playing with equations and seeing what they give”.
+
+	\textbf{Dirac Equation} is a perfect example of the result of this play. The particular game which led him to his goal was his observation that
+
+\begin{tabular}{|cc|}
+\hline
+$(p_{1}^{2} + p_{2}^{2} + p_{3}^{2})^{1/2}$ & $= \sigma_{1} p_{1} + \sigma_{2}p_{2} + \sigma_{3}p_{3}$\\
+\hline
+\end{tabular}
+
+where $\sigma_{1}$, $\sigma_{2}$, $\sigma_{3}$ are Pauli matrices satisfying
+
+$$
+\{\sigma_{i}, \sigma_{j} \} = 2 \delta_{i j} \quad \quad (i, j = 1, 2, 3)
+$$
+
+“That was a pretty mathematical result. I was quite excited over it. It seemed that it must be of some importance”. How to generalize it to the sum, not of three but of four squares? In other words, in the relativistic case, one wants to play with
+$$
+p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + p_{4}^{2} = - m^{2} c^{2} ; p_{4} = i \frac{E}{C}
+$$
+What is $(p_{1}^{2} + p_{2}^{2} + p_{3}^{2} + p_{4}^{2})^{1/2} $ ? 
+
+“It took me quite a while ……… before I suddenly realized that there was no need to stick to the quantities $\sigma_{1}$ … with just 2 rows and columns. Why not go to 4 rows and columns?”
+
+\textbf{The Equation}
+
+Answer to the question posed :
+
+$$
+(\sum\limits_{\mu -1}^{4} p_{\mu}^{2})^{1/2} = \sum\limits_{\mu=1}^{4}\gamma_{\mu} p_{\mu} ; \{\gamma_{\mu}, \gamma_{\nu} \} = 2 \delta_{\mu \nu}.
+$$
+
+The $\gamma$’s are $4 \times 4$ matrices.
+
+Thus was born Dirac Equation :-
+
+$$
+[\gamma_{\mu} \frac{\partial}{\partial x^{n}} + \frac{mc}{\hbar}]\phi = 0 (x^{\mu}= x, ict)
+$$
+
+It is linear in $\frac{\partial}{\partial t}$ as its author so fervently desired! The rest is standard textbook stuff.
+
+The continuity equation reads (in covariant form) :
+$$
+\frac{\partial j^{\mu}}{\partial x^{\mu}} =0 ; j_{\mu} = i \psi = \psi \gamma_{4}
+$$
+$$
+j_{4} = i \sigma ; \sigma = \psi^{+} \psi.
+$$					   
+The positive definite probability density has been achieved.
+
+	The spectacular achievements contained in Dirac’s two papers of early 1928 are the following :-
+\begin{itemize}
+    \item(a) Spin $1/2 \hbar$ was a necessary consequence of his equation.
+    \item(b) The right magnetic moment with g = 2 was obtained.
+    \item(c) The Thomas factor appeared automatically.
+    \item(d) The Sommerfeld fine structure formula for the H-atom was derived with the correct quantum numbers.
+\end{itemize}    
+       
+Dirac did not solve the equation exactly. The exact solution of the Dirac equation in Coulomb field was given by Darwin and Gordon. “I thought that if I got anywhere near right with an approximation method, I would be very happy about that ….I think I would have been too scared myself to consider it exactly ….. It leads to great anxiety as to whether it’s going to be correct or not”. This passage is of great interest, since it shows Dirac was also human!
+
+Physicists of the time realized at once how enormous the harvest was. This is enumerated above. Mathematicians too became quickly interested in the new theory. Von Neumann wrote in his paper (1928): “That a quantity with 4 components is not a 4-vector, has never happened in relativity theory”. Ehrenfest was the first to introduce the term ‘spinor’ for Dirac’s $\psi$ and Van der Waerden provided a systematic spinor analysis.
+
+However, a new mystery arose. $\psi$ with 2 components is needed for the 2 spin states.
+
+Why $\psi$ with 4 components?
+
+What is the physical meaning of the 4-component spinor ?
+
+This leads to the next story.
+
+\textbf{The story of the negative energies}
+
+The square root of the relativistic equation for energy:
+$$
+E^{2} = m^{2} C^{4} + p^{2} c^{2} + mc^{2}
+$$
+gives
+$$
+E = \pm (m^{2} c^{4} + p^{2} c^{2})^{1/2} - mc^{2} 
+$$
+The negative energy states account for the doubling of the components in $\psi$. However, quantum transitions to negative energy states are possible and cannot be avoided in quantum mechanics unlike in classical mechanics. In fact, in 1928, Klein and Nishina derived their famous formula for Compton scattering using Dirac equation and allowing for transitions to negative energy states in the intermediate state.
+
+So, what is to prevent an electron from dropping down the bottomless pit of negative energy states, emitting the difference in energy as radiation? The difficulties were focused by the so-called Klein paradox (1928). A steep potential barrier of height $>$ $mc^{2}$ was capable of reflecting more electrons than were impingent on it! How could Dirac’s equation for the electron be so successful, yet so paradoxical? Utter confusion prevailed during 1929-32.
+
+figure???
+
+\textbf{Heisenberg~:}	“Up till that time I had the impression that in quantum theory we had come back into the harbour, into the port. Dirac’s paper threw us out into the sea again.”
+
+\textbf{Heisenberg (in 1928) :}	“The saddest chapter of Modern Physics is and remains the Dirac theory.”
+
+\textbf{The hole theory}
+
+Dirac (Proc. Roy. Soc. A126 (360) 1930) proposes that all negative energy states, are completely filled invoking Pauli exclusion principle. The catastrophic transitions are thus forbidden.
+	
+So, now the vacuum contains an infinite number of (negative energy) particles. This became know as the negative energy sea. A “hole” in the sea behaves like a particle with positive energy and positive charge. Dirac identifies this particle with proton. He thought that interactions among the negative energy electrons would modify the mass of the “hole”.
+
+The identification of holes, with positively charged particles is OK, but why proton?
+
+Dirac~:	“At that time …. Everyone felt pretty sure that electrons and protons were the only elementary particles in Nature”.
+
+How times have changed!
+
+\textbf{More Confusion}
+
+Dirac’s proposal only increased the confusion. Oppenheimer showed that the hole (namely the proton) and the electron will annihilate each other, with a life time $10^{-10}$ sec. In other words, a hydrogen atom cannot live longer than $10^{-10}$ sec.! Hermann Weyl used the symmetry between positive and negative electricity in Maxwell and Dirac equations (which is actually C-invariance in modern parlance) to show that 
+$$
+m_{hole} = m_{e}.
+$$
+Dirac, having taken due note of all these objections, “bites the bullet”!
+\begin{center}
+Dirac, Proc. Roy. Soc. A113, 60 (1931)
+\end{center}
+
+This is actually the monopole paper, and we will say more about it later. For the present we note his remark in this paper: “A hole, if there were one, would be a new kind of particle, unknown to experimental physics, having the same mass and opposite charge of the electron”.
+
+The fight was not over Pauli (1932):- 	“Recently Dirac attempted the explanation …. of identifying the hole with antielectrons, particles of charge +|e| and mass same as that of the electron. The experimental absence of such particles ……. We do not believe, therefore, that this explanation can be seriously considered”.
+	
+However, Nature decided to rescue Dirac ultimately. When Pauli’s article appeared in print, C.D. Anderson had already demonstrated the existence of the positron (or the antielectron). Many years later, Pauli made the following famous remark about Dirac: “…. With his fine instinct for physical realities he started his argument without knowing the end of it”.
+
+\subsection{Enter the Positron (C.D. Anderson, 1932)}
+
+Electrons produced by cosmic rays in the atmosphere travel down. An electromagnet of a particular polarity causes the track to curve to the left (say) and this is photographed by a cloud chamber (Fig (a)). But, with the same apparatus, occasionally, a track is observed to curve in the opposite direction (Fig (b)). This may      
+
+figures????
+
+be interpreted either as an electron (produced in some secondary reaction or from natural radioactivity) going up or a positron going down. How does one  distinguish between the two possibilities? By interposing a lead plate across the cloud chamber and showing that the tract curved more in the lower part (Fig (c)) and hence the particle had less energy below the lead plate which in turn means that the particle travelled downwards, Anderson clinched the issue. This was the discovery of the positron ($e^{+}$).
+
+
+\textbf{Anderson :}	“Yes, I knew about the Dirac theory …. But I was not familiar in detail with Dirac’s work. I was too busy operating this piece of equipment to have much time to read his papers ….”
+
+\subsection*{How about the Klein-Nishina formula ?}
+
+The answer can be given in Dirac’s own words. Dirac (letter to Bohr, 1929): “On my new theory …there is a new kind of double transition now taking place in which first one of the negative energy electrons jumps to the proper final state with emission (or absorption) of a $\gamma$ and secondly the original positive energy electron jumps down and fills up the hole, with absorption (or emission) of a $\gamma$. This new kind of process just makes up for those excluded and restores the validity of the scattering formula derived on the assumption of the possibility of intermediate states of negative energy”. One sample of a “new double transition”:- 
+\begin{center}
+	initial $\gamma$ + initial (+E) electron + a (-E) electron in the sea
+	$\rightarrow$ initial (+ E) electron + final (+ E) electron + hole in the sea
+			$\rightarrow$ final (+ E) electron and final $\gamma$
+\end{center}
+	Let us pause (says Pais), take a deep breath and realize that this letter of Dirac (1920) announces a monumental change in physical theory. The simple problem of the scattering of a photon on an electron is no longer a 2-body problem. It is recognised to be an infinite body problem. The same thing happens in every process. For instance, this was demonstrated in electron-positron scattering by Bhabha in 1935.
+
+	Thus quantum mechanics plus relativity leads to an infinite number of degrees of freedom, which in turn leads to field quantization. In the quantized version of the Dirac field, the particle and hole (antiparticle) can in fact be treated more symmetrically.
+
+	We may now come back to the scalar equation of Klein, Gordon et al. which we had earlier abandoned because of the non-positivity of $\gamma$. In 1934, Pauli and Weisskopt resuscitated the scalar equation by reinterpreting $\phi$ as a field describing both particle and its antiparticle and reinterpreting $\rho$ as particle density minus antiparticle density. Thus, just as Dirac’s spin 1/2 equation, the spin-0 equation of Klein-Gordon also requires for its correct interpretation, the introduction of the quantized field with its infinite number of degrees of freedom. In retrospect, we may also note that Dirac’s original motivation for turning away from the scalar equation is not quite justified. But the outcome, namely the discovery of the correct equation for the electron provides ample justification for the course pursued!
+
+\textbf{Antimatter}
+
+The existence of antiparticles predicted by Dirac’s theory is now recognized as a general law of nature :
+
+To every particle, there corresponds an antiparticle.
+
+\begin{center}
+\begin{tabular}{|c c c|}
+\hline
+e &$\rightarrow$ & $e^{+}$\\
+$p$ &$\rightarrow$ & $\bar{p}$\\
+$n$ &$\rightarrow$ & $\bar{n}$\\
+$\pi^{+}$ &$\rightarrow$ & $\pi^{-}$\\
+$k^{0}$&$\rightarrow$ & $\bar{k^{0}}$\\
+\hline
+\end{tabular}
+\end{center}
+
+Of course, there could be self-conjugate particles, ie. particles whose antiparticles are the same.
+Ex: $$
+\pi^{0} \rightarrow \pi^{0}
+$$
+$$
+\gamma \rightarrow \gamma
+$$
+
+The discovery of the concept of antimatter (which, as we have seen, had a tortuous birth) may turn out to be the most profound outcome of the marriage of quantum mechanics and relativity. The existence of matter-antimatter asymmetry (CP violation) in the fundamental forces of Nature and its possible connection to the existence of matter-antimatter asymmetry in the Universe (predominance of matter over antimatter) are important topics of current research.
+
+We may also add another remark at this point. Remember that Dirac had to invoke Pauli’s exclusion principle in filling up the negative energy sea and stabilizing the positive energy states. This step is actually the starting point of the so called spin-statistics theorem in quantum field theory. Particles with half-integral spin have to obey Pauli’s principle and Fermi-Dirac statistics. The other half of the theorem follows by showing the inconsistency of antisymmetric statistics in the quantum field theory of integral spin particles such as the spin-0 Klein-Gordon particle ; these obey the symmetric or Bose-Einstein statistics.
+
+\textbf{Self-Conjugate fermions}
+
+In 1937, Majorana introduced the idea of a particle satisfying the Dirac equation, but having its antiparticle the same as itself. This is the self-conjugate fermion. Such particles may exist in nature. A possible candidate is the neutrino. Is the neutrino identical to the antineutrino? We do not know the answer at present.
+
+How does one understand self-conjugate fermions in the context of the original hole theory? Rather than going into details, we shall restrict ourselves to a few brief remarks. A Majorana spinor does not have a well-defined energy eigenvalue; it is not an eigenfunction of the single-particle Hamiltonian. A many particle description (field quantization) is necessary for a correct understanding, just as in the case of the spin-0 particle.
+
+Thus, Majorana provided another way of solving the negative energy problem of the Dirac equation. In retrospect, we may say that it was fortunate that the idea of the self-conjugate Majorana particle was not discovered earlier. For, in that case, hole theory and the idea of the antiparticle might not have been discovered !
+
+\textbf{“Quantized singularities in the Electromagnetic Field”}
+
+In 1931, Dirac wrote the famous magnetic monopole paper with the above title – in which he showed that the existence of isolated magnetic monopoles is consistent
+
+with quantum mechanics, provided its magnetic charge multiplied by the electric charge of the electron is quantized. Apart from the brilliance of the ideas contained in it, for which the paper is justly famous, the paper is remarkable in certain other respects.
+\begin{itemize}
+   \item In the introduction to this paper, Dirac airs his views on the role of Mathematics in Physics and on how the steady progress of physics depends on the invention of new mathematical ideas and the subsequent development of the physical concepts associated with them. Even after 60 years, this comment is as fresh as it is relevant.
+    
+    \item It is in this paper that Dirac “officially” announces that the hole must have the same mass as that of the electron. One can almost feel Dirac’s disappointment that his electron theory may fail, since such a ‘new kind of particle’ is ‘unknown to experimental physics’. He seems to say “I will start all over again” with a new idea and this is how the Dirac Monopole was born! (This point of history does not seem to be widely known.)
+\end{itemize}
+
+\textbf{What about other spins?}
+
+Dirac equation is, after all, only for spin 1/2. Nevertheless it has turned out to be enormously important for Physics. Reason : not only the electron but a dominant number of “elementary” particles (quarks and leptons) have spin 1/2. In fact, in the so called Standard Model of present-day High Energy Physics, the “matter” sector consists of only spin 1/2 particles, all satisfying the Dirac equation.
+
+Our understanding has not progressed much for higher spins (s>1/2). Enormous amount of work has been done on higher spins, following the footsteps of Dirac, but the subject is plagued with many inconsistencies. The following is a brief Progress Report.
+	
+\textbf{Spin 0}
+
+There is no problem at least at the level of the free field equation, after the reinterpretation by Pauli and Weisskopf. Interactions treated perturbatively in renormalizable quantum field theory do not cause any problem. But there are hints of difficulties in a complete (nonpertubative) theory.
+
+\textbf{Spin 1}
+
+For m = 0, this is the photon whose field satisfies the Maxwell equation. This is replaced by the Proca equation for massive spin-1 particles. If the massive particle is charged, even perturbation theory is afflicted with many diseases which are cured only when the system is incorporated into a nonabelian gauge theory. Thus higher symmetry is necessary for a consistent theory.
+
+\textbf{Spin 3/2}
+
+Here again a consistent theory is obtained only by invoking higher symmetries inherent in supersymmetric theories, Kaluza-Klein theories or superstring theories. Recently, Rindani and Sivakumar (1986, ’88, 89, 90) have shown how all the inconsistencies are removed in a theory of massive spin 3/2 particles obtained by dimensional reduction of Kaluza-Klein theory.
+
+\textbf{Moral}
+
+Do not follow Dirac (blindly). Follow Nature. Nature loves higher symmetries.
+
+\textbf{Transition from 1928 to 1988}
+
+Let us now make the transition from 1928 to 1988 by comparing the Standard Model of Physics of 1928 with the Standard Model of Physics of 1988. In 1928, the strong and weak interactions had not yet been recognized although radioactivity was known. Hence one may summarize the physics of 1928 as follows (Compare Dirac’s remark about his equation quoted at the very beginning of this talk):
+
+\textbf{Standard Model of 1928}
+
+\begin{center}
+\begin{tabular}{|ccc|}
+\hline
+& Dirac equation&\\
+					&+&\\
+				&Maxwell equation&\\
+					&+&\\
+				&Einstein equation for gravity&\\
+\hline
+\end{tabular}
+\end{center}
+	
+In 1988, we have the $SU(3) \times SU(2)\times  U(1)$ guage theory of strong and electroweak forces. This is now called the Standard Model of Higher Energy Physics and is the basis of all that is known in the physical world except gravity.
+
+\textbf{Standard Model of 1988}
+\begin{align*}
+L =& -\frac{1}{4} G^{\alpha}_{\mu \nu} G^{\alpha}_{\mu \nu} - \frac{1}{4} W_{\mu \nu}^{a} W_{\mu \nu}^{a} - \frac{1}{4} B_{\mu \nu} B_{\mu \nu}\\
+& + i \sum_{n} \bar{q}_{L}^{n} \gamma^{\mu}(\partial_{\mu} + i g_{3} \frac{\lambda}{2} G_{\mu}^{a} + i g_{2} \frac{\tau^{a}}{2} W_{\mu}^{a} + i \frac{g_{1}}{6}B_{\mu})\\
+& + i \sum_{n} \bar{U_{R}^{n} \gamma^{\mu}} (\partial_{\mu} + ig_{3} \frac{\lambda^{a}}{2} G_{\mu}^{a} + ig_{1}\frac{2}{3}B_{\mu}) u_{R}^{n}\\
+& + i \sum_{n} \bar{d_{R}^{n} \gamma^{\mu}} (\partial_{\mu} + ig_{3} \frac{\lambda^{a}}{2} G_{\mu}^{a} - \frac{i}{3}g_{1}B_{\mu}) d_{R}^{n}+\\
+& + i \sum_{n} \bar{l_{L}^{n} \gamma^{\mu}} (\partial_{\mu} + ig_{3} \frac{\tau^{a}}{2} W_{\mu}^{a} - \frac{i}{2}g_{1}B_{\mu}) l_{L}^{n}\\
+& i \sum_{n} \bar{e}_{R}^{n} \gamma^{\mu}(\partial_{\mu} - i g_{1}B_{\mu}) e^{n}_{R} +\\
+& (\partial_{\mu} ig_{2} \frac{\tau^{a}}{2} W_{\mu}^{a} + \frac{i}{2} g_{1} B_{\mu}) \phi^{2}\\
+&- \sum\limits_{m,n} (\Gamma^{u}_{mn} q_{L}^{m} \psi^{c}u_{R}^{n} + \Gamma^{d}_{mn} q_{L}^{m} \phi d_{R}^{n})\\
+& + \Gamma_{mn}^{e} l_{L}^{m} \phi e_{R}^{n} + h.c)\\
+& + \mu^{2}\phi^{*} \phi - \lambda(\phi^{*} \phi)^{2} + \text{gravity}
+\end{align*}
+
+
+
+The explicitly written part of the above Lagrangian describes the SU(3) x SU(2) x U(1) theory of strong and electroweak forces. The equations of motion following from this Lagrangian are the present-day successors of the Dirac and Maxwell equations of the 1928 Standard Model. This is a measure of the “progress” that has been made in 60 years. We shall not attempt to explain the various terms in the Lagrangian, for that will require another lecture. See for instance Rajasekaran (1989) or Cheng and Li (1984). It is more important to draw attention to the term “gravity” (added at the end of the above equation) which sticks out like a “sore thumb”; we do not yet know how to add gravity to the rest of physics in a consistent manner.
+
+\textbf{Two repetitions of the Dirac trick}
+
+In attempting to go beyond the present-day standard model, many brilliant discoveries have been made, some of which directly inspired by Dirac’s work. We shall mention two such discoveries.
+
+(i) As we already saw, Dirac discovered the anticommuting + matrices by taking the square root of $P^{2}$ :
+$$
+\sqrt{P^{2}} = \gamma_{\mu}p^{}\mu.
+$$
+
+By taking the square root of  $\gamma_{\mu}P^{}\mu$, the anticommuting supersymmetry generators Q were discovered (See for instance Ferrara, 1987) :
+$$
+\sqrt{\gamma_{\mu} P^{\mu}}\sim Q.
+$$
+
+Or, more exactly,
+$$
+\gamma_{ij}^{\mu} P_{\mu} = \frac{1}{2} \{Q_{i}, \bar{Q}_{j} \}
+$$
+where I and j are the indices of the $\gamma$ matrix.
+
+(ii) Ramond’s (Ramond, 1971) repetition of the Dirac trick on the two-dimensional world sheet of the relativistic string produced the fermionic string and this is what led to the supersymmetric string or Superstring.
+
+Supersymmetry and Superstrings form crucial ingredients in present-day research.
+
+\textbf{The present-day problem}
+
+As we already indicated, the combining of relativity and quantum mechanics pioneered by Dirac showed the existence of infinite degrees of freedom which was successfully handled by quantum field theory. However the success has been partial only, because of the divergences or infinities arising from summing over arbitrarily high energies and momenta in the intermediate states which is an inevitable consequence of local relativistic quantum field theory.
+
+In the treatment of the strong and electroweak forces, the divergences turn out to be of a mild variety, (namely, renormalizable divergences) and hence a temporary solution of the divergence problem has been possible.
+
+But, gravity has proved a hard nut to crack. The marriage of quantum mechanics with gravity has not yet become possible. The divergences arising in quantum gravity are not even renormalizable. The construction of a finite or renormalizable theory of quantum gravity is the most important problem in Physics at present.
+
+It is in this context, that the emergence of the superstring theory assumes significance (Green et al., 1987). Superstring theory is claimed to be a finite theory of quantum gravity. But much work is needed before that claim can be proved.
+
+To sum up,
+
+{\fontsize{6}{8}\selectfont{
+\begin{tabular}{|ccccc|}
+\hline
+Special Relativity	&+&	Quantum Mechanics	&$\rightarrow$&	Quantum Field Theory\\
+General Relativity	&+&	Quantum Mechanics	&$\rightarrow$&	Superstring Theory?\\
+\hline
+\end{tabular}}}
+
+\subsection*{Acknowledgement}
+
+It is a pleasure to thank Prof. Asim Ray for his kindness and patience which made the talk and the written version possible.
+
+\newpage
+
+%~ \section*{Bibliography}
+
+\begin{thebibliography}{99}
+\itemsep=0pt
+\bibitem{} T.P. Cheng and L.F. Li, Guage Theory of Elementary Particle Physics, Clarendon Press, Oxford, 1984.
+\bibitem{} M.B. Green, J.H. Schwarz and E. Witten, Superstring theory, Cambridge University Press, 1987.
+\bibitem{} S. Ferrara, Supersymmetry, North Holland and World Scientific, 1987.
+\bibitem{} A. Pais, Inward Bound, Oxford University Press, New York, 1986.
+\bibitem{} G. Rajasekaran, Building up the Standard Guage Model of High Energy Physics, in Gravitation, Guage Theories and Early Universe, B.R. Iyer et al. (eds.), Kluwer Academic Publishers 1989, p 185.
+\bibitem{} P. Ramond, Phys. Rev. D3, 2415 (1971).
+\bibitem{} S.D. Rindani and M. Sivakumar, J. Phys. G 12 (1986) 1335 ; Phys. Rev. D37 (1988) 3543 ; Mod. Phys. Lett. A4 (1989) 1237 ; Preprint of Physical Research Laboratory, Ahmedabad PRL-TH-90/1. 
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

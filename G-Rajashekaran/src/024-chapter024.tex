@@ -1,0 +1,794 @@
+\chapter{Electroweak radiative c orrections and the masses of the weak bosons }\label{chap24}
+
+\Authorline{G. RAJASEKARAN \footnote[$\dagger$]{On leave from the Institute of Mathematical Sciences, Madras - GO) 113, Indi }}
+\addtocontents{toc}{\protect\contentsline{section}{{\sl G. RAJASEKARAN}\smallskip}{}}
+
+\authinfo{Tata Institute of Fundamental Research \\ Homi Bhabha Road, Bombay 400005, India }
+
+\section*{Abstract}
+
+This is a pedagogical review of the renormalization of $SU(2) \times U(1)$
+electroweak theory and the calculation of the one-loop radiative correction
+to the formulae connecting the muon decay rate to the masses of $W$ and
+$Z$. Attention is also drawn to the theoretical problems of interpretation
+that one may have to face in the conext of the forthcoming precision
+measurement of the mass of the $Z$ in $e'$ $e$ colliders. 
+
+Invited talk given at the Workshop on Ligh Energy Physics
+Phenomenology, Bombay, J anuary 1989. 
+
+\section{Introduction}
+
+The discovery of the weak bosons $W$ and $Z$ at the CERN $p\bar{p}$ collider in 1983
+confirmed the validity of the $SU(2) \times U(1)$ gauge theory as the correct theory of
+electroweak interactions. A closer look at the masses of the bosons $m_{w}$ and $m_{z}$
+given in Table 1 reveals how impressive the success of the  $SU(2) \times U(1)$ theory
+is. It can be further seen that the predictions of this theory agree with the
+experimental values only if the electroweak radiative corrections are included. 
+
+The predicted values of $m_{w}$ and $m_{z}$ are obtained from the formulae: 
+
+\begin{align}
+m_{w} &= \left[\frac{\pi \alpha}{ \sqrt{2} G_{F}} \frac{1}{1-\Delta r}\right]^{1/2}\frac{1}{\sin \theta_{w}}\tag{1.1}\\
+m_{z} &= \left[\frac{\pi \alpha}{\sqrt{2}{G_{F}}} \frac{1}{(1-\Delta r)}\right]^{1/2} \frac{1}{\sin \theta_{w} \cos \theta_{w}}\tag{1.2}
+\end{align}
+
+where $\alpha$ is the fine structure constant, $G_{F}$ is the Fermi constant of weak interactions, $\theta_{w}$ is the electroweak mixing angle and $\Delta r$ is the electroweak radiative
+correction. 
+
+Whereas precise values of $\alpha$ and $G_{F}$ have been determined from Josephson
+junction and muon decay respectively,$\theta_{w}$  and $\Delta r$ are not known so precisely.
+The various quanties entering into eqs. (1.1) and (1.2) are [1,2] 
+\begin{align}
+\alpha &= [137.0359895(61)]^{-1}\tag{1.3}\\
+G_{F} & = (1.16637(2)) \times 10^{-5} GeV^{-2}\tag{1.4}
+\end{align}
+\begin{equation*}
+\sin^{2}\theta_{w}  =
+\begin{cases}
+0.233\pm 0.006 & \text{(with radiative corrections)} \\
+0.242 \pm 0.006 & \text{(without radiative corrections)}\tag{1.5}
+\end{cases}
+\end{equation*}
+\begin{align}
+\Delta r = 0.0713 \pm 0.0013~ \text{for}~ m_{t} &= 45~ GeV\\
+                      \text{and}~ m_{H} & = 100~ GeV\tag{1.6}
+\end{align}
+where $m_{t}$, and $m_{H}$ refer to the (unknown) masses of the top quark and Higgs boson. 
+
+The entries in the first column of ‘Table 1 have been calculated with $\Delta r = 0$ and $sin^{2} \theta_{w}$ from eq. (1.5) while for those in the second column $\Delta r$ from eq. (1.6) and $\sin^{2} \theta_{w}$ from (1.5) have been used. ‘The experimental results given
+in the third column are the averages of the UA1 and UA2 results [3]. 
+
+
+
+%~ \setlength{\arrayrulewidth}{0.5mm}
+%~ \setlength{\tabcolsep}{18pt}
+\begin{center}
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&\multicolumn{2}{c|}{Theory} &\multirow{2}{*}{Expt}\\
+\cline{2-3}
+& without&with &  \\
+& radiative &radiative &  \\
+& corrections &corrections&  \\
+\hline
+$m_{w}$ & 75.9 $\pm$ 1.0 & 80.2 $\pm 1.1$ & 80.9 $\pm$ 1.4 \\
+$m_{z}$ & 87.1 $\pm$ 0.7 & 91.6 $\pm$ 0.9 & 92.1 $\pm$ 1.8 \\
+\hline
+\end{tabular}\\
+{\centering{{Table 1. Comparison between theoretical and experimental values of $m_{w}$, and $m_{z}$. All the masses are in GeV. }}}
+\end{center}
+
+
+The crucial parameter $\sin^{2} \theta_{w}$  occuring in the formulae for the weak boson
+masses is determined from experimental data on neutral current interactions.
+Although data exists on all the four neutral current sectors $\nu {q}$, $\nu {e}$, $e {g}$ and $\ell \bar{\ell}$,
+the most accurate data are available only from the $\nu {q}$ sector, in particular,
+from the experiments on the deep inelastic scattering of neutrinos on isoscalar
+nuclear targets and the . value of $sin^{2} \theta_{w}$ Oy derived from these experiments have remained the most accurate one, to this day.
+
+
+The effective neutral-current interaction in the $\nu q$ sector can be written as 
+
+\begin{equation*}
+ \mathcal{L}_{\nu q} = - \frac{G_{F}}{\sqrt{2}} \bar{\nu} \gamma^{\mu} (1 + \gamma_{5}) \nu \sum_{i=u, d} \bar{q}_{i} \gamma_{\mu} \{\epsilon_{L} (i)(1 + \gamma_{5}) + \epsilon_{R}(i)(1-\gamma_{5})\}q_{i}\tag{4.1}
+\end{equation*}
+
+where $\epsilon_{z}(u)$, $\epsilon_{L}(d)$, $\epsilon_{R}(u)$ and $\epsilon_{R}(d)$ are the neutral-current coupling constants
+whose values in the $SU(2) \times U(L)$ model are:
+\begin{align*}
+\epsilon_{L}(u) = \frac{1}{2} - \frac{2}{3} \sin^{2} \theta_{w}; &\quad \epsilon_{L}(u) = -\frac{1}{2} + \frac{1}{3}\sin^{2} \theta_{w}\\
+\epsilon_{R}(u) = - \frac{2}{3} \sin^{2} \theta_{w}; &\quad \epsilon_{R}(d) = \frac{1}{3} \sin^{2} \theta_{w}.\tag{4.2}
+\end{align*}
+
+Experiments on the isoscalar nuclear targets determine the combinations: 
+\begin{align*}
+\epsilon_{L}^{2}(u) + \epsilon_{L}^{2}(d) & = 0.282 \pm 0.014\\
+\epsilon_{R}^{2}(u) + \epsilon_{R}^{2}(d) & = 0.044 \pm 0.014
+\end{align*} 
+where we have quoted the numbers from the PNAL experiments of Bogert et
+al [4]. We may compare these with the corresponding numbers 0.24 $\pm$ 0.04 and
+0.055 $\pm$ 0.03 which were obtained in 1973 from the analysis [5] of the very first
+‘neutral-current experiments [6] in the $\nu q$ sector, thus showing how stable the
+results in this sector have remained over the years. 
+
+The neutral-current data also are subject to electroweak radiative corrections and the effect of these corrections on the extracted value of $sin^{2}\theta_{w}$  is shown through eqs. (1.5a) and (1.5b). 
+
+The finiteness of the radiative correction $\Delta r$ is a consequence of the renormalizability of the $SU(2) \times U(1)$ gauge theory and it is this renormalizability
+which distinguishes the theory from the earlier Fermi theory of weak interaction. Thus, testing the electroweak theory at the level of quantum corrections
+will truly establish the theory as the correct one, just as QED was established as the correct theory of electromagnetisin after the Lambshift and the anomalous magnetic moment of the electron could be correctly calculated. 'I'his is
+the importance of the radiative corrections. However one must balance this
+against the fact that the precision of neither the theoretical predictions nor the
+experimental data shown in ‘Table 1 are anywhere near the fantastic degree of
+accuracy reached in QED. Great expectations have been raised on the possibility of precision measurements of the mass and width of the $Z$ boson at the $e^{+}$ $e^{-}$ colliders SLC and LEP. 
+
+An important aspect of the electroweak radiative correction $\Delta r$ is that it
+provides us with a probe into the unknown physics of higher energies. Since
+the radiative correction sums over the virtual quantum transitions, an accurate
+study can reveal information which is otherwise inaccessible at present energies.
+At the present time, the effect of the top quark on the radiative correction seems
+to be the most important one and information on the unknown mass of the top
+quark is sought [7,8] by a study of $\Delta r$. As the achievable precision improves,
+other unknown physics information such as on the Higgs sector, may become
+relevant. 
+
+Because of the central role the radiatively corrected formulae (1.1) and (1.2)
+play in all these discussions, our aim in this talk will be to give a pedagogical
+review of the renormalization of $SU(2) \times U(1)$ theory leading upto the derivation
+of the formulae. In this, -we shall follow the approach of Sirlin [9]. Radiative
+corrections in electroweak theory have been computed ina systematic manner
+by a number of groups [10-21]. 
+
+
+\section{Renormalization of $SU(2) \times U(1)$ theory }
+
+The basic parameters of the theory are $g_{0}$, $g'_{0}$ and $v_{0}$ which are the $SU(2)$
+and $U(1)$ coupling constants and the vacuum expectation value of the Higgs
+field respectively, the suffix ‘0’ denoting the bare quantities. The corresponding
+renormalized quantities will be denoted by $g$, $g'$ and $v$. So we may write 
+\begin{align*}
+g_{0} = g-\delta g \tag{2.1}\\
+g'_{0} - g' = \delta g'\tag{2.2}\\
+v^{2}_{0} = v^{2}-\delta v^{2}\tag{2.3}
+\end{align*}
+where $\delta g$ and $\delta v^{2}$ are the counter terms. They will be determined by the
+renormalization of the vector boson masses $m_{w}$ and $m_{z}$ and the renormalization
+of the electric charge $e$. 
+
+\subsection{Vector boson mass renormalization}
+
+The part of the Lagrangian containing the vector boson mass terms is 
+\begin{equation}
+\mathcal{L}_{V B M} = \frac{v_{0}^{2}}{2} \left[\frac{g_{0}^{2}}{2} W_{\mu}^{+} W^{\mu^{-}} + \frac{1}{4}(g'_{0} B_{\mu}-g_{0}W_{\mu}^{3})^{2}\right]\tag{2.4}
+\end{equation}
+where $W_{\mu}^{i} (i = 1,2,3)$ and $B_{\mu}$, are the gauge fields of $SU(2)$ and $U(1)$ and 
+\begin{equation}
+v_{0} = \sqrt{2}\langle 0|\phi_{0} |0\rangle \tag{2.5}
+\end{equation}
+\begin{equation}
+W_{\mu}^{\pm} = \frac{1}{\sqrt{2}} (W_{\mu}^{1} \mp i W_{\mu}^{2})\tag{2.6}
+\end{equation}
+We now define $A_{\mu}$, and $Z_{\mu}$, through the equations: 
+\begin{align*}
+A_{\mu} = \sin \theta_{W} W^{3}_{\mu} + \cos \theta_{W} B_{\mu}\\
+z_{\mu} = \cos\theta_{W} W^{3}_{\mu} - \sin\theta_{w} B_{\mu}\tag{2.7}
+\end{align*}
+where
+\begin{equation}
+\tan \theta_{w} = \frac{g'}{g}\tag{2.8}
+\end{equation}
+
+It is important to note that the mixing angle $\theta_{w}$ has been defined in terms of
+the renormalized coupling constants $g$ and $g’$ rather than the bare ones. We also define the renormalized masses $m_{z}4$ and $m_{w}$: 
+
+\begin{align*}
+m^{2}_{z} = \frac{v^{2}}{4} (g^{2} + g^{'2})\tag{2.9}\\
+m^{2}_{w} = \frac{v^{2}}{4}g^{2}\tag{2.10}
+\end{align*}
+
+We now rewrite eq. (2.4) in terms of $A_{\mu}$ and $Z_{\mu}$, aud at the same time express
+the bare quantities $g_{o}$, $g'_{0}$ and $v_{0}$ in terms of the renormalized ones using (2.1)
+- (2.3). Thus we get 
+\begin{multline*}
+\mathcal{L}_{VBM} = m^{2}_{w} W_{\mu}^{+}W^{\mu^{-}} + \frac{1}{2}m^{2}_{z}Z_{\mu} Z^{\mu}\\
+-\delta m^{2}_{w}W_{\mu}^{+}W^{\mu^{-}} - \frac{1}{2}\delta m^{2}_{z}Z_{\mu}Z^{\mu} + \delta m^{2}_{z A} Z_{\mu} A^{\mu}\tag{2.11}
+\end{multline*}
+where we have put 
+\begin{align}
+\delta m^{2}_{z} &= \frac{1}{4}(g^{2} + g^{'2}) \delta v^{2} + \frac{1}{4} v^{2}\delta (g^{2} + g^{'2})\tag{2.12} \\
+\delta m^{2}_{w} &= \frac{1}{4}g^{2}\delta v^{2} + \frac{1}{4} v^{2}\delta g^{2}\tag{2.13}\\
+\delta m^{2}_{zA} &= \frac{1}{4} v^{2}(g \delta g'- g' \delta g) - \frac{m^{2}_{z}}{(g^{2} + g^{' 2})^{1/2}}(c\delta g' - s\delta g)\tag{2.14} 
+\end{align}
+
+The vector boso11 self energy arising [rulll diagrams in Fig. 1 is descri bed
+by the vacuum polarization tensor $\pi^{\mu \nu}_{\alpha \beta}(q)$ where $\mu$ $\nu$ are Lorcntz indices and
+$\alpha$ $\beta$ denote $WW$, $ZZ$, $\gamma \gamma$ or $\gamma Z$. In general one has the decomposition: 
+\begin{equation}
+\pi_{\alpha \beta}^{\mu \nu}(q) = A_{\alpha \beta}(q^{2})g^{\mu \nu} + B_{\alpha \beta}(q^{2}) q^{\mu} q^{\nu}\tag{2.15} 
+\end{equation}
+
+Rcnormalizatioll of the vector bosun Illasses is aclric vcd by choosing the counter term $\delta m_{z}^{2}$ and $\delta m^{2}_{w}$ to satisfy
+\begin{align*}
+\delta m^{2}_{z} &= Re A_{zz}(m^{2}_{}z)\tag{2.16}\\
+\delta m^{2}_{w} &= Re A_{ww}(m^{2}_{w})\tag{2.17}
+\end{align*}
+
+As a consequence of this step, $m^{2}_{z}$ and $m^{2}_{w}$ defined in (2.9) and (2.10) become.
+the physical masses of $Z$ and $W$ and we have (using (2.8), (2.9) and (2.10)) 
+\begin{equation}
+\cos^{2}\theta_{w} = \frac{m^{2}_{w}}{m^{2}_{z}}\tag{2.18}
+\end{equation}
+
+\textbf{There is no renormalization correction to this relation.}
+
+One must also note that the absence of the photon mass counter term in
+$\mathcal{L}_{v B M}$ implies that 
+\begin{equation}
+A_{\gamma \gamma}(0) = 0\tag{2.19}
+\end{equation}
+and therefore we may write
+\begin{equation}
+A_{\gamma \gamma}(q^{2}) =-q^{2} \pi_{\gamma \gamma}(q^{2})\tag{2.20}
+\end{equation}
+where $\pi_{\gamma \gamma}(q^{2})$ is regulHr at $q^{2} = O$. But this is not true in general for $A_{\gamma z}$
+($A_{\gamma z}(0) \neq 0$). This is because of ll11physical scalar bosollS and ghosts in the
+nonullitary renormalizable gauges such as the t'Ilooft-Feynman gauge which we
+shall be using.
+
+Using eqs.(2.12) alld (2.13), the two vector boson renorlllalization condHions
+(2.16) and (2.17) can be rewritten as
+\begin{align}
+\frac{1}{4}(g{2} + g^{' 2}) \delta v^{2} & + \frac{1}{4}v^{2} (\delta g^{2} + \delta g^{' 2}) = Re A_{zz} (m^{2}_{z})\tag{2.21}\\
+ & \frac{1}{4}g^{2} \delta v^{2} + \frac{1}{4} v^{2} \delta g^{2} = Re A_{ww} (m^{2}_{w})\tag{2.22}
+\end{align}
+
+To fix all the three Counter terms $\delta g^{2}$, $\delta g^{' 2}$ and $\delta v^{2}$, we need onc more renormalization condition and that is provided by charge renormalization.
+
+\subsubsection*{Renormalization of electric charge}
+
+The ferrnionic interactions call be wri Hen as 
+\begin{align}
+\mathcal{L}_{F} &= \frac{1}{2} \sum_{i =1}^{3}\bar{q_{i}}L \gamma^{\mu} \left(g_{0} \tau \cdot W_{\mu}+ \frac{1}{3} g^{'}_{0}B_{\mu} \right)q_{iL}\notag\\
+& - g'_{0}\sum_{i}\left(\frac{2}{3}u_{i R} \gamma^{\mu}u_{i} R - \frac{1}{3}d_{i R} \gamma^{\mu}d_{i R}\right)B_{\mu}\tag{2.23}\\
+&+ \text{leptonic terms}\notag
+\end{align}
+where
+\begin{equation*}
+q_{1 L} =
+\begin{pmatrix}
+u \\
+d'\\
+\end{pmatrix}_{L}
+~;~
+q_{2 L} =
+\begin{pmatrix}
+c \\
+s'\\
+\end{pmatrix}_{L}
+q_{3 L} =
+\begin{pmatrix}
+t \\
+b'\\
+\end{pmatrix}_{L}
+~;~
+\text{or}, q_{i} =
+\begin{pmatrix}
+u_{i} \\
+d_{i}\\
+\end{pmatrix}
+, 
+i = 1,2,3
+\end{equation*}
+
+\begin{equation*}
+\begin{pmatrix}
+d' \\
+s'\\
+b'\\
+\end{pmatrix}_{L}
+=U 
+\begin{pmatrix}
+d \\
+s\\
+b\\
+\end{pmatrix}_{L}
+\end{equation*}
+
+$U$ is the Cabibbo-Kobayashi-Maskawa. (CI{M) matrix and $L$ or $R$ denote left
+or right halldedlless. Again reexpressillg the $W^{3}$ and $B$ fields ill terms of the
+photon and the $Z$ and at the same time rewriting the bare coupling constants
+in terms of the physica.l conpling Constants and counter terms, we get 
+\begin{align*}
+\mathcal{L}_{F} &= -gs A_{\mu} J_{\gamma}^{\mu}- \frac{g}{c}Z_{\mu} j_{z}^{\mu} - \frac{g}{\sqrt{2}} (W_{\mu}^{+} J_{w}^{\mu} + h \cdot c \cdot)\\
+& + (c^{3} \delta g' + s^{3} \delta g)A_{\mu} J_{\gamma}^{\mu}+ (s \delta g - c\delta g') A_{\mu} J_{z}^{\mu}\\
+&+ (c \delta g +s \delta g') Z_{\mu} J_{z}^{\mu} + (s \delta g- c\delta g')scZ_{\mu} J_{\gamma}^{\mu}\tag{2.24}\\
+& + \frac{\delta g}{\sqrt{2}}(W_{\mu}^{+} J_{w}^{\mu} + h \cdot c \cdot) 
+\end{align*}
+where $s = \sin \theta_{w}$ and $c = \cos \theta_{w}$. The currents occuring in (2.24) are defined as
+follows. Denoting the quark and lepton doublets of the 3 generatiolls by $\begin{pmatrix}u_{i}\\
+d_{i} \end{pmatrix}$ and $\begin{pmatrix}\nu_{i}\\
+\ell_{i} \end{pmatrix}$for $i=1,2,3$ we have
+\begin{align*}
+J_{\gamma}^{\mu} &= \sum_{i}\left\{\frac{2}{3} \bar{u}_{i} \gamma^{\mu} u_{i} - \frac{1}{3} \bar{d}_{i} \gamma^{\mu} d_{i} \right\} - \sum_{i} \bar{\ell}_{i}\gamma^{\mu} \ell_{i}\tag{2.25}\\
+J_{\gamma}^{\mu} &=\frac{1}{2} \sum_{i} \left\{\bar{u}_{i}\gamma^{\mu}P_{L}u_{i}-\bar{d}_{i}\gamma^{\mu} P_{L}d_{i}\right\}\\
+&+\frac{1}{2}\left\{\bar{\nu}_{i} \gamma^{\mu} P_{L}\mu_{i} - \bar{\ell}_{i} \gamma^{\mu}P_{L} \ell_{i} \right\}- \sin^{2}\theta_{w}J_{\gamma}^{\mu}\tag{2.26}\\
+J_{w}^{\mu} &=\sum_{i \cdot j}\bar{u}_{i}\gamma^{\mu} P_{L}U_{ij}d_{j}+ \sum_{i}\bar{\nu}_{i} \gamma^{mu}P_{L}\ell_{i}\tag{2.27}
+\end{align*}
+where $P_{L}=\frac{1}{2}(1- \gamma_{5})$ and we have assumcd massless neutrinos (otherwise
+another $3 \times 3$ matrix $U'$ will occur in the leptonic piece in eq. (2.27)). 
+
+The interaction Lagrangian of eq. (2.24) contaions the term - $g s A_{\mu} J_{\gamma}^{\mu}$.
+Therefore we identify the electric charge $e$ as 
+\begin{equation*}
+e =g s\tag{2.28}
+\end{equation*}
+
+There are three counter terms from eqs. (2.11) and (2.24) for any photonic
+vertex:
+\begin{equation*}
+(c^{3}\delta g'+ s^{3}\delta g) A_{\mu} J_{\gamma}^{\mu} + (s \delta g - c \delta g') A_{\mu} J_{z}^{\mu} + \delta m_{zA}^{2} A_{\mu} Z^{\mu} \tag{2.29}
+\end{equation*}
+and these are depicted in Fig. 2. Using eq. (2.14) for $\delta m^{2}_{zA}$ and noting that
+the $Z$ propagator occurs in Fig. 1(c), Olle can easily verify that at $q^{2} = 0$, the
+diagrams l(b) and J(c) cancel each other. So the only counter term for electric
+charge is the first one in eq. (2.29) and we write
+\begin{equation}
+\delta e= c^{3} \delta g'+ s^{3}\delta g\tag{2.30}
+\end{equation}
+
+(This can be verified to be eOllsistellt. with the differential of eq. (2.28)). 
+
+The divergent diagrams for the renOI'lllalization of cha.rge are given in Fig.
+3: Using current algebra methods, the sum of the matrix elements for 3(a) and
+3(b) at $p = p'$ can be reduced [22] to the form (in t'llooft-FeYl11nall gauge) 
+\begin{equation}
+M_{a} +M_{b}=+ i\frac{g^{2}}{4\pi^{2}} e e_{\mu} \langle p| J_{z}^{\mu}+ s^{s} J_{\gamma}^{\mu} | p \rangle I_{1}\tag{2.31}
+\end{equation}
+where $\epsilon_{\mu}$ is the photon polarization vector and $I_{1}$ is the divergent integral evaluated by dimensional regularization: 
+\begin{align*}
+I_{1} & = \frac{i}{2\pi^{2}}\int\frac{d^{4}k}{(k^{2}-m^{2}_{w})^{2}}\\
+& = \frac{1}{n-4} + \frac{1}{2}(\gamma-\ell n e \pi)+ \ell n \frac{mw}{\mu}\tag{2.32}
+\end{align*}
+where $n$ is the number of space-time dimensions, $\gamma = 0.577$ (Euler's constant)
+and $\mu$ is the usual mass parameter occurillg in dimensional regularization. Divergence occurs for $n = 4$ but the divergent terms will cancel eventually.
+
+The matrix clelllCllts corresponding to Figs. 2(c) and 2(d) are: 
+\begin{align*}
+M_{c} &= \frac{ic}{2} \pi_{\gamma \gamma} (0)\epsilon\langle p | J_{\gamma}^{\mu} | p\rangle \tag{2.33}\\
+M_{d} &= \frac{ig}{c} \frac{A_{\gamma z}(0)}{m^{2}_{z}} \epsilon \langle| J_{z}^{\mu} | p \rangle \tag{2.34}
+\end{align*}
+
+Note that $M_{c}$ is the additive photon wave functioll renorma. lizatioll term. The
+factor 1/2 on the right hand side of (2.33) is due to the fact that the usual multiplicative photon rCllorrnali,;ation coustant occurs as $Z_{3}^{1/2}$. Thus, $M_{c}$ added to
+the lowest order photonic vertex $ie \epsilon_{\mu} \langle p| J_{\gamma}^{\mu} | p \rangle$ must be written as $ieZ_{3}^{1/2} \epsilon_{\mu}\langle p| J_{\gamma}^{\mu} |p\rangle$ where $Z_{3}^{1/2}= [1 + \pi_{\gamma \gamma} (0)]^{1/2} \approx 1 + \frac{1}{2} \pi_{\gamma \gamma}(0)$. To order $\alpha$, the fermionic contribution to $A_{\gamma z}(0)$ vanishes and further the bosonic contribution to $A_{\gamma z}(0)$ can be calculated and the resulting expression in (2.34) can be shown to cancel the $J_{z}^{\mu}$ term in (2.31). Thus we get 
+\begin{equation*}
+M_{a} +M_{b} + M_{c} + M_{d} = ie \left[ \frac{e^{2}}{4\pi^{2}} I _{1} + \frac{1}{2} \pi_{\gamma \gamma}(0) \right] \epsilon_{\mu} \langle p | J_{\gamma}^{\mu} | p \rangle \tag{2.35}
+\end{equation*}
+
+Renormalization of electric charge $e$ requires the cancellation of the matrix
+element arising from the $\delta e$ counter term with (2.35). So, 
+\begin{equation*}
+\frac{\delta e}{e} =  - \left[\frac{e^{2}}{4 \pi^{2}}I_{1} + \frac{1}{2}\pi_{\gamma\gamma}(0) \right]\tag{2.36}
+\end{equation*}
+
+This is the third renormalization condition, which, together with (2.21) and
+(2.22) determine all the three counter terms $\delta g$, $\delta g'$ and $\delta v^{2}$.
+
+Simple algebraic manipulation of (2.21) and (2.22) leads to
+\begin{equation*}
+c\delta g'- s\delta g = -[\frac{e^{2}}{4\pi^{2}}I_{1} + \frac{1}{2}\pi{\gamma \gamma}(0)]\tag{2.36}
+\end{equation*}
+
+This is the third renormalization condition, which, together with (2.21) and
+(2.22) determine all the three counter terms $\delta g$, $\delta g'$ and $\delta v^{2}$.
+
+Simple algebraic manipulation of (2.21) and (2.22) leads to  
+\begin{equation*}
+c \delta g' - s \delta g = \frac{e}{2s^{2}} Re \left[\frac{A_{zz}}{m^{2}_{z}} - \frac{A_{ww}(m^{2}_{w})}{m^{2}_{w}} \right]\tag{2.37}
+\end{equation*}
+
+Combining this with (2.30) and (2.36), we get
+\begin{align*}
+\delta_{g} &= - \frac{e}{s} \left[\frac{e^{2}I_{1}}{4 \pi^{2}} + \frac{1}{2} \pi_{\gamma \gamma} (0)\right]- \frac{e c^{2}}{2 s^{3}} Re \left[\frac{A_{zz}(m^{2}_{w})}{m^{2}_{w}} \right]\tag{2.38}\\
+\delta g' &= - \frac{e}{c} \left[\frac{e^{2}I_{1}}{4 \pi^{2}} + frac{1}{2} \pi_{\gamma \gamma} (0)\right] - \frac{e}{2c} Re \left[\frac{A_{zz}(m^{2}_{w})}{m^{2}_{w}} \right]\tag{2.39}
+\end{align*}
+
+These two eqs. (2.38) and (2.39) coupled with eq. (2.22) call be regarded as
+the three equations explicitly determining $\delta g$, $\delta g'$ and $\delta v^{2}$. It is also useful to
+note the relation obtained from (2.14) and (2.37):
+\begin{equation}
+\delta m^{2}_{zA} = \frac{m^{2}_{w}}{2sc} Re \left[\frac{A_{zz}(m^{2}_{z})}{m^{2}_{z}} - \frac{A_{zz}(m^{2}_{w})}{m^{2}_{w}} \right]\tag{2.40}
+\end{equation} 
+
+Since the divergences have been absorbed into the physical parameters $g$, $g'$
+and $v$, everything else must now come out finite, if it is a physifally measurable quantity. In pa.rticular, we proceed to calculate the finite\footnote{The explicit cancellation of the electroweak divergences in $\mu$ decay was proved in the carly papers [23, 24].} $O(\alpha)$ radiative correction to $\mu$ decay. 
+
+\section{Radiative corrections to $\mu$ decay}
+
+The lowest order matrix element for $\mu$ decay, corresponding to Fig. 4 is 
+\begin{equation*}
+M_{0} = - \frac{g^{2}}{8} \bar{u}_{v\mu}\gamma \lambda (1-\gamma_{5})u_{\mu} \bar{u}_{e} \gamma^{\lambda}(1-\gamma_{5})v_{\nu} \frac{(-i)}{g^{2}-m^{2}_{w}}\tag{3.1}
+\end{equation*}
+where $u$ and $v$ denote the Dirac spinors for positive and negative energies respectively. We shall lleglect terms of order $(m_{l}/m_{w})$ throughout, where $m_{l}$ is
+the mass of the charged lepton. Finally, we shall also put $q = O$. The order $\alpha$
+radiative corrections to $\mu$ decay can be class;fied into three categories: boson
+self energy diagrams, vertex diagrams and box diagrams. 
+
+\section*{Boson self energy diagrams}
+
+These, along wi tll the corresponding counter terms are given in Fig. 5. The
+sum of these is represented by the following addition to the matrix element: 
+\begin{align*}
+\Delta M_{s} & = M_{0} \left[ \frac{A_{ww}(q^{2})-Re A_{ww}(m^{2}_{w})}{q^{2}-m^{2}_{w}} + \frac{e^{2}}{2 \pi^{s}}I_{1} + \pi_{\gamma \gamma}(0)\right.\\
+& + \left. \frac{c^{2}}{s^{2}}Re \left(\frac{A_{zz}(m^{2}_{z})}{m^{2}_{z}}- \frac{A_{ww}(m^{2}_{w})}{m^{2}_{w}}\right)\right]\tag{3.2}
+\end{align*}
+
+
+where $A_{ww}(q^{2})$ and $Re$ $A_{ww}(m^{2}_{w})$ arise from the diagrams of Fig. 5(a) and
+5(b) respectively, usillg eq. (2.17) for $\delta m^{2}_{w}$ OCCurillg in diagram 5(b). Both
+diagrams 5(c) and 5(d) involve $\delta g$ for which we have uSed eq. (2.38).
+
+\section*{Vertex diagrams}
+
+These are given in Fig. 6. In the photon ($\gamma$) diagrams of 6(a) and (c), we use the following decomposition Jor the photon propagator: 
+\begin{equation*}
+\frac{1}{k^{2}} = \frac{1}{k^{2}-m^{2}_{w}} + \frac{1}{k^{2}}\left(\frac{m^{2}_{w}}{m^{2}_{w}-k^{2}}\right)\tag{3.3} 
+\end{equation*}
+
+The first term can be regarded as the propagator for a massive photon, while the
+second is a massless photon propagator with a Feynman cutoff at $A = m_{w}$. The
+former emphasizes the contributions from large $k$ while the latter contributes
+for smaller $k$. Let us call them $\gamma$ > and $\gamma$< respectively. We now use only $\gamma$ > in
+6(a) and (c), but the full propagator $k^{-2}$ in (b) and (d) (we shall come back to
+$\gamma$ < later) and thus get the total vertex contribution, ill the t 'Hooft-Feynman 
+gauge:
+\begin{equation*}
+\Delta M_{v} = M_{0} \frac{g^{2}}{16 \pi^{2}} \left[\frac{c^{2}}{s^{2}} (1 + c^{2}) ln c^{2} + 2-8c^{2} I_{2}-8s^{2} I_{3}\right]\tag{3.4}
+\end{equation*}
+
+where
+{\fontsize{8}{10}\selectfont
+\begin{align*}
+I_{2} & = \frac{i}{2 \pi^{2}} \int \frac{d^{4} k}{(k^{2}-m^{2}_{z})(k^{2}-m^{2_{w}})} - \frac{1}{n-4} + \frac{1}{2} (\gamma -ln 4 \pi) +l n\frac{m_{w}}{\mu} - \frac{1}{2} -\frac{1}{2s^{2}}l n c^{2}\\
+I_{3} & = \frac{i}{2\pi^{2}}\int \frac{d^{4} k}{k^{2}(k^{2}-m^{2}_{w})} =\frac{1}{n-4} + \frac{1}{2} (\gamma - l n 4 \pi) + l n \frac{m_{w}}{\mu} -\frac{1}{2}
+\end{align*}}
+
+
+\subsubsection{Box diagrams}
+
+The box dia,grallls are depicted ill Fig. 7. igllorillg the diagram 7(a) provisionally, the contribution of diagram 7(b) which is finite, is
+
+\begin{equation*}
+\Delta M_{B}= - M_{0} \frac{g^{2}}{32 \pi^{2}} c^{2} lnc^{2}\left(5 \frac{c^{2}}{s^{2}}- 3 \frac{s^{2}}{c^{2}} \right)\tag{3.5}
+\end{equation*}
+
+\subsubsection{The total correctioll and the forlllula for the decay rate}
+
+It. can be seen that whatever is left out in the above (ie. contriuutions from
+diagrams 6(a) and 6(c) with $\gamma$ < plus the diagram 7(a) with full $\gamma$ propagator) are the traditional photonic corrections of the local Fermi theory, regulated
+with a cut-off function $m^{2}_{w}/(m^{2}_{w}-k^{2})$, procided $q^{2}$ is neglected in comparison
+with $m^{2}_{w}$. In other words, what is left out is the (pre-electroweak) pure QED
+radiative correction which is known and will be added to the decay rate at the
+end. 
+
+Adding (3.2), (3.4) and (3.5), we have the 0($\alpha$) electroweak radiative correction to $\mu$, decay (excluding the traditional) photonie corrections): 
+\begin{equation*}
+\Delta M_{s}+ \Delta M_{v}+\Delta M_{B}=M_{0}\Delta r\tag{3.6}
+\end{equation*}
+where
+\begin{multline*}
+\Delta r=\frac{1}{m^{2}_{w}} [Re~A_{ww}(m^{2}_{w}) -A_{ww}(0) ]+\frac{c^{2}}{s^{2}} R \left[\frac{A_{zz}(m^{2}_{z})}{m^{2}_{z}} - \frac{A_{ww}(m^{2}_{w})}{m^{2}_{w}} \right]\\
++ \pi_{\gamma \gamma}(0) + \frac{g^{2}}{16 \pi^{2}} \left[-8c^{2}\left\{\frac{1}{n-4}+ \frac{1}{2}(\gamma -l n 4\pi ) + ln \frac{m_{w}}{\mu}\right\}\right.\\ 
+\left. + 6 + \left(\frac{7}{2}- 6s^{2} \frac{l n c^{2}}{s^{2}} \right) \right]\tag{3.7}
+\end{multline*}
+
+
+Thus, $\mu$, decay includillg the lowest order matrix clement in (3.1) and e1ectroweak
+corrections in eq.(3.6) call be described by the effective Lagrangian 
+\begin{equation*}
+\mathcal{L}_{\mu}^{e f f}=-\frac{G_{F}}{\sqrt{2}}\bar{u}_{\nu_{\mu}}\gamma^{\lambda} (1-\gamma_{5})u_{\mu} \bar{u}_{e}\gamma_{\gamma}(1-\gamma_{5})v_{\nu_{e}}\tag{3.8}
+\end{equation*}
+where
+\begin{equation*}
+\frac{G_{F}}{\sqrt{2}} = \frac{g^{2}(1+\Delta r)}{8m^{2}_{w}}\tag{3.9}
+\end{equation*}
+
+The value of $G_{F}$ is to be determined from the formula for the $\mu$, decay rate: 
+\begin{equation*}
+\tau^{-1}_{\mu} =  \frac{G_{F}^{2}m_{\mu}^{5}}{192\pi^{2}} \left(1 - \frac{3m^{2}_{\mu}}{m^{2}_{\mu}}\right) \left[1 + \frac{3}{5}  \frac{m^{2}_{\mu}}{m^{2}_{w}}+ \frac{\alpha}{2\pi}\left(\frac{25}{4} - \pi^{2}\right)\right]\tag{3.10}
+\end{equation*}
+where the last term $\frac{\alpha}{pi}(\frac{25}{4} - \pi^{2})$ is the t.nHlitiollal photollic correctioll of t.he
+local Fermi theory and $\alpha = e^{2}/4 \pi$. This is the value of $G_{F}$ given in eq. (1.4) of
+the Introduction.
+
+Combining eq. (3.9) with eqs. (2.28) and (2.18), we get 
+\begin{align*}
+m^{2}_{w} &= \frac{\pi \alpha}{\sqrt{2} G_{F}} \frac{(1+  \Delta r)}{\sin^{2} \theta_{w}} \rightarrow \frac{\pi \alpha}{(1- \Delta r)} \frac{1}{\sin^{2} \theta_{w}}\tag{3.11}\\
+m^{2}_{z} &= \frac{\pi \alpha}{\sqrt{2} G_{F}} \frac{(1+ \Delta r)}{\sin^{2} \theta_{w} \cos^{2} \theta_{w}} \rightarrow  \frac{\pi  \alpha}{ \sqrt{2} G_{F}}\frac{1}{(1-\Delta r)}\frac{1}{\sin^{2} \theta_{w} \cos^{2}\theta_{w}}\tag{3.12}
+\end{align*}
+
+The replacement of $(1 + \Delta r)$ in the numerator by $(1 - \Delta r)$ in the denominator
+achieves the summation of the leading logarithms a $\alpha ln(m_{z}/m_{l})$ (contained in
+$\Delta r$) to all order of a and this is'the form quoted in our eqs. (1.1) and (1.2) in
+the Introduction. 
+
+This completes the derivation or the radiatively corrected [formulae for the
+masses of the weak bosons. In the rest of this section, we consider the expression
+for $\Delta r$ (eq. 3.7) in more detail a.nd show how it is calculated. 
+
+
+\subsubsection*{Analysis of $\Delta r$}
+
+Let us separate $\Delta r$ into three parts: bosonic, leptonic and hadrollic:
+\begin{equation*}
+\Delta r= \Delta r^{b}+\Delta r^{(l)} + \Delta r^{(h)}\tag{3.13}
+\end{equation*}
+
+\begin{multline*}
+\Delta r^{(b)} = \frac{1}{m^{2}_{w}} \left[Re A_{ww}^{(b)}(m^{2}_{w})-A^{(b)}_{ww} (0) \right]\\
++\frac{c^{2}}{s^{2}}Re\left[\frac{A_{zz}^{(b)}(m^{2}_{z})}{m^{2}_{z}} - \frac{A^{(b)_{ww}}(m^{2}_{w})}{m^{2}_{w}}\right]+\pi^{(b)}_{\gamma\gamma} (0)\\
++\frac{g^{2}}{16 \pi^{2}}\left[-8c^{2} \left\{ \frac{1}{n-4}+ \frac{1}{2}(\gamma-ln 4\pi)+ ln \frac{m_{w}}{\mu}\right\}\right.\tag{3.14}\\
+\left.+6+\frac{ln c^{s}}{s^{s}}\left(\frac{7}{2}-6 s^{2}\right)\right]
+\end{multline*}
+
+\begin{multline*}
+\Delta r^{f}= \frac{1}{m^{2}_{w}}\left[Re A_{ww}^{(f)}(m^{2}_{w}) -A_{ww}^{(f)}(0) \right]\\
++\frac{c^{2}}{s^{s}}Re \left[ \frac{A_{zz}^{(f)}(m_{z}^{s})}{m^{2}_{z}} -\frac{A_{ww}^{(f)}(m_{w}^{2})}{m^{2}_{w}} \right]+ \pi^{(f)}_{ww}(0)\tag{3.15}
+\end{multline*}
+
+where the fermionic contribtltion denoted hy $(f)$ comes from leptons $(l)$ and
+quarks ($h$). The radiative correction $\Delta r$ is finite for each of these three parts
+separately\footnote{In higher orders this is not true, because ofanomalies which cancel only if we consider  the leptons and quarks together.}. Let us consider them one by one. 
+
+The bosonic part $\Delta r^{(b)}$ is given by
+\begin{multline*}
+\Delta r^{(b)} = \frac{\alpha}{4 \pi s^{2}} \left[F(s^{s}) +\frac{1}{s^{2}} \left\{H(\xi) - (1-2 s^{2})H \frac{\xi}{c^{2}} \right\} \right.\tag{3.16}\\
+\left.-\frac{3}{4} \left\{\frac{\xi ln \xi - c^{2} ln c^{s}}{\xi-c^{2}} \right\}\right]
+\end{multline*}
+where $\xi= m^{2}_{H}/m^{2}_{z}$,$m_{H}$ being the mass of the physical Higgs boson,
+\begin{equation*}
+H(\xi) = \int^{1}_{0} dx \left[1-\frac{x^{2}}{2} -\frac{1}{2}\xi(1-x) ln [x^{s} +\xi(1-x)+\frac{1}{4}\xi\left(ln \xi-\frac{1}{2}\right)] \right]\tag{3.17}
+\end{equation*}
+and $F(S^{2}) = 2.68$ for $s^{2} = 0.23$, the full expression for $F(S^{2})$ being two lengthy.
+One finds for $s^{2}=0.23$,
+\begin{equation*}
+\Delta r^{(b)}=-0.0022,0.0030\quad and \quad  0.0118\tag{3.18}
+\end{equation*} 
+for $m_{H} \ll m_{z}$, $m_{H} \approx m_{z}$ and $m_{H} \approx 10m_{z}$ respectively. For $m_{H} \gg m_{z}$,eq.(3.16) leads to the asymptotic formula:
+$$
+\Delta r^{(b)} \rightarrow \frac{11 \alpha}{24 \pi s^{2}}ln \frac{m_{H}}{m_{z}}
+$$ 
+
+The, values of $\Delta r^{(b)}$ given in eq.(3.18) are slllall as compared to the Jeptonic
+and hadronic contributions to be discussed below. However it must be kept in mind that thc calculatioll of $\Delta r^{(b)}$ is based OIl the empirically utested vector
+boson self couplings and, evell more importalltly, on the interactions of the
+vector bosons with the so-far-undiscovered Higgs scalar. One must be prepared
+for surprises in this sector. 
+
+
+In contrast, the fennionic corredioll $\Delta r^{(f)}$ is calculated from the well-known
+vector-boson fermion interactions. From eq. (3.15), it is clear that the whole
+of the fermiollic correction arises from the fermionic loop contributions to the
+self-energies of $W$, $Z$ and $\gamma$. Calculation of the fermionic loop diagram in Fig.1c leads to the result:
+{\fontsize{8}{10}\selectfont
+\begin{align*}
+\Delta r^{(f)} &= \frac{g^{2}}{4\pi^{2}s^{s}}\left[\frac{1}{4}\left\{g(m^{2}_{i}, m_{i}^{2},m_{z}^{2}) | g(m^{2}_{j}, m_{j}^{2},m_{z}^{2})-2 |U_{ij}|^{2} g(m^{2}_{i}, m_{j}^{2},m_{z}^{2})  \right\}\right.\\
+			   &-\frac{1}{8} \left\{\frac{m_{i}^{2}}{m^{2}_{z}}f(m^{2}_{i}, m^{2}_{i}, m^{2}_{z}) + \frac{m^{2}_{j}}{m^{2}_{z}}f(m^{2}_{j},m^{2}_{j},m^{2}_{z})-|U_{ij}|^{2} \frac{(m^{2}_{i}+ m^{2}_{j})}{m^{2}_{z}}\right.\\		   
+               & \left.\left. f(m^{2}_{i},m^{2}_{j},m_{w}^{2})\right\} + |U_{uij}^{2}| \frac{(m_{i}^{2}-m^{2}_{j})}{4m^{2}_{z}}  \right]\\
+               & + \frac{g^{2}}{4 \pi^{2}} \left[ Q_{i g}(m^{2}_{i}, m^{2}_{i},m_{z}^{2}) -Q_{jg}(m^{2}_{j},m_{j}^{2},m_{z}^{2}) -Q_{jg}(m^{2}_{j},m^{2}_{j},m^{2}_{z}) + |U_{ij}|^{2}g(m^{2}_{i}, m_{j}^{2},m^{2}_{w})\right.\\
+ &-|U_{ij}|^{2}\frac{m^{2}_{i}-m^{2}_{j}}{8m^{2}_{w}}\{f(m^{2}_{i},m_{j}^{2},m^{2}_{w})-f(m^{2}_{i},m^{2}_{j}, 0) \}\\
+              &\left. -|U_{ij}|^{2}\frac{m^{2}_{i}-m^{2}_{j}}{4m^{2}_{w}} \{ h(m^{2}_{i}, m^{2}_{i}, m^{2}_{w})-h(m^{2}_{i}, m^{2}_{j},0)\}\right]\\
+              &+ \frac{e^{2}}{4 \pi^{2}} \left[ 2Q_{i}^{2} \left\{g(m^{2}_{i}, m_{i}^{2}, m^{2}_{z}) - g(m^{2}_{i}, m^{2}_{i}, 0)\right\}\right.\\
+              & \left. 2Q_{j}^{2}\left\{g(m^{2}_{j},m^{2}_{j},m^{2}_{z})-g(m^{2}_{j},m^{2}_{j},0) \right\}\right]\tag{3.19}
+\end{align*}}
+where
+$$
+f(m^{2}_{i},m^{2}_{j}, q^{2}) =\int^{1}_{0}dx ln M^{2}
+$$
+$$
+g(m^{2}_{i},m^{2}_{j}, q^{2})= \int^{1}_{0}dx x(1-x)ln M^{2}
+$$
+$$
+h(m^{2}_{i},m^{2}_{j}, q^{2})=\int^{1}_{0}dx \left(\frac{1}{2}-x \right) ln M^{2}
+$$
+and
+$$
+M^{2}= xm^{2}_{j}+ (1-x)m^{2}_{i} +x(x-1)q^{2}.
+$$
+
+The above is the contribution from a single $SU(2)_{L}$ doublet of fermions of
+masses $(m_{i} m_{j})$ and electric charges $(Q_{i}, Q_{j})$. The total fermionic contribution
+is obtained by summing\footnote{Note that the terms such as $g(m^{2}_{i}, m^{2}_{j}, m^{2}_{z})$ or $g(m^{2}_{j},m^{2}_{j}, m^{2}_{z})$ must be summed over $i$ or $j$ respectively while $|U_{ij}|^{2}g(m^{2}_{i},m^{2}_{j}, m^{2}_{w})$ must be summed over both $i$ and $j$. Also, note that for leptons, there may be no mixing between the generations.} over the generations, ie. for $i = V_{e}, v_{\mu}, v_{\tau}, u, c, t$ and $j=e, \mu,\tau,d,s, b$.
+
+Simple results emerge if we assume that the fermion masses are small:
+$m_{f}/m_{z}\ll 1$. Under this assumption, the leptonie contribution is
+\begin{align*}
+\Delta r^{(l)}&\approx \frac{2\alpha}{3\pi} \left[\sum_{j=e,\mu,\tau} ln -\left(\frac{m_{z}}{m_{j}}\right)\frac{5}{2}+frac{3}{8}\frac{(2s^{2}-1)}{s^{4}}ln c^{2} \right]\tag{3.20}\\
+&\approx  0.0328\tag{3.21}
+\end{align*}
+
+The hadronic part is harder to calculate because of the strong interactions.
+First let us quote the result for free quarks (no strong interactions): 
+{\fontsize{8}{10}\selectfont\begin{equation*}
+\Delta r^{(h)}(free quarks)\approx \frac{2\alpha}{\pi} \left[\sum_{f} Q^{2}_{f} ln \left(frac{m_{z}}{m_{f}} \right) - frac{25}{18} + \frac{3}{8} \frac{(2s^{2}-1)}{s^{4}} ln c^{2} \right]\tag{3.22}
+\end{equation*}}
+where the colour summation has been already performed and the summation
+over $f$ goes only over the flavour $f$ of the quarks and we have again assumed
+$m_{f}/m_{z}\ll 1$. (We are temporarily assuming that the mass of top quark $m_{t}$ also
+satisfies this inequality).
+
+
+The strong interactions can be taken into account approximately. The
+hadronic contribution $A_{ww}^{(h)}$ in eq. (3.15) is negligible, since it is of order
+$\alpha m^{2}/m^{2}_{w}$ where $m$ is the generic hadronic mass (~ 1 GeV). For terms of the
+type $A_{ww}^{(h)}(m_{w}^{2})$, asymptotic freedom of QCD can be used to just,ify their evaluation with free quarks. The troublesome term is $\pi^{(h)}_{\gamma \gamma}(0)$, since this depends on
+strong interaction dynamics. To handle this, let us write 
+\begin{equation*}
+\pi^{(h)}_{\gamma\gamma}(0)=\left\{\pi^{(h)}_{\gamma\gamma}(0)- \pi^{(h)}_{\gamma \gamma}(\hat{q}^{2})\right\} +\pi^{(h)}_{\gamma\gamma}(\hat{q}^{2})\tag{3.23}
+\end{equation*}
+
+where $\hat{q}$ is a "large" space-like momentum (10 GeV, say). Dispersion relation
+may be used to determine $\{ \pi^{(h)_{\gamma\gamma}}(\hat{q}^{2})-\pi_{\gamma\gamma}(0)\}$ from experimental data on $\sigma_{T}$
+($e^{+}e^{-} \rightarrow $ 4 hadrons). Combining this with $\pi^{(h)}_{\gamma \gamma}(\hat{q}^{2})$ which can be calculated using
+free quarks (because o[ asymptotic freedom), we get $\pi_{\gamma \gamma}^{(h)}(0)$. Thus, one finds 
+\begin{equation*}
+\Delta r^{(h)} \approx 0.035 (\text{for} m_{t}=45 GeV)\tag{3.24}
+\end{equation*}
+
+The total radiative correction is therefore [2] (adding (3.18), (3.21) and
+(3.24))
+\begin{equation*}
+\Delta r^{(h)} \approx 0.0713\pm 0.0013 (\text{for} m_{t}=45 GeV \text{and} m_{H}=100 GeV)\tag{3.25}
+\end{equation*}
+
+For values of $m_{t}$ not small compared to $m_{z}$, the exact expression (3.19)
+must be used. The numcerical values of the total radiative correction $\Delta r$ as a
+function of $m_{t}$ are available in the literature (see for instance ref. [7] or [25]).
+We only note that $\Delta r$ remains fairly C011stant at 0.071-- 0.072 for $m_{t}$ upto about
+60 GeV aftcr which it steadily decreases alld vanishes at $m_{t} \approx 250$ GeV and
+becomes negative for larger $m_{t}$. For a very crude and quick estimate,\footnote{K.V.L Sarma must be blamed for inducing me to find such an approximation.} one may
+use the formula (for 60 GeV $ \precsim m_{t}  \precsim  250$ GeV)
+\begin{equation*}
+\Delta r \approx 0.095 \left(1- \frac{m_{t}}{250} \right)\tag{3.26}
+\end{equation*}
+where $m_{t}$ is in GeV and $m_{H}\approx 100$ GeV. For $m_{t}\gg m_{z}$, see eq.(3.29) below. 
+
+Substitution of eq.~(3.26) into eqs. (3.11) and (3.12) and use of the median
+value $\sin^{2}\theta_{w}= 0.233$ lead to the rough formulae (for $m_{t}$ in the range of 60 to
+250 GeV)
+
+\begin{align*}
+m_{w} &= 80.9-\frac{m_{t}}{68.2}\tag{3.27}\\
+m_{z} &=92.4-\frac{m_{t}}{59.7}\tag{3.28}
+\end{align*} 
+
+where all masses are in GeV. Such formulae can be used to get information on
+$m_{t}$ from precision measurement of $m_{w}$ and $m_{z}$.
+
+There is a simplification of the fermionic contribution in eq. (3.19) in the
+limit of heavy fermions also. For $M_{i}, m_{j} \gg m_{z}$, eq. (3.19) becomes (putting
+$|U_{ij}|^{2} \approx 1)$,
+ 
+ \begin{equation*}
+ \Delta r^{(f)} \approx \frac{G_{F}}{\sqrt{2}} \frac{1}{8 \pi^{2}} \frac{c^{2}}{s^{2}} \left\{(m^{2}_{i}+ m^{2}_{j})- \frac{2m^{2}_{i}m^{2}_{j}}{m^{2}_{j}-m^{2}_{j}} ln \frac{m^{2}_{i}}{m^{2}_{j}} \right\}\tag{3.29}
+ \end{equation*}
+ which [or the case of the top-quark will read as 
+ \begin{align*}
+ \Delta r^{(\rm top)} &\approx  - \frac{3 G_{F}}{\sqrt{2}} \frac{1}{8 \pi^{2}}\frac{c^{2}}{s^{2}} \left\{(m^{2}_{t} + m^{2}_{t})- \frac{2m^{2}_{t}m^{2}_{b}}{m^{2}_{t}-m^{2}_{b}} ln \frac{m^{2}_{t}}{m^{2}_{b}} \right\}\tag{3.30}\\
+ & \approx -\frac{3 G_{F}}{\sqrt{2}} \frac{1}{8 \pi^{2}}\frac{c^{2}}{s^{2}} m^{2}_{t} \approx -1.1 \times 10^{-6} [m_{t} in GeV]^{2}\tag{3.31}
+ \end{align*}
+ignoring $m^{2}_{b}$, and the logarithmic term.
+
+\section{Final remarks}
+
+After this long and laborious calculation of the radiative correction, it is nice
+to be told that there isa simple explanation of t.he final result. It is a well-known
+fact (see for illstance [26]) that the Fermi COllstant $G_{F}$ for $\mu$ decay does not
+suffer infinite renormalization in QED because the V-A vertex of Fermi theory
+(converted to the neutral-curren form by Fierz transformation) is protected
+from this by vector and axial vector current conservation. Consequently $G_{F}$
+
+does not acquire any large (logari thmic) correction when it is made to "run"
+from $m_{\mu}$ to $m_{w}$. Thus, the only renormalization in the masss formulae (1.1) and
+(1.2) is that of a by the factor $(1- \Delta r)^{-1}$ . If $m_{t}$ and $m_{H}$ are not too heavy, the
+combination $\alpha(1- \Delta r)^{-1}$ call be interpreted, without too much error, as the
+running coupling constant of QED evaluated at the momentum scale of order
+$m_{w}$: 
+$$
+\alpha(m_{w})\approx \frac{\alpha(0)}{1-\Delta r} = \frac{\alpha}{1-\Delta r} \approx \frac{1}{128}
+$$
+
+where we have used $\Delta r \approx 0.07$. This becomes especially clear if the numerically
+insignificant bosonic part $\Delta r^{b}$ given eq.~(3.18) is ignored and the fermionic
+expressions given in eqs. (3.20) and (3.22) are recognized to be essentially the
+standard contribution from all charged particles lighter than the momentum
+scale $\sim m_{w}$ to the renorrnalization group evolution equation of the running
+coupling constant of QED. Thus, most of the radiative correction is simply
+accounted for, at least for small values of $m_{t}$ and $m_{H}$.
+
+For large $m_{t}$ new physics beyond QED does enter. In this context, it is
+important to realize that there is 110 dccouplillg of heavy particles in theories
+with spontaneously broken symmetry. In faet the coupling of the longitudinal
+components of the massive gauge bosons to fermions in sueh theories grows with
+the mass of the fermion and this is the origin of the strong dependence of $\Delta r$
+on $m_{t}$, exhibited by eqs. (3.26) and (3.31). 
+
+As already pointed out in section 3, unexpected effects may occur in the
+Higgs sector - such as strongly interacting heavy Higgs bosons. This may
+invalidate our perturbative calculation of $\Delta r^{(b)}$. If we are fortunate enough to be
+able to discern dearly and isolate the total correction $\Delta r$ from the experimental
+value of $m_{z}$ and if we know $m_{t}$ subtraction of the known part $\Delta r^{(f)}$ may then
+allow us to probe the unknown lliggs sector!
+
+It must be strcssed that, in the renormalization scheme of Sirlin |9| which
+we have followed, $\sin^{2} \theta_{w}$ is defined to be $1-m^{2}_{w}/m^{2}_{z}$ including one-loop radiative corrections (see eq. (2.18)). For the radiatively corrected value of $\sin^{2} \theta_{w}$ extracted from neutral-current experiments and quoted in eq. (1.5a), this definition of $\sin^{2} \theta_{w}$ has been used. (In other renormalization schemes, the value of $sin^{2} \theta_{w}$ may differ considerably.)
+
+
+We have already noted the important role of $\sin^{2} \theta_{w}$ in fixing the values of
+$m_{W}$ and $m_{z}$. Although the $vq$ sector through dcep inelastic $vN$ scattering has
+so far provided the most precise measurement of $\sin^{2} \theta_{w}$, it is really not good
+enough for a sensitive test of the theory at the level of radiative correction.
+Any further improvement in the accuracy of $\sin^{2} \theta_{w}$ is difficult because of the
+many hadronic uncertainties in the $vq$ sector. However, there is hope of higher
+precision being achieved in the $ve$ sector through the $\bar{v}_{\mu e}$ scattering experiments of CHARM2  collaboration. Alternatively, one has to await the precision
+measurement of $W$ mass also, possibly at the second stage of LEP (200 GeV),
+for then, $sin^{2} \theta_{w}$ call be eliminated between eqs.~(1.1) and (1.2).
+
+Precision tests of $Z$ at the $e^{+} e^{-}$ colliders will involve, apart from measurement of its mass, measurement of its width as well as the forward-backward asymmetry in $e^{+} e^{-} \rightarrow \mu^{+} \mu^{-}$ and the polarization asymmetry in $e^{+} e^{-} \rightarrow \tau^{+} \tau^{-}$. For an upto date account of these, see Altarelli's taly [13].
+
+Finally it must, be pointed out, that, in the confrontation of theory with the
+precision tests expected at SLC and LEP, possible modifications and extensions
+of the standard model also must be considered. In general, these will complicate
+the comparison with experiment. Additional $Z$ bosons, heavy fermions, or
+non-standard Higgs are some of these new physics issues which have received
+attention in the recellt literature.
+
+As a different example, here we ment.ion another modification of the standard model which has not received so much attention in this context, namely,
+a model of broken colour with integrally charged quarks. This model predicts
+[27] all upwards shift of  $W$ and $Z$ masses by about 3.3 and 3.7 Gev respectively,
+as compared to the standard model with fractionally charged quarks. Consequently, the information on $m_{t}$. derivable from the precision measurement of $m_{z}$ will  be different in this model.
+
+\subsection*{Acknowledgement} 
+
+Thanks are due to D.P. Roy and S. Uma Sallkar for fruitful discussions on
+radiative corrections.  
+
+
+\begin{thebibliography}{99}
+\bibitem{} C.P. Yost et al (Particle Data Group), Phys. Lett. 204B, 1 (1988) 
+\bibitem{} V. Amaldi et al, Phys. Rev. D36, 1385 (1987)
+\bibitem{} G. Arnisoll ct al (UA1 collaboration), Phys. Lett. 166B, 484 (1986)\\ R. Ansari et al (U A2 collaboration), Phys. Lett. 186B, 440 (1987)  
+\bibitem{} D. Uogcrt et al, Phys. Rev. Lett. 55., 1969 (1985)
+\bibitem{} G. Rajasekarnll and K.V.L. Sarma, Pramana 2, 62, E225 (1974) 
+\bibitem{} F.J.Hasert et al, Phys Lett. 46B 138 (1973)
+\bibitem{} P. Langacker, W .J. Marciano and A. Sirlin, Phys. Rev. D36, 2191 (1987)
+\bibitem{} J. Ellis and G. Fogli, Phys. Lett. 213B, 526 (1988)\\
+G. Costa et. al, Nucl Phys. B297, 244 (1988)
+\bibitem{} A. Sirlin, Phys. Rev. D22, 971 (1980) 
+\bibitem{} R.G. Stuart, Z. Phys. C34, 445 (1987)
+\bibitem{} C.H. Llewellyn Smith and J.F. Wheater, Nucl. Phys. B208, 27 (1982)
+\bibitem{} M. Veltman, Nucl Phys. B123, 89 (1977) 
+\bibitem{} G. Gounaris and D. Sehildknecht, Z. Phys. C40, 447 (1988); CERN
+preprint CERN-TH.5078/88 
+\bibitem{}  Z. Hioki, Prog. Theo. Phys. 71, 663 (1984)
+\bibitem{} K. Aoki et aI, Supp!. Prog. Theor. Phys. 73, 1 (1982)
+\bibitem{} B.W. Lyun and R.G. Stuart, Nucl. Phys. B253, 216 (1985) 
+\bibitem{} B.W.Lynn, M.E. Peskin and R.G. Stuart, Physics at LEP (CERN yellow
+book) Vol. 1, 90, CERN 86-02 (1986)
+\bibitem{} W.J. Marciano and A.Sirlin Phys. Rev. D22, 2695 (1980); D29, 75, 945
+1984
+\bibitem{} F. Jegerichner. Z. Phys. C32, 195, 425 (1986)
+\bibitem{} R.N. Cahn, Berkeley report LBL-26433 (1989)
+\bibitem{} F.A. Berends, W.L. Van Neerven and G.J.H. Burgers, Nucl. Phys. B297,
+429 (1988) 
+\bibitem{} A. Sirlin, Rev. Mod. Phys. 50, 573 (1978) 
+\bibitem{} G. Rajasekaran, Phys. Rev. D6 3032 (1972)
+\bibitem{} S.Y. Lee, Phys. Rev. D6, 1701 (1972) 
+\bibitem{} G. Altarelli, Precision tests of the electroweak theory, (these proceedings)
+\bibitem{} G. Rajasekaran, Proc. of Tenth Symposium on Cosmic Rays, Elementary
+Particle Physics \& Astrophysics, Aligarh, 1967, Dept. of Atomic Energy
+(India), p. 507 (1967)
+\bibitem{} N.G. Deshpande and G. Rajasekaran, Tata Institute preprint TIFR/TH/89-
+37
+\end{thebibliography}
