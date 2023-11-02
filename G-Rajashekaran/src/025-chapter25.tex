@@ -72,10 +72,211 @@ where $D_{\mu} = \partial_{\mu}-ig \bar{W}_{\mu}\cdot \bar{k}-ig'B_{\mu}x$. The 
 Because of the invariance requriment the ????? cannot contain any quadratic terms in the vector boson of Lepton fields. So there are no masses to start with. But, because of spontaneous breakdown of the symmetry, implemented by the non-vanishing $\langle \phi \rangle$, mass terms are generated.
 
 To see this in a simple manner, one may first substitute
+\begin{equation}
+\phi = 0, \frac{i \vec{x}}{2} \cdot \vec{\theta}\begin{pmatrix}o\\ \rho \end{pmatrix}\tag{2}
+\end{equation}
+where the four real fields $\theta_{1}, \theta_{2}, \theta_{3}$ and $\rho$ take the place of the comples doublet $\begin{pmatrix}\phi^{+}\\ \phi^{c} \end{pmatrix}$. At the same time, make a general SU(2) rotations on all fileds with $\vec{\theta}$ chosen as the parameters of rotation. Since $\mathcal{L}$ is generally invariant. $\vec{\theta}$ gets eliminated and so the $\phi$ dependent part of $\mathcal{L}$ becomes [on making the replacement $\phi \rightarrow \begin{pmatrix}0\\ \rho \end{pmatrix}$],
+\begin{align*}
+\frac{1}{2}(\partial_{\mu} \rho)^{2} + \frac{1}{8} g^{2} \rho^{2} (W_{\mu}^{1} & + i W^{2}_{\mu})(W_{\mu}^{1}-i W^{2}_{\mu})\\
+ & f_{e}\rho \bar{e}e + v(\rho)\tag{3}
+\end{align*}
+
+Finally, we should rewrite this Lagrangian in terms of the new field $\rho'$:
+$$
+\rho' \equiv \rho - <\rho> \equiv \rho - \eta
+$$
+which has zero vacum expectation value $< \rho'> = 0.$ This step produces the desired quadratic terms in the vector boson and lepton fields.
+
+One can easily identify the masses by looking at the expression (3). The charged vector bosoms $W_{\mu}^{\pm} \equiv \frac{1}{\sqrt{2}}(W_{\mu}^{1} \pm i W_{\mu}^{2})$ have mass $m_{w}^{2} = \frac{1}{4}g^{2}\eta^{2}$. Introducing the mixing angle $\tan \theta = g'/g$, we see that $Z_{\mu} \equiv \cos \theta W_{\mu}^{3} + \sin \theta B_{\mu}$ has mass $m^{2}_{w}/\cos^{2}\theta$ where as the combination orthogonal to $Z_{\mu}$ remins massless and so can be identified with the photon $A_{\mu}\equiv - \sin \theta W_{\mu}^{3} + \cos \theta B_{\mu}$. For the Fermions, $m_{e} = f_{e}\eta$ While the neutrino  remains massless.
+
+It is this "translation" of the field variable: $\rho' = \rho - \eta$, which in theories with only special symmetry leads to trouble, namely the existence of zero scalar bosons (Goldstone bosons). In fact the $\theta_{i}$ in Eq.(2) are the Goldstone bosons. But, because of the general invariance of the present theory these can be eliminated.
+
+The interactions of the leptons with the vector bosons can be written using the $K$ spin current $j^{i}_{\mu}$ and the electromagnetic current $j^{e}_{\mu}$ of the leptons.
+\begin{align*}
+& gw_{\mu}^{i} j_{\mu}^{i} + g' B_{\mu} (j^{e}_{\mu}- j^{3}_{\mu})\\
+& = \frac{g}{\sqrt{2}}\left\{j^{-}_{\mu} W_{\mu}^{+} + j_{\mu}^{+}W^{-}_{\mu} \right\}- g \sin \theta j_{\mu}^{e} A_{\mu} + \frac{g}{\cos \theta}\left\{j^{3}_{\mu} -\sin^{2} \theta j^{\theta}_{\mu} \right\}Z_{\mu}.\tag{4}
+\end{align*}
+
+The terms containing $W^{\pm}_{\mu}$ and $A_{\mu}$ are respectively the stanierd weak and electromagnetic interactions with the indentifications.
+\begin{equation*}
+- g \sin \theta = e ; \frac{g^{2}}{2 \sqrt{2}} \frac{1}{m^{2}_{w}} = \frac{G}{\sqrt{2}}; \tag{5}
+\end{equation*}
+where $e$ is the electronic oharge and $G$ is the ?????? constant. Eliminating $g$ between these two relations, we get
+\begin{equation*}
+m_{w}= \left(\frac{\sqrt{2}}{8} \frac{e^{2}}{G} \right)^{1/2} \frac{1}{\sin \theta} = \frac{37.4 Gev}{\sin \theta}\tag{6}
+\end{equation*}
+
+The laste term in (4) describes a neutral current interacting through $Z_{\mu}$, which, for the pure leptonics, is not in contradiction with expriment so far.
+
+Next consider the characteriastic self-intereaction among the Yang-Mills vector bosons. The cubic and quartic coupling of $W^{3}_{\mu}$ are now shered out by $Z_{\mu}$ and $A_{\mu}$ with coefficients $\cos \theta $ and $\sin \theta$ respectively, as shown in Fig. 1. It is important to note that the original yang-Mills symmetry between $W^{\pm}_{\mu}$ and $W^{3}_{\mu}$ implies a high degree of symmetry in the coupling between $W^{\pm}_{\mu}$ and $A_{\mu}$. I fact, this symmetry fixes the value of the "anomalous" magnetic moment $K_{w}$ of $W^{\pm}_{\mu}$. The first diagram in Fig. 1 corresponds to the coupling
+$$
+-g \sin \theta [g_{\alpha \beta} (k-p)_{\gamma} + g_{\beta \gamma}(p-q)_{\alpha}+ g_{\gamma \alpha} (q-k)_{\beta}].
+$$
+
+This should be compared with the conventional way of writing the coupling of a charged vector ????? with $A_{\mu}$.
+$$
+e\left[\left\{-g_{\alpha \beta} p_{\gamma} + g_{\beta \gamma}(p-g)_{\alpha} + g_{\gamma \alpha} g_{\beta}\right\} + k_{w} \left\{g_{\alpha \beta} k_{\gamma} - g_{\alpha \gamma} k_{\beta} \right\}\right].
+$$
+where the first curly bracket is the "normal" coupling while the second one is the "ancualous" one. So, by comparison, $K_{w} = 1$ or $g_{w}= k_{w} + 1 = 2$. Thus, the gyromagnetic ration of $W^{\pm}$ bosome is 2 in the lowest order, as in the case of the other "elementary" charged particles $c$ and $\mu$.
+
+\section*{III. Renormalizability and Higher-Order Effects}
+
+So, we now have a theory in which the Lagrangian is exactly invariant under the general SU(2) transformation and general U(1) transformation, but nevertheless incorporates the weak and electro magnetic interactions. This is in fact the beauty of this theory.
+
+It is not merely a matter of asthetic feeling; it is just beacuse of this general invariance, that this theory holds out the prospect of being renormaliable. Because of general invarieance there are several sets of Feyman rules, each corresponding to a different choice of gange, but all giving rise to the saem S matrix. One of the gauges is the physical gauge (which may be called the unitary gauge) where the only internal lines are those that correspond  to physical particles and, in this gauge, the vector boson propagator is $(g_{\mu v} - k_{\mu} k_{v}/m^{w}_{w})/(k^{2}-m^{2}_{w})$. It is these $k_{\mu} k_{v}$ therms which leas to the apparently non-renormalisable divergences. But, there is another gauge (which may be called the renormalizble gauge) in which the vectior boson propagator is $g_{\mu v}/(k^{2}-m_{w}^{2})$ which shows, that the theory is renormalizable. In this renormalizable gauge, which correspondig the ?????? before the ???? (see eq.(2)) wers tranformed away, the internal lines contain these fictitions particles $\theta_{i}$ and so unitatriy is not obvious. Butm, by general invariance, the renormalizable gauge should be equivalent to the unitary gauge and hece the theory is unityary and renormalizable$^{(5)}$.
+
+However, there is trouble. We have already pointed out that the renormalizability of this class of theories is actually a consequence of their  general invariance. In fact, the continuity equations for the currents (or rather the ward Identities following from these) are used in the proof of renormalizability. But, now it is well known$^{(6)}$ that the continuity equations break down whenever axial fermion currents are involved. The continuity equations for the axial currents contain additional terms (called "anomalies") arising from fermion loops. These terms block the renormalizability of the theory, although the trouble starts only in a rather high order (in order $g^{6}$ for the $\mu$ decay matrix element, for example).
+
+Renormalizability can be saved by cancelling the anomalies arising from one set of fermions with those from another set of fermions and this is what is done in the models constructed so for$^{(7)}$. If the cancellation is arranged to occur between the left-handed fermions and the right-handed fermions, one obtains a "vector-like" model in which all the total currents coupled to gauge vector bosons are polar vectors.
+
+The higher order weak and electromagnetic processes are now finity and calculable. we shall describe two examples of such calculations (in the unitary gauge) with the SU(2) $\otimes$ U(1) lepton model. 
+
+These examples have been chosen, not because of any practical interest, but because they illustrate how the weak and the electromagnetic interactions help to solve each other's problems.
+
+\subsection*{1) The Charge-Radius of the Neutrino}
+
+The electric charge of the neutrino is hero, but is can have a charge form factor induced by the weak interactions (see the diagrams in Fig. 2). The charge form factor $F(q^{2})$ can be defined through the equation:
+$$
+<v | j^{e}_{\mu} | v> = F(q^{2}) \bar{u}g_{\mu} \frac{(1-r_{5})}{2} u.
+$$
+
+From the two diagrams in Fig. 2, one obtains a divergent result for the form factor\footnote{Note that $F(0)=0$; i.e., the electric charge of the neutrino is zero. Each of the two diagrams gives a non-zero $F(0)$, but the sum cancels.}:
+$$
+F(q)^{2} =g^{2} q^{2} x (\rm a divergent quantity).
+$$
+
+Thus, the charge-radius which is defined through the derivative $F'(0)$ is infinite.
+
+But, the charge-radius defined above is not a measurable quantity. To measure it, virtual photons of (mass)$^{2}= q^{2} \neq 0$ is necessary. So, one should consider the whole process including the charged particle $C$ which emits the virtual photon (Fig. 3a). But then, in this unified model, there is a $Z$ which interacts with all the charged particles. In fact, $Z$ has an interaction with the electromagnetic current iteself (see Eq. (4)). So, one should include the $Z$ exchange (Fig. 3b) diagrams too. Once we add both these classes of diagrams together, a finite result is obtained$^{(8)}$.
+
+Hence, one may say that the charge-radius of the neutrino operationally defined through the scuttering of the neutrino by a charged particle is finite.
+
+\subsection*{Corrections to the Magnetic Moment of the $W$ Boson}
+
+These arise from the diagrams in Fig. 4. The contribution from each diagram is divergent, but the sum is found to be convergent$^{9}$. It is important to note that the pure electromagnetic controbution of order $eg^{2} \sin^{2} \theta$, given by diagrams (a), (b) and (c), by itself is divergent. Only when the diagram (g), of order $eg^{2}$, arising from the quartic vertex, along with the $Z$ diagrams (d), (e) and (f), of order $eg^{2} \cos^{2} \theta$ are added to the electromagnetic contribution, that we get a finite result.
+
+It has been known for a long time that the theory of the charged vector boson interacting with the electromagnetic field does not make much sense. Not only is the theory un-renormalizeble, but the theory is not even convariant, if a non-zero $K_{w}$ is allowed. (See Lee  and Yang$^{(10)}$). Nakarmura and Tzou$^{(11)}$ pointed out that covariance can be restored if a direct scattering term between  the $W$ bosons is added. For $K_{w}=1$, one finds that this term is precisely the quartic coupling of the Yang-Mills $W$  boson and for this value of $K_{w}$, renormalizability also is achived.
+
+Thus, we see that a meaningful theory of charged vector bosons is obtained only by combining their electromagnetic and weak interactions.
+
+At this point, a note of caution may be in order. This theory of vector boson, in which the spontaneous breakdown of symmetry is achieved through the Higgs scalar, is rather artificial. Now it is known that the theory of massless Yang-Mills fields suffers from the serious disease of infra-red divergenace. So one may conjecture that this system is \textbf{internuically unstable} because of this trouble so that the general non-ablian invariance is spontaneously broken. The non-vanishing vacmum expectation value of scalar field coupled to the Yang-Mills field is only way of explicitly implementing this break down. There is no reaso why Nature should follow this. A more natural mechanism may be the higher-order effects of the self-coupled Yang-Mills field system itself causing the breakdown due to the infrared divergences$^{(12)}$.
+
+\section*{IV. Extension to Hadrons}
+
+Using the quarks $p$, $n$,and  $\lambda$ to describe the hadrons, one may take $\frac{1-r_{5}}{2}$ $\begin{pmatrix} p \\ n_{c}\end{pmatrix}$ as a doublet under $K$ spin, where $n_{c}$ is the Cabibbo-ratatd quark: $n_{c}= n \cos \theta_{c} + \lambda \sin \theta_{c}$, and take the rest of the objects as singlets. The charged currents are all right, but the neutral current $j_{\mu}^{3}$ has the term $\bar{n}_{c} r_{\mu}\frac{(1-r_{5})}{2}n_{c}$ which, written in terms of $n$ and $\lambda$ contains a piece with $|\Delta s|=1$. This leases to weak processes violating the empirically observed selection rules.
+
+A solution to this problem is offered in the four-quark model of Glashow, Iliopouls and Maiani$^{(13)}$. In addition to the doublet $\frac{1-r_{5}}{2}$ $\begin{pmatrix} p \\ n_{c}\end{pmatrix}$. one introduces another doublet $\frac{1-r_{5}}{2}$ $\begin{pmatrix} p' \\ \lambda_{c}\end{pmatrix}$. where $\lambda_{c}= \lambda \cos \theta_{c}-n \sin \theta_{c}$ and $p'$ is a fourth quark having the same $Q$ and $S$ as  $p$.  The neutral current now involves $\bar{n}_{e} r_{\mu} \frac{(1-r_{5})}{2} n_{c} + \bar{\lambda}_{c} r_{\mu} \frac{(1-r_{5})}{2} \lambda_{c}$ which can be seen to be equal to $\bar r_{\mu} \frac{(1-r_{5})}{2}n + \bar{\lambda} r_{\mu} \frac{(1-r_{5})}{2}\lambda$ and so does not contain any $|\Delta s | = 1$ part.
+
+A nice feature of this model is the high degree of lepton-hadron symmetry in the $K$ spin currents; the two hadron doublets are in exact correspondence to the two lepton doublets: $\frac{1-r_{5}}{2} \begin{pmatrix} v_{e} \\ e\end{pmatrix} $ and $\frac{1-r_{5}}{2} \begin{pmatrix} v_{\mu} \\ \mu\end{pmatrix} $. In fact, because of this symmetry, the anomalies in the axial vector ward indetities can be made to cancel between this lepton and the hadron parts.
+
+Thus, we have a model of both lepton and hadrons based on SU(2) $\otimes$ U(1) which is not in obvious contradiction with experiment. How ever, there may be trouble, we hve got rid of the $|\Delta S| = 1$ neutral current, but there is still the $\Delta S  = 0$ neutral hadronic current which should lead to semileptonic neutral current processes. These as well as the purely leptonic neutral current effects have not yet been seen. Although none of the expremental upper limites on these is in definite contradiction with the model so far, they are very near to that$^{(14)}$. This has provided a motivation for constructing models which banish the neutral current completely, or at least for the newtrino processes.
+
+As mentioned in the beginning, with the observed hadrons, namely $(e, v_{e})$ and $(\mu, v_{\mu})$, the algebra of weak and electromagnetic currents is SU(2) $\otimes$ U(1) which certainly has the extra neutral current. If we are prepared to admit some heavy unobserved leptons, then, it is possible to incorporate both weka and electromagnetic currents in the SU(2) algebra alone, the neutral generator $K_{3}$ itself being the electric charge $Q$ and hence there is no neutral current apart from the electromagnetic current. Such a model has been constructed by Georgi and Glashow$^{(15)}$. An additional merit of this model is that the model is "vector-like" and hence there are no anomalies in the ward identities of the "total" currents.
+
+Others models based on SU(2) $\otimes$ U(1), but whose neutral currents do not lead to the unwanted processes of the type $v + N \rightarrow v +$ hadrons, have been constructed by prentri and Zu???$^{(16)}$ as wel as by B.W Lae$^{(17)}$. Unobserved heavy leptons are  ????????.
+
+A criticism that can be lavelled aginst all these models is the "extravagant" manner in which "new" quarks are introduced. For instrance, Georgi-Glahow model requires 8 quarks for a consistent picture$^{(18)}$ and Prentid-Zumino-Lee models also need a large number of quarks (6 in one case and 8 in the other). Even the Glashow-Lliopoulos-Maiani model requires 4 quarks. Correspondingly, does one have to require the hadronic world to have SU(8), SU(5) or SU(4) symmetries? There is at present no evidence at all for such a high symmetry in the hadronic spectrum. So, model making should perhaps be restricted to the SU(3) quarks which have at least the distinction of being already well-known in the description of the hadronic spectrum. Even then, there is some freedom of choice. Mohapatra and Lipkin$^{(19)}$ have used 3 integrally charged triplets to construch a SU(2) model whereas Tonin$^{(20)}$ has constructed an elegant "vector like" model based on SU(2) $\otimes$ U(1) using 3 fractionally charged triplets.
+
+Ti sum up, things can be so arranged that the observed selection rules for the weak processes are not contradicted. We should now consider some general problems concerning the hadronic symmetries. 
+
+\section*{V. The Problem of Hadronic Symmetries}
+
+The first question is : how do the broken symmetries of the hadronic world arise? Remember that the total lagragian of our theory is exactly invariant. Can the broken symmetries of the hadronic world be incorporated into this invariant Lag????? This is very important aince otherwise the beauty of the theory including its renormalizability will be lost.
+
+The currently popular view$^{(21)}$ is that the hadronic Lagrangian has a large part which is SU(3) $\otimes$ SU(3) invariant, but the symmetry is spontanensly broken so that we have an octet of massless pseudoscalar mesons (the Goldstone bosons). In order to make these objects massive, an explicit symmetry-breaking term is usually added. It is this explicit symmetry-breaking term which is forbidden from our point of view, since it will violate the renormalizability of the weak and electromagnetic interactions.
+
+But, now there is no need for such an explicit symmetry breaking term, since there are no Goldstone bosons if the symmetry under consideration is a general symmetry. For instance, starting with massless quarks, one can get the quark mass terms by coupling the quarks to the same Higgs scalar $\phi$ occuring in the lepton model of Sec. II or, one can start with a invariant $\sigma$ model with a massless pseudoscalar meson $P$ and then the coupling $P \phi$ will make $P$ massive$^{(22)}$. Thus, there is no explicit symmetry breaking if we consider the hadronic and the leptonic world together; the unified theory is exactly invariant.
+
+That is not to say that the definitive unified theory is in sight. There are still problems. To be definite, let us consider the SU(2) $\otimes$ U(1) invariant Glashow-Iliopoulos-Maiani model with the same Higgs scalar occuring in eq. (1). Then, writing all possible SU(2) $\otimes$ U(1) invariant Yukawa coupling between the quark fields and $\phi$ and then replacing $\phi$ by its vacuum expectation value, one gets bilinear terms for the quarks, Among these there are also nondigonal-terms which do not conserve parity and strangeness. We may write all the terms in the form of two mas matrices one for the $p-p'$ and the other for the $n-\lambda$ sector:
+\begin{equation*}
+M_{p-p'} =
+\begin{pmatrix}
+\alpha_{1} & \alpha_{3}-\alpha_{4} r_{5}\\
+\alpha_{3} + \alpha_{4} r_{5} & \alpha_{2}
+\end{pmatrix};
+M_{n-\lambda} =
+\begin{pmatrix}
+\alpha_{5} & \alpha_{\nu}-\alpha_{8} r_{5}\\
+\alpha_{7} + \alpha_{8} r_{5} & \alpha_{b}
+\end{pmatrix}\tag{7}
+\end{equation*}
+where $\alpha \ldots \alpha_{8}$ are arbitary constants. We should diagonalise these with respect to parity and strangeness and this reuslts in the diagonal mass terms
+$$
+m_{p} \bar{p} p + m_{n} \bar{n} n + m_{\lambda} \bar{\lambda} \lambda + m_{p}, \bar{p'}p'.
+$$
+Here we have used $p, p'$ $n$ and $\lambda$ to denote the physical states with definite parity and strangeness which are related to the old states $\cap{p}, \cap{p'}, \cap{n}$ and $\cap{\lambda}$ through the two-dimensional orthogonal transformations:
+\begin{align*}
+p_{\pm} &= \cos \theta^{\pm}_{p} \hat{p}_{\pm} + \sin \theta^{\pm}_{p} \hat{p'}_{\pm};\\
+p'_{\pm} &= -\sin \theta_{p}^{\pm} + \cos \theta^{\pm}_{p} \hat{p'}_{\pm};\\
+n_{\pm} &= \cos \theta^{\pm}_{n} \hat{n}_{\pm} + \sin \theta^{\pm}_{n} \hat{\lambda}_{\pm};\\
+\lambda_{\pm} &= -\sin \theta^{\pm}_{n} \hat{n}_{\pm} + \cos \theta^{\pm}_{n} \hat{\lambda}_{\pm};\tag{6}
+\end{align*}
+where $\pm$ correspond to right-handed or left-handed quarks.
+
+The charge-changing current coupled to $W^{+}_{\mu}$ is 
+\begin{align*}
+&\bar{\cap{p}} r_{\mu} \frac{(1-r_{5})}{2}\cap{n} + \bar{\cap{p'}} r_{\mu} \frac{(1-r_{5})}{2}\cap{\lambda}\\
+&= \bar{p}r_{\mu} \frac{1-r_{5}}{2} \left\{n \cos(\theta^{-}_{p}-\theta^{-}_{n}) + \lambda \sin (\theta^{-}_{p}-\theta^{-}_{n}) \right\}\\
+& + r_{\mu} \frac{(1-r_{5})}{2} \left\{\lambda \cos (\theta^{1}_{p}-\theta^{1}_{n}) - n \sin(\theta^{1}_{p}-\theta^{-}_{n}) \right\}\tag{9}
+\end{align*}
+
+The first term is the usual Cabibbo current so that the Cabibbo angle can be identified as $\theta_{e} = \theta^{-}_{p}-\theta^{-}_{n}$. Thus the Cabibbo rotation comen our ?????? in the theory.
+
+The four diagonal ????????? the four angles of transformation $\theta^{\pm}_{p}$ and $\theta^{\pm}_{n}$ can be written in terms of the eight parameters of the original mass matrices (Eq.(7)). Hence, there is no relation between the masses or between the masses and the Cambibbo angle.
+
+Since the masses are completely arbitrary, the observed approximatex symmetries of the hadronic spectrum have to be put in by hand. Even isospin symmetry is not built into the theory of course one can choose $m_{p} = m_{n}$. But, any such relation which is not a consequence of the structure of the theory, but is imposed arbitrarlly, is not preserved as a seroth order relation when the higher order weak and electropmagnstic effects are included. In other words, the mass difference $m_{p}=m_{n}$ due to higher order effects (self energy due to interaction with $A_{\mu}$, $W^{\pm}_{\mu}$ etc.) will come out divergent$^{(23)}$. This does not conflict with the renormalizability of the theory, since a counter term in the Lagrangian of the form $m_{p}=m_{n}$ which can absorb this divergence is allowed by the structure of the theory. Hence, there is no zeroth order relation which can be imposed in a consistent manner. All the parameters have to be determined purely empirically. Thus, one does not gain any insight into the symmetries of the hadronic world.
+
+This seems to be a defect common to most models based on SU(2) $\otimes$ U(1) or SU(2). Of course this can be overcome by enlarging the group of general invariance to include the hadronic symmetries, but then, there is hardly anything left to explian!.
+
+\begin{thebibliography}{99}
+\bibitem{} C. N. Yang and R.L. Mills, Phys. Rev. 96 191 (1956).
+\bibitem{} S. Weinberg, Phys. Rev. Letters 19, 1264 (1967). See also A. Salam, Elementary Particle Theory, ed. by N. Svartholm (Almquist \& Forlag A. B., Stockholm, 1968), p.367.
+\bibitem{} P.W. Higgs, Physics Letters 12, 132 (1964), See also F. Englert and R. Brout, Phys. Rev. Letters 13, 321 (1964). The extension to the non-abelian case was made by Kibble; T.W.B. Kibble, Phys. Rev. 155, 1554 (1967).
+\bibitem{} It. Hooft, Nucl. Phys., B35, 167 (1971).
+\bibitem{} It. Hooft and M. Veltman, Nucl. Phys. B44, 189 (1972), and Utrecht preprint, July 1972; B.W. Lee and J. Zinn-Justin, Phys. Rev. D5, 3121, 3137, 3155 (1972).
+\bibitem{} S.L. Adler, Phys. Rev. 177, 2426 (1969).
+\bibitem{} C. Bouchiat, J. Iliopoulos and P. Meyer, Phys. Letters 38B, 519 (1972), D. J. Gross and R. Jackiw, Phys. Rev. D6, 477 (1972); H. Georgi and S. L. Glashow, Phys. Rev. D6, 429 (1972).
+\bibitem{} S.Y. Lee, University of California, San Diego preprint 10P10-99, 1972.
+\bibitem{} W. A. Bardeen, R. Gastmans and B. Lautrup, CERN preprint TH-1485, May 1972.
+\bibitem{} T. D. Lee and C. N. Yang, Phys. Rev. 128, 885 (1962).
+\bibitem{} N. Nakamura, Prog. of Theor. Phys.33, 279 (1965). K. H. Tzou, Nuovo Cimento, 33, 286 (1964).
+\bibitem{} G. Rajasekaran, (Saha Institute Lectures) Tata Institute preprint TH/72-9, June 1971.
+\bibitem{} S. L. Glashow, J. Iliopoulos and L. Maiani, Phys. Rev. D2, 1286 (1970).
+\bibitem{} W. Lee, Phys. Letters 40B, 423 (1972)
+
+C.H. Albright, B. W. Lee and E. A. Paschos, National Accelerator Laboratory (NAL) Batavia Preprint THY-86, September 1972.
+
+H.H. Chen and B.W. Lee, Phys. Rev. D5, 1874 (1972).
+\bibitem{} H. Georgi and S. L. Glashow, Phys. Rev. Letters 28 1494 (1972).
+\bibitem{} J. Prentki and B. Zumino, CERN preprint TH 1504 (1972).
+\bibitem{} B. W. Lee, NAL preprint THY-51, April 1972.
+\bibitem{} B.W. Lee, J. R. Primack and S.B. Treiman, NAL preprint, THY-74, August 1972.
+\bibitem{} R.N. Mohapatra, University of Maryland preprint, 72-022, August 1972; H.J. Lipkin, NAL preprint, THY-85, September 1972.
+\bibitem{} M. Tonin, Padova preprint, IFPTH-6/72, October 1972.
+\bibitem{} See for instance, M. Gell-Mann, R.J. Cakes and B. Renner, Phys. Rev. 175, 2125 (1968) and R. Dashen, Phys, Rev. 183, 1245 (1968); D3, 1879 (1971).
+\bibitem{} S. Weinberg, Phys. Rev. Lett. 27, 1688 (1971)
+W.F. Palmer, Phys, Rev. D6,  1196 (1972).
+\bibitem{} S. Weinberg, Phys. Rev. Letters 29, 389 (1972).
+\end{thebibliography}
 
 
 
 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+  
 
 
 
